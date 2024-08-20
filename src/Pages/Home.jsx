@@ -5,6 +5,7 @@ import HeroSection from "../Components/HeroSection";
 import WhyChooseUs from "../Components/WhyChooseUs";
 import { FaArrowUp } from "react-icons/fa";
 import { gsap } from "gsap";
+import Started from "../Components/Started";
 
 const Home = () => {
   const [showButton, setShowButton] = useState(false);
@@ -54,6 +55,7 @@ const Home = () => {
       <HeroSection />
       <Explore />
       <WhyChooseUs />
+      <Started/>
     </>
   );
 };
