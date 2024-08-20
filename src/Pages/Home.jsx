@@ -7,6 +7,7 @@ import { FaArrowUp } from "react-icons/fa";
 import { gsap } from "gsap";
 import Feature from "../Components/Feature";
 import Testimonial from "../Components/Testimonial";
+import Started from "../Components/Started";
 
 const Home = () => {
   const [showButton, setShowButton] = useState(false);
@@ -58,6 +59,7 @@ const Home = () => {
       <WhyChooseUs />
       <Feature/>
       <Testimonial/>
+      <Started/>
     </>
   );
 };
