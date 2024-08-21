@@ -1,8 +1,8 @@
-import React from 'react';
 
 const Started = () => {
   return (
-    <div id="main" className="h-screen w-full bg-primaryCyan flex justify-around items-center px-24">
+    <section className='bg-primaryCyan w-full py-20 h-[50rem] mb-20'> 
+    <div id="main" className="w-full container mx-auto flex justify-between items-center mt-44">
       <div id="left" className="w-1/2 text-white text-center md:text-left">
         <h1 className="text-4xl md:text-4xl font-bold mb-4 font-century-gothic">Get started in a few <br /> minutes</h1>
         <h2 className="text-lg md:text-xl mb-6 text-black font-antipasto-pro">
@@ -10,10 +10,9 @@ const Started = () => {
           <br />
           and start buying & selling.
         </h2>
-        <button className="lg:px-3  lg:py-2 px-3 py-2  button font-antipasto-pro
-         text-center cursor-pointer md:w-2/5 lg:text-base text-xl font-semibold transition-all hover:bg-cyan-500 duration-200 outline-none text-white bg-gray-400 rounded-[100px] shadow-[0_4px_#118baa]">
-        Create Account
-            </button>
+        <button className="lg:px-4 lg:py-2 px-3 py-2 text-md button text-center cursor-pointer md:w-1/3 lg:w-1/3 whitespace-nowrap lg:text-base text-sm font-semibold transition-all duration-200 outline-none text-black bg-white rounded-[100px] shadow-[0_4px_#C0C0C0]">
+          Create Account
+        </button>
        
       </div>
 
@@ -77,6 +76,7 @@ const Started = () => {
         </div>
       </div>
     </div>
+    </section>
   );
 };
 

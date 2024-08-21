@@ -58,8 +58,8 @@ const Home = () => {
       <Explore />
       <WhyChooseUs />
       <Feature/>
-      <Testimonial/>
       <Started/>
+      <Testimonial/>
     </>
   );
 };
