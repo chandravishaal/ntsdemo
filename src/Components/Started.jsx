@@ -56,22 +56,43 @@ const Started = () => {
             <div className="bg-white text-primaryCyan p-5 py-6  rounded-full
               mb-2 w-32 h-32 drop-shadow-2xl		">
               <p className="font-bold absolute -bottom-10  text-white w-60  text-2xl ">Monthly Transactions</p>
-              <p className="text-lg font-century-gothic">591,653  </p>
+             
+             <div id='icon-bottom' className='flex flex-col relative'>
+              <img src="/src/assets/Images/icon-9.png" alt="" className=' w-14 ml-4' />
+              <div  className='absolute top-14 left-4' >
+              <p className="text-lg font-century-gothic">591,653</p>
+              </div>
+              </div>
+
             </div>
+
           </div>
 
           <div className="absolute right-24 -top-13 flex flex-col items-center ">
             <div className="bg-white text-primaryCyan p-5 py-6 rounded-full drop-shadow-2xl mb-2 w-36 h-36">
-              <p className="font-bold absolute -bottom-10 -left-36 text-white w-60  text-2xl "> Total Transactions</p>
-              <img src="/src/assets/Images/whyChoose1.png" alt="" className=' w-14 ml-4' />
-              <p className="text-xl  font-century-gothic ">10,523,684</p>
+              <p className="font-bold absolute -bottom-10 -left-36 text-white w-60  text-2xl font-antipasto-pro "> Total Transactions</p>
+
+<div id='icon-bottom' className='flex flex-col relative'>
+              <img src="/src/assets/Images/icon-2.png" alt="" className=' w-14 ml-4' />
+              <div  className='absolute top-14' >
+              <p className="text-lg font-century-gothic">10,523,684</p>
+              </div>
+              </div>
+
             </div>
           </div>
 
           <div className="absolute bottom-24 flex flex-col items-center">
             <div className="bg-white text-primaryCyan p-5 py-6 rounded-full drop-shadow-2xl w-32 h-32">
-              <p className="font-bold absolute -right-52 text-white text-2xl"> Today Transactions</p>
+              <p className="font-bold absolute -right-56 text-white text-2xl"> Today Transactions</p>
+              
+<div id='icon-bottom' className='flex flex-col relative'>
+              <img src="/src/assets/Images/icon-10.png" alt="" className=' w-14 ml-4' />
+              <div  className='absolute top-14 left-4' >
               <p className="text-lg font-century-gothic">73,680</p>
+              </div>
+              </div>
+
             </div>
           </div>
         </div>

@@ -6,6 +6,7 @@ import WhyChooseUs from "../Components/WhyChooseUs";
 import { FaArrowUp } from "react-icons/fa";
 import { gsap } from "gsap";
 import Started from "../Components/Started";
+import Blog from "../Components/Blog";
 
 const Home = () => {
   const [showButton, setShowButton] = useState(false);
@@ -56,6 +57,7 @@ const Home = () => {
       <Explore />
       <WhyChooseUs />
       <Started/>
+      <Blog/>
     </>
   );
 };
