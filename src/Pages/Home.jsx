@@ -8,7 +8,8 @@ import { gsap } from "gsap";
 import Feature from "../Components/Feature";
 import Testimonial from "../Components/Testimonial";
 import Started from "../Components/Started";
-
+import CryptoFreedomSection from "../Components/CryptoFreedomSection";
+import Footer from "../Components/Footer";
 const Home = () => {
   const [showButton, setShowButton] = useState(false);
   const buttonRef = useRef(null);
@@ -58,8 +59,10 @@ const Home = () => {
       <Explore />
       <WhyChooseUs />
       <Feature/>
-      <Testimonial/>
       <Started/>
+      <Testimonial/>
+      <CryptoFreedomSection/>
+      <Footer/>
     </>
   );
 };

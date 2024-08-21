@@ -2,7 +2,7 @@ import React from 'react';
 
 const Started = () => {
   return (
-    <div id="main" className="h-screen w-full bg-primaryCyan flex justify-around items-center px-24">
+    <div id="main" className="h-screen w-container bg-primaryCyan flex justify-around items-center px-24">
       <div id="left" className="w-1/2 text-white text-center md:text-left">
         <h1 className="text-4xl md:text-4xl font-bold mb-4 font-century-gothic">Get started in a few <br /> minutes</h1>
         <h2 className="text-lg md:text-xl mb-6 text-black font-antipasto-pro">

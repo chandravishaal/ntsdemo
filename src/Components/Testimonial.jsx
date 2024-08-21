@@ -31,7 +31,7 @@ const Testimonial = () => {
   const { name, content } = testimonials[currentIndex];
 
   return (
-    <div className="container mx-auto p relative flex items-end">
+    <div className="container mx-auto mt-10 relative flex items-end">
       {/* Image div */}
       <img src={Image} alt="Testimonial" className="w-auto h-[474px]" />
 
