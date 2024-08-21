@@ -182,6 +182,28 @@ text-decoration:none;
   }
 }
 
+/* why choose us section background */
+@media (min-width: 768px) {
+  .whychooseSection-background {
+    background-image: url('./assets/Images/3rd_section_background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position: center;
+  }
+}
+
+/* feature section background */
+@media (min-width: 768px) {
+  .featureSection-background {
+    background-image: url('./assets/Images/5th_section_background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position: center;
+  }
+}
+
 
 .hero-phone-banner {
   position: relative;

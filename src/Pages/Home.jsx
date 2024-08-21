@@ -62,10 +62,7 @@ const Home = () => {
       <WhyChooseUs />
       <Feature/>
       <Started/>
-      <Blog/>
       <Testimonial/>
-      <CryptoFreedomSection/>
-      <Footer/>
     </>
   );
 };

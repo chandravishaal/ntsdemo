@@ -43,8 +43,8 @@ const Explore = () => {
   }, []);
 
   return (
-    <section className="exploreSection-background my-10">
-      <div className="flex flex-col md:flex-row justify-between py-5 gap-10 container w-full mx-auto">
+    <section className="exploreSection-background">
+      <div className="flex flex-col md:flex-row justify-between py-5 gap-10 container my-16 w-full mx-auto">
         <div className="flex-1 select-none w-full">
           <img src={explorebanner} className="w-[70%] translate-x-10 mt-10" alt="explore banner" />
         </div>
