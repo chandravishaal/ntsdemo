@@ -11,7 +11,8 @@ import { IoIosArrowForward } from "react-icons/io";
 const Footer = () => {
   return (
     <>
-      <footer className="container bg-sky-400 flex flex-row  mx-auto max-w-[1200px] relative z-20  mt-24">
+    <section className="bg-primaryCyan">
+      <footer className="container flex flex-row  mx-auto max-w-[1200px] relative z-20  mt-24">
         <div className=" z-10 ">
           <img
             src={footerImage}
@@ -95,9 +96,12 @@ const Footer = () => {
         </div>
       </div>
       </footer>
-      <div className="container mx-auto bg-black text-white text-center p-2">
-      &copy;2024 NORTH STAR METRICS, All Right Reserved.
-      </div>
+      </section>
+      <section className="bg-black">
+        <div className="container mx-auto text-white text-center p-2">
+        &copy;2024 NORTH STAR METRICS, All Right Reserved.
+        </div>
+      </section>
     </>
   );
 };

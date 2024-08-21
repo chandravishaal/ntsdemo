@@ -1,9 +1,8 @@
-import React from 'react'
 import 'remixicon/fonts/remixicon.css'
 
 const Blog = () => {
   return (
-    <div id="main" className="min-h-screen w-full bg-white mt-11 flex flex-col items-center py-3 px-40 space-y-5">
+    <div id="main" className="w-full bg-white container mx-auto mt-11 flex flex-col items-center py-3 space-y-5 mb-32">
       
       {/* Headings */}
       <div id="heading" className='flex flex-col items-center gap-4 mb-10'>

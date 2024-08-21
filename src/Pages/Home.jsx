@@ -50,7 +50,7 @@ const Home = () => {
       {showButton && (
         <div
           ref={buttonRef}
-          className="bg-primaryCyan px-3 py-3 rounded-xl fixed z-50 bottom-10 right-10 text-white cursor-pointer"
+          className="bg-primaryCyan px-3 py-3 shadow-lg rounded-xl fixed z-50 bottom-10 right-10 text-white cursor-pointer"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
           <FaArrowUp />
@@ -63,6 +63,9 @@ const Home = () => {
       <Feature/>
       <Started/>
       <Testimonial/>
+      <Blog />
+      <CryptoFreedomSection />
+      <Footer />
     </>
   );
 };
