@@ -8,6 +8,7 @@ import { gsap } from "gsap";
 import Feature from "../Components/Feature";
 import Testimonial from "../Components/Testimonial";
 import Started from "../Components/Started";
+import Blog from "../Components/Blog";
 
 const Home = () => {
   const [showButton, setShowButton] = useState(false);
@@ -60,6 +61,7 @@ const Home = () => {
       <Feature/>
       <Testimonial/>
       <Started/>
+      <Blog/>
     </>
   );
 };
