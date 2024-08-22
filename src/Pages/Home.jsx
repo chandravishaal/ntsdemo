@@ -12,6 +12,7 @@ import Blog from "../Components/Blog";
 
 import CryptoFreedomSection from "../Components/CryptoFreedomSection";
 import Footer from "../Components/Footer";
+import VideoSection from "../Components/VideoSection";
 const Home = () => {
   const [showButton, setShowButton] = useState(false);
   const buttonRef = useRef(null);
@@ -60,6 +61,7 @@ const Home = () => {
       <HeroSection />
       <Explore />
       <WhyChooseUs />
+      <VideoSection/>
       <Feature/>
       <Started/>
       <Testimonial/>
