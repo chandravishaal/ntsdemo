@@ -9,9 +9,8 @@ import Feature from "../Components/Feature";
 import Testimonial from "../Components/Testimonial";
 import Started from "../Components/Started";
 import Blog from "../Components/Blog";
-
 import CryptoFreedomSection from "../Components/CryptoFreedomSection";
-import Footer from "../Components/Footer";
+
 const Home = () => {
   const [showButton, setShowButton] = useState(false);
   const buttonRef = useRef(null);
@@ -65,7 +64,6 @@ const Home = () => {
       <Testimonial/>
       <Blog />
       <CryptoFreedomSection />
-      <Footer />
     </>
   );
 };

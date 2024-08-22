@@ -37,32 +37,31 @@ const Testimonial = () => {
   
   useEffect(() => {
     gsap.from("#testimonial-heading", {
-      y:100,
+      y: 100,
       opacity: 0,
       duration: 1,
       delay: 0.5,
       scrollTrigger: {
         trigger: "#testpage",
         start: "top 80%",
-        // scrub: 2
       }
     });
   }, [])
 
   return (
-    <div id='testpage' className="container mx-auto p relative flex items-end mb-20">
+    <div id='testpage' className="container mx-auto p relative flex items-end mb-20  overflow-hidden">
       {/* Image div */}
-      <img src={Image} alt="Testimonial" className="w-auto h-[474px]" />
+      <img src={Image} alt="Testimonial" className="w-auto h-[474px] select-none" />
 
       {/* Content div */}
-      <div className="w-full h-[400px] bg-cyan-300 p-6 flex flex-col rounded-r-lg justify-between m-0 ">
+      <div className="w-full h-[400px] testimonial-background p-6 flex rounded-r-lg flex-col justify-between">
         <div>
-          <h2 id='testimonial-heading' className="text-6xl text-right mr-8 text-[#0a6276] -mt-14">TESTIMONIALS</h2>
-          <div className="flex items-center mb-3 pl-6">
-            <FaStar className="text-primaryCyan mr-1" />
-            <FaStar className="text-primaryCyan mr-1" />
-            <FaStar className="text-primaryCyan mr-1" />
-            <FaStar className="text-primaryCyan mr-1" />
+          <h2 id='testimonial-heading' className="text-6xl text-right mr-8 text-[#0a6276] -mt-14 select-none">TESTIMONIALS</h2>
+          <div className="flex items-center mb-3 gap-1 pl-6">
+            <FaStar className="text-[#0a6276]" />
+            <FaStar className="text-[#0a6276]" />
+            <FaStar className="text-[#0a6276]" />
+            <FaStar className="text-[#0a6276]" />
             <FaStar className="text-[#0a6276]" />
           </div>
           <h3 className="text-2xl font-bold text-sky-800 pl-6">{name}</h3>
@@ -86,5 +85,6 @@ const Testimonial = () => {
     </div>
   );
 };
+
 
 export default Testimonial;

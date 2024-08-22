@@ -13,7 +13,7 @@ const BlogPost = ({ image, date, author, comments, content, isCenter }) => {
         <img
           src={image}
           alt="Blog"
-          className="w-full h-full object-cover rounded-t-lg"
+          className="w-full h-full object-cover rounded-t-lg select-none"
         />
         <div
           className={`mt-4 absolute right-4 -bottom-3 transition duration-300 p-5 rounded-xl font-eras-bold ${
@@ -62,7 +62,7 @@ const Blog = () => {
   return (
     <div
       id="main"
-      className="w-full bg-white container mx-auto mt-11 flex flex-col items-center py-3 space-y-5"
+      className="w-full bg-white mb-32 container mx-auto mt-11 flex flex-col items-center py-3 space-y-5"
     >
       {/* Headings */}
       <div id="heading" className="flex flex-col items-center gap-4 mb-10">

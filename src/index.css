@@ -25,6 +25,10 @@ body{
   transform: translateY(4px);
 }
 
+
+
+
+/* marquees animation start  */
 .marquee-text {
   box-sizing: border-box;
   -webkit-box-align: center;
@@ -153,6 +157,7 @@ text-decoration:none;
       transform: translate(-50%);
   }
 }
+/* marquees animation end */
 
 
 
@@ -205,6 +210,39 @@ text-decoration:none;
 }
 
 
+/* .testimonial section background */
+.testimonial-background {
+  background-image: url('./assets/Images/test_background.png');
+  background-size: 110%;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-position: center 20%;
+}
+
+/* .footer section background */
+.footer-background {
+  background-image: url('./assets/Images/ftr_background.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-position: center 80%;
+}
+
+
+/* freedom section background */
+.freedomSection-background {
+  background-image: 
+    url('./assets/Images/10_section_background.png'),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 1) 100%);
+  background-size: cover; /* Ensure the image zoom and gradient cover the element */
+  background-repeat: no-repeat;
+  width: 100%;
+  background-position: top 60%; /* Position image and gradient */
+  background-blend-mode: overlay; /* Blend the gradient with the background image */
+}
+
+
+/* hero banner phone image */
 .hero-phone-banner {
   position: relative;
   transform: translateX(90px);
@@ -223,7 +261,7 @@ nav {
 }
 
 
-/* hero section company name  */                                                    
+/* hero section company name shinning effect  */                                                    
 .linear-wipe {                                                                                                      
   text-align: center;
   

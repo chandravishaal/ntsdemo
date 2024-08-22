@@ -11,17 +11,17 @@ import { IoIosArrowForward } from "react-icons/io";
 const Footer = () => {
   return (
     <>
-    <section className="bg-primaryCyan">
+    <section className="footer-background">
       <footer className="container flex flex-row  mx-auto max-w-[1200px] relative z-20  mt-24">
         <div className=" z-10 ">
           <img
             src={footerImage}
             alt="Image Loading ... "
-            className="w-[350px] h-[400px]  -mt-[60%] "
+            className="w-[410px] h-[500px]  -mt-[60%] select-none"
             />
-        </div>
+        </div>  
 
-        <div className=" pt-10 w-full  ">
+        <div className=" py-10 pt-20 w-full  ">
         <div className="flex flex-row justify-between    text-white text-1xl pr-10">
           <div className=" w-1/3">
             <h3 className="font-bold mb-4">Get In Touch</h3>

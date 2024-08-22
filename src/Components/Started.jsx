@@ -25,28 +25,28 @@ const Started = () => {
             <img
               src="https://ntsmetrics.com/img/nsm-logo-blue.png" 
               alt="North Metrics Logo"
-              className='w-44'
+              className='w-44 select-none'
             />
           </div>
 
           <div id='icon1' className="absolute right-11 -top-40 flex flex-col items-center">
             <div className="mb-2 w-32 h-32 drop-shadow-2xl">
-             <img src="/src/assets/Images/6th_section_icon4.png" alt="" />
+             <img src="/src/assets/Images/6th_section_icon4.png" className="select-none" alt="" />
             </div>
           </div>
           <div id='icon1' className="absolute right-11 -bottom-80 flex flex-col items-center">
             <div className="mb-2 w-32 h-32 drop-shadow-2xl">
-             <img src="/src/assets/Images/6th_section_icon3.png" alt="" />
+             <img src="/src/assets/Images/6th_section_icon3.png" className="select-none" alt="" />
             </div>
           </div>
           <div id='icon1' className="absolute left-32 -top-36 flex flex-col items-center">
             <div className="mb-2 w-32 h-32 drop-shadow-2xl">
-             <img src="/src/assets/Images/6th_section_icon2.png" alt="" />
+             <img src="/src/assets/Images/6th_section_icon2.png" className="select-none" alt="" />
             </div>
           </div>
           <div id='icon1' className="absolute top-52 left-32 flex flex-col items-center">
             <div className="mb-2 w-32 h-32 drop-shadow-2xl">
-             <img src="/src/assets/Images/6th_section_icon1.png" alt="" />
+             <img src="/src/assets/Images/6th_section_icon1.png" className="select-none" alt="" />
             </div>
           </div>
 
