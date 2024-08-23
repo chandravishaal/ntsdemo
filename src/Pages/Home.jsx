@@ -11,8 +11,8 @@ import Started from "../Components/Started";
 import Blog from "../Components/Blog";
 import CryptoFreedomSection from "../Components/CryptoFreedomSection";
 
-import Footer from "../Components/Footer";
 import VideoSection from "../Components/VideoSection";
+import HomeAssets from "../Components/HomeAssets";
 const Home = () => {
   const [showButton, setShowButton] = useState(false);
   const buttonRef = useRef(null);
@@ -51,16 +51,19 @@ const Home = () => {
       {showButton && (
         <div
           ref={buttonRef}
-          className="bg-primaryCyan px-3 py-3 shadow-lg rounded-xl fixed z-50 bottom-10 right-10 text-white cursor-pointer"
+          className="shadow-lg rounded-xl fixed z-50 bottom-10 right-10 text-white cursor-pointer"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
-          <FaArrowUp />
+           <button className="px-4 py-3 text-md button text-center cursor-pointer lg:text-base text-sm font-semibold transition-all hover:bg-cyan-500 duration-200 outline-none text-white bg-primaryCyan rounded-[100px] shadow-[0_4px_#118baa]">
+              <FaArrowUp />
+            </button>
         </div>
       )}
       <CoinMarquees />
       <HeroSection />
       <Explore />
       <WhyChooseUs />
+      <HomeAssets />
       <VideoSection/>
       <Feature/>
       <Started/>
