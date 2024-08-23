@@ -5,12 +5,11 @@
 ::selection {
   @apply bg-cyan-400 text-white;
 }
-html{
-  scroll-behavior: smooth;
-}
+
 
 body{
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 *{
