@@ -325,3 +325,22 @@ nav {
   border: 1px solid rgba(255, 255, 255, 0.18); /* Slightly reduce border opacity */
   border-radius: 20px; /* Adjust border radius */
 }
+
+/* Define the animation class */
+.animate-arrow {
+  display: inline-block;
+  animation: moveRight 2s ease-in-out infinite;
+}
+
+/* Keyframes for the animation */
+@keyframes moveRight {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
