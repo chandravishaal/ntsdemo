@@ -53,7 +53,7 @@ const Navbar = () => {
             <a href="#features">Feature</a>
           </li>
           <li>  
-            <a href="#crypto-converter">Crypto Converter</a>
+            <a href="/crypto-converter">Crypto Converter</a>
           </li>
           <li>
             <a href="#cryptocurrency">Cryptocurrency</a>
