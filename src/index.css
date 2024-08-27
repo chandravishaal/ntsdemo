@@ -325,3 +325,33 @@ nav {
   border: 1px solid rgba(255, 255, 255, 0.18); /* Slightly reduce border opacity */
   border-radius: 20px; /* Adjust border radius */
 }
+
+/* crypto converter */
+.sky-blue-blur-background {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+}
+
+.sky-blue-blur-background::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  right:15%;
+  bottom: 10%;
+  background: #35f2ff87; /* Sky blue with transparency */
+  filter: blur(20px);
+  z-index: -1; /* Place the background behind the content */
+  border-radius: inherit; /* Keep rounded corners if any */
+}
+
+@media (min-width: 768px) {
+  .form-bg{
+    background-image: url('./assets/Images/form_background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position: top;
+  }
+}
