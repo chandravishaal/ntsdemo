@@ -10,7 +10,7 @@ import {
 
 const RootLayout = lazy(() => import("./Layouts/RootLayout"));
 const Dashboard = lazy(() => import("./Pages/Home"));
-
+const CryptoConverter =lazy(()=> import("./Pages/CryptoConverter"));
 const App = () => {
 
   const router = createBrowserRouter(
@@ -19,7 +19,13 @@ const App = () => {
         <Route index element={<Dashboard />} />
         <Route path="/About" element={<About/>}/>
 
+
+        <Route 
+          path="/crypto-converter"
+          element={<CryptoConverter/>}
+        />
       </Route>
+
       )
     );
 
