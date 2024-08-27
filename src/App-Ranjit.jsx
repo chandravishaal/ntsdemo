@@ -1,6 +1,6 @@
 
 import { lazy, Suspense } from "react";
-import About from "./Pages/About";
+import About from "./Pages/About.jsx";
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -18,10 +18,10 @@ const App = () => {
       <Route path="/" element={<RootLayout />}>
         <Route index element={<Dashboard />} />
         <Route path="/About" element={<About/>}/>
-
       </Route>
       )
     );
+
 
 
   return (
