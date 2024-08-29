@@ -1,12 +1,11 @@
-import React from 'react';
 import 'remixicon/fonts/remixicon.css';
 
 const TopBar = () => {
   return (
-    <div className='bg-black w-full  '> 
+    <div className='bg-[#252525] w-full  '> 
     <section className=''>
     {/* <div className="bg-gray-950 text-white flex justify-between items-center px-20 py-3"> */}
-    <div className="mx-auto container bg-gray-950 border border-black md:px-10 lg:px-2 flex items-center justify-between p-3">
+    <div className="mx-auto container bg-[#252525] border border-[#252525] md:px-10 lg:px-2 flex items-center justify-between p-3">
 
      
       <div className="flex items-center space-x-4">
@@ -30,7 +29,7 @@ const TopBar = () => {
       {/* Right Side: Navigation Links and Sign In/Register */}
       <div className="flex items-center space-x-6">
         {/* Navigation Links */}
-        <a href="#" className="hover:text-cyan-300 text-gray-500">Faq's</a>
+        <a href="#" className="hover:text-cyan-300 text-gray-500">Faq&apos;s</a>
         <div className="border-l border-gray-600 h-6"></div>
 
         <a href="#" className="hover:text-cyan-300 text-gray-500">ICO Calendar</a>

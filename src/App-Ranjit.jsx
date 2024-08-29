@@ -1,6 +1,6 @@
 
 import { lazy, Suspense } from "react";
-import About from "./Pages/About";
+import About from "./Pages/About.jsx";
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -10,7 +10,7 @@ import {
 
 const RootLayout = lazy(() => import("./Layouts/RootLayout"));
 const Dashboard = lazy(() => import("./Pages/Home"));
-const CryptoConverter =lazy(()=> import("./Pages/CryptoConverter"));
+
 const App = () => {
 
   const router = createBrowserRouter(
@@ -18,16 +18,10 @@ const App = () => {
       <Route path="/" element={<RootLayout />}>
         <Route index element={<Dashboard />} />
         <Route path="/About" element={<About/>}/>
-
-
-        <Route 
-          path="/crypto-converter"
-          element={<CryptoConverter/>}
-        />
       </Route>
-
       )
     );
+
 
 
   return (

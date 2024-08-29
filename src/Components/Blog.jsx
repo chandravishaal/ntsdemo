@@ -1,11 +1,13 @@
 // import BlogPost from './BlogPost';
 import 'remixicon/fonts/remixicon.css';
-
+import blog1 from '../assets/Images/blog_1.png';
+import blog2 from '../assets/Images/blog_2.png';
+import blog3 from '../assets/Images/blog_3.png';
 
 const BlogPost = ({ image, date, author, comments, content, isCenter }) => {
   return (
     <div
-      className={`relative rounded-lg w-1/3 p-5 pb-12 transition duration-300 group ${
+      className={`relative rounded-lg w-1/3 p-5 pb-12 transition duration-300 transform hover:scale-105 hover:z-30 cursor-pointer border-2 border-primaryCyan group ${
         isCenter ? 'bg-primaryCyan' : 'bg-white hover:bg-primaryCyan'
       }`}
     >
@@ -32,13 +34,13 @@ const BlogPost = ({ image, date, author, comments, content, isCenter }) => {
         }`}
       >
         <i
-          className={`ri-user-settings-fill text-4xl ${
+          className={`ri-user-settings-fill text-2xl ${
             isCenter ? 'text-white' : 'text-cyan-300 group-hover:text-white'
           }`}
         ></i>
         <span>By - {author}</span>
         <i
-          className={`ri-chat-search-line text-4xl ${
+          className={`ri-chat-search-line text-2xl ${
             isCenter ? 'text-white' : 'text-cyan-300 group-hover:text-white'
           }`}
         ></i>
@@ -46,7 +48,7 @@ const BlogPost = ({ image, date, author, comments, content, isCenter }) => {
       </div>
 
       <div
-        className={`mt-10 font-century-gothic font-semibold transition duration-300 ${
+        className={`mt-10 font-century-gothic transition duration-300 ${
           isCenter ? 'text-white' : 'text-black group-hover:text-white'
         }`}
       >
@@ -74,9 +76,9 @@ const Blog = () => {
           industry.
         </h2>
       </div>
-      <div className="w-full flex justify-between items-start space-x-2">
+      <div className="w-full flex justify-between items-start gap-4 space-x-2">
         <BlogPost
-          image="/src/assets/Images/blog_1.png"
+          image={blog1}
           date="JULY 29, 2020"
           author="Admin"
           comments="0"
@@ -84,15 +86,15 @@ const Blog = () => {
           isCenter={false}
         />
         <BlogPost
-          image="/src/assets/Images/blog_2.png"
+          image={blog2}
           date="JULY 29, 2020"
           author="Admin"
           comments="0"
           content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea excepturi ut modi officiis quibusdam ad asperiores quasi architecto magni debitis nostrum quisquam, fugit dolor assumenda totam consequuntur corporis error delectus!"
-          isCenter={true}
+          isCenter={false}
         />
         <BlogPost
-          image="/src/assets/Images/blog_3.png"
+          image={blog3}
           date="JULY 29, 2020"
           author="Admin"
           comments="0"

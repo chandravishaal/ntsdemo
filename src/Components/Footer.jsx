@@ -6,6 +6,8 @@ import {
 import { MdEmail } from "react-icons/md";
 import { IoCall } from "react-icons/io5";
 import { IoIosArrowForward } from "react-icons/io";
+import { Link } from 'react-router-dom';
+
 
 
 const Footer = () => {
@@ -18,6 +20,8 @@ const Footer = () => {
             src={footerImage}
             alt="Image Loading ... "
             className="w-[410px] h-[500px]  -mt-[60%] select-none"
+            data-aos="fade-right"
+            data-aos-duration="3000"
             />
         </div>  
 
@@ -68,7 +72,7 @@ const Footer = () => {
             <ul>
               <li>
                 <IoIosArrowForward className="inline mr-2" />
-                <a href="/">About Us</a>
+                <Link to="/About">About Us</Link>
                 
               </li>
               <li>
