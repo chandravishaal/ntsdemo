@@ -75,7 +75,7 @@ const HeroSection = () => {
         
         {/* hero-image */}
         <div className="hidden md:block select-none w-full">
-          <img src={heroMobiles} className='w-80 lg:w-full mt-10 hero-phone-banner' alt="" />
+          <img data-aos="fade-up" data-aos-duration="2000" src={heroMobiles} loading='lazy' className='w-80 lg:w-full mt-10 hero-phone-banner' alt="Hero banner" />
         </div>
       </div>
     </section>

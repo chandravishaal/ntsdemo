@@ -1,5 +1,5 @@
 import mobileBanner from '../assets/Images/4th_section_mobile.png';
-
+import videoThumbnail from '../assets/Video/sampleVideo1.mp4';
 
 const VideoSection = () => {
   return (
@@ -7,11 +7,11 @@ const VideoSection = () => {
     {/* Video Section */}
     <div className="relative">
       <video
-        src="/src/assets/Video/sampleVideo1.mp4"
+        src={videoThumbnail}
         autoPlay
         loop
         muted
-        className="w-full"
+        className="w-full h-[600px] object-cover"
       />
       <div className="absolute inset-0 bg-black opacity-60"></div>
     </div>
@@ -20,7 +20,7 @@ const VideoSection = () => {
 
 
 
-      <section className='videoSection-background'>
+      <section className='videoSection-background '>
       <div className="container mx-auto">
       {/* Content Section */}
       <div className="flex flex-col md:flex-row justify-between">
@@ -29,14 +29,14 @@ const VideoSection = () => {
           <h2 className="text-3xl font-bold mb-6">More Videos</h2>
           <div className="space-y-6">
             <div className="flex items-start space-x-4">
-              <video src="/src/assets/Video/sampleVideo1.mp4" alt="Video Thumbnail" className="w-1/4 rounded-lg" />
+              <video src={videoThumbnail} alt="Video Thumbnail" className="w-1/4 rounded-lg" />
               <p className="text-sm">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
               </p>
             </div>
             <div className="flex items-start space-x-4">
-              <video src="/src/assets/Video/sampleVideo1.mp4" alt="Video Thumbnail" className="w-1/4 rounded-lg" />
+              <video src={videoThumbnail} alt="Video Thumbnail" className="w-1/4 rounded-lg" />
               <p className="text-sm">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -49,7 +49,7 @@ const VideoSection = () => {
                 Tradable
               </button>
               <button className="lg:px-3 lg:py-2 px-3 py-2 text-md button text-center cursor-pointer md:w-1/5 lg:text-base text-sm font-semibold transition-all hover:bg-cyan-900 duration-200 outline-none text-white bg-cyan-800 rounded-[100px] shadow-[0_4px_#0f172a]">
-                Tradable
+                Top Gainers
               </button>
             </div>
           </div>
@@ -57,7 +57,7 @@ const VideoSection = () => {
 
         {/* Right Side: Mobile Images */}
         <div className=" mr-[4%] -mt-[11%] z-10">
-          <img src={mobileBanner} alt="Mobile App" className="w-auto h-[610px]" />
+          <img data-aos="fade-up" data-aos-duration="2000" src={mobileBanner} alt="Mobile App" className="w-auto h-[610px] translate-x-20" />
         </div>
       </div>
     </div>

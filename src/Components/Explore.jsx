@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Sparklines, SparklinesLine, SparklinesSpots } from "react-sparklines";
+import { Sparklines, SparklinesLine, SparklinesSpots } from "react-sparklines"; 
 import { FaArrowUpLong, FaArrowDownLong } from "react-icons/fa6";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -7,7 +7,7 @@ import explorebanner from "../assets/Images/2nd_section_mobile.png";
 
 const CoinCards = ({ image, name, amount, data, isPositive, percentage }) => {
   return (
-    <div className="rounded-[40px] bg-white w-[100%] shadow-xl z-40 border-[3px] border-gray-200 px-4 py-2">
+    <div data-aos="flip-left" data-aos-duration="2000" className="rounded-[40px] bg-white w-[100%] shadow-xl z-40 border-[3px] border-gray-200 px-4 py-2">
       <div className="flex flex-col justify-between gap-2 w-full">
         <div className="flex items-center justify-between gap-5">
           <div className="flex flex-col items-start mt-2">
@@ -44,20 +44,20 @@ const Explore = () => {
 
   return (
     <section className="exploreSection-background">
-      <div className="flex flex-col md:flex-row justify-between py-5 gap-10 container my-16 w-full mx-auto">
-        <div className="flex-1 select-none w-full">
-          <img src={explorebanner} className="w-[70%] translate-x-10 mt-10" alt="explore banner" />
+      <div className="flex flex-col md:flex-row justify-between py-5 gap-10 container w-full mx-auto items-center">
+        <div className="flex-1 select-none w-full flex justify-center md:justify-start">
+          <img data-aos="fade-up" data-aos-duration="2000" src={explorebanner} className="w-[70%] -translate-x-5 translate-y-7" alt="explore banner" />
         </div>
 
-        <div className="flex flex-1 flex-col items-start mt-10 gap-2">
-          <h1 className="text-3xl mt-5 font-bold mb-2 text-selection">
+        <div className="flex flex-1 flex-col items-center md:items-start gap-2">
+          <h1 data-aos="fade-left" data-aos-duration="1000" className="text-3xl font-bold mb-2 text-selection text-center md:text-left">
             Explore Crypto
           </h1>
-          <p className="text-xl">
-          Buy and sell 100+ cryptocurrencies on the best platform for buying and selling cryptocurrency, including Bitcoin, Ethereum, and more.
+          <p data-aos="fade-left" data-aos-duration="2000" className="text-xl text-center md:text-left">
+            Buy and sell 100+ cryptocurrencies on the best platform for buying and selling cryptocurrency, including Bitcoin, Ethereum, and more.
           </p>
 
-          <div className="flex items-center gap-5 w-full my-5">
+          <div className="flex items-center gap-5 w-full my-5 justify-center md:justify-start">
             <button className="lg:px-3 lg:py-2 px-3 py-2 text-md button text-center cursor-pointer md:w-1/5 lg:text-base text-sm font-semibold transition-all hover:bg-cyan-500 duration-200 outline-none text-white bg-primaryCyan rounded-[100px] shadow-[0_4px_#118baa]">
               Tradable
             </button>

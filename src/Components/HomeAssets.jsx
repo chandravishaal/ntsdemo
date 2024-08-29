@@ -517,9 +517,9 @@ const HomeAssets = () => {
   };
 
   return (
-    <section className="container mx-auto py-16">
+    <section className="container mx-auto my-10 mb-20">
       <div className="p-4">
-        <div className="bg-white rounded-3xl shadow-md p-6">
+        <div className="bg-white rounded-3xl asset-shadow p-6">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-3xl font-semibold">Assets</h2>
             <div className="flex items-center gap-3">
@@ -560,7 +560,7 @@ const HomeAssets = () => {
               {data.map((item, index) => (
                 <tr
                   key={index}
-                  className="hover:bg-gray-100 transition-all duration-300 cursor-pointer"
+                  className="hover:shadow-lg transition-all duration-300 cursor-pointer hover:scale-105"
                 >
                   <td className="py-4 px-6">
                     <div className="flex items-center">
