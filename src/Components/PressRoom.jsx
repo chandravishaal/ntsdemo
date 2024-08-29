@@ -1,4 +1,8 @@
 import React from 'react';
+import Image1 from '../assets/Images/icon1.jpg';
+import Image2 from '../assets/Images/icon2.jpg';
+import Image3 from '../assets/Images/icon3.jpg';
+import Image4 from '../assets/Images/nts-removebg-preview.png';
 
 function PressRoom() {
   return (
@@ -6,7 +10,7 @@ function PressRoom() {
       <div className="text-center font-Antipasto pro">
         <h2 className="text-3xl font-bold mt-8">Press Room</h2>
         <p className="text-black mt-4 font-semibold text-center">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry
           <br />
           standard dummy text ever since the 1500s,
         </p>
@@ -14,15 +18,15 @@ function PressRoom() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 mr-8 ml-8 -pb-44">
         <div className="bg-cyan-50 rounded-lg shadow-md p-4 mb-72">
-          <img src="https://via.placeholder.com/500x200" alt="Image 1" className="rounded-lg mb-4" />
+          <img src={Image1} alt="Image 1" className="rounded-lg mb-4  h-[200px] w-[500px] " />
           <h3 className="text-l font-bold mb-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
           <p className="text-gray-500 mb-4 text-sm">
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+            Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a
             galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but
             also the leap into electronic typesetting, remaining essentially unchanged.
           </p>
           <div className="flex justify-start mt-4">
-            <img src="https://via.placeholder.com/90x30" alt="Image 2" className="rounded-lg -mb-12 mr-64" />
+            <img src={Image4} alt="Image 2" className="rounded-lg -mb-12 mr-64 h-[30px] w-[90px]" />
           </div>
           <div className="flex justify-end mt-4">
             <button className="bg-cyan-300 hover:bg-blue-700 text-white font-bold -py-1 px-4 rounded-full">Funding</button>
@@ -31,15 +35,15 @@ function PressRoom() {
         </div>
 
         <div className="bg-cyan-50 rounded-lg shadow-md p-4 mb-72">
-          <img src="https://via.placeholder.com/500x200" alt="Image 2" className="rounded-lg mb-4" />
+        <img src={Image2} alt="Image 1" className="rounded-lg mb-4  h-[200px] w-[500px] " />
           <h3 className="text-l font-bold mb-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
           <p className="text-gray-500 mb-4 text-sm">
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+            Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a
             galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but
             also the leap into electronic typesetting, remaining essentially unchanged.
           </p>
           <div className="flex justify-start mt-4">
-            <img src="https://via.placeholder.com/90x30" alt="Image 2" className="rounded-lg -mb-12 mr-64" />
+          <img src={Image4} alt="Image 2" className="rounded-lg -mb-12 mr-64 h-[30px] w-[90px]" />
           </div>
           <div className="flex justify-end mt-4">
             <button className="bg-cyan-300 hover:bg-blue-700 text-white font-bold -py-1 px-4 rounded-full">Funding</button>
@@ -48,15 +52,15 @@ function PressRoom() {
         </div>
 
         <div className="bg-cyan-50 rounded-lg shadow-md p-4 mb-72">
-          <img src="https://via.placeholder.com/500x200" alt="Image 3" className="rounded-lg mb-4" />
+        <img src={Image3} alt="Image 1" className="rounded-lg mb-4  h-[200px] w-[500px] " />
           <h3 className="text-l font-bold mb-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
           <p className="text-gray-500 mb-4 text-sm">
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+            Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a
             galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but
             also the leap into electronic typesetting, remaining essentially unchanged.
           </p>
           <div className="flex justify-start mt-4">
-            <img src="https://via.placeholder.com/90x30" alt="Image 2" className="rounded-lg -mb-12 mr-64" />
+          <img src={Image4} alt="Image 2" className="rounded-lg -mb-12 mr-64 h-[30px] w-[90px]" />
           </div>
           <div className="flex justify-end mt-4">
             <button className="bg-cyan-300 hover:bg-blue-700 text-white font-bold -py-1 px-4 rounded-full">Funding</button>

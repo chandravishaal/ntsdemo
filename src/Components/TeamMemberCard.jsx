@@ -53,41 +53,9 @@ function Team() {
   ];
 
   return (
-    <div className="relative flex flex-col justify-center items-center mt-32 md:mt-96 min-h-screen bg-cyan-200">
-      <div id="scroll-text" className="absolute -top-24 md:-top-48 w-full overflow-hidden whitespace-nowrap z-10">
-        <p className="inline-block animate-infinite-scroll text-cyan-300 text-4xl md:text-9xl font-bold">
-          NORTH STAR METRICS
-          <span className="mx-2 md:mx-5">
-            <img src="logo.png" alt="Logo" className="h-16 w-28 md:h-36 md:w-60 inline-block pb-2 md:pb-6 mb-2 md:mb-8" />
-          </span>
-          NORTH STAR METRICS
-          <span className="mx-2 md:mx-5">
-            <img src="logo.png" alt="Logo" className="h-16 w-28 md:h-36 md:w-60 inline-block pb-2 md:pb-6 mb-2 md:mb-8" />
-          </span>
-          NORTH STAR METRICS
-          <span className="mx-2 md:mx-5">
-            <img src="logo.png" alt="Logo" className="h-16 w-28 md:h-36 md:w-60 inline-block pb-2 md:pb-6 mb-2 md:mb-8" />
-          </span>
-        </p>
-      </div>
-
-      <div id="main" className="h-44 w-full mt-0 flex justify-between">
-        <div id="left" className="h-full">
-          <h1 className="absolute top-5 left-3 text-4xl md:text-8xl text-black font-antipasto-pro pl-10 md:pl-28">
-            Meet our <br /> <span className="text-white">creative staff</span>
-          </h1>
-        </div>
-
-        <div id="right" className="h-full relative mr-6">
-          <h1 className="text-[10vw] font-countdownopen tracking-tighter">50+</h1>
-
-          <div id="small_text" className="h-4 lg:h-8 font-century-gothic bg-cyan-200 absolute left-50 top-14 lg:top-28">
-            <h1>Team Member</h1>
-          </div>
-        </div>
-      </div>
-
-      <div className="flex flex-col items-center mt-24 md:mt-32 w-full max-w-7xl">
+    // <div className="relative flex flex-col justify-center items-center mt-32 md:mt-96 min-h-screen bg-cyan-200">
+    //   <div id="scroll-text" className="absolute -top-24 md:-top-48 w-full overflow-hidden whitespace-nowrap z-10">
+      <div className="flex flex-col items-center mb-36 md:mt-32 w-full max-w-7xl">
         <div className="flex flex-wrap justify-center gap-6 md:gap-10 w-full">
           {cards.map((card, index) => (
             <div
@@ -138,11 +106,6 @@ function Team() {
               }`}
               onClick={() => handleCardClick(index)}
             ></span>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
+          )
 
 export default Team;
