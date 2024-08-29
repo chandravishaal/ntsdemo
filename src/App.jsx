@@ -7,6 +7,7 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
+import Services from "./Pages/Services";
 
 const RootLayout = lazy(() => import("./Layouts/RootLayout"));
 const Dashboard = lazy(() => import("./Pages/Home"));
@@ -18,6 +19,7 @@ const App = () => {
       <Route path="/" element={<RootLayout />}>
         <Route index element={<Dashboard />} />
         <Route path="/About" element={<About/>}/>
+        <Route path="/Services" element={<Services/>}/>
 
 
         <Route 

@@ -1,6 +1,6 @@
 import React from 'react'
-import Culture from '../Components/Culture'
-import ContentSection from '../Components/ContentSection'
+import Culture from '../Components/AboutComponents/Culture'
+import ContentSection from '../Components/AboutComponents/ContentSection'
 
 const About = () => {
   return (

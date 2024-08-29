@@ -45,14 +45,14 @@ const Navbar = () => {
         </div>
         <ul  ref={navItems} className="lg:flex items-center overflow-hidden text-white hidden text-base font-semibold gap-8">
           <li>
-            {/* <Link to="/About">About us</Link> */}
+        
             <Link to="/About">About</Link>
           </li>
           <li>
-            <a href="#services">Service</a>
+            <Link to="/Services">Service</Link>
           </li>
           <li>
-            <a href="#features">Feature</a>
+            <a href="/features">Feature</a>
           </li>
           <li>  
             <a href="/crypto-converter">Crypto Converter</a>
