@@ -17,6 +17,34 @@ const Home = () => {
   const [showButton, setShowButton] = useState(false);
   const buttonRef = useRef(null);
 
+
+
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      localStorage.setItem('scrollPosition', window.scrollY);
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, []);
+
+  // Restore scroll position when the page loads
+  useEffect(() => {
+    const scrollPosition = localStorage.getItem('scrollPosition');
+    if (scrollPosition) {
+      window.scrollTo(0, parseInt(scrollPosition));
+      localStorage.removeItem('scrollPosition'); // Optionally remove after restoration
+    }
+  }, []);
+
+
+
+
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 600) {

@@ -20,6 +20,8 @@ const Footer = () => {
             src={footerImage}
             alt="Image Loading ... "
             className="w-[410px] h-[500px]  -mt-[60%] select-none"
+            data-aos="fade-right"
+            data-aos-duration="3000"
             />
         </div>  
 
