@@ -1,10 +1,10 @@
-import whyChooseUsBanner from '../assets/Images/3rd_section_mobile.png';
-import icon1 from '../assets/Images/whyChoose1.png';
-import icon2 from '../assets/Images/whyChoosepayment.png';
-import icon3 from '../assets/Images/whychooseVolatility.png';
-import icon4 from '../assets/Images/whyChoose24.png';
-import icon5 from '../assets/Images/WhyChooseexchange.png';
-import icon6 from '../assets/Images/whyChooseconfirmation.png';
+import whyChooseUsBanner from '../../assets/Images/3rd_section_mobile.png';
+import icon1 from '../../assets/Images/whyChoose1.png';
+import icon2 from '../../assets/Images/whyChoosepayment.png';
+import icon3 from '../../assets/Images/whychooseVolatility.png';
+import icon4 from '../../assets/Images/whyChoose24.png';
+import icon5 from '../../assets/Images/WhyChooseexchange.png';
+import icon6 from '../../assets/Images/whyChooseconfirmation.png';
 
 const WhychooseusCard = ({ image, title, desc, color }) => {
   const aosDuration = color === 'primary' ? '3000' : '1000';

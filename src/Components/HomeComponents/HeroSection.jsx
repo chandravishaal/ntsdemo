@@ -1,4 +1,4 @@
-import heroMobiles from '../assets/Images/hero_section_mobile.png';
+import heroMobiles from '../../assets/Images/hero_section_mobile.png';
 import Typewriter from 'typewriter-effect';
 import { useEffect, useRef } from 'react';
 import AOS from 'aos';

@@ -3,7 +3,7 @@ import { Sparklines, SparklinesLine, SparklinesSpots } from "react-sparklines";
 import { FaArrowUpLong, FaArrowDownLong } from "react-icons/fa6";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import explorebanner from "../assets/Images/2nd_section_mobile.png";
+import explorebanner from "../../assets/Images/2nd_section_mobile.png";
 
 const CoinCards = ({ image, name, amount, data, isPositive, percentage }) => {
   return (

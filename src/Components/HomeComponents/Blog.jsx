@@ -1,8 +1,8 @@
 // import BlogPost from './BlogPost';
 import 'remixicon/fonts/remixicon.css';
-import blog1 from '../assets/Images/blog_1.png';
-import blog2 from '../assets/Images/blog_2.png';
-import blog3 from '../assets/Images/blog_3.png';
+import blog1 from '../../assets/Images/blog_1.png';
+import blog2 from '../../assets/Images/blog_2.png';
+import blog3 from '../../assets/Images/blog_3.png';
 
 const BlogPost = ({ image, date, author, comments, content, isCenter }) => {
   return (

@@ -1,5 +1,5 @@
-import mobileBanner from '../assets/Images/4th_section_mobile.png';
-import videoThumbnail from '../assets/Video/sampleVideo1.mp4';
+import mobileBanner from '../../assets/Images/4th_section_mobile.png';
+import videoThumbnail from '../../assets/Video/sampleVideo1.mp4';
 
 const VideoSection = () => {
   return (
