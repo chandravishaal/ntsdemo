@@ -1,8 +1,7 @@
-import React from 'react';
 
 const Culture = () => {
   return (
-    <section className='h-screen w-full flex items-center justify-center'>
+    <section className='h-[40rem] w-full flex items-center justify-between'>
       <div id='main' className="h-4/6 mx-auto container
       bg-gradient-to-b from-white to-cyan-50
         rounded-lg flex items-center justify-between overflow-hidden">
@@ -14,7 +13,7 @@ const Culture = () => {
           </h2>
           <h3 className="text-2xl tracking-wide	 font-century-gothic text-black">Passionate about technology</h3>
           <p className="text-gray-500 pr-24 font-century-gothic">
-            Lorem Ipsum has been the industry's standard dummy text ever since the
+            Lorem Ipsum has been the industry&apos;s standard dummy text ever since the
             1500s, when an unknown printer took a galley of type and scrambled it
             to make a type specimen book. It has survived not only five centuries,
             but also the leap into electronic typesetting, remaining essentially
