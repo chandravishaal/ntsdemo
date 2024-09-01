@@ -1,18 +1,18 @@
 import { useState, useEffect, useRef } from "react";
-import CoinMarquees from "../Components/CoinMarquees";
-import Explore from "../Components/Explore";
-import HeroSection from "../Components/HeroSection";
-import WhyChooseUs from "../Components/WhyChooseUs";
+import CoinMarquees from "../Components/HomeComponents/CoinMarquees";
+import Explore from "../Components/HomeComponents/Explore";
+import HeroSection from "../Components/HomeComponents/HeroSection";
+import WhyChooseUs from "../Components/HomeComponents/WhyChooseUs";
 import { FaArrowUp } from "react-icons/fa";
 import { gsap } from "gsap";
-import Feature from "../Components/Feature";
-import Testimonial from "../Components/Testimonial";
+import Feature from "../Components/HomeComponents/Feature";
+import Testimonial from "../Components/HomeComponents/Testimonial";
 import Started from "../Components/Started";
-import Blog from "../Components/Blog";
-import CryptoFreedomSection from "../Components/CryptoFreedomSection";
+import Blog from "../Components/HomeComponents/Blog";
+import CryptoFreedomSection from "../Components/HomeComponents/CryptoFreedomSection";
 
-import VideoSection from "../Components/VideoSection";
-import HomeAssets from "../Components/HomeAssets";
+import VideoSection from "../Components/HomeComponents/VideoSection";
+import HomeAssets from "../Components/HomeComponents/HomeAssets";
 const Home = () => {
   const [showButton, setShowButton] = useState(false);
   const buttonRef = useRef(null);
