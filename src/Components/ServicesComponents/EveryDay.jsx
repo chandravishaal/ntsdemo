@@ -1,72 +1,48 @@
 import React from 'react'
+import phoneImage from "../../assets/Images/phone.png";
+
 
 const EveryDay = () =>  {
     return (
-      <section className="h-screen w-full flex items-center justify-center "
-      style={{
-        backgroundImage: "url('/src/assets/Images/ServicesImages/hero_bg1.png')",
-      }}
-      >
+       <section
+          className="h-svh w-full flex items-center justify-center bg-cover bg-center mb-64"
+          style={{
+            backgroundImage: "url('/src/assets/Images/ServicesImages/hero_bg1.png')",
+          }}
+        >
+       
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between  ">
           
           {/* Left Section - Text and Menu */}
           <div className="flex flex-col justify-center items-start space-y-6 max-w-lg">
-            <h1 className="text-4xl font-semibold text-primaryCyan">For Everyday Use</h1>
-            <p className="text-gray-600">
+            <h1 className="text-5xl font-century-gothic font-semibold text-primaryCyan mt-0 ">For Everyday Use</h1>
+            <p className="text-gray-800">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut la.
             </p>
-            <ul className="space-y-2 text-lg">
-              <li className="text-gray-800">Buy / Sell</li>
-              <li className="text-gray-800">Earn</li>
-              <li className="text-gray-800 font-semibold flex items-center">
-                Payment Method <span className="ml-2">→</span>
+            <ul className="space-y-3 text-2xl">
+              <li className="text-gray-800 font-antipasto-pro">Buy / Sell</li>
+              <li className="text-gray-800 font-antipasto-pro">Earn</li>
+              <li className="text-gray-800 font-antipasto-pro font-bold flex items-center">
+                Payment Method <span className="ml-2 font-bold ">→</span>
               </li>
-              <li className="text-gray-800">Academy</li>
-              <li className="text-gray-800">Converter</li>
-              <li className="text-gray-800">Wallet</li>
+              <li className="text-gray-800 font-antipasto-pro ">Academy</li>
+              <li className="text-gray-800 font-antipasto-pro ">Converter</li>
+              <li className="text-gray-800 font-century-gothic">Wallet</li>
             </ul>
           </div>
   
           {/* Right Section - Phone Image and Icons */}
           <div className="relative mt-8 md:mt-0 md:ml-12 flex justify-center items-center">
-            <div className="relative">
+            <div className="relative p-8">
               {/* Phone Image */}
               <img
-              src="/src/assets/Images/ServicesImages/hero_mobile.png"
+              src={phoneImage}
               alt="Crypto Exchange App"
-              className="w-96"
+              className=""
             />
 
           
-              {/* <div id=' Icons' className="absolute -top-8 -right-8 bg-blue-100 p-3 rounded-full shadow-md">
-                <img
-                  src="https://via.placeholder.com/40"
-                  alt="Bitcoin Icon"
-                  className="w-8 h-8"
-                />
-              </div>
-              <div className="absolute top-10 -left-10 bg-blue-100 p-3 rounded-full shadow-md">
-                <img
-                  src="https://via.placeholder.com/40"
-                  alt="Tether Icon"
-                  className="w-8 h-8"
-                />
-              </div>
-              <div className="absolute -bottom-10 -left-8 bg-blue-100 p-3 rounded-full shadow-md">
-                <img
-                  src="https://via.placeholder.com/40"
-                  alt="Ethereum Icon"
-                  className="w-8 h-8"
-                />
-              </div>
-              <div className="absolute -bottom-8 -right-8 bg-blue-100 p-3 rounded-full shadow-md">
-                <img
-                  src="https://via.placeholder.com/40"
-                  alt="Litecoin Icon"
-                  className="w-8 h-8"
-                />
-              </div> */}
             </div>
           </div>
         </div>
