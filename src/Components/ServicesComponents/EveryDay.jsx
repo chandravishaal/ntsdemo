@@ -5,7 +5,7 @@ import phoneImage from "../../assets/Images/phone.png";
 const EveryDay = () =>  {
     return (
        <section
-          className="h-svh w-full flex items-center justify-center bg-cover bg-center mb-64"
+          className="h-svh w-full flex items-center justify-center bg-cover bg-center "
           style={{
             backgroundImage: "url('/src/assets/Images/ServicesImages/hero_bg1.png')",
           }}
