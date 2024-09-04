@@ -1,23 +1,35 @@
 
 import { lazy, Suspense } from "react";
-
+import About from "./Pages/About";
 import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,
   RouterProvider,
 } from "react-router-dom";
+import Services from "./Pages/Services";
+import OtcDesk from "./Pages/OtcDesk";
 
 const RootLayout = lazy(() => import("./Layouts/RootLayout"));
 const Dashboard = lazy(() => import("./Pages/Home"));
-
+const CryptoConverter =lazy(()=> import("./Pages/CryptoConverter"));
 const App = () => {
 
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<RootLayout />}>
         <Route index element={<Dashboard />} />
+        <Route path="/About" element={<About/>}/>
+        <Route path="/Services" element={<Services/>}/>
+
+        <Route path="/OtcDesk" element={<OtcDesk/>}/>
+        <Route 
+          path="/crypto-converter"
+          element={<CryptoConverter/>}
+        />
       </Route>
+
+
       )
     );
 

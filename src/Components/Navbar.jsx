@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { gsap } from 'gsap';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const navItems = useRef(null);
@@ -34,26 +35,27 @@ const Navbar = () => {
   }, [])
 
   return (
-    <nav className={`bg-black w-full ${isSticky ? 'sticky top-0 z-50 shadow-md' : 'static'} transition-all duration-300`} aria-label="Main Navigation">
+    <nav className={`bg-[#252525] w-full ${isSticky ? 'sticky top-0 z-50 shadow-md' : 'static'} transition-all duration-300`} aria-label="Main Navigation">
       <div className="mx-auto container md:px-10 lg:px-2 flex items-center justify-between p-3">
-        <a href="/" aria-label="NSM Homepage">
+        <Link to="/" aria-label="NSM Homepage">
           <img src="https://ntsmetrics.com/img/nsm-logo-blue.png" className="w-32" alt="NSM Logo" />
-        </a>
+        </Link>
         <div className="lg:hidden block text-2xl">
           <GiHamburgerMenu size={30} />
         </div>
         <ul  ref={navItems} className="lg:flex items-center overflow-hidden text-white hidden text-base font-semibold gap-8">
           <li>
-            <a href="#about-us">About us</a>
+        
+            <Link to="/About">About</Link>
           </li>
           <li>
-            <a href="#services">Service</a>
+            <Link to="/Services">Service</Link>
           </li>
           <li>
-            <a href="#features">Feature</a>
+            <a href="/features">Feature</a>
           </li>
           <li>  
-            <a href="#crypto-converter">Crypto Converter</a>
+            <a href="/crypto-converter">Crypto Converter</a>
           </li>
           <li>
             <a href="#cryptocurrency">Cryptocurrency</a>
@@ -63,6 +65,9 @@ const Navbar = () => {
           </li>
           <li>
             <a href="#careers">Careers</a>
+          </li>
+          <li>
+            <Link to="/OtcDesk">OtcDesk</Link>
           </li>
         </ul>
       </div>
