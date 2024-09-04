@@ -5,6 +5,7 @@ import HeroSection from "../Components/HeroSection";
 import WhyChooseUs from "../Components/WhyChooseUs";
 import { FaArrowUp } from "react-icons/fa";
 import { gsap } from "gsap";
+import CryptoTable from "../Components/CryptoTable";
 
 const Home = () => {
   const [showButton, setShowButton] = useState(false);
@@ -53,6 +54,7 @@ const Home = () => {
       <CoinMarquees />
       <HeroSection />
       <Explore />
+      <CryptoTable />
       <WhyChooseUs />
     </>
   );
