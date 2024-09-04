@@ -66,6 +66,9 @@ const Navbar = () => {
           <li>
             <a href="#careers">Careers</a>
           </li>
+          <li>
+            <Link to="/OtcDesk">OtcDesk</Link>
+          </li>
         </ul>
       </div>
     </nav>
