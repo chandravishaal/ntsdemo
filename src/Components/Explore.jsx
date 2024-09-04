@@ -19,7 +19,6 @@ const CoinCards = ({ image, name, amount, data, isPositive, percentage }) => {
         <div className="flex items-center w-full gap-1">
           <Sparklines data={data} limit={7} width={100} height={30} margin={1}>
             <SparklinesLine color={isPositive ? "green" : "red"} />
-            <SparklinesSpots style={{ fill: isPositive ? "green" : "red" }} />
           </Sparklines>
           <h1
             className={`text-2xl flex mb-3 items-center gap-1 ${
@@ -36,6 +35,8 @@ const CoinCards = ({ image, name, amount, data, isPositive, percentage }) => {
     </div>
   );
 };
+
+// {isPositive ? <FaArrowUpLong /> : <FaArrowDownLong />}
 
 const Explore = () => {
   useEffect(() => {
