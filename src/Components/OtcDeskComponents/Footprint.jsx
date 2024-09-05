@@ -85,10 +85,10 @@ const Footprint = () => {
         {/* Europe */}
         <div className="absolute top-[8.9%] left-[56.2%] flex items-center">
         <div className="relative ml-4 px-2 py-1  bg-white rounded-3xl flex flex-col items-center  shadow-lg border border-gray-300">
-            <div className="absolute left-2 -bottom-7  w-0 h-0 
+            <div className="absolute left-2 -bottom-8  w-0 h-0 
                             border-t-[35px] border-t-white
-                            border-l-[45px] border-l-transparent -rotate-90">
-          <div id="location" className=' rotate-90 absolute bottom-7 right-10  w-5 h-5 '>
+                            border-l-[45px] border-l-transparent -rotate-90  ">
+          <div id="location" className=' rotate-90 absolute bottom-6 right-10  w-5 h-5 '>
           <img src="src/assets/Images/OtcDesk/section6_location_icon.png" alt="" />
           </div>
             </div>
