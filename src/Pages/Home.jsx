@@ -5,18 +5,18 @@ import HeroSection from "../Components/HomeComponents/HeroSection";
 import WhyChooseUs from "../Components/HomeComponents/WhyChooseUs";
 import { FaArrowUp } from "react-icons/fa";
 import { gsap } from "gsap";
-<<<<<<< HEAD
-import CryptoTable from "../Components/CryptoTable";
-=======
+// import CryptoTable from "../Components/CryptoTable";
+
 import Feature from "../Components/HomeComponents/Feature";
 import Testimonial from "../Components/HomeComponents/Testimonial";
 import Started from "../Components/Started";
 import Blog from "../Components/HomeComponents/Blog";
 import CryptoFreedomSection from "../Components/HomeComponents/CryptoFreedomSection";
->>>>>>> dev
+
 
 import VideoSection from "../Components/HomeComponents/VideoSection";
 import HomeAssets from "../Components/HomeComponents/HomeAssets";
+import CryptoTable from "../Components/CryptoTable";
 const Home = () => {
   const [showButton, setShowButton] = useState(false);
   const buttonRef = useRef(null);
@@ -94,9 +94,9 @@ const Home = () => {
       <CoinMarquees />
       <HeroSection />
       <Explore />
-      <CryptoTable />
       <WhyChooseUs />
-      <HomeAssets />
+      <CryptoTable />
+      {/* <HomeAssets /> */}
       <VideoSection/>
       <Feature/>
       <Started/>
