@@ -3,10 +3,10 @@ import React from 'react'
 const Works = () => {
   return (
     <section
-    className="h-[50rem] w-full py-10 bg-cyan-50 mb-2 ">
+    className="h-[50rem] w-full py-10 bg-cyan-50  ">
      
         <div className="container mx-auto text-center pt-20">
-          <h2 className="text-4xl font-century-gothic font-bold">How it works</h2>
+          <h2 className="text-4xl font-century-gothic font-bold text-gray-700">How it works</h2>
           <p className="text-gray-700 font-century-gothic mb-12 font-extrabold">
           Lorem Ipsum is simply dummy text of the printing and typesetting industry.  Lorem Ipsum is simply dummy <br /> text of the printing and typesetting industry. 
           </p>
@@ -20,8 +20,8 @@ const Works = () => {
      <img src="/src/assets/Images/OtcDesk/section5_icon1.png" alt="" className='absolute top-10 left-7' />
      <div className="text-9xl font-black text-gray-800 mr-4 absolute top-28 -left-32">1</div>
      <div id="text" className='  h-36 w-60 absolute top-28 -left-16'>
-        <h1 className='text-3xl font-bold'>Onboarding</h1>
-        <p className='px-7 text-sm '>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam perferendis non ullam tenetur?.
+        <h1 className='text-3xl font-semibold font-century-gothic'>Onboarding</h1>
+        <p className='px-7 text-sm font-century-gothic'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam perferendis non ullam tenetur?.
         </p>
     </div>
     </div>
@@ -34,8 +34,8 @@ const Works = () => {
      <img src="/src/assets/Images/OtcDesk/section5_icon2.png" alt="" className='absolute top-10 left-7' />
      <div className="text-9xl font-black text-gray-800 mr-4 absolute top-28 -left-32">2</div>
      <div id="text" className='  h-36 w-60 absolute top-28 -left-16'>
-        <h1 className='text-3xl font-bold'>Fund Deposit</h1>
-        <p className='px-7 text-sm '>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam perferendis non ullam tenetur?.
+        <h1 className='text-3xl font-semibold font-century-gothic'>Fund Deposit</h1>
+        <p className='px-7 text-sm font-century-gothic'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam perferendis non ullam tenetur?.
         </p>
     </div>
     </div>
@@ -48,8 +48,8 @@ const Works = () => {
      <img src="/src/assets/Images/OtcDesk/section5_icon3.png" alt="" className='absolute top-10 left-7' />
      <div className="text-9xl font-black text-gray-800 mr-4 absolute top-28 -left-32">3</div>
      <div id="text" className='  h-36 w-60 absolute top-28 -left-16'>
-        <h1 className='text-3xl font-bold'>Settlement</h1>
-        <p className='px-7 text-sm '>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam perferendis non ullam tenetur?.
+        <h1 className='text-3xl font-semibold font-century-gothic'>Settlement</h1>
+        <p className='px-7 text-sm font-century-gothic'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam perferendis non ullam tenetur?.
         </p>
     </div>
     </div>
