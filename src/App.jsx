@@ -1,6 +1,4 @@
-
 import { lazy, Suspense } from "react";
-import About from "./Pages/About";
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -12,9 +10,11 @@ import OtcDesk from "./Pages/OtcDesk";
 
 const RootLayout = lazy(() => import("./Layouts/RootLayout"));
 const Dashboard = lazy(() => import("./Pages/Home"));
-const CryptoConverter =lazy(()=> import("./Pages/CryptoConverter"));
-const App = () => {
+const CryptoConverter = lazy(() => import("./Pages/CryptoConverter"));
+const Page404 = lazy(() => import("./Pages/Page404"));
+const About = lazy(() => import("./Pages/About"));
 
+const App = () => {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<RootLayout />}>
@@ -25,8 +25,8 @@ const App = () => {
         <Route path="/OtcDesk" element={<OtcDesk/>}/>
         <Route 
           path="/crypto-converter"
-          element={<CryptoConverter/>}
-        />
+          element={<CryptoConverter/>}/>
+          <Route path="*" element={<Page404/>}/>
       </Route>
 
 
@@ -38,7 +38,7 @@ const App = () => {
     <Suspense fallback={<div>Loading...</div>}>
       <RouterProvider router={router} />
     </Suspense>
-  )
+  );
 }
 
-export default App
+export default App;
