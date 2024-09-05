@@ -3,6 +3,14 @@ import { Sparklines, SparklinesLine, SparklinesSpots } from "react-sparklines";
 import { LuArrowDownRight } from "react-icons/lu";
 import { FiArrowUpRight } from "react-icons/fi";
 import { FaArrowRightLong } from "react-icons/fa6";
+import {
+  Area,
+  AreaChart,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis,
+} from "recharts";
 
 // Sample dynamic data based on currency and time period
 const dataOptions = {
@@ -137,62 +145,77 @@ const dataOptions = {
       },
     ],
     "1m": [
-  {
-    "name": "Bitcoin",
-    "logo": "https://cryptologos.cc/logos/bitcoin-btc-logo.png?v=033",
-    "symbol": "BTC",
-    "price": "€56,000.00",
-    "performance": "+2.00%",
-    "marketCap": "€1.12T",
-    "volume": "€2.00M",
-    "sparklineData": [10, 15, 12, 20, 18, 22, 20, 18, 15, 12, 10, 12, 14, 16, 18, 20, 22, 24, 22, 20, 18, 16, 14, 12, 10, 12, 14, 16, 18, 20],
-    "performanceColor": "green"
-  },
-  {
-    "name": "Ethereum",
-    "logo": "https://cryptologos.cc/logos/ethereum-eth-logo.png?v=033",
-    "symbol": "ETH",
-    "price": "€2,600.00",
-    "performance": "+4.00%",
-    "marketCap": "€310.00B",
-    "volume": "€7.00M",
-    "sparklineData": [12, 18, 14, 20, 24, 30, 28, 26, 24, 22, 20, 22, 24, 26, 28, 30, 32, 34, 36, 34, 32, 30, 28, 26, 24, 22, 20, 22, 24, 26],
-    "performanceColor": "green"
-  },
-  {
-    "name": "Ripple",
-    "logo": "https://cryptologos.cc/logos/xrp-xrp-logo.png?v=033",
-    "symbol": "XRP",
-    "price": "€0.58",
-    "performance": "-1.50%",
-    "marketCap": "€33.00B",
-    "volume": "€8.00K",
-    "sparklineData": [10, 7, 5, 4, 3, 2, 3, 4, 5, 6, 7, 6, 5, 4, 3, 2, 1, 2, 3, 4, 5, 4, 3, 2, 1, 2, 3, 4, 5, 6],
-    "performanceColor": "red"
-  },
-  {
-    "name": "Litecoin",
-    "logo": "https://cryptologos.cc/logos/litecoin-ltc-logo.png?v=033",
-    "symbol": "LTC",
-    "price": "€65.00",
-    "performance": "+3.00%",
-    "marketCap": "€4.80B",
-    "volume": "€80.0K",
-    "sparklineData": [8, 10, 7, 12, 18, 16, 20, 22, 24, 22, 20, 18, 16, 14, 12, 10, 8, 10, 12, 14, 16, 18, 20, 22, 24, 22, 20, 18, 16, 14],
-    "performanceColor": "green"
-  },
-  {
-    "name": "Polygon",
-    "logo": "https://cryptologos.cc/logos/polygon-matic-logo.png?v=033",
-    "symbol": "MATIC",
-    "price": "€0.05",
-    "performance": "+1.00%",
-    "marketCap": "€12.0M",
-    "volume": "€300.00K",
-    "sparklineData": [7, 6, 5, 6, 6, 7, 6, 7, 8, 9, 10, 9, 8, 7, 6, 5, 4, 5, 6, 7, 8, 9, 10, 9, 8, 7, 6, 5, 4, 3],
-    "performanceColor": "green"
-  }
-],
+      {
+        name: "Bitcoin",
+        logo: "https://cryptologos.cc/logos/bitcoin-btc-logo.png?v=033",
+        symbol: "BTC",
+        price: "€56,000.00",
+        performance: "+2.00%",
+        marketCap: "€1.12T",
+        volume: "€2.00M",
+        sparklineData: [
+          10, 15, 12, 20, 18, 22, 20, 18, 15, 12, 10, 12, 14, 16, 18, 20, 22,
+          24, 22, 20, 18, 16, 14, 12, 10, 12, 14, 16, 18, 20,
+        ],
+        performanceColor: "green",
+      },
+      {
+        name: "Ethereum",
+        logo: "https://cryptologos.cc/logos/ethereum-eth-logo.png?v=033",
+        symbol: "ETH",
+        price: "€2,600.00",
+        performance: "+4.00%",
+        marketCap: "€310.00B",
+        volume: "€7.00M",
+        sparklineData: [
+          12, 18, 14, 20, 24, 30, 28, 26, 24, 22, 20, 22, 24, 26, 28, 30, 32,
+          34, 36, 34, 32, 30, 28, 26, 24, 22, 20, 22, 24, 26,
+        ],
+        performanceColor: "green",
+      },
+      {
+        name: "Ripple",
+        logo: "https://cryptologos.cc/logos/xrp-xrp-logo.png?v=033",
+        symbol: "XRP",
+        price: "€0.58",
+        performance: "-1.50%",
+        marketCap: "€33.00B",
+        volume: "€8.00K",
+        sparklineData: [
+          10, 7, 5, 4, 3, 2, 3, 4, 5, 6, 7, 6, 5, 4, 3, 2, 1, 2, 3, 4, 5, 4, 3,
+          2, 1, 2, 3, 4, 5, 6,
+        ],
+        performanceColor: "red",
+      },
+      {
+        name: "Litecoin",
+        logo: "https://cryptologos.cc/logos/litecoin-ltc-logo.png?v=033",
+        symbol: "LTC",
+        price: "€65.00",
+        performance: "+3.00%",
+        marketCap: "€4.80B",
+        volume: "€80.0K",
+        sparklineData: [
+          8, 10, 7, 12, 18, 16, 20, 22, 24, 22, 20, 18, 16, 14, 12, 10, 8, 10,
+          12, 14, 16, 18, 20, 22, 24, 22, 20, 18, 16, 14,
+        ],
+        performanceColor: "green",
+      },
+      {
+        name: "Polygon",
+        logo: "https://cryptologos.cc/logos/polygon-matic-logo.png?v=033",
+        symbol: "MATIC",
+        price: "€0.05",
+        performance: "+1.00%",
+        marketCap: "€12.0M",
+        volume: "€300.00K",
+        sparklineData: [
+          7, 6, 5, 6, 6, 7, 6, 7, 8, 9, 10, 9, 8, 7, 6, 5, 4, 5, 6, 7, 8, 9, 10,
+          9, 8, 7, 6, 5, 4, 3,
+        ],
+        performanceColor: "green",
+      },
+    ],
 
     "6m": [
       {
@@ -501,19 +524,74 @@ const HomeAssets = () => {
     setPeriod(event.target.value);
   };
 
-  const getLimit = (period) => {
-    switch (period) {
-      case "24hr":
-        return 24;
-      case "7d":
-        return 7;
-      case "1m":
-        return 30;
-      case "6m":
-        return 60;
-      default:
-        return 24;
+  // const getLimit = (period) => {
+  //   switch (period) {
+  //     case "24hr":
+  //       return 24;
+  //     case "7d":
+  //       return 7;
+  //     case "1m":
+  //       return 30;
+  //     case "6m":
+  //       return 60;
+  //     default:
+  //       return 24;
+  //   }
+  // };
+
+  const getTrendColor = (data) => {
+    const firstPrice = data[0];
+    const lastPrice = data[data.length - 1];
+    return lastPrice > firstPrice ? "#00C49F" : "#FF0000"; // Green for upward, Red for downward
+  };
+
+  // Function to render the sparkline graph with a shaded area and color-specific shadow
+
+  const renderSparkline = (data) => {
+    if (!data || data.length === 0) {
+      return <div>No data available</div>;
     }
+
+    const sparklineData = data.map((price, index) => ({ price, index }));
+    const trendColor = getTrendColor(data);
+
+    return (
+      <div
+        className="flex justify-center items-center h-full"
+        style={{ overflow: "visible" }}
+      >
+        <ResponsiveContainer width={180} height={60}>
+          <AreaChart data={sparklineData}>
+            <defs>
+              <linearGradient
+                id={`colorTrend-${trendColor}`}
+                x1="0"
+                y1="0"
+                x2="0"
+                y2="1"
+              >
+                <stop offset="0%" stopColor={trendColor} stopOpacity={0.4} />
+                <stop offset="100%" stopColor={trendColor} stopOpacity={0.05} />
+              </linearGradient>
+            </defs>
+            <Area
+              type="monotone"
+              dataKey="price"
+              stroke={trendColor}
+              fill={`url(#colorTrend-${trendColor})`}
+              strokeWidth={2}
+              dot={false}
+            />
+            <XAxis hide />
+            <YAxis hide />
+            <Tooltip
+              position={{ y: -0.2}} // Adjust y position if needed
+              wrapperStyle={{ overflow: "visible", width: 80, maxHeight: 10 }} // Set tooltip width
+            />
+          </AreaChart>
+        </ResponsiveContainer>
+      </div>
+    );
   };
 
   return (
@@ -551,7 +629,10 @@ const HomeAssets = () => {
                 <th className="text-left text-lg py-4 px-6">Name</th>
                 <th className="text-left text-lg py-4 px-6">Price</th>
                 <th className="text-left text-lg py-4 px-6">Performance</th>
-                <th className="text-left text-lg py-4 px-6">Market Cap</th>
+                <th className="text-left text-lg py-4 px-6">
+                  Market Cap
+                  <InfoTooltip tooltipKey="marketCap" />
+                </th>
                 <th className="text-left text-lg py-4 px-6">Volume</th>
                 <th className="py-4 px-6"></th>
               </tr>
@@ -607,7 +688,7 @@ const HomeAssets = () => {
                   <td className="py-4 px-6">{item.volume}</td>
                   <td className="py-4 px-6">
                     <div className="rounded-lg overflow-hidden w-full">
-                      <Sparklines
+                      {/* <Sparklines
                         key={`${item.symbol}-${period}`} // Unique key for each sparkline chart
                         data={item.sparklineData}
                         svgWidth={100}
@@ -633,7 +714,10 @@ const HomeAssets = () => {
                             strokeWidth: 1,
                           }}
                         />
-                      </Sparklines>
+                      </Sparklines> */}
+
+                      {/* renderSparkLine using recharts instead of sparklines */}
+                      {renderSparkline(item.sparklineData)}
                     </div>
                   </td>
                   <td className="py-4 px-6">
@@ -660,3 +744,39 @@ const HomeAssets = () => {
 };
 
 export default HomeAssets;
+
+// Tooltip texts
+const tooltipTexts = {
+  change: "The percentage of change in the value compared to 24 hours ago.",
+  volume:
+    "The total value of the currency that has been traded in the last 24 hours.",
+  marketCap:
+    "The total value of the number of coins in circulation multiplied by the current market price of a single coin.",
+  last7days:
+    "This shows a sparkline graph of the last 7 days of the currency's value.",
+};
+
+// Tooltip component
+const InfoTooltip = ({ tooltipKey }) => (
+  <div className="relative group inline-block ml-1">
+    <span className="text-black-500 text-bold hover:text-black-700 margin-left: 0.5rem">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 28 28"
+        strokeWidth={3}
+        stroke="currentColor"
+        className="w-4 h-4 inline"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M12 9v2m0 4h.01M12 12h.01M19.78 12.78A9.003 9.003 0 1112 3v0a9.003 9.003 0 017.78 9.78zM12 7h.01M12 12h.01"
+        />
+      </svg>
+    </span>
+    <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-44 p-2 bg-gray-700 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10">
+      {tooltipTexts[tooltipKey]}
+    </div>
+  </div>
+);
