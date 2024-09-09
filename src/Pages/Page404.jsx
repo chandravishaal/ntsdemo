@@ -60,7 +60,7 @@ const Page404 = () => {
           </div>
           <p className="text-gray-600 mt-2 text-xl">Not finding what you were looking for?<br /> Contact us at <a href="#" className="text-black font-semibold hover:underline">supportnsm@in</a></p>
           <div className="mt-4 mb-8">
-            <a href="#" className="bg-transparent font-bold border-2 border-gray-500 text-black px-4 py-2 rounded-md hover:bg-cyan-100">Back to Home</a>
+            <a href="http://localhost:5173/" className="bg-transparent font-bold border-2 border-gray-500 text-black px-4 py-2 rounded-md hover:bg-cyan-100">Back to Home</a>
           </div>
         </div>
 
