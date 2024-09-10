@@ -24,6 +24,7 @@
     "react-sparklines": "^1.7.0",
     "recharts": "^2.12.7",
     "remixicon": "^4.3.0",
+    "swiper": "^11.1.12",
     "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {

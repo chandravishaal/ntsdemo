@@ -43,7 +43,7 @@ const AboutHeader = () =>  {
     <section
       className="h-[50rem] w-full flex items-center justify-center bg-cover bg-center"
       style={{
-        backgroundImage: "url('/src/assets/Images/laptop.png')",
+        backgroundImage: `url(${laptopImage})`,
       }}
     >
      <div id="main" className=' container relative bg-cover bg-center bg-no-repeat h-[40rem] flex items-center justify-end p-6 ml-10  '>
@@ -55,7 +55,7 @@ const AboutHeader = () =>  {
       <div id="heading">
            <h2 className="text-3xl md:text-4xl font-antipasto-pro font-bold  text-black">
            Who We Are<br />
-             <p className="text-gray-800 font-century-gothic text-2xl font-light mt-4 ">India's First Cryptocurrency Exchange</p>
+             <p className="text-gray-800 font-century-gothic text-2xl font-light mt-4 ">India&apos;s First Cryptocurrency Exchange</p>
            </h2>
            </div> 
            <div id="heding2">
@@ -69,7 +69,7 @@ const AboutHeader = () =>  {
              cements our position as the premier website for the purchase and 
              trading of any cryptocurrency. At North Star Metrics, your
               financial future rests in your hands,
-            supported by a source of trust and innovation.
+            supported by a source of trust and innovation.
            </p>
            </div>
            
