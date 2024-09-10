@@ -1,13 +1,9 @@
 import React from 'react'
-
+import mobile1 from '../../assets/Images/ServicesImages/hero_mobile.png'
+import mobile2 from '../../assets/Images/ServicesImages/hero_bg2.png'
 const ServicesHeroSection  = () => {
   return (
-    <section
-      className="h-[50rem] w-full flex items-center justify-center bg-cover bg-center"
-      style={{
-        backgroundImage: "url('/src/assets/Images/ServicesImages/hero_bg1.png')",
-      }}
-    >
+    <section className="services-hero-bg  h-[50rem] w-full flex items-center justify-center bg-cover bg-center ">
      <div id="main" className=' container relative bg-cover bg-center bg-no-repeat h-[40rem] flex items-center justify-center p-2  
     '>
 
@@ -42,14 +38,14 @@ const ServicesHeroSection  = () => {
         <div id="image" className='relative'>
          <div id="img1" className='w-96 -mb-12 '>
         <img
-              src="/src/assets/Images/ServicesImages/hero_mobile.png"
+              src={mobile1}
               alt=""
               className="relative left-40"
             />
             </div>
             <div id="img2" className='w-[50rem] pr-16'>
         <img
-              src="/src/assets/Images/ServicesImages/hero_bg2.png"
+              src={mobile2}
               alt=""
               className=""
             />

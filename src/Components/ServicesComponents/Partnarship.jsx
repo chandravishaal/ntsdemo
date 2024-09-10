@@ -1,13 +1,10 @@
 import React from 'react'
+import left  from '../../assets/Images/ServicesImages/last_section_img.png'
 
 const Partnarship = () => {
   return (
-     <section
-        className="h-svh w-full flex items-center justify-center bg-cover bg-center "
-        style={{
-          backgroundImage: "url('/src/assets/Images/ServicesImages/last_section_bg.png')",
-        }}
-      >
+         <section className="Partnarship-bg  h-[50rem] w-full flex items-center justify-center bg-cover bg-center ">
+
      <div id="main" className=' container relative bg-cover bg-center bg-no-repeat h-[40rem] flex items-center justify-center p-2  
     '>
 
@@ -16,7 +13,7 @@ const Partnarship = () => {
        flex items-center justify-center'>
 
         <div id="image" className='pr-10'>
-          <img src="/src/assets/Images/ServicesImages/last_section_img.png" alt="" />
+          <img src={left} alt="" />
         </div>
       </div>
 

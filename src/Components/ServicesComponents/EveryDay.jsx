@@ -4,12 +4,8 @@ import phoneImage from "../../assets/Images/phone.png";
 
 const EveryDay = () =>  {
     return (
-       <section
-          className="h-svh w-full flex items-center justify-center bg-cover bg-center "
-          style={{
-            backgroundImage: "url('/src/assets/Images/ServicesImages/hero_bg1.png')",
-          }}
-        >
+                <section className="Everyday-bg h-[50rem] w-full flex items-center justify-center bg-cover bg-center ">
+
        
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between  ">
           

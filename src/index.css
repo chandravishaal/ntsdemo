@@ -240,6 +240,43 @@ text-decoration:none;
   background-position: center 80%;
 }
 
+
+/* Services hero section background image */
+@media (min-width: 768px) {
+  .services-hero-bg {
+    background-image: url('./assets/Images/ServicesImages/hero_bg1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position: center;
+
+  }
+}
+/* Services Partnarship section background image */
+@media (min-width: 768px) {
+  .Partnarship-bg {
+    background-image: url('./assets/Images/ServicesImages/last_section_bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position: center;
+
+  }
+}
+/* Services EveryDay section background image */
+@media (min-width: 768px) {
+  .Everyday-bg {
+    background-image: url('./assets/Images/ServicesImages/hero_bg1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position: center;
+
+  }
+}
+
+
+
 /* .footer section background */
 .aboutHeader-background {
   background-image: url('../src/assets/Images/laptop.png');
