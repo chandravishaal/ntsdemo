@@ -1,5 +1,19 @@
 import React from 'react';
 
+import location from "../../assets/Images/OtcDesk/section6_location_icon.png";
+
+import Canada from "../../assets/Images/OtcDesk/section6_icon1.png";
+import United from "../../assets/Images/OtcDesk/section6_icon2.png";
+import UK from "../../assets/Images/OtcDesk/section6_icon3.png";
+import Europe from "../../assets/Images/OtcDesk/section6_icon4.png";
+import India from "../../assets/Images/OtcDesk/section6_icon5.png";
+import Australia from "../../assets/Images/OtcDesk/section6_icon6.png";
+
+
+
+
+
+
 const Footprint = () => {
   return (
     <section className="h-[61rem] py-10 bg-[#F6F9FC]">
@@ -11,9 +25,7 @@ const Footprint = () => {
       </div>
 
       <div
-        className="relative h-[50rem] bg-center bg-cover container mx-auto"
-        style={{ backgroundImage: "url('/src/assets/Images/OtcDesk/map.png')" }}
-      >
+        className="map relative h-[50rem] bg-center bg-cover container mx-auto">
         {/* Canada */}
         <div className="absolute -top-[2%] left-[0.1%] flex  items-center">
         <div className="relative ml-4 px-2 py-1  bg-white rounded-3xl flex flex-col items-center  shadow-lg border border-gray-300">
@@ -21,11 +33,11 @@ const Footprint = () => {
                             border-t-[35px] border-t-white
                             border-l-[45px] border-l-transparent">
           <div id="location" className='w-5 h-5'>
-          <img src="src/assets/Images/OtcDesk/section6_location_icon.png" alt="" />
+          <img src={location} alt="" />
           </div>
             </div>
            <div id="img" className='h-9 w-9 bg-cyan-500 rounded-full flex items-center justify-center '>
-            <img src="src/assets/Images/OtcDesk/section6_icon1.png"
+            <img src={Canada}
              alt="Canada"
              className="w-8 h-8 rounded-full"/>
             </div>              
@@ -45,11 +57,11 @@ const Footprint = () => {
                             border-t-[35px] border-t-white
                             border-l-[45px] border-l-transparent">
           <div id="location" className='w-5 h-5'>
-          <img src="src/assets/Images/OtcDesk/section6_location_icon.png" alt="" />
+          <img src={location} alt="" />
           </div>
             </div>
            <div id="img" className='h-8 w-8 bg-cyan-500 rounded-full flex items-center justify-center p-0.5'>
-            <img src="src/assets/Images/OtcDesk/section6_icon2.png"
+            <img src={United}
              alt="Canada"
              className="w-7 h-7 rounded-full"/>
             </div>              
@@ -67,11 +79,11 @@ const Footprint = () => {
                             border-t-[35px] border-t-white
                             border-l-[45px] border-l-transparent">
           <div id="location" className='w-5 h-5'>
-          <img src="src/assets/Images/OtcDesk/section6_location_icon.png" alt="" />
+          <img src={location} alt="" />
           </div>
             </div>
            <div id="img" className='h-8 w-8 bg-cyan-500 rounded-full flex items-center justify-center p-0.5'>
-            <img src="src/assets/Images/OtcDesk/section6_icon3.png"
+            <img src={UK}
              alt="Canada"
              className="w-7 h-7 rounded-full"/>
             </div>              
@@ -89,12 +101,12 @@ const Footprint = () => {
                             border-t-[35px] border-t-white
                             border-l-[45px] border-l-transparent -rotate-90  ">
           <div id="location" className=' rotate-90 absolute bottom-6 right-10  w-5 h-5 '>
-          <img src="src/assets/Images/OtcDesk/section6_location_icon.png" alt="" />
+          <img src={location} alt="" />
           </div>
             </div>
             
            <div id="img" className='h-8 w-8 bg-cyan-500 rounded-full flex items-center justify-center p-0.5'>
-            <img src="src/assets/Images/OtcDesk/section6_icon4.png"
+            <img src={Europe}
              alt="Canada"
              className="w-7 h-7 rounded-full"/>
             </div>              
@@ -114,11 +126,11 @@ const Footprint = () => {
                             border-t-[35px] border-t-white
                             border-l-[45px] border-l-transparent">
           <div id="location" className='w-5 h-5'>
-          <img src="src/assets/Images/OtcDesk/section6_location_icon.png" alt="" />
+          <img src={location} alt="" />
           </div>
             </div>
            <div id="img" className='h-8 w-8 bg-cyan-500 rounded-full flex items-center justify-center p-0.5'>
-            <img src="src/assets/Images/OtcDesk/section6_icon5.png"
+            <img src={India}
              alt="Canada"
              className="w-7 h-7 rounded-full"/>
             </div>              
@@ -138,11 +150,11 @@ const Footprint = () => {
                             border-t-[35px] border-t-white
                             border-l-[45px] border-l-transparent">
           <div id="location" className='w-5 h-5'>
-          <img src="src/assets/Images/OtcDesk/section6_location_icon.png" alt="" />
+          <img src={location} alt="" />
           </div>
             </div>
            <div id="img" className='h-8 w-8 bg-cyan-500 rounded-full flex items-center justify-center p-0.5'>
-            <img src="src/assets/Images/OtcDesk/section6_icon6.png"
+            <img src={Australia}
              alt="Canada"
              className="w-7 h-7 rounded-full"/>
             </div>              

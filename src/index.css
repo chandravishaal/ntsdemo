@@ -275,6 +275,18 @@ text-decoration:none;
   }
 }
 
+/* otcDesk EveryDay section background image */
+@media (min-width: 768px) {
+  .map {
+    background-image: url('./assets/Images/OtcDesk/map.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position: center;
+
+  }
+}
+
 
 
 /* .footer section background */

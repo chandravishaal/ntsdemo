@@ -1,5 +1,14 @@
 import React from 'react'
 
+import image from "../../assets/Images/OtcDesk/section5_img.png";
+
+import icon1 from "../../assets/Images/OtcDesk/section5_icon1.png";
+import icon2 from "../../assets/Images/OtcDesk/section5_icon2.png";
+import icon3 from "../../assets/Images/OtcDesk/section5_icon3.png";
+
+
+
+
 const Works = () => {
   return (
     <section
@@ -16,8 +25,8 @@ const Works = () => {
 <div id="left" className='relative h-[30rem] w-1/3 border-solid'>
    <div id="content" className=''>
      <div id="img"  className='absolute right-0 top-[25%]'>
-     <img src="/src/assets/Images/OtcDesk/section5_img.png" alt=""/>
-     <img src="/src/assets/Images/OtcDesk/section5_icon1.png" alt="" className='absolute top-10 left-7' />
+     <img src={image} alt=""/>
+     <img src={icon1} alt="" className='absolute top-10 left-7' />
      <div className="text-9xl font-black text-gray-800 mr-4 absolute top-28 -left-32">1</div>
      <div id="text" className='  h-36 w-60 absolute top-28 -left-16'>
         <h1 className='text-3xl font-semibold font-century-gothic'>Onboarding</h1>
@@ -30,8 +39,8 @@ const Works = () => {
 <div id="center" className='relative h-[30rem] w-1/3 border-solid '>
    <div id="content" className=''>
      <div id="img"  className='absolute right-0 top-[25%]'>
-     <img src="/src/assets/Images/OtcDesk/section5_img.png" alt=""/>
-     <img src="/src/assets/Images/OtcDesk/section5_icon2.png" alt="" className='absolute top-10 left-7' />
+     <img src={image} alt=""/>
+     <img src={icon2} alt="" className='absolute top-10 left-7' />
      <div className="text-9xl font-black text-gray-800 mr-4 absolute top-28 -left-32">2</div>
      <div id="text" className='  h-36 w-60 absolute top-28 -left-16'>
         <h1 className='text-3xl font-semibold font-century-gothic'>Fund Deposit</h1>
@@ -44,8 +53,8 @@ const Works = () => {
 <div id="right" className='relative h-[30rem] w-1/3 border-solid '>
    <div id="content" className=''>
      <div id="img"  className='absolute right-0 top-[25%]'>
-     <img src="/src/assets/Images/OtcDesk/section5_img.png" alt=""/>
-     <img src="/src/assets/Images/OtcDesk/section5_icon3.png" alt="" className='absolute top-10 left-7' />
+     <img src={image} alt=""/>
+     <img src={icon3} alt="" className='absolute top-10 left-7' />
      <div className="text-9xl font-black text-gray-800 mr-4 absolute top-28 -left-32">3</div>
      <div id="text" className='  h-36 w-60 absolute top-28 -left-16'>
         <h1 className='text-3xl font-semibold font-century-gothic'>Settlement</h1>

@@ -1,3 +1,11 @@
+import icon1 from "../../assets/Images/OtcDesk/bit-coin.png";
+import icon2 from "../../assets/Images/OtcDesk/icons8-ethereum-50.png";
+import icon3 from "../../assets/Images/OtcDesk/icons8-cryptocurrency-48.png";
+
+import apple from "../../assets/Images/OtcDesk/icons8-apple-pay-50.png";
+
+
+
 const Countries = () =>  {
   return (
     <section className="h-[15rem] container mx-auto bg-gradient-to-r  from-[#004a5e] to-[#2fc2f4] text-white py-12 mt-12 mb-12">
@@ -58,7 +66,7 @@ const Countries = () =>  {
             <i class="ri-visa-line text-blue-600 text-2xl" ></i>
             </div>
             <div className="w-12 h-12  bg-white rounded-full  shadow-md flex items-center justify-center">
-              <img src="src/assets/Images/OtcDesk/icons8-apple-pay-50.png" alt="Apple Pay" className="w-6 h-6" />
+              <img src={apple} alt="Apple Pay" className="w-6 h-6" />
             </div>
             <div className="w-12 h-12 p-5 bg-white rounded-full shadow-md flex items-center justify-center">
             
@@ -79,13 +87,13 @@ const Countries = () =>  {
           <p className="mt-2 text-xl text-center font-century-gothic">Cryptocurrencies <br /> supported</p>
           <div className="flex mt-4 -space-x-3">
             <div className="w-12 h-12  bg-white rounded-full shadow-md flex items-center justify-center">
-              <img src="src/assets/Images/OtcDesk/bit-coin.png" alt="Bitcoin" className="w-6 h-6" />
+              <img src={icon1} alt="Bitcoin" className="w-6 h-6" />
             </div>
             <div className="w-12 h-12  bg-white rounded-full shadow-md flex items-center justify-center">
-              <img src="src/assets/Images/OtcDesk/icons8-ethereum-50.png" alt="Ethereum" className="w-6 h-6" />
+              <img src={icon2} alt="Ethereum" className="w-6 h-6" />
             </div>
             <div className="w-12 h-12  bg-white rounded-full shadow-md flex items-center justify-center">
-              <img src="src/assets/Images/OtcDesk/icons8-cryptocurrency-48.png" alt="Tether" className="w-6 h-6" />
+              <img src={icon3} alt="Tether" className="w-6 h-6" />
             </div>
             <div className="w-12 h-12  bg-white rounded-full shadow-md flex items-center justify-center">
               <span className="text-black font-semibold">...</span>

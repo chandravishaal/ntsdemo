@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import imgfaq from '../../assets/Images/OtcDesk/faq.png'
 
 const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -71,7 +72,7 @@ const Faq = () => {
           </div>
           <div className="hidden md:block md:w-1/2" id="faq-right">
             <img
-              src="src/assets/Images/OtcDesk/faq.png"
+              src={imgfaq}
               alt="Question Bubbles"
               className="w-full h-full object-cover ml-10"
             />
