@@ -1,4 +1,4 @@
-import React from 'react'
+
 import mobile1 from '../../assets/Images/ServicesImages/hero_mobile.png'
 import mobile2 from '../../assets/Images/ServicesImages/hero_bg2.png'
 const ServicesHeroSection  = () => {
