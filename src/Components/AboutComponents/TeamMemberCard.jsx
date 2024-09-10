@@ -1,13 +1,17 @@
+import React from 'react';
 import { FaFacebookF } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
-
-
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/autoplay'; // Import autoplay styles
+import { Pagination, Autoplay } from 'swiper/modules';
 
 const MemberCard = () => {
   return (
-    <div className="bg-white p-1 h-[27rem] rounded-3xl relative">
+    <div className="bg-white p-1 h-[27rem] rounded-3xl relative select-none cursor-pointer">
       <img
         src="https://images.unsplash.com/photo-1562159278-1253a58da141?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         alt=""
@@ -30,7 +34,7 @@ const MemberCard = () => {
 
 const TeamMemberCard = () => {
   return (
-    <section className="pb-32 pt-20 bg-cyan-200">
+    <section className="pb-32 pt-20 teamMembers-background">
       <div className="container mx-auto">
         <div className="text-center mb-32">
           <h2 className="text-4xl font-bold mt-8">Our executive team</h2>
@@ -40,12 +44,26 @@ const TeamMemberCard = () => {
             text ever since the 1500s,
           </p>
         </div>
-        <div className="grid lg:grid-cols-4 grid-cols-2 gap-5">
-          <MemberCard />
-          <MemberCard />
-          <MemberCard />
-          <MemberCard />
-        </div>
+
+        <Swiper
+          pagination={{ clickable: true }}
+          modules={[Pagination, Autoplay]} // Include Autoplay module
+          className="mySwiper"
+          spaceBetween={30}
+          slidesPerView={3}
+          loop={true}
+          autoplay={{
+            delay: 3000, // Delay between slides in milliseconds (3 seconds)
+            disableOnInteraction: false, // Allow user interaction without stopping autoplay
+          }}
+        >
+          <SwiperSlide><MemberCard /></SwiperSlide>
+          <SwiperSlide><MemberCard /></SwiperSlide>
+          <SwiperSlide><MemberCard /></SwiperSlide>
+          <SwiperSlide><MemberCard /></SwiperSlide>
+          <SwiperSlide><MemberCard /></SwiperSlide>
+          <SwiperSlide><MemberCard /></SwiperSlide>
+        </Swiper>
       </div>
     </section>
   );

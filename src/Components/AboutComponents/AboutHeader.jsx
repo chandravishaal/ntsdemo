@@ -5,27 +5,21 @@ const AboutHeader = () => {
         <div className="bg-gray-50">
           <div className="relative flex justify-center items-center h-[50rem]">
             {/* Image container */}
-            <div className="relative w-full h-full flex justify-center items-center">
+            <div className="relative w-full h-full aboutHeader-background">
               {/* Main background image */}
-              <img src={laptopImage} alt="cover" className="w-full h-full object-cover" />
-    
-              {/* Text overlay */}
-              {/* <div className="f">
-                <h1 className="text-4xl raleway-hero font-bold text-black drop-shadow-md">Who we are</h1>
-                <p className="text-2xl text-black mt-2 font-light">
-                  India&apos;s First Cryptocurrency Exchange
-                </p>
-                <p className="text-[18px] text-black raleway-hero mt-4 max-w-xs font-light">
-                 We are a team of entrepreneurs who founded North Star Metrics with the vision to accommodate individuals and businesses in India, helping them adapt to cryptocurrencies. We believe it&apos;s only a matter of time before digital currency becomes the future of all currencies.
-                </p>
-                <p className="text-[18px] text-black raleway-hero mt-4 max-w-xs font-light">
-                  For the first time in India, we&apos;ve made it possible for individuals, businesses, or even occasional travelers to buy, sell, and learn about Bitcoin, Ethereum, or any cryptocurrencies one-on-one right from our office.
-                </p>
-              </div> */}
+              
+              <div className='flex justify-center items-center container mx-auto'>
 
-              <div>
+
+              <div className='flex flex-[.6]'></div>
+              <div className='flex flex-col flex-[.4]'>
+                <h1 className='text-5xl font-bold mb-8 mt-52'>Who we are</h1>
+                <h1 className='text-3xl mb-8 whitespace-nowrap'>India&apos; one of the largest Cryptocurrency <br /> Exchange</h1>
+                <h1 className='text-2xl'>At North Star Metrics, we are the best platform for buying and selling crypto while making it seamless, secure, and accessible to everyone.</h1>
+              </div>
 
               </div>
+
             </div>
           </div>
         </div>

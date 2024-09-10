@@ -240,6 +240,24 @@ text-decoration:none;
   background-position: center 80%;
 }
 
+/* .footer section background */
+.aboutHeader-background {
+  background-image: url('../src/assets/Images/laptop.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-position: center 80%;
+}
+
+
+.teamMembers-background {
+  background-image: url('../src/assets/Images/executivebg.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-position: center 80%;
+}
+
 
 /* freedom section background */
 .freedomSection-background {
@@ -377,4 +395,14 @@ nav {
 /* Assets section shadow  */
 .asset-shadow {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+
+.swiper-pagination-bullet {
+  background-color: #000; /* Optional: Change the color of the dots */
+  opacity: 0.7; /* Optional: Adjust the opacity of the dots */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #00e1ff; /* Optional: Color for the active dot */
 }
