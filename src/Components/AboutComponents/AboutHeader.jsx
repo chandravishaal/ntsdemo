@@ -41,7 +41,7 @@ import laptopImage from '../../assets/Images/laptop.png';
 const AboutHeader = () =>  {
   return (
     <section
-      className="h-[50rem] w-full flex items-center justify-center bg-cover bg-center"
+      className="h-[50rem] w-full flex items-center justify-center bg-cover bg-center "
       style={{
         backgroundImage: `url(${laptopImage})`,
       }}

@@ -62,9 +62,10 @@ const BlogPost = ({ image, date, author, comments, content, isCenter }) => {
 
 const Blog = () => {
   return (
+    <section className='bg-[#F5F8FF]'>
     <div
       id="main"
-      className="w-full bg-white mb-32 container mx-auto mt-11 flex flex-col items-center py-3 space-y-5"
+      className="w-full bg-[#F5F8FF] mb-32 container mx-auto mt-11 flex flex-col items-center py-20 space-y-5"
     >
       {/* Headings */}
       <div id="heading" className="flex flex-col items-center gap-4 mb-10">
@@ -103,6 +104,7 @@ const Blog = () => {
         />
       </div>
     </div>
+    </section>
   );
 };
 

@@ -40,8 +40,8 @@ function PressRoom() {
           <div className='flex items-center justify-between'>
             <img src={logoSrc} className='w-24' alt="" />
             <div className="flex justify-end mt-4">
-            <div className="bg-primaryCyan text-white font-bold -py-1 px-4 rounded-full">Funding</div>
-            <div className="bg-primaryCyan text-white font-bold -py-1 px-4 rounded-full ml-4">Growth</div>
+            <div className="bg-primaryCyan text-black font-bold -py-1 px-4 rounded-full">Funding</div>
+            <div className="bg-primaryCyan text-black font-bold -py-1 px-4 rounded-full ml-4">Growth</div>
           </div>
           </div>
         </div>

@@ -55,19 +55,19 @@ const Navbar = () => {
             <a href="/features">Feature</a>
           </li>
           <li>  
-            <a href="/crypto-converter">Crypto Converter</a>
+            <Link to="/crypto-converter">Crypto Converter</Link>
           </li>
           <li>
             <a href="#cryptocurrency">Cryptocurrency</a>
           </li>
           <li>
-            <a href="#faqs">FAQs</a>
+            <a href="#faqs">FAQ&apos;s</a>
           </li>
           <li>
             <a href="#careers">Careers</a>
           </li>
           <li>
-            <Link to="/OtcDesk">OtcDesk</Link>
+            <Link to="/OtcDesk">OTC Desk</Link>
           </li>
         </ul>
       </div>

@@ -1,5 +1,5 @@
 import mobileBanner from '../../assets/Images/4th_section_mobile.png';
-import videoThumbnail from '../../assets/Video/sampleVideo1.mp4';
+import videoThumbnail from '../../assets/Video/sampleVideo2.mp4';
 
 const VideoSection = () => {
   return (
@@ -11,7 +11,7 @@ const VideoSection = () => {
         autoPlay
         loop
         muted
-        className="w-full h-[600px] object-cover"
+        className="w-full h-[600px] object-cover opacity-95"
       />
       <div className="absolute inset-0 bg-black opacity-60"></div>
     </div>
@@ -45,7 +45,7 @@ const VideoSection = () => {
 
             {/* Buttons Section */}
             <div className="flex space-x-4 mt-8">
-              <button className="lg:px-3 lg:py-2 px-3 py-2 text-md button text-center cursor-pointer md:w-1/5 lg:text-base text-sm font-semibold transition-all hover:bg-cyan-500 duration-200 outline-none text-white bg-primaryCyan rounded-[100px] shadow-[0_4px_#118baa]">
+              <button className="lg:px-3 lg:py-2 px-3 py-2 text-md button text-center cursor-pointer md:w-1/5 lg:text-base text-sm font-semibold transition-all hover:bg-cyan-500 duration-200 outline-none text-black bg-primaryCyan rounded-[100px] shadow-[0_4px_#118baa]">
                 Tradable
               </button>
               <button className="lg:px-3 lg:py-2 px-3 py-2 text-md button text-center cursor-pointer md:w-1/5 lg:text-base text-sm font-semibold transition-all hover:bg-cyan-900 duration-200 outline-none text-white bg-cyan-800 rounded-[100px] shadow-[0_4px_#0f172a]">
