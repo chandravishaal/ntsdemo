@@ -28,7 +28,7 @@ const AdvanceUser = () =>  {
            <div id="button">
             <button className=" font-century-gothic 
             lg:px-3 lg:py-1.5  text-md button text-center cursor-pointer  lg:text-base text-sm 
-            transition-all hover:bg-cyan-500 duration-200 outline-none text-white bg-primaryCyan rounded-md shadow-[0_4px_#118baa]
+            transition-all hover:bg-cyan-500 duration-200 outline-none text-black bg-primaryCyan rounded-md shadow-[0_4px_#118baa]
            
            ">
              Know more

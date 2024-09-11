@@ -26,7 +26,7 @@ const Footer = () => {
         </div>  
 
         <div className=" py-10 pt-20 w-full  ">
-        <div className="flex flex-row justify-between    text-white text-1xl pr-10">
+        <div className="flex flex-row justify-between    text-black text-1xl pr-10">
           <div className=" w-1/3">
             <h3 className="font-bold mb-4">Get In Touch</h3>
             <p className="mt-2">

@@ -24,7 +24,7 @@ const ServicesHeroSection  = () => {
            </p>
            </div>
            <div id="button">
-           <button className="px-6 py-3 font-century-gothic text-lg md:text-xl bg-primaryCyan text-white rounded-full">
+           <button className="px-6 py-3 font-century-gothic text-lg md:text-xl bg-primaryCyan text-black rounded-full">
              Get Started
            </button>
            </div>
