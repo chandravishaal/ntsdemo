@@ -455,3 +455,10 @@ nav {
 .swiper-pagination-bullet-active {
   background-color: #00e1ff; /* Optional: Color for the active dot */
 }
+
+
+@media screen and (max-width: 1024px) {
+  .responsiveTable {
+    overflow-x: auto; /* Enables horizontal scrolling */
+  }
+}
