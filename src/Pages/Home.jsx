@@ -83,7 +83,7 @@ const Home = () => {
       {showButton && (
         <div
           ref={buttonRef}
-          className="shadow-lg rounded-xl fixed z-50 bottom-10 right-10 text-white cursor-pointer"
+          className="shadow-lg rounded-xl fixed z-50 bottom-10 right-10 text-white cursor-pointer hidden lg:block"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
            <button className="px-4 py-3 text-md button text-center cursor-pointer lg:text-base text-sm font-semibold transition-all hover:bg-cyan-500 duration-200 outline-none text-white bg-primaryCyan rounded-[100px] shadow-[0_4px_#118baa]">
@@ -96,7 +96,6 @@ const Home = () => {
       <Explore />
       <WhyChooseUs />
       <CryptoTable />
-      {/* <HomeAssets /> */}
       <VideoSection/>
       <Feature/>
       <Started/>
