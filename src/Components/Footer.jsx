@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <>
     <section className="footer-background">
-      <footer className="container flex flex-row  mx-auto max-w-[1200px] relative z-20  mt-24">
+      <footer className="container flex flex-row  mx-auto max-w-[1200px] relative z-20  mt-48">
         <div className=" z-10 ">
           <img
             src={footerImage}

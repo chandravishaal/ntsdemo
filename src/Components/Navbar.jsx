@@ -58,7 +58,7 @@ const Navbar = () => {
             <Link to="/crypto-converter">Crypto Converter</Link>
           </li>
           <li>
-            <a href="#cryptocurrency">Cryptocurrency</a>
+            <Link to="/Cryptocurrency">Cryptocurrency</Link>
           </li>
           <li>
             <a href="#faqs">FAQ&apos;s</a>

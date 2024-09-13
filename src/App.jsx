@@ -7,6 +7,8 @@ import {
 } from "react-router-dom";
 import Services from "./Pages/Services";
 import OtcDesk from "./Pages/OtcDesk";
+import Cryptocurrency from "./Pages/Cryptocurrency";
+
 
 const RootLayout = lazy(() => import("./Layouts/RootLayout"));
 const Dashboard = lazy(() => import("./Pages/Home"));
@@ -23,6 +25,8 @@ const App = () => {
         <Route path="/Services" element={<Services/>}/>
 
         <Route path="/OtcDesk" element={<OtcDesk/>}/>
+        <Route path="/Cryptocurrency" element={<Cryptocurrency/>}/>
+
         <Route 
           path="/crypto-converter"
           element={<CryptoConverter/>}/>
