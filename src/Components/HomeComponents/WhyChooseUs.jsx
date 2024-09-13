@@ -6,28 +6,23 @@ import icon4 from '../../assets/Images/whyChoose24.png';
 import icon5 from '../../assets/Images/WhyChooseexchange.png';
 import icon6 from '../../assets/Images/whyChooseconfirmation.png';
 
-const WhychooseusCard = ({ image, title, desc, color }) => {
-  const aosDuration = color === 'primary' ? '3000' : '1000';
-
+const WhychooseusCard = ({ image, title, desc, color, customClass }) => {
   return (
     <div
-      className={`bg-primaryCyan w-full ${
+      className={`bg-primaryCyan w-full h-[200px] md:h-[150px] lg:h-[180px] ${
         color === 'primary' ? 'bg-primaryCyan' : 'bg-white'
-      } border-2 border-primaryCyan rounded-xl p-3 gap-3`}
-      data-aos="fade-up"
-      data-aos-duration={aosDuration}
-      data-aos-delay="400"
+      } border-2 border-primaryCyan rounded-xl p-3 gap-3 ${customClass}`}
     >
-      <img src={image} className="w-10 mb-4 object-contain" alt="" />
+      <img src={image} className="w-10 mb-4 mx-auto object-contain" alt="" />
       <h1
-        className={`text-lg whitespace-normal ${
+        className={`text-lg leading-5 text-center lg:text-start ${
           color === 'primary' ? 'text-white' : 'text-primaryCyan'
         } font-bold mb-2`}
       >
         {title}
       </h1>
       <p
-        className={`text-sm ${
+        className={`text-sm text-center lg:text-start leading-4 ${
           color === 'primary' ? 'text-white' : 'text-primaryCyan'
         }`}
       >
@@ -39,14 +34,14 @@ const WhychooseusCard = ({ image, title, desc, color }) => {
 
 const WhyChooseUs = () => {
   return (
-    <section className="whychooseSection-background my-10 py-10">
-      <div className="container mx-auto my-20 flex flex-col md:flex-row items-center justify-between gap-10">
-        <div className="flex flex-col items-center md:items-start flex-[0.6] text-center md:text-left">
+    <section className="whychooseSection-background md:pt-20 lg:my-10 lg:py-10">
+      <div className="container mx-auto mb-20 flex flex-col-reverse lg:flex-row items-center justify-between gap-10 px-5">
+        <div className="flex flex-col items-center lg:items-start flex-[0.6] text-center md:text-left">
           <h1 className="text-3xl mt-5 font-bold mb-5">Why Choose Us?</h1>
           <p className="text-xl mb-10">
             A Crypto platform has never been better than this.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:px-20 lg:px-0">
             <WhychooseusCard
               color="primary"
               title="Easy To Start"
@@ -59,24 +54,28 @@ const WhyChooseUs = () => {
               image={icon1}
               desc="We provide a safe environment for all your transactions."
             />
-            <WhychooseusCard
-              color="primary"
-              title="Convenient Payment Options"
-              image={icon2}
-              desc="Enjoy Easy Payment Options."
-            />
+            <div className='order-0 lg:order-6'>
             <WhychooseusCard
               color="notPrimary"
-              title="Instant Processing Order"
+              title="Rapid Order Processing"
               image={icon5}
               desc="Enjoy the benefit of instant order processing for effective trading."
             />
+            </div>
             <WhychooseusCard
               color="primary"
               title="Volatility Protection"
               image={icon3}
               desc="At North Star Metrics we offer tools for protection from volatility."
             />
+            <div className='order-0 lg:order-5'>
+              <WhychooseusCard
+                color="primary"
+                title="Smart Payment Choices"
+                image={icon2}
+                desc="Enjoy Easy Payment Options."
+              />
+            </div>
             <WhychooseusCard
               color="notPrimary"
               title="24/7 Support"
@@ -85,10 +84,10 @@ const WhyChooseUs = () => {
             />
           </div>
         </div>
-        <div className="flex-[0.4] w-full flex justify-center md:justify-end">
+        <div className="flex-[0.4] w-full flex justify-center md:justify-end mb-20 md:mb-0 lg:mb-0">
           <img
             src={whyChooseUsBanner}
-            className="max-w-[400px] translate-y-20 md:translate-y-0 ml-auto"
+            className="max-w-[400px] translate-y-20 mx-auto md:translate-y-0 ml-auto"
             alt="whyChooseUsBanner"
           />
         </div>

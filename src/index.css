@@ -7,7 +7,7 @@
 }
 
 
-body{
+html, body{
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
@@ -167,7 +167,7 @@ text-decoration:none;
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    background-position: center center;
+    background-position: right;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -464,4 +464,16 @@ nav {
 
 .swiper-pagination-bullet-active {
   background-color: #00e1ff; /* Optional: Color for the active dot */
+}
+
+
+@media screen and (max-width: 1024px) {
+  .responsiveTable {
+    overflow-x: auto; /* Enables horizontal scrolling */
+  }
+}
+
+.jost-uniquifier {
+  font-family: "Jost", sans-serif;
+  
 }
