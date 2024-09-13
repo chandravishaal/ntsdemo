@@ -60,11 +60,11 @@ const Resources = () => {
           <div key={index} className="border border-cyan-200 overflow-hidden">
             <button
               onClick={() => toggleAccordion(index)}
-              className={`w-full text-left px-4 py-3 sm:py-4 bg-white flex justify-between items-center ${
+              className={`w-full text-left px-4 py-3 sm:py-4 bg-cyan-50 flex justify-between items-center ${
                 activeIndex === index ? 'border-blue-600' : 'border-gray-300'
               }`}
             >
-              <span className="text-black font-century-gothic font-bold">{item.title}</span>
+              <span className="text-black font-century-gothic text-xl font-bold">{item.title}</span>
               <i
                 className={`ri-arrow-up-wide-fill text-gray-500 transform ${
                   activeIndex === index ? 'rotate-180' : 'rotate-0'
