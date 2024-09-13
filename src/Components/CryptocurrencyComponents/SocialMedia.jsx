@@ -272,127 +272,136 @@ const SocialMediaOverview = () => {
       </div>
 
       {/* Overview Section */}
-      <div className="mb-20 container mx-auto px-4">
-        <div className="mb-5">
-          <h2 className="text-2xl md:text-3xl font-extrabold font-century-gothic mb-4">
-            Overview
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-5 gap-y-6">
-            {/* Each block */}
-            {[
-              { title: "Contributors", value: "864,739 people" },
-              { title: "Posts", value: "516,486 posts" },
-              { title: "Dominance", value: "3.58%" },
-              { title: "Volume Rank", value: "#1" },
-              { title: "Average Sentiment", value: "3.5 out of 5" },
-              { title: "News Articles", value: "78" },
-            ].map((item, index) => (
-              <div key={index} className=" p-6  ">
-                <p className="font-bold font-century-gothic uppercase text-lg">
-                  {item.title}
-                  <span className="text-black font-light">
-                    <InfoTooltip text="Demo" />
-                  </span>
-                </p>
-                <p className="text-lg font-eras-bold font-medium mt-4">
-                  {item.value}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Twitter Section */}
-        <div className="mb-5">
-          <h2 className="text-2xl md:text-3xl font-extrabold font-century-gothic mb-4">
-            Twitter
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-5 gap-y-6">
-            <div className="p-6">
+      <div className="container mx-auto px-4 mb-20">
+      {/* Overview Section */}
+      <div className="mb-5">
+        <h2 className="text-2xl md:text-3xl font-extrabold font-century-gothic mb-4">
+          Overview
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-6">
+          {/* Each block */}
+          {[
+            { title: "Contributors", value: "864,739 people" },
+            { title: "Posts", value: "516,486 posts" },
+            { title: "Dominance", value: "3.58%" },
+            { title: "Volume Rank", value: "#1" },
+            { title: "Average Sentiment", value: "3.5 out of 5" },
+            { title: "News Articles", value: "78" },
+          ].map((item, index) => (
+            <div key={index} className="py-6 text-center md:text-start md:text-start">
               <p className="font-bold font-century-gothic uppercase text-lg">
-                Tweet Count
+                {item.title}
                 <span className="text-black font-light">
-                  <InfoTooltip text="The percentage of change in the value compared to 24 hours ago." />
+                  <InfoTooltip text="Demo" />
                 </span>
               </p>
               <p className="text-lg font-eras-bold font-medium mt-4">
-                652,829 tweets
+                {item.value}
               </p>
+              {/* Horizontal line for small screens */}
+              <hr className="block md:hidden border-gray-300 my-4" />
             </div>
-            <div className=" p-6 ">
-              <div className="font-bold font-century-gothic uppercase text-lg">
-                Sentiment
-                <span className="text-black font-light">
-                  <InfoTooltip text="The percentage of change in the value compared to 24 hours ago." />
-                </span>
-              </div>
-              <div className="flex justify-between gap-6 mt-4">
-                <p className="text-lg font-eras-bold font-medium">
-                  57.04% <br /> <span>Bullish</span>
-                </p>
-                <p className="text-lg font-eras-bold font-medium">
-                  34.73% <br /> <span>Neutral</span>
-                </p>
-                <p className="text-lg font-eras-bold font-medium">
-                  8.23% <br /> <span>Bearish</span>
-                </p>
-              </div>
-            </div>
-
-            {/* Sentiment Bar */}
-            <div className="flex items-center pt-8 px-5">
-              <div className="bg-teal-400 h-5 w-2/3 rounded-l-2xl"></div>
-              <div className="bg-gray-300 h-5 w-1/3 border border-gray-300"></div>
-              <div className="bg-black h-5 w-1/12 rounded-r-2xl border border-black"></div>
-            </div>
-          </div>
+          ))}
         </div>
+      </div>
 
-        {/* Reddit Section */}
-        <div>
-          <h2 className="text-2xl md:text-3xl font-extrabold font-century-gothic mb-4">
-            Reddit
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-5 gap-y-6">
-            <div className=" p-6 ">
-              <p className="font-bold font-century-gothic uppercase text-lg">
-                Posts
-                <span className="text-black font-light">
-                  <InfoTooltip text="The percentage of change in the value compared to 24 hours ago." />
-                </span>
-              </p>
-              <p className="text-lg font-eras-bold font-medium mt-4">5,107</p>
+      {/* Twitter Section */}
+      <div className="mb-5">
+        <h2 className="text-2xl md:text-3xl font-extrabold font-century-gothic mb-4">
+          Twitter
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-5 gap-y-6">
+          <div className="py-6 text-center md:text-start">
+            <p className="font-bold font-century-gothic uppercase text-lg">
+              Tweet Count
+              <span className="text-black font-light">
+                <InfoTooltip text="The percentage of change in the value compared to 24 hours ago." />
+              </span>
+            </p>
+            <p className="text-lg font-eras-bold font-medium mt-4">
+              652,829 tweets
+            </p>
+            <hr className="block md:hidden border-gray-300 my-4" />
+          </div>
+          <div className="py-6 text-center md:text-start">
+            <div className="font-bold font-century-gothic uppercase text-lg">
+              Sentiment
+              <span className="text-black font-light">
+                <InfoTooltip text="The percentage of change in the value compared to 24 hours ago." />
+              </span>
             </div>
-            <div className=" p-6 ">
-              <p className="font-bold font-century-gothic uppercase text-lg">
-                Comments
-                <span className="text-black font-light">
-                  <InfoTooltip text="The percentage of change in the value compared to 24 hours ago." />
-                </span>
+            <div className="flex flex-col md:flex-row justify-center gap-6 mt-4">
+              <p className="text-lg font-eras-bold font-medium">
+                57.04% <br /> <span>Bullish</span>
               </p>
-              <p className="text-lg font-eras-bold font-medium mt-4">8,748</p>
-            </div>
-            <div className=" p-6 ">
-              <p className="font-bold font-century-gothic uppercase text-lg">
-                Post Score
-                <span className="text-black font-light">
-                  <InfoTooltip text="The percentage of change in the value compared to 24 hours ago." />
-                </span>
+              <p className="text-lg font-eras-bold font-medium">
+                34.73% <br /> <span>Neutral</span>
               </p>
-              <p className="text-lg font-eras-bold font-medium mt-4">84,879</p>
-            </div>
-            <div className=" p-6 ">
-              <p className="font-bold font-century-gothic uppercase text-lg">
-                Comment Score
-                <span className="text-black font-light">
-                  <InfoTooltip text="The percentage of change in the value compared to 24 hours ago." />
-                </span>
+              <p className="text-lg font-eras-bold font-medium">
+                8.23% <br /> <span>Bearish</span>
               </p>
-              <p className="text-lg font-eras-bold font-medium mt-4">90,813</p>
             </div>
+            <hr className="block md:hidden border-gray-300 my-4" />
+          </div>
+
+          {/* Sentiment Bar */}
+          <div className="flex items-center justify-center md:pt-8  pt-0 md:mb-0 mb-6 md:px-5 px-10">
+            <div className="bg-teal-400 h-5 w-2/3 rounded-l-2xl"></div>
+            <div className="bg-gray-300 h-5 w-1/3 border border-gray-300"></div>
+            <div className="bg-black h-5 w-1/12 rounded-r-2xl border border-black"></div>
           </div>
         </div>
       </div>
+
+      {/* Reddit Section */}
+      <div className="pb-10">
+        <h2 className="text-2xl md:text-3xl font-extrabold font-century-gothic mb-4 ">
+          Reddit
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-5 gap-y-6">
+          <div className="py-6 text-center md:text-start">
+            <p className="font-bold font-century-gothic uppercase text-lg">
+              Posts
+              <span className="text-black font-light">
+                <InfoTooltip text="The percentage of change in the value compared to 24 hours ago." />
+              </span>
+            </p>
+            <p className="text-lg font-eras-bold font-medium mt-4">5,107</p>
+            <hr className="block md:hidden border-gray-300 my-4" />
+          </div>
+          <div className="py-6 text-center md:text-start">
+            <p className="font-bold font-century-gothic uppercase text-lg">
+              Comments
+              <span className="text-black font-light">
+                <InfoTooltip text="The percentage of change in the value compared to 24 hours ago." />
+              </span>
+            </p>
+            <p className="text-lg font-eras-bold font-medium mt-4">8,748</p>
+            <hr className="block md:hidden border-gray-300 my-4" />
+          </div>
+          <div className="py-6 text-center md:text-start">
+            <p className="font-bold font-century-gothic uppercase text-lg">
+              Post Score
+              <span className="text-black font-light">
+                <InfoTooltip text="The percentage of change in the value compared to 24 hours ago." />
+              </span>
+            </p>
+            <p className="text-lg font-eras-bold font-medium mt-4">84,879</p>
+            <hr className="block md:hidden border-gray-300 my-4" />
+          </div>
+          <div className="py-6 text-center md:text-start">
+            <p className="font-bold font-century-gothic uppercase text-lg">
+              Comment Score
+              <span className="text-black font-light">
+                <InfoTooltip text="The percentage of change in the value compared to 24 hours ago." />
+              </span>
+            </p>
+            <p className="text-lg font-eras-bold font-medium mt-4">90,813</p>
+            <hr className="block md:hidden border-gray-300 my-4" />
+          </div>
+        </div>
+      </div>
+    </div>
     </div>
   );
 };

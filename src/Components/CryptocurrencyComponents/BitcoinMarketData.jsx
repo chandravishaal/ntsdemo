@@ -5,7 +5,7 @@ const BitcoinMarketData = () => {
   return (
     <>
       <div className='bg-cyan-50'>
-        <div className="container mx-auto px-4 py-11">
+        <div className="container mx-auto px-2 py-20">
           {/* Market Data Section */}
           <div className="text-center mb-12">
             <h2 className="text-2xl sm:text-4xl font-bold font-century-gothic">
@@ -16,44 +16,53 @@ const BitcoinMarketData = () => {
           {/* 4 Column Market Data Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             {/* Price */}
-            <div>
-              <h3 className="text-lg sm:text-2xl font-century-gothic">Price</h3>
-              <p className="mt-2 font-century-gothic">50,499.10€</p>
+            <div className='box'>
+              <h3 className="text-2xl font-semibold sm:text-2xl font-century-gothic text-gray-700">Price</h3>
+              <p className="mt-1 md:mt-4 font-century-gothic ">50,499.10€</p>
+              {/* Horizontal line for mobile/tablet screens */}
+              <hr className="block md:hidden border-gray-300 my-4" />
             </div>
             {/* Price Change (24H) */}
-            <div>
-              <h3 className="text-lg sm:text-2xl font-century-gothic">Price change (24H)</h3>
-              <p className="mt-2 font-century-gothic text-red-500">-1.20%</p>
+            <div className='box'>
+              <h3 className="text-2xl font-semibold sm:text-2xl font-century-gothic text-gray-700 ">Price change (24H)</h3>
+              <p className="mt-1 md:mt-4 font-century-gothic text-red-500">-1.20%</p>
+              <hr className="block md:hidden border-gray-300 my-4" />
             </div>
             {/* Price Change (7D) */}
-            <div>
-              <h3 className="text-lg sm:text-2xl font-century-gothic">Price change (7D)</h3>
-              <p className="mt-2 font-century-gothic text-red-500">-6.07%</p>
+            <div className='box'>
+              <h3 className="text-2xl font-semibold sm:text-2xl font-century-gothic text-gray-700">Price change (7D)</h3>
+              <p className="mt-1 md:mt-4 font-century-gothic text-red-500">-6.07%</p>
+              <hr className="block md:hidden border-gray-300 my-4" />
             </div>
             {/* Market Capitalization */}
-            <div>
-              <h3 className="text-lg sm:text-2xl font-century-gothic">Market capitalization</h3>
-              <p className="mt-2 font-century-gothic">990,729,093,099.70€</p>
+            <div className='box'>
+              <h3 className="text-2xl font-semibold sm:text-2xl font-century-gothic text-gray-700">Market capitalization</h3>
+              <p className="mt-1 md:mt-4 font-century-gothic">990,729,093,099.70€</p>
+              <hr className="block md:hidden border-gray-300 my-4" />
             </div>
             {/* Volume (24H) */}
-            <div>
-              <h3 className="text-lg sm:text-2xl font-century-gothic">Volume (24H)</h3>
-              <p className="mt-2 font-century-gothic">173,496,189,601.98€</p>
-            </div>
+            <div className='box'>
+              <h3 className="text-2xl font-semibold sm:text-2xl font-century-gothic text-gray-700">Volume (24H)</h3>
+              <p className="mt-1 md:mt-4 font-century-gothic">173,496,189,601.98€</p>
+              <hr className="block md:hidden border-gray-300 my-4" />
+            </div >
             {/* Max Supply */}
-            <div>
-              <h3 className="text-lg sm:text-2xl font-century-gothic">Max supply</h3>
-              <p className="mt-2 font-century-gothic">21,000,000 BTC</p>
+            <div className='box'>
+              <h3 className="text-2xl font-semibold sm:text-2xl font-century-gothic text-gray-700">Max supply</h3>
+              <p className="mt-1 md:mt-4 font-century-gothic">21,000,000 BTC</p>
+              <hr className="block md:hidden border-gray-300 my-4" />
             </div>
             {/* Total Supply */}
-            <div>
-              <h3 className="text-lg sm:text-2xl font-century-gothic">Total supply</h3>
-              <p className="mt-2 font-century-gothic">21,000,000 BTC</p>
+            <div className='box'>
+              <h3 className="text-2xl font-semibold sm:text-2xl font-century-gothic text-gray-700">Total supply</h3>
+              <p className="mt-1 md:mt-4 font-century-gothic">21,000,000 BTC</p>
+              <hr className="block md:hidden border-gray-300 my-4" />
             </div>
             {/* Diluted Market Cap */}
-            <div>
-              <h3 className="text-lg sm:text-2xl font-century-gothic">Diluted market cap</h3>
-              <p className="mt-2 font-century-gothic">1,053,416,984,771.79€</p>
+            <div className='box'>
+              <h3 className="text-2xl font-semibold sm:text-2xl font-century-gothic text-gray-700">Diluted market cap</h3>
+              <p className="mt-1 md:mt-4 font-century-gothic">1,053,416,984,771.79€</p>
+              <hr className="block md:hidden border-gray-300 my-4" />
             </div>
           </div>
         </div>

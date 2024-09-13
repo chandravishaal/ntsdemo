@@ -20,7 +20,7 @@ const MarketStatsDropdown = () => {
 
   const accordionData = [
     {
-      title: <h4 className='text-lg md:text-3xl  font-century-gothic'>Market stats</h4>,
+      title: <h4 className='text-lg md:text-3xl pl-7 font-century-gothic'>Market stats</h4>,
       content: (
         <div className="flex flex-wrap justify-center p-4 md:p-10">
           <div className="w-full md:w-1/3 p-4">
@@ -76,7 +76,7 @@ const MarketStatsDropdown = () => {
       ),
     },
     {
-      title: <h4 className='text-lg md:text-3xl  font-century-gothic'>Market performance</h4>,
+      title: <h4 className='text-lg md:text-3xl pl-7 font-century-gothic'>Market performance</h4>,
       content: (
         <div className="flex flex-wrap justify-center p-4 md:p-10">
           <div className="w-full md:w-1/3 p-4">
@@ -127,6 +127,7 @@ const MarketStatsDropdown = () => {
              </span>
              <p className="text-base md:text-lg  font-century-gothic text-center">+122.6%</p>
        </div>
+       
 
 
 
@@ -135,26 +136,26 @@ const MarketStatsDropdown = () => {
         </div>
       ),
     },
+
     {
-      title: <h4 className='text-lg md:text-3xl  font-century-gothic'>Market benchmarks</h4>,
+      title: <h4 className='text-lg md:text-3xl pl-7 font-century-gothic'>Market benchmarks</h4>,
       content: (
-        <div className="flex justify-evenly p-4 md:py-10 ">
-          <div className="w-full  md:w-[25rem] p-5">
-            
-            <span className="text-2xl  font-century-gothic text-cyan-400 block text-center ">
-              PERFORMANCE (1Y)
+        <div className="flex flex-wrap justify-center p-4 md:p-10">
+          <div className="w-full md:w-1/3 p-4">
+            <span className="text-2xl  font-century-gothic text-cyan-400 block text-center">
+            PERFORMANCE (1Y)
               <InfoTooltip text="demo text" />
             </span>
             <p className="text-base md:text-lg  font-century-gothic text-center">+125.7%</p>
           </div>
-          <div className="w-full md:w-[25rem] p-5">
+          <div className="w-full md:w-1/3 p-4">
             <span className="text-2xl  font-century-gothic text-cyan-400 block text-center">
-              VS. MARKET (1Y)
+            VS. MARKET (1Y)
               <InfoTooltip text="demo text" />
             </span>
             <p className="text-base md:text-lg  font-century-gothic text-center">+11.84%</p>
           </div>
-          <div className="w-full md:w-[25rem] p-5">
+          <div className="w-full md:w-1/3 p-4">
             <span className="text-2xl  font-century-gothic text-cyan-400 block text-center">
               VS. ETH (1Y)
               <InfoTooltip text="demo text" />
@@ -164,6 +165,46 @@ const MarketStatsDropdown = () => {
         </div>
       ),
     },
+    
+    
+    // {
+    //   title: <h4 className='text-lg md:text-3xl pl-7 font-century-gothic'>Market benchmarks</h4>,
+    //   content: (
+    //     <div className="flex justify-evenly p-4 md:py-10 ">
+    //       <div className="w-full  md:w-1/4 p-5">
+            
+    //         <span className="text-2xl  font-century-gothic text-cyan-400 block text-center ">
+    //           PERFORMANCE (1Y)
+    //           <InfoTooltip text="demo text" />
+    //         </span>
+    //         <p className="text-base md:text-lg  font-century-gothic text-center">+125.7%</p>
+    //       </div>
+    //       <div className="w-full md:w-1/4 p-5">
+    //         <span className="text-2xl  font-century-gothic text-cyan-400 block text-center">
+    //           VS. MARKET (1Y)
+    //           <InfoTooltip text="demo text" />
+    //         </span>
+    //         <p className="text-base md:text-lg  font-century-gothic text-center">+11.84%</p>
+    //       </div>
+    //       <div className="w-full md:w-1/4 p-5">
+    //         <span className="text-2xl  font-century-gothic text-cyan-400 block text-center">
+    //           VS. ETH (1Y)
+    //           <InfoTooltip text="demo text" />
+    //         </span>
+    //         <p className="text-base md:text-lg  font-century-gothic text-center">+52.49%</p>
+    //       </div>
+    //       <div className="w-full md:w-1/4 p-5">
+    //         <span className="text-2xl  font-century-gothic text-cyan-400 block text-center">
+    //           VS. ETH (1Y)
+    //           <InfoTooltip text="demo text" />
+    //         </span>
+    //         <p className="text-base md:text-lg  font-century-gothic text-center">+52.49%</p>
+    //       </div>
+    //     </div>
+    //   ),
+    // },
+
+
   ];
 
   return (
@@ -171,7 +212,7 @@ const MarketStatsDropdown = () => {
       <h2 className="text-2xl md:text-3xl font-bold mb-6">Market Overview</h2>
       <div className="border border-black ">
         {accordionData.map((item, index) => (
-          <div key={index} className="border-b border-black">
+          <div key={index} className="border border-black">
             <button
               onClick={() => toggleAccordion(index)}
               className={`w-full text-left px-4 py-4 bg-white flex justify-between items-center ${
