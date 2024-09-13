@@ -15,8 +15,8 @@ const Works = () => {
     className="h-[50rem] w-full py-10 bg-cyan-50  ">
      
         <div className="container mx-auto text-center pt-10">
-          <h2 className="text-4xl font-century-gothic font-bold text-gray-700 pb-12">How it works</h2>
-          <p className="text-gray-500 font-century-gothic mb-1 font-extrabold">
+          <h2 className="text-4xl font-century-gothic font-bold text-gray-700 pb-10">How it works</h2>
+          <p className="text-gray-500 font-century-gothic   font-extrabold">
           Lorem Ipsum is simply dummy text of the printing and typesetting industry.  Lorem Ipsum is simply dummy <br /> text of the printing and typesetting industry. 
           </p>
           
