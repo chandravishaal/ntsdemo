@@ -4,11 +4,11 @@ import { LuArrowDownRight } from "react-icons/lu";
 import { FiArrowUpRight } from "react-icons/fi";
 import { FaArrowRightLong } from "react-icons/fa6";
 import {
-  Area,
-  AreaChart,
-  ResponsiveContainer,
-  Tooltip,
-  XAxis,
+  Area, 
+  AreaChart, 
+  ResponsiveContainer, 
+  Tooltip, 
+  XAxis, 
   YAxis,
 } from "recharts";
 

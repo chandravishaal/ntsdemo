@@ -462,3 +462,8 @@ nav {
     overflow-x: auto; /* Enables horizontal scrolling */
   }
 }
+
+.jost-uniquifier {
+  font-family: "Jost", sans-serif;
+  
+}
