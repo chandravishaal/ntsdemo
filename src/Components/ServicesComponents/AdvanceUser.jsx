@@ -1,52 +1,42 @@
-import React from 'react'
+import React from 'react';
 
-const AdvanceUser = () =>  {
+const AdvanceUser = () => {
   return (
-    <section
-      className="h-[40rem] w-full flex items-center justify-center bg-cover bg-center bg-cyan-50"
-      
-    >
-     <div id="main" className=' container relative bg-cover bg-center bg-no-repeat h-[40rem] flex items-center justify-center p-2  
-    '>
+    <section className="h-auto min-h-[40rem] w-full flex items-center justify-center bg-cover bg-center bg-cyan-50 py-8 md:py-16">
+      <div id="main" className="container mx-auto flex flex-col md:flex-row items-center justify-center p-4 md:p-8 h-full">
 
-      <div id="left" className=' w-1/2 h-full
-      space-y-10 text-left flex flex-col  justify-center
-      '>
-      
-             <div id="heading">
-           <h2 className="text-3xl md:text-4xl font-century-gothic font-bold  text-cyan-400">
-             For Advanced Users<br />
-             <span className="text-gray-800 font-century-gothic text-3xl font-light ">Regulated and Professional trading <br />With cryptocurrencies</span>
-           </h2>
-           </div> 
-           <div id="heding2">
-           <p className="text-lg md:text-xl font-antipasto-pro">
-             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<br />
-             eiusmod tempor incididunt ut la.
-           </p>
-           </div>
-           <div id="button">
-            <button className=" font-century-gothic 
-            lg:px-3 lg:py-1.5  text-md button text-center cursor-pointer  lg:text-base text-sm 
-            transition-all hover:bg-cyan-500 duration-200 outline-none text-black bg-primaryCyan rounded-md shadow-[0_4px_#118baa]
-           
-           ">
-             Know more
-           </button>
-           </div>
+        {/* Left Section */}
+        <div id="left" className="w-full md:w-1/2 h-full space-y-6 md:space-y-10 text-center md:text-left flex flex-col justify-center items-center md:items-start">
+          <div id="heading">
+            <h2 className="text-2xl md:text-4xl font-century-gothic font-bold text-cyan-400">
+              For Advanced Users<br />
+              <span className="text-gray-800 font-century-gothic text-2xl md:text-3xl font-light">
+                Regulated and Professional trading <br />With cryptocurrencies
+              </span>
+            </h2>
+          </div>
+          <div id="heding2">
+            <p className="text-sm md:text-lg font-antipasto-pro">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<br />
+              eiusmod tempor incididunt ut la.
+            </p>
+          </div>
+          <div id="button">
+            <button className="font-century-gothic px-6 py-3 text-sm md:text-lg bg-primaryCyan text-black rounded-md shadow-md transition-all hover:bg-cyan-500 duration-200">
+              Know more
+            </button>
+          </div>
         </div>
 
-
-      <div id="right"className=' w-1/2 h-full
-       flex items-center justify-center'>
-
-        <div id="image" className=''>
-          <img src="/src/assets/Images/ServicesImages/4th_section_img.png" alt="" />
+        {/* Right Section */}
+        <div id="right" className="w-full md:w-1/2 h-full flex items-center justify-center mt-8 md:mt-0">
+          <div id="image" className="w-64 sm:w-80 md:w-[30rem] lg:w-[35rem] xl:w-[40rem]">
+            <img src="/src/assets/Images/ServicesImages/4th_section_img.png" alt="Crypto Trading" className="w-full h-auto" />
+          </div>
         </div>
       </div>
-      </div>
-</section>
-  )
-}
+    </section>
+  );
+};
 
-export default AdvanceUser
+export default AdvanceUser;
