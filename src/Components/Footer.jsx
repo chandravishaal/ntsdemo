@@ -81,7 +81,7 @@ const Footer = () => {
               </li>
               <li>
                 <IoIosArrowForward className="inline mr-2" />
-                <a href="/">Aml & Kyc</a>
+                <a href="/">Aml & KYC</a>
                 
               </li>
               <li>
