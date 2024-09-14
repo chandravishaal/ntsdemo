@@ -13,11 +13,7 @@ const Culture = () => {
           </h2>
           <h3 className="text-2xl tracking-wide	 font-century-gothic text-black">Passionate about technology</h3>
           <p className="text-gray-500 pr-24 font-century-gothic">
-            Lorem Ipsum has been the industry&apos;s standard dummy text ever since the
-            1500s, when an unknown printer took a galley of type and scrambled it
-            to make a type specimen book. It has survived not only five centuries,
-            but also the leap into electronic typesetting, remaining essentially
-            unchanged.
+          At North Star Metrics, Our team is dedicated to revolutionising crypto buying and selling, seeking talented individuals to join our dynamic, innovative work environment.
           </p>
           <button className="lg:px-3 lg:py-2 px-3 py-2 text-md button text-center cursor-pointer md:w-1/2 lg:text-base text-sm font-semibold transition-all hover:bg-cyan-500 duration-200 outline-none text-black bg-primaryCyan rounded-[100px] shadow-[0_4px_#118baa]">
             See available vacancies
