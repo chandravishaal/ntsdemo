@@ -163,7 +163,7 @@ const CryptoTable = () => {
   return (
     <div className="container mx-auto mb-10">
       <div className="flex justify-between items-center mb-4">
-        <h1 className="text-3xl font-bold">Top Cryptocurrency Prices and Market Cap</h1>
+        <h1 className="text-3xl font-bold px-5">Top Cryptocurrency Prices and Market Cap</h1>
       </div>
       <div className="flex items-center justify-between mb-4 px-3">
         <input

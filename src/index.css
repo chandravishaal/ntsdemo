@@ -223,12 +223,14 @@ text-decoration:none;
 
 
 /* .testimonial section background */
+@media (min-width: 768px) {
 .testimonial-background {
   background-image: url('./assets/Images/test_background.png');
   background-size: 110%;
   background-repeat: no-repeat;
   width: 100%;
   background-position: center 20%;
+}
 }
 
 /* .footer section background */

@@ -12,7 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 const testimonials = [
   {
     name: 'RYAN OSCAR WILLIAMS',
-    content: `I am an American and was traveling in Kolkata, and I needed to exchange some of my Tron for Indian Rupee. After looking for hours, I was only able to find one exchange, and that was North Star Metrics. I got there as soon as I could and was able to exchange my Tron for Indian rupee. Thank you so much! But there should be more exchanges in Kolkata.`,
+    content: `I am an American and was traveling in Kolkata, and I needed to exchange some of my Tron for Indian Rupee. After looking for hours, I was only able to find one exchange, and that was North Star Metrics. Thank you so much! But there should be more exchanges in Kolkata.`,
   },
   {
     name: 'JANE DOE',
@@ -69,14 +69,14 @@ const Testimonial = () => {
   }, [currentIndex]); // Trigger animation on testimonial change
 
   return (
-    <div id='testpage' className="container mx-auto p relative flex items-end my-20 overflow-hidden">
+    <div id='testpage' className="container mx-auto p relative flex flex-col lg:flex-row items-end my-20 overflow-hidden">
       {/* Image div */}
       <img src={Image} alt="Testimonial" className="w-auto h-[474px] select-none" />
 
       {/* Content div */}
-      <div className="w-full h-[400px] testimonial-background p-6 flex rounded-r-lg flex-col justify-between">
+      <div className="w-full h-[400px] testimonial-background bg-[#91ebff] p-6 flex rounded-r-lg flex-col justify-between">
           <h2 id='testimonial-heading' className="text-6xl text-right mr-8 text-[#0a6276] -mt-14 select-none">TESTIMONIALS</h2>
-        <div id="testimonial-content" className='mt-10'>
+        <div id="testimonial-content" className='lg:mt-10 mt-5'>
           <div className="flex items-center mb-3 gap-1 pl-6">
             <FaStar className="text-[#0a6276]" />
             <FaStar className="text-[#0a6276]" />
@@ -85,22 +85,8 @@ const Testimonial = () => {
             <FaStar className="text-[#0a6276]" />
           </div>
           <h3 className="text-2xl font-bold text-sky-800 pl-6">{name}</h3>
-          <p className="text-lg text-gray-700 p-6 pr-12">{content}</p>
+          <p className="text-lg text-gray-700 p-6 md:pr-12">{content}</p>
         </div>
-        {/* <div className="flex justify-end space-x-2 mt-3 mr-6">
-          <button
-            className="text-[#0a6276] text-4xl border-2 border-white rounded-full bg-white"
-            onClick={handlePrev}
-          >
-            <FaCaretLeft />
-          </button>
-          <button
-            className="text-[#0a6276] text-4xl border-2 border-white rounded-full bg-white"
-            onClick={handleNext}
-          >
-            <FaCaretRight />
-          </button>
-        </div> */}
 
         <div className='flex items-center justify-end gap-2'>
             <div  onClick={handlePrev} className='border-[3px] border-[#0a6276] flex rounded-full items-center justify-center p-1'>
