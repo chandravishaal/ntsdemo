@@ -12,7 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 const testimonials = [
   {
     name: 'RYAN OSCAR WILLIAMS',
-    content: `I am an American and was traveling in Kolkata, and I needed to exchange some of my Tron for Indian Rupee. After looking for hours, I was only able to find one exchange, and that was North Star Metrics. Thank you so much! But there should be more exchanges in Kolkata.`,
+    content: `I am an American and was traveling in Kolkata, and I needed to exchange some of my Tron for Indian Rupee. After looking for hours, I was only able to find one exchange, and that was North Star Metrics.`,
   },
   {
     name: 'JANE DOE',

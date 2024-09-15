@@ -262,6 +262,7 @@ text-decoration:none;
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
+    height: auto;
     background-position: center;
 
   }

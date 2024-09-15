@@ -18,7 +18,7 @@ const ExchangeCrypto = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br className="hidden md:block" />
           incididunt ut labore et dolore magna aliqua.
         </p>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 px-5">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md flex items-end justify-between">
             <div className="text-left flex-[0.9]">
               <h3 className="text-lg md:text-xl font-century-gothic font-semibold">Cryptocurrency Exchange Services</h3>
@@ -39,7 +39,7 @@ const ExchangeCrypto = () => {
               <h3 className="text-lg md:text-xl font-century-gothic font-semibold">Crypto Volatility Protection</h3>
               <p className="text-gray-600 mt-2 text-sm md:text-base font-century-gothic pb-4 md:pb-8">
                 North Star Metrics is the only company or platform that guides and protects your investments from the volatile
-                crypto market. With our expert advice, your assets will always bring you profit.
+                crypto market. With our expert advice and experience, your assets will always bring you profit.
               </p>
             </div>
             <div className="w-10 h-10 md:w-32 md:h-14 flex-[0.1]" >
@@ -54,7 +54,7 @@ const ExchangeCrypto = () => {
             <div className="text-left flex-[0.9]">
               <h3 className="text-lg md:text-xl font-century-gothic font-semibold">Crypto Investment Services</h3>
               <p className="text-gray-600 mt-2 text-sm md:text-base font-century-gothic pb-4 md:pb-8">
-                If you're looking forward to investing in cryptocurrencies and not worry about losses, then North Star Metrics
+                If you&apos;re looking forward to investing in cryptocurrencies and not worry about losses, then North Star Metrics
                 is the right place to get started. Want to discuss the No Risk investment program?
               </p>
             </div>

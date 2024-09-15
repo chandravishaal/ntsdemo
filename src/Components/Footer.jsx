@@ -10,9 +10,9 @@ const Footer = () => {
     <>
       <section className="footer-background">
         <footer className="container mx-auto max-w-[1200px] relative z-20 mt-24">
-          <div className="flex flex-col md:flex-row justify-between">
+          <div className="flex flex-col md:flex-row justify-between items-center">
             {/* Image that will be hidden on mobile view */}
-            <div className="z-10 hidden md:block">
+            <div className="z-10 hidden lg:block">
               <img
                 src={footerImage}
                 alt="Image Loading ..."
@@ -22,7 +22,7 @@ const Footer = () => {
               />
             </div>
 
-            <div className="py-10 pt-20 w-full text-black">
+            <div className="py-10 pt-20 w-full text-black px-6">
               <div className="flex flex-col md:flex-row justify-between text-1xl pr-10">
                 <div className="w-full md:w-1/3 mb-8 md:mb-0">
                   <h3 className="font-bold mb-4">Get In Touch</h3>

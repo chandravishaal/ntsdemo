@@ -4,6 +4,8 @@ import { FaArrowUpLong, FaArrowDownLong } from "react-icons/fa6";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import explorebanner from "../../assets/Images/2nd_section_mobile.png";
+import PrimaryButton from "../../Common/PrimaryButton";
+import SecondaryButton from "../../Common/SecondaryButton";
 
 const CoinCards = ({ image, name, amount, data, isPositive, percentage }) => {
   return (
@@ -57,12 +59,8 @@ const Explore = () => {
           </p>
 
           <div className="flex items-center gap-5 w-full mb-5 justify-center lg:justify-start">
-            <button className="lg:px-4 lg:py-2 px-4 py-3 text-md button text-center cursor-pointer w-auto lg:text-base text-sm font-semibold transition-all hover:bg-cyan-500 duration-200 outline-none text-white bg-primaryCyan rounded-[100px] shadow-[0_4px_#118baa]">
-              Tradable
-            </button>
-            <button className="lg:px-4 lg:py-2 px-4 py-3 text-md button text-center whitespace-nowrap cursor-pointer w-auto lg:text-base text-sm font-semibold transition-all duration-200 outline-none text-black bg-white rounded-[100px] shadow-[0_4px_#C0C0C0]">
-              Top Gainers
-            </button>
+            <PrimaryButton title="Tradable" />  
+            <SecondaryButton title="Top Gainers" />
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3 w-full mb-5 md:px-20 lg:px-0">

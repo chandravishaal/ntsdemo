@@ -1,4 +1,5 @@
 import overallImage from "/src/assets/Images/9th_section_img.png";
+import Button3 from "../../Common/Button3";
 
 const CryptoFreedomSection = () => {
   return (
@@ -8,7 +9,7 @@ const CryptoFreedomSection = () => {
         The freedom of crypto for everyone, everywhere
       </h2>
       <p className="text-lg text-gray-600 mb-8  mx-[20%]">
-        We’re committed to creating more economic freedom through accessible,
+        We&apos;re committed to creating more economic freedom through accessible,
         safe, and secure financial tools for everyone.
       </p>
       <div className="relative mx-auto max-w-[600px]">
@@ -20,9 +21,7 @@ const CryptoFreedomSection = () => {
           data-aos-duration="3000"
         />
       </div>
-      <button className="lg:px-4 select-none lg:py-2 px-3 py-2 text-md button text-center cursor-pointer md:w-1/3 lg:w-1/5 whitespace-nowrap lg:text-base text-sm font-semibold transition-all duration-200 outline-none text-black bg-gray-100 rounded-[100px] shadow-[0_4px_#C0C0C0]">
-        Learn More
-      </button>
+      <Button3 title="Learn More" />
     </div>
     </section>
   );

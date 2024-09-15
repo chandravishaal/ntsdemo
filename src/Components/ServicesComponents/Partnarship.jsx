@@ -1,5 +1,5 @@
-import React from 'react';
 import left from '../../assets/Images/ServicesImages/last_section_img.png';
+import PrimaryButton from '../../Common/PrimaryButton';
 
 const Partnarship = () => {
   return (
@@ -33,9 +33,7 @@ const Partnarship = () => {
           </div>
 
           <div id="button">
-            <button className="font-century-gothic px-6 py-3 lg:px-3 lg:py-1.5 text-sm lg:text-base text-center cursor-pointer bg-primaryCyan text-black rounded-md shadow-md transition-all hover:bg-cyan-500 duration-200">
-              Know more
-            </button>
+            <PrimaryButton title="Know More" />
           </div>
         </div>
 
