@@ -1,13 +1,12 @@
-
-import mobileImage1 from '/src/assets/Images/5th_section_mobile1.png';  
-import mobileImage2 from '/src/assets/Images/5th_section_mobile2.png'; 
+import mobileImage1 from '/src/assets/Images/5th_section_mobile1.png';
+import mobileImage2 from '/src/assets/Images/5th_section_mobile2.png';
 
 const FeatureComponent = () => {
   return (
     <section className='featureSection-background'>
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row items-center justify-between space-y-8 lg:space-y-0 ">
-          
+
           {/* First Mobile Image and Content */}
           <div className="flex flex-row items-start lg:items-start relative w-full">
             <img data-aos="fade-left" data-aos-duration="2000" src={mobileImage1} alt="Mobile Feature 1" className="w-auto h-[700px] -translate-x-[2rem]" />

@@ -11,25 +11,22 @@ const WhychooseusCard = ({ image, title, desc, color }) => {
 
   return (
     <div
-      className={`bg-primaryCyan w-full ${
-        color === 'primary' ? 'bg-primaryCyan' : 'bg-white'
-      } border-2 border-primaryCyan rounded-xl p-3 gap-3`}
+      className={`bg-primaryCyan w-full ${color === 'primary' ? 'bg-primaryCyan' : 'bg-white'
+        } border-2 border-primaryCyan rounded-xl p-3 gap-3`}
       data-aos="fade-up"
       data-aos-duration={aosDuration}
       data-aos-delay="400"
     >
       <img src={image} className="w-10 mb-4 object-contain" alt="" />
       <h1
-        className={`text-lg whitespace-normal ${
-          color === 'primary' ? 'text-white' : 'text-primaryCyan'
-        } font-bold mb-2`}
+        className={`text-lg whitespace-normal ${color === 'primary' ? 'text-white' : 'text-primaryCyan'
+          } font-bold mb-2`}
       >
         {title}
       </h1>
       <p
-        className={`text-sm ${
-          color === 'primary' ? 'text-white' : 'text-primaryCyan'
-        }`}
+        className={`text-sm ${color === 'primary' ? 'text-white' : 'text-primaryCyan'
+          }`}
       >
         {desc}
       </p>
@@ -85,13 +82,15 @@ const WhyChooseUs = () => {
             />
           </div>
         </div>
+
         <div className="flex-[0.4] w-full flex justify-center md:justify-end">
           <img
             src={whyChooseUsBanner}
-            className="max-w-[400px] translate-y-20 md:translate-y-0 ml-auto"
+            className="max-w-[100%] md:max-w-[400px] translate-y-0 ml-auto"
             alt="whyChooseUsBanner"
           />
         </div>
+
       </div>
     </section>
   );

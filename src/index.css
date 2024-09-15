@@ -231,14 +231,26 @@ text-decoration:none;
   background-position: center 20%;
 }
 
-/* .footer section background */
+
+
+/* .footer-background */
 .footer-background {
   background-image: url('./assets/Images/ftr_background.png');
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: center top; 
   width: 100%;
-  background-position: center 80%;
 }
+
+/* For mobile view (up to 768px width) */
+@media (max-width: 768px) {
+  .footer-background {
+    background-position: center 20%;
+    padding-top: 0px; 
+  }
+}
+
+
 
 
 /* Services hero section background image */
@@ -462,3 +474,5 @@ nav {
     overflow-x: auto; /* Enables horizontal scrolling */
   }
 }
+
+

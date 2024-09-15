@@ -2,7 +2,8 @@ import 'remixicon/fonts/remixicon.css';
 
 const TopBar = () => {
   return (
-    <div className='bg-[#252525] w-full  '> 
+    <div>
+      <div className=' hidden lg:block bg-[#252525] w-full  '> 
     <section className=''>
     {/* <div className="bg-gray-950 text-white flex justify-between items-center px-20 py-3"> */}
     <div className="mx-auto container bg-[#252525] border border-[#252525] md:px-10 lg:px-2 flex items-center justify-between p-3">
@@ -38,24 +39,11 @@ const TopBar = () => {
         <a href="#" className="hover:text-cyan-300 text-gray-500">Prices</a>
 
         <div className="mx-4"></div>
-
-        {/* Sign In and Register */}
-        <div className="flex items-center space-x-4">
-          <a href="#" className="flex items-center space-x-1 hover:text-cyan-300 text-gray-500">
-            <i className="ri-user-line  text-cyan-300"></i>
-            <span>Sign in</span>
-          </a>
-          <div className="border-l border-gray-600 h-6"></div>
-
-          <a href="#" className="flex items-center space-x-1 hover:text-cyan-300 text-gray-500">
-            <i className="ri-registered-line  text-cyan-300"></i>
-            <span>Register</span>
-          </a>
-        </div>
         
       </div>
     </div>
     </section>
+    </div>
     </div>
   );
 };
