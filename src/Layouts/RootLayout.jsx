@@ -6,10 +6,10 @@ import TopBar from "../Components/TopBar"
 const RootLayout = () => {
   return (
     <>
-    {/* <TopBar/> */}
+    <TopBar/>
     <Navbar />
     <Outlet />
-    {/* <Footer /> */}
+    <Footer />
     </>
   )
 }

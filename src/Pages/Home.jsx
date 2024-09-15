@@ -96,12 +96,12 @@ const Home = () => {
       <Explore />
       <WhyChooseUs />
       <CryptoTable />
-      {/* <VideoSection/> */}
+      <VideoSection/>
       <Feature/>
       <Started/>
-      {/* <Testimonial/> */}
-      {/* <Blog /> */}
-      {/* <CryptoFreedomSection /> */}
+      <Testimonial/>
+      <Blog />
+      <CryptoFreedomSection />
     </>
   );
 };
