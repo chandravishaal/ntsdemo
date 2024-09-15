@@ -35,11 +35,11 @@ const HeroSection = () => {
 
   return (
     <section className="heroSection-background w-full">
-      <div className="flex items-center justify-between gap-20 container mx-auto "> 
-        <div className="flex flex-col items-start mt-5">
+      <div className="flex md:flex-row flex-col-reverse items-center justify-between gap-8 md:gap-0 lg:gap-20 container mx-auto w-full"> 
+        <div className="flex flex-col items-start md:mt-5 px-5">
         <h1 className="lg:text-4xl text-3xl font-bold lg:mb-3 mb-6 whitespace-normal">
           Buy or Sell&nbsp; 
-          <span className="inline-flex max-w-full whitespace-nowrap overflow-y-hidden">
+          <span className="inline-flex max-w-full overflow-y-hidden">
             <Typewriter
               options={{
                 strings: [
@@ -56,26 +56,26 @@ const HeroSection = () => {
           </span> 
           & 70+ Cryptocurrencies
         </h1>
-          <h1  ref={brand} className="text-primaryCyan font-semibold overflow-hidden lg:text-3xl text-xl lg:mb-3 mb-4">
+          <h1  ref={brand} className="text-primaryCyan font-semibold overflow-hidden lg:text-3xl text-2xl lg:mb-3 mb-4">
             On <span className='font-bold'>North Star Metrics</span> in India 24/7
           </h1>
-          <p className='lg:text-sm text-sm mb-5'>
+          <p className='lg:text-sm text-sm mb-5 w-auto'>
           At North Star Metrics, we aim to transform the way people buy and sell cryptocurrency. Our commitment is to provide a safe, secure and user-friendly environment.
           </p>
-          <h1 className="lg:text-lg text-sm mb-[2px] font-semibold">Email address</h1>
-          <div className="flex flex-col md:flex-row items-center gap-5 w-full">
-            <div className="flex flex-col gap-2">
-              <input ref={inputBox} type="text" className="lg:text-base lg:p-3 p-1 rounded-xl border-2 border-gray-300 outline-none" placeholder="contact@ntsmetrics.com" />
-            </div>
-            <button className="lg:px-3 lg:py-2 px-3 py-2 text-md button text-center cursor-pointer md:w-1/5 lg:text-base text-sm font-semibold transition-all hover:bg-cyan-500 duration-200 outline-none text-white bg-primaryCyan rounded-[100px] shadow-[0_4px_#118baa]">
-              Sign Up
+
+          <div className="flex items-center gap-5 w-full mb-5 justify-start">
+            <button className="lg:px-4 lg:py-2 px-4 py-3 text-md button text-center cursor-pointer w-1/4 lg:text-base text-sm font-semibold transition-all hover:bg-cyan-500 duration-200 outline-none text-white bg-primaryCyan rounded-[100px] shadow-[0_4px_#118baa]">
+              Buy
+            </button>
+            <button className="lg:px-4 lg:py-2 px-4 py-3 text-md button text-center cursor-pointer w-1/4 lg:text-base text-sm font-semibold transition-all duration-200 outline-none text-black bg-white rounded-[100px] shadow-[0_4px_#C0C0C0]">
+              Sell
             </button>
           </div>
         </div>
         
         {/* hero-image */}
-        <div className="hidden md:block select-none w-full">
-          <img data-aos="fade-up" data-aos-duration="2000" src={heroMobiles} loading='lazy' className='w-80 lg:w-full mt-10 hero-phone-banner' alt="Hero banner" />
+        <div className="select-none w-full mx-auto">
+          <img data-aos="fade-up" data-aos-duration="2000" src={heroMobiles} loading='lazy' className='w-96 md:w-full mx-auto lg:w-full mt-10 hero-phone-banner' alt="Hero banner" />
         </div>
       </div>
     </section>

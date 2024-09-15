@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Sparklines, SparklinesLine, SparklinesSpots } from "react-sparklines"; 
+import { Sparklines, SparklinesLine } from "react-sparklines"; 
 import { FaArrowUpLong, FaArrowDownLong } from "react-icons/fa6";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -7,17 +7,17 @@ import explorebanner from "../../assets/Images/2nd_section_mobile.png";
 
 const CoinCards = ({ image, name, amount, data, isPositive, percentage }) => {
   return (
-    <div data-aos="flip-left" data-aos-duration="2000" className="rounded-[40px] bg-white w-[100%] shadow-xl z-40 border-[3px] border-gray-200 px-4 py-2">
-      <div className="flex flex-col justify-between gap-2 w-full">
-        <div className="flex items-center justify-between gap-5">
+    <div data-aos="flip-left" data-aos-duration="2000" className="rounded-[40px] bg-white lg:w-full shadow-xl z-40 border-[3px] border-gray-200 px-4 py-2">
+      <div className="flex flex-col justify-between lg:gap-2 w-full">
+        <div className="flex items-center justify-between gap-2 lg:gap-5">
           <div className="flex flex-col items-start mt-2">
-            <h1 className="font-bold text-lg">{name}</h1>
-            <h1 className="text-sm font-medium mb-5">₹ {amount}</h1>
+            <h1 className="font-bold text-md lg:text-lg">{name}</h1>
+            <h1 className="text-sm font-medium mb-3 whitespace-nowrap md:mb-5">₹ {amount}</h1>
           </div>
-          <img src={image} className="w-10 mb-2" alt="" />
+          <img src={image} className="w-8 lg:w-10 mb-2" alt="" />
         </div>
-        <div className="flex items-center w-full gap-1">
-          <Sparklines data={data} limit={7} width={100} height={30} margin={1}>
+        <div className="flex items-center lg:w-full justify-between gap-1">
+          <Sparklines data={data} limit={data.length} width={100} height={30} margin={1}>
             <SparklinesLine color={isPositive ? "green" : "red"} />
           </Sparklines>
           <h1
@@ -25,7 +25,7 @@ const CoinCards = ({ image, name, amount, data, isPositive, percentage }) => {
               isPositive ? "text-green-600" : "text-red-600"
             } mt-3 font-semibold`}
           >
-            <span className="text-lg">
+            <span className="text-sm md:text-lg">
               {isPositive ? <FaArrowUpLong /> : <FaArrowDownLong />}
             </span>
             <span className="text-lg select-none">{percentage}%</span>
@@ -36,38 +36,36 @@ const CoinCards = ({ image, name, amount, data, isPositive, percentage }) => {
   );
 };
 
-// {isPositive ? <FaArrowUpLong /> : <FaArrowDownLong />}
-
 const Explore = () => {
   useEffect(() => {
     AOS.init();
   }, []);
 
   return (
-    <section className="exploreSection-background">
-      <div className="flex flex-col md:flex-row justify-between py-5 gap-10 container w-full mx-auto items-center">
-        <div className="flex-1 select-none w-full flex justify-center md:justify-start">
-          <img data-aos="fade-up" data-aos-duration="2000" src={explorebanner} className="w-[70%] -translate-x-5 translate-y-7" alt="explore banner" />
+    <section className="exploreSection-background mt-10">
+      <div className="flex flex-col lg:flex-row justify-between py-5 container w-full mx-auto items-center">
+        <div className="lg:flex-1 select-none w-full lg:flex justify-center md:justify-start hidden">
+          <img data-aos="fade-up" data-aos-duration="2000" src={explorebanner} className="w-[70%] mx-auto md:w-[40%] mb-10 lg:w-[70%] lg:-translate-x-5 lg:translate-y-7" alt="explore banner" />
         </div>
 
-        <div className="flex flex-1 flex-col items-center md:items-start gap-2">
+        <div className="flex lg:flex-1 flex-col items-center lg:items-start gap-2 px-5">
           <h1 data-aos="fade-left" data-aos-duration="1000" className="text-3xl font-bold mb-2 text-selection text-center md:text-left">
             Explore Crypto
           </h1>
-          <p data-aos="fade-left" data-aos-duration="2000" className="text-xl text-center md:text-left">
+          <p data-aos="fade-left" data-aos-duration="2000" className="md:text-xl  lg:text-xl text-center lg:text-left mb-3">
             Buy and sell 100+ cryptocurrencies on the best platform for buying and selling cryptocurrency, including Bitcoin, Ethereum, and more.
           </p>
 
-          <div className="flex items-center gap-5 w-full my-5 justify-center md:justify-start">
-            <button className="lg:px-3 lg:py-2 px-3 py-2 text-md button text-center cursor-pointer md:w-1/5 lg:text-base text-sm font-semibold transition-all hover:bg-cyan-500 duration-200 outline-none text-black bg-primaryCyan rounded-[100px] shadow-[0_4px_#118baa]">
+          <div className="flex items-center gap-5 w-full mb-5 justify-center lg:justify-start">
+            <button className="lg:px-4 lg:py-2 px-4 py-3 text-md button text-center cursor-pointer w-auto lg:text-base text-sm font-semibold transition-all hover:bg-cyan-500 duration-200 outline-none text-white bg-primaryCyan rounded-[100px] shadow-[0_4px_#118baa]">
               Tradable
             </button>
-            <button className="lg:px-4 lg:py-2 px-3 py-2 text-md button text-center cursor-pointer md:w-1/3 lg:w-1/5 whitespace-nowrap lg:text-base text-sm font-semibold transition-all duration-200 outline-none text-black bg-white rounded-[100px] shadow-[0_4px_#C0C0C0]">
+            <button className="lg:px-4 lg:py-2 px-4 py-3 text-md button text-center whitespace-nowrap cursor-pointer w-auto lg:text-base text-sm font-semibold transition-all duration-200 outline-none text-black bg-white rounded-[100px] shadow-[0_4px_#C0C0C0]">
               Top Gainers
             </button>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-3 w-full mb-5">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 w-full mb-5 md:px-20 lg:px-0">
             <CoinCards
               name="Bitcoin"
               image="https://cryptologos.cc/logos/bitcoin-btc-logo.png"
@@ -92,14 +90,14 @@ const Explore = () => {
               isPositive={false}
               percentage={0.5}
             />
-            <CoinCards
-              name="Ripple"
-              image="https://cryptologos.cc/logos/xrp-xrp-logo.png"
-              data={[0.9, 0.91, 0.92, 0.89, 0.88, 0.9, 0.92]}
-              amount={3245}
-              isPositive={true}
-              percentage={1.5}
-            />
+              <CoinCards
+                name="Ripple"
+                image="https://cryptologos.cc/logos/xrp-xrp-logo.png"
+                data={[0.9, 0.91, 0.92, 0.89, 0.88, 0.9, 0.92]}
+                amount={3245}
+                isPositive={true}
+                percentage={1.5}
+              />
             <CoinCards
               name="Cardano"
               image="https://cryptologos.cc/logos/cardano-ada-logo.png"

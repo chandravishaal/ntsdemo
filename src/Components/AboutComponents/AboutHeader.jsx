@@ -8,7 +8,7 @@
 //             <div className="relative w-full h-full flex justify-center items-center">
 //               {/* Main background image */}
 //               <img src={laptopImage} alt="cover" className="w-full h-full object-cover" />
-    
+
 //               {/* Text overlay */}
 //               {/* <div className="f">
 //                 <h1 className="text-4xl raleway-hero font-bold text-black drop-shadow-md">Who we are</h1>
@@ -35,48 +35,54 @@
 // export default AboutHeader
 
 
-import React from 'react'
+import React from 'react';
 import laptopImage from '../../assets/Images/laptop.png';
 
-const AboutHeader = () =>  {
+const AboutHeader = () => {
   return (
     <section
-      className="h-[50rem] w-full flex items-center justify-center bg-cover bg-center "
+      className="h-[50rem] w-full flex items-center justify-center bg-cover bg-center relative"
       style={{
         backgroundImage: `url(${laptopImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'left',
+        backgroundRepeat: 'no-repeat',
       }}
     >
-     <div id="main" className=' container relative bg-cover bg-center bg-no-repeat h-[40rem] flex items-center justify-end p-6 ml-10  '>
+      <div
+        id="main"
+        className='absolute inset-0 flex items-center justify-end p-8 ml-10 ' // Position the text container to the right
+      >
+        <div id="main" className=' container relative bg-cover bg-center bg-no-repeat h-[40rem] flex items-center justify-end p-8 ml-10  '>
+
+          <div id="right" className=' w-1/2 h-full pl-20 pt-20'>{/* Adjust padding and max-width here */}
+            <div id="heading">
+              <h2 className="text-3xl md:text-4xl font-antipasto-pro font-bold text-black">
+                Who We Are<br />
+                <p className="text-gray-800 font-century-gothic text-2xl font-light mt-4">
+                  India&apos;s First Cryptocurrency Exchange
+                </p>
+              </h2>
+            </div>
+            <div id="heading2">
+              <p className="text-lg md:text-base font-century-gothic mt-8">
+                At North Star Metrics, we redefine the way you buy and sell cryptocurrency with security and ease in every way imaginable. Being rated as the best cryptocurrency buying and selling platform in India, we have empowered both individuals and institutions to be successful participants in the digital asset market.
+              </p>
+              <p className="text-lg md:text-base font-century-gothic mt-8">
+                Whether one is just commencing their journey or an accomplished trader, the intuitive environment with advanced tools and support cements our position as the premier website for the purchase and trading of any cryptocurrency. At North Star Metrics, your financial future rests in your hands, supported by a source of trust and innovation.
+              </p>
+            </div>
+          </div>
+        </div>
 
 
 
-      <div id="right"className=' w-1/2 h-full pl-20 pt-20'>
-
-      <div id="heading">
-           <h2 className="text-3xl md:text-4xl font-antipasto-pro font-bold  text-black">
-           Who We Are<br />
-             <p className="text-gray-800 font-century-gothic text-2xl font-light mt-4 ">India&apos;s First Cryptocurrency Exchange</p>
-           </h2>
-           </div> 
-           <div id="heding2">
-           <p className="text-lg md:text-base font-century-gothic mt-8">
-           At North Star Metrics, we redefine the way you buy and sell cryptocurrency with security and ease in every way imaginable. Being rated as the best cryptocurrency buying and selling platform in India, we have empowered both individuals and institutions to be successful participants in the digital asset market. 
-
-           </p>
-           <p className="text-lg md:text-base font-century-gothic mt-8">
-           Whether one is just commencing their journey or an accomplished
-            trader, the intuitive environment with advanced tools and support
-             cements our position as the premier website for the purchase and 
-             trading of any cryptocurrency. At North Star Metrics, your
-              financial future rests in your hands,
-            supported by a source of trust and innovation.
-           </p>
-           </div>
-           
-         </div>
       </div>
-</section>
+
+
+    </section >
   )
 }
 
 export default AboutHeader
+

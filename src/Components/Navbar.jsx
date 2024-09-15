@@ -31,21 +31,20 @@ const Navbar = () => {
       duration: 0.6,
       delay: 1,
       stagger: 0.3
-    })
-  }, [])
+    });
+  }, []);
 
   return (
-    <nav className={`bg-[#252525] w-full ${isSticky ? 'sticky top-0 z-50 shadow-md' : 'static'} transition-all duration-300`} aria-label="Main Navigation">
+    <nav className={`bg-[#252525] w-full ${isSticky ? 'fixed top-0 z-50 shadow-md' : 'static'} transition-all duration-300`} aria-label="Main Navigation">
       <div className="mx-auto container md:px-10 lg:px-2 flex items-center justify-between p-3">
         <Link to="/" aria-label="NSM Homepage">
           <img src="https://ntsmetrics.com/img/nsm-logo-blue.png" className="w-32" alt="NSM Logo" />
         </Link>
         <div className="lg:hidden block text-2xl">
-          <GiHamburgerMenu size={30} />
+          <GiHamburgerMenu size={30} color='white' />
         </div>
-        <ul  ref={navItems} className="lg:flex items-center overflow-hidden text-white hidden text-base font-semibold gap-8">
+        <ul ref={navItems} className="lg:flex items-center overflow-hidden text-white hidden text-base font-semibold gap-8">
           <li>
-        
             <Link to="/About">About</Link>
           </li>
           <li>
@@ -58,7 +57,7 @@ const Navbar = () => {
             <Link to="/crypto-converter">Crypto Converter</Link>
           </li>
           <li>
-            <a href="#cryptocurrency">Cryptocurrency</a>
+            <Link to="/Cryptocurrency">Cryptocurrency</Link>
           </li>
           <li>
             <a href="#faqs">FAQ&apos;s</a>

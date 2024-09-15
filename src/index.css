@@ -7,7 +7,7 @@
 }
 
 
-body{
+html, body{
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
@@ -167,7 +167,7 @@ text-decoration:none;
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    background-position: center center;
+    background-position: right;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -298,7 +298,17 @@ text-decoration:none;
 
   }
 }
+/*Bitcoin Merket section background image */
+@media (min-width: 768px) {
+  .banner {
+    background-image: url('./assets/Images/cryptocurrency/2nd_section_banner.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position: center;
 
+  }
+}
 
 
 /* .footer section background */
@@ -475,4 +485,7 @@ nav {
   }
 }
 
-
+.jost-uniquifier {
+  font-family: "Jost", sans-serif;
+  
+}
