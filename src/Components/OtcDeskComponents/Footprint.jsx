@@ -43,8 +43,8 @@ const Footprint = () => {
                   <img src={Canada} alt="Canada" className="w-8 h-8 rounded-full" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-sm text-center">Canada</h4>
-                  <p className="text-gray-600 text-sm">CAD Market Rate</p>
+                  <h4 className="font-extrabold text-sm text-center font-century-gothic">Canada</h4>
+                  <p className="text-gray-600 text-sm font-century-gothi  font-antipasto-pro ">CAD Market Rate</p>
                 </div>
               </div>
             </div>
@@ -69,8 +69,8 @@ const Footprint = () => {
                 <img src={United} alt="United" className="w-8 h-8 rounded-full" />
               </div>
               <div>
-                <h4 className="font-bold text-sm text-center">United</h4>
-                <p className="text-gray-600 text-sm">USD Market Rate</p>
+                <h4 className="font-extrabold text-sm text-center font-century-gothic">United</h4>
+                <p className="text-gray-600 text-sm  font-antipasto-pro ">USD Market Rate</p>
               </div>
             </div>
           </div>
@@ -96,8 +96,8 @@ const Footprint = () => {
                 <img src={UK} alt="United" className="w-8 h-8 rounded-full" />
               </div>
               <div>
-                <h4 className="font-bold text-sm text-center">UK</h4>
-                <p className="text-gray-600 text-sm">GBP Markett Rate</p>
+                <h4 className="font-extrabold text-sm text-center font-century-gothic">UK</h4>
+                <p className="text-gray-600 text-sm  font-antipasto-pro ">GBP Markett Rate</p>
               </div>
             </div>
           </div>
@@ -122,8 +122,8 @@ const Footprint = () => {
                 <img src={Europe} alt="United" className="w-8 h-8 rounded-full" />
               </div>
               <div>
-                <h4 className="font-bold text-sm text-center">Europe</h4>
-                <p className="text-gray-600 text-sm">EUR Market Rate</p>
+                <h4 className="font-extrabold text-sm text-center font-century-gothic">Europe</h4>
+                <p className="text-gray-600 text-sm  font-antipasto-pro ">EUR Market Rate</p>
               </div>
             </div>
           </div>
@@ -149,8 +149,8 @@ const Footprint = () => {
                 <img src={India} alt="United" className="w-8 h-8 rounded-full" />
               </div>
               <div>
-                <h4 className="font-bold text-sm text-center">India</h4>
-                <p className="text-gray-600 text-sm">INR Market Rate</p>
+                <h4 className="font-extrabold text-sm text-center font-century-gothic">India</h4>
+                <p className="text-gray-600 text-sm  font-antipasto-pro ">INR Market Rate</p>
               </div>
             </div>
           </div>
@@ -179,8 +179,8 @@ const Footprint = () => {
                 <img src={Australia} alt="United" className="w-8 h-8 rounded-full" />
               </div>
               <div>
-                <h4 className="font-bold text-sm text-center">Australia</h4>
-                <p className="text-gray-600 text-sm">AUD Market Rate</p>
+                <h4 className="font-extrabold text-sm text-center font-century-gothic">Australia</h4>
+                <p className="text-gray-600 text-sm  font-antipasto-pro ">AUD Market Rate</p>
               </div>
             </div>
           </div>
@@ -193,8 +193,8 @@ const Footprint = () => {
         <div className="flex flex-col items-center ">
           <div className="bg-white rounded-3xl p-4 shadow-lg border border-gray-300 flex flex-col items-center w-[170px] h-[150px]">
             <img src={Canada} alt="Canada" className="w-12 h-12 mb-3" />
-            <h4 className="font-bold font-century-gothic text-base text-center whitespace-nowrap">Canada</h4>
-            <p className="text-gray-600 font-century-gothic text-sm whitespace-nowrap">CAD Market Rate</p>
+            <h4 className="font-bold font-century-gothic text-xl text-center whitespace-nowrap">Canada</h4>
+            <p className="text-gray-600  font-antipasto-pro text-lg whitespace-nowrap">CAD Market Rate</p>
           </div>
         </div>
 
@@ -202,8 +202,8 @@ const Footprint = () => {
         <div className="flex flex-col items-center">
           <div className="bg-white rounded-3xl p-4 shadow-lg border border-gray-300 flex flex-col items-center  w-[170px] h-[150px]">
             <img src={United} alt="United States" className="w-12 h-12 mb-3" />
-            <h4 className="font-bold font-century-gothic text-base text-center whitespace-nowrap">United States</h4>
-            <p className="text-gray-600 font-century-gothic text-sm whitespace-nowrap">USD Market Rate</p>
+            <h4 className="font-bold font-century-gothic text-xl text-center whitespace-nowrap">United States</h4>
+            <p className="text-gray-600  font-antipasto-pro text-lg whitespace-nowrap">USD Market Rate</p>
           </div>
         </div>
 
@@ -211,8 +211,8 @@ const Footprint = () => {
         <div className="flex flex-col items-center">
           <div className="bg-white rounded-3xl p-4 shadow-lg border border-gray-300 flex flex-col items-center  w-[170px] h-[150px]">
             <img src={UK} alt="United Kingdom" className="w-12 h-12 mb-3" />
-            <h4 className="font-bold font-century-gothic text-base text-center whitespace-nowrap">UK</h4>
-            <p className="text-gray-600 font-century-gothic text-sm whitespace-nowrap">GBP Market Rate</p>
+            <h4 className="font-bold font-century-gothic text-xl text-center whitespace-nowrap">UK</h4>
+            <p className="text-gray-600  font-antipasto-pro text-lg whitespace-nowrap">GBP Market Rate</p>
           </div>
         </div>
 
@@ -220,8 +220,8 @@ const Footprint = () => {
         <div className="flex flex-col items-center">
           <div className="bg-white rounded-3xl p-4 shadow-lg border border-gray-300 flex flex-col items-center w-[170px] h-[150px]">
             <img src={Europe} alt="Europe" className="w-12 h-12 mb-3" />
-            <h4 className="font-bold font-century-gothic text-base text-center whitespace-nowrap">Europe</h4>
-            <p className="text-gray-600 font-century-gothic text-sm whitespace-nowrap">EUR Market Rate</p>
+            <h4 className="font-bold font-century-gothic text-xl text-center whitespace-nowrap">Europe</h4>
+            <p className="text-gray-600  font-antipasto-pro text-lg whitespace-nowrap">EUR Market Rate</p>
           </div>
         </div>
 
@@ -229,8 +229,8 @@ const Footprint = () => {
         <div className="flex flex-col items-center">
           <div className="bg-white rounded-3xl p-4 shadow-lg border border-gray-300 flex flex-col items-center w-[170px] h-[150px]">
             <img src={India} alt="India" className="w-12 h-12 mb-3" />
-            <h4 className="font-bold font-century-gothic text-base text-center whitespace-nowrap">India</h4>
-            <p className="text-gray-600 font-century-gothic text-sm whitespace-nowrap">INR Market Rate</p>
+            <h4 className="font-bold font-century-gothic text-xl text-center whitespace-nowrap">India</h4>
+            <p className="text-gray-600  font-antipasto-pro text-lg whitespace-nowrap">INR Market Rate</p>
           </div>
         </div>
 
@@ -238,8 +238,8 @@ const Footprint = () => {
         <div className="flex flex-col items-center">
           <div className="bg-white rounded-3xl p-4 shadow-lg border border-gray-300 flex flex-col items-center w-[170px] h-[150px]">
             <img src={Australia} alt="Australia" className="w-12 h-12 mb-3" />
-            <h4 className="font-bold font-century-gothic text-base text-center whitespace-nowrap">Australia</h4>
-            <p className="text-gray-600 font-century-gothic text-sm whitespace-nowrap">AUD Market Rate</p>
+            <h4 className="font-bold font-century-gothic text-xl text-center whitespace-nowrap">Australia</h4>
+            <p className="text-gray-600  font-antipasto-pro text-lg whitespace-nowrap">AUD Market Rate</p>
           </div>
         </div>
       </div>
