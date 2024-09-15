@@ -16,7 +16,7 @@ import CryptoFreedomSection from "../Components/HomeComponents/CryptoFreedomSect
 
 import VideoSection from "../Components/HomeComponents/VideoSection";
 import HomeAssets from "../Components/HomeComponents/HomeAssets";
-import CryptoTable from "../Components/CryptoTable";
+import CryptoTable from "../Components/HomeComponents/CryptoTable";
 const Home = () => {
   const [showButton, setShowButton] = useState(false);
   const buttonRef = useRef(null);
@@ -96,12 +96,12 @@ const Home = () => {
       <Explore />
       <WhyChooseUs />
       <CryptoTable />
-      <VideoSection/>
+      {/* <VideoSection/> */}
       <Feature/>
       <Started/>
-      <Testimonial/>
-      <Blog />
-      <CryptoFreedomSection />
+      {/* <Testimonial/> */}
+      {/* <Blog /> */}
+      {/* <CryptoFreedomSection /> */}
     </>
   );
 };
