@@ -63,7 +63,7 @@ const HeroSection = () => {
           At North Star Metrics, we aim to transform the way people buy and sell cryptocurrency. Our commitment is to provide a safe, secure and user-friendly environment.
           </p>
 
-          <div className="flex items-center gap-5 w-full mb-5 justify-start">
+          <div className="flex items-center gap-5 w-full mb-5 md:justify-start justify-center">
             <button className="lg:px-4 lg:py-2 px-4 py-3 text-md button text-center cursor-pointer w-1/4 lg:text-base text-sm font-semibold transition-all hover:bg-cyan-500 duration-200 outline-none text-white bg-primaryCyan rounded-[100px] shadow-[0_4px_#118baa]">
               Buy
             </button>
