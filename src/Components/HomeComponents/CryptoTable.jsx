@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { AreaChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, Area } from 'recharts';
-import bitcoinIcon from '../assets/Images/6th_section_icon1.png';
-import ethereumIcon from '../assets/Images/6th_section_icon3.png';
+import bitcoinIcon from '../../assets/Images/6th_section_icon1.png';
+import ethereumIcon from '../../assets/Images/6th_section_icon3.png';
 
 // Example data
 const cryptocurrencies = [
@@ -165,7 +165,7 @@ const CryptoTable = () => {
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-3xl font-bold">Top Cryptocurrency Prices and Market Cap</h1>
       </div>
-      <div className="flex justify-between mb-4">
+      <div className="flex items-center justify-between mb-4 px-3">
         <input
           type="text"
           placeholder="Search Cryptocurrency"
@@ -181,7 +181,7 @@ const CryptoTable = () => {
         </button>
       </div>
 
-      <div class='responsiveTable' >
+      <div className='responsiveTable' >
 
         <table className="min-w-full bg-white border rounded-lg shadow-lg">
           <thead>
