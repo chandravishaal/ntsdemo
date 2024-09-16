@@ -39,6 +39,7 @@ const Navbar = () => {
     { label: 'FAQ\'s', link: '#faqs' },
     { label: 'Careers', link: '#careers' },
     { label: 'OTC Desk', link: '/OtcDesk' },
+    { label: 'Blog', link: '/BlogH' },
   ];
 
   useEffect(() => {
@@ -100,9 +101,9 @@ const Navbar = () => {
           </div>
         </div>
 
-        <ul ref={navItems} className="lg:flex items-center hidden text-white text-base font-semibold gap-8">
+        <div ref={navItems} className="lg:flex items-center hidden text-white text-base font-semibold gap-8">
           <NavMenu items={navLinks} isMobile={false} />
-        </ul>
+        </div>
       </div>
     </nav>
   );
