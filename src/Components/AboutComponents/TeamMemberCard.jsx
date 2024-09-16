@@ -135,7 +135,7 @@ const TeamMemberCard = () => {
               slidesPerView: 1,
             },
             768: { // Tablets
-              slidesPerView: 3,
+              slidesPerView: 2,
             },
             1024: { // Larger screens
               slidesPerView: 3,

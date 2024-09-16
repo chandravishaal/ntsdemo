@@ -70,30 +70,30 @@ const Platform = () => {
 
         {/* Phone Image */}
         <div className="flex justify-center items-center p-4 relative">
-          <img src={phoneImage} alt="Phone" className="w-[11rem] md:w-[20rem] lg:w-[30rem] h-auto" />
-          <div className="absolute top-6 -left-[0.5rem] md:top-7 md:-left-9 lg:top-15 lg:-left-7 text-xxx md:text-sm lg:text-base xl:text-lg">
+          <img src={phoneImage} alt="Phone" className="w-[11rem] md:w-[20rem] lg:w-[30rem] h-auto translate-y-4" />
+          <div className="absolute top-10 -left-[0.5rem] md:top-11 md:-left-9 lg:top-[3rem] lg:-left-9 text-xxx md:text-sm lg:text-base xl:text-lg">
             <p className="text-black raleway-hero font-semibold">
               Buy, sell, trade
             </p>
           </div>
-          <div className="absolute top-[1.5rem] -right-[2.9rem] md:top-[2rem] md:-right-[6.5rem] lg:top-[2.5rem] lg:-right-[7rem] text-xxx md:text-sm lg:text-base xl:text-lg">
+          <div className="absolute top-[2.5rem] -right-[2.9rem] md:top-[3rem] md:-right-[6.5rem] lg:top-[3.5rem] lg:-right-[8rem] text-xxx md:text-sm lg:text-base xl:text-lg">
             <p className="text-black raleway-hero  font-semibold">
               Generate passive rewards <br /> with Earn
             </p>
           </div>
-          <div className="absolute top-[5.2rem] -left-[4.8rem] md:top-[8rem] md:-left-[10rem] lg:top-[12rem] lg:-left-[11rem] text-right text-xxx md:text-sm lg:text-base xl:text-lg">
+          <div className="absolute top-[6.2rem] -left-[4.8rem] md:top-[9.5rem] md:-left-[10rem] lg:top-[13rem] lg:-left-[12rem] text-right text-xxx md:text-sm lg:text-base xl:text-lg">
             <p className="text-black raleway-hero font-semibold">
               Store, send, receive cryptocurrencies <br /> and money
             </p>
           </div>
 
-          <div className="absolute top-[7.2rem] -right-[5.1rem] md:top-[12rem] md:-right-[10.7rem] lg:top-[18rem] lg:-right-[13rem] text-left text-xxx md:text-sm lg:text-base xl:text-lg">
+          <div className="absolute top-[8.4rem] -right-[5.1rem] md:top-[13.5rem] md:-right-[10.7rem] lg:top-[19.4rem] lg:-right-[14rem] text-left text-xxx md:text-sm lg:text-base xl:text-lg">
             <p className="text-black raleway-hero font-semibold">
               Tax,Pay,Pro,Loan,Launchpad, ... <br /> and many more.Check them out
             </p>
           </div>
 
-          <div className="absolute top-[9rem] -left-[2.7rem] md:top-[15rem] md:-left-[6rem] lg:top-[23rem] lg:-left-[7rem] text-left text-xxx md:text-sm lg:text-base xl:text-lg">
+          <div className="absolute top-[10.2rem] -left-[2.7rem] md:top-[16.6rem] md:-left-[6rem] lg:top-[24rem] lg:-left-[8rem] text-left text-xxx md:text-sm lg:text-base xl:text-lg">
             <p className="text-black raleway-hero  font-semibold">
               Paying with our card
             </p>

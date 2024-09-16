@@ -6,8 +6,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-import mainLoader from '../src/Common/mainLoader';
-
+import mainLoader from "../src/Common/mainLoader";
 
 const RootLayout = lazy(() => import("./Layouts/RootLayout"));
 const Dashboard = lazy(() => import("./Pages/Home"));
@@ -17,34 +16,31 @@ const About = lazy(() => import("./Pages/About"));
 const Services = lazy(() => import("./Pages/Services"));
 const OtcDesk = lazy(() => import("./Pages/OtcDesk"));
 const Cryptocurrency = lazy(() => import("./Pages/Cryptocurrency"));
+const Coin = lazy(() => import("./Pages/Coin"));
 
 const App = () => {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<RootLayout />}>
         <Route index element={<Dashboard />} />
-        <Route path="/About" element={<About/>}/>
-        <Route path="/Services" element={<Services/>}/>
+        <Route path="/About" element={<About />} />
+        <Route path="/Services" element={<Services />} />
 
-        <Route path="/OtcDesk" element={<OtcDesk/>}/>
-        <Route path="/Cryptocurrency" element={<Cryptocurrency/>}/>
+        <Route path="/OtcDesk" element={<OtcDesk />} />
+        <Route path="/Cryptocurrency" element={<Cryptocurrency />} />
 
-        <Route 
-          path="/crypto-converter"
-          element={<CryptoConverter/>}/>
-          <Route path="*" element={<Page404/>}/>
+        <Route path="/crypto-converter" element={<CryptoConverter />} />
+        <Route path="*" element={<Page404 />} />
+        <Route path="/coins/:coin" element={<Coin />} />
       </Route>
-
-
-      )
-    );
-
+    )
+  );
 
   return (
     <Suspense fallback={<mainLoader />}>
       <RouterProvider router={router} />
     </Suspense>
   );
-}
+};
 
 export default App;
