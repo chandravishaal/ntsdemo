@@ -13,7 +13,7 @@ const WhyUs = () => {
     <div className="container mx-auto px-4 py-12">
       <div className="flex flex-col md:flex-row items-center justify-between">
         {/* Phone Image Section */}
-        <div className="w-full md-8 w-1/2">
+        <div className="w-full md-8 h-[770px]">
           <img
             src={phone}
             className="w:l-1/2"

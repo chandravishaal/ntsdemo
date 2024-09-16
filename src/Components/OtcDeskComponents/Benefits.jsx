@@ -8,7 +8,6 @@ import mobile from '../../assets/Images/OtcDesk/section3_icon5.png';
 import investment from '../../assets/Images/OtcDesk/section3_icon6.png';
 import shadow from '../../assets/Images/OtcDesk/hero_bg2.png';
 
-
 const Benefits = () => {
   return (
     <div className="min-h-screen w-full py-10 bg-cyan-50 mb-2">
@@ -21,7 +20,7 @@ const Benefits = () => {
       </div>
 
       {/* Benefits Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto px-4 lg:px-32">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-2 gap-8 mx-auto px-4 lg:px-32">
         {/* Benefit 1 */}
         <div className="bg-white p-4 rounded-lg flex flex-col items-end justify-between ">
           <div>
