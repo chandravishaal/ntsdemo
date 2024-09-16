@@ -1,6 +1,5 @@
-import React from 'react'
 import HeroSection from '../Components/BlogComponents/HeroSection';
-import Navbar from '../Components/BlogComponents/Navbar';
+import Navbar from '../Components/BlogComponents/Category';
 import InstagramSection from '../Components/BlogComponents/InstagramSection';
 import BlogListSection from '../Components/BlogComponents/BlogListSection';
 import BlogFeatureSection from '../Components/BlogComponents/BlogFeatureSection';

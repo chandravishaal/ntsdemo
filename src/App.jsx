@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 
 
-import mainLoader from "../src/Common/mainLoader";
+import MainScreenLoader from "../src/Common/mainLoader";
 
 const RootLayout = lazy(() => import("./Layouts/RootLayout"));
 const Dashboard = lazy(() => import("./Pages/Home"));
@@ -39,7 +39,7 @@ const App = () => {
   );
 
   return (
-    <Suspense fallback={<mainLoader />}>
+    <Suspense fallback={MainScreenLoader}>
       <RouterProvider router={router} />
     </Suspense>
   );

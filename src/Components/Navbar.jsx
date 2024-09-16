@@ -9,38 +9,8 @@ const Navbar = () => {
   const mobileMenuItems = useRef(null);  // Ref for mobile menu items
   const [isSticky, setIsSticky] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const NavLink = ({ to, children, onClick }) => {
-    return (
-      <li className="hover:text-primary transition-colors font-semibold duration-200" onClick={onClick}>
-        <Link to={to}>{children}</Link>
-      </li>
-    );
-  };
-
-  const NavMenu = ({ items, isMobile, onClose }) => {
-    return (
-      <ul ref={isMobile ? mobileMenuItems : null} className={`flex ${isMobile ? 'flex-col items-start' : 'flex-row items-center'} gap-10`}>
-        {items.map((item, index) => (
-          <NavLink key={index} to={item.link} onClick={onClose}>
-            {item.label}
-          </NavLink>
-        ))}
-      </ul>
-    );
-  };
-
-  const navLinks = [
-    { label: 'About', link: '/About' },
-    { label: 'Service', link: '/Services' },
-    { label: 'Feature', link: '/features' },
-    { label: 'Crypto Converter', link: '/crypto-converter' },
-    { label: 'Cryptocurrency', link: '/Cryptocurrency' },
-    { label: 'FAQ\'s', link: '#faqs' },
-    { label: 'Careers', link: '#careers' },
-    { label: 'OTC Desk', link: '/OtcDesk' },
-    { label: 'Blog', link: '/BlogH' },
-  ];
+  const [dropdownOpen, setDropdownOpen] = useState(null); // Track which dropdown is open
+  const dropdownRef = useRef(null); // Ref for dropdown
 
   useEffect(() => {
     const handleScroll = () => {
@@ -75,6 +45,85 @@ const Navbar = () => {
     }
   }, [isMobileMenuOpen]);
 
+  useEffect(() => {
+    if (dropdownRef.current) {
+      if (dropdownOpen) {
+        gsap.fromTo(dropdownRef.current,
+          { opacity: 0, y: 10 },
+          { opacity: 1, y: 0, duration: 0.3, ease: 'power1.out' }
+        );
+      } else {
+        gsap.to(dropdownRef.current,
+          { opacity: 0, y: 10, duration: 0.2, ease: 'power1.in' }
+        );
+      }
+    }
+  }, [dropdownOpen]);
+
+  const Dropdown = ({ items }) => {
+    return (
+      <ul
+        ref={dropdownRef}
+        className="absolute top-4 w-[150px] bg-white shadow-lg rounded mt-2 p-2 z-40"
+        onMouseEnter={() => setDropdownOpen(children)}
+        onMouseLeave={() => setDropdownOpen(null)}
+      >
+        {items.map((item, index) => (
+          <li key={index} className="text-black transition-colors p-2">
+            <Link to={item.link} className="block">{item.label}</Link>
+          </li>
+        ))}
+      </ul>
+    );
+  };
+
+  const NavLink = ({ to, children, onClick, dropdownItems }) => {
+    return (
+      <li
+        className="relative hover:text-primary transition-colors font-semibold duration-200"
+        onClick={onClick}
+        onMouseEnter={() => dropdownItems && setDropdownOpen(children)}
+        onMouseLeave={() => dropdownItems && setDropdownOpen(null)}
+      >
+        <Link to={to}>{children}</Link>
+        {dropdownOpen === children && dropdownItems && (
+          <Dropdown items={dropdownItems} />
+        )}
+      </li>
+    );
+  };
+
+  const NavMenu = ({ items, isMobile, onClose }) => {
+    return (
+      <ul ref={isMobile ? mobileMenuItems : null} className={`flex ${isMobile ? 'flex-col items-start' : 'flex-row items-center'} gap-10`}>
+        {items.map((item, index) => (
+          <NavLink
+            key={index}
+            to={item.link}
+            onClick={onClose}
+            dropdownItems={item.dropdown}
+          >
+            {item.label}
+          </NavLink>
+        ))}
+      </ul>
+    );
+  };
+
+  const navLinks = [
+    { label: 'About', link: '/about' },
+    { label: 'Service', link: '/services', dropdown: [
+        { label: 'Converter', link: '/crypto-converter' },
+      ] 
+    },
+    { label: 'Feature', link: '/features' },
+    { label: 'Cryptocurrency', link: '/cryptocurrency' },
+    { label: 'FAQ\'s', link: '/faqs' },
+    { label: 'Careers', link: '/careers' },
+    { label: 'OTC Desk', link: '/otcdesk' },
+    { label: 'Blog', link: '/blogs' },
+  ];
+
   return (
     <nav className={`bg-[#252525] w-full ${isSticky ? 'fixed top-0 z-50 shadow-md' : 'static'} transition-all duration-300`} aria-label="Main Navigation">
       <div className="mx-auto container md:px-10 lg:px-2 flex items-center justify-between p-3">
@@ -85,7 +134,7 @@ const Navbar = () => {
           <GiHamburgerMenu size={30} color='white' onClick={() => setIsMobileMenuOpen(true)} />
         </div>
 
-        <div className={`bg-white w-2/3 flex flex-col items-start fixed h-screen md:hidden z-50 top-0 transition-all duration-500 ${isMobileMenuOpen ? 'right-0' : '-right-[100%]'} px-5`}>
+        <div className={`bg-white w-2/3 flex flex-col items-start fixed h-screen lg:hidden z-50 top-0 transition-all duration-500 ${isMobileMenuOpen ? 'right-0' : '-right-[100%]'} px-5`}>
           <div className='ml-auto mt-5 mb-10'>
             <MdCancel size={30} color='black' onClick={() => setIsMobileMenuOpen(false)} />
           </div>
