@@ -70,7 +70,7 @@ const Blog = () => {
     >
       {/* Headings */}
       <div id="heading" className="flex flex-col items-center gap-4 mb-10 px-5 text-center">
-        <h1 className="text-primaryCyan text-5xl font-century-gothic font-normal mb-2">
+        <h1 className="text-black font-medium text-5xl font-century-gothic mb-2">
           Our Latest Blog
         </h1>
         <h2 className="text-black text-2xl font-century-gothic font-normal">

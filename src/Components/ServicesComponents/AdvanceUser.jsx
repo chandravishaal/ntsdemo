@@ -1,4 +1,5 @@
 import PrimaryButton from "../../Common/PrimaryButton";
+import trading from '../../assets/Images/ServicesImages/4th_section_img.png';
 
 const AdvanceUser = () => {
   return (
@@ -29,7 +30,7 @@ const AdvanceUser = () => {
         {/* Right Section */}
         <div id="right" className="w-full md:w-1/2 mb-10 lg:mb-0 h-full flex items-center justify-center mt-8 md:mt-0">
           <div id="image" className="w-64 sm:w-80 md:w-[30rem] lg:w-[35rem] xl:w-[40rem]">
-            <img src="/src/assets/Images/ServicesImages/4th_section_img.png" alt="Crypto Trading" className="w-full h-auto" />
+            <img src={trading} alt="Crypto Trading" className="w-full h-auto" />
           </div>
         </div>
       </div>

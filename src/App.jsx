@@ -27,8 +27,8 @@ const App = () => {
         <Route index element={<Dashboard />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
-        <Route path="/otcdesk" element={<OtcDesk />} />
-        <Route path="/blogs" element={<Blog />} />
+        {/* <Route path="/otcdesk" element={<OtcDesk />} /> */}
+        {/* <Route path="/blogs" element={<Blog />} /> */}
         <Route path="/crypto-converter" element={<CryptoConverter />} />
         <Route path="/cryptocurrency" element={<Cryptocurrency />} />
         <Route path="/crypto-converter" element={<CryptoConverter />} />
