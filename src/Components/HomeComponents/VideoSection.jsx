@@ -43,14 +43,7 @@ const VideoSection = () => {
 
                 {/* Buttons Section */}
                 <div className="flex space-x-4 mt-8">
-                  {/* <button className="lg:px-3 lg:py-2 px-3 py-2 text-md button text-center cursor-pointer md:w-1/5 lg:text-base text-sm font-semibold transition-all hover:bg-cyan-500 duration-200 outline-none text-black bg-primaryCyan rounded-[100px] shadow-[0_4px_#118baa]">
-                    Tradable
-                  </button>
-                  <button className="lg:px-3 lg:py-2 px-3 py-2 text-md button text-center cursor-pointer md:w-1/5 lg:text-base text-sm font-semibold transition-all hover:bg-cyan-900 duration-200 outline-none text-white bg-cyan-800 rounded-[100px] shadow-[0_4px_#0f172a]">
-                    Top Gainers
-                  </button> */}
-                  <PrimaryButton title="Tradable" />
-                  <SecondaryButton title="Top Gainers" />
+                  <PrimaryButton title="Watch More" />
                 </div>
               </div>
             </div>

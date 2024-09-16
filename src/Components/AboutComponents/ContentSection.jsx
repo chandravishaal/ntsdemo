@@ -94,7 +94,7 @@ const ContentSection = () => {
       <div className="text-center mb-6">
         <h1 className="text-4xl font-bold text-gray-800 font-antipasto-pro">The time is now</h1>
         <p className="text-gray-500 mt-1 font-century-gothic">
-          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+          Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s
         </p>
       </div>
 
@@ -110,11 +110,11 @@ const ContentSection = () => {
         </div>
         {/* Text */}
         <div className="md:pl-16 flex flex-col justify-center w-full md:w-2/3">
-          <div className="md:w-11/12">
+          <div className="md:w-11/12 lg:pl-32">
             <h2 className="text-3xl font-bold text-black font-antipasto-pro">Be Pioneer</h2>
             <h3 className="text-lg text-black mt-1 font-century-gothic">Join the digital revolution</h3>
             <p className="text-gray-800 mt-2 font-century-gothic text-xs">
-            North Star Metrics offers a unique opportunity for pioneers in the emerging digital economy of tomorrow by purchasing and trading cryptocurrencies, making it a leading candidate in the digital economy of the future.
+              Sell and Buy Crypto as the New Digital Economy&apos;s Forerunner with North Star Metrics. Experience freedom - watch your financial future in the palm of your hand by ensuring the safe buying and selling of cryptocurrency.
             </p>
           </div>
         </div>
@@ -133,11 +133,11 @@ const ContentSection = () => {
         </div>
         {/* Text */}
         <div className=" md:pl-16 flex flex-col items-start w-full md:w-2/3">
-          <div className="md:w-11/12">
-            <h2 className="text-3xl font-bold text-black font-antipasto-pro">Be Smart</h2>
-            <h3 className="text-lg text-black mt-1 font-century-gothic">Empower your finances</h3>
-            <p className="text-gray-800 mt-2 font-century-gothic text-xs">
-            Utilize the best platform for buying and trading cryptocurrencies to make informed decisions and ensure success in the cryptocurrency market. This will help make educated judgments and informed decisions, ultimately leading to success in the cryptocurrency market.
+          <div className="md:w-11/12 lg:pr-32">
+            <h2 className="text-3xl font-bold text-black font-antipasto-pro lg:text-right">Be Smart</h2>
+            <h3 className="text-lg text-black mt-1 font-century-gothic lg:text-right">Join the digital revolution</h3>
+            <p className="text-gray-800 mt-2 font-century-gothic text-xs lg:text-right">
+              Make smart decisions with the best platform to buy and sell cryptocurrency, designed to set you up for long-term success. Our advanced tools and features help you navigate the digital market with confidence.
             </p>
           </div>
         </div>
@@ -156,7 +156,7 @@ const ContentSection = () => {
         </div>
         {/* Text */}
         <div className="md:pl-16 flex flex-col justify-center w-full md:w-2/3">
-          <div className="md:w-11/12">
+          <div className="md:w-11/12 lg:pl-32">
             <h2 className="text-3xl font-bold text-black font-antipasto-pro">Be Free</h2>
             <h3 className="text-lg text-black mt-1 font-century-gothic">Without border, connected and free</h3>
             <p className="text-gray-800 mt-2 font-century-gothic text-xs">

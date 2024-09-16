@@ -109,24 +109,24 @@ const HeroSection = () => {
         {/* Floating Icons */}
         <div className="absolute inset-0 hidden lg:block">
   <Link to="/coins/usdc">
-    <img ref={el => floatingIconRefs.current[0] = el} src={floatingIcon1} alt="Floating Icon 1" className="absolute select-none stroke-slate-500 w-12 h-12" style={{ top: '20%', left: '20%' }} />
+    <img src={floatingIcon1} alt="Floating Icon 1" className="absolute animate-bounce select-none stroke-slate-500 w-12 h-12" style={{ top: '20%', left: '20%' }} />
   </Link>
   <Link to="/coins/btc">
-    <img ref={el => floatingIconRefs.current[1] = el} src={floatingIcon2} alt="Floating Icon 2" className="absolute select-none w-16 h-16" style={{ top: '10%', right: '62%' }} />
+    <img src={floatingIcon2} alt="Floating Icon 2" className="absolute animate-bounce select-none w-16 h-16" style={{ top: '10%', right: '62%' }} />
   </Link>
   <Link to="/coins/doge">
-    <img ref={el => floatingIconRefs.current[2] = el} src={floatingIcon3} alt="Floating Icon 3" className="absolute select-none w-10 h-10" style={{ bottom: '20%', left: '20%' }} />
+    <img src={floatingIcon3} alt="Floating Icon 3" className="absolute animate-bounce select-none w-10 h-10" style={{ bottom: '20%', left: '20%' }} />
   </Link>
   <Link to="/coins/eth">
-    <img ref={el => floatingIconRefs.current[3] = el} src={floatingIcon4} alt="Floating Icon 4" className="absolute select-none w-12 h-12" style={{ top: '20%', right: '30%' }} />
+    <img src={floatingIcon4} alt="Floating Icon 4" className="absolute animate-bounce select-none w-12 h-12" style={{ top: '20%', right: '30%' }} />
   </Link>
   <Link to="/coins/ltc">
-    <img ref={el => floatingIconRefs.current[4] = el} src={floatingIcon5} alt="Floating Icon 5" className="absolute select-none w-10 h-10" style={{ bottom: '30%', left: '40%' }} />
+    <img src={floatingIcon7} alt="Floating Icon 5" className="absolute animate-bounce select-none w-10 h-10" style={{ bottom: '30%', left: '50%' }} />
   </Link>
   <Link to="/coins/xrp">
-    <img ref={el => floatingIconRefs.current[5] = el} src={floatingIcon6} alt="Floating Icon 6" className="absolute select-none w-12 h-12" style={{ top: '50%', left: '30%' }} />
+    <img src={floatingIcon10} alt="Floating Icon 6" className="absolute animate-bounce select-none w-12 h-12" style={{ top: '70%', left: '30%' }} />
   </Link>
-  <Link to="/coins/trx">
+  {/* <Link to="/coins/trx">
     <img ref={el => floatingIconRefs.current[6] = el} src={floatingIcon7} alt="Floating Icon 7" className="absolute select-none w-16 h-16" style={{ bottom: '10%', right: '25%' }} />
   </Link>
   <Link to="/coins/matic">
@@ -137,7 +137,7 @@ const HeroSection = () => {
   </Link>
   <Link to="/coins/usdt">
     <img ref={el => floatingIconRefs.current[9] = el} src={floatingIcon10} alt="Floating Icon 10" className="absolute select-none w-10 h-10" style={{ top: '85%', right: '45%' }} />
-  </Link>
+  </Link> */}
 </div>
       </div>
     </section>
