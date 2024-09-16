@@ -27,7 +27,7 @@ function PressRoom() {
       logoSrc: Image4,
     },
   ];
-
+/*
   const PressCard = ({ imageSrc, title, description, logoSrc }) => {
     return (
       <div className="bg-cyan-50 rounded-lg">
@@ -47,7 +47,29 @@ function PressRoom() {
         </div>
       </div>
     );
+  };*/
+
+  const PressCard = ({ imageSrc, title, description, logoSrc }) => {
+    return (
+      <div className="bg-cyan-50 rounded-lg overflow-hidden">
+        <img src={imageSrc} alt="Press Image" className="rounded-t-lg object-cover mb-3 h-[200px] w-full" />
+        <div className='p-4'>
+          <h3 className="text-lg md:text-xl font-bold mb-2">{title}</h3>
+          <p className="text-gray-500 mb-4 text-sm md:text-base">
+            {description}
+          </p>
+          <div className='flex flex-wrap items-center justify-between'>
+            <img src={logoSrc} className='w-24 md:w-28' alt="" />
+            <div className="flex flex-wrap gap-2 mt-4">
+              <div className="bg-primaryCyan text-black font-bold py-1 px-4 rounded-full text-xs md:text-sm">Funding</div>
+              <div className="bg-primaryCyan text-black font-bold py-1 px-4 rounded-full text-xs md:text-sm">Growth</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
   };
+  
 
   return (
     <section className="bg-white container mx-auto mb-24">
@@ -60,7 +82,7 @@ function PressRoom() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 px-5">
         {cardsData.map((card, index) => (
           <PressCard
             key={index}

@@ -19,6 +19,8 @@ const ExchangeCrypto = () => {
           incididunt ut labore et dolore magna aliqua.
         </p>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 px-5">
+
+          
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md flex items-end justify-between">
             <div className="text-left flex-[0.9]">
               <h3 className="text-lg md:text-xl font-century-gothic font-semibold">Cryptocurrency Exchange Services</h3>
