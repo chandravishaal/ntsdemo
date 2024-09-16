@@ -34,7 +34,7 @@ const WhychooseusCard = ({ image, title, desc, color, customClass }) => {
 
 const WhyChooseUs = () => {
   return (
-    <section className="whychooseSection-background md:pt-20 lg:my-10 lg:py-10">
+    <section className="whychooseSection-background md:pt-20 lg:py-10">
       <div className="container mx-auto mb-20 flex flex-col-reverse lg:flex-row items-center justify-between gap-10 px-5">
         <div className="flex flex-col items-center lg:items-start flex-[0.6] text-center md:text-left">
           <h1 className="text-3xl mt-5 font-bold mb-5">Why Choose Us?</h1>

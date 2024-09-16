@@ -130,7 +130,7 @@ const CompanySection = () => {
                                     <h2 className="text-3xl font-bold text-primaryCyan font-antipasto-pro">what defined us</h2>
                                     <h3 className="text-lg text-black mt-1 font-century-gothic">Join the digital revolution</h3>
                                     <p className="text-gray-800 mt-2 font-century-gothic text-xs">
-                                        Sell and Buy Crypto as the New Digital Economy's Forerunner with North Star Metrics. Experience freedom - watch your financial future in the palm of your hand by ensuring the safe buying and selling of cryptocurrency.
+                                        Sell and Buy Crypto as the New Digital Economy&apos;s Forerunner with North Star Metrics. Experience freedom - watch your financial future in the palm of your hand by ensuring the safe buying and selling of cryptocurrency.
                                     </p>
                                 </div>
                             </div>
@@ -154,7 +154,7 @@ const CompanySection = () => {
                                     <h2 className="text-3xl font-bold text-primaryCyan font-antipasto-pro">what defined us</h2>
                                     <h3 className="text-lg text-black mt-1 font-century-gothic">Join the digital revolution</h3>
                                     <p className="text-gray-800 mt-2 font-century-gothic text-xs">
-                                        Sell and Buy Crypto as the New Digital Economy's Forerunner with North Star Metrics. Experience freedom - watch your financial future in the palm of your hand by ensuring the safe buying and selling of cryptocurrency.
+                                        Sell and Buy Crypto as the New Digital Economy&apos;s Forerunner with North Star Metrics. Experience freedom - watch your financial future in the palm of your hand by ensuring the safe buying and selling of cryptocurrency.
                                     </p>
                                 </div>
                             </div>
@@ -178,7 +178,7 @@ const CompanySection = () => {
                                     <h2 className="text-3xl font-bold text-primaryCyan font-antipasto-pro">what defined us</h2>
                                     <h3 className="text-lg text-black mt-1 font-century-gothic">Join the digital revolution</h3>
                                     <p className="text-gray-800 mt-2 font-century-gothic text-xs">
-                                        Sell and Buy Crypto as the New Digital Economy's Forerunner with North Star Metrics. Experience freedom - watch your financial future in the palm of your hand by ensuring the safe buying and selling of cryptocurrency.
+                                        Sell and Buy Crypto as the New Digital Economy&apos;s Forerunner with North Star Metrics. Experience freedom - watch your financial future in the palm of your hand by ensuring the safe buying and selling of cryptocurrency.
                                     </p>
                                 </div>
                             </div>

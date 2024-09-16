@@ -44,7 +44,7 @@ const Explore = () => {
   }, []);
 
   return (
-    <section className="exploreSection-background mt-10">
+    <section className="exploreSection-background">
       <div className="flex flex-col lg:flex-row justify-between py-5 container w-full mx-auto items-center">
         <div className="lg:flex-1 select-none w-full lg:flex justify-center md:justify-start hidden">
           <img data-aos="fade-up" data-aos-duration="2000" src={explorebanner} className="w-[70%] mx-auto md:w-[40%] mb-10 lg:w-[70%] lg:-translate-x-5 lg:translate-y-7" alt="explore banner" />

@@ -37,7 +37,7 @@ const Started = () => {
   }, []);
 
   return (
-    <section className='bg-primaryCyan w-full py-10 mb-20'> 
+    <section className='bg-primaryCyan w-full py-10'> 
 
       <div id="main" className="w-full container mx-auto flex lg:flex-row flex-col-reverse justify-between items-center lg:my-40 my-20">
         <div id="left" className="text-white text-center lg:text-left w-full mt-20">

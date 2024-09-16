@@ -4,7 +4,7 @@ import ContentSection from "../Components/AboutComponents/ContentSection";
 import Started from "../Components/Started";
 import PressRoom from "../Components/AboutComponents/PressRoom";
 import TeamMemberCard from "../Components/AboutComponents/TeamMemberCard";
-import AboutHeader from "../Components/AboutComponents/AboutHeader";
+// import AboutHeader from "../Components/AboutComponents/AboutHeader";
 import Platform from "../Components/AboutComponents/Platform";
 import CompanySection from "../Components/AboutComponents/CompanySection";
 import Certificate from "../Components/AboutComponents/Certificate";
@@ -18,7 +18,7 @@ const About = () => {
 
   return (
     <>
-      <AboutHeader />
+      {/* <AboutHeader /> */}
       <Beneficial />
       <CompanySection />
       <Certificate />
