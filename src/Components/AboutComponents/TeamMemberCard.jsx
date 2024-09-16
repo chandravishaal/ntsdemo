@@ -114,9 +114,7 @@ const TeamMemberCard = () => {
         <div className="text-center mb-32">
           <h2 className="text-4xl font-bold mt-8">Our executive team</h2>
           <p className="text-black text-lg mt-4 font-semibold">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry&apos;s <br /> standard dummy
-            text ever since the 1500s.
+          Innovative Leaders Driving Crypto Excellence.
           </p>
         </div>
 
