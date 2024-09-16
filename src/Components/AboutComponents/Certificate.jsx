@@ -44,7 +44,7 @@ const Certificate = () => {
       </div>
     );
   };
-
+{/*
   return (
     <div className="mt-12 flex justify-around py-24 gap-5 container mx-auto">
       {certificates.map((certificate, index) => (
@@ -57,6 +57,23 @@ const Certificate = () => {
           isSmall={index === 3}  // Set `isSmall` to true for the 4th image
         />
       ))}
+    </div>
+  );*/}
+
+  return (
+    <div className="mt-12 flex justify-around py-24 gap-5 container mx-auto  ">
+      <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2  gap-8">
+        {certificates.map((certificate, index) => (
+          <CertificateItem
+            key={index}
+            imageSrc={certificate.imageSrc}
+            altText={certificate.altText}
+            title={certificate.title}
+            description={certificate.description}
+            isSmall={index === 3}  // Set `isSmall` to true for the 4th image
+          />
+        ))}
+      </div>
     </div>
   );
 };

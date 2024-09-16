@@ -26,7 +26,7 @@ const HeroSection = () => {
   const brand = useRef(null);
   const floatingIconRefs = useRef([]); // Ref for the floating icons
 
-  useEffect(() => { 
+  useEffect(() => {
     gsap.from(inputBox.current, {
       y: 100,
       duration: 1,
@@ -98,7 +98,7 @@ const HeroSection = () => {
             <SecondaryButton title='Sell' />
           </div>
         </div>
-        
+
         {/* hero-image */}
         <div className="select-none w-full mx-auto relative">
           <img src={mobilebackBanner} className='absolute rotate-45 bottom-10 md:hidden' alt="" />

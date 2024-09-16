@@ -16,6 +16,10 @@ export default {
         primaryCyan: '#16D5FF', // Add your custom color here
         customRed: '#f87171',  // Another example of a custom color
       },
+      fontSize: {
+        'xxs': '0.625rem', // 10px
+        'xxx': '0.4rem',   // 8px
+      },
     },
   },
   plugins: [],

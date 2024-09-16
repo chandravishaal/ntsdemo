@@ -85,4 +85,52 @@ const AboutHeader = () => {
 }
 
 export default AboutHeader
+/*
+import React from 'react';
+import laptopImage from '../../assets/Images/laptop.png';
+
+const AboutHeader = () => {
+  return (
+
+    <div
+      className="relative flex flex-col lg:flex-row"
+
+    ><div className="w-full flex justify-start items-center">
+    <img
+      src={laptopImage}
+      alt="Laptop"
+      className="object-cover w-full h-auto md:h-full"
+    />
+  </div>
+
+      {/* Content Section *
+      <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-end px-5 py-5 bg-gradient-to-r from-cyan-50 to-white  rounded-lg">
+        <div className="rounded-lg max-w-3xl">
+          <div className="">
+            <h2 className="text-3xl font-bold text-primaryCyan font-antipasto-pro">
+              Who We Are
+              <br />
+              <span className="text-lg text-black mt-1 font-century-gothic">
+                India&apos;s First Cryptocurrency Exchange
+              </span>
+            </h2>
+            <div className="text-gray-800 mt-2 font-century-gothic text-xs">
+              <p className="mb-4">
+                At North Star Metrics, we redefine the way you buy and sell cryptocurrency with security and ease in every way imaginable. Being rated as the best cryptocurrency buying and selling platform in India, we have empowered both individuals and institutions to be successful participants in the digital asset market.
+              </p>
+              <p>
+                Whether one is just commencing their journey or an accomplished trader, the intuitive environment with advanced tools and support cements our position as the premier website for the purchase and trading of any cryptocurrency. At North Star Metrics, your financial future rests in your hands, supported by a source of trust and innovation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div >
+
+  );
+}
+
+export default AboutHeader;*/
+
 

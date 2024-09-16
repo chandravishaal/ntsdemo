@@ -97,10 +97,11 @@ const ContentSection = () => {
           Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
         </p>
       </div>
-      {/* first Row */}
-      <div className="flex flex-col md:flex-row items-center justify-between bg-gradient-to-r from-cyan-50 to-white rounded-lg px-5 py-4 h-[300px]">
+
+      {/* First Row */}
+      <div className="flex flex-col md:flex-row items-center justify-between bg-gradient-to-r from-cyan-50 to-white rounded-lg px-5 py-4">
         {/* Image */}
-        <div className="md:w-1/3 mb-4 md:mb-0 flex-shrink-0">
+        <div className="w-full md:w-1/3 mb-4 md:mb-0">
           <img
             src="https://cdn.pixabay.com/photo/2024/04/05/05/17/technology-8676540_1280.jpg"
             alt="Connected and Free"
@@ -108,20 +109,22 @@ const ContentSection = () => {
           />
         </div>
         {/* Text */}
-        <div className="md:pl-16 flex flex-col justify-center">
-          <div className="md:w-10/12">
+        <div className="md:pl-16 flex flex-col justify-center w-full md:w-2/3">
+          <div className="md:w-11/12">
             <h2 className="text-3xl font-bold text-black font-antipasto-pro">Be Pioneer</h2>
             <h3 className="text-lg text-black mt-1 font-century-gothic">Join the digital revolution</h3>
             <p className="text-gray-800 mt-2 font-century-gothic text-xs">
-            Sell and Buy Crypto as the New Digital Economy's Forerunner with North Star Metrics. Experience freedom - watch your financial future in the palm of your hand by ensuring the safe buying and selling of cryptocurrency.
+              Sell and Buy Crypto as the New Digital Economy's Forerunner with North Star Metrics. Experience freedom - watch your financial future in the palm of your hand by ensuring the safe buying and selling of cryptocurrency.
             </p>
           </div>
         </div>
       </div>
+     
+
       {/* Second Row */}
-      <div className="flex flex-col md:flex-row-reverse items-center justify-between bg-gradient-to-r from-cyan-50 to-white rounded-lg px-5 py-4 h-[300px]">
+      <div className="flex flex-col md:flex-row-reverse items-center justify-between bg-gradient-to-r from-cyan-50 to-white rounded-lg px-5 py-4 mt-4">
         {/* Image */}
-        <div className="md:w-1/3 mb-4 md:mb-0 flex-shrink-0">
+        <div className="w-full md:w-1/3 mb-4 md:mb-0">
           <img
             src="https://cdn.pixabay.com/photo/2015/08/01/21/11/euro-870761_1280.jpg"
             alt="Financial Innovation"
@@ -129,20 +132,22 @@ const ContentSection = () => {
           />
         </div>
         {/* Text */}
-        <div className="md:pr-16 flex flex-col items-end">
-          <div className="md:w-10/12">
+        <div className=" md:pl-16 flex flex-col items-start w-full md:w-2/3">
+          <div className="md:w-11/12">
             <h2 className="text-3xl font-bold text-black font-antipasto-pro">Be Smart</h2>
             <h3 className="text-lg text-black mt-1 font-century-gothic">Join the digital revolution</h3>
             <p className="text-gray-800 mt-2 font-century-gothic text-xs">
-            Make smart decisions with the best platform to buy and sell crypto, designed to set you up for success.
+              Make smart decisions with the best platform to buy and sell cryptocurrency, designed to set you up for long-term success. Our advanced tools and features help you navigate the digital market with confidence.
             </p>
           </div>
         </div>
       </div>
+      
+
       {/* Third Row */}
-      <div className="flex flex-col md:flex-row items-center justify-between bg-gradient-to-r from-cyan-50 to-white rounded-lg px-5 py-4 h-[300px]">
+      <div className="flex flex-col md:flex-row items-center justify-between bg-gradient-to-r from-cyan-50 to-white rounded-lg px-5 py-4 mt-4">
         {/* Image */}
-        <div className="md:w-1/3 mb-4 md:mb-0 flex-shrink-0">
+        <div className="w-full md:w-1/3 mb-4 md:mb-0">
           <img
             src="https://images.unsplash.com/photo-1507835661088-ac1e84fe645f?q=80&w=1924&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="Connected and Free"
@@ -150,12 +155,12 @@ const ContentSection = () => {
           />
         </div>
         {/* Text */}
-        <div className="md:pl-16 flex flex-col justify-center">
-          <div className="md:w-10/12">
+        <div className="md:pl-16 flex flex-col justify-center w-full md:w-2/3">
+          <div className="md:w-11/12">
             <h2 className="text-3xl font-bold text-black font-antipasto-pro">Be Free</h2>
             <h3 className="text-lg text-black mt-1 font-century-gothic">Without border, connected and free</h3>
             <p className="text-gray-800 mt-2 font-century-gothic text-xs">
-            Experience freedom - watch your financial future in the palm of your hand by ensuring the safe buying and selling of cryptocurrency.
+              Experience freedom - watch your financial future in the palm of your hand by ensuring the safe buying and selling of cryptocurrency.
             </p>
           </div>
         </div>
