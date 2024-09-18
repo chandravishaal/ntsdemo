@@ -24,8 +24,8 @@ const Partnarship = () => {
     });
 
     // Animate right section (text and button) from the right (x-axis)
-    gsap.from("#right > *", {
-      x: 100, // animate from 100px to the right
+    gsap.from("#text > *", {
+      x: 100, // animate from 100px to the text
       opacity: 0, // start with 0 opacity
       duration: 1.2,
       delay:0.7 ,
@@ -52,8 +52,8 @@ const Partnarship = () => {
           </div>
         </div>
 
-        {/* Right Section - Content */}
-        <div id="right" className="w-full md:w-1/2 h-full space-y-6 md:space-y-10 text-center md:text-left flex flex-col justify-start md:justify-center items-center md:items-start px-4 md:px-9">
+        {/* text Section - Content */}
+        <div id="text" className="w-full md:w-1/2 h-full space-y-6 md:space-y-10 text-center md:text-left flex flex-col justify-start md:justify-center items-center md:items-start px-4 md:px-9">
           <div id="heading">
             <h2 className="text-2xl md:text-4xl font-century-gothic font-bold text-cyan-400">
               Partnership Program
