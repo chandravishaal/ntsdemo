@@ -73,6 +73,7 @@ const TeamMemberCard = () => {
 export default TeamMemberCard;*/
 
 
+import { useEffect, useRef } from 'react';
 import { FaFacebookF } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
@@ -82,14 +83,17 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay'; // Import autoplay styles
 import { Pagination, Autoplay } from 'swiper/modules';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+gsap.registerPlugin(ScrollTrigger);
 
 const MemberCard = () => {
   return (
     <div className="bg-white p-1 h-[27rem] rounded-3xl relative select-none cursor-pointer">
       <img
         src="https://images.unsplash.com/photo-1562159278-1253a58da141?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        alt=""
+        alt="John Doe"
         className="w-full h-[300px] object-cover rounded-br-[14rem] rounded-t-3xl mb-1"
       />
       <div className="absolute bg-primaryCyan h-32 w-12 right-7 top-1 flex flex-col text-white p-2 items-center gap-4">
@@ -108,17 +112,49 @@ const MemberCard = () => {
 };
 
 const TeamMemberCard = () => {
+  const swiperRef = useRef(null); // Ref for the Swiper container
+
+  useEffect(() => {
+    // GSAP animation for staggered entry from different directions
+    const slides = swiperRef.current?.querySelectorAll('.swiper-slide');
+
+    if (slides) {
+      gsap.fromTo(
+        slides,
+        {
+          opacity: 0,
+          y: 100, // Start position for middle slide
+          x: (i) => (i % 3 === 0 ? -100 : i % 3 === 2 ? 100 : 0), // Adjust direction (left, middle, right)
+        },
+        {
+          opacity: 1,
+          y: 0,
+          x: 0,
+          duration: 1,
+          stagger: 0.2,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: swiperRef.current, // Animation starts when Swiper is in view
+            start: 'top 80%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    }
+  }, []);
+
   return (
-    <section className="pb-32 pt-20  bg-gray-100">
+    <section className="pb-32 pt-20 bg-gray-100">
       <div className="container mx-auto px-4">
         <div className="text-center mb-32">
           <h2 className="text-4xl font-bold mt-8">Our executive team</h2>
           <p className="text-black text-lg mt-4 font-semibold">
-          Innovative Leaders Driving Crypto Excellence.
+            Innovative Leaders Driving Crypto Excellence.
           </p>
         </div>
 
         <Swiper
+          ref={swiperRef} // Set ref to Swiper
           pagination={{ clickable: true }}
           modules={[Pagination, Autoplay]}
           className="mySwiper"
@@ -129,15 +165,9 @@ const TeamMemberCard = () => {
             disableOnInteraction: false,
           }}
           breakpoints={{
-            320: { // Mobile screens
-              slidesPerView: 1,
-            },
-            768: { // Tablets
-              slidesPerView: 2,
-            },
-            1024: { // Larger screens
-              slidesPerView: 3,
-            },
+            320: { slidesPerView: 1 }, // Mobile screens
+            768: { slidesPerView: 2 }, // Tablets
+            1024: { slidesPerView: 3 }, // Larger screens
           }}
         >
           <SwiperSlide><MemberCard /></SwiperSlide>
@@ -153,4 +183,3 @@ const TeamMemberCard = () => {
 };
 
 export default TeamMemberCard;
-
