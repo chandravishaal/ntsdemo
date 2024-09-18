@@ -94,7 +94,7 @@ const AdvanceUser = () => {
       y: 100, // animate from 100px below
       opacity: 0, // start invisible
       duration: 1, // animation duration
-      stagger: 0.3, // stagger each child element by 0.3 seconds
+      stagger: 0.4, // stagger each child element by 0.3 seconds
       scrollTrigger: {
         trigger: "#box ", // trigger animation when this section comes into view
         start: "top 80%", // animation starts when top of section hits 80% of the viewport
