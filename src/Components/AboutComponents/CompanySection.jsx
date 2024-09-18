@@ -90,19 +90,24 @@ const CompanySection = () => {
 
 export default CompanySection;*/}
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import missionImage from '../../assets/Images/handshake.png';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const CompanySection = () => {
     const [activeSection, setActiveSection] = useState('Mission');
+    const sectionRef = useRef(null);
 
     const renderButton = (section) => {
         const isActive = activeSection === section;
         return (
             <button
                 className={`px-4 py-0.5 md:px-8 md:py-1 rounded-lg md:text-lg mt-4 cursor-pointer font-semibold ${isActive
-                        ? 'bg-primaryCyan text-white'
-                        : 'border-2 border-primaryCyan text-sky-400 raleway-hero bg-transparent'
+                    ? 'bg-primaryCyan text-white'
+                    : 'border-2 border-primaryCyan text-sky-400 raleway-hero bg-transparent'
                     }`}
                 onClick={() => setActiveSection(section)}
             >
@@ -111,11 +116,30 @@ const CompanySection = () => {
         );
     };
 
+    useEffect(() => {
+        // Set up the ScrollTrigger animation with delay and duration
+        gsap.fromTo(
+            sectionRef.current,
+            { opacity: 0, y: 70 }, // Start values: hidden and slightly offset vertically
+            {
+                opacity: 1, y: 0, duration: 1.5, ease: "power3.out", delay: 0.3, // Add delay and adjust duration
+                scrollTrigger: {
+                    trigger: sectionRef.current,  // Element to trigger on
+                    start: "top 80%",  // When the top of the section hits 80% of the viewport height
+                    end: "bottom 20%",  // End point of the scroll trigger
+                    toggleActions: "play none none reset",  // Re-trigger the animation on scroll into view
+                    onEnter: () => gsap.to(sectionRef.current, { opacity: 1, y: 0, duration: 1.5, delay: 0.3 }), // Animation with delay and duration
+                    onLeaveBack: () => gsap.to(sectionRef.current, { opacity: 0, y: 50, duration: 1.2, delay: 0 }), // Reset with faster duration
+                }
+            }
+        );
+    }, []);
+
     const renderActiveSection = () => {
         switch (activeSection) {
             case 'Mission':
                 return (
-                    <div className="container mx-auto py-8">
+                    <div ref={sectionRef} className="container mx-auto py-8">
                         <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8 justify-between container mx-auto rounded-lg px-5 py-4">
                             <div className="w-full md:w-1/3 mb-4 md:mb-0">
                                 <img
@@ -124,7 +148,6 @@ const CompanySection = () => {
                                     className="rounded-lg shadow-lg w-full h-[250px] object-cover"
                                 />
                             </div>
-                            {/* Text */}
                             <div className="md:pl-10 flex flex-col justify-center w-full md:w-2/3">
                                 <div className="md:w-11/12">
                                     <h2 className="text-3xl font-bold text-primaryCyan font-antipasto-pro">What defines us</h2>
@@ -139,7 +162,7 @@ const CompanySection = () => {
                 );
             case 'Vision':
                 return (
-                    <div className="container mx-auto py-8">
+                    <div ref={sectionRef} className="container mx-auto py-8">
                         <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8 justify-between container mx-auto rounded-lg px-5 py-4">
                             <div className="w-full md:w-1/3 mb-4 md:mb-0">
                                 <img
@@ -148,7 +171,6 @@ const CompanySection = () => {
                                     className="rounded-lg shadow-lg w-full h-[250px] object-cover"
                                 />
                             </div>
-                            {/* Text */}
                             <div className="md:pl-10 flex flex-col justify-center w-full md:w-2/3">
                                 <div className="md:w-11/12">
                                     <h2 className="text-3xl font-bold text-primaryCyan font-antipasto-pro">What defines us</h2>
@@ -163,16 +185,15 @@ const CompanySection = () => {
                 );
             case 'Values':
                 return (
-                    <div className="container mx-auto py-8">
+                    <div ref={sectionRef} className="container mx-auto py-8">
                         <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8 justify-between container mx-auto rounded-lg px-5 py-4">
                             <div className="w-full md:w-1/3 mb-4 md:mb-0">
                                 <img
-                                     src="https://cdn.pixabay.com/photo/2024/04/05/05/17/technology-8676540_1280.jpg"
+                                    src="https://cdn.pixabay.com/photo/2024/04/05/05/17/technology-8676540_1280.jpg"
                                     alt="Connected and Free"
                                     className="rounded-lg shadow-lg w-full h-[250px] object-cover"
                                 />
                             </div>
-                            {/* Text */}
                             <div className="md:pl-10 flex flex-col justify-center w-full md:w-2/3">
                                 <div className="md:w-11/12">
                                     <h2 className="text-3xl font-bold text-primaryCyan font-antipasto-pro">What defines us</h2>
@@ -191,9 +212,9 @@ const CompanySection = () => {
     };
 
     return (
-        <div className=" bg-gradient-to-b from-white to-cyan-50 py-16 px-5">
+        <div className="bg-gradient-to-b from-white to-cyan-50 py-16 px-5">
             {/* Buttons for Mission, Vision, Values */}
-            <div className="flex md:flex-row space-x-1 md:space-x-4 justify-center ">
+            <div className="flex md:flex-row space-x-1 md:space-x-4 justify-center">
                 {['Mission', 'Vision', 'Values'].map(section => renderButton(section))}
             </div>
 

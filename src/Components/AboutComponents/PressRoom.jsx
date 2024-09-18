@@ -1,7 +1,12 @@
+import { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image1 from '../../assets/Images/icon1.jpg';
 import Image2 from '../../assets/Images/icon2.jpg';
 import Image3 from '../../assets/Images/icon3.jpg';
 import Image4 from '../../assets/Images/nts-removebg-preview.png';
+
+gsap.registerPlugin(ScrollTrigger);
 
 function PressRoom() {
   const cardsData = [
@@ -27,39 +32,74 @@ function PressRoom() {
       logoSrc: Image4,
     },
   ];
-/*
-  const PressCard = ({ imageSrc, title, description, logoSrc }) => {
-    return (
-      <div className="bg-cyan-50 rounded-lg">
-        <img src={imageSrc} alt="Press Image" className="rounded-t-lg object-cover mb-3 h-[200px] w-full" />
-        <div className='p-4'>
-          <h3 className="text-l font-bold mb-2">{title}</h3>
-          <p className="text-gray-500 mb-4 text-sm">
-            {description}
-          </p>
-          <div className='flex items-center justify-between'>
-            <img src={logoSrc} className='w-24' alt="" />
-            <div className="flex justify-end mt-4">
-            <div className="bg-primaryCyan text-black font-bold -py-1 px-4 rounded-full">Funding</div>
-            <div className="bg-primaryCyan text-black font-bold -py-1 px-4 rounded-full ml-4">Growth</div>
-          </div>
-          </div>
-        </div>
-      </div>
-    );
-  };*/
 
-  const PressCard = ({ imageSrc, title, description, logoSrc }) => {
+  const cardRefs = useRef([]);
+
+  useEffect(() => {
+    gsap.fromTo(
+      cardRefs.current[0], // First card (left)
+      { opacity: 0, x: -100 }, // Start off-screen to the left
+      {
+        opacity: 1,
+        x: 0,
+        duration: 1,
+        
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: cardRefs.current[0],
+          start: 'top 80%',
+          toggleActions: 'play none none reverse',
+        },
+      }
+    );
+
+    gsap.fromTo(
+      cardRefs.current[1], // Middle card (down)
+      { opacity: 0, y: 100 }, // Start off-screen below
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: cardRefs.current[1],
+          start: 'top 80%',
+          toggleActions: 'play none none reverse',
+        },
+      }
+    );
+
+    gsap.fromTo(
+      cardRefs.current[2], // Last card (right)
+      { opacity: 0, x: 100 }, // Start off-screen to the right
+      {
+        opacity: 1,
+        x: 0,
+        duration: 1,
+        
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: cardRefs.current[2],
+          start: 'top 80%',
+          toggleActions: 'play none none reverse',
+        },
+      }
+    );
+  }, []);
+
+  const PressCard = ({ imageSrc, title, description, logoSrc, index }) => {
     return (
-      <div className="bg-cyan-50 rounded-lg overflow-hidden">
+      <div
+        ref={(el) => (cardRefs.current[index] = el)} // Assigning the ref to each card
+        className="bg-cyan-50 rounded-lg overflow-hidden"
+      >
         <img src={imageSrc} alt="Press Image" className="rounded-t-lg object-cover mb-3 h-[200px] w-full" />
-        <div className='p-4'>
+        <div className="p-4">
           <h3 className="text-lg md:text-xl font-bold mb-2">{title}</h3>
-          <p className="text-gray-500 mb-4 text-sm md:text-base">
-            {description}
-          </p>
-          <div className='flex flex-wrap items-center justify-between'>
-            <img src={logoSrc} className='w-24 md:w-28' alt="" />
+          <p className="text-gray-500 mb-4 text-sm md:text-base">{description}</p>
+          <div className="flex flex-wrap items-center justify-between">
+            <img src={logoSrc} className="w-24 md:w-28" alt="" />
             <div className="flex flex-wrap gap-2 mt-4">
               <div className="bg-primaryCyan text-black font-bold py-1 px-4 rounded-full text-xs md:text-sm">Funding</div>
               <div className="bg-primaryCyan text-black font-bold py-1 px-4 rounded-full text-xs md:text-sm">Growth</div>
@@ -69,7 +109,6 @@ function PressRoom() {
       </div>
     );
   };
-  
 
   return (
     <section className="bg-white container mx-auto mb-24">
@@ -90,6 +129,7 @@ function PressRoom() {
             title={card.title}
             description={card.description}
             logoSrc={card.logoSrc}
+            index={index} // Passing the index to track each card's reference
           />
         ))}
       </div>
