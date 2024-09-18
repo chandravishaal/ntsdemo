@@ -1,10 +1,49 @@
+import React, { useEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import left from '../../assets/Images/ServicesImages/last_section_img.png';
 import PrimaryButton from '../../Common/PrimaryButton';
 
 const Partnarship = () => {
+  useEffect(() => {
+    // Register ScrollTrigger plugin
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Animate left section (image) from the bottom (y-axis)
+    gsap.from("#image img", {
+      y: 100, // animate from 100px down
+      opacity: 0, // start with 0 opacity
+      duration: 1.5, // animation duration
+      scrollTrigger: {
+        trigger: ".Partnarship-bg", // trigger animation when the section comes into view
+        start: "top 80%", // start the animation when top of section is 80% down the viewport
+        end: "bottom 100%", // animation ends when bottom of section reaches bottom of viewport
+        toggleActions: "play none none reset", // play the animation when it enters, and reset when it leaves
+        once: false // ensure the animation plays every time you scroll back to this section
+      }
+    });
+
+    // Animate right section (text and button) from the right (x-axis)
+    gsap.from("#right > *", {
+      x: 100, // animate from 100px to the right
+      opacity: 0, // start with 0 opacity
+      duration: 1.2,
+      delay:0.7 ,
+      // stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".Partnarship-bg",
+        start: "top 80%",
+        end: "bottom 100%",
+        toggleActions: "play none none reset",
+        once: false
+      }
+    });
+
+  }, []);
+
   return (
-    <section className="Partnarship-bg h-auto w-full flex items-center justify-center bg-cover bg-center py-12 md:py-20">
-      <div id="main" className="container mx-auto flex flex-col md:flex-row items-center justify-center p-4 md:p-4 h-full">
+    <section className="Partnarship-bg  h-auto w-full flex items-center justify-center bg-cover bg-center py-12 md:py-20">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-center p-4 md:p-4 h-full">
         
         {/* Left Section - Image */}
         <div id="left" className="w-full md:w-1/2 h-full flex items-center justify-center mb-8 md:mb-0">

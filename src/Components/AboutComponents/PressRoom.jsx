@@ -42,7 +42,7 @@ function PressRoom() {
       {
         opacity: 1,
         x: 0,
-        duration: 1,
+        duration: 2,
         
         ease: 'power3.out',
         scrollTrigger: {
@@ -59,7 +59,7 @@ function PressRoom() {
       {
         opacity: 1,
         y: 0,
-        duration: 1,
+        duration: 2,
         
         ease: 'power3.out',
         scrollTrigger: {
@@ -76,7 +76,7 @@ function PressRoom() {
       {
         opacity: 1,
         x: 0,
-        duration: 1,
+        duration: 2,
         
         ease: 'power3.out',
         scrollTrigger: {

@@ -48,24 +48,83 @@
 
 // export default EveryDay
 
-import React from 'react';
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import phoneImage from "../../assets/Images/phone.png";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const EveryDay = () => {
+  const sectionRef = useRef(null);
+  const textRef = useRef([]);
+  const imageRef = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Animate text elements with a stagger effect
+      gsap.fromTo(
+        textRef.current,
+        { opacity: 0, y: 150 }, // Starting position
+        {
+          opacity: 1,
+          y: 0, // Final position
+          duration: 1,
+          delay:1,
+          stagger: 0.2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 80%", // Animation starts when 80% of the section is visible
+            toggleActions: "play none none reset", // Replay animation when it re-enters the viewport
+            once: false, // Allow replay
+          },
+        }
+      );
+
+      // Animate the image
+      gsap.fromTo(
+        imageRef.current,
+        { opacity: 0, y: 80 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          delay:0.3,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 80%",
+            toggleActions: "play none none reset",
+            once: false,
+          },
+        }
+      );
+    }, sectionRef);
+
+    return () => ctx.revert(); // Cleanup on component unmount
+  }, []);
+
   return (
-    <section className="Everyday-bg w-full flex items-center justify-center bg-cover bg-center py-8 md:py-16">
+    <section
+      ref={sectionRef}
+      className="Everyday-bg w-full flex items-center justify-center bg-cover bg-center py-8 md:py-16"
+    >
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 md:px-8">
         
         {/* Left Section - Text and Menu */}
         <div className="flex flex-col justify-center items-center md:items-start space-y-4 md:space-y-6 max-w-lg text-center md:text-left">
-          <h1 className="text-3xl md:text-5xl font-century-gothic font-semibold text-primaryCyan mt-0">
+          <h1
+            ref={(el) => (textRef.current[0] = el)}
+            className="text-3xl md:text-5xl font-century-gothic font-semibold text-primaryCyan mt-0"
+          >
             For Everyday Use
           </h1>
-          <p className="text-gray-800 text-sm md:text-lg">
+          <p ref={(el) => (textRef.current[1] = el)} className="text-gray-800 text-sm md:text-lg">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut la.
           </p>
-          <ul className="space-y-2 md:space-y-3 text-xl md:text-2xl">
+          <ul ref={(el) => (textRef.current[2] = el)} className="space-y-2 md:space-y-3 text-xl md:text-2xl">
             <li className="text-gray-800 font-antipasto-pro">Buy / Sell</li>
             <li className="text-gray-800 font-antipasto-pro">Earn</li>
             <li className="text-gray-800 font-antipasto-pro font-bold flex items-center justify-center md:justify-start">
@@ -82,6 +141,7 @@ const EveryDay = () => {
           <div className="relative p-4 md:p-8 w-56 sm:w-72 md:w-[30rem] lg:w-[40rem]">
             {/* Phone Image */}
             <img
+              ref={imageRef}
               src={phoneImage}
               alt="Crypto Exchange App"
               className="w-full h-auto"

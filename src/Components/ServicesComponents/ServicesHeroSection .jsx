@@ -1,6 +1,6 @@
-import mobile1 from "../../assets/Images/ServicesImages/hero_mobile.png";
-import mobile2 from "../../assets/Images/ServicesImages/hero_bg2.png";
-import PrimaryButton from "../../Common/PrimaryButton";
+// import mobile1 from "../../assets/Images/ServicesImages/hero_mobile.png";
+// import mobile2 from "../../assets/Images/ServicesImages/hero_bg2.png";
+// import PrimaryButton from "../../Common/PrimaryButton";
 
 // const ServicesHeroSection = () => {
 //   return (
@@ -61,23 +61,112 @@ import PrimaryButton from "../../Common/PrimaryButton";
 // export default ServicesHeroSection;
 
 
-const ServicesHeroSection  = () => {
+// const ServicesHeroSection  = () => {
+//   return (
+//     <section className="services-hero-bg py-10">
+//       <div id="left_section" className="flex flex-col-reverse lg:flex-row items-center justify-between container mx-auto">
+//         <div className="flex-1 flex flex-col lg:items-start items-center px-10">
+//           <h1 className="text-5xl font-bold text-center lg:text-start leading-tight"><span className="">Best Exchange to Buy,</span> <br /> <span className="text-primaryCyan">Sell and Trade Crypto</span></h1>
+//           <p className="text-xl text-gray-600 text-center lg:text-start mt-4 mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut la.</p>
+//           <PrimaryButton title="Get Started" />
+//         </div>
+//         <div id="right_section" className="flex w-[50rem] flex-1 flex-col relative mb-10">
+//           <img src={mobile1} className="lg:w-[25rem] md:w-[20rem] w-[15rem] translate-y-10 md:translate-y-14 lg:translate-x-12 mx-auto" alt="" />
+//           <img src={mobile2} className="lg:w-[50rem] md:w-[30rem] w-[25rem] mx-auto" alt="" />
+//         </div>
+
+//       </div>
+//     </section>
+//   )
+// }
+
+// export default ServicesHeroSection 
+
+import mobile1 from "../../assets/Images/ServicesImages/hero_mobile.png";
+import mobile2 from "../../assets/Images/ServicesImages/hero_bg2.png";
+import PrimaryButton from "../../Common/PrimaryButton";
+import React, { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+// Register ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
+
+const ServicesHeroSection = () => {
+  const leftSectionRef = useRef(null);
+  const rightSectionRef = useRef(null);
+
+  useEffect(() => {
+    // Animate the left section coming in from the left
+    gsap.fromTo(
+      leftSectionRef.current,
+      { x: -200, opacity: 0 },  // Initial position (left side, hidden)
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1.5,
+        delay:0.2,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: leftSectionRef.current,  // When this element enters the viewport
+          start: 'top 80%',
+          toggleActions: 'play none none none',  // Animation plays once when in view
+        },
+      }
+    );
+
+    // Animate the right section coming in from the right
+    gsap.fromTo(
+      rightSectionRef.current,
+      { x: 200, opacity: 0 },  // Initial position (right side, hidden)
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1.5,
+        delay:0.2,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: rightSectionRef.current,  // When this element enters the viewport
+          start: 'top 80%',
+          toggleActions: 'play none none none',  // Animation plays once when in view
+        },
+      }
+    );
+  }, []);
+
   return (
     <section className="services-hero-bg py-10">
       <div className="flex flex-col-reverse lg:flex-row items-center justify-between container mx-auto">
-        <div className="flex-1 flex flex-col lg:items-start items-center px-10">
-          <h1 className="text-5xl font-bold text-center lg:text-start leading-tight"><span className="">Best Exchange to Buy,</span> <br /> <span className="text-primaryCyan">Sell and Trade Crypto</span></h1>
-          <p className="text-xl text-gray-600 text-center lg:text-start mt-4 mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut la.</p>
-          <PrimaryButton title="Get Started" />
-        </div>
-        <div className="flex w-[50rem] flex-1 flex-col relative mb-10">
-          <img src={mobile1} className="lg:w-[25rem] md:w-[20rem] w-[15rem] translate-y-10 md:translate-y-14 lg:translate-x-12 mx-auto" alt="" />
-          <img src={mobile2} className="lg:w-[50rem] md:w-[30rem] w-[25rem] mx-auto" alt="" />
+        {/* Left Section */}
+        <div ref={leftSectionRef} className="flex-1 flex flex-col lg:items-start items-center px-10">
+          <h1 className="text-5xl font-bold text-center lg:text-start leading-tight">
+            <span>Best Exchange to Buy,</span> <br />
+            <span className="text-primaryCyan">Sell and Trade Crypto</span>
+          </h1>
+          <p className="text-xl text-gray-600 text-center lg:text-start mt-4 mb-5">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut la.
+          </p>
+          <button className="bg-primaryCyan text-white py-3 px-6 rounded-lg font-semibold hover:bg-opacity-80 transition-all">
+            Get Started
+          </button>
         </div>
 
+        {/* Right Section */}
+        <div ref={rightSectionRef} className="flex w-[50rem] flex-1 flex-col relative mb-10">
+          <img
+            src={mobile1}
+            className="lg:w-[25rem] md:w-[20rem] w-[15rem] translate-y-10 md:translate-y-14 lg:translate-x-12 mx-auto"
+            alt="Mobile 1"
+          />
+          <img
+            src={mobile2}
+            className="lg:w-[50rem] md:w-[30rem] w-[25rem] mx-auto"
+            alt="Mobile 2"
+          />
+        </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ServicesHeroSection 
+export default ServicesHeroSection;
