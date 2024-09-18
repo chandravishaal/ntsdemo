@@ -11,23 +11,24 @@ import global from '../../assets/Images/OtcDesk/section2_icon5.png';
 const WhyUs = () => {
   return (
     <div className="container mx-auto px-4 py-12">
-      <div className="flex flex-col md:flex-row items-center justify-between">
-        {/* Phone Image Section */}
-        <div className="w-full md-8 h-[770px]">
-          <img
-            src={phone}
-            className="w:l-1/2"
-          />
-        </div>
+  <div className="flex flex-col md:flex-row items-center justify-between">
+    {/* Phone Image Section */}
+    <div className="w-full md:w-1/2 h-auto md:h-[650px]  md:ml-[-10%]">
+      <img
+        src={phone}
+        className="w-[120%] h-auto max-w-[500px] md:max-w-none"
+      />
+    </div>
 
         {/* Text Section */}
         <div className="w-full md:w-1/2 mt-8 md:mt-0">
-          <h2 className="text-5xl font-semibold jost-uniquifier mb-12">Why Us</h2>
+      <h2 className="text-5xl font-semibold jost-uniquifier mb-12">Why Us</h2>
+      {/* Rest of the content */}
           <div className="space-y-6">
             {/* Feature 1 */}
             <div className="flex items-start space-x-4">
               <img
-                src={secure} // Replace with actual icon path
+                src={secure}
         
                 className="w-24 mb-4"
               />

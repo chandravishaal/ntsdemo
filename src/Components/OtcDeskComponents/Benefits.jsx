@@ -10,7 +10,7 @@ import shadow from '../../assets/Images/OtcDesk/hero_bg2.png';
 
 const Benefits = () => {
   return (
-    <div className="min-h-screen w-full py-10 bg-cyan-50 mb-2">
+    <div className="h-auto w-auto py-10 bg-cyan-50 mb-2">
       {/* Title Section */}
       <div className="text-center mt-8 mb-12 flex flex-col items-center px-4">
         <h2 className="text-2xl md:text-4xl jost-uniquifier font-semibold">Benefits With North Star Metrics OTC</h2>
