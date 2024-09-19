@@ -1,5 +1,5 @@
 import HeroSection from '../Components/BlogComponents/HeroSection';
-import Navbar from '../Components/BlogComponents/Category';
+import Category from '../Components/BlogComponents/Category';
 import InstagramSection from '../Components/BlogComponents/InstagramSection';
 import BlogListSection from '../Components/BlogComponents/BlogListSection';
 import BlogFeatureSection from '../Components/BlogComponents/BlogFeatureSection';
@@ -9,7 +9,7 @@ const Blog = () => {
   return (
     <div className="font-sans bg-gray-100">
       <HeroSection />
-      <Navbar />
+      <Category />
       <InstagramSection />
       <BlogListSection />
       <BlogFeatureSection/>

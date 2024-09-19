@@ -12,32 +12,31 @@ const BlogListSection = () => {
   return (
     <div className="w-full bg-cyan-50 jost-uniquifier py-16 px-4 sm:px-8">
       <div className="container mx-auto">
-        <h1 className="text-3xl sm:text-5xl font-semibold text-center mb-10 sm:mb-14">
+        <h1 className="text-3xl sm:text-5xl font-semibold text-left mb-10 sm:mb-14">
           Our Latest Blogs
         </h1>
 
         <div className="flex flex-col lg:flex-row justify-between">
           {/* Main Blog Left Section */}
-          <div className="w-full lg:w-[700px] lg:pr-8 mb-10 lg:mb-0">
+          <div className="w-full lg:w-[600px] lg:pr-8 mb-10 lg:mb-0">
             <img 
               src={blogMainImg} 
               alt="Main Blog" 
-              className="w-full h-auto rounded-lg -mb-2"
+              className="w-full h-auto rounded-lg mb-[-2%]"
             />
-            <div className="flex items-center text-cyan-600 text-base sm:text-lg -mb-5">
-              <span className="flex items-center -mr-2">
-                <img src={profile} className="w-6 lg:w-24 lg:h-24 -mr-6" />
+            <div className="flex items-center text-cyan-600 text-base sm:text-lg mb-[-4%] ">
+              <span className="flex items-center mr-[-10%]">
+                <img src={profile} className="w-14 h-14 lg:w-24 lg:h-24 -mr-[15%]" />
                 By - Admin
               </span>
-              <span className="flex items-center ml-4">
-                <img src={comments} className="w-6 lg:w-24 lg:h-24 -mr-6" />
+              <span className="flex items-center ml-[2%]">
+                <img src={comments} className="w-14 h-14 lg:w-24 lg:h-24 -mr-6" />
                 0 comments
               </span>
               <h4 className="ml-auto text-black">6 minute read</h4>
             </div>
 
-            {/* Lowered the Amit Chakraborty section */}
-            <div className="flex items-center mt-4 mb-6">
+            <div className="flex items-center mt-[5%] mb-[4%]">
               <img 
                 src={profilePic} 
                 alt="Amit Chakraborty" 
@@ -52,7 +51,7 @@ const BlogListSection = () => {
             <h2 className="text-xl sm:text-2xl font-bold mb-4">
               What is Lorem Ipsum?
             </h2>
-            <p className="text-gray-700 text-sm sm:text-base mb-6">
+            <p className="text-gray-700 text-sm sm:text-base mb-6 text-justify">
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged...
             </p>
             <a href="#readmore" className="text-cyan-600 font-semibold inline-block">
@@ -61,20 +60,20 @@ const BlogListSection = () => {
           </div>
 
           {/* Blog List Right Section */}
-          <div className="w-full lg:w-2/5">
+          <div className="w-full lg:w-[50%] mr-[1%] text-justify">
             {/* Blog Item 1 */}
             <div className="flex items-start mb-8">
               <img 
                 src={blogImg1} 
                 alt="Blog 1" 
-                className="w-24 h-20 sm:w-32 sm:h-24 object-cover rounded-lg mr-4" 
+                className="w-[28%] h-[18%] sm:w-[38%] sm:h-[28%] object-cover rounded-lg mr-4" 
               />
               <div>
-                <h4 className="font-bold text-sm sm:text-lg mb-4">
+                <h4 className="font-bold text-sm sm:text-lg mb-2">
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 </h4>
-                <p className="text-gray-600 text-sm sm:text-base mb-4">
-                  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+                <p className="text-gray-600 text-sm sm:text-base mb-2">
+                  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a gallery.
                 </p>
                 <p className="text-cyan-600 text-sm sm:text-base">
                   Trading | <span className="text-black">4 minute read</span>
@@ -87,14 +86,14 @@ const BlogListSection = () => {
               <img 
                 src={blogImg2} 
                 alt="Blog 2" 
-                className="w-24 h-20 sm:w-32 sm:h-24 object-cover rounded-lg mr-4" 
+                className="w-[28%] h-[18%] sm:w-[38%] sm:h-[28%] object-cover rounded-lg mr-4" 
               />
               <div>
-                <h4 className="font-bold text-sm sm:text-lg mb-4">
+                <h4 className="font-bold text-sm sm:text-lg mb-2">
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 </h4>
                 <p className="text-gray-600 text-sm sm:text-base mb-2">
-                  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a gallery.
                 </p>
                 <p className="text-cyan-600 text-sm sm:text-base">
                   Trading | <span className="text-black">4 minute read</span>
@@ -107,14 +106,14 @@ const BlogListSection = () => {
               <img 
                 src={blogImg3} 
                 alt="Blog 3" 
-                className="w-24 h-20 sm:w-32 sm:h-24 object-cover rounded-lg mr-4" 
+                className="w-[28%] h-[18%] sm:w-[38%] sm:h-[28%]] object-cover rounded-lg mr-4" 
               />
               <div>
-                <h4 className="font-bold text-sm sm:text-lg mb-4">
+                <h4 className="font-bold text-sm sm:text-lg mb-2">
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 </h4>
                 <p className="text-gray-600 text-sm sm:text-base mb-2">
-                  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a gallery.
                 </p>
                 <p className="text-cyan-600 text-sm sm:text-base">
                   Trading | <span className="text-black">4 minute read</span>
@@ -127,14 +126,14 @@ const BlogListSection = () => {
               <img 
                 src={blogImg1} 
                 alt="Blog 4" 
-                className="w-24 h-20 sm:w-32 sm:h-24 object-cover rounded-lg mr-4" 
+                className="w-[28%] h-[18%] sm:w-[38%] sm:h-[28%] object-cover rounded-lg mr-4" 
               />
               <div>
-                <h4 className="font-bold text-sm sm:text-lg mb-4">
+                <h4 className="font-bold text-sm sm:text-lg mb-2">
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 </h4>
                 <p className="text-gray-600 text-sm sm:text-base mb-2">
-                  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a gallery.
                 </p>
                 <p className="text-cyan-600 text-sm sm:text-base">
                   Trading | <span className="text-black">4 minute read</span>

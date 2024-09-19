@@ -6,13 +6,13 @@ import right from '../../assets/Images/Blog/instaright.png';
 const InstagramSection = () => {
   return (
     <div
-      className="relative py-12 w-full h-[800px] bg-cover bg-center" 
+      className="relative py-[-12%] w-full h-[700px] bg-cover bg-center" 
       style={{ backgroundImage: `url(${backgroundImg})` }} 
     >
       <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between px-4">
         
         {/* Left Section */}
-        <div className="w-full lg:w-1/2 mt-10 lg:mt-28 p-4 text-center lg:text-left">
+        <div className="w-full lg:w-1/2 mt-10 lg:mt-[22%] p-4 text-center lg:text-left">
           <div className="relative">
             <h1 className="text-3xl lg:text-6xl font-semibold text-black relative z-10">
               Latest on Our Instagram
@@ -27,7 +27,7 @@ const InstagramSection = () => {
         </div>
 
         {/* Right Section with Instagram-like posts */}
-        <div className="w-full lg:w-auto mt-10 lg:mt-14">
+        <div className="w-full lg:w-auto mt-[25%] lg:mt-[7%]">
           <img
             src={right}
             className="w-full lg:w-[900px] h-auto max-w-full"
