@@ -1,57 +1,13 @@
-// import React from 'react'
-// import phoneImage from "../../assets/Images/phone.png";
-
-
-// const EveryDay = () =>  {
-//     return (
-//                 <section className="Everyday-bg w-full flex items-center justify-center bg-cover bg-center ">
-
-//        
-//         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between  ">
-          
-//           {/* Left Section - Text and Menu */}
-//           <div className="flex flex-col justify-center items-start space-y-6 max-w-lg">
-//             <h1 className="text-5xl font-century-gothic font-semibold text-primaryCyan mt-0 ">For Everyday Use</h1>
-//             <p className="text-gray-800">
-//               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-//               eiusmod tempor incididunt ut la.
-//             </p>
-//             <ul className="space-y-3 text-2xl">
-//               <li className="text-gray-800 font-antipasto-pro">Buy / Sell</li>
-//               <li className="text-gray-800 font-antipasto-pro">Earn</li>
-//               <li className="text-gray-800 font-antipasto-pro font-bold flex items-center">
-//                 Payment Method <span className="ml-2 font-bold ">→</span>
-//               </li>
-//               <li className="text-gray-800 font-antipasto-pro ">Academy</li>
-//               <li className="text-gray-800 font-antipasto-pro ">Converter</li>
-//               <li className="text-gray-800 font-century-gothic">Wallet</li>
-//             </ul>
-//           </div>
-  
-//           {/* Right Section - Phone Image and Icons */}
-//           <div className="relative mt-8 md:mt-0 md:ml-12 flex justify-center items-center">
-//             <div className="relative p-8">
-//               {/* Phone Image */}
-//               <img
-//               src={phoneImage}
-//               alt="Crypto Exchange App"
-//               className=""
-//             />
-
-          
-//             </div>
-//           </div>
-//         </div>
-//       </section>
-//     );
-//   };
-
-// export default EveryDay
-
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import phoneImage from "../../assets/Images/phone.png";
+import phoneImage from "../../assets/Images/ServicesImages/service_mbl.png"; // Default image
+import imageBuySell from "../../assets/Images/ServicesImages/testSlider/img1.avif"; // Add related images
+import imageEarn from "../../assets/Images/ServicesImages/testSlider/img2.avif";
+import imagePaymentMethod from "../../assets/Images/ServicesImages/testSlider/img3.avif";
+import imageAcademy from "../../assets/Images/ServicesImages/testSlider/img4.avif";
+import imageConverter from "../../assets/Images/ServicesImages/testSlider/img5.avif";
+import imageWallet from "../../assets/Images/ServicesImages/testSlider/img6.avif";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -60,37 +16,22 @@ const EveryDay = () => {
   const textRef = useRef([]);
   const imageRef = useRef(null);
 
+  // State to track the current image
+  const [currentImage, setCurrentImage] = useState();
+
+  // GSAP animation for text and image
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Animate text elements with a stagger effect
       gsap.fromTo(
         textRef.current,
-        { opacity: 0, y: 150 }, // Starting position
-        {
-          opacity: 1,
-          y: 0, // Final position
-          duration: 1,
-          delay:1,
-          stagger: 0.2,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top 80%", // Animation starts when 80% of the section is visible
-            toggleActions: "play none none reset", // Replay animation when it re-enters the viewport
-            once: false, // Allow replay
-          },
-        }
-      );
-
-      // Animate the image
-      gsap.fromTo(
-        imageRef.current,
-        { opacity: 0, y: 80 },
+        { opacity: 0, y: 150 },
         {
           opacity: 1,
           y: 0,
           duration: 1,
-          delay:0.3,
+          delay: 1,
+          stagger: 0.2,
           ease: "power3.out",
           scrollTrigger: {
             trigger: sectionRef.current,
@@ -102,8 +43,21 @@ const EveryDay = () => {
       );
     }, sectionRef);
 
-    return () => ctx.revert(); // Cleanup on component unmount
+    return () => ctx.revert();
   }, []);
+
+  // GSAP animation for the image when it changes
+  useEffect(() => {
+    gsap.fromTo(
+      imageRef.current,
+      { opacity: 0, y: 40 }, 
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.6,
+      }
+    );
+  }, [currentImage]);
 
   return (
     <section
@@ -111,7 +65,6 @@ const EveryDay = () => {
       className="Everyday-bg w-full flex items-center justify-center bg-cover bg-center py-8 md:py-16"
     >
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 md:px-8">
-        
         {/* Left Section - Text and Menu */}
         <div className="flex flex-col justify-center items-center md:items-start space-y-4 md:space-y-6 max-w-lg text-center md:text-left">
           <h1
@@ -120,31 +73,73 @@ const EveryDay = () => {
           >
             For Everyday Use
           </h1>
-          <p ref={(el) => (textRef.current[1] = el)} className="text-gray-800 text-sm md:text-lg">
+          <p
+            ref={(el) => (textRef.current[1] = el)}
+            className="text-gray-800 text-sm md:text-lg"
+          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut la.
           </p>
-          <ul ref={(el) => (textRef.current[2] = el)} className="space-y-2 md:space-y-3 text-xl md:text-2xl">
-            <li className="text-gray-800 font-antipasto-pro">Buy / Sell</li>
-            <li className="text-gray-800 font-antipasto-pro">Earn</li>
-            <li className="text-gray-800 font-antipasto-pro font-bold flex items-center justify-center md:justify-start">
-              Payment Method <span className="ml-2 font-bold">→</span>
+          <ul
+            ref={(el) => (textRef.current[2] = el)}
+            className="space-y-2 md:space-y-3 text-xl md:text-2xl"
+          >
+            <li
+              className="text-gray-800 font-antipasto-pro cursor-pointer transition-transform transform hover:scale-125 hover:font-bold  duration-500 ease-in-out"
+              onMouseEnter={() => setCurrentImage(imageEarn)}
+            >
+              Buy / Sell
             </li>
-            <li className="text-gray-800 font-antipasto-pro">Academy</li>
-            <li className="text-gray-800 font-antipasto-pro">Converter</li>
-            <li className="text-gray-800 font-century-gothic">Wallet</li>
+            <li
+              className="text-gray-800 font-antipasto-pro cursor-pointer transition-transform transform hover:scale-125 hover:font-bold  duration-500 ease-in-out"
+              onMouseEnter={() => setCurrentImage(imagePaymentMethod)}
+            >
+              Earn
+            </li>
+            <li
+              className="text-gray-800 font-antipasto-pro cursor-pointer transition-transform transform hover:scale-125 hover:font-bold  duration-500 ease-in-out"
+              onMouseEnter={() => setCurrentImage(imageAcademy)}
+            >
+              Payment Method
+            </li>
+            <li
+              className="text-gray-800 font-antipasto-pro cursor-pointer transition-transform transform hover:scale-125 hover:font-bold  duration-500 ease-in-out"
+              onMouseEnter={() => setCurrentImage(imageConverter)}
+            >
+              Academy
+            </li>
+            <li
+              className="text-gray-800 font-century-gothic cursor-pointer transition-transform transform hover:scale-125 hover:font-bold  duration-500 ease-in-out"
+              onMouseEnter={() => setCurrentImage(imageWallet)}
+            >
+              Converter
+            </li>
+
+            <li
+              className="text-gray-800 font-antipasto-pro cursor-pointer transition-transform transform hover:scale-125 hover:font-bold duration-500 ease-in-out"
+              onMouseEnter={() => setCurrentImage(imageBuySell)}
+            >
+              Wallet
+            </li>
           </ul>
         </div>
 
         {/* Right Section - Phone Image */}
         <div className="relative mt-8 md:mt-0 flex justify-center items-center">
-          <div className="relative p-4 md:p-8 w-56 sm:w-72 md:w-[30rem] lg:w-[40rem]">
+          <div className="relative p-4 md:p-8 w-56 sm:w-72 md:w-[30rem] lg:w-[30rem]">
             {/* Phone Image */}
             <img
-              ref={imageRef}
               src={phoneImage}
+              alt="Phone Frame"
+              className="w-full h-auto" 
+            />
+
+            {/* Absolute Image (currentImage) */}
+            <img
+              ref={imageRef}
+              src={currentImage} 
               alt="Crypto Exchange App"
-              className="w-full h-auto"
+              className="absolute w-[50%] h-auto top-[22%] left-1/2 transform -translate-x-1/2 transition-opacity duration-300 ease-in-out"
             />
           </div>
         </div>
