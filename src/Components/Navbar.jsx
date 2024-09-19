@@ -6,10 +6,10 @@ import { MdCancel } from "react-icons/md";
 
 const Navbar = () => {
   const navItems = useRef(null);
-  const mobileMenuItems = useRef(null);  // Ref for mobile menu items
+  const mobileMenuItems = useRef(null); // Ref for mobile menu items
   const [isSticky, setIsSticky] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(null); // Track which dropdown is open
+  const [openDropdown, setOpenDropdown] = useState(null); // Track which dropdown is open
   const dropdownRef = useRef(null); // Ref for dropdown
 
   useEffect(() => {
@@ -47,7 +47,7 @@ const Navbar = () => {
 
   useEffect(() => {
     if (dropdownRef.current) {
-      if (dropdownOpen) {
+      if (openDropdown) {
         gsap.fromTo(dropdownRef.current,
           { opacity: 0, y: 10 },
           { opacity: 1, y: 0, duration: 0.3, ease: 'power1.out' }
@@ -58,15 +58,15 @@ const Navbar = () => {
         );
       }
     }
-  }, [dropdownOpen]);
+  }, [openDropdown]);
 
-  const Dropdown = ({ items }) => {
+  const Dropdown = ({ items, dropdownKey }) => {
     return (
       <ul
         ref={dropdownRef}
         className="absolute top-4 w-[150px] bg-white shadow-lg rounded mt-2 p-2 z-40"
-        onMouseEnter={() => setDropdownOpen(children)}
-        onMouseLeave={() => setDropdownOpen(null)}
+        onMouseEnter={() => setOpenDropdown(dropdownKey)}
+        onMouseLeave={() => setOpenDropdown(null)}
       >
         {items.map((item, index) => (
           <li key={index} className="text-black transition-colors p-2">
@@ -78,16 +78,25 @@ const Navbar = () => {
   };
 
   const NavLink = ({ to, children, onClick, dropdownItems }) => {
+    const dropdownKey = children; // Use the link text as the key for dropdown
+
     return (
       <li
         className="relative hover:text-primary transition-colors font-semibold duration-200"
         onClick={onClick}
-        onMouseEnter={() => dropdownItems && setDropdownOpen(children)}
-        onMouseLeave={() => dropdownItems && setDropdownOpen(null)}
+        onMouseEnter={() => dropdownItems && setOpenDropdown(dropdownKey)}
+        onMouseLeave={() => {
+          // Delay to handle cases where mouse moves between the link and dropdown
+          setTimeout(() => {
+            if (openDropdown === dropdownKey) {
+              setOpenDropdown(null);
+            }
+          }, 200); // Adjust delay as needed
+        }}
       >
         <Link to={to}>{children}</Link>
-        {dropdownOpen === children && dropdownItems && (
-          <Dropdown items={dropdownItems} />
+        {openDropdown === dropdownKey && dropdownItems && (
+          <Dropdown items={dropdownItems} dropdownKey={dropdownKey} />
         )}
       </li>
     );
