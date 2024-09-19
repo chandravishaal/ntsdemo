@@ -1,110 +1,262 @@
 // import BlogPost from './BlogPost';
+// import 'remixicon/fonts/remixicon.css';
+// import blog1 from '../../assets/Images/blog_1.png';
+// import blog2 from '../../assets/Images/blog_2.png';
+// import blog3 from '../../assets/Images/blog_3.png';
+
+// const BlogPost = ({ image, date, author, comments, content, isCenter }) => {
+//   return (
+// <div
+//   className={`relative rounded-lg w-full p-5 pb-12 transition duration-300 lg:transform lg:hover:scale-105 hover:z-30 cursor-pointer border-2 border-primaryCyan group ${
+//     isCenter ? 'bg-primaryCyan' : 'bg-white hover:bg-primaryCyan'
+//   }`}
+// >
+//   <div className="relative">
+//     <img
+//       src={image}
+//       alt="Blog"
+//       className="w-full h-full object-cover rounded-t-lg select-none"
+//     />
+//     <div
+//       className={`mt-4 absolute right-4 -bottom-3 transition duration-300 p-5 rounded-xl font-eras-bold ${
+//         isCenter
+//           ? 'bg-white text-black'
+//           : 'bg-cyan-400 text-white group-hover:bg-white group-hover:text-black'
+//       }`}
+//     >
+//       {date}
+//     </div>
+//   </div>
+
+//   <div
+//     className={`mt-10 flex justify-start items-end gap-4 text-lg transition duration-300 ${
+//       isCenter ? 'text-white' : 'text-black group-hover:text-white'
+//     }`}
+//   >
+//     <i
+//       className={`ri-user-settings-fill text-2xl ${
+//         isCenter ? 'text-white' : 'text-cyan-300 group-hover:text-white'
+//       }`}
+//     ></i>
+//     <span>By - {author}</span>
+//     <i
+//       className={`ri-chat-search-line text-2xl ${
+//         isCenter ? 'text-white' : 'text-cyan-300 group-hover:text-white'
+//       }`}
+//     ></i>
+//     <span>{comments} comments</span>
+//   </div>
+
+//   <div
+//     className={`mt-10 font-century-gothic transition duration-300 ${
+//       isCenter ? 'text-white' : 'text-black group-hover:text-white'
+//     }`}
+//   >
+//     <p>{content}</p>
+//   </div>
+// </div>
+
+//   );
+// };
+
+
+
+// const Blog = () => {
+//   return (
+//     <section className='bg-[#F5F8FF]'>
+//     <div
+//       id="main"
+//       className="w-full bg-[#F5F8FF]  container mx-auto mt-11 flex flex-col items-center py-20 pb-32 space-y-5"
+//     >
+//       {/* Headings */}
+//       <div id="heading" className="flex flex-col items-center gap-4 mb-10 px-5 text-center">
+//         <h1 className="text-black font-medium text-5xl font-century-gothic mb-2">
+//           Our Latest Blog
+//         </h1>
+//         <h2 className="text-black text-2xl font-century-gothic font-normal">
+//           Lorem Ipsum is simply dummy text of the printing and typesetting
+//           industry.
+//         </h2>
+//       </div>
+//       <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-5 px-5">
+//         <BlogPost
+//           image={blog1}
+//           date="JULY 29, 2020"
+//           author="Admin"
+//           comments="0"
+//           content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea excepturi ut modi officiis quibusdam ad asperiores quasi architecto magni debitis nostrum quisquam, fugit dolor assumenda totam consequuntur corporis error delectus!"
+//           isCenter={false}
+//         />
+//         <BlogPost
+//           image={blog2}
+//           date="JULY 29, 2020"
+//           author="Admin"
+//           comments="0"
+//           content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea excepturi ut modi officiis quibusdam ad asperiores quasi architecto magni debitis nostrum quisquam, fugit dolor assumenda totam consequuntur corporis error delectus!"
+//           isCenter={false}
+//         />
+//         <BlogPost
+//           image={blog3}
+//           date="JULY 29, 2020"
+//           author="Admin"
+//           comments="0"
+//           content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea excepturi ut modi officiis quibusdam ad asperiores quasi architecto magni debitis nostrum quisquam, fugit dolor assumenda totam consequuntur corporis error delectus!"
+//           isCenter={false}
+//         />
+//       </div>
+//     </div>
+//     </section>
+//   );
+// };
+
+// export default Blog;
+
+
+import { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import 'remixicon/fonts/remixicon.css';
 import blog1 from '../../assets/Images/blog_1.png';
 import blog2 from '../../assets/Images/blog_2.png';
 import blog3 from '../../assets/Images/blog_3.png';
 
+gsap.registerPlugin(ScrollTrigger);
+
 const BlogPost = ({ image, date, author, comments, content, isCenter }) => {
   return (
-<div
-  className={`relative rounded-lg w-full p-5 pb-12 transition duration-300 lg:transform lg:hover:scale-105 hover:z-30 cursor-pointer border-2 border-primaryCyan group ${
-    isCenter ? 'bg-primaryCyan' : 'bg-white hover:bg-primaryCyan'
-  }`}
->
-  <div className="relative">
-    <img
-      src={image}
-      alt="Blog"
-      className="w-full h-full object-cover rounded-t-lg select-none"
-    />
     <div
-      className={`mt-4 absolute right-4 -bottom-3 transition duration-300 p-5 rounded-xl font-eras-bold ${
-        isCenter
-          ? 'bg-white text-black'
-          : 'bg-cyan-400 text-white group-hover:bg-white group-hover:text-black'
+      className={`relative rounded-lg w-full p-5 pb-12 transition duration-300 lg:transform lg:hover:scale-105 hover:z-30 cursor-pointer border-2 border-primaryCyan group ${
+        isCenter ? 'bg-primaryCyan' : 'bg-white hover:bg-primaryCyan'
       }`}
     >
-      {date}
+      <div className="relative">
+        <img
+          src={image}
+          alt="Blog"
+          className="w-full h-full object-cover rounded-t-lg select-none"
+        />
+        <div
+          className={`mt-4 absolute right-4 -bottom-3 transition duration-300 p-5 rounded-xl font-eras-bold ${
+            isCenter
+              ? 'bg-white text-black'
+              : 'bg-cyan-400 text-white group-hover:bg-white group-hover:text-black'
+          }`}
+        >
+          {date}
+        </div>
+      </div>
+
+      <div
+        className={`mt-10 flex justify-start items-end gap-4 text-lg transition duration-300 ${
+          isCenter ? 'text-white' : 'text-black group-hover:text-white'
+        }`}
+      >
+        <i
+          className={`ri-user-settings-fill text-2xl ${
+            isCenter ? 'text-white' : 'text-cyan-300 group-hover:text-white'
+          }`}
+        ></i>
+        <span>By - {author}</span>
+        <i
+          className={`ri-chat-search-line text-2xl ${
+            isCenter ? 'text-white' : 'text-cyan-300 group-hover:text-white'
+          }`}
+        ></i>
+        <span>{comments} comments</span>
+      </div>
+
+      <div
+        className={`mt-10 font-century-gothic transition duration-300 ${
+          isCenter ? 'text-white' : 'text-black group-hover:text-white'
+        }`}
+      >
+        <p>{content}</p>
+      </div>
     </div>
-  </div>
-
-  <div
-    className={`mt-10 flex justify-start items-end gap-4 text-lg transition duration-300 ${
-      isCenter ? 'text-white' : 'text-black group-hover:text-white'
-    }`}
-  >
-    <i
-      className={`ri-user-settings-fill text-2xl ${
-        isCenter ? 'text-white' : 'text-cyan-300 group-hover:text-white'
-      }`}
-    ></i>
-    <span>By - {author}</span>
-    <i
-      className={`ri-chat-search-line text-2xl ${
-        isCenter ? 'text-white' : 'text-cyan-300 group-hover:text-white'
-      }`}
-    ></i>
-    <span>{comments} comments</span>
-  </div>
-
-  <div
-    className={`mt-10 font-century-gothic transition duration-300 ${
-      isCenter ? 'text-white' : 'text-black group-hover:text-white'
-    }`}
-  >
-    <p>{content}</p>
-  </div>
-</div>
-
   );
 };
 
-
-
 const Blog = () => {
+  const blogRef = useRef(null); // Ref for the blog container
+
+  useEffect(() => {
+    const blogPosts = blogRef.current?.querySelectorAll('.blog-post');
+
+    if (blogPosts) {
+      gsap.fromTo(
+        blogPosts,
+        {
+          opacity: 0,
+          y: 100, // Start from below
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          delay:0.3,
+          stagger: 0.4,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: blogRef.current, // Trigger when the blog section is in view
+            start: 'top 85%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    }
+  }, []);
+
   return (
-    <section className='bg-[#F5F8FF]'>
-    <div
-      id="main"
-      className="w-full bg-[#F5F8FF]  container mx-auto mt-11 flex flex-col items-center py-20 pb-32 space-y-5"
-    >
-      {/* Headings */}
-      <div id="heading" className="flex flex-col items-center gap-4 mb-10 px-5 text-center">
-        <h1 className="text-black font-medium text-5xl font-century-gothic mb-2">
-          Our Latest Blog
-        </h1>
-        <h2 className="text-black text-2xl font-century-gothic font-normal">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry.
-        </h2>
+    <section className="bg-[#F5F8FF]">
+      <div
+        id="main"
+        className="w-full bg-[#F5F8FF] container mx-auto mt-11 flex flex-col items-center py-20 pb-32 space-y-5"
+        ref={blogRef} // Set ref to the container
+      >
+        {/* Headings */}
+        <div id="heading" className="flex flex-col items-center gap-4 mb-10 px-5 text-center">
+          <h1 className="text-black font-medium text-5xl font-century-gothic mb-2">
+            Our Latest Blog
+          </h1>
+          <h2 className="text-black text-2xl font-century-gothic font-normal">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          </h2>
+        </div>
+
+        {/* Blog Posts */}
+        <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-5 px-5">
+          <div className="blog-post">
+            <BlogPost
+              image={blog1}
+              date="JULY 29, 2020"
+              author="Admin"
+              comments="0"
+              content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea excepturi ut modi officiis quibusdam ad asperiores quasi architecto magni debitis nostrum quisquam, fugit dolor assumenda totam consequuntur corporis error delectus!"
+              isCenter={false}
+            />
+          </div>
+          <div className="blog-post">
+            <BlogPost
+              image={blog2}
+              date="JULY 29, 2020"
+              author="Admin"
+              comments="0"
+              content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea excepturi ut modi officiis quibusdam ad asperiores quasi architecto magni debitis nostrum quisquam, fugit dolor assumenda totam consequuntur corporis error delectus!"
+              isCenter={false}
+            />
+          </div>
+          <div className="blog-post">
+            <BlogPost
+              image={blog3}
+              date="JULY 29, 2020"
+              author="Admin"
+              comments="0"
+              content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea excepturi ut modi officiis quibusdam ad asperiores quasi architecto magni debitis nostrum quisquam, fugit dolor assumenda totam consequuntur corporis error delectus!"
+              isCenter={false}
+            />
+          </div>
+        </div>
       </div>
-      <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-5 px-5">
-        <BlogPost
-          image={blog1}
-          date="JULY 29, 2020"
-          author="Admin"
-          comments="0"
-          content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea excepturi ut modi officiis quibusdam ad asperiores quasi architecto magni debitis nostrum quisquam, fugit dolor assumenda totam consequuntur corporis error delectus!"
-          isCenter={false}
-        />
-        <BlogPost
-          image={blog2}
-          date="JULY 29, 2020"
-          author="Admin"
-          comments="0"
-          content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea excepturi ut modi officiis quibusdam ad asperiores quasi architecto magni debitis nostrum quisquam, fugit dolor assumenda totam consequuntur corporis error delectus!"
-          isCenter={false}
-        />
-        <BlogPost
-          image={blog3}
-          date="JULY 29, 2020"
-          author="Admin"
-          comments="0"
-          content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea excepturi ut modi officiis quibusdam ad asperiores quasi architecto magni debitis nostrum quisquam, fugit dolor assumenda totam consequuntur corporis error delectus!"
-          isCenter={false}
-        />
-      </div>
-    </div>
     </section>
   );
 };

@@ -45,6 +45,7 @@ const Testimonial = () => {
       scrollTrigger: {
         trigger: "#testpage",
         start: "top 80%",
+        toggleActions: 'play none none reverse',
       }
     });
   }, []);
