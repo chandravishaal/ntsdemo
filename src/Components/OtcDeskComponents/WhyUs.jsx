@@ -171,7 +171,7 @@ const WhyUs = () => {
 
         {/* Text Section */}
         <div className="w-full md:w-1/2 mt-8 md:mt-0">
-          <h2 className="text-5xl font-semibold jost-uniquifier mb-12">Why Us</h2>
+          <h2 className="text-5xl font-semibold jost-uniquifier mb-12 font-montserrat">Why Us</h2>
 
           {/* Feature List */}
           <div className="space-y-6">
@@ -182,8 +182,8 @@ const WhyUs = () => {
                 className="w-24 mb-4"
               />
               <div>
-                <h3 className="text-xl font-semibold jost-uniquifier mb-2">Cutting-Edge Security</h3>
-                <p className="text-gray-600">
+                <h3 className="text-xl font-semibold jost-uniquifier mb-2 font-century-gothic">Cutting-Edge Security</h3>
+                <p className="text-gray-600 font-century-gothic">
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 </p>
               </div>
@@ -197,8 +197,8 @@ const WhyUs = () => {
                 className="w-24 mb-4"
               />
               <div>
-                <h3 className="text-xl font-semibold jost-uniquifier mb-2">User-Friendly Platform</h3>
-                <p className="text-gray-600">
+                <h3 className="text-xl font-semibold jost-uniquifier mb-2 font-century-gothic">User-Friendly Platform</h3>
+                <p className="text-gray-600 font-century-gothic">
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 </p>
               </div>
@@ -212,8 +212,8 @@ const WhyUs = () => {
                 className="w-24 mb-4"
               />
               <div>
-                <h3 className="text-xl font-semibold jost-uniquifier mb-2">Competitive Fees</h3>
-                <p className="text-gray-600">
+                <h3 className="text-xl font-semibold jost-uniquifier mb-2 font-century-gothic">Competitive Fees</h3>
+                <p className="text-gray-600 font-century-gothic">
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 </p>
               </div>
@@ -227,8 +227,8 @@ const WhyUs = () => {
                 className="w-24 mb-4"
               />
               <div>
-                <h3 className="text-xl font-semibold jost-uniquifier mb-2">Comprehensive Support</h3>
-                <p className="text-gray-600">
+                <h3 className="text-xl font-semibold jost-uniquifier mb-2 font-century-gothic">Comprehensive Support</h3>
+                <p className="text-gray-600 font-century-gothic">
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 </p>
               </div>
@@ -242,8 +242,8 @@ const WhyUs = () => {
                 className="w-24 mb-4"
               />
               <div>
-                <h3 className="text-xl font-semibold jost-uniquifier mb-2">Local Expertise with Global Reach</h3>
-                <p className="text-gray-600">
+                <h3 className="text-xl font-semibold jost-uniquifier mb-2 font-century-gothic">Local Expertise with Global Reach</h3>
+                <p className="text-gray-600 font-century-gothic">
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 </p>
               </div>

@@ -62,10 +62,10 @@ const Started = () => {
     <section ref={sectionRef} className='bg-primaryCyan w-full py-10'>
       <div className="w-full container mx-auto flex lg:flex-row flex-col-reverse justify-between items-center lg:my-40 my-20">
         <div className="text-white text-center lg:text-left w-full mt-20">
-          <h1 className="text-4xl md:text-4xl font-bold mb-4 font-century-gothic">
+          <h1 className="text-4xl md:text-4xl font-bold mb-4 font-montserrat">
             Get started in a few <br /> minutes
           </h1>
-          <h2 className="text-lg md:text-xl mb-6 text-black font-antipasto-pro">
+          <h2 className="text-lg md:text-xl mb-6 font-semibold text-black font-century-gothic">
             Create an account, link your bank account,
             <br />
             and start buying & selling.
@@ -78,31 +78,31 @@ const Started = () => {
             <img src="https://ntsmetrics.com/img/nsm-logo-blue.png" className='lg:w-3/6 w-[100px]' alt="" />
             <div className='absolute bg-white p-2 lg:w-[180px] lg:h-[180px] w-[130px] h-[130px] lg:-left-24 -left-14  rounded-full shadow-2xl flex flex-col items-center justify-center gap-3 animate-countup'>
               <img src={icon11} className='w-12 lg:w-16' alt="" />
-              <p className="text-lg font-century-gothic font-bold text-primaryCyan">
+              <p className="text-lg font-century-gothic font-bold text-black">
                 {isVisible && <CountUp end={10523684} duration={5} />}
               </p>
             </div>
             <div className='absolute bg-white p-5 lg:w-[180px] lg:h-[180px] w-[130px] h-[130px] -top-16 lg:-top-20  rounded-full shadow-2xl flex flex-col items-center justify-center gap-3 animate-countup'>
               <img src={icon9} className='w-12 lg:w-16' alt="" />
-              <p className="text-lg font-century-gothic font-bold text-primaryCyan">
+              <p className="text-lg font-century-gothic font-bold text-black">
                 {isVisible && <CountUp end={73554} duration={5} />}
               </p>
             </div>
             <div className='absolute bg-white p-5 lg:w-[180px] lg:h-[180px] w-[130px] h-[130px] lg:-right-24 -right-14  rounded-full shadow-2xl flex flex-col items-center justify-center gap-3 animate-countup'>
               <img src={icon10} className='w-12 lg:w-16' alt="" />
-              <p className="text-lg font-century-gothic font-bold text-primaryCyan">
+              <p className="text-lg font-century-gothic font-bold text-black">
                 {isVisible && <CountUp end={73554} duration={5} />}
               </p>
             </div>
           </div>
 
-          <h1 className='absolute text-white text-xl font-bold lg:-left-32 lg:top-72 md:top-56 md:-left-36 -left-12 top-52 md:whitespace-nowrap text-center'>
+          <h1 className='absolute text-black text-xl font-bold lg:-left-32 lg:top-72 md:top-56 md:-left-36 -left-12 top-52 md:whitespace-nowrap text-center font-century-gothic'>
             Total <br className='md:hidden block' /> Transactions
           </h1>
-          <h1 className='absolute text-white text-xl font-bold lg:left-72 md:top-0 md:left-56 -top-24 left-7 md:whitespace-nowrap text-center'>
+          <h1 className='absolute text-black text-xl font-bold lg:left-72 md:top-0 md:left-56 -top-24 left-7 md:whitespace-nowrap text-center font-century-gothic'>
             Today&apos;s Transactions
           </h1>
-          <h1 className='absolute text-white text-xl font-bold lg:left-80 lg:top-72 md:top-56 md:left-56 -right-16 top-52 md:whitespace-nowrap text-center'>
+          <h1 className='absolute text-black text-xl font-bold lg:left-80 lg:top-72 md:top-56 md:left-56 -right-16 top-52 md:whitespace-nowrap text-center font-century-gothic'>
             Monthly <br className='md:hidden block' /> Transactions
           </h1>
 

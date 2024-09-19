@@ -109,7 +109,7 @@ const Beneficial = () => {
         >
             <div className="flex flex-col-reverse md:flex-row items-center justify-between container mx-auto md:gap-10 lg:gap-20 relative">
                 {/* Left Section with Dropdowns */}
-                < div className="w-full md:w-1/2 flex flex-col items-start md:mt-5" >
+                < div  ref={leftSectionRef} className="w-full md:w-1/2 flex flex-col items-start md:mt-5" >
                     <h2 className="text-4xl font-semibold raleway-hero text-gray-800 mb-8 font-montserrat ">How is this beneficial for you?</h2>
                     {
                         ['Secure Transactions', 'User-Friendly Experience', 'Diverse Crypto Options', 'Instant Access', 'Expert Assistance'].map((title, index) => (
@@ -142,7 +142,7 @@ const Beneficial = () => {
                 </div>
 
                 {/* Right Section with Image */}
-                < div className="w-full md:w-1/2 flex justify-center items-center mb-8 md:mb-0" >
+                < div  ref={rightSectionRef} className="w-full md:w-1/2 flex justify-center items-center mb-8 md:mb-0" >
                     <img src={TeamImage} alt="A team of professionals working together in a modern office environment" className="object-contain h-60 md:h-full w-full md:w-[30rem] lg:w-full" />
                 </div >
             </div >

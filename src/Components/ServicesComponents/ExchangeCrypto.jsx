@@ -66,7 +66,7 @@ const ExchangeCrypto = () => {
               </p>
             </div>
             <div className="w-10 h-8 md:w-32 md:h-14 flex-[0.1]">
-              <img src={icon1} alt="Cryptocurrency exchange services icon" className="w-full h-full -rotate-90" />
+              <img src={icon1} alt="Cryptocurrency exchange services icon" className="w-full h-full " />
               <img src={plate} alt="Background design element" className="" />
             </div>
           </div>

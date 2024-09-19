@@ -14,13 +14,13 @@ const InstagramSection = () => {
         {/* Left Section */}
         <div className="w-full lg:w-1/2 mt-10 lg:mt-[22%] p-4 text-center lg:text-left">
           <div className="relative">
-            <h1 className="text-3xl lg:text-6xl font-semibold text-black relative z-10">
+            <h1 className="text-3xl lg:text-6xl font-bold text-black relative z-10 font-montserrat">
               Latest on Our Instagram
             </h1>
-            <p className="text-gray-600 mt-8 text-base lg:text-xl relative z-10 lg:w-[500px]">
+            <p className="text-gray-600 mt-5 text-base lg:text-xl relative z-10 lg:w-[500px] font-century-gothic">
               Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </p>
-            <button className="mt-8 bg-cyan-500 text-white py-2 px-8 rounded relative z-10">
+            <button className="mt-5 bg-cyan-500 text-white py-2 px-8 rounded relative z-10 font-century-gothic">
               More
             </button>
           </div>

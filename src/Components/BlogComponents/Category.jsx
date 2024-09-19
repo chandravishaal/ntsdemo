@@ -24,7 +24,7 @@ const CategoryList = ({ title, items }) => {
               alt={item.altText}
               className="w-6 h-6 mr-2"
             />
-            <button>{item.description}</button>
+            <button className='font-century-gothic'>{item.description}</button>
           </li>
         ))}
       </ul>
@@ -66,7 +66,7 @@ const Blog = () => {
   return (
     <div className="py-12 -mt-5" style={{ backgroundColor: "#e0ffff" }}>
       <div className="container mx-auto bg-white p-8 rounded-lg jost-uniquifier relative">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-36 relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-36 relative font-century-gothic">
           {/* Vertical lines */}
           <div className="hidden lg:block absolute left-[33%] top-0 h-full w-0.5 bg-gray-300 opacity-80 -translate-x-16"></div>
           <div className="hidden lg:block absolute left-[66%] top-0 h-full w-0.5 bg-gray-300 opacity-80"></div>

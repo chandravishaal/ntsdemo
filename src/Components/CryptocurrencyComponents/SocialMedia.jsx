@@ -226,7 +226,7 @@ const InfoTooltip = ({ text }) => (
 
 const SocialMediaOverview = () => {
   return (
-    <div className="bg-cyan-50 w-full mb-20">
+    <div className="bg-[#90e1f4] w-full mb-20">
       {/* Header */}
       <div className="text-center mb-10 w-full border border-b-black border-t-black py-6">
         <h1 className="text-3xl md:text-4xl font-bold font-montserrat text-gray-800">
@@ -346,7 +346,7 @@ const SocialMediaOverview = () => {
 
           {/* Sentiment Bar */}
           <div className="flex items-center justify-center md:pt-8  pt-0 md:mb-0 mb-6 md:px-5 px-10">
-            <div className="bg-teal-400 h-5 w-2/3 rounded-l-2xl"></div>
+            <div className="bg-cyan-500 h-5 w-2/3 rounded-l-2xl"></div>
             <div className="bg-gray-300 h-5 w-1/3 border border-gray-300"></div>
             <div className="bg-black h-5 w-1/12 rounded-r-2xl border border-black"></div>
           </div>

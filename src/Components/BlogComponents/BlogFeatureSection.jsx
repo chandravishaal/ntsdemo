@@ -12,13 +12,13 @@ const BlogFeatureSection = () => {
 
         {/* Left Side Section */}
         <div className="w-full lg:w-[45%] lg:pr-[3%] mt-12 lg:mt-24 ml-[5%]">
-          <h1 className="text-3xl xl:text-4xl font-semibold mb-6 text-gray-800">
+          <h1 className="text-3xl xl:text-4xl font-semibold mb-6 text-gray-800 font-montserrat ">
             Lorem Ipsum is simply dummy printing and typesetting industry.
           </h1>
-          <p className="text-gray-700 text-lg mb-8">
+          <p className="text-gray-700 text-lg mb-8 font-century-gothic">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
           </p>
-          <button className="bg-cyan-500 text-white px-[12%] xl:px-[16%] py-[3%] rounded-lg text-lg">
+          <button className="bg-cyan-500 text-white px-[12%] xl:px-[16%] py-[3%] rounded-lg text-lg font-century-gothic">
             View More
           </button>
         </div>

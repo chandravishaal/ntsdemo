@@ -127,7 +127,7 @@ const AdvanceUser = () => {
       <div ref={boxRef} className="container mx-auto flex flex-col-reverse md:flex-row items-center justify-center p-4 md:p-8 h-full">
         
         {/* Left Section */}
-        <div ref={leftSectionRef} className="w-full md:w-1/2 h-full space-y-6 md:space-y-10 text-center md:text-left flex flex-col justify-center items-center md:items-start">
+        <div ref={leftSectionRef} className="w-full md:w-1/2 h-full space-y-6 md:space-y-4 text-center md:text-left flex flex-col justify-center items-center md:items-start">
           <div id="heading">
             <h2 className="text-2xl md:text-4xl font-montserrat font-bold text-cyan-400">
               For Advanced Users<br />

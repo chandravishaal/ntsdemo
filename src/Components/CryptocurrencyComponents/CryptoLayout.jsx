@@ -26,7 +26,7 @@ const CryptoLayout = () => {
     <div className="flex justify-between items-center space-x-4 sm:space-x-6">
       {/* Tether */}
       <div className="flex flex-col items-center w-20 md:w-24">
-        <div className="w-14 h-14 md:w-20 md:h-20 bg-[#03CBD2] rounded-full shadow-md flex items-center justify-center mb-4 md:mb-5">
+        <div className="w-14 h-14 md:w-20 md:h-20 bg-[#0DCBF8] rounded-full shadow-md flex items-center justify-center mb-4 md:mb-5">
           <img src={Tether} alt="Tether" className="w-10 h-10 md:w-16 md:h-16" />
         </div>
         <p className="text-center font-century-gothic text-lg md:text-xl">Tether (USDT)</p>
@@ -34,7 +34,7 @@ const CryptoLayout = () => {
 
       {/* Binance Coin */}
       <div className="flex flex-col items-center w-20 md:w-24">
-        <div className="w-14 h-14 md:w-20 md:h-20 bg-[#03CBD2] rounded-full shadow-md flex items-center justify-center mb-4 md:mb-5">
+        <div className="w-14 h-14 md:w-20 md:h-20 bg-[#0DCBF8] rounded-full shadow-md flex items-center justify-center mb-4 md:mb-5">
           <img src={Binance} alt="Binance Coin" className="w-10 h-10 md:w-16 md:h-16" />
         </div>
         <p className="text-center font-century-gothic text-lg md:text-xl">Binance Coin</p>
@@ -42,7 +42,7 @@ const CryptoLayout = () => {
 
       {/* Polygon Matic */}
       <div className="flex flex-col items-center w-20 md:w-24">
-        <div className="w-14 h-14 md:w-20 md:h-20 bg-[#03CBD2] rounded-full shadow-md flex items-center justify-center mb-4 md:mb-5">
+        <div className="w-14 h-14 md:w-20 md:h-20 bg-[#0DCBF8] rounded-full shadow-md flex items-center justify-center mb-4 md:mb-5">
           <img src={Polygon} alt="Polygon Matic" className="w-10 h-10 md:w-16 md:h-16" />
         </div>
         <p className="text-center font-century-gothic text-lg md:text-xl">Polygon Matic</p>
@@ -50,7 +50,7 @@ const CryptoLayout = () => {
 
       {/* USD Coin */}
       <div className="flex flex-col items-center w-20 md:w-24">
-        <div className="w-14 h-14 md:w-20 md:h-20 bg-[#03CBD2] rounded-full shadow-md flex items-center justify-center mb-4 md:mb-5">
+        <div className="w-14 h-14 md:w-20 md:h-20 bg-[#0DCBF8] rounded-full shadow-md flex items-center justify-center mb-4 md:mb-5">
           <img src={USD} alt="USD Coin" className="w-10 h-10 md:w-16 md:h-16" />
         </div>
         <p className="text-center font-century-gothic text-lg md:text-xl">USD Coin</p>
@@ -58,7 +58,7 @@ const CryptoLayout = () => {
 
       {/* Tron */}
       <div className="flex flex-col items-center w-20 md:w-24">
-        <div className="w-14 h-14 md:w-20 md:h-20 bg-[#03CBD2] rounded-full shadow-md flex items-center justify-center mb-4 md:mb-5">
+        <div className="w-14 h-14 md:w-20 md:h-20 bg-[#0DCBF8] rounded-full shadow-md flex items-center justify-center mb-4 md:mb-5">
           <img src={Tron} alt="Tron" className="w-10 h-10 md:w-16 md:h-16" />
         </div>
         <p className="text-center font-century-gothic text-lg md:text-xl pb-7 md:pb-0">Tron</p>

@@ -261,8 +261,8 @@ const WhatMakesUsDifferent = () => {
 
       {/* Title Section */}
       <div className="text-center">
-        <h2 className="text-4xl font-semibold jost-uniquifier mb-8">What makes us Different</h2>
-        <p className="mt-5 w-2/3 lg:w-1/2 jost-uniquifier mx-auto">
+        <h2 className="text-4xl font-semibold jost-uniquifier mb-8 font-montserrat">What makes us Different</h2>
+        <p className="mt-5 w-2/3 lg:w-1/2 jost-uniquifier mx-auto font-century-gothic">
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
         </p>
       </div>
@@ -281,24 +281,24 @@ const WhatMakesUsDifferent = () => {
           <div className="flex items-center space-x-4 flex-row-reverse feature-item">
             <img src={aiicon} alt="AI-Powered Trading Insights" className="w-12 h-12 ml-8" />
             <div>
-              <h3 className="text-lg font-semibold ml-44">AI-Powered Trading Insights</h3>
-              <p className="text-gray-500 text-sm w-64 ml-44">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              <h3 className="text-lg font-semibold ml-44 font-century-gothic">AI-Powered Trading Insights</h3>
+              <p className="text-gray-500 text-sm w-64 ml-44 font-century-gothic">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             </div>
           </div>
 
           <div className="flex items-center space-x-4 flex-row-reverse feature-item">
             <img src={reward} alt="Reward programs" className="w-12 h-12 -ml-8 mr-20" />
             <div>
-              <h3 className="text-lg font-semibold mr-14">Reward and Loyalty Programs</h3>
-              <p className="text-gray-500 text-sm w-64 mr-14">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              <h3 className="text-lg font-semibold mr-14 font-century-gothic">Reward and Loyalty Programs</h3>
+              <p className="text-gray-500 text-sm w-64 mr-14 font-century-gothic">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             </div>
           </div>
 
           <div className="flex items-center space-x-4 flex-row-reverse feature-item">
             <img src={risk} alt="Risk management" className="w-12 h-12 ml-12" />
             <div>
-              <h3 className="text-lg font-semibold">Advanced Risk Management Tools </h3>
-              <p className="text-gray-500 text-sm w-64 ml-8">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              <h3 className="text-lg font-semibold font-century-gothic">Advanced Risk Management Tools </h3>
+              <p className="text-gray-500 text-sm w-64 ml-8 font-century-gothic">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             </div>
           </div>
         </div>
@@ -307,24 +307,24 @@ const WhatMakesUsDifferent = () => {
           <div className="flex items-center space-x-4 feature-item">
             <img src={payment} alt="Localized Payment Methods" className="w-12 h-12 -ml-12 " />
             <div>
-              <h3 className="text-lg font-semibold">Localized Payment Methods</h3>
-              <p className="text-gray-500 text-sm w-64">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              <h3 className="text-lg font-semibold font-century-gothic">Localized Payment Methods</h3>
+              <p className="text-gray-500 text-sm w-64 font-century-gothic">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             </div>
           </div>
 
           <div className="flex items-center space-x-4 feature-item">
             <img src={onboarding} alt="Customized Onboarding Experience" className="w-12 h-12 ml-8" />
             <div>
-              <h3 className="text-lg font-semibold">Customized Onboarding Experience</h3>
-              <p className="text-gray-500 text-sm w-64">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              <h3 className="text-lg font-semibold font-century-gothic">Customized Onboarding Experience</h3>
+              <p className="text-gray-500 text-sm w-64 font-century-gothic">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             </div>
           </div>
 
           <div className="flex items-center space-x-4 feature-item">
             <img src={beginners} alt="Tailored for Beginners and Experts" className="w-12 h-12 -ml-12" />
             <div>
-              <h3 className="text-lg font-semibold">Tailored for Beginners and Experts</h3>
-              <p className="text-gray-500 text-sm w-64">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              <h3 className="text-lg font-semibold font-century-gothic">Tailored for Beginners and Experts</h3>
+              <p className="text-gray-500 text-sm w-64 font-century-gothic">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             </div>
           </div>
         </div>
@@ -334,48 +334,48 @@ const WhatMakesUsDifferent = () => {
           <div className="feature-item">
             <img src={aiicon} alt="AI-Powered Trading Insights" className="w-12 h-12" />
             <div className="feature-text">
-              <h3 className="text-lg font-semibold">AI-Powered Trading Insights</h3>
-              <p className="text-gray-500 text-sm">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              <h3 className="text-lg font-semibold font-century-gothic">AI-Powered Trading Insights</h3>
+              <p className="text-gray-500 text-sm font-century-gothic">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             </div>
           </div>
 
           <div className="feature-item">
             <img src={reward} alt="Reward programs" className="w-12 h-12" />
             <div className="feature-text">
-              <h3 className="text-lg font-semibold">Reward and Loyalty Programs</h3>
-              <p className="text-gray-500 text-sm">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              <h3 className="text-lg font-semibold font-century-gothic">Reward and Loyalty Programs</h3>
+              <p className="text-gray-500 text-sm font-century-gothic">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             </div>
           </div>
 
           <div className="feature-item">
             <img src={risk} alt="Risk management" className="w-12 h-12" />
             <div className="feature-text">
-              <h3 className="text-lg font-semibold">Advanced Risk Management Tools</h3>
-              <p className="text-gray-500 text-sm">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              <h3 className="text-lg font-semibold font-century-gothic">Advanced Risk Management Tools</h3>
+              <p className="text-gray-500 text-sm font-century-gothic">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             </div>
           </div>
 
           <div className="feature-item">
             <img src={payment} alt="Localized Payment Methods" className="w-12 h-12" />
             <div className="feature-text">
-              <h3 className="text-lg font-semibold">Localized Payment Methods</h3>
-              <p className="text-gray-500 text-sm">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              <h3 className="text-lg font-semibold font-century-gothic">Localized Payment Methods</h3>
+              <p className="text-gray-500 text-sm font-century-gothic">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             </div>
           </div>
 
           <div className="feature-item">
             <img src={onboarding} alt="Customized Onboarding Experience" className="w-12 h-12" />
             <div className="feature-text">
-              <h3 className="text-lg font-semibold">Customized Onboarding Experience</h3>
-              <p className="text-gray-500 text-sm">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              <h3 className="text-lg font-semibold font-century-gothic">Customized Onboarding Experience</h3>
+              <p className="text-gray-500 text-sm font-century-gothic">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             </div>
           </div>
 
           <div className="feature-item">
             <img src={beginners} alt="Tailored for Beginners and Experts" className="w-12 h-12" />
             <div className="feature-text">
-              <h3 className="text-lg font-semibold">Tailored for Beginners and Experts</h3>
-              <p className="text-gray-500 text-sm">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              <h3 className="text-lg font-semibold font-century-gothic">Tailored for Beginners and Experts</h3>
+              <p className="text-gray-500 text-sm font-century-gothic">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             </div>
           </div>
         </div>

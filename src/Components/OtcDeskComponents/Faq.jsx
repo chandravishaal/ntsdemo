@@ -228,14 +228,14 @@ const Faq = () => {
                         {index + 1}
                       </span>
                     </div>
-                    <h4 className="font-light">{faq.question}</h4>
+                    <h4 className="font-light font-century-gothic">{faq.question}</h4>
                   </div>
                   <span className="text-xl flex items-center justify-center bg-white border-2 border-sky-900 rounded-full h-5 w-5">
                     {activeIndex === index ? '-' : '+'}
                   </span>
                 </div>
                 {activeIndex === index && (
-                  <div className="bg-white text-sm text-gray-500 p-6 mt-3">
+                  <div className="bg-white text-sm text-gray-500 p-6 mt-3 font-century-gothic">
                     <p>{faq.answer}</p>
                   </div>
                 )}

@@ -301,8 +301,8 @@ const Footprint = () => {
   return (
     <section className="py-10 bg-[#F6F9FC]" ref={sectionRef}>
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-century-gothic font-bold">Our Global Footprint</h2>
-        <p className="text-gray-700 font-medium font-antipasto-pro text-lg mt-2">
+        <h2 className="text-4xl font-bold font-montserrat">Our Global Footprint</h2>
+        <p className="text-gray-700 font-medium text-lg mt-2 font-century-gothic">
           Proudly serving the following countries
         </p>
       </div>

@@ -16,7 +16,7 @@ const WhychooseusCard = ({ image, title, desc, color, customClass }) => {
       <img src={image} className="w-10 mb-4 mx-auto object-contain" alt="" />
       <h1
         className={`text-lg leading-5 text-center lg:text-start font-montserrat ${
-          color === 'primary' ? 'text-white' : 'text-primaryCyan'
+          color === 'primary' ? 'text-black' : 'text-black'
         } font-bold mb-2`}
       >
         {title}

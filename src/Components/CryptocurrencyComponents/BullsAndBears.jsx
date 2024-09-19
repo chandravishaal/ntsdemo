@@ -7,7 +7,7 @@ const BullsAndBears = () => {
     <div className="container mx-auto px-4 py-8 mt-10">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Bulls Say Card */}
-        <div className="border-2 border-cyan-300 rounded-lg p-6">
+        <div className="border-2 border-primaryCyan rounded-lg p-6">
           <div className="flex justify-between items-start">
             {/* Left Section - Thumbs Up Icon */}
             <div className="text-green-500 text-4xl sm:text-5xl md:text-6xl">
@@ -28,7 +28,7 @@ const BullsAndBears = () => {
 
           {/* Title and Content */}
           <div className="mt-4">
-            <h2 className="text-2xl font-montserrat sm:text-3xl md:text-4xl font-bold text-cyan-500 mb-3">
+            <h2 className="text-2xl font-montserrat sm:text-3xl md:text-4xl font-bold text-primaryCyan mb-3">
               Bulls say
             </h2>
             <p className="text-lg font-montserrat sm:text-xl text-gray-600 mb-6">
@@ -54,7 +54,7 @@ const BullsAndBears = () => {
         </div>
 
         {/* Bears Say Card */}
-        <div className="border-2 border-cyan-300 rounded-lg p-6">
+        <div className="border-2 border-primaryCyan rounded-lg p-6">
           <div className="flex justify-between items-start">
             {/* Left Section - Thumbs Down Icon */}
             <div className="text-red-500 text-4xl sm:text-5xl md:text-6xl">
@@ -69,7 +69,7 @@ const BullsAndBears = () => {
 
           {/* Title and Content */}
           <div className="mt-4">
-            <h2 className="text-2xl font-montserrat sm:text-3xl md:text-4xl font-bold text-cyan-500 mb-3">
+            <h2 className="text-2xl font-montserrat sm:text-3xl md:text-4xl font-bold text-primaryCyan mb-3">
               Bears say
             </h2>
             <p className="text-lg sm:text-xl font-montserrat text-gray-600 mb-4">

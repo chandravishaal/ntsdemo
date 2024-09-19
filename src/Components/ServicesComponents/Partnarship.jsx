@@ -53,7 +53,7 @@ const Partnarship = () => {
         </div>
 
         {/* text Section - Content */}
-        <div id="text" className="w-full md:w-1/2 h-full space-y-6 md:space-y-10 text-center md:text-left flex flex-col justify-start md:justify-center items-center md:items-start px-4 md:px-9">
+        <div id="text" className="w-full md:w-1/2 h-full space-y-6 md:space-y-4 text-center md:text-left flex flex-col justify-start md:justify-center items-center md:items-start px-4 md:px-9">
           <div id="heading">
             <h2 className="text-2xl md:text-4xl font-montserrat font-bold text-cyan-400">
               Partnership Program
@@ -67,7 +67,7 @@ const Partnarship = () => {
 
           <div id="heading2">
             <p id='subHeding' className="text-sm md:text-lg font-century-gothic md:max-w-lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <br />
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut la.
             </p>
           </div>

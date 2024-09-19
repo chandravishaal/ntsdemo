@@ -231,13 +231,13 @@ const HeaderSection = () => {
       <div className="flex flex-col lg:flex-row items-center justify-between container mx-auto px-[4%] py-[6%] space-y-8 lg:space-y-0 lg:space-x-8">        
         {/* Left Section (Text) */}
         <div className={"left-section w-full lg:w-1/2 text-left px-[4%]"}>
-          <h1 className={"text-3xl md:text-4xl jost-uniquifier font-semibold text-black mb-[6%]"}>
+          <h1 className={"text-3xl md:text-4xl jost-uniquifier font-semibold text-black mb-[6%] font-montserrat"}>
             Cryptocurrency OTC Over The Counter Exchange Desk Serving Globally
           </h1>
-          <p className={"text-lg lg:text-2xl xl:text-2xl jost-uniquifier text-black mb-[9%]"}>
+          <p className={"text-lg lg:text-2xl xl:text-2xl jost-uniquifier text-black mb-[9%] font-century-gothic"}>
             Are you looking for an OTC (Over the Counter) Cryptocurrency Exchange Desk that can offer you several cryptocurrencies within seconds?
           </p>
-          <button className={"bg-cyan-500 jost-uniquifier text-white px-[6%] py-[3%] rounded-lg font-medium text-lg"}>
+          <button className={"bg-cyan-500 jost-uniquifier text-white px-[6%] py-[3%] rounded-lg font-medium text-lg font-century-gothic"}>
             Get Started Now
           </button>
         </div>
@@ -252,10 +252,10 @@ const HeaderSection = () => {
           
           {/* Form Container */}
           <div className="relative z-10 w-full lg:w-[110%] mt-11 lg:mt-0 lg:-mr-[12%] max-w-lg lg:p-[9%] p-6 bg-transparent">
-            <h2 className="text-3xl w-full lg:text-4xl jost-uniquifier font-semibold text-white text-center">
+            <h2 className="text-3xl w-full lg:text-4xl jost-uniquifier font-semibold text-white text-center font-century-gothic">
               Contact the OTC desk
             </h2>
-            <p className="text-white mb-10 lg:mb-12  jost-uniquifier text-center">
+            <p className="text-white mb-10 lg:mb-12  jost-uniquifier text-center font-century-gothic">
               We will get back to you within one business day.
             </p>
 
