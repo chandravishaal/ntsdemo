@@ -142,10 +142,7 @@ const ServicesHeroSection = () => {
           <p className="text-xl text-gray-600 text-center lg:text-start mt-4 mb-5 font-century-gothic">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut la.</p>
           <PrimaryButton title="Get Started" />
         </div>
-        <div className="flex w-[50rem] flex-1 flex-col relative mb-10">
-          <img src={mobile1} className="lg:w-[25rem] md:w-[20rem] w-[15rem] translate-y-10 md:translate-y-14 lg:translate-x-12 mx-auto" alt="Mobile application showing crypto trading features" />
-          <img src={mobile2} className="lg:w-[50rem] md:w-[30rem] w-[25rem] mx-auto"  alt="Mobile app interface with trading options" />
-        </div>
+       
 
         {/* Right Section */}
         <div ref={rightSectionRef} className="flex w-[50rem] flex-1 flex-col relative mb-10">
