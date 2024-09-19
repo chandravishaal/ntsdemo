@@ -58,21 +58,21 @@ const EveryDay = () => {
         
         {/* Left Section - Text and Menu */}
         <div className="flex flex-col justify-center items-center md:items-start space-y-4 md:space-y-6 max-w-lg text-center md:text-left">
-          <h1 className="text-3xl md:text-5xl font-century-gothic font-semibold text-primaryCyan mt-0">
+          <h1 className="text-3xl md:text-5xl font-montserrat font-bold text-primaryCyan mt-0">
             For Everyday Use
           </h1>
-          <p className="text-gray-800 text-sm md:text-lg">
+          <p className="text-gray-800 text-sm md:text-lg font-century-gothic">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut la.
           </p>
           <ul className="space-y-2 md:space-y-3 text-xl md:text-2xl">
-            <li className="text-gray-800 font-antipasto-pro">Buy / Sell</li>
-            <li className="text-gray-800 font-antipasto-pro">Earn</li>
-            <li className="text-gray-800 font-antipasto-pro font-bold flex items-center justify-center md:justify-start">
+            <li className="text-gray-800 font-century-gothic">Buy / Sell</li>
+            <li className="text-gray-800 font-century-gothic">Earn</li>
+            <li className="text-gray-800 font-century-gothic font-bold flex items-center justify-center md:justify-start">
               Payment Method <span className="ml-2 font-bold">→</span>
             </li>
-            <li className="text-gray-800 font-antipasto-pro">Academy</li>
-            <li className="text-gray-800 font-antipasto-pro">Converter</li>
+            <li className="text-gray-800 font-century-gothic">Academy</li>
+            <li className="text-gray-800 font-century-gothic">Converter</li>
             <li className="text-gray-800 font-century-gothic">Wallet</li>
           </ul>
         </div>
@@ -83,7 +83,7 @@ const EveryDay = () => {
             {/* Phone Image */}
             <img
               src={phoneImage}
-              alt="Crypto Exchange App"
+              alt="Crypto Exchange App displayed on a smartphone"
               className="w-full h-auto"
             />
           </div>

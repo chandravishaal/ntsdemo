@@ -40,7 +40,7 @@ const Resources = () => {
 
   return (
     <div className="container mx-auto py-8 px-4 sm:px-6 lg:px-8">
-      <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8">Resources</h2>
+      <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 font-montserrat">Resources</h2>
 
       {/* Buttons Section */}
       <div className="flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-4 mb-6 sm:mb-8">
@@ -64,7 +64,7 @@ const Resources = () => {
                 activeIndex === index ? 'border-blue-600' : 'border-gray-300'
               }`}
             >
-              <span className="text-black font-century-gothic text-xl font-bold">{item.title}</span>
+              <span className="text-black font-century-gothic text-xl font-semibold">{item.title}</span>
               <i
                 className={`ri-arrow-up-wide-fill text-gray-500 transform ${
                   activeIndex === index ? 'rotate-180' : 'rotate-0'

@@ -8,7 +8,7 @@ const BitcoinMarketData = () => {
         <div className="container mx-auto px-2 py-20">
           {/* Market Data Section */}
           <div className="text-center mb-12">
-            <h2 className="text-2xl sm:text-4xl font-bold font-century-gothic">
+            <h2 className="text-2xl sm:text-4xl font-bold font-montserrat">
               Market data for <span className="text-orange-500">Bitcoin</span>
             </h2>
           </div>
@@ -75,7 +75,7 @@ const BitcoinMarketData = () => {
           <div className="flex justify-center p-4 sm:p-10">
             <img
               src={bitcoinImage}
-              alt="Bitcoin"
+               alt="Bitcoin Cryptocurrency"
               className="rounded-lg shadow-md w-full h-auto"
             />
           </div>

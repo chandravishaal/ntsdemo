@@ -16,7 +16,7 @@ const BullsAndBears = () => {
 
             {/* Right Section - Bulls Image */}
             <div className="w-28 h-28 sm:w-32 sm:h-12 md:w-36 md:h-12">
-              <img src={Bulls} alt="Bulls logo" className="object-contain" />
+              <img src={Bulls} alt="Bulls in cryptocurrency market" className="object-contain" />
             </div>
 
             {/* Right Section - Bulls Image */}
@@ -28,10 +28,10 @@ const BullsAndBears = () => {
 
           {/* Title and Content */}
           <div className="mt-4">
-            <h2 className="text-2xl font-century-gothic sm:text-3xl md:text-4xl font-bold text-cyan-500 mb-3">
+            <h2 className="text-2xl font-montserrat sm:text-3xl md:text-4xl font-bold text-cyan-500 mb-3">
               Bulls say
             </h2>
-            <p className="text-lg font-century-gothic sm:text-xl text-gray-600 mb-6">
+            <p className="text-lg font-montserrat sm:text-xl text-gray-600 mb-6">
               Published on February 5, 2024
             </p>
             <p className="text-sm sm:text-base md:text-base text-gray-900 mb-4 font-century-gothic">
@@ -63,16 +63,16 @@ const BullsAndBears = () => {
 
             {/* Right Section - Bears Image */}
             <div className="w-28 h-28 sm:w-32 sm:h-12 md:w-36 md:h-12">
-              <img src={Bears} alt="Bears logo" className="object-contain" />
+              <img src={Bears} alt="Bears in cryptocurrency market" className="object-contain" />
             </div>
           </div>
 
           {/* Title and Content */}
           <div className="mt-4">
-            <h2 className="text-2xl font-century-gothic sm:text-3xl md:text-4xl font-bold text-cyan-500 mb-3">
+            <h2 className="text-2xl font-montserrat sm:text-3xl md:text-4xl font-bold text-cyan-500 mb-3">
               Bears say
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 mb-4">
+            <p className="text-lg sm:text-xl font-montserrat text-gray-600 mb-4">
               Published on February 5, 2024
             </p>
             <p className="text-sm sm:text-base md:text-base text-gray-900  font-century-gothic mb-4">

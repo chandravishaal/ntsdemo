@@ -49,7 +49,7 @@ const HowToBuy = () => {
 
         {/* About Bitcoin Text */}
         <div className="px-4 md:px-9 col-span-10 md:col-span-6 text-center md:text-left">
-          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold font-century-gothic mb-5">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold font-montserrat mb-5">
             How To Buy Bitcoin
           </h3>
           <p className="text-gray-600 font-century-gothic sm:pr-10 md:pr-24">

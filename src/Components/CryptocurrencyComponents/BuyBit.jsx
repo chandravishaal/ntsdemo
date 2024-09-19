@@ -14,7 +14,7 @@ const BuyBit = () => {
         >
           <img
             src="https://images.unsplash.com/photo-1518478021985-13055115e310?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Bitcoin"
+           alt="Bitcoin cryptocurrency"
             className="  mt-5 md:mt-0 shadow-md w-full md:w-auto object-cover"
           />
         </div>
@@ -24,7 +24,7 @@ const BuyBit = () => {
           id="left"
           className="px-4 md:px-9 col-span-10 md:col-span-6 text-center md:text-left"
         >
-          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold font-century-gothic mb-5">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold font-montserrat mb-5">
             Buy Bitcoin with maximum security
           </h3>
           <p className="text-gray-600 font-century-gothic sm:pr-10 md:pr-24">

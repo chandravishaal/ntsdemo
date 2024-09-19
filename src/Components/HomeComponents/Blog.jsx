@@ -14,7 +14,7 @@ const BlogPost = ({ image, date, author, comments, content, isCenter }) => {
   <div className="relative">
     <img
       src={image}
-      alt="Blog"
+      alt="Blog post visual content" // Descriptive alt text
       className="w-full h-full object-cover rounded-t-lg select-none"
     />
     <div
@@ -70,10 +70,10 @@ const Blog = () => {
     >
       {/* Headings */}
       <div id="heading" className="flex flex-col items-center gap-4 mb-10 px-5 text-center">
-        <h1 className="text-black font-medium text-5xl font-century-gothic mb-2">
+        <h1 className="text-black font-bold text-5xl font-montserrat  mb-2">
           Our Latest Blog
         </h1>
-        <h2 className="text-black text-2xl font-century-gothic font-normal">
+        <h2 className="text-black font-bold text-2xl font-century-gothic  ">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry.
         </h2>

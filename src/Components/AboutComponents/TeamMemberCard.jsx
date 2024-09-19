@@ -89,18 +89,18 @@ const MemberCard = () => {
     <div className="bg-white p-1 h-[27rem] rounded-3xl relative select-none cursor-pointer">
       <img
         src="https://images.unsplash.com/photo-1562159278-1253a58da141?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        alt=""
+       alt="Profile photo of a team member in a professional setting"
         className="w-full h-[300px] object-cover rounded-br-[14rem] rounded-t-3xl mb-1"
       />
-      <div className="absolute bg-primaryCyan h-32 w-12 right-7 top-1 flex flex-col text-white p-2 items-center gap-4">
+      <div className="absolute bg-primaryCyan h-32 w-12 right-7 top-1 flex flex-col text-black p-2 items-center gap-4">
         <FaLinkedinIn className="-rotate-90 cursor-pointer text-xl" />
         <FaInstagram className="-rotate-90 cursor-pointer text-xl" />
         <FaXTwitter className="-rotate-90 cursor-pointer text-xl" />
         <FaFacebookF className="-rotate-90 cursor-pointer text-xl" />
       </div>
       <div className="p-3">
-        <h1 className="text-3xl font-semibold mb-2">John Doe</h1>
-        <p className="text-lg mb-3">Web Developer</p>
+        <h1 className="text-3xl font-semibold mb-2 font-montserrat">John Doe</h1>
+        <p className="text-lg mb-3 font-century-gothic">Web Developer</p>
         <div className="bg-primaryCyan w-10 h-1"></div>
       </div>
     </div>
@@ -112,8 +112,8 @@ const TeamMemberCard = () => {
     <section className="pb-32 pt-20  bg-gray-100">
       <div className="container mx-auto px-4">
         <div className="text-center mb-32">
-          <h2 className="text-4xl font-bold mt-8">Our executive team</h2>
-          <p className="text-black text-lg mt-4 font-semibold">
+          <h2 className="text-4xl font-bold mt-8 font-montserrat">Our executive team</h2>
+          <p className="text-black text-lg mt-4 font-semibold font-century-gothic">
           Innovative Leaders Driving Crypto Excellence.
           </p>
         </div>

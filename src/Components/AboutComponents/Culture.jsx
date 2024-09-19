@@ -10,7 +10,7 @@ const Culture = () => {
 
         {/* Left Section */}
         <div className="w-full md:w-1/2 space-y-5 text-center md:text-left px-6 md:px-4  md:h-[100%] mt-5">
-          <h2 className="text-3xl md:text-4xl font-antipasto-pro font-bold text-gray-800">
+          <h2 className="text-3xl md:text-4xl font-montserrat font-bold text-gray-800">
             Culture and employment at <br />
             <span className="text-cyan-400 text-4xl md:text-5xl">North Star Metrics</span>
           </h2>
@@ -25,7 +25,7 @@ const Culture = () => {
         <div className="w-full md:w-1/2 h-full px-5  md:h-[100%]">
           <img
             src="https://plus.unsplash.com/premium_photo-1661767467261-4a4bed92a507?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Company Culture"
+            alt="Team members collaborating and brainstorming in a modern, vibrant office environment, showcasing a collaborative and innovative company culture at North Star Metrics"
             className="rounded-lg shadow-lg w-full h-full object-cover"
           />
         </div>

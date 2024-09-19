@@ -5,17 +5,18 @@ const CryptoFreedomSection = () => {
   return (
     <section className="freedomSection-background pt-10 mb-32">
     <div className="container mx-auto pt-10  text-center">
-      <h2 className="text-3xl font-semibold mb-4">
+      <h2 className="text-3xl font-bold font-montserrat  mb-4">
         The freedom of crypto for everyone, everywhere
       </h2>
-      <p className="text-lg text-gray-600 mb-8  mx-[20%]">
+      <p className="text-lg text-gray-600 font-century-gothic mb-8  mx-[20%]">
         We&apos;re committed to creating more economic freedom through accessible,
         safe, and secure financial tools for everyone.
       </p>
       <div className="relative mx-auto max-w-[600px]">
         <img
           src={overallImage}
-          alt="Crypto Freedom Image"
+          alt="Conceptual graphic illustrating global financial freedom with diverse individuals engaged in cryptocurrency transactions"
+          //alt="Crypto Freedom Image"
           className="w-full h-auto mb-10 select-none"
           data-aos="fade-up"
           data-aos-duration="3000"

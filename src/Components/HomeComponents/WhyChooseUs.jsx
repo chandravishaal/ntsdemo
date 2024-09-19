@@ -15,14 +15,14 @@ const WhychooseusCard = ({ image, title, desc, color, customClass }) => {
     >
       <img src={image} className="w-10 mb-4 mx-auto object-contain" alt="" />
       <h1
-        className={`text-lg leading-5 text-center lg:text-start ${
+        className={`text-lg leading-5 text-center lg:text-start font-montserrat ${
           color === 'primary' ? 'text-white' : 'text-primaryCyan'
         } font-bold mb-2`}
       >
         {title}
       </h1>
       <p
-        className={`text-sm text-center lg:text-start leading-4 ${
+        className={`text-sm text-center lg:text-start leading-4 font-century-gothic${
           color === 'primary' ? 'text-white' : 'text-primaryCyan'
         }`}
       >
@@ -37,8 +37,8 @@ const WhyChooseUs = () => {
     <section className="whychooseSection-background md:pt-20 lg:py-10">
       <div className="container mx-auto mb-20 flex flex-col-reverse lg:flex-row items-center justify-between gap-10 px-5">
         <div className="flex flex-col items-center lg:items-start flex-[0.6] text-center md:text-left">
-          <h1 className="text-3xl mt-5 font-bold mb-5">Why Choose Us?</h1>
-          <p className="text-xl mb-10">
+          <h1 className="text-3xl mt-5 font-bold mb-5 font-montserrat ">Why Choose Us?</h1>
+          <p className="text-xl mb-10 font-century-gothic">
             A Crypto platform has never been better than this.
           </p>
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:px-20 lg:px-0">
@@ -88,7 +88,7 @@ const WhyChooseUs = () => {
           <img
             src={whyChooseUsBanner}
             className="max-w-[400px] translate-y-20 mx-auto md:translate-y-0 ml-auto"
-            alt="whyChooseUsBanner"
+            alt="North Star Metrics overview showcasing benefits of choosing our cryptocurrency platform"
           />
         </div>
       </div>

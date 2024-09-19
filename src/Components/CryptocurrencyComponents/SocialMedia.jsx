@@ -229,7 +229,7 @@ const SocialMediaOverview = () => {
     <div className="bg-cyan-50 w-full mb-20">
       {/* Header */}
       <div className="text-center mb-10 w-full border border-b-black border-t-black py-6">
-        <h1 className="text-3xl md:text-4xl font-bold font-century-gothic text-gray-800">
+        <h1 className="text-3xl md:text-4xl font-bold font-montserrat text-gray-800">
           Social
         </h1>
       </div>
@@ -237,7 +237,7 @@ const SocialMediaOverview = () => {
       {/* Section 2: Highlights */}
       <div className="flex flex-col md:flex-row items-start gap-8 container mx-auto rounded-xl mb-24 px-4">
         <div className="flex-1 p-5">
-          <h2 className="text-2xl md:text-3xl font-semibold font-century-gothic mb-4">
+          <h2 className="text-2xl md:text-3xl font-semibold font-montserrat mb-4">
             Some highlights about Bitcoin on social media
           </h2>
           <p className="text-gray-600 text-sm mb-2 font-century-gothic">
@@ -275,7 +275,7 @@ const SocialMediaOverview = () => {
       <div className="container mx-auto px-4 mb-20">
       {/* Overview Section */}
       <div className="mb-5">
-        <h2 className="text-2xl md:text-3xl font-extrabold font-century-gothic mb-4">
+        <h2 className="text-2xl md:text-3xl font-extrabold font-montserrat mb-4">
           Overview
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-6">
@@ -288,7 +288,7 @@ const SocialMediaOverview = () => {
             { title: "Average Sentiment", value: "3.5 out of 5" },
             { title: "News Articles", value: "78" },
           ].map((item, index) => (
-            <div key={index} className="py-6 text-center md:text-start md:text-start">
+            <div key={index} className="py-6 text-center md:text-start">
               <p className="font-bold font-century-gothic uppercase text-lg">
                 {item.title}
                 <span className="text-black font-light">
@@ -307,7 +307,7 @@ const SocialMediaOverview = () => {
 
       {/* Twitter Section */}
       <div className="mb-5">
-        <h2 className="text-2xl md:text-3xl font-extrabold font-century-gothic mb-4">
+        <h2 className="text-2xl md:text-3xl font-extrabold font-montserrat mb-4">
           Twitter
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-5 gap-y-6">
@@ -355,7 +355,7 @@ const SocialMediaOverview = () => {
 
       {/* Reddit Section */}
       <div className="pb-10">
-        <h2 className="text-2xl md:text-3xl font-extrabold font-century-gothic mb-4 ">
+        <h2 className="text-2xl md:text-3xl font-extrabold font-montserrat mb-4 ">
           Reddit
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-5 gap-y-6">

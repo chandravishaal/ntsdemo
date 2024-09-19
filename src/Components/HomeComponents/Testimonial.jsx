@@ -71,11 +71,11 @@ const Testimonial = () => {
   return (
     <div id='testpage' className="container mx-auto p relative flex flex-col lg:flex-row items-end my-20 overflow-hidden">
       {/* Image div */}
-      <img src={Image} alt="Testimonial" className="w-auto h-[474px] select-none" />
+      <img src={Image} alt="Customer testimonials" className="w-auto h-[474px] select-none" />
 
       {/* Content div */}
       <div className="w-full h-[400px] testimonial-background bg-[#91ebff] p-6 flex rounded-r-lg flex-col justify-between">
-          <h2 id='testimonial-heading' className="text-6xl text-right mr-8 text-[#0a6276] -mt-14 select-none">TESTIMONIALS</h2>
+          <h2 id='testimonial-heading' className="text-6xl text-right mr-8 text-[#0a6276] -mt-14 select-none font-bold font-montserrat ">TESTIMONIALS</h2>
         <div id="testimonial-content" className='lg:mt-10 mt-5'>
           <div className="flex items-center mb-3 gap-1 pl-6">
             <FaStar className="text-[#0a6276]" />
@@ -84,8 +84,8 @@ const Testimonial = () => {
             <FaStar className="text-[#0a6276]" />
             <FaStar className="text-[#0a6276]" />
           </div>
-          <h3 className="text-2xl font-bold text-sky-800 pl-6">{name}</h3>
-          <p className="text-lg text-gray-700 p-6 md:pr-12">{content}</p>
+          <h3 className="text-2xl font-bold text-sky-800 pl-6 font-montserrat ">{name}</h3>
+          <p className="text-lg text-gray-700 p-6 md:pr-12 font-century-gothic">{content}</p>
         </div>
 
         <div className='flex items-center justify-end gap-2'>

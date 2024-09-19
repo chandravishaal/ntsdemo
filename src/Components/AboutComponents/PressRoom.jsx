@@ -54,15 +54,15 @@ function PressRoom() {
       <div className="bg-cyan-50 rounded-lg overflow-hidden">
         <img src={imageSrc} alt="Press Image" className="rounded-t-lg object-cover mb-3 h-[200px] w-full" />
         <div className='p-4'>
-          <h3 className="text-lg md:text-xl font-bold mb-2">{title}</h3>
-          <p className="text-gray-500 mb-4 text-sm md:text-base">
+          <h4 className="text-lg md:text-xl font-bold mb-2 font-montserrat">{title}</h4>
+          <p className="text-gray-500 mb-4 text-sm md:text-base font-century-gothic">
             {description}
           </p>
-          <div className='flex flex-wrap items-center justify-between'>
-            <img src={logoSrc} className='w-24 md:w-28' alt="" />
-            <div className="flex flex-wrap gap-2 mt-4">
-              <div className="bg-primaryCyan text-black font-bold py-1 px-4 rounded-full text-xs md:text-sm">Funding</div>
-              <div className="bg-primaryCyan text-black font-bold py-1 px-4 rounded-full text-xs md:text-sm">Growth</div>
+          <div className='flex flex-wrap items-center justify-end'>
+            
+            <div className="flex flex-wrap justify-end mt-4">
+            
+              <div className="bg-primaryCyan text-black font-bold py-1 px-4 rounded-full text-xs md:text-sm font-century-gothic">Read more</div>
             </div>
           </div>
         </div>
@@ -74,8 +74,8 @@ function PressRoom() {
   return (
     <section className="bg-white container mx-auto mb-24">
       <div className="text-center font-Antipasto pro">
-        <h2 className="text-4xl font-bold mt-8">Press Room</h2>
-        <p className="text-black mt-4 font-semibold text-center">
+        <h2 className="text-4xl font-bold mt-8 font-montserrat">Press Room</h2>
+        <p className="text-black mt-4 font-semibold text-center font-montserrat">
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry
           <br />
           standard dummy text ever since the 1500s,

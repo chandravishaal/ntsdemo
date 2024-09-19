@@ -39,8 +39,8 @@ const Certificate = () => {
           alt={altText} 
           className={`mx-auto ${isSmall ? 'h-24 w-24 mt-5 mb-5' : 'h-32 w-32 mb-4'} object-contain `} 
         />
-        <h4 className="font-semibold">{title}</h4>
-        <p className="text-sm max-w-xs text-gray-600">{description}</p>
+        <h4 className="font-semibold font-century-gothic">{title}</h4>
+        <p className="text-sm max-w-xs text-gray-600 font-century-gothic">{description}</p>
       </div>
     );
   };
