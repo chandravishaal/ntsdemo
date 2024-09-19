@@ -105,67 +105,44 @@ const Platform = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="bg-cyan-50 pt-20 px-4 md:px-6 lg:px-8">
-      {/* Main Heading */}
-      <h1 className="text-center text-xl md:text-2xl lg:text-3xl font-semibold text-black raleway-hero mb-6">
+    <div className="bg-cyan-50 pt-20 px-4 md:px-6 lg:px-8">
+      {/*} Main Heading */}
+      <h1 className="text-center text-xl md:text-2xl lg:text-3xl font-bold  text-primaryCyan raleway-hero mb-5 md:mb-6 font-montserrat">
         More North Star Metrics
       </h1>
-      <h1 className="text-center text-xl md:text-3xl lg:text-4xl font-bold text-black raleway-hero mb-12 lg:mb-16">
+      <h3 className="text-center text-xl md:text-3xl lg:text-4xl font-semibold text-black raleway-hero md:mb-12 lg:mb-16 font-montserrat">
         The most secure, easy and comprehensive platform
-      </h1>
+      </h3>
 
       {/* Phone Image with surrounding text */}
       <div className="relative flex justify-center items-center ">
         {/* Phone Image */}
-        <div ref={phoneRef} className="flex justify-center items-center p-4 relative">
-          <img
-            src={phoneImage}
-            alt="Phone"
-            className="w-[11rem] md:w-[20rem] lg:w-[30rem] h-auto translate-y-4"
-          />
-
-          {/* Surrounding Texts */}
-          <div
-            ref={(el) => (textRefs.current[0] = el)}
-            className="absolute top-10 -left-[0.5rem] md:top-11 md:-left-9 lg:top-[3rem] lg:-left-9 text-xxx md:text-sm lg:text-base xl:text-lg"
-          >
-            <p className="text-black raleway-hero font-semibold">
+        <div className="flex justify-center items-center p-4 relative">
+          <img src={phoneImage} alt="Illustration of North Star Metrics platform features including buying, selling, trading, and earning rewards" className="w-[11rem] md:w-[20rem] lg:w-[30rem] h-auto translate-y-4" />
+          <div className="absolute top-10 -left-[0.3rem] md:top-11 md:-left-9 lg:top-[3rem] lg:-left-11 text-xxx md:text-sm lg:text-base xl:text-lg">
+            <p className="text-black raleway-hero font-semibold font-century-gothic">
               Buy, sell, trade
             </p>
           </div>
-
-          <div
-            ref={(el) => (textRefs.current[1] = el)}
-            className="absolute top-[2.5rem] -right-[2.9rem] md:top-[3rem] md:-right-[6.5rem] lg:top-[3.5rem] lg:-right-[8rem] text-xxx md:text-sm lg:text-base xl:text-lg"
-          >
-            <p className="text-black raleway-hero font-semibold">
+          <div className="absolute top-[2.5rem] -right-[2.6rem] md:top-[3rem] md:-right-[7.5rem] lg:top-[3.5rem] lg:-right-[9.5rem] text-xxx md:text-sm lg:text-base xl:text-lg">
+            <p className="text-black raleway-hero  font-semibold font-century-gothic">
               Generate passive rewards <br /> with Earn
             </p>
           </div>
-
-          <div
-            ref={(el) => (textRefs.current[2] = el)}
-            className="absolute top-[6.2rem] -left-[4.8rem] md:top-[9.5rem] md:-left-[10rem] lg:top-[13rem] lg:-left-[12rem] text-right text-xxx md:text-sm lg:text-base xl:text-lg"
-          >
-            <p className="text-black raleway-hero font-semibold">
+          <div className="absolute top-[6.2rem] -left-[4.2rem] md:top-[9.5rem] md:-left-[11.2rem] lg:top-[13rem] lg:-left-[14rem] text-right text-xxx md:text-sm lg:text-base xl:text-lg">
+            <p className="text-black raleway-hero font-semibold font-century-gothic">
               Store, send, receive cryptocurrencies <br /> and money
             </p>
           </div>
 
-          <div
-            ref={(el) => (textRefs.current[3] = el)}
-            className="absolute top-[8.4rem] -right-[5.1rem] md:top-[13.5rem] md:-right-[10.7rem] lg:top-[19.4rem] lg:-right-[14rem] text-left text-xxx md:text-sm lg:text-base xl:text-lg"
-          >
-            <p className="text-black raleway-hero font-semibold">
+          <div className="absolute top-[8.4rem] -right-[5rem] md:top-[13.5rem] md:-right-[12.5rem] lg:top-[19.4rem] lg:-right-[16rem] text-left text-xxx md:text-sm lg:text-base xl:text-lg">
+            <p className="text-black raleway-hero font-semibold font-century-gothic">
               Tax,Pay,Pro,Loan,Launchpad, ... <br /> and many more.Check them out
             </p>
           </div>
 
-          <div
-            ref={(el) => (textRefs.current[4] = el)}
-            className="absolute top-[10.2rem] -left-[2.7rem] md:top-[16.6rem] md:-left-[6rem] lg:top-[24rem] lg:-left-[8rem] text-left text-xxx md:text-sm lg:text-base xl:text-lg"
-          >
-            <p className="text-black raleway-hero font-semibold">
+          <div className="absolute top-[10.2rem] -left-[2.2rem] md:top-[16.6rem] md:-left-[6.5rem] lg:top-[24rem] lg:-left-[8.5rem] text-left text-xxx md:text-sm lg:text-base xl:text-lg">
+            <p className="text-black raleway-hero  font-semibold font-century-gothic">
               Paying with our card
             </p>
           </div>

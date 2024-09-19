@@ -356,7 +356,7 @@ const CryptoTable = () => {
   return (
     <div className="container mx-auto mb-10">
       <div className="flex justify-between items-center mb-4">
-        <h1 className="text-3xl font-bold px-5">
+        <h1 className="text-3xl font-montserrat  font-bold px-5">
           Top Cryptocurrency Prices and Market Cap
         </h1>
       </div>
@@ -370,7 +370,7 @@ const CryptoTable = () => {
         />
         <button
           onClick={handleOpenModal}
-          className="bg-gray-100 border-gray-300 py-2 px-6 rounded-md hover:bg-gray-300 mr-4"
+          className="bg-gray-100 border-gray-300 py-2 px-6 rounded-md hover:bg-gray-300 mr-4 font-montserrat "
         >
           Column
         </button>
@@ -382,26 +382,26 @@ const CryptoTable = () => {
             <tr>
               <th className="px-8 py-2 border-b text-center">#</th>
               {visibleColumns.name && (
-                <th className="px-8 py-2 border-b text-center">Name</th>
+                <th className="px-8 py-2 border-b text-center font-montserrat ">Name</th>
               )}
               {visibleColumns.price && (
-                <th className="px-4 py-2 border-b text-center">Price</th>
+                <th className="px-4 py-2 border-b text-center font-montserrat ">Price</th>
               )}
               {visibleColumns.change && (
-                <th className="px-8 py-2 border-b text-center">
+                <th className="px-8 py-2 border-b text-center font-montserrat ">
                   24h %
                   <InfoTooltip text="The percentage of change in the value compared to 24 hours ago." />
                 </th>
               )}
               {visibleColumns.volume && (
-                <th className="px-4 py-2 border-b text-center">
+                <th className="px-4 py-2 border-b text-center font-montserrat ">
                   Volume (24h)
                   <InfoTooltip text="The total value of the currency that has been traded in the last 24 hours." />
                 </th>
               )}
               {visibleColumns.marketCap && (
                 <th
-                  className="px-4 py-2 cursor-pointer border-b text-center"
+                  className="px-4 py-2 cursor-pointer border-b text-center font-montserrat "
                   onClick={sortByMarketCap}
                 >
                   {sortDirection === "asc" ? "▲" : "▼"} Market Cap
@@ -410,7 +410,7 @@ const CryptoTable = () => {
               )}
 
               {visibleColumns.last7days && (
-                <th className="px-2 border-b text-center">
+                <th className="px-2 border-b text-center font-montserrat ">
                   Last 7 Days
                   <InfoTooltip text="This shows a sparkline graph of the last 7 days of the currency's value." />
                 </th>

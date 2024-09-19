@@ -13,7 +13,7 @@ const CoinCards = ({ image, name, amount, data, isPositive, percentage }) => {
       <div className="flex flex-col justify-between lg:gap-2 w-full">
         <div className="flex items-center justify-between gap-2 lg:gap-5">
           <div className="flex flex-col items-start mt-2">
-            <h1 className="font-bold text-md lg:text-lg">{name}</h1>
+            <h1 className="font-bold text-md lg:text-lg font-montserrat ">{name}</h1>
             <h1 className="text-sm font-medium mb-3 whitespace-nowrap md:mb-5">₹ {amount}</h1>
           </div>
           <img src={image} className="w-8 lg:w-10 mb-2" alt="" />
@@ -47,18 +47,21 @@ const Explore = () => {
     <section className="exploreSection-background">
       <div className="flex flex-col lg:flex-row justify-between py-5 container w-full mx-auto items-center">
         <div className="lg:flex-1 select-none w-full lg:flex justify-center md:justify-start hidden">
-          <img data-aos="fade-up" data-aos-duration="2000" src={explorebanner} className="w-[70%] mx-auto md:w-[40%] mb-10 lg:w-[70%] lg:-translate-x-5 lg:translate-y-7" alt="explore banner" />
+          <img data-aos="fade-up" 
+          data-aos-duration="2000" 
+          src={explorebanner} className="w-[70%] mx-auto md:w-[40%] mb-10 lg:w-[70%] lg:-translate-x-5 lg:translate-y-7"
+          alt="A banner image representing cryptocurrency exploration" />
         </div>
 
         <div className="flex lg:flex-1 flex-col items-center lg:items-start gap-2 px-5">
-          <h1 data-aos="fade-left" data-aos-duration="1000" className="text-3xl font-bold mb-2 text-selection text-center md:text-left">
+          <h1 data-aos="fade-left" data-aos-duration="1000" className="text-3xl font-bold mb-2 text-selection text-center font-montserrat  md:text-left">
             Explore Crypto
           </h1>
-          <p data-aos="fade-left" data-aos-duration="2000" className="md:text-xl  lg:text-xl text-center lg:text-left mb-3">
+          <p data-aos="fade-left" data-aos-duration="2000" className="md:text-xl  lg:text-xl text-center font-century-gothic lg:text-left mb-3">
             Buy and sell 100+ cryptocurrencies on the best platform for buying and selling cryptocurrency, including Bitcoin, Ethereum, and more.
           </p>
 
-          <div className="flex items-center gap-5 w-full mb-5 justify-center lg:justify-start">
+          <div className="flex items-center gap-5 w-full mb-5 justify-center font-century-gothic lg:justify-start">
             <PrimaryButton title="Tradable" />  
             <SecondaryButton title="Top Gainers" />
           </div>
@@ -71,6 +74,7 @@ const Explore = () => {
               amount={534454}
               isPositive={true}
               percentage={2.5}
+              alt="Bitcoin logo"
             />
             <CoinCards
               name="Ethereum"
@@ -79,6 +83,7 @@ const Explore = () => {
               amount={4366}
               isPositive={true}
               percentage={1.5}
+               alt="Ethereum logo"
             />
             <CoinCards
               name="Litecoin"
@@ -87,6 +92,7 @@ const Explore = () => {
               amount={2435}
               isPositive={false}
               percentage={0.5}
+               alt="Litecoin logo"
             />
               <CoinCards
                 name="Ripple"
@@ -95,6 +101,7 @@ const Explore = () => {
                 amount={3245}
                 isPositive={true}
                 percentage={1.5}
+                 alt="Ripple logo"
               />
             <CoinCards
               name="Cardano"
@@ -103,6 +110,7 @@ const Explore = () => {
               amount={76584}
               isPositive={false}
               percentage={0.5}
+               alt="Cardano logo"
             />
             <CoinCards
               name="Solana"
@@ -111,6 +119,7 @@ const Explore = () => {
               amount={34234}
               isPositive={true}
               percentage={4.5}
+               alt="Solana logo"
             />
           </div>
         </div>

@@ -129,15 +129,16 @@ const AdvanceUser = () => {
         {/* Left Section */}
         <div ref={leftSectionRef} className="w-full md:w-1/2 h-full space-y-6 md:space-y-10 text-center md:text-left flex flex-col justify-center items-center md:items-start">
           <div id="heading">
-            <h2 className="text-2xl md:text-4xl font-century-gothic font-bold text-cyan-400">
+            <h2 className="text-2xl md:text-4xl font-montserrat font-bold text-cyan-400">
               For Advanced Users<br />
-              <span className="text-gray-800 font-century-gothic text-2xl md:text-3xl font-light">
-                Regulated and Professional trading <br />With cryptocurrencies
-              </span>
+
             </h2>
+            <h3 className="text-gray-800 font-montserrat text-2xl md:text-3xl font-bold mt-3">
+              Regulated and Professional trading <br />With cryptocurrencies
+            </h3>
           </div>
-          <div id="heading2">
-            <p className="text-sm md:text-lg font-antipasto-pro">
+          <div id="heding2">
+            <p className="text-sm md:text-lg font-century-gothic">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<br />
               eiusmod tempor incididunt ut la.
             </p>

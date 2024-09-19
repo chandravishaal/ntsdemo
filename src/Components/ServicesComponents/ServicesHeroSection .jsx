@@ -137,18 +137,14 @@ const ServicesHeroSection = () => {
   return (
     <section className="services-hero-bg py-10">
       <div className="flex flex-col-reverse lg:flex-row items-center justify-between container mx-auto">
-        {/* Left Section */}
-        <div ref={leftSectionRef} className="flex-1 flex flex-col lg:items-start items-center px-10">
-          <h1 className="text-5xl font-bold text-center lg:text-start leading-tight">
-            <span>Best Exchange to Buy,</span> <br />
-            <span className="text-primaryCyan">Sell and Trade Crypto</span>
-          </h1>
-          <p className="text-xl text-gray-600 text-center lg:text-start mt-4 mb-5">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut la.
-          </p>
-          <button className="bg-[#0DCBF8] text-white py-3 px-6 rounded-lg font-semibold hover:bg-opacity-80 transition-all">
-            Get Started
-          </button>
+        <div className="flex-1 flex flex-col lg:items-start items-center px-10">
+          <h1 className="text-5xl font-bold text-center lg:text-start leading-tight font-montserrat"><span className="">Best Exchange to Buy,</span> <br /> <span className="text-primaryCyan">Sell and Trade Crypto</span></h1>
+          <p className="text-xl text-gray-600 text-center lg:text-start mt-4 mb-5 font-century-gothic">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut la.</p>
+          <PrimaryButton title="Get Started" />
+        </div>
+        <div className="flex w-[50rem] flex-1 flex-col relative mb-10">
+          <img src={mobile1} className="lg:w-[25rem] md:w-[20rem] w-[15rem] translate-y-10 md:translate-y-14 lg:translate-x-12 mx-auto" alt="Mobile application showing crypto trading features" />
+          <img src={mobile2} className="lg:w-[50rem] md:w-[30rem] w-[25rem] mx-auto"  alt="Mobile app interface with trading options" />
         </div>
 
         {/* Right Section */}

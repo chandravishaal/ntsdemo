@@ -5,7 +5,7 @@ const MetricsBytes = () => {
     <div id="metrics-bytes" className="container mx-auto py-8 px-4">
       {/* Header Section */}
       <div className="text-start mb-8">
-        <h1 className="text-3xl md:text-4xl font-bold font-century-gothic">North Star Metrics Bytes</h1>
+        <h1 className="text-3xl md:text-4xl font-bold font-montserrat">North Star Metrics Bytes</h1>
         <p className="text-lg md:text-xl text-gray-600 mt-2 font-century-gothic">
           Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           <br />
@@ -23,7 +23,7 @@ const MetricsBytes = () => {
             className="w-full h-52 sm:h-60 object-cover"
           />
           <div className="p-4">
-            <h3 className="text-lg md:text-xl font-semibold font-century-gothi">Lorem Ipsum is simply</h3>
+            <h3 className="text-lg md:text-xl font-semibold font-century-gothic">Lorem Ipsum is simply</h3>
             <p className="text-gray-600 mt-2 text-sm md:text-base font-century-gothic">
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
               Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,

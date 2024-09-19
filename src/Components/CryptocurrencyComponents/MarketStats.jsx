@@ -20,7 +20,7 @@ const MarketStatsDropdown = () => {
 
   const accordionData = [
     {
-      title: <h4 className='text-lg md:text-3xl pl-7 font-century-gothic'>Market stats</h4>,
+      title: <h4 className='text-lg md:text-3xl pl-7 font-montserrat'>Market stats</h4>,
       content: (
         <div className="flex flex-wrap justify-center p-4 md:p-10">
           <div className="w-full md:w-1/3 p-4">
@@ -76,7 +76,7 @@ const MarketStatsDropdown = () => {
       ),
     },
     {
-      title: <h4 className='text-lg md:text-3xl pl-7 font-century-gothic'>Market performance</h4>,
+      title: <h4 className='text-lg md:text-3xl pl-7 font-montserrat'>Market performance</h4>,
       content: (
         <div className="flex flex-wrap justify-center p-4 md:p-10">
           <div className="w-full md:w-1/3 p-4">
@@ -138,7 +138,7 @@ const MarketStatsDropdown = () => {
     },
 
     {
-      title: <h4 className='text-lg md:text-3xl pl-7 font-century-gothic'>Market benchmarks</h4>,
+      title: <h4 className='text-lg md:text-3xl pl-7 font-montserrat'>Market benchmarks</h4>,
       content: (
         <div className="flex flex-wrap justify-center p-4 md:p-10">
           <div className="w-full md:w-1/3 p-4">
@@ -209,7 +209,7 @@ const MarketStatsDropdown = () => {
 
   return (
     <div className="container mx-auto py-8 px-4 md:px-0">
-      <h2 className="text-2xl md:text-3xl font-bold mb-6">Market Overview</h2>
+      <h2 className="text-2xl md:text-3xl font-bold mb-6 font-montserrat">Market Overview</h2>
       <div className="border border-black ">
         {accordionData.map((item, index) => (
           <div key={index} className="border border-black">

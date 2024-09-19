@@ -15,10 +15,10 @@ const CryptoLayout = () => {
       {/* People also view section */}
       <section className="mb-12 bg-cyan-50">
   <div className="container mx-auto py-10 md:py-20 px-4">
-    <h2 className="text-3xl md:text-4xl font-semibold text-center mb-4 md:mb-6 font-century-gothic text-gray-900">
+    <h2 className="text-3xl md:text-4xl font-semibold text-center mb-4 md:mb-6 font-montserrat text-gray-900">
       People also view
     </h2>
-    <p className="text-center text-base md:text-xl mb-6 md:mb-8">
+    <p className="text-center text-base font-century-gothic md:text-xl mb-6 md:mb-8">
       People who viewed Bitcoin tend to also <br /> view the following cryptocurrencies.
     </p>
 
@@ -74,7 +74,7 @@ const CryptoLayout = () => {
 
       {/* Popular cryptocurrencies section */}
       <section className="mb-12  p-6 rounded-lg  container mx-auto  py-8">
-  <h2 className="text-4xl font-semibold text-center mb-4 md:mb-6 font-century-gothic ">Popular cryptocurrencies</h2>
+  <h2 className="text-4xl font-semibold text-center mb-4 md:mb-6 font-montserrat ">Popular cryptocurrencies</h2>
   <p className="text-center text-xl mb-6 md:mb-8 font-century-gothic">A selection of cryptocurrencies in the top 50 by market cap.</p>
   <div className="grid grid-cols-4 gap-8 justify-items-center">
     <div className="flex flex-col items-center">
@@ -115,7 +115,7 @@ const CryptoLayout = () => {
 
       {/* Recently added section */}
       <section className="mb-12 container mx-auto  py-8">
-        <h2 className="text-4xl font-semibold text-center mb-4 md:mb-6 font-century-gothic ">Recently added</h2>
+        <h2 className="text-4xl font-semibold text-center mb-4 md:mb-6 font-montserrat ">Recently added</h2>
         <p className="text-center text-xl mb-6 md:mb-8 font-century-gothic">A selection of the most recently added cryptocurrencies.</p>
         <div className="flex justify-center md:space-x-44 space-x-20">
           <div className="flex flex-col items-center">
@@ -180,7 +180,7 @@ const CryptoLayout = () => {
 
       {/* Advanced trading section */}
       <section className="mb-12  p-6 rounded-lg  container mx-auto  py-8">
-        <h2 className="text-4xl font-semibold text-center mb-4 md:mb-6 font-century-gothic ">Advanced trading</h2>
+        <h2 className="text-4xl font-semibold text-center mb-4 md:mb-6 font-montserrat ">Advanced trading</h2>
         <p className="text-center text-xl mb-6 md:mb-8 font-century-gothic">Here is a selection of spot and futures markets that people watch.</p>
         <div className="grid grid-cols-5 gap-8 justify-items-center">
           <div className="flex flex-col items-center">
