@@ -28,7 +28,7 @@ const MetricsBytes = () => {
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
               Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
             </p>
-            <button className="mt-4 bg-[#03CBD2] text-black font-century-gothic font-semibold px-4 py-2 text-sm md:text-base rounded-full">
+            <button className="mt-4 bg-[#0DCBF8] text-black font-century-gothic font-semibold px-4 py-2 text-sm md:text-base rounded-full">
               Read Full Story
             </button>
           </div>
@@ -47,7 +47,7 @@ const MetricsBytes = () => {
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
               Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
             </p>
-            <button className="mt-4 bg-[#03CBD2] text-black font-century-gothic font-semibold px-4 py-2 text-sm md:text-base rounded-full">
+            <button className="mt-4 bg-[#0DCBF8] text-black font-century-gothic font-semibold px-4 py-2 text-sm md:text-base rounded-full">
               Read Full Story
             </button>
           </div>
@@ -66,7 +66,7 @@ const MetricsBytes = () => {
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
               Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
             </p>
-            <button className="mt-4 bg-[#03CBD2] text-black font-century-gothic font-semibold px-4 py-2 text-sm md:text-base rounded-full">
+            <button className="mt-4 bg-[#0DCBF8] text-black font-century-gothic font-semibold px-4 py-2 text-sm md:text-base rounded-full">
               Read Full Story
             </button>
           </div>

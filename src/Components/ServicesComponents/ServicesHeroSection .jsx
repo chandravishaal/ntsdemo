@@ -146,7 +146,7 @@ const ServicesHeroSection = () => {
           <p className="text-xl text-gray-600 text-center lg:text-start mt-4 mb-5">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut la.
           </p>
-          <button className="bg-primaryCyan text-white py-3 px-6 rounded-lg font-semibold hover:bg-opacity-80 transition-all">
+          <button className="bg-[#0DCBF8] text-white py-3 px-6 rounded-lg font-semibold hover:bg-opacity-80 transition-all">
             Get Started
           </button>
         </div>

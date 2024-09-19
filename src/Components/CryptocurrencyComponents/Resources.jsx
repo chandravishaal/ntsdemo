@@ -44,11 +44,11 @@ const Resources = () => {
 
       {/* Buttons Section */}
       <div className="flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-4 mb-6 sm:mb-8">
-        <button className="bg-[#03CBD2] text-black px-4 py-2 rounded-full flex items-center space-x-2">
+        <button className="bg-[#0DCBF8] text-black px-4 py-2 rounded-full flex items-center space-x-2">
           <i className="ri-newspaper-fill"></i>
           <span className='font-bold font-century-gothic'>Whitepaper</span>
         </button>
-        <button className="bg-[#03CBD2] text-black px-4 py-2 rounded-full flex items-center space-x-2">
+        <button className="bg-[#0DCBF8] text-black px-4 py-2 rounded-full flex items-center space-x-2">
           <i className="ri-global-fill"></i>
           <span className='font-bold font-century-gothic'>Official website</span>
         </button>
