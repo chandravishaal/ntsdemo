@@ -37,7 +37,7 @@ const Bitcoin = () => {
 
       {/* Content Section */}
       <div className="content-grid grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-10 mt-6">
-        {/* Chart and Price Section */}
+        {/* Chart and Price Section   */}
         <div className="chart-price-section p-6 bg-white rounded-lg shadow-md">
           {/* Timeframe Buttons with Space Between */}
           <div className="flex justify-between mb-4">
