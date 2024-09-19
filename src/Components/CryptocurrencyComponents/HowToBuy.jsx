@@ -57,7 +57,7 @@ const HowToBuy = () => {
             corporis, quae qui error maxime quasi, obcaecati maiores natus
             earum eos vel odit tempore fugiat.
           </p>
-          <button className="px-6 py-3 mt-7 mb-7 md:mt-5 font-century-gothic font-semibold text-lg md:text-xl bg-[#03CBD2] text-black rounded-lg">
+          <button className="px-6 py-3 mt-7 mb-7 md:mt-5 font-century-gothic font-semibold text-lg md:text-xl bg-[#0DCBF8] text-black rounded-lg">
             Read More
           </button>
         </div>

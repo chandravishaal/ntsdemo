@@ -107,8 +107,8 @@ const ContentSection = () => {
         {
           opacity: 1,
           y: 0,
-          duration: 1,
-          stagger: 0.3, // Stagger animation for each element
+          duration: 0.8,
+          stagger: 0.1, // Stagger animation for each element
           scrollTrigger: {
             trigger: section,  // Trigger animation when this section is in view
             start: 'top 80%',  // When the top of the section reaches 80% of the viewport

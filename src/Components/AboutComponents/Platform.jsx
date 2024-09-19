@@ -90,7 +90,7 @@ const Platform = () => {
       { opacity: 0, y: 50 }, // Text starting position: moved down (y: 50) and faded out
       {
         opacity: 1,
-        y: 10, // End position: natural position
+        y: 0, // End position: natural position
         duration: 1,
         ease: 'power3.out',
         stagger: 0.3, // Stagger the animation
