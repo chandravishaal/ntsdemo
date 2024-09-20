@@ -388,20 +388,20 @@ const CryptoTable = () => {
                 <th className="px-4 py-2 border-b text-center font-montserrat ">Price</th>
               )}
               {visibleColumns.change && (
-                <th className="px-8 py-2 border-b text-center font-montserrat ">
+                <th className="px-8 py-2 border-b text-center whitespace-nowrap lg:whitespace-normal font-montserrat ">
                   24h %
                   <InfoTooltip text="The percentage of change in the value compared to 24 hours ago." />
                 </th>
               )}
               {visibleColumns.volume && (
-                <th className="px-4 py-2 border-b text-center font-montserrat ">
+                <th className="px-4 py-2 border-b text-center font-montserrat whitespace-nowrap lg:whitespace-normal ">
                   Volume (24h)
                   <InfoTooltip text="The total value of the currency that has been traded in the last 24 hours." />
                 </th>
               )}
               {visibleColumns.marketCap && (
                 <th
-                  className="px-4 py-2 cursor-pointer border-b text-center font-montserrat "
+                  className="px-4 py-2 cursor-pointer whitespace-nowrap lg:whitespace-normal  border-b text-center font-montserrat "
                   onClick={sortByMarketCap}
                 >
                   {sortDirection === "asc" ? "▲" : "▼"} Market Cap
@@ -410,7 +410,7 @@ const CryptoTable = () => {
               )}
 
               {visibleColumns.last7days && (
-                <th className="px-2 border-b text-center font-montserrat ">
+                <th className="px-2 border-b text-center font-montserrat whitespace-nowrap lg:whitespace-normal ">
                   Last 7 Days
                   <InfoTooltip text="This shows a sparkline graph of the last 7 days of the currency's value." />
                 </th>

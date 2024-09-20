@@ -74,13 +74,13 @@ const Page404 = () => {
           <div className="mt-2">
             <p className="text-gray-600 text-xl">Here are some useful links instead:</p>
             <div className="space-x-1 pr-24 ">
-              <a href="#" className="text-gray-600 hover:underline text-xl">Learning Center |</a>
-              <a href="#" className="text-gray-600 hover:underline text-xl">Support |</a>
-              <a href="#" className="text-gray-600 hover:underline text-xl">Status |</a>
-              <a href="#" className="text-gray-600 hover:underline text-xl">Search |</a>
+              <Link to="/about" className="text-gray-600 hover:underline text-xl">About |</Link>
+              <Link to="/services" className="text-gray-600 hover:underline text-xl">Service |</Link>
+              <Link to="/feature" className="text-gray-600 hover:underline text-xl">Feature |</Link>
+              <Link to="/careers" className="text-gray-600 hover:underline text-xl">Careers |</Link>
             </div>
           </div>
-          <p className="text-gray-600 mt-2 text-xl">Not finding what you were looking for?<br /> Contact us at <a href="#" className="text-black font-semibold hover:underline">supportnsm@in</a></p>
+          <p className="text-gray-600 mt-2 text-xl">Not finding what you were looking for?<br /> Contact us at <a href="#" className="text-black font-semibold hover:underline">support@ntsmetrics</a></p>
           <div className="mt-4 mb-8">
             <Link to="/">
             <PrimaryButton title="Back to Home" />
