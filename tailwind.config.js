@@ -15,7 +15,7 @@ export default {
     },
     extend: {
       colors: {
-        primaryCyan: '#16D5FF', // Add your custom color here
+        primaryCyan: '#00d1ff', // Add your custom color here
         customRed: '#f87171',  // Another example of a custom color
       },
       fontSize: {

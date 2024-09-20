@@ -43,7 +43,7 @@ const WhatMakesUsDifferent = () => {
   }, []);
 
   return (
-    <div className="bg-white py-12 px-10 sm:px-6 md:px-8 lg:px-0"> {/* Add padding for small screens */}
+    <div className="bg-white py-12 pb-20 px-10 sm:px-6 md:px-8 lg:px-0"> {/* Add padding for small screens */}
       
 
       {/* Title Section */}
@@ -55,7 +55,7 @@ const WhatMakesUsDifferent = () => {
       </div>
 
       {/* Main Content Section */}
-      <div className="relative max-w-8xl jost-uniquifier mx-auto mt-24">
+      <div className="relative jost-uniquifier container mx-auto mt-24">
         {/* Centered Image */}
         <img
           src={Group}
@@ -64,12 +64,12 @@ const WhatMakesUsDifferent = () => {
         />
 
         {/* Features for screen size greater than 1400px */}
-        <div className="absolute top-1/2 left-[3%] -translate-y-1/2 space-y-24 text-right hidden lg:block left-column">
+        <div className="absolute top-1/2 left-[1%] -translate-y-1/2 space-y-24 text-right hidden lg:block left-column">
           <div className="flex items-center space-x-4 flex-row-reverse feature-item feature-item-animate">
             <img src={aiicon} alt="AI-Powered Trading Insights" className="w-12 h-12 ml-8" />
             <div>
-              <h3 className="text-lg font-semibold ml-44 font-century-gothic">AI-Powered Trading Insights</h3>
-              <p className="text-gray-500 text-sm w-64 ml-44 font-century-gothic">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              <h3 className="text-lg font-semibold font-century-gothic">AI-Powered Trading Insights</h3>
+              <p className="text-gray-500 text-sm w-64 font-century-gothic">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             </div>
           </div>
 
@@ -90,7 +90,7 @@ const WhatMakesUsDifferent = () => {
           </div>
         </div>
 
-        <div className="absolute top-1/2 right-4 -translate-y-1/2 space-y-24 mr-24 hidden lg:block right-column">
+        <div className="absolute top-1/2 right-[1%] -translate-y-1/2 space-y-24 hidden lg:block right-column">
           <div className="flex items-center space-x-4 feature-item feature-item-animate">
             <img src={payment} alt="Localized Payment Methods" className="w-12 h-12 -ml-12" />
             <div>
