@@ -116,7 +116,7 @@ function PressRoom() {
     <section className="bg-white container mx-auto mb-24">
       <div className="text-center font-Antipasto pro">
         <h2 className="text-4xl font-bold mt-8 font-montserrat">Press Room</h2>
-        <p className="text-black mt-4 font-semibold text-center font-montserrat">
+        <p className="text-black mt-4 font-semibold text-center font-century-gothic">
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry
           <br />
           standard dummy text ever since the 1500s,
