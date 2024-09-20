@@ -220,7 +220,7 @@ const WhatMakesUsDifferent = () => {
   }, []);
 
   return (
-    <div className="bg-white py-12">
+    <div className="bg-white py-12 px-10 sm:px-6 md:px-8 lg:px-0"> {/* Add padding for small screens */}
       <style>{`
         @media (max-width: 1400px) {
           .left-column, .right-column {
@@ -261,8 +261,8 @@ const WhatMakesUsDifferent = () => {
 
       {/* Title Section */}
       <div className="text-center">
-        <h2 className="text-4xl font-semibold jost-uniquifier mb-8 font-montserrat">What makes us Different</h2>
-        <p className="mt-5 w-2/3 lg:w-1/2 jost-uniquifier mx-auto font-century-gothic">
+        <h2 className="text-4xl font-semibold jost-uniquifier w-[80%] mb-8 mx-auto text-center font-montserrat">What makes us Different</h2>
+        <p className="mt-5 w-[75%] lg:w-1/2 jost-uniquifier mx-auto font-century-gothic">
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
         </p>
       </div>
@@ -273,12 +273,12 @@ const WhatMakesUsDifferent = () => {
         <img
           src={Group}
           alt="Group difference"
-          className="mx-auto w-auto lg:w-1/3 centered-image"
+          className="mx-auto w-auto lg:w-1/3"
         />
 
         {/* Features for screen size greater than 1400px */}
-        <div className="absolute top-1/2 left-16 -translate-y-1/2 space-y-24 text-right hidden lg:block left-column">
-          <div className="flex items-center space-x-4 flex-row-reverse feature-item">
+        <div className="absolute top-1/2 left-[3%] -translate-y-1/2 space-y-24 text-right hidden lg:block left-column">
+          <div className="flex items-center space-x-4 flex-row-reverse">
             <img src={aiicon} alt="AI-Powered Trading Insights" className="w-12 h-12 ml-8" />
             <div>
               <h3 className="text-lg font-semibold ml-44 font-century-gothic">AI-Powered Trading Insights</h3>
@@ -286,7 +286,7 @@ const WhatMakesUsDifferent = () => {
             </div>
           </div>
 
-          <div className="flex items-center space-x-4 flex-row-reverse feature-item">
+          <div className="flex items-center space-x-4 flex-row-reverse">
             <img src={reward} alt="Reward programs" className="w-12 h-12 -ml-8 mr-20" />
             <div>
               <h3 className="text-lg font-semibold mr-14 font-century-gothic">Reward and Loyalty Programs</h3>
@@ -294,8 +294,8 @@ const WhatMakesUsDifferent = () => {
             </div>
           </div>
 
-          <div className="flex items-center space-x-4 flex-row-reverse feature-item">
-            <img src={risk} alt="Risk management" className="w-12 h-12 ml-12" />
+          <div className="flex items-center space-x-4 flex-row-reverse">
+            <img src={risk} alt="Risk management" className="w-12 h-12 ml-[8%]" />
             <div>
               <h3 className="text-lg font-semibold font-century-gothic">Advanced Risk Management Tools </h3>
               <p className="text-gray-500 text-sm w-64 ml-8 font-century-gothic">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
@@ -304,7 +304,7 @@ const WhatMakesUsDifferent = () => {
         </div>
 
         <div className="absolute top-1/2 right-4 -translate-y-1/2 space-y-24 mr-24 hidden lg:block right-column">
-          <div className="flex items-center space-x-4 feature-item">
+          <div className="flex items-center space-x-4">
             <img src={payment} alt="Localized Payment Methods" className="w-12 h-12 -ml-12 " />
             <div>
               <h3 className="text-lg font-semibold font-century-gothic">Localized Payment Methods</h3>
@@ -312,7 +312,7 @@ const WhatMakesUsDifferent = () => {
             </div>
           </div>
 
-          <div className="flex items-center space-x-4 feature-item">
+          <div className="flex items-center space-x-4">
             <img src={onboarding} alt="Customized Onboarding Experience" className="w-12 h-12 ml-8" />
             <div>
               <h3 className="text-lg font-semibold font-century-gothic">Customized Onboarding Experience</h3>
@@ -320,7 +320,7 @@ const WhatMakesUsDifferent = () => {
             </div>
           </div>
 
-          <div className="flex items-center space-x-4 feature-item">
+          <div className="flex items-center space-x-4">
             <img src={beginners} alt="Tailored for Beginners and Experts" className="w-12 h-12 -ml-12" />
             <div>
               <h3 className="text-lg font-semibold font-century-gothic">Tailored for Beginners and Experts</h3>
@@ -343,7 +343,7 @@ const WhatMakesUsDifferent = () => {
             <img src={reward} alt="Reward programs" className="w-12 h-12" />
             <div className="feature-text">
               <h3 className="text-lg font-semibold font-century-gothic">Reward and Loyalty Programs</h3>
-              <p className="text-gray-500 text-sm font-century-gothic">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              <p className="text-gray-500 text-sm">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             </div>
           </div>
 

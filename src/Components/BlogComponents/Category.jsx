@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import news from '../../assets/Images/Blog/icon1.png';
 import Market from '../../assets/Images/Blog/icon2.png';
 import investment from '../../assets/Images/Blog/icon3.png';
@@ -14,17 +16,17 @@ import Future from '../../assets/Images/Blog/icon12.png';
 
 const CategoryList = ({ title, items }) => {
   return (
-    <div className="w-full">
+    <div className="w-full category-list">
       <h2 className="text-xl font-bold mb-4">{title}</h2>
       <ul className="space-y-7">
         {items.map((item, index) => (
-          <li key={index} className="flex items-center">
+          <li key={index} className="flex items-center feature">
             <img
               src={item.icon}
               alt={item.altText}
               className="w-6 h-6 mr-2"
             />
-            <button className='font-century-gothic'>{item.description}</button>
+            <button>{item.description}</button>
           </li>
         ))}
       </ul>
@@ -33,6 +35,36 @@ const CategoryList = ({ title, items }) => {
 };
 
 const Blog = () => {
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Animate the category list
+    gsap.from('.feature', {
+      scrollTrigger: {
+        trigger: '.category-list', // Trigger the animation when category list enters the viewport
+        start: 'top 75%', // Animation starts when the top of the section is 75% of the way down the viewport
+        toggleActions: 'play none none reset',
+      },
+      opacity: 0,
+      y: 50,
+      duration: 0.8,
+      ease: 'power3.out',
+      stagger: 0.3, // Delay between each feature animation
+    });
+
+    // Animate the vertical lines
+    gsap.from('.vertical-line', {
+      scrollTrigger: {
+        trigger: '.category-list',
+        start: 'top center',
+        toggleActions: 'play none none reset',
+      },
+      height: 0,
+      duration: 1,
+      ease: 'power3.out',
+    });
+  }, []);
+
   const categories = [
     {
       title: "Category 1",
@@ -66,10 +98,10 @@ const Blog = () => {
   return (
     <div className="py-12 -mt-5" style={{ backgroundColor: "#e0ffff" }}>
       <div className="container mx-auto bg-white p-8 rounded-lg jost-uniquifier relative">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-36 relative font-century-gothic">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-36 relative">
           {/* Vertical lines */}
-          <div className="hidden lg:block absolute left-[33%] top-0 h-full w-0.5 bg-gray-300 opacity-80 -translate-x-16"></div>
-          <div className="hidden lg:block absolute left-[66%] top-0 h-full w-0.5 bg-gray-300 opacity-80"></div>
+          <div className="hidden lg:block absolute left-[33%] top-0 h-full w-0.5 bg-gray-300 opacity-80 -translate-x-16 vertical-line"></div>
+          <div className="hidden lg:block absolute left-[66%] top-0 h-full w-0.5 bg-gray-300 opacity-80 vertical-line"></div>
           
           {categories.map((category, index) => (
             <CategoryList key={index} title={category.title} items={category.items} />

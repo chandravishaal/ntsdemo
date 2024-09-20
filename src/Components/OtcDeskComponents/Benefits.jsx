@@ -135,9 +135,7 @@ const Benefits = () => {
     <div className="h-auto w-auto py-10 bg-cyan-50 mb-2">
       {/* Title Section */}
       <div className="text-center mt-8 mb-12 flex flex-col items-center px-4">
-        <h2 className="text-2xl md:text-4xl jost-uniquifier font-semibold font-montserrat">
-          Benefits With North Star Metrics OTC
-        </h2>
+        <h2 className="text-2xl md:text-4xl jost-uniquifier font-semibold font-montserrat">Benefits With North Star Metrics OTC</h2>
         <p className="mt-5 w-full md:w-2/3 jost-uniquifier lg:w-1/2 text-center font-century-gothic">
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
         </p>
@@ -146,110 +144,74 @@ const Benefits = () => {
       {/* Benefits Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-2 gap-8 mx-auto px-4 lg:px-32">
         {/* Benefit 1 */}
-        <div className="benefit-card bg-white p-4 rounded-lg flex flex-col items-end justify-between">
+        <div className="bg-white p-4 rounded-lg flex flex-col items-end justify-between ">
           <div>
-          <h3 className="text-lg md:text-xl ml-4 mt-4 font-semibold font-century-gothic">
-              Diverse Cryptocurrency Options
-            </h3>
-            <p className="text-gray-600 ml-4 mt-4 mb-4 md:-mb-4 w-full md:w-3/4 font-century-gothic">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            <h3 className="text-lg md:text-xl ml-4 mt-4 jost-uniquifier font-semibold font-century-gothic">Diverse Cryptocurrency Options</h3>
+            <p className="text-gray-600 jost-uniquifier ml-4 mt-4 mb-4 md:-mb-4 w-full md:w-3/4 font-century-gothic">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </p>
-          </div>
-          <img
-            src={cryptocurrency}
-            alt="Diverse Cryptocurrency Options"
-            className="w-12 h-12 md:w-18 md:h-18 mr-4"
-          />
+          </div> 
+          <img src={cryptocurrency} alt="Diverse Cryptocurrency Options" className="w-12 h-12 md:w-18 md:h-18 mr-4" />
           <img src={shadow} className="w-12 md:w-16 mr-4" />
         </div>
 
         {/* Benefit 2 */}
-        <div className="benefit-card bg-white p-4 rounded-lg jost-uniquifier flex flex-col items-end justify-between">
+        <div className="bg-white p-4 rounded-lg jost-uniquifier flex flex-col items-end justify-between ">
           <div>
-            <h3 className="text-lg md:text-xl ml-4 mt-4 font-semibold font-century-gothic">
-              Instant Transactions
-            </h3>
+            <h3 className="text-lg md:text-xl ml-4 mt-4 font-semibold font-century-gothic">Instant Transactions</h3>
             <p className="text-gray-600 ml-4 mt-4 mb-4 md:-mb-4 w-full md:w-3/4 font-century-gothic">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </p>
           </div>
-          <img
-            src={transactions}
-            alt="Instant Transactions"
-            className="w-12 h-12 md:w-18 md:h-18 mr-4"
-          />
+          <img src={transactions} alt="Instant Transactions" className="w-12 h-12 md:w-18 md:h-18 mr-4" />
           <img src={shadow} className="w-12 md:w-16 mr-4" />
         </div>
 
         {/* Benefit 3 */}
-        <div className="benefit-card bg-white p-4 rounded-lg jost-uniquifier flex flex-col items-end justify-between">
+        <div className="bg-white p-4 rounded-lg jost-uniquifier flex flex-col items-end justify-between ">
           <div>
-            <h3 className="text-lg md:text-xl ml-4 mt-4 font-semibold font-century-gothic">
-              Transparency and Trust
-            </h3>
+            <h3 className="text-lg md:text-xl ml-4 mt-4 font-semibold font-century-gothic">Transparency and Trust</h3>
             <p className="text-gray-600 ml-4 mt-4 mb-4 md:-mb-4 w-full md:w-3/4 font-century-gothic">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </p>
           </div>
-          <img
-            src={transparency}
-            alt="Transparency and Trust"
-            className="w-12 h-12 md:w-18 md:h-18 mr-4"
-          />
+          <img src={transparency} alt="Transparency and Trust" className="w-12 h-12 md:w-18 md:h-18 mr-4" />
           <img src={shadow} className="w-12 md:w-16 mr-4" />
         </div>
 
         {/* Benefit 4 */}
-        <div className="benefit-card bg-white p-4 rounded-lg jost-uniquifier flex flex-col items-end justify-between">
+        <div className="bg-white p-4 rounded-lg jost-uniquifier flex flex-col items-end justify-between ">
           <div>
-            <h3 className="text-lg md:text-xl ml-4 mt-4 font-semibold font-century-gothic">
-              Mobile-Friendly Experience
-            </h3>
-            <p className="text-gray-600 ml-4 mt-4 mb-4 md:-mb-4 w-full md:w-3/4 font-century-gothic">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            <h3 className="text-lg md:text-xl ml-4 mt-4 font-semibold font-century-gothic">Mobile-Friendly Experience</h3>
+            <p className="text-gray-600 ml-4 mt-4 mb-4 md:-mb-4 w-full md:w-3/4 font-century-gothic ">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </p>
           </div>
-          <img
-            src={mobile}
-            alt="Mobile-Friendly Experience"
-            className="w-12 h-12 md:w-18 md:h-18 mr-4"
-          />
+          <img src={mobile} alt="Mobile-Friendly Experience" className="w-12 h-12 md:w-18 md:h-18 mr-4" />
           <img src={shadow} className="w-12 md:w-16 mr-4" />
         </div>
 
         {/* Benefit 5 */}
-        <div className="benefit-card bg-white p-4 rounded-lg jost-uniquifier flex flex-col items-end justify-between">
+        <div className="bg-white p-4 rounded-lg jost-uniquifier flex flex-col items-end justify-between ">
           <div>
-            <h3 className="text-lg md:text-xl ml-4 mt-4 font-semibold font-century-gothic">
-              Partnerships and Collaborations
-            </h3>
+            <h3 className="text-lg md:text-xl ml-4 mt-4 font-semibold font-century-gothic">Partnerships and Collaborations</h3>
             <p className="text-gray-600 ml-4 mt-4 mb-4 md:-mb-4 w-full md:w-3/4 font-century-gothic">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </p>
           </div>
-          <img
-            src={partnerships}
-            alt="Partnerships and Collaborations"
-            className="w-12 h-12 md:w-18 md:h-18 mr-4"
-          />
+          <img src={partnerships} alt="Partnerships and Collaborations" className="w-12 h-12 md:w-18 md:h-18 mr-4" />
           <img src={shadow} className="w-12 md:w-16 mr-4" />
         </div>
 
         {/* Benefit 6 */}
-        <div className="benefit-card bg-white p-4 rounded-lg jost-uniquifier flex flex-col items-end justify-between">
+        <div className="bg-white p-4 rounded-lg jost-uniquifier flex flex-col items-end justify-between ">
           <div>
-            <h3 className="text-lg md:text-xl ml-4 mt-4 font-semibold font-century-gothic">
-              Tailored Investment Plans
-            </h3>
+            <h3 className="text-lg md:text-xl ml-4 mt-4 font-semibold font-century-gothic">Tailored Investment Plans</h3>
             <p className="text-gray-600 ml-4 mt-4 mb-4 md:-mb-4 w-full md:w-3/4 font-century-gothic">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </p>
           </div>
-          <img
-            src={investment}
-            alt="Tailored Investment Plans"
-            className="w-12 h-12 md:w-18 md:h-18 mr-4"
-          />
+          <img src={investment} alt="Tailored Investment Plans" className="w-12 h-12 md:w-18 md:h-18 mr-4" />
           <img src={shadow} className="w-12 md:w-16 mr-4" />
         </div>
       </div>
