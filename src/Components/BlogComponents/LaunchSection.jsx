@@ -27,7 +27,7 @@ const LaunchSection = () => {
         <div className="flex justify-center mb-6">
           <img
             src={rocket}
-            className="launch-image w-full h-auto"
+            className="launch-image w-full h-auto rounded-xl"
             alt="Rocket"
           />
         </div>
