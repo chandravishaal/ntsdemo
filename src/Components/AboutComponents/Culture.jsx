@@ -6,13 +6,16 @@ import PrimaryButton from "../../Common/PrimaryButton";
 gsap.registerPlugin(ScrollTrigger);
 
 const Culture = () => {
-  const leftSectionRef = useRef(null); // Ref for left section (text + button)
+  const leftSectionRef = useRef(null); // Ref for left section (text only)
   const rightSectionRef = useRef(null); // Ref for right section (image)
+  const buttonRef = useRef(null); // Ref for the button
 
   useEffect(() => {
-    const leftElements = leftSectionRef.current.children; // Get the children of the left section
+    const leftElements = [...leftSectionRef.current.children].filter(
+      (child) => child !== buttonRef.current
+    ); // Exclude the button from left section animation
 
-    // Animation for the left section (staggered animation)
+    // Animation for the left section (excluding the button)
     gsap.fromTo(
       leftElements,
       {
@@ -23,14 +26,32 @@ const Culture = () => {
         opacity: 1,
         x: 0,
         duration: 1.2,
-        stagger: 0.2, // Stagger effect for children
         ease: 'power3.out',
         scrollTrigger: {
           trigger: leftSectionRef.current,
           start: 'top 80%',
-          toggleActions: 'restart none none none', // Restart animation when it enters the viewport
-          onLeave: () => gsap.set(leftElements, { opacity: 0, x: -50 }), // Reset when scrolled out
-          onEnterBack: () => gsap.fromTo(leftElements, { opacity: 0, x: -50 }, { opacity: 1, x: 0, stagger: 0.2, duration: 1.2 }), // Animate when scrolling back up
+          toggleActions: 'restart none none reset', // Restart animation when it enters the viewport
+        },
+      }
+    );
+
+    // Separate animation for the button
+    gsap.fromTo(
+      buttonRef.current,
+      {
+        opacity: 0,
+        scale: 0, // Slightly smaller button initially
+      },
+      {
+        opacity: 1,
+        scale: 1,
+        duration: 1.2,
+        delay:0.1,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: buttonRef.current,
+          start: 'top 80%',
+          toggleActions: 'restart none none reset',
         },
       }
     );
@@ -50,9 +71,7 @@ const Culture = () => {
         scrollTrigger: {
           trigger: rightSectionRef.current,
           start: 'top 80%',
-          toggleActions: 'restart none none none', // Restart animation when it enters the viewport
-          onLeave: () => gsap.set(rightSectionRef.current, { opacity: 0, x: 50 }), // Reset when scrolled out
-          onEnterBack: () => gsap.fromTo(rightSectionRef.current, { opacity: 0, x: 50 }, { opacity: 1, x: 0, duration: 1.2 }), // Animate when scrolling back up
+          toggleActions: 'restart none none reset',
         },
       }
     );
@@ -83,7 +102,10 @@ const Culture = () => {
             crypto buying and selling, seeking talented individuals to join our
             dynamic, innovative work environment.
           </p>
-          <PrimaryButton title="See available vacancies" />
+          {/* Button */}
+          <div ref={buttonRef}>
+            <PrimaryButton title="See available vacancies" />
+          </div>
         </div>
 
         {/* Right Section */}
