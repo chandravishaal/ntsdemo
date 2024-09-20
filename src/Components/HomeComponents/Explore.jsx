@@ -50,7 +50,7 @@ const Explore = () => {
           <img data-aos="fade-up" 
           data-aos-duration="2000" 
           src={explorebanner} className="w-[70%] mx-auto md:w-[40%] mb-10 lg:w-[70%] lg:-translate-x-5 lg:translate-y-7"
-          alt="A banner image representing cryptocurrency exploration" />
+          alt=" current cryptocurrency market prices" />
         </div>
 
         <div className="flex lg:flex-1 flex-col items-center lg:items-start gap-2 px-5">

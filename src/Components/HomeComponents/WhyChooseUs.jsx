@@ -88,7 +88,7 @@ const WhyChooseUs = () => {
           <img
             src={whyChooseUsBanner}
             className="max-w-[400px] translate-y-20 mx-auto md:translate-y-0 ml-auto"
-            alt="North Star Metrics overview showcasing benefits of choosing our cryptocurrency platform"
+            alt="trending coins"
           />
         </div>
       </div>

@@ -118,7 +118,7 @@ const Bitcoin = () => {
           </div>
 
           {/* Buy Button */}
-          <button className="bg-[#0DCBF8] text-white w-full py-4 mt-10 rounded-2xl text-base md:text-lg font-bold font-century-gothic">
+          <button className="bg-[#0DCBF8] text-white w-full py-4 mt-10 rounded-2xl text-base md:text-lg font-bold font-century-gothic" alt="user options to buy or sell digital currencies">
             Buy Bitcoin
           </button>
         </div>

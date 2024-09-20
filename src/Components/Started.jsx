@@ -75,7 +75,7 @@ const Started = () => {
 
         <div className='relative lg:pr-32 md:pr-0 pr-0 mt-10'>
           <div className='bg-white w-[250px] h-[250px] lg:w-[350px] lg:h-[350px] rounded-full flex items-center justify-center mb-24 lg:mb-0 shadow-2xl relative'>
-            <img src="https://ntsmetrics.com/img/nsm-logo-blue.png" className='lg:w-3/6 w-[100px]' alt="" />
+            <img src="https://ntsmetrics.com/img/nsm-logo-blue.png" className='lg:w-3/6 w-[100px]' alt="user options to buy or sell digital currencies" />
             <div className='absolute bg-white p-2 lg:w-[180px] lg:h-[180px] w-[130px] h-[130px] lg:-left-24 -left-14  rounded-full shadow-2xl flex flex-col items-center justify-center gap-3 animate-countup'>
               <img src={icon11} className='w-12 lg:w-16' alt="" />
               <p className="text-lg font-century-gothic font-bold text-black">

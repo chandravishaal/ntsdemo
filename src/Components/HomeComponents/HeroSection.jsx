@@ -102,7 +102,7 @@ const HeroSection = () => {
 
         {/* hero-image */}
         <div className="select-none w-full mx-auto relative">
-          <img src={mobilebackBanner} className='absolute rotate-45 bottom-10 md:hidden' alt="Decorative background banner with abstract shapes" />
+          <img src={mobilebackBanner} className='absolute rotate-45 bottom-10 md:hidden' alt="North star metrics buy and sell cryptocurrencies platform" />
           <img data-aos="fade-up" data-aos-duration="2000" src={heroMobiles} loading='lazy' className='w-96 md:w-full mx-auto lg:w-full mt-10 hero-phone-banner' alt="Hero banner showcasing mobile app interface" />
         </div>
 
