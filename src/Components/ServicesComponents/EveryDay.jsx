@@ -85,25 +85,25 @@ const EveryDay = () => {
             className="space-y-2 md:space-y-3 text-xl md:text-2xl"
           >
             <li
-              className="text-gray-800 font-antipasto-pro cursor-pointer transition-transform transform hover:scale-125 hover:font-bold  duration-500 ease-in-out"
+              className="text-gray-800 font-century-gothic cursor-pointer transition-transform transform hover:scale-125 hover:font-bold  duration-500 ease-in-out"
               onMouseEnter={() => setCurrentImage(imageEarn)}
             >
               Buy / Sell
             </li>
             <li
-              className="text-gray-800 font-antipasto-pro cursor-pointer transition-transform transform hover:scale-125 hover:font-bold  duration-500 ease-in-out"
+              className="text-gray-800 font-century-gothic cursor-pointer transition-transform transform hover:scale-125 hover:font-bold  duration-500 ease-in-out"
               onMouseEnter={() => setCurrentImage(imagePaymentMethod)}
             >
               Earn
             </li>
             <li
-              className="text-gray-800 font-antipasto-pro cursor-pointer transition-transform transform hover:scale-125 hover:font-bold  duration-500 ease-in-out"
+              className="text-gray-800 font-century-gothic cursor-pointer transition-transform transform hover:scale-125 hover:font-bold  duration-500 ease-in-out"
               onMouseEnter={() => setCurrentImage(imageAcademy)}
             >
               Payment Method
             </li>
             <li
-              className="text-gray-800 font-antipasto-pro cursor-pointer transition-transform transform hover:scale-125 hover:font-bold  duration-500 ease-in-out"
+              className="text-gray-800 font-century-gothic cursor-pointer transition-transform transform hover:scale-125 hover:font-bold  duration-500 ease-in-out"
               onMouseEnter={() => setCurrentImage(imageConverter)}
             >
               Academy
@@ -116,7 +116,7 @@ const EveryDay = () => {
             </li>
 
             <li
-              className="text-gray-800 font-antipasto-pro cursor-pointer transition-transform transform hover:scale-125 hover:font-bold duration-500 ease-in-out"
+              className="text-gray-800 font-century-gothic cursor-pointer transition-transform transform hover:scale-125 hover:font-bold duration-500 ease-in-out"
               onMouseEnter={() => setCurrentImage(imageBuySell)}
             >
               Wallet
