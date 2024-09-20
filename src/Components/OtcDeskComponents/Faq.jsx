@@ -223,7 +223,7 @@ const Faq = () => {
                 >
                   <div className="flex items-center">
                     <div>
-                      <span className="bg-gradient-to-r from-[#027392] to-[#3BB9E3] text-white 
+                      <span className="bg-primaryCyan text-black 
                         h-[4rem] w-[4rem] flex items-center justify-center mr-5">
                         {index + 1}
                       </span>

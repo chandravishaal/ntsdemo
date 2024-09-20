@@ -172,7 +172,7 @@ const Countries = () => {
 
   return (
     <section
-      className="container mx-auto bg-primaryCyan text-white py-12 mt-12 mb-12"
+      className="container mx-auto bg-primaryCyan text-white rounded-lg py-12 mt-12 mb-12"
       ref={sectionRef} // Apply the reference to the section
     >
       {/* For mobile and tablet, we'll switch to a more compact grid */}
@@ -180,8 +180,8 @@ const Countries = () => {
         
         {/* Supported Countries */}
         <div className="grid-item flex flex-col items-center border-b-2 sm:border-b-0 sm:border-r-2 border-white pb-6 sm:pb-0">
-          <h3 className="text-4xl md:text-5xl font-extrabold font-eras-bold counter" data-count="170">0</h3>
-          <p className="mt-2 text-lg md:text-xl font-century-gothic text-center">
+          <h3 className="text-4xl md:text-5xl font-extrabold text-black font-eras-bold counter" data-count="170">0</h3>
+          <p className="mt-2 text-lg md:text-xl font-century-gothic text-center text-black">
             Supported <br /> countries
           </p>
           <div className="flex mt-4 -space-x-3">
@@ -202,8 +202,8 @@ const Countries = () => {
 
         {/* Fiat Currencies */}
         <div className="grid-item flex flex-col items-center border-b-2 sm:border-b-0 sm:border-r-2 border-white pb-6 sm:pb-0">
-          <h3 className="text-4xl md:text-5xl font-extrabold font-eras-bold counter" data-count="50">0 </h3>
-          <p className="mt-2 text-lg md:text-xl text-center font-century-gothic">
+          <h3 className="text-4xl md:text-5xl font-extrabold font-eras-bold counter text-black" data-count="50">0 </h3>
+          <p className="mt-2 text-lg md:text-xl text-center font-century-gothic text-black">
             Fiat <br /> currencies
           </p>
           <div className="flex mt-4 -space-x-3">
@@ -224,8 +224,8 @@ const Countries = () => {
 
         {/* Fiat Payment Channels */}
         <div className="grid-item flex flex-col items-center border-b-2 sm:border-b-0 sm:border-r-2 border-white pb-6 sm:pb-0">
-          <h3 className="text-4xl md:text-5xl font-extrabold font-eras-bold counter" data-count="10">0</h3>
-          <p className="mt-2 text-lg md:text-xl text-center font-century-gothic">
+          <h3 className="text-4xl md:text-5xl font-extrabold font-eras-bold counter text-black" data-count="10">0</h3>
+          <p className="mt-2 text-lg md:text-xl text-center font-century-gothic text-black">
             Fiat payment <br /> channels
           </p>
           <div className="flex mt-4 -space-x-3">
@@ -248,8 +248,8 @@ const Countries = () => {
 
         {/* Cryptocurrencies Supported */}
         <div className="grid-item flex flex-col items-center">
-          <h3 className="text-4xl md:text-5xl font-extrabold font-eras-bold counter" data-count="10">0</h3>
-          <p className="mt-2 text-lg md:text-xl text-center font-century-gothic">
+          <h3 className="text-4xl md:text-5xl font-extrabold font-eras-bold counter text-black" data-count="10">0</h3>
+          <p className="mt-2 text-lg md:text-xl text-center font-century-gothic text-black">
             Cryptocurrencies <br /> supported
           </p>
           <div className="flex mt-4 -space-x-3">

@@ -76,10 +76,9 @@ const EveryDay = () => {
           </h1>
           <p
             ref={(el) => (textRef.current[1] = el)}
-            className="text-gray-800 text-sm md:text-lg font-century-gothic"
+            className="text-gray-800 text-sm font-extrabold md:text-lg font-century-gothic"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut la.
+           First-timers / Beginners can seamlessly integrate cryptocurrency trading into their daily routines with our user-friendly platform
           </p>
           <ul
             ref={(el) => (textRef.current[2] = el)}

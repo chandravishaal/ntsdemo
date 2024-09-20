@@ -150,7 +150,7 @@ const ContentSection = () => {
             <h2 className="text-3xl font-bold text-black font-montserrat">Be Pioneer</h2>
             <h3 className="text-lg text-black mt-1 font-century-gothic">Join the digital revolution</h3>
             <p className="text-gray-800 mt-2 font-century-gothic text-xs">
-              Sell and Buy Crypto as the New Digital Economy&apos;s Forerunner with North Star Metrics.
+            North Star Metrics offers a unique opportunity for pioneers in the emerging digital economy of tomorrow by purchasing and trading cryptocurrencies, making it a leading candidate in the digital economy of the future.
             </p>
           </div>
         </div>
@@ -175,7 +175,7 @@ const ContentSection = () => {
             <h2 className="text-3xl font-bold text-black font-antipasto-pro lg:text-left">Be Smart</h2>
             <h3 className="text-lg text-black mt-1 font-century-gothic lg:text-left">Join the digital revolution</h3>
             <p className="text-gray-800 mt-2 font-century-gothic text-xs lg:text-left">
-              Make smart decisions with the best platform to buy and sell cryptocurrency.
+            Utilize the best platform for buying and trading cryptocurrencies to make informed decisions and ensure success in the cryptocurrency market. This will help make educated judgments and informed decisions, ultimately leading to success in the cryptocurrency market.
             </p>
           </div>
         </div>
@@ -200,7 +200,7 @@ const ContentSection = () => {
             <h2 className="text-3xl font-bold text-black font-montserrat">Be Free</h2>
             <h3 className="text-lg text-black mt-1 font-century-gothic">Without border, connected and free</h3>
             <p className="text-gray-800 mt-2 font-century-gothic text-xs">
-              Secure cryptocurrency purchases are crucial for achieving financial independence.
+            Secure cryptocurrency purchases are crucial for achieving financial independence, as they help monitor your financial future and ultimately lead to financial stability. Therefore, it is essential to make secure Bitcoin purchases to manage your financial destiny.
             </p>
           </div>
         </div>
