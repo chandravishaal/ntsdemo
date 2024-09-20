@@ -172,7 +172,7 @@ const Countries = () => {
 
   return (
     <section
-      className="container mx-auto bg-gradient-to-r from-[#004a5e] to-[#2fc2f4] text-white py-12 mt-12 mb-12"
+      className="container mx-auto bg-primaryCyan text-white py-12 mt-12 mb-12"
       ref={sectionRef} // Apply the reference to the section
     >
       {/* For mobile and tablet, we'll switch to a more compact grid */}

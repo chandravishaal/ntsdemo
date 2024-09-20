@@ -2,7 +2,7 @@
 // import '../../index.css';
 // import background from '../../assets/Images/OtcDesk/hero_section_background.png';
 // import bg from '../../assets/Images/OtcDesk/bg.png';
-// import userIcon from '../../assets/Images/OtcDesk/userIcon.png';  
+// import userIcon from '../../assets/Images/OtcDesk/userIcon.png';
 // import emailIcon from '../../assets/Images/OtcDesk/emailIcon.png';
 // import phoneIcon from '../../assets/Images/OtcDesk/phoneIcon.png';
 // import dealIcon from '../../assets/Images/OtcDesk/dealIcon.png';
@@ -17,7 +17,7 @@
 //         backgroundImage: `url(${background})`,
 //       }}
 //    >
-//         <div className="flex flex-col lg:flex-row items-center justify-between container mx-auto px-[4%] py-[6%] space-y-8 lg:space-y-0 lg:space-x-8">        
+//         <div className="flex flex-col lg:flex-row items-center justify-between container mx-auto px-[4%] py-[6%] space-y-8 lg:space-y-0 lg:space-x-8">
 //         {/* Left Section (Text) */}
 //         <div className={"w-full lg:w-1/2 text-left px-[4%]"}>
 //           <h1 className={"text-3xl md:text-4xl jost-uniquifier font-semibold text-black mb-[6%]"}>
@@ -38,8 +38,6 @@
 //   src={bg}
 //   className="absolute inset-0 object-cover z-0 w-full h-[105%] lg:w-[90%] lg:h-[100%] p-[7%] lg:p-0 lg:ml-[10%] rounded-lg"
 // />
-
-
 
 //           {/* Form Container */}
 //           <div className="relative z-10 w-full lg:w-[110%] mt-11 lg:mt-0 lg:-mr-[12%] max-w-lg lg:p-[9%] p-6 bg-transparent">
@@ -138,7 +136,6 @@
 //   </form>
 // </div>
 
-
 //         </div>
 //       </div>
 //     </div>
@@ -147,83 +144,83 @@
 
 // export default HeaderSection;
 
-import React, { useEffect } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import '../../index.css';
-import background from '../../assets/Images/OtcDesk/hero_section_background.png';
-import bg from '../../assets/Images/OtcDesk/bg.png';
-import userIcon from '../../assets/Images/OtcDesk/userIcon.png';  
-import emailIcon from '../../assets/Images/OtcDesk/emailIcon.png';
-import phoneIcon from '../../assets/Images/OtcDesk/phoneIcon.png';
-import dealIcon from '../../assets/Images/OtcDesk/dealIcon.png';
-import companyIcon from '../../assets/Images/OtcDesk/companyIcon.png';
-import commentsIcon from '../../assets/Images/OtcDesk/commentsIcon.png';
+import React, { useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import "../../index.css";
+import background from "../../assets/Images/OtcDesk/hero_section_background.png";
+import bg from "../../assets/Images/OtcDesk/bg.png";
+import userIcon from "../../assets/Images/OtcDesk/userIcon.png";
+import emailIcon from "../../assets/Images/OtcDesk/emailIcon.png";
+import phoneIcon from "../../assets/Images/OtcDesk/phoneIcon.png";
+import dealIcon from "../../assets/Images/OtcDesk/dealIcon.png";
+import companyIcon from "../../assets/Images/OtcDesk/companyIcon.png";
+import commentsIcon from "../../assets/Images/OtcDesk/commentsIcon.png";
 
 // Register ScrollTrigger with gsap
 gsap.registerPlugin(ScrollTrigger);
 
 const HeaderSection = () => {
-
   // Define GSAP animations inside useEffect
   useEffect(() => {
     // Animating the left section (text and button)
-    gsap.from('.left-section-title', {
+    gsap.from(".left-section-title", {
       scrollTrigger: {
-        trigger: '.header-section',
-        start: 'top center', // Animation starts when the section reaches the middle of the viewport
-        toggleActions: 'play none none none',
+        trigger: ".header-section",
+        start: "top center", // Animation starts when the section reaches the middle of the viewport
+        toggleActions: "play none none none",
       },
       opacity: 0,
       x: -50,
       duration: 1,
-      ease: 'power3.out'
+      ease: "power3.out",
     });
 
-    gsap.from('.left-section-text', {
+    gsap.from(".left-section-text", {
       scrollTrigger: {
-        trigger: '.header-section',
-        start: 'top center',
-        toggleActions: 'play none none none',
+        trigger: ".header-section",
+        start: "top center",
+        toggleActions: "play none none none",
       },
       opacity: 0,
       x: -50,
       duration: 1,
       delay: 0.3,
-      ease: 'power3.out'
+      ease: "power3.out",
     });
 
-    gsap.from('.left-section-button', {
+    gsap.from(".left-section-button", {
       scrollTrigger: {
-        trigger: '.header-section',
-        start: 'top center',
-        toggleActions: 'play none none none',
+        trigger: ".header-section",
+        start: "top center",
+        toggleActions: "play none none none",
       },
       opacity: 0,
       y: 50,
       duration: 1,
       delay: 0.5,
-      ease: 'power3.out'
+      ease: "power3.out",
     });
 
     // Animating the form section
-    gsap.from('.form-container', {
+    gsap.from(".form-container", {
       scrollTrigger: {
-        trigger: '.header-section',
-        start: 'top center',
-        toggleActions: 'play none none none',
+        trigger: ".header-section",
+        start: "top center",
+        toggleActions: "play none none none",
       },
       opacity: 0,
       scale: 0.4,
       duration: 1,
-      ease: 'power3.out'
+      ease: "power3.out",
     });
-
   }, []); // Empty dependency array to run only once on mount
 
   return (
     <div
-      className={"header-section bg-cover bg-center h-[100%] w-[100%] flex items-center justify-center relative"}
+      className={
+        "header-section bg-cover bg-center h-[100%] w-[100%] flex items-center justify-center relative"
+      }
       style={{
         backgroundImage: `url(${background})`,
       }}
@@ -231,11 +228,21 @@ const HeaderSection = () => {
       <div className="flex flex-col-reverse lg:flex-row items-center justify-between container mx-auto px-[4%] py-[6%] space-y-8 lg:space-y-[-3%] lg:space-x-[2%]">
         {/* Left Section (Text) */}
         <div className="left-section w-full lg:w-1/2 px-[-2%] lg:ml-[-2%`] mt-10 text-center lg:text-left">
-          <h1 className={"left-section-title text-3xl md:text-4xl font-semibold text-black mb-[6%] font-montserrat"}>
+          <h1
+            className={
+              "left-section-title text-3xl md:text-4xl font-semibold text-black mb-[6%] font-montserrat"
+            }
+          >
             Cryptocurrency OTC Over The Counter Exchange Desk Serving Globally
           </h1>
-          <p className={"left-section-text text-lg lg:text-2xl xl:text-2xl  text-black mb-[9%] font-century-gothic"}>
-            Are you looking for an OTC (Over the Counter) Cryptocurrency Exchange Desk that can offer you several cryptocurrencies within seconds?
+          <p
+            className={
+              "left-section-text text-lg lg:text-2xl xl:text-2xl  text-black mb-[9%] font-century-gothic"
+            }
+          >
+            Over-the-counter (OTC) Exchange Desk for Currencies Serving
+            Worldwide Are you seeking an OTC (Over-the-counter) Cryptocurrency
+            Exchange Desk that can provide many cryptocurrencies in seconds?
           </p>
 
           {/* Button Section */}
@@ -247,7 +254,11 @@ const HeaderSection = () => {
         </div>
 
         {/* Right Section (Form) */}
-        <div className={"relative form-container lg:w-[50%] flex items-center justify-center"}>
+        <div
+          className={
+            "relative form-container lg:w-[50%] flex items-center justify-center"
+          }
+        >
           {/* Form Background */}
           <div className="absolute inset-0 object-cover z-0  w-full h-[105%] lg:w-[100%] lg:h-[105%] lg:p-0 lg:ml-[10%]">
             <img src={bg} className="w-full h-full object-cover rounded-3xl" />

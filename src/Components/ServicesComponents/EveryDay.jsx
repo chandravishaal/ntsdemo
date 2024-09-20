@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import phoneImage from "../../assets/Images/ServicesImages/service_mbl.png"; // Default image
+import phoneImage from "../../assets/Images/ServicesImages/mobile_img.png"; // Default image
+import demo from "../../assets/Images/ServicesImages/testSlider/demo.jpeg"
 import imageBuySell from "../../assets/Images/ServicesImages/testSlider/img1.avif"; // Add related images
 import imageEarn from "../../assets/Images/ServicesImages/testSlider/img2.avif";
 import imagePaymentMethod from "../../assets/Images/ServicesImages/testSlider/img3.avif";
@@ -17,7 +18,7 @@ const EveryDay = () => {
   const imageRef = useRef(null);
 
   // State to track the current image
-  const [currentImage, setCurrentImage] = useState();
+  const [currentImage, setCurrentImage] = useState(demo);
 
   // GSAP animation for text and image
   useEffect(() => {
@@ -109,7 +110,7 @@ const EveryDay = () => {
               Academy
             </li>
             <li
-              className="text-gray-800 font-antipasto-pro cursor-pointer transition-transform transform hover:scale-125 hover:font-bold  duration-500 ease-in-out"
+              className="text-gray-800 font-century-gothic cursor-pointer transition-transform transform hover:scale-125 hover:font-bold  duration-500 ease-in-out"
               onMouseEnter={() => setCurrentImage(imageWallet)}
             >
               Converter
@@ -139,7 +140,7 @@ const EveryDay = () => {
               ref={imageRef}
               src={currentImage} 
               alt="Crypto Exchange App"
-              className="absolute w-[50%] h-auto top-[22%] left-1/2 transform -translate-x-1/2 transition-opacity duration-300 ease-in-out"
+              className="absolute w-[70%] h-auto top-[15%] left-1/2 transform -translate-x-1/2 transition-opacity duration-300 ease-in-out"
             />
           </div>
         </div>
