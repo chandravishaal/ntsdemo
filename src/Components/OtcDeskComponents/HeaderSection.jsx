@@ -263,10 +263,10 @@ const HeaderSection = () => {
           
           {/* Form Container */}
           <div className="relative z-12 w-[95%] lg:w-[110%] mt-10 lg:mt-[2%] lg:-mr-[23%] max-w-lg lg:p-[6%] p-5 bg-transparent font-century-gothic">
-         <h2 className="text-3xl w-full lg:text-3xl jost-uniquifier font-semibold text-black text-center">
+         <h2 className="text-3xl w-full lg:text-3xl font-semibold text-black text-center font-century-gothic">
           Contact the OTC desk
          </h2>
-         <p className="text-black mb-[10%] lg:mb-[9%]  jost-uniquifier text-center">
+         <p className="text-black mb-[10%] lg:mb-[9%] text-center font-century-gothic">
           We will get back to you within one business day.
           </p>
 
@@ -280,7 +280,7 @@ const HeaderSection = () => {
       <input
         type="text"
         placeholder="Full name"
-        className="w-full p-3 pl-12 rounded-lg bg-cyan-300 text-cyan-800 placeholder-cyan-800 focus:outline-none lg:p-4 lg:pl-[15%]"
+        className="w-full p-3 pl-12 rounded-lg bg-cyan-300 text-cyan-800 placeholder-cyan-800 focus:outline-none lg:p-4 lg:pl-[15%] font-century-gothic"
       />
     </div>
 
@@ -293,7 +293,7 @@ const HeaderSection = () => {
       <input
         type="email"
         placeholder="Email address"
-        className="w-full p-3 pl-12 rounded-lg bg-cyan-300 text-cyan-800 placeholder-cyan-800 focus:outline-none lg:p-4 lg:pl-[15%]"
+        className="w-full p-3 pl-12 rounded-lg bg-cyan-300 text-cyan-800 placeholder-cyan-800 focus:outline-none lg:p-4 lg:pl-[15%] font-century-gothic"
       />
     </div>
 
@@ -306,7 +306,7 @@ const HeaderSection = () => {
       <input
         type="tel"
         placeholder="Phone number"
-        className="w-full p-3 pl-12 rounded-lg bg-cyan-300 text-cyan-800 placeholder-cyan-800 focus:outline-none lg:p-4 lg:pl-[15%]"
+        className="w-full p-3 pl-12 rounded-lg bg-cyan-300 text-cyan-800 placeholder-cyan-800 focus:outline-none lg:p-4 lg:pl-[15%] font-century-gothic"
       />
     </div>
 
@@ -319,7 +319,7 @@ const HeaderSection = () => {
       <input
         type="text"
         placeholder="Deal size"
-        className="w-full p-3 pl-12 rounded-lg bg-cyan-300 text-cyan-800 placeholder-cyan-800 focus:outline-none lg:p-4 lg:pl-[15%]"
+        className="w-full p-3 pl-12 rounded-lg bg-cyan-300 text-cyan-800 placeholder-cyan-800 focus:outline-none lg:p-4 lg:pl-[15%] font-century-gothic"
       />
     </div>
 
@@ -332,7 +332,7 @@ const HeaderSection = () => {
       <input
         type="text"
         placeholder="Company name"
-        className="w-full p-3 pl-12 rounded-lg bg-cyan-300 text-cyan-800 placeholder-cyan-800 focus:outline-none lg:p-4 lg:pl-[15%]"
+        className="w-full p-3 pl-12 rounded-lg bg-cyan-300 text-cyan-800 placeholder-cyan-800 focus:outline-none lg:p-4 lg:pl-[15%] font-century-gothic"
       />
     </div>
 
@@ -344,7 +344,7 @@ const HeaderSection = () => {
       />
       <textarea
         placeholder="Comments"
-        className="w-full p-3 pl-12 rounded-lg bg-cyan-300 text-cyan-800 placeholder-cyan-800 focus:outline-none lg:p-4 lg:pl-[15%]"
+        className="w-full p-3 pl-12 rounded-lg bg-cyan-300 text-cyan-800 placeholder-cyan-800 focus:outline-none lg:p-4 lg:pl-[15%] font-century-gothic"
         rows="2"
       ></textarea>
     </div>
@@ -352,7 +352,7 @@ const HeaderSection = () => {
     {/* Submit Button */}
     <button
       type="submit"
-      className="w-[60%] bg-cyan-700 text-white p-3 rounded-lg font-medium text-lg lg:p-4 mx-[20%]" >
+      className="w-[60%] bg-cyan-700 text-white p-3 rounded-lg font-medium text-lg lg:p-4 mx-[20%] font-century-gothic" >
       GET IN TOUCH
     </button>
   </form>

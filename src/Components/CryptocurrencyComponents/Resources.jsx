@@ -161,7 +161,7 @@ const Resources = () => {
             <div
               className={`overflow-hidden transition-max-height duration-500 ease-in-out ${activeIndex === index ? 'max-h-60' : 'max-h-0'}`}
             >
-              <div className=" bg-sky-100 text-gray-800 p-4 font-semibold rounded-lg rounded-t-nonepx-4 py-3 sm:py-4  border-t-2 border-cyan-200  font-century-gothic">
+              <div className=" bg-sky-100 text-gray-800 p-4 font-semibold rounded-lg rounded-t-nonepx-4 py-3 sm:py-4  border-t-2  font-century-gothic">
                 {item.content}
               </div>
             </div>

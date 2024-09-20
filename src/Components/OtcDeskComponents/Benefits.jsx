@@ -135,8 +135,8 @@ const Benefits = () => {
     <div className="h-auto w-auto py-10 bg-cyan-50 mb-2">
       {/* Title Section */}
       <div className="text-center mt-8 mb-12 flex flex-col items-center px-4">
-        <h2 className="text-2xl md:text-4xl jost-uniquifier font-semibold font-montserrat">Benefits With North Star Metrics OTC</h2>
-        <p className="mt-5 w-full md:w-2/3 jost-uniquifier lg:w-1/2 text-center font-century-gothic">
+        <h2 className="text-2xl md:text-4xl  font-semibold font-montserrat">Benefits With North Star Metrics OTC</h2>
+        <p className="mt-5 w-full md:w-2/3  lg:w-1/2 text-center font-century-gothic">
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
         </p>
       </div>
@@ -146,8 +146,8 @@ const Benefits = () => {
         {/* Benefit 1 */}
         <div className="bg-white p-4 rounded-lg flex flex-col items-end justify-between ">
           <div>
-            <h3 className="text-lg md:text-xl ml-4 mt-4 jost-uniquifier font-semibold font-century-gothic">Diverse Cryptocurrency Options</h3>
-            <p className="text-gray-600 jost-uniquifier ml-4 mt-4 mb-4 md:-mb-4 w-full md:w-3/4 font-century-gothic">
+            <h3 className="text-lg md:text-xl ml-4 mt-4 font-semibold font-century-gothic">Diverse Cryptocurrency Options</h3>
+            <p className="text-gray-600 ml-4 mt-4 mb-4 md:-mb-4 w-full md:w-3/4 font-century-gothic">
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </p>
           </div> 
