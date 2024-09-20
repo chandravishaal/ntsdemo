@@ -158,7 +158,7 @@ const WhyUs = () => {
   }, []); // Empty dependency array to run only once
 
   return (
-    <div className="why-us-section container mx-auto px-4 py-12">
+    <div className="why-us-section container mx-auto px-4 py-6 pt-10">
       <div className="flex flex-col md:flex-row items-center justify-between">
         {/* Phone Image Section */}
         <div className="w-full md:w-[60%] h-auto md:h-[60%] md:mb-[-12.5%]">
@@ -170,7 +170,7 @@ const WhyUs = () => {
         </div>
 
         {/* Text Section */}
-        <div className="w-full md:w-1/2 mt-8 md:mt-0 md:ml-[7%]">
+        <div className="w-full md:w-1/2 mt-8 md:mt-0 md:ml-[7%] px-3">
           <h2 className="flex justify-center lg:justify-start text-5xl font-semibold jost-uniquifier mb-12 font-montserrat">Why Us</h2>
           {/* Features */}
           <div className="space-y-6">

@@ -228,9 +228,9 @@ const HeaderSection = () => {
         backgroundImage: `url(${background})`,
       }}
     >
-      <div className="flex flex-col lg:flex-row items-center justify-between container mx-auto px-[4%] py-[6%] space-y-8 lg:space-y-[-3%] lg:space-x-[2%]">
+      <div className="flex flex-col-reverse lg:flex-row items-center justify-between container mx-auto px-[4%] py-[6%] space-y-8 lg:space-y-[-3%] lg:space-x-[2%]">
         {/* Left Section (Text) */}
-        <div className={"left-section w-full lg:w-1/2 text-left px-[-2%] lg:ml-[-2%]"}>
+        <div className={"left-section w-full lg:w-1/2 px-[-2%] lg:ml-[-2%] mt-10 text-center lg:text-left"}>
           <h1 className={"left-section-title text-3xl md:text-4xl jost-uniquifier font-semibold text-black mb-[6%] font-montserrat"}>
             Cryptocurrency OTC Over The Counter Exchange Desk Serving Globally
           </h1>
@@ -247,14 +247,14 @@ const HeaderSection = () => {
         </div>
 
         {/* Right Section (Form) */}
-        <div className={"relative form-container lg:w-[50%] flex items-center justify-center px-[4%]"}>
+        <div className={"relative form-container lg:w-[50%] flex items-center justify-center"}>
           {/* Form Background */}
-          <div className="absolute inset-0 object-cover z-0  w-full h-[105%] lg:w-[100%] lg:h-[105%] p-[7%] lg:p-0 lg:ml-[10%]">
+          <div className="absolute inset-0 object-cover z-0  w-full h-[105%] lg:w-[100%] lg:h-[105%] lg:p-0 lg:ml-[10%]">
             <img src={bg} className="w-full h-full object-cover rounded-3xl" />
           </div>
 
           {/* Form Container */}
-          <div className="relative z-12 w-[95%] lg:w-[110%] mt-10 lg:mt-[2%] lg:-mr-[23%] max-w-lg lg:p-[6%] p-5 bg-transparent font-century-gothic">
+          <div className="relative z-12 w-[95%] lg:w-[110%] mt-20 lg:mt-[2%] lg:-mr-[23%] max-w-lg lg:p-[6%] p-5 bg-transparent font-century-gothic">
             <h2 className="text-3xl w-full lg:text-3xl jost-uniquifier font-semibold text-black text-center">
               Contact the OTC desk
             </h2>

@@ -102,8 +102,8 @@ const Works = () => {
   return (
     <section className="py-10 bg-cyan-50">
       <div className="container mx-auto text-center pt-10">
-        <h2 className="text-4xl font-bold text-gray-700 pb-10 font-montserrat">How it works</h2>
-        <p className="text-gray-500 font-extrabold font-century-gothic">
+        <h2 className="text-4xl font-bold text-gray-700 pb-5 font-montserrat">How it works</h2>
+        <p className="text-gray-500 font-extrabold font-century-gothic px-5">
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy <br /> text of the printing and typesetting industry.
         </p>
 
