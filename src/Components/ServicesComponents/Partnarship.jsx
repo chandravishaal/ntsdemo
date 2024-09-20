@@ -61,14 +61,13 @@ const Partnarship = () => {
 
             </h2>
             <h3 className="text-gray-800 font-montserrat text-xl md:text-3xl font-bold mt-3">
-              Regulated and Professional trading <br />With cryptocurrencies
+              Get in touch with the top cryptocurrency experts, and together, let&apos;s do amazing things.
             </h3>
           </div>
 
           <div id="heading2">
             <p id='subHeding' className="text-sm md:text-lg font-century-gothic md:max-w-lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut la.
+            Join our partnership program and expand your business with the best trading platform.
             </p>
           </div>
 

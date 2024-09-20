@@ -134,13 +134,12 @@ const AdvanceUser = () => {
 
             </h2>
             <h3 className="text-gray-800 font-montserrat text-2xl md:text-3xl font-bold mt-3">
-              Regulated and Professional trading <br />With cryptocurrencies
+            Unlock powerful trading tools for professionals.
             </h3>
           </div>
           <div id="heding2">
             <p className="text-sm md:text-lg font-century-gothic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<br />
-              eiusmod tempor incididunt ut la.
+            Enhance your trading experience by using the finest buying and selling platform.
             </p>
           </div>
           <div id="button">

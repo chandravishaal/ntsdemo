@@ -1,6 +1,7 @@
 import mobileImage1 from '/src/assets/Images/5th_section_mobile1.png';
 import mobileImage2 from '/src/assets/Images/5th_section_mobile2.png';
 import PrimaryButton from '../../Common/PrimaryButton';
+import SecondaryButton from '../../Common/SecondaryButton';
 
 const FeatureComponent = () => {
   return (
@@ -14,7 +15,10 @@ const FeatureComponent = () => {
             <div data-aos="fade-up" data-aos-duration="2000" className=' p-2 w-[70%] lg:-ml-5 relative z-10 md:mt-[15%] mx-auto md:text-left text-center -translate-x-[1rem]'>
               <h2 className="text-2xl font-bold text-black mb-2 font-montserrat ">North Star Metrics</h2>
               <p className="text-gray-600 mb-4 text-xl font-century-gothic">Buy or sell hundreds of cryptocurrencies</p>
-              <PrimaryButton title="Sign up" />
+              <div className='flex items-center gap-3'>
+              <PrimaryButton title="Buy" />
+              <SecondaryButton title="Sell" />
+              </div>
             </div>
           </div>
 
@@ -23,7 +27,10 @@ const FeatureComponent = () => {
             <div data-aos="fade-down" data-aos-duration="2000" className='w-[70%] pr-2  lg:-mr-8 relative z-10 mb-[25%] translate-x-[1rem] md:text-right text-center'>
               <h2 className="text-2xl font-bold text-black mb-2 font-montserrat ">Advance</h2>
               <p className="text-gray-600 mb-4 text-xl font-century-gothic">Powerful tools, designed for the advanced trader</p>
-              <PrimaryButton title="Sign up" />
+              <div className='flex items-center justify-end gap-3'>
+              <SecondaryButton title="Sell" />
+              <PrimaryButton title="Buy" />
+              </div>
             </div>
             <img data-aos="fade-right" data-aos-duration="2000" src={mobileImage2} alt="Feature showcasing advanced trading tools" className="w-auto h-[750px] mx-auto md:ml-auto md:translate-x-[2rem]" />
           </div>
