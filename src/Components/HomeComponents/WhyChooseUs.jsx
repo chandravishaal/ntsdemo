@@ -15,15 +15,15 @@ const WhychooseusCard = ({ image, title, desc, color, customClass }) => {
     >
       <img src={image} className="w-10 mb-4 mx-auto object-contain" alt="" />
       <h1
-        className={`text-lg leading-5 text-center lg:text-start font-montserrat ${
+        className={`text-lg leading-5 text-center lg:text-start font-century-gothic ${
           color === 'primary' ? 'text-black' : 'text-black'
         } font-bold mb-2`}
       >
         {title}
       </h1>
       <p
-        className={`text-sm text-center lg:text-start leading-4 font-century-gothic${
-          color === 'primary' ? 'text-white' : 'text-primaryCyan'
+        className={`text-sm text-center lg:text-start leading-4 font-century-gothic ${
+          color === 'primary' ? 'text-black' : 'text-black'
         }`}
       >
         {desc}
