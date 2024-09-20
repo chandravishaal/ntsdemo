@@ -24,7 +24,16 @@ html, body{
   transform: translateY(4px);
 }
 
+@font-face {
+  font-family: 'CustomFont';
+  src: url('./assets/Fonts/Century-Gothic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
+.century{
+  font-family: 'CustomFont';
+}
 
 
 /* marquees animation start  */
