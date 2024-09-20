@@ -48,8 +48,8 @@ const WhatMakesUsDifferent = () => {
 
       {/* Title Section */}
       <div className="text-center">
-        <h2 className="text-4xl font-semibold jost-uniquifier w-[80%] mb-8 mx-auto text-center font-montserrat">What makes us Different</h2>
-        <p className="mt-5 w-[75%] lg:w-1/2 jost-uniquifier mx-auto font-century-gothic">
+        <h2 className="text-4xl font-semibold w-[80%] mb-8 mx-auto text-center font-montserrat">What makes us Different</h2>
+        <p className="mt-5 w-[75%] lg:w-1/2  mx-auto font-century-gothic">
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
         </p>
       </div>

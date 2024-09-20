@@ -69,13 +69,13 @@ const EveryDay = () => {
         <div className="flex flex-col justify-center items-center md:items-start space-y-4 md:space-y-6 max-w-lg text-center md:text-left">
           <h1
             ref={(el) => (textRef.current[0] = el)}
-            className="text-3xl md:text-5xl font-century-gothic font-semibold text-primaryCyan mt-0"
+            className="text-3xl md:text-5xl font-montserrat font-semibold text-primaryCyan mt-0"
           >
             For Everyday Use
           </h1>
           <p
             ref={(el) => (textRef.current[1] = el)}
-            className="text-gray-800 text-sm md:text-lg"
+            className="text-gray-800 text-sm md:text-lg font-century-gothic"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut la.
@@ -109,7 +109,7 @@ const EveryDay = () => {
               Academy
             </li>
             <li
-              className="text-gray-800 font-century-gothic cursor-pointer transition-transform transform hover:scale-125 hover:font-bold  duration-500 ease-in-out"
+              className="text-gray-800 font-antipasto-pro cursor-pointer transition-transform transform hover:scale-125 hover:font-bold  duration-500 ease-in-out"
               onMouseEnter={() => setCurrentImage(imageWallet)}
             >
               Converter

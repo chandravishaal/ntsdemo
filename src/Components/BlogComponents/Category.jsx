@@ -17,7 +17,7 @@ import Future from '../../assets/Images/Blog/icon12.png';
 const CategoryList = ({ title, items }) => {
   return (
     <div className="w-full category-list">
-      <h2 className="text-xl font-bold mb-4">{title}</h2>
+      <h2 className="text-xl font-bold mb-4 font-montserrat">{title}</h2>
       <ul className="space-y-7">
         {items.map((item, index) => (
           <li key={index} className="flex items-center feature">
@@ -26,7 +26,7 @@ const CategoryList = ({ title, items }) => {
               alt={item.altText}
               className="w-6 h-6 mr-2"
             />
-            <button>{item.description}</button>
+            <button className='font-century-gothic'>{item.description}</button>
           </li>
         ))}
       </ul>
