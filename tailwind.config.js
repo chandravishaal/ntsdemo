@@ -9,8 +9,9 @@ export default {
       'NorthStarsans': ['Nunito Sans', 'sans-serif'],
       'eras-bold': ['"Eras Bold ITC"', 'sans-serif'],
       'antipasto-pro': ['"Antipasto Pro"', 'sans-serif'],
-      'century-gothic': ['"Century Gothic"', 'sans-serif'],
+      // 'century-gothic': ['"Century Gothic"', 'sans-serif'],
       'montserrat': ['Montserrat', 'sans-serif'], // Added Montserrat
+      'century-gothic': ['CustomFont', 'sans-serif'], // Added Century Gothic
     },
     extend: {
       colors: {
