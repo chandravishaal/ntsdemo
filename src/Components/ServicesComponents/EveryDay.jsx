@@ -109,7 +109,7 @@ const EveryDay = () => {
               Academy
             </li>
             <li
-              className="text-gray-800 font-antipasto-pro cursor-pointer transition-transform transform hover:scale-125 hover:font-bold  duration-500 ease-in-out"
+              className="text-gray-800 font-century-gothic cursor-pointer transition-transform transform hover:scale-125 hover:font-bold  duration-500 ease-in-out"
               onMouseEnter={() => setCurrentImage(imageWallet)}
             >
               Converter
