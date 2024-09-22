@@ -51,7 +51,7 @@ const Started = () => {
         stagger: 0.3,
         scrollTrigger: {
           trigger: section,
-          start: 'top 80%',
+          start: 'top 50%',
           toggleActions: 'play none none reverse',
         }
       }
