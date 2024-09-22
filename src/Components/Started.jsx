@@ -65,7 +65,7 @@ const Started = () => {
           <h1 className="text-4xl md:text-4xl font-bold mb-4 font-montserrat">
             Get started in a few <br /> minutes
           </h1>
-          <h2 className="text-lg md:text-xl mb-6 font-semibold text-black font-century-gothic">
+          <h2 className="text-lg md:text-xl mb-6 font-semibold text-black font-century-gothic px-5 md:px-0">
             Create an account, link your bank account,
             <br />
             and start buying & selling.

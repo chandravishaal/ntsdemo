@@ -116,8 +116,7 @@ const InstagramSection = () => {
               Latest on Our Instagram
             </h1>
             <p className="text-gray-600 mt-5 text-base lg:text-xl relative z-10 lg:w-[500px] font-century-gothic">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            </p>
+            Stay updated with real-time market insights, cryptocurrency tips, and exclusive updates from North Star Metrics, including buying and selling trends, platform features, and community highlights.</p>
             <button className="mt-5 bg-cyan-500 text-white py-2 px-8 rounded relative z-10 font-century-gothic">
               More
             </button>

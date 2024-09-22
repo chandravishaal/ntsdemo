@@ -230,7 +230,7 @@ const HeaderSection = () => {
         <div className="left-section w-full lg:w-1/2 px-[-2%] lg:ml-[-2%`] mt-10 text-center lg:text-left">
           <h1
             className={
-              "left-section-title text-3xl md:text-4xl font-semibold text-black mb-[6%] font-montserrat"
+              "left-section-title text-3xl md:text-4xl font-semibold text-black mt-10 mb-[6%] font-montserrat"
             }
           >
             Cryptocurrency OTC Over The Counter Exchange Desk Serving Globally

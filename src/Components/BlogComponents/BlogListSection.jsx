@@ -57,14 +57,18 @@ const BlogListSection = () => {
               alt="Main Blog" 
               className="w-full h-auto rounded-lg mb-[-2%]"
             />
-            <div className="flex items-center text-cyan-600 text-base sm:text-lg mb-[16%] ">
+            <div className="flex items-center text-cyan-600 px-2 text-base sm:text-lg mb-[16%] ">
               <span className="flex items-center mr-[10%] mb-[-16%] ">
-                <img src={profile} className="w-[22%] h-[22%] lg:w-[25%] lg:h-[25%] mr-[4%] font-century-gothic" />
-                By - Admin
+                <img src={profile} className="w-[20%] h-[20%] lg:w-[25%] lg:h-[25%] mr-[4%] font-century-gothic" />
+                <h1 className="whitespace-nowrap text-xs md:text-sm">
+                  By - Admin
+                </h1>
               </span>
               <span className="flex items-center lg:ml-[-6%] mb-[-16%] ml-[-10%] font-century-gothic">
-                <img src={comments} className="w-[22%] h-[22%] lg:w-[25%] lg:h-[25%] mr-[3%]" />
-                0 comments
+                <img src={comments} className="w-[20%] h-[20%] lg:w-[25%] lg:h-[25%] mr-[3%]" />
+                <h1 className="whitespace-nowrap text-xs md:text-sm">
+                  0 comments
+                </h1>
               </span>
               <h4 className="ml-auto text-black mb-[-16%] font-century-gothic">6 minute read</h4>
             </div>
@@ -84,7 +88,7 @@ const BlogListSection = () => {
             <h2 className="text-xl sm:text-2xl font-bold mb-4 font-century-gothic">
               What is Lorem Ipsum?
             </h2>
-            <p className="text-gray-700 text-sm sm:text-base mb-6 text-justify font-century-gothic">
+            <p className="text-gray-700 text-sm sm:text-base mb-6 text-justify font-century-gothic ">
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged...
             </p>
             <a href="#readmore" className="text-cyan-600 font-semibold inline-block">
@@ -105,7 +109,7 @@ const BlogListSection = () => {
                 <h4 className="font-bold text-sm sm:text-lg mb-2 font-century-gothic">
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 </h4>
-                <p className="text-gray-600 text-sm sm:text-base mb-2 font-century-gothic">
+                <p className="text-gray-600 text-sm sm:text-base mb-2 font-century-gothic line-clamp-2">
                   Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a gallery.
                 </p>
                 <p className="text-cyan-600 text-sm sm:text-base font-century-gothic">
@@ -125,7 +129,7 @@ const BlogListSection = () => {
                 <h4 className="font-bold text-sm sm:text-lg mb-2 font-century-gothic">
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 </h4>
-                <p className="text-gray-600 text-sm sm:text-base mb-2 font-century-gothic">
+                <p className="text-gray-600 text-sm sm:text-base mb-2 font-century-gothic line-clamp-2">
                   Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a gallery.
                 </p>
                 <p className="text-cyan-600 text-sm sm:text-base font-century-gothic">
@@ -145,7 +149,7 @@ const BlogListSection = () => {
                 <h4 className="font-bold text-sm sm:text-lg mb-2 font-century-gothic">
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 </h4>
-                <p className="text-gray-600 text-sm sm:text-base mb-2 font-century-gothic">
+                <p className="text-gray-600 text-sm sm:text-base mb-2 font-century-gothic line-clamp-2">
                   Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a gallery.
                 </p>
                 <p className="text-cyan-600 text-sm sm:text-base font-century-gothic">
@@ -165,7 +169,7 @@ const BlogListSection = () => {
                 <h4 className="font-bold text-sm sm:text-lg mb-2 font-century-gothic">
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 </h4>
-                <p className="text-gray-600 text-sm sm:text-base mb-2 font-century-gothic">
+                <p className="text-gray-600 text-sm sm:text-base mb-2 font-century-gothic line-clamp-2">
                   Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a gallery.
                 </p>
                 <p className="text-cyan-600 text-sm sm:text-base font-century-gothic">

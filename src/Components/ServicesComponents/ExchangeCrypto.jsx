@@ -55,7 +55,7 @@ const ExchangeCrypto = () => {
           {/* Card 1 */}
           <div
             ref={(el) => (cardsRef.current[0] = el)}
-            className="bg-white p-4 md:p-6 rounded-lg shadow-md flex items-end justify-between"
+            className="bg-white p-4 md:p-6 rounded-lg shadow-md flex items-end justify-between h-[14rem] md:h-auto"
           >
             <div className="text-left flex-[0.9]">
               <h3 className="text-lg md:text-xl font-montserrat font-semibold">Cryptocurrency Exchange Services</h3>
@@ -74,7 +74,7 @@ const ExchangeCrypto = () => {
           {/* Card 2 */}
           <div
             ref={(el) => (cardsRef.current[1] = el)}
-            className="bg-white p-4 md:p-6 rounded-lg shadow-md flex items-end justify-between"
+            className="bg-white p-4 md:p-6 rounded-lg shadow-md flex items-end justify-between h-[14rem] md:h-auto"
           >
             <div className="text-left flex-[0.9]">
               <h3 className="text-lg md:text-xl font-montserrat font-semibold">Crypto Volatility Protection</h3>
@@ -94,7 +94,7 @@ const ExchangeCrypto = () => {
           {/* Card 3 */}
           <div
             ref={(el) => (cardsRef.current[2] = el)}
-            className="bg-white p-4 md:p-6 rounded-lg shadow-md flex items-end justify-between"
+            className="bg-white p-4 md:p-6 rounded-lg shadow-md flex items-end justify-between h-[14rem] md:h-auto"
           >
             <div className="text-left flex-[0.9]">
               <h3 className="text-lg md:text-xl font-montserrat font-semibold">Crypto Investment Services</h3>
@@ -114,7 +114,7 @@ const ExchangeCrypto = () => {
           {/* Card 4 */}
           <div
             ref={(el) => (cardsRef.current[3] = el)}
-            className="bg-white p-4 md:p-6 rounded-lg shadow-md flex items-end justify-between"
+            className="bg-white p-4 md:p-6 rounded-lg shadow-md flex items-end justify-between h-[14rem] md:h-auto"
           >
             <div className="text-left flex-[0.9]">
               <h3 className="text-lg md:text-xl font-montserrat font-semibold">Crypto-Fiat Conversion Options</h3>
@@ -133,7 +133,7 @@ const ExchangeCrypto = () => {
           {/* Card 5 */}
           <div
             ref={(el) => (cardsRef.current[4] = el)}
-            className="bg-white p-4 md:p-6 rounded-lg shadow-md flex items-end justify-between"
+            className="bg-white p-4 md:p-6 rounded-lg shadow-md flex items-end justify-between h-[14rem] md:h-auto"
           >
             <div className="text-left flex-[0.9]">
               <h3 className="text-lg md:text-xl font-montserrat font-semibold">Cryptocurrency OTC Desk</h3>
@@ -152,7 +152,7 @@ const ExchangeCrypto = () => {
           {/* Card 6 */}
           <div
             ref={(el) => (cardsRef.current[5] = el)}
-            className="bg-white p-4 md:p-6 rounded-lg shadow-md flex items-end justify-between"
+            className="bg-white p-4 md:p-6 rounded-lg shadow-md flex items-end justify-between h-[14rem] md:h-auto"
           >
             <div className="text-left flex-[0.9]">
               <h3 className="text-lg md:text-xl font-montserrat font-semibold">Online Brokerage Services</h3>

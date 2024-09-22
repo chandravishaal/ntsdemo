@@ -1,4 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { FaPlus } from "react-icons/fa6";
+import { FiMinus } from "react-icons/fi";
 import imgfaq from '../../assets/Images/OtcDesk/faq.png';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -115,8 +117,8 @@ const Faq = () => {
                     </div>
                     <h4 className="font-light font-century-gothic">{faq.question}</h4>
                   </div>
-                  <span className="text-xl flex items-center justify-center bg-white border-2 border-sky-900 rounded-full h-5 w-5">
-                    {activeIndex === index ? '-' : '+'}
+                  <span className="text-xl flex items-center justify-center bg-white border-2 border-sky-900 rounded-full w-6 h-6 p-1">
+                    {activeIndex === index ? <FiMinus /> : <FaPlus />}
                   </span>
                 </div>
                 <div

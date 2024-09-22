@@ -68,15 +68,15 @@ const WhatMakesUsDifferent = () => {
           <div className="flex items-center space-x-4 flex-row-reverse feature-item feature-item-animate">
             <img src={aiicon} alt="AI-Powered Trading Insights" className="w-12 h-12 ml-8" />
             <div>
-              <h3 className="text-lg font-semibold font-century-gothic">AI-Powered Trading Insights</h3>
-              <p className="text-gray-500 text-sm w-64 font-century-gothic">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              <h3 className="text-lg font-semibold font-century-gothic">AI-Powered Trading Tips</h3>
+              <p className="text-gray-500 text-sm w-64 font-century-gothic">Smart Insights for Smarter Trading Decisions. Stay ahead of the crypto game by using AI</p>
             </div>
           </div>
 
           <div className="flex items-center space-x-4 flex-row-reverse feature-item feature-item-animate">
             <img src={reward} alt="Reward programs" className="w-12 h-12 -ml-8 mr-20" />
             <div>
-              <h3 className="text-lg font-semibold mr-14 font-century-gothic">Reward and Loyalty Programs</h3>
+              <h3 className="text-lg font-semibold mr-14 font-century-gothic">Incentive and Honesty Programmes</h3>
               <p className="text-gray-500 text-sm w-64 mr-14 font-century-gothic">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             </div>
           </div>
@@ -84,7 +84,7 @@ const WhatMakesUsDifferent = () => {
           <div className="flex items-center space-x-4 flex-row-reverse feature-item feature-item-animate">
             <img src={risk} alt="Risk management" className="w-12 h-12 ml-[8%]" />
             <div>
-              <h3 className="text-lg font-semibold font-century-gothic">Advanced Risk Management Tools </h3>
+              <h3 className="text-lg font-semibold font-century-gothic">Advanced Risk Control Tools</h3>
               <p className="text-gray-500 text-sm w-64 ml-8 font-century-gothic">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             </div>
           </div>
@@ -117,24 +117,24 @@ const WhatMakesUsDifferent = () => {
         </div>
 
         {/* Responsive Layout for Small Screens (below 1400px) */}
-        <div className="features-container lg:hidden mt-8">
-          <div className="feature-item feature-item-animate">
+        <div className="features-container flex flex-col gap-5 lg:hidden mt-8">
+          <div className="feature-item flex items-center gap-6 feature-item-animate">
             <img src={aiicon} alt="AI-Powered Trading Insights" className="w-12 h-12" />
             <div className="feature-text">
-              <h3 className="text-lg font-semibold font-century-gothic">AI-Powered Trading Insights</h3>
+              <h3 className="text-lg font-semibold font-century-gothic">AI-Powered Trading Tips</h3>
               <p className="text-gray-500 text-sm font-century-gothic">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             </div>
           </div>
 
-          <div className="feature-item feature-item-animate">
+          <div className="feature-item flex items-center gap-6 feature-item-animate">
             <img src={reward} alt="Reward programs" className="w-12 h-12" />
             <div className="feature-text">
-              <h3 className="text-lg font-semibold font-century-gothic">Reward and Loyalty Programs</h3>
+              <h3 className="text-lg font-semibold font-century-gothic">Incentive and Honesty Programmes</h3>
               <p className="text-gray-500 text-sm">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             </div>
           </div>
 
-          <div className="feature-item feature-item-animate">
+          <div className="feature-item flex items-center gap-6 feature-item-animate">
             <img src={risk} alt="Risk management" className="w-12 h-12" />
             <div className="feature-text">
               <h3 className="text-lg font-semibold font-century-gothic">Advanced Risk Management Tools</h3>
@@ -142,7 +142,7 @@ const WhatMakesUsDifferent = () => {
             </div>
           </div>
 
-          <div className="feature-item feature-item-animate">
+          <div className="feature-item flex items-center gap-6 feature-item-animate">
             <img src={payment} alt="Localized Payment Methods" className="w-12 h-12" />
             <div className="feature-text">
               <h3 className="text-lg font-semibold font-century-gothic">Localized Payment Methods</h3>
@@ -150,7 +150,7 @@ const WhatMakesUsDifferent = () => {
             </div>
           </div>
 
-          <div className="feature-item feature-item-animate">
+          <div className="feature-item flex items-center gap-6 feature-item-animate">
             <img src={onboarding} alt="Customized Onboarding Experience" className="w-12 h-12" />
             <div className="feature-text">
               <h3 className="text-lg font-semibold font-century-gothic">Customized Onboarding Experience</h3>
@@ -158,7 +158,7 @@ const WhatMakesUsDifferent = () => {
             </div>
           </div>
 
-          <div className="feature-item feature-item-animate">
+          <div className="feature-item flex items-center gap-6 feature-item-animate">
             <img src={beginners} alt="Tailored for Beginners and Experts" className="w-12 h-12" />
             <div className="feature-text">
               <h3 className="text-lg font-semibold font-century-gothic">Tailored for Beginners and Experts</h3>
