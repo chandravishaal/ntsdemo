@@ -265,7 +265,7 @@ const HeaderSection = () => {
           </div>
 
           {/* Form Container */}
-          <div className="relative z-12 w-[95%] lg:w-[110%] mt-10 lg:mt-[2%] lg:-mr-[23%] max-w-lg lg:p-[6%] p-5 bg-transparent font-century-gothic">
+          <div className="relative z-12 w-[95%] lg:w-[100%] mt-10 lg:mt-[2%] lg:-mr-[20%] max-w-lg lg:p-[6%] p-5 bg-transparent font-century-gothic">
             <h2 className="text-3xl w-full lg:text-3xl font-semibold text-black text-center font-century-gothic">
               Contact the OTC desk
             </h2>
@@ -343,12 +343,12 @@ const HeaderSection = () => {
               <div className="relative">
                 <img
                   src={commentsIcon}
-                  className="absolute top-1/2 transform -translate-y-1/2 left-3 mt-[-3%] w-30 h-30 ml-[-12.5%] lg:ml-[-10.5%] lg:w-[31%] lg:mt-[-1.8%]"
+                  className="absolute top-1/2 transform -translate-y-1/2 left-3 mt-[-3%] w-30 h-30 ml-[-12.5%] lg:ml-[-10.5%] lg:w-[31%] lg:mt-[-5%]"
                 />
                 <textarea
                   placeholder="Comments"
                   className="w-full p-3 pl-12 rounded-lg bg-cyan-300 text-cyan-800 placeholder-cyan-800 focus:outline-none lg:p-4 lg:pl-[15%] font-century-gothic"
-                  rows="2"
+                  rows="3"
                 ></textarea>
               </div>
 
