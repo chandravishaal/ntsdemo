@@ -69,7 +69,7 @@ function PressRoom() {
         scrollTrigger: {
           trigger: cardRefs.current[1],
           start: 'top 80%',
-          toggleActions: 'play none none reverse',
+          toggleActions: 'play none none reset',
         },
       }
     );

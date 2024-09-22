@@ -195,14 +195,14 @@ const Blog = () => {
         {
           opacity: 1,
           y: 0,
-          duration: 1,
+          duration: 1.5,
           delay:0.3,
           stagger: 0.4,
           ease: 'power3.out',
           scrollTrigger: {
             trigger: blogRef.current, // Trigger when the blog section is in view
-            start: 'top 85%',
-            toggleActions: 'play none none reverse',
+            start: 'top 60%',
+            toggleActions: 'play none none reset',
           },
         }
       );
