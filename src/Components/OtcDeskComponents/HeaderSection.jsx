@@ -230,14 +230,14 @@ const HeaderSection = () => {
         <div className="left-section w-full lg:w-1/2 px-[-2%] lg:ml-[-2%`] mt-10 text-center lg:text-left">
           <h1
             className={
-              "left-section-title text-3xl md:text-4xl font-semibold text-black mt-10 mb-[6%] font-montserrat"
+              "left-section-title text-3xl md:text-3xl font-semibold text-black mt-10 mb-[6%] font-montserrat"
             }
           >
             Cryptocurrency OTC Over The Counter Exchange Desk Serving Globally
           </h1>
           <p
             className={
-              "left-section-text text-lg lg:text-2xl xl:text-2xl  text-black mb-[9%] font-century-gothic"
+              "left-section-text text-lg lg:text-xl text-black mb-[9%] font-century-gothic"
             }
           >
             Over-the-counter (OTC) Exchange Desk for Currencies Serving
@@ -343,7 +343,7 @@ const HeaderSection = () => {
               <div className="relative">
                 <img
                   src={commentsIcon}
-                  className="absolute top-1/2 transform -translate-y-1/2 left-3 mt-[-3%] w-30 h-30 ml-[-12.5%] lg:ml-[-10.5%] lg:w-[31%] lg:mt-[-5%]"
+                  className="absolute top-1/2 transform -translate-y-1/2 left-3 mt-[-3%] w-30 h-30 ml-[-12.5%] lg:ml-[-10.5%] lg:w-[31%] lg:mt-[-3%]"
                 />
                 <textarea
                   placeholder="Comments"

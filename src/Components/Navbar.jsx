@@ -21,9 +21,7 @@ const AccordionMenuItem = ({ item, closeMenu, isOpen, toggleOpen }) => {
               <Link
                 to={subItem.link}
                 className="text-black hover:text-primary transition-colors"
-                onClick={() => {
-                  closeMenu(); // Close mobile menu on item click
-                }}
+                onClick={() => closeMenu()}
               >
                 {subItem.label}
               </Link>
@@ -58,9 +56,7 @@ const AccordionMenu = ({ items, closeMenu }) => {
             <Link
               to={item.link}
               className="block p-3 text-black hover:bg-gray-200"
-              onClick={() => {
-                closeMenu(); // Close mobile menu on item click
-              }}
+              onClick={() => closeMenu()}
             >
               {item.label}
             </Link>
@@ -72,7 +68,7 @@ const AccordionMenu = ({ items, closeMenu }) => {
 };
 
 const Navbar = () => {
-  const navItems = useRef(null);
+  const mobileMenuRef = useRef(null); // Reference for the mobile menu
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
 
@@ -85,38 +81,38 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // GSAP animation for mobile menu
   useEffect(() => {
-    const items = navItems.current?.querySelectorAll('li');
-    gsap.from(items, {
-      y: 50,
-      opacity: 0,
-      duration: 0.6,
-      delay: 1,
-      stagger: 0.3,
-    });
-  }, []);
+    if (isMobileMenuOpen) {
+      const items = mobileMenuRef.current.querySelectorAll('li'); // Select all menu items
+      gsap.from(items, {
+        x: 100, // Slide from right
+        opacity: 0,
+        duration: 0.5,
+        stagger: 0.1, // Stagger animation for each item
+        ease: "power2.out",
+      });
+    }
+  }, [isMobileMenuOpen]); // Runs the animation whenever isMobileMenuOpen changes
 
   const navLinks = [
     { label: 'About', link: '/about' },
     {
       label: 'Service',
-      // link: '/services',
       dropdown: [
         { label: 'Converter', link: '/crypto-converter' },
         { label: 'Our Services', link: '/services' },
       ]
     },
     { label: 'Feature', link: '/features' },
-    // { label: 'Cryptocurrency', link: '/cryptocurrency' },
     { label: 'Learn', 
       dropdown: [
         { label: 'News', link: '/news' },
         { label: 'Blogs', link: '/blogs' },
       ]
-     },
+    },
     { label: 'Careers', link: '/careers' },
     { label: 'OTC Desk', link: '/otcdesk' },
-    // { label: 'Blog', link: '/blogs' },
   ];
 
   return (
@@ -129,12 +125,17 @@ const Navbar = () => {
           <GiHamburgerMenu size={30} color='white' onClick={() => setIsMobileMenuOpen(true)} />
         </div>
 
-        <div className={`bg-white w-2/3 flex flex-col items-start fixed h-screen lg:hidden z-50 top-0 transition-all duration-500 ${isMobileMenuOpen ? 'right-0' : '-right-[100%]'} px-5`}>
+        {/* Mobile Menu */}
+        <div
+          ref={mobileMenuRef} // Ref for GSAP animation
+          className={`bg-white w-2/3 flex flex-col items-start fixed h-screen lg:hidden z-50 top-0 transition-all duration-500 ${isMobileMenuOpen ? 'right-0' : '-right-[100%]'} px-5`}
+        >
           <div className='ml-auto mt-5 mb-10'>
             <MdCancel size={30} color='black' onClick={() => setIsMobileMenuOpen(false)} />
           </div>
           <AccordionMenu items={navLinks} closeMenu={() => setIsMobileMenuOpen(false)} />
 
+          {/* Buttons */}
           <div className="flex items-center gap-5 w-full mb-5 justify-start mt-10">
             <button onClick={() => setIsMobileMenuOpen(false)} className="lg:px-4 lg:py-2 px-4 py-3 text-md button text-center select-none cursor-pointer w-1/4 lg:text-base text-sm font-semibold transition-all hover:bg-cyan-500 duration-200 outline-none text-white bg-primaryCyan rounded-[100px] shadow-[0_4px_#118baa]">
               Buy
@@ -145,7 +146,8 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div ref={navItems} className="lg:flex items-center hidden text-white text-base font-semibold gap-8">
+        {/* Desktop Menu */}
+        <div className="lg:flex items-center hidden text-white text-base font-semibold gap-8">
           <ul className="flex flex-row items-center gap-10">
             {navLinks.map((item, index) => (
               item.dropdown ? (

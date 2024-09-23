@@ -48,7 +48,7 @@ const WhyUs = () => {
     <div className="why-us-section container mx-auto px-4 py-6 pt-10">
       <div className="flex flex-col lg:flex-row items-center justify-between">
         {/* Phone Image Section */}
-        <div className="w-full md:w-[60%] h-auto md:h-[60%] md:mb-[-13.5%]">
+        <div className="w-full md:w-[60%] h-auto md:h-[60%] md:mb-[-2.5%]">
           <img
             src={phone}
             alt="Phone Image"
@@ -58,14 +58,14 @@ const WhyUs = () => {
 
         {/* Text Section */}
         <div className="w-full md:w-1/2 mt-8 md:mt-0 md:ml-[7%] px-3">
-          <h2 className="flex justify-center lg:justify-start text-5xl font-semibold jost-uniquifier mb-12 font-montserrat">Why Us</h2>
+          <h2 className="flex justify-center lg:justify-start text-3xl font-semibold jost-uniquifier mb-12 font-montserrat">Why Us</h2>
           {/* Features */}
           <div className="space-y-6 mt-10">
             {/* Feature 1 */}
             <div className="feature flex items-start space-x-4">
-              <img src={secure} alt="Cutting-Edge Security" className="w-24 mb-4" />
+              <img src={secure} alt="Cutting-Edge Security" className="w-16 mb-4" />
               <div>
-                <h3 className="text-xl font-semibold mb-2 font-century-gothic">Cutting-Edge Security</h3>
+                <h3 className="text-lg font-semibold mb-2 font-century-gothic">Cutting-Edge Security</h3>
                 <p className="text-gray-600 font-century-gothic">
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 </p>
@@ -74,9 +74,9 @@ const WhyUs = () => {
 
             {/* Feature 2 */}
             <div className="feature flex items-start space-x-4">
-              <img src={Friendly} alt="User-Friendly Platform" className="w-24 mb-4" />
+              <img src={Friendly} alt="User-Friendly Platform" className="w-16 mb-4" />
               <div>
-                <h3 className="text-xl font-semibold mb-2 font-century-gothic">User-Friendly Platform</h3>
+                <h3 className="text-lg font-semibold mb-2 font-century-gothic">User-Friendly Platform</h3>
                 <p className="text-gray-600 font-century-gothic">
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 </p>
@@ -85,9 +85,9 @@ const WhyUs = () => {
 
             {/* Feature 3 */}
             <div className="feature flex items-start space-x-4">
-              <img src={competitive} alt="Competitive Fees" className="w-24 mb-4" />
+              <img src={competitive} alt="Competitive Fees" className="w-16 mb-4" />
               <div>
-                <h3 className="text-xl font-semibold  mb-2 font-century-gothic">Competitive Fees</h3>
+                <h3 className="text-lg font-semibold  mb-2 font-century-gothic">Competitive Fees</h3>
                 <p className="text-gray-600 font-century-gothic">
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 </p>
@@ -96,9 +96,9 @@ const WhyUs = () => {
 
             {/* Feature 4 */}
             <div className="feature flex items-start space-x-4">
-              <img src={support} alt="Comprehensive Support" className="w-24 mb-4" />
+              <img src={support} alt="Comprehensive Support" className="w-16 mb-4" />
               <div>
-                <h3 className="text-xl font-semibold  mb-2 font-century-gothic">Comprehensive Support</h3>
+                <h3 className="text-lg font-semibold  mb-2 font-century-gothic">Comprehensive Support</h3>
                 <p className="text-gray-600 font-century-gothic">
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 </p>
@@ -107,9 +107,9 @@ const WhyUs = () => {
 
             {/* Feature 5 */}
             <div className="feature flex items-start space-x-4">
-              <img src={global} alt="Local Expertise with Global Reach" className="w-24 mb-4" />
+              <img src={global} alt="Local Expertise with Global Reach" className="w-16 mb-4" />
               <div>
-                <h3 className="text-xl font-semibold mb-2 font-century-gothic">Local Expertise with Global Reach</h3>
+                <h3 className="text-lg font-semibold mb-2 font-century-gothic">Local Expertise with Global Reach</h3>
                 <p className="text-gray-600 font-century-gothic">
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 </p>

@@ -3,12 +3,13 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import phoneImage from "../../assets/Images/ServicesImages/mobile_img.png"; // Default image
 import demo from "../../assets/Images/ServicesImages/testSlider/demo.jpeg"
-import imageBuySell from "../../assets/Images/ServicesImages/testSlider/img1.avif"; // Add related images
+import imageBuySell from "../../assets/Images/ServicesImages/testSlider/img2.jpeg"; // Add related images
 import imageEarn from "../../assets/Images/ServicesImages/testSlider/img2.avif";
-import imagePaymentMethod from "../../assets/Images/ServicesImages/testSlider/img3.avif";
-import imageAcademy from "../../assets/Images/ServicesImages/testSlider/img4.avif";
+import imagePaymentMethod from "../../assets/Images/ServicesImages/testSlider/img3.jpeg";
+import imageAcademy from "../../assets/Images/ServicesImages/testSlider/img1.jpeg";
 import imageConverter from "../../assets/Images/ServicesImages/testSlider/img5.avif";
 import imageWallet from "../../assets/Images/ServicesImages/testSlider/img6.avif";
+import comingSoon from "../../assets/Images/ServicesImages/testSlider/coming_soon.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -70,7 +71,7 @@ const EveryDay = () => {
         <div className="flex flex-col justify-center items-center md:items-start space-y-4 md:space-y-6 max-w-lg text-center md:text-left">
           <h1
             ref={(el) => (textRef.current[0] = el)}
-            className="text-3xl md:text-5xl font-montserrat font-semibold text-primaryCyan mt-0"
+            className="text-3xl md:text-4xl font-montserrat font-semibold text-primaryCyan mt-0"
           >
             For Everyday Use
           </h1>
@@ -86,7 +87,7 @@ const EveryDay = () => {
           >
             <li
               className="text-gray-800 font-century-gothic cursor-pointer transition-transform transform hover:scale-125 hover:font-bold  duration-500 ease-in-out"
-              onMouseEnter={() => setCurrentImage(imageEarn)}
+              onMouseEnter={() => setCurrentImage(imageBuySell)}
             >
               Buy / Sell
             </li>
@@ -98,26 +99,26 @@ const EveryDay = () => {
             </li>
             <li
               className="text-gray-800 font-century-gothic cursor-pointer transition-transform transform hover:scale-125 hover:font-bold  duration-500 ease-in-out"
-              onMouseEnter={() => setCurrentImage(imageAcademy)}
+              onMouseEnter={() => setCurrentImage(comingSoon)}
             >
               Payment Method
             </li>
             <li
               className="text-gray-800 font-century-gothic cursor-pointer transition-transform transform hover:scale-125 hover:font-bold  duration-500 ease-in-out"
-              onMouseEnter={() => setCurrentImage(imageConverter)}
+              onMouseEnter={() => setCurrentImage(imageAcademy)}
             >
               Academy
             </li>
             <li
               className="text-gray-800 font-century-gothic cursor-pointer transition-transform transform hover:scale-125 hover:font-bold  duration-500 ease-in-out"
-              onMouseEnter={() => setCurrentImage(imageWallet)}
+              onMouseEnter={() => setCurrentImage(comingSoon)}
             >
               Converter
             </li>
 
             <li
               className="text-gray-800 font-century-gothic cursor-pointer transition-transform transform hover:scale-125 hover:font-bold duration-500 ease-in-out"
-              onMouseEnter={() => setCurrentImage(imageBuySell)}
+              onMouseEnter={() => setCurrentImage(comingSoon)}
             >
               Wallet
             </li>
@@ -131,7 +132,7 @@ const EveryDay = () => {
             <img
               src={phoneImage}
               alt="Phone Frame"
-              className="w-full h-auto" 
+              className="w-[20rem]" 
             />
 
             {/* Absolute Image (currentImage) */}
@@ -139,7 +140,7 @@ const EveryDay = () => {
               ref={imageRef}
               src={currentImage} 
               alt="Crypto Exchange App"
-              className="absolute w-[70%] h-auto top-[15%] left-1/2 transform -translate-x-1/2 transition-opacity duration-300 ease-in-out"
+              className="absolute w-[50%] h-auto top-[12%] left-[12rem] transform -translate-x-1/2 transition-opacity duration-300 ease-in-out"
             />
           </div>
         </div>

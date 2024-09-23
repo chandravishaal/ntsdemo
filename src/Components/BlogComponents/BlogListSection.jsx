@@ -9,6 +9,7 @@ import blogImg3 from '../../assets/Images/Blog/blogImg3.png';
 import profilePic from '../../assets/Images/Blog/profilePic.png'; 
 import profile from '../../assets/Images/Blog/userIcon.png';
 import comments from '../../assets/Images/Blog/commentsIcon.png';
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -53,7 +54,7 @@ const BlogListSection = () => {
           {/* Main Blog Left Section */}
           <div className="w-full lg:w-[600px] lg:pr-8 mb-10 lg:mb-0" ref={(el) => (slides.current[0] = el)}>
             <img 
-              src={blogMainImg} 
+              src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*L7tpgNK6Rg_09CBXJIp3sQ.jpeg"
               alt="Main Blog" 
               className="w-full h-auto rounded-lg mb-[-2%]"
             />
@@ -86,54 +87,57 @@ const BlogListSection = () => {
             </div>
 
             <h2 className="text-xl sm:text-2xl font-bold mb-4 font-century-gothic">
-              What is Lorem Ipsum?
+            Buy and Sell Crypto: Functions and Benefits of Binance Coin
             </h2>
             <p className="text-gray-700 text-sm sm:text-base mb-6 text-justify font-century-gothic ">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged...
+            Explore how to buy and sell crypto using Binance Coin. Learn about its burn mechanism, benefits, and role in top crypto exchanges like Binance.
             </p>
-            <a href="#readmore" className="text-cyan-600 font-semibold inline-block">
+            <Link to="https://medium.com/@ntsmetrics/buy-and-sell-crypto-functions-and-benefits-of-binance-coin-2090e666eb5e" className="text-cyan-600 font-semibold inline-block">
               Read More...
-            </a>
+            </Link>
           </div>
 
           {/* Blog List Right Section */}
           <div className="w-full lg:w-[50%] mr-[1%] text-justify">
-            {/* Blog Item 1 */}
-            <div className="flex items-start mb-8" ref={(el) => (slides.current[1] = el)}>
-              <img 
-                src={blogImg1} 
-                alt="Blog 1" 
-                className="w-[28%] h-[18%] sm:w-[38%] sm:h-[28%] object-cover rounded-lg mr-4" 
-              />
-              <div>
-                <h4 className="font-bold text-sm sm:text-lg mb-2 font-century-gothic">
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                </h4>
-                <p className="text-gray-600 text-sm sm:text-base mb-2 font-century-gothic line-clamp-2">
-                  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a gallery.
-                </p>
-                <p className="text-cyan-600 text-sm sm:text-base font-century-gothic">
-                  Trading | <span className="text-black font-century-gothic">4 minute read</span>
-                </p>
-              </div>
-            </div>
+            
 
             {/* Blog Item 2 */}
             <div className="flex items-start mb-8" ref={(el) => (slides.current[2] = el)}>
               <img 
-                src={blogImg2} 
+                src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*58VfCFFISe7eaCdtWTCi0g.jpeg"
                 alt="Blog 2" 
-                className="w-[28%] h-[18%] sm:w-[38%] sm:h-[28%] object-cover rounded-lg mr-4" 
+                className="w-[28%] h-[18%] sm:w-[38%] sm:h-[28%] object-cover rounded-lg mr-4 flex-[0.2]" 
               />
-              <div>
-                <h4 className="font-bold text-sm sm:text-lg mb-2 font-century-gothic">
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                </h4>
+              <div className="flex-[0.8]">
+                <Link to="https://medium.com/@ntsmetrics/crypto-exchanges-key-predictions-for-the-crypto-market-bf963f321f43" className="font-bold text-sm sm:text-lg mb-2 font-century-gothic">
+                Crypto Exchanges: Key Predictions for the Crypto Market
+                </Link>
                 <p className="text-gray-600 text-sm sm:text-base mb-2 font-century-gothic line-clamp-2">
-                  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a gallery.
+                The second half of September 2024 will be extremely determinant for the cryptocurrency market.
                 </p>
                 <p className="text-cyan-600 text-sm sm:text-base font-century-gothic">
-                  Trading | <span className="text-black font-century-gothic">4 minute read</span>
+                  Trading | <span className="text-black font-century-gothic">5 minute read</span>
+                </p>
+              </div>
+            </div>
+
+
+            {/* Blog Item 3 */}
+            <div className="flex items-start mb-8" ref={(el) => (slides.current[3] = el)}>
+              <img 
+                src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*L8T-mS-GqCJiX0RLT1QhIA.png"
+                alt="Blog 3" 
+                className="w-[28%] h-[18%] sm:w-[38%] sm:h-[28%] object-cover rounded-lg mr-4 flex-[0.2]" 
+              />
+              <div className="flex-[0.8]">
+                <Link to="https://medium.com/@ntsmetrics/crypto-exchanges-how-they-are-revolutionizing-global-trade-f3ffa34a806c" className="font-bold text-sm sm:text-lg mb-2 font-century-gothic">
+                Crypto Exchanges: How They Are Revolutionizing Global Trade
+                </Link>
+                <p className="text-gray-600 text-sm sm:text-base mb-2 font-century-gothic line-clamp-2">
+                Cryptocurrency has become a buzzword in the world of finance, with its influence rapidly spreading across different sectors of the economy.
+                </p>
+                <p className="text-cyan-600 text-sm sm:text-base font-century-gothic">
+                  Trading | <span className="text-black font-century-gothic">8 minute read</span>
                 </p>
               </div>
             </div>
@@ -141,19 +145,19 @@ const BlogListSection = () => {
             {/* Blog Item 3 */}
             <div className="flex items-start mb-8" ref={(el) => (slides.current[3] = el)}>
               <img 
-                src={blogImg3} 
+                src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*4EK7Nug1n3bCOVoniFXo9Q.jpeg"
                 alt="Blog 3" 
-                className="w-[28%] h-[18%] sm:w-[38%] sm:h-[28%] object-cover rounded-lg mr-4" 
+                className="w-[28%] h-[18%] sm:w-[38%] sm:h-[28%] object-cover rounded-lg mr-4 flex-[0.2]" 
               />
-              <div>
-                <h4 className="font-bold text-sm sm:text-lg mb-2 font-century-gothic">
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                </h4>
+              <div className="flex-[0.8]">
+                <Link to="https://medium.com/@ntsmetrics/crypto-exchanges-how-they-are-revolutionizing-global-trade-d919f01a58d1" className="font-bold text-sm sm:text-lg mb-2 font-century-gothic">
+                Crypto Exchanges: How They Are Revolutionizing Global Trade
+                </Link>
                 <p className="text-gray-600 text-sm sm:text-base mb-2 font-century-gothic line-clamp-2">
-                  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a gallery.
+                Cryptocurrency has become a buzzword in the world of finance, with its influence rapidly spreading across different sectors of the economy.
                 </p>
                 <p className="text-cyan-600 text-sm sm:text-base font-century-gothic">
-                  Trading | <span className="text-black font-century-gothic">4 minute read</span>
+                  Trading | <span className="text-black font-century-gothic">7 minute read</span>
                 </p>
               </div>
             </div>
@@ -161,16 +165,16 @@ const BlogListSection = () => {
             {/* Blog Item 4 */}
             <div className="flex items-start mb-8" ref={(el) => (slides.current[4] = el)}>
               <img 
-                src={blogImg1} 
+                src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*Na-_QCEsWqQbEAFdj9OoeA.jpeg" 
                 alt="Blog 4" 
-                className="w-[28%] h-[18%] sm:w-[38%] sm:h-[28%] object-cover rounded-lg mr-4" 
+                className="w-[28%] h-[18%] sm:w-[38%] sm:h-[28%] object-cover rounded-lg mr-4 flex-[0.2]" 
               />
-              <div>
-                <h4 className="font-bold text-sm sm:text-lg mb-2 font-century-gothic">
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                </h4>
+              <div className="flex-[0.8]">
+                <Link to="https://medium.com/@ntsmetrics/buy-crypto-studying-the-link-between-crypto-and-ai-7976d14e88db" className="font-bold text-sm sm:text-lg mb-2 font-century-gothic">
+                Buy Crypto: Studying the Link Between Crypto and AI
+                </Link>
                 <p className="text-gray-600 text-sm sm:text-base mb-2 font-century-gothic line-clamp-2">
-                  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a gallery.
+                Buy Crypto and explore the synergy between AI and cryptocurrency investment. Learn how AI is reshaping the landscape on top crypto exchanges.
                 </p>
                 <p className="text-cyan-600 text-sm sm:text-base font-century-gothic">
                   Trading | <span className="text-black font-century-gothic">4 minute read</span>

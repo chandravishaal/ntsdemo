@@ -150,8 +150,8 @@ const CompanySection = () => {
                             </div>
                             <div className="md:pl-10 flex flex-col justify-center w-full md:w-2/3">
                                 <div className="md:w-11/12">
-                                    <h1 className="text-3xl font-bold text-black font-montserrat ">What Defines Us</h1>
-                                    <h2 className="text-lg text-black mt-1 font-century-gothic">Join the digital revolution</h2>
+                                    <h1 className="text-3xl font-bold text-black font-montserrat ">Our Mission</h1>
+                                    <h2 className="text-lg text-black mt-1 font-century-gothic">Join the Digital Revolution</h2>
                                     <p className="text-gray-800 mt-2 font-century-gothic text-sm">
                                     Our mission is to provide a secure and user-friendly platform for cryptocurrency trading, ensuring accessibility, transparency, and reliability. We aim to promote transparency and reliability in the digital asset trading industry, too thereby enhancing the overall user experience.
                                     </p>
@@ -173,8 +173,8 @@ const CompanySection = () => {
                             </div>
                             <div className="md:pl-10 flex flex-col justify-center w-full md:w-2/3">
                                 <div className="md:w-11/12">
-                                    <h2 className="text-3xl font-bold text-black font-montserrat">What Defines Us</h2>
-                                    <h3 className="text-lg text-black mt-1 font-century-gothic">Join the digital revolution</h3>
+                                    <h2 className="text-3xl font-bold text-black font-montserrat">Our Vision</h2>
+                                    <h3 className="text-lg text-black mt-1 font-century-gothic">Join the Digital Revolution</h3>
                                     <p className="text-gray-800 mt-2 font-century-gothic text-sm">
                                     Our vision is to be the leading cryptocurrency trading platform, revolutionizing the digital economy by providing global access to global crypto markets and fostering financial freedom through innovation and trust, setting new standards for trust and ease of use.</p>
                                 </div>
@@ -195,8 +195,8 @@ const CompanySection = () => {
                             </div>
                             <div className="md:pl-10 flex flex-col justify-center w-full md:w-2/3">
                                 <div className="md:w-11/12">
-                                    <h2 className="text-3xl font-bold text-black font-montserrat">What Defines Us</h2>
-                                    <h3 className="text-lg text-black mt-1 font-century-gothic">Join the digital revolution</h3>
+                                    <h2 className="text-3xl font-bold text-black font-montserrat">Our Values</h2>
+                                    <h3 className="text-lg text-black mt-1 font-century-gothic">Join the Digital Revolution</h3>
                                     <p className="text-gray-800 mt-2 font-century-gothic text-sm">
                                     North Star Metrics prioritizes integrity, customer-centricity, and continuous improvement in all its operations, focusing on security, transparency, innovation, and customer satisfaction, fostering trust and collaboration to drive the future of cryptocurrency.</p>
                                 </div>

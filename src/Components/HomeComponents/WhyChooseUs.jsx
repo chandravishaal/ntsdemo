@@ -1,33 +1,35 @@
 import whyChooseUsBanner from '../../assets/Images/3rd_section_mobile.png';
-import icon1 from '../../assets/Images/whyChoose1.png';
-import icon2 from '../../assets/Images/whyChoosepayment.png';
-import icon3 from '../../assets/Images/whychooseVolatility.png';
-import icon4 from '../../assets/Images/whyChoose24.png';
-import icon5 from '../../assets/Images/WhyChooseexchange.png';
-import icon6 from '../../assets/Images/whyChooseconfirmation.png';
+import icon1 from '../../assets/Images/HomeImages/icon1.png';
+import icon2 from '../../assets/Images/HomeImages/icon5.png';
+import icon3 from '../../assets/Images/HomeImages/icon3.png';
+import icon4 from '../../assets/Images/HomeImages/icon6.png';
+import icon5 from '../../assets/Images/HomeImages/icon4.png';
+import icon6 from '../../assets/Images/HomeImages/icon2.png';
 
 const WhychooseusCard = ({ image, title, desc, color, customClass }) => {
   return (
     <div
-      className={`bg-primaryCyan w-full h-[200px] md:h-[150px] lg:h-[180px] ${
+      className={`bg-primaryCyan w-full flex-col justify-between gap-5 flex h-[200px] md:h-[150px] lg:h-[180px] ${
         color === 'primary' ? 'bg-primaryCyan' : 'bg-white'
-      } border-2 border-primaryCyan rounded-xl p-3 gap-3 ${customClass}`}
+      } border-2 border-primaryCyan rounded-xl p-4 gap-3 ${customClass}`}
     >
-      <img src={image} className="w-10 mb-4 mx-auto object-contain" alt="" />
-      <h1
-        className={`text-lg leading-5 text-center lg:text-start font-century-gothic ${
-          color === 'primary' ? 'text-black' : 'text-black'
-        } font-bold mb-2`}
-      >
-        {title}
-      </h1>
-      <p
-        className={`text-sm text-center lg:text-start leading-4 font-century-gothic ${
-          color === 'primary' ? 'text-black' : 'text-black'
-        }`}
-      >
-        {desc}
-      </p>
+      <img src={image} className="w-10 h-10 mx-auto object-contain" alt="" />
+      <div className=''>
+        <h1
+          className={`text-lg leading-5 text-center lg:text-start font-century-gothic ${
+            color === 'primary' ? 'text-black' : 'text-black'
+          } font-bold mb-2`}
+        >
+          {title}
+        </h1>
+        <p
+          className={`text-sm text-center lg:text-start leading-4 font-century-gothic ${
+            color === 'primary' ? 'text-black' : 'text-black'
+          }`}
+        >
+          {desc}
+        </p>
+      </div>
     </div>
   );
 };
@@ -45,19 +47,19 @@ const WhyChooseUs = () => {
             <WhychooseusCard
               color="primary"
               title="Easy To Start"
-              image={icon6}
-              desc="North Star Metrics provides an easy way for a person to buy and sell cryptocurrency."
+              image={icon1}
+              desc="North Star Metrics provides an easy way for a person to trade crypto."
             />
             <WhychooseusCard
               color="notPrimary"
               title="Safe and Secure"
-              image={icon1}
+              image={icon6}
               desc="We provide a safe environment for all your transactions."
             />
             <div className='order-0 lg:order-6'>
             <WhychooseusCard
               color="notPrimary"
-              title="Rapid Order Processing"
+              title="Rapid Order"
               image={icon5}
               desc="Enjoy the benefit of instant order processing for effective trading."
             />
@@ -71,7 +73,7 @@ const WhyChooseUs = () => {
             <div className='order-0 lg:order-5'>
               <WhychooseusCard
                 color="primary"
-                title="Smart Payment Choices"
+                title="Smart Payment"
                 image={icon2}
                 desc="Enjoy Easy Payment Options."
               />

@@ -123,11 +123,11 @@ import { Link } from 'react-router-dom';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const BlogPost = ({ image, date, author, comments, content, isCenter, redirectLink }) => {
+const BlogPost = ({ title, image, date, author, comments, content, isCenter, redirectLink }) => {
   return (
     <a href={redirectLink}>
     <div to="https://www.google.com"
-      className={`relative rounded-lg w-full h-[33rem] p-5 pb-12 transition duration-300 lg:transform lg:hover:scale-105 hover:z-30 cursor-pointer border-2 border-primaryCyan group ${
+      className={`relative rounded-lg w-full h-[37rem] p-5 pb-12 transition duration-300 lg:transform lg:hover:scale-105 hover:z-30 cursor-pointer border-2 border-primaryCyan group ${
         isCenter ? 'bg-primaryCyan' : 'bg-white hover:bg-primaryCyan'
       }`}
     >
@@ -149,7 +149,7 @@ const BlogPost = ({ image, date, author, comments, content, isCenter, redirectLi
       </div>
 
       <div
-        className={`mt-10 flex justify-start items-end gap-4 text-lg transition duration-300 ${
+        className={`mt-10 flex justify-start items-end gap-4 mb-10 text-lg transition duration-300 ${
           isCenter ? 'text-white' : 'text-black group-hover:text-white'
         }`}
       >
@@ -167,8 +167,14 @@ const BlogPost = ({ image, date, author, comments, content, isCenter, redirectLi
         <span>{comments} comments</span>
       </div>
 
+      <div>
+        <h1 className={`font-bold text-lg line-clamp-2 ${
+          isCenter ? 'text-white' : 'text-black group-hover:text-white'
+        }`}>{title}</h1>
+      </div>
+
       <div
-        className={`mt-10 font-century-gothic transition line-clamp-5 duration-300 ${
+        className={`mt-2 font-century-gothic transition line-clamp-5 duration-300 ${
           isCenter ? 'text-white' : 'text-black group-hover:text-white'
         }`}
       >
@@ -236,6 +242,7 @@ const Blog = () => {
               comments="0"
               content="Explore the accuracy of major cryptocurrency predictions from 2017 to 2024, including Bitcoin's price forecasts, the rise of top crypto exchanges, and more."
               isCenter={false}
+              title=" Cryptocurrency Forecasts: Reviewing Plans from 2017 - 2024"
               redirectLink={"https://northstarmetrics.blogspot.com/2024/09/cryptocurrency-forecasts-reviewing.html"}
             />
           </div>
@@ -247,6 +254,7 @@ const Blog = () => {
               comments="0"
               content="Learn how the crypto trading platform is transforming the financial business. Understand the influence of cryptocurrency exchanges on traditional finance."
               isCenter={false}
+              title = " Crypto Trading Platform: Transforming the Banking Industry"
               redirectLink={"https://northstarmetrics.blogspot.com/2024/09/crypto-trading-platform-transforming.html"}
             />
           </div>
@@ -258,6 +266,7 @@ const Blog = () => {
               comments="0"
               content="Discover how the crypto trading platform drives Bitcoin adoption in India across various sectors like e-commerce, travel, real estate, and more."
               isCenter={false}
+              title = "Crypto Trading Platform: Rise of Bitcoin in Indian Market"
               redirectLink={"https://northstarmetrics.blogspot.com/2024/09/crypto-trading-platform-rise-of-bitcoin.html"}
             />
           </div>

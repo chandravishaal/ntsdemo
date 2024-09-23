@@ -1,9 +1,10 @@
-import footerImage from "/src/assets/Images/contact_img.png"; // Assuming the image is in the public folder
+// import footerImage from "/src/assets/Images/contact_img.png"; // Assuming the image is in the public folder
+import footerImage from "../assets/Images/Indian_girl_footer_section.png";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { IoCall } from "react-icons/io5";
 import { IoIosArrowForward } from "react-icons/io";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -12,11 +13,11 @@ const Footer = () => {
         <footer className="container mx-auto max-w-[1200px] relative z-20 mt-24">
           <div className="flex flex-col md:flex-row justify-between items-center">
             {/* Image that will be hidden on mobile view */}
-            <div className="z-10 hidden lg:block">
+            <div className="z-10 hidden lg:block relative">
               <img
                 src={footerImage}
                 alt="Image Loading ..."
-                className="w-full md:w-[300px] h-auto select-none mt-[-20px]"  // Adjusted width and margin-top
+                className="w-full md:w-[300px] h-auto select-none mt-[5rem] mb-[-1.5rem] top-20" // Adjusted margin-bottom to touch the black section
                 data-aos="fade-right"
                 data-aos-duration="3000"
               />
@@ -28,10 +29,12 @@ const Footer = () => {
                   <h3 className="font-bold mb-4">Get In Touch</h3>
                   <p className="mt-2">
                     <FaLocationDot className="inline mr-2" />
-                    7th Floor, Yamuna Building, 86, Golaghata Rd, Dakshindari, Kolkata - 700048
+                    7th Floor, Yamuna Building, 86, Golaghata Rd, Dakshindari,
+                    Kolkata - 700048
                   </p>
                   <p className="mt-2">
-                    <IoCall className="inline mr-2" />+91 8981037010
+                    <IoCall className="inline mr-2" />
+                    +91 8981037010
                   </p>
                   <p className="mt-2">
                     <MdEmail className="inline mr-2" />
@@ -44,23 +47,23 @@ const Footer = () => {
                   <ul>
                     <li>
                       <IoIosArrowForward className="inline mr-2" />
-                      <a href="/">Cryptocurrency Exchange Services</a>
+                      <Link to="/">Cryptocurrency Exchange Services</Link>
                     </li>
                     <li>
                       <IoIosArrowForward className="inline mr-2" />
-                      <a href="/">Cryptocurrency Ticker</a>
+                      <Link to="/">Cryptocurrency Ticker</Link>
                     </li>
                     <li>
                       <IoIosArrowForward className="inline mr-2" />
-                      <a href="/">Blog</a>
+                      <Link to="/blogs">Blog</Link>
                     </li>
                     <li>
                       <IoIosArrowForward className="inline mr-2" />
-                      <a href="/">Features</a>
+                      <Link to="/features">Features</Link>
                     </li>
                     <li>
                       <IoIosArrowForward className="inline mr-2" />
-                      <a href="/">Roadmap</a>
+                      <Link to="/roadmap">Roadmap</Link>
                     </li>
                   </ul>
                 </div>
@@ -70,23 +73,23 @@ const Footer = () => {
                   <ul>
                     <li>
                       <IoIosArrowForward className="inline mr-2" />
-                      <Link to="/About">About Us</Link>
+                      <Link to="/about">About Us</Link>
                     </li>
                     <li>
                       <IoIosArrowForward className="inline mr-2" />
-                      <a href="/">Contact Us</a>
+                      <Link to="/contact">Contact Us</Link>
                     </li>
                     <li>
                       <IoIosArrowForward className="inline mr-2" />
-                      <a href="/">Aml & Kyc</a>
+                      <Link to="/">AML & KYC</Link>
                     </li>
                     <li>
                       <IoIosArrowForward className="inline mr-2" />
-                      <a href="/">Terms & Condition</a>
+                      <Link to="/terms">Terms & Condition</Link>
                     </li>
                     <li>
                       <IoIosArrowForward className="inline mr-2" />
-                      <a href="/">Privacy Policy</a>
+                      <Link to="/pricy&policy">Privacy Policy</Link>
                     </li>
                   </ul>
                 </div>

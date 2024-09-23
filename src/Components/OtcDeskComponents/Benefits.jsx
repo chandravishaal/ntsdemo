@@ -38,9 +38,7 @@ const Benefits = () => {
           Benefits With North Star Metrics OTC
         </h2>
         <p className="mt-5 w-full md:w-2/3  lg:w-1/2 text-center font-century-gothic">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum is simply dummy text of the printing and
-          typesetting industry.
+        Unlock a secure, seamless crypto trading experience with diverse options and tailored support.
         </p>
       </div>
 

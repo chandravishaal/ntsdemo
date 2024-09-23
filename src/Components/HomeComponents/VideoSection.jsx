@@ -1,7 +1,7 @@
-import mobileBanner from '../../assets/Images/4th_section_mobile.png';
-import videoThumbnail from '../../assets/Video/sampleVideo2.mp4';
-import PrimaryButton from '../../Common/PrimaryButton';
-import SecondaryButton from '../../Common/SecondaryButton';
+import mobileBanner from "../../assets/Images/4th_section_mobile.png";
+import videoThumbnail from "../../assets/Video/sampleVideo2.mp4";
+import PrimaryButton from "../../Common/PrimaryButton";
+import SecondaryButton from "../../Common/SecondaryButton";
 
 const VideoSection = () => {
   return (
@@ -13,19 +13,27 @@ const VideoSection = () => {
           autoPlay
           loop
           muted
+          playsInline
+          preload="auto"
           className="w-full h-[600px] object-cover opacity-95"
           aria-label="Background video"
-        />
+          onError={(e) => console.error("Video failed to load", e)}
+        >
+          Your browser does not support the video tag.
+        </video>
+        {/* Overlay */}
         <div className="absolute inset-0 bg-black opacity-60"></div>
       </div>
 
-      <section className='videoSection-background'>
+      <section className="videoSection-background">
         <div className="container mx-auto">
           {/* Content Section */}
           <div className="flex flex-col md:flex-row justify-between">
             {/* Left Side: More Videos */}
             <div className="w-full md:w-1/2 mt-[4%] ml-[4%]">
-              <h2 className="text-3xl font-bold mb-6 font-montserrat ">More Videos</h2>
+              <h2 className="text-3xl font-bold mb-6 font-montserrat ">
+                More Videos
+              </h2>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <iframe
@@ -37,12 +45,13 @@ const VideoSection = () => {
                     allowFullScreen
                   ></iframe>
                   <p className="text-sm font-century-gothic">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum is simply dummy text of
+                    the printing and typesetting industry.
                   </p>
                 </div>
                 <div className="flex items-start space-x-4">
-                <iframe
+                  <iframe
                     src="https://www.youtube.com/embed/1YyAzVmP9xQ"
                     title="Video Thumbnail"
                     className="w-32 h-20 rounded-lg" // Fixed width and height
@@ -51,8 +60,9 @@ const VideoSection = () => {
                     allowFullScreen
                   ></iframe>
                   <p className="text-sm font-century-gothic">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum is simply dummy text of
+                    the printing and typesetting industry.
                   </p>
                 </div>
 
@@ -70,11 +80,10 @@ const VideoSection = () => {
                 alt="Mobile application showcasing the features"
                 data-aos-duration="2000"
                 src={mobileBanner}
-                //alt="Mobile App" 
+                //alt="Mobile App"
                 className="w-full lg:w-auto h-auto lg:h-[610px] lg:translate-x-20"
               />
             </div>
-
           </div>
         </div>
       </section>

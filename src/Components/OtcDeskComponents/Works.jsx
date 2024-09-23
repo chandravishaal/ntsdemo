@@ -36,7 +36,7 @@ const Works = () => {
       <div className="container mx-auto text-center pt-10">
         <h2 className="text-4xl font-bold text-gray-700 pb-5 font-montserrat">How it works</h2>
         <p className="text-gray-500 font-extrabold font-century-gothic px-5">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy <br /> text of the printing and typesetting industry.
+        From quick onboarding to instant transactions, experience effortless crypto trading step by step
         </p>
 
         {/* Main Content */}
@@ -50,7 +50,7 @@ const Works = () => {
               <div className="text-9xl font-black text-gray-800 absolute top-24 -left-32">1</div>
               <div className="absolute top-24 -left-16 w-60 text-center">
                 <h1 className="text-3xl font-semibold  font-montserrat">Onboarding</h1>
-                <p className="px-7 text-sm font-century-gothic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam perferendis non ullam tenetur?</p>
+                <p className="px-7 text-sm font-century-gothic">Sign up and get verified in minutes. Speedy and Easy Onboarding.</p>
               </div>
             </div>
           </div>
@@ -63,7 +63,7 @@ const Works = () => {
               <div className="text-9xl font-black text-gray-800 absolute top-24 -left-32">2</div>
               <div className="absolute top-24 -left-16 w-60 text-center">
                 <h1 className="text-3xl font-semibold font-montserrat">Fund Deposit</h1>
-                <p className="px-7 text-sm font-century-gothic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam perferendis non ullam tenetur?</p>
+                <p className="px-7 text-sm font-century-gothic">Deposit Funds with multiple payment options - safely and easily.</p>
               </div>
             </div>
           </div>
@@ -76,7 +76,7 @@ const Works = () => {
               <div className="text-9xl font-black text-gray-800 absolute top-24 -left-32">3</div>
               <div className="absolute top-24 -left-16 w-60 text-center">
                 <h1 className="text-3xl font-semibold font-montserrat">Settlement</h1>
-                <p className="px-7 text-sm font-century-gothic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam perferendis non ullam tenetur?</p>
+                <p className="px-7 text-sm font-century-gothic">Efficient transactions with instant settlements improve customer satisfaction and experience.</p>
               </div>
             </div>
           </div>

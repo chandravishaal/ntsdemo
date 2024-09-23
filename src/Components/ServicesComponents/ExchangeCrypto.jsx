@@ -1,16 +1,14 @@
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-
-import { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-import plate from '../../assets/Images/ServicesImages/hero_bg2.png';
-import icon1 from '../../assets/Images/ServicesImages/boy-1.png';
-import icon2 from '../../assets/Images/ServicesImages/icon-9.png';
-import icon3 from '../../assets/Images/ServicesImages/icon-2.png';
-import icon4 from '../../assets/Images/ServicesImages/icon-3.png';
-import icon5 from '../../assets/Images/ServicesImages/icon-5.png';
-import icon6 from '../../assets/Images/ServicesImages/icon-7.png';
+import plate from "../../assets/Images/ServicesImages/hero_bg2.png";
+import icon1 from "../../assets/Images/ServicesImages/boy-1.png";
+import icon2 from "../../assets/Images/ServicesImages/icon-9.png";
+import icon3 from "../../assets/Images/ServicesImages/icon-2.png";
+import icon4 from "../../assets/Images/ServicesImages/icon-3.png";
+import icon5 from "../../assets/Images/ServicesImages/icon-5.png";
+import icon6 from "../../assets/Images/ServicesImages/icon-7.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -28,11 +26,11 @@ const ExchangeCrypto = () => {
           y: 0, // End state
           duration: 1,
           stagger: 0.3,
-          ease: 'power3.out',
+          ease: "power3.out",
           scrollTrigger: {
             trigger: card,
-            start: 'top 80%', // When 80% of the viewport hits the top
-            toggleActions: 'play none none reset', // Replay animation every time section enters and reset when leaving
+            start: "top 80%", // When 80% of the viewport hits the top
+            toggleActions: "play none none reset", // Replay animation every time section enters and reset when leaving
             once: false, // Ensure the animation can replay
           },
         }
@@ -47,9 +45,7 @@ const ExchangeCrypto = () => {
           Buy, Sell And Exchange Cryptocurrency
         </h2>
         <p className="text-gray-800 text-sm md:text-lg font-century-gothic mb-8 md:mb-12">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          <br className="hidden md:block" />
-          incididunt ut labore et dolore magna aliqua.
+        Top crypto platform for trading, investing, OTC desk, and crypto-finance conversion
         </p>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 px-5">
           {/* Card 1 */}
@@ -58,15 +54,22 @@ const ExchangeCrypto = () => {
             className="bg-white p-4 md:p-6 rounded-lg shadow-md flex items-end justify-between h-[14rem] md:h-auto"
           >
             <div className="text-left flex-[0.9]">
-              <h3 className="text-lg md:text-xl font-montserrat font-semibold">Cryptocurrency Exchange Services</h3>
+              <h3 className="text-lg md:text-xl font-montserrat font-semibold">
+                Exchange Services
+              </h3>
               <p className="text-gray-600 mt-2 text-sm md:text-base font-century-gothic pb-4 md:pb-8">
-                At North Star Metrics you can buy and sell Bitcoin, Litecoin, Ethereum, or over 70+
-                cryptocurrencies instantly. We support all individuals, businesses or travelers on
-                the platform that guides and protects your assets.
+                We are an optimal trading platform ensuring user-friendly, fast,
+                and secure cryptocurrency transactions, resulting in an
+                efficient and seamless trading experience. It provides a smooth
+                and efficient trading experience for both buyers and sellers.
               </p>
             </div>
             <div className="w-10 h-8 md:w-32 md:h-14 flex-[0.1]">
-              <img src={icon1} alt="Cryptocurrency exchange services icon" className="w-full h-full " />
+              <img
+                src={icon1}
+                alt="Cryptocurrency exchange services icon"
+                className="w-full h-full "
+              />
               <img src={plate} alt="Background design element" className="" />
             </div>
           </div>
@@ -77,17 +80,23 @@ const ExchangeCrypto = () => {
             className="bg-white p-4 md:p-6 rounded-lg shadow-md flex items-end justify-between h-[14rem] md:h-auto"
           >
             <div className="text-left flex-[0.9]">
-              <h3 className="text-lg md:text-xl font-montserrat font-semibold">Crypto Volatility Protection</h3>
+              <h3 className="text-lg md:text-xl font-montserrat font-semibold">
+                Volatility Protection
+              </h3>
               <p className="text-gray-600 mt-2 text-sm md:text-base font-century-gothic pb-4 md:pb-8">
-                North Star Metrics is the only company or platform that guides and protects your
-                investments from the volatile crypto market. With our expert advice and experience,
-                your assets will always bring you profit.
+                Crypto volatility protection tools, such as stablecoins,
+                hedging, automated trading, and algorithms, mitigate risks
+                associated with digital currency purchases and trading, ensuring
+                money security and minimizing sudden price fluctuations.
               </p>
             </div>
-            <div className="w-10 h-8 md:w-32 md:h-14 flex-[0.1]" >
-              <img src={icon2} alt="Crypto volatility protection icon" className="w-full h-full" />
+            <div className="w-10 h-8 md:w-32 md:h-14 flex-[0.1]">
+              <img
+                src={icon2}
+                alt="Crypto volatility protection icon"
+                className="w-full h-full"
+              />
               <img src={plate} alt="Background design element" className="" />
-
             </div>
           </div>
 
@@ -97,17 +106,23 @@ const ExchangeCrypto = () => {
             className="bg-white p-4 md:p-6 rounded-lg shadow-md flex items-end justify-between h-[14rem] md:h-auto"
           >
             <div className="text-left flex-[0.9]">
-              <h3 className="text-lg md:text-xl font-montserrat font-semibold">Crypto Investment Services</h3>
+              <h3 className="text-lg md:text-xl font-montserrat font-semibold">
+                Investment Services
+              </h3>
               <p className="text-gray-600 mt-2 text-sm md:text-base font-century-gothic pb-4 md:pb-8">
-                If you&apos;re looking forward to investing in cryptocurrencies and not worry about
-                losses, then North Star Metrics is the right place to get started. Want to discuss
-                the No Risk investment program?
+                Our expert guidance on buying and selling digital assets offers
+                access to the Bitcoin, Ethereum, Ripple, and 70+ cryptocurrency
+                market prospects, allowing traders to make informed decisions
+                about investment in the cryptocurrency market.
               </p>
             </div>
             <div className="w-10 h-8 md:w-32 md:h-14 flex-[0.1]">
-              <img src={icon3} alt="Crypto investment services icon"  className="w-full h-full" />
+              <img
+                src={icon3}
+                alt="Crypto investment services icon"
+                className="w-full h-full"
+              />
               <img src={plate} alt="Background design element" className="" />
-
             </div>
           </div>
 
@@ -117,16 +132,23 @@ const ExchangeCrypto = () => {
             className="bg-white p-4 md:p-6 rounded-lg shadow-md flex items-end justify-between h-[14rem] md:h-auto"
           >
             <div className="text-left flex-[0.9]">
-              <h3 className="text-lg md:text-xl font-montserrat font-semibold">Crypto-Fiat Conversion Options</h3>
+              <h3 className="text-lg md:text-xl font-montserrat font-semibold">
+                Fiat Conversion
+              </h3>
               <p className="text-gray-600 mt-2 text-sm md:text-base font-century-gothic pb-4 md:pb-8">
-                North Star Metrics allows you to sell cryptocurrencies instantly and convert your
-                crypto to real money, whether you want to convert it to INR, USD, GBP or others.
+                We are the most reliable cryptocurrency exchange now offering
+                Crypto-Fiat conversion options, simplifying transactions and
+                making them more convenient for traders. These options are
+                designed to enhance the user experience on the exchange.
               </p>
             </div>
             <div className="w-10 h-8 md:w-32 md:h-14 flex-[0.1]">
-              <img src={icon4} alt="Crypto-fiat conversion icon" className="w-full h-full" />
+              <img
+                src={icon4}
+                alt="Crypto-fiat conversion icon"
+                className="w-full h-full"
+              />
               <img src={plate} alt="Background design element" className="" />
-
             </div>
           </div>
 
@@ -136,16 +158,24 @@ const ExchangeCrypto = () => {
             className="bg-white p-4 md:p-6 rounded-lg shadow-md flex items-end justify-between h-[14rem] md:h-auto"
           >
             <div className="text-left flex-[0.9]">
-              <h3 className="text-lg md:text-xl font-montserrat font-semibold">Cryptocurrency OTC Desk</h3>
+              <h3 className="text-lg md:text-xl font-montserrat font-semibold">
+                OTC Desk
+              </h3>
               <p className="text-gray-600 mt-2 text-sm md:text-base font-century-gothic pb-4 md:pb-8">
-              North Star Metrics offers over-the-counter crypto buy or sell services for individuals or businesses that want to
-              deal in high-value transactions. The minimum trade on our OTC desk starts at ₹ 5,00,000.00.
+                Looking for an OTC (Over-the-counter) Cryptocurrency Exchange
+                Desk that offers over 70+ cryptocurrencies with competitive
+                market rates? Look no further than this global platform,
+                accepting credit/debit cards, net banking, UPI, and other
+                payment methods.
               </p>
             </div>
             <div className="w-10 h-8 md:w-32 md:h-14 flex-[0.1]">
-              <img src={icon5} alt="OTC desk services icon" className="w-full h-full" />
+              <img
+                src={icon5}
+                alt="OTC desk services icon"
+                className="w-full h-full"
+              />
               <img src={plate} alt="Background design element" className="" />
-
             </div>
           </div>
 
@@ -155,14 +185,23 @@ const ExchangeCrypto = () => {
             className="bg-white p-4 md:p-6 rounded-lg shadow-md flex items-end justify-between h-[14rem] md:h-auto"
           >
             <div className="text-left flex-[0.9]">
-              <h3 className="text-lg md:text-xl font-montserrat font-semibold">Online Brokerage Services</h3>
+              <h3 className="text-lg md:text-xl font-montserrat font-semibold">
+                Brokerage Services
+              </h3>
               <p className="text-gray-600 mt-2 text-sm md:text-base font-century-gothic pb-4 md:pb-8">
-              North Star Metrics provides brokerage services for individuals or businesses that believe in self-trading. With
-              our expert brokers, you get accurate market insights for your investments, for a nominal fee.
+                Our personalized online brokerage services allow you to
+                effectively manage and develop your cryptocurrency holdings,
+                ensuring a smooth and efficient investment process. These
+                services are designed to help you manage and grow your
+                cryptocurrency holdings effectively.
               </p>
             </div>
             <div className="w-10 h-8 md:w-32 md:h-14 flex-[0.1]">
-              <img src={icon6} alt="Online brokerage services icon" className="w-full h-full" />
+              <img
+                src={icon6}
+                alt="Online brokerage services icon"
+                className="w-full h-full"
+              />
               <img src={plate} alt="Background design element" className="" />
             </div>
           </div>

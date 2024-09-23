@@ -12,6 +12,11 @@ import ethereumIcon from "../../assets/Images/6th_section_icon3.png";
 import tether from "../../assets/Images/HomeImages/USTD.png";
 import bnb from "../../assets/Images/HomeImages/BNB.png";
 import rippleIcon from "../../assets/Images/HomeImages/XRP.png";
+import { IoMdInformationCircleOutline } from "react-icons/io";
+import { IoMdArrowDropdown } from "react-icons/io";
+
+
+
 
 // Example data
 const cryptocurrencies = [
@@ -224,23 +229,10 @@ const cryptocurrencies = [
 // Tooltip component
 const InfoTooltip = ({ text }) => (
   <div className="relative group inline-block ml-1">
-    <span className="text-black-500 text-bold hover:text-black-700 margin-left: 0.5rem">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 28 28"
-        strokeWidth={3}
-        stroke="currentColor"
-        className="w-4 h-4 inline"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M12 9v2m0 4h.01M12 12h.01M19.78 12.78A9.003 9.003 0 1112 3v0a9.003 9.003 0 017.78 9.78zM12 7h.01M12 12h.01"
-        />
-      </svg>
+    <span className="text-black-500 text-bold hover:text-black-700 margin-left: 0.5rem cursor-pointer">
+      <IoMdInformationCircleOutline />
     </span>
-    <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-44 p-2 bg-gray-700 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10">
+    <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-44 p-2 bg-gray-700 text-white text-sm rounded hidden group-hover:block transition-opacity duration-200 z-10">
       {text}
     </div>
   </div>
@@ -250,6 +242,7 @@ const CryptoTable = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [sortedData, setSortedData] = useState([...cryptocurrencies]);
   const [sortDirection, setSortDirection] = useState(null);
+  const [notFound, setNotFound] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [visibleColumns, setVisibleColumns] = useState({
     name: true,
@@ -264,6 +257,14 @@ const CryptoTable = () => {
     const filteredData = cryptocurrencies.filter((crypto) =>
       crypto.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
+
+    if(filteredData.length === 0) {
+      setNotFound(true);
+    }
+    else {
+      setNotFound(false);
+    }
+    
     setSortedData(filteredData);
   }, [searchTerm]);
 
@@ -319,7 +320,7 @@ const CryptoTable = () => {
             />
             <XAxis hide />
             <YAxis hide />
-            <Tooltip />
+            {/* <Tooltip /> */}
           </AreaChart>
         </ResponsiveContainer>
       </div>
@@ -398,7 +399,7 @@ const CryptoTable = () => {
                   Volume (24h)
                   <InfoTooltip text="The total value of the currency that has been traded in the last 24 hours." />
                 </th>
-              )}
+              )}  
               {visibleColumns.marketCap && (
                 <th
                   className="px-4 py-2 cursor-pointer whitespace-nowrap lg:whitespace-normal  border-b text-center font-montserrat "
@@ -464,6 +465,13 @@ const CryptoTable = () => {
                 )}
               </tr>
             ))}
+            {notFound && (
+              <tr>
+                <td colSpan={6} className="text-center font-century-gothic font-semibold mt-10 py-4">
+                  No data found
+                </td>
+              </tr>
+            )}
           </tbody>
         </table>
       </div>
