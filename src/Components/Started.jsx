@@ -96,13 +96,13 @@ const Started = () => {
             </div>
           </div>
 
-          <h1 className='absolute text-black text-xl font-bold lg:-left-32 lg:top-72 md:top-56 md:-left-36 -left-12 top-52 md:whitespace-nowrap text-center font-century-gothic'>
+          <h1 className='absolute text-black text-xl font-bold lg:-left-32 lg:top-72 md:top-56 md:-left-36 -left-16 top-52 md:whitespace-nowrap text-center font-century-gothic'>
             Total <br className='md:hidden block' /> Transactions
           </h1>
           <h1 className='absolute text-black text-xl font-bold lg:left-72 md:top-0 md:left-56 -top-24 left-7 md:whitespace-nowrap text-center font-century-gothic'>
             Today&apos;s Transactions
           </h1>
-          <h1 className='absolute text-black text-xl font-bold lg:left-80 lg:top-72 md:top-56 md:left-56 -right-16 top-52 md:whitespace-nowrap text-center font-century-gothic'>
+          <h1 className='absolute text-black text-xl font-bold lg:left-80 lg:top-72 md:top-56 md:left-56 -right-20 top-52 md:whitespace-nowrap text-center font-century-gothic'>
             Monthly <br className='md:hidden block' /> Transactions
           </h1>
 

@@ -46,7 +46,7 @@ const WhyUs = () => {
 
   return (
     <div className="why-us-section container mx-auto px-4 py-6 pt-10">
-      <div className="flex flex-col md:flex-row items-center justify-between">
+      <div className="flex flex-col lg:flex-row items-center justify-between">
         {/* Phone Image Section */}
         <div className="w-full md:w-[60%] h-auto md:h-[60%] md:mb-[-13.5%]">
           <img
@@ -60,7 +60,7 @@ const WhyUs = () => {
         <div className="w-full md:w-1/2 mt-8 md:mt-0 md:ml-[7%] px-3">
           <h2 className="flex justify-center lg:justify-start text-5xl font-semibold jost-uniquifier mb-12 font-montserrat">Why Us</h2>
           {/* Features */}
-          <div className="space-y-6">
+          <div className="space-y-6 mt-10">
             {/* Feature 1 */}
             <div className="feature flex items-start space-x-4">
               <img src={secure} alt="Cutting-Edge Security" className="w-24 mb-4" />

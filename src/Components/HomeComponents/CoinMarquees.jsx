@@ -33,7 +33,7 @@ const CoinMarquees = () => {
   ];
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden z-20">
       <div className="marquee-text border-[2px] border-black relative">
         {/* Pause/Play Button */}
         <button
