@@ -43,7 +43,7 @@ const WhatMakesUsDifferent = () => {
   }, []);
 
   return (
-    <div className="bg-white py-12 pb-20 px-10 sm:px-6 md:px-8 lg:px-0"> {/* Add padding for small screens */}
+    <div className="bg-white py-12 pb-32 px-10 sm:px-6 md:px-8 lg:px-0"> {/* Add padding for small screens */}
       
 
       {/* Title Section */}
@@ -117,7 +117,7 @@ const WhatMakesUsDifferent = () => {
         </div>
 
         {/* Responsive Layout for Small Screens (below 1400px) */}
-        <div className="features-container flex flex-col gap-5 lg:hidden mt-8">
+        <div className="features-container flex flex-col items-center gap-5 lg:hidden mt-8">
           <div className="feature-item flex items-center gap-6 feature-item-animate">
             <img src={aiicon} alt="AI-Powered Trading Insights" className="w-12 h-12" />
             <div className="feature-text">
@@ -130,7 +130,7 @@ const WhatMakesUsDifferent = () => {
             <img src={reward} alt="Reward programs" className="w-12 h-12" />
             <div className="feature-text">
               <h3 className="text-lg font-semibold font-century-gothic">Incentive and Honesty Programmes</h3>
-              <p className="text-gray-500 text-sm">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              <p className="text-gray-500 text-sm font-century-gothic">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             </div>
           </div>
 

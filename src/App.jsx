@@ -19,6 +19,8 @@ const OtcDesk = lazy(() => import("./Pages/OtcDesk"));
 const Blog = lazy(() => import("./Pages/Blogs"));
 const Cryptocurrency = lazy(() => import("./Pages/Cryptocurrency"));
 const Coin = lazy(() => import("./Pages/Coin"));
+const News = lazy(() => import("./Pages/News"));
+const Features = lazy(() => import("./Pages/Features"));
 
 const App = () => {
   const router = createBrowserRouter(
@@ -33,6 +35,8 @@ const App = () => {
         <Route path="/cryptocurrency" element={<Cryptocurrency />} />
         <Route path="/crypto-converter" element={<CryptoConverter />} />
         <Route path="/coins/:coin" element={<Coin />} />
+        <Route path="/features" element={<Features />} />
+        <Route path="/news" element={<News />} />
         <Route path="*" element={<Page404 />} />
       </Route>
     )

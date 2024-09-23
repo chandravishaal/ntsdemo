@@ -45,7 +45,7 @@ const Benefits = () => {
       </div>
 
       {/* Benefits Grid */}
-      <div className="grid container grid-cols-1 md:grid-cols-3 lg:grid-cols-2 gap-8 mx-auto px-4">
+      <div className="grid container grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mx-auto px-4">
         {/* Benefit Cards */}
         {/* Benefit 1 */}
         <div className="benefit-card bg-white p-4 rounded-lg flex flex-col items-end justify-between">

@@ -168,7 +168,36 @@ text-decoration:none;
 /* marquees animation end */
 
 
+.dropdown-element {
+  z-index: 999;
+}
 
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background: linear-gradient(270deg, #00d1ff, #000000, #ffffff, #00d1ff);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientAnimation 6s ease infinite;
+}
 /* hero section background  */
 @media (min-width: 768px) {
   .heroSection-background {

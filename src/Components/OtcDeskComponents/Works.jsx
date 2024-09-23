@@ -40,10 +40,10 @@ const Works = () => {
         </p>
 
         {/* Main Content */}
-        <div id="main" className="flex flex-col md:flex-row justify-center items-center pl-24 md:pl-24 pb-24 md:space-x-20  space-y-10 md:space-y-0 mt-10">
+        <div id="main" className="flex flex-col lg:flex-row justify-center items-center pl-24 md:pl-24 pb-24 md:space-x-20 gap-10 lg:gap-0 space-y-10 md:space-y-0 mt-10">
 
           {/* Left Section */}
-          <div id="left" className="relative flex flex-col items-center md:w-1/3 w-full hexagon-section ml-10 md:ml-0">
+          <div id="left" className="relative flex flex-col items-center md:w-1/3 w-full hexagon-section ml-10 md:ml-16 lg:ml-0">
             <div className="relative flex flex-col items-center">
               <img src={image} alt="Hexagon Shape" className="w-[220px] h-[240px]" />
               <img src={icon1} alt="Icon 1" className="absolute top-10 left-7" />

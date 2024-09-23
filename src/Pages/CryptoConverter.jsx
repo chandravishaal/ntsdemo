@@ -8,6 +8,7 @@ import Step5 from "../Components/CryptoConverterSteps/Step5";
 import Step6 from "../Components/CryptoConverterSteps/Step6";
 import Step7 from "../Components/CryptoConverterSteps/Step7";
 import Step8 from "../Components/CryptoConverterSteps/Step8";
+import ComingSoon from "../Common/ComingSoon";
 
 const CryptoConverter = () => {
   //  State management
@@ -148,15 +149,11 @@ const CryptoConverter = () => {
   };
 
   return (
-    <div className="form-bg min-h-screen py-12 border-b-[25px] border-cyan-400">
-      <div className="container max-w-5xl mx-auto p-6 ">{renderStep()}</div>
-    </div>
-
-    // <div className="bg-[#f4f8ff] min-h-screen py-12">
-    //   <div className="container max-w-5xl mx-auto p-6 bg-white rounded-lg shadow-md">
-    //     {renderStep()}
-    //   </div>
+    // <div className="form-bg min-h-screen py-12 border-b-[25px] border-cyan-400">
+    //   <div className="container max-w-5xl mx-auto p-6 ">{renderStep()}</div>
     // </div>
+
+    <ComingSoon />
   );
 };
 

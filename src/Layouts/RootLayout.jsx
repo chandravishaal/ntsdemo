@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import { FaArrowUp } from "react-icons/fa";
 import { gsap } from "gsap";
 import Navbar from "../Components/Navbar";
@@ -9,6 +9,7 @@ import TopBar from "../Components/TopBar";
 const RootLayout = () => {
   const [showButton, setShowButton] = useState(false);
   const buttonRef = useRef(null);
+  const location = useLocation(); // Get current location
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,12 +37,17 @@ const RootLayout = () => {
     }
   }, [showButton]);
 
+  // Define the routes where you don't want to show the footer
+  const noFooterRoutes = ["/news", "/crypto-converter", "/features"];
+
   return (
     <>
       <TopBar />
       <Navbar />
       <Outlet />
-      <Footer />
+
+      {/* Conditionally render Footer */}
+      {!noFooterRoutes.includes(location.pathname) && <Footer />}
 
       {/* Scroll to Top Button */}
       {showButton && (
