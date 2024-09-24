@@ -116,7 +116,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`bg-[#252525] w-full z-50 transition-all duration-300 ${isSticky ? 'fixed top-0 shadow-md' : 'static relative'}`} aria-label="Main Navigation">
+    <nav className={`bg-secondaryGray w-full z-50 transition-all duration-300 ${isSticky ? 'fixed top-0 shadow-md' : 'static relative'}`} aria-label="Main Navigation">
       <div className="mx-auto container md:px-10 lg:px-2 flex items-center justify-between p-3">
         <Link to="/" aria-label="NSM Homepage">
           <img src="https://ntsmetrics.com/img/nsm-logo-blue.png" className="w-32" alt="NSM Logo" />
@@ -147,7 +147,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Menu */}
-        <div className="lg:flex items-center hidden text-white text-base font-semibold gap-8">
+        <div className="lg:flex items-center hidden text-slate-800 text-base font-semibold gap-8">
           <ul className="flex flex-row items-center gap-10">
             {navLinks.map((item, index) => (
               item.dropdown ? (
@@ -159,7 +159,7 @@ const Navbar = () => {
                 </li>
               ) : (
                 <li key={index}>
-                  <Link to={item.link} className="text-white">{item.label}</Link>
+                  <Link to={item.link} className="text-slate-800">{item.label}</Link>
                 </li>
               )
             ))}

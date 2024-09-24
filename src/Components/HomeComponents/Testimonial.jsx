@@ -1,107 +1,65 @@
-import { useEffect, useState } from 'react';
-import { FaStar,  } from 'react-icons/fa';
-import { MdOutlineKeyboardDoubleArrowRight, MdOutlineKeyboardDoubleArrowLeft } from "react-icons/md";
+import React from "react";
+import Marquee from "react-fast-marquee";
 
-import Image from '/src/assets/Images/7th_section_img.png';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-// Register ScrollTrigger with GSAP
-gsap.registerPlugin(ScrollTrigger);
-
-const testimonials = [
-  {
-    name: 'RYAN OSCAR WILLIAMS',
-    content: `I am an American and was traveling in Kolkata, and I needed to exchange some of my Tron for Indian Rupee. After looking for hours, I was only able to find one exchange, and that was North Star Metrics.`,
-  },
-  {
-    name: 'JANE DOE',
-    content: `North Star Metrics has provided an excellent service in helping me exchange my cryptocurrency while I was visiting India. The process was smooth, and the staff was very friendly. Highly recommended!`,
-  },
-  {
-    name: 'JOHN SMITH',
-    content: `I had a great experience with North Star Metrics. The staff was very helpful, and I was able to exchange my cryptocurrency quickly and easily. Will definitely use their services again!`,
-  },
-];
-
-const Testimonial = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const { name, content } = testimonials[currentIndex];
-  
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1));
-  };
-  
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1));
-  };
-  
-  useEffect(() => {
-    gsap.from("#testimonial-heading", {
-      y: 100,
-      opacity: 0,
-      duration: 1,
-      delay: 0.5,
-      scrollTrigger: {
-        trigger: "#testpage",
-        start: "top 80%",
-        toggleActions: 'play none none reverse',
-      }
-    });
-  }, []);
-
-  // Automatically change testimonials every 10 seconds
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      handleNext();
-    }, 10000); // 10 seconds
-
-    // Cleanup interval on component unmount
-    return () => clearInterval(intervalId);
-  }, [currentIndex]);
-
-  // GSAP animation for testimonial change
-  useEffect(() => {
-    gsap.fromTo(
-      "#testimonial-content",
-      { scale: 0.8, opacity: 0 },
-      { scale: 1, opacity: 1, duration: 0.5, ease: "power2.out" }
-    );
-  }, [currentIndex]); // Trigger animation on testimonial change
-
+const EachTestimonial = () => {
   return (
-    <div id='testpage' className="container mx-auto p relative flex flex-col lg:flex-row items-end my-20 overflow-hidden">
-      {/* Image div */}
-      <img src={Image} alt="Customer testimonials" className="w-auto h-[474px] select-none" />
-
-      {/* Content div */}
-      <div className="w-full h-[400px] testimonial-background bg-[#91ebff] p-6 flex rounded-r-lg flex-col justify-between">
-          <h2 id='testimonial-heading' className="lg:text-6xl text-4xl text-right mr-8 text-[#0a6276] lg:-mt-14 -mt-11 select-none font-bold font-montserrat ">TESTIMONIALS</h2>
-        <div id="testimonial-content" className='lg:mt-10 mt-5'>
-          <div className="flex items-center mb-3 gap-1 pl-6">
-            <FaStar className="text-[#0a6276]" />
-            <FaStar className="text-[#0a6276]" />
-            <FaStar className="text-[#0a6276]" />
-            <FaStar className="text-[#0a6276]" />
-            <FaStar className="text-[#0a6276]" />
-          </div>
-          <h3 className="text-2xl font-bold text-sky-800 pl-6 font-montserrat ">{name}</h3>
-          <p className="text-lg text-gray-700 p-6 md:pr-12 font-century-gothic">{content}</p>
-        </div>
-
-        <div className='flex items-center justify-end gap-2'>
-            <div  onClick={handlePrev} className='border-[3px] border-[#0a6276] flex rounded-full items-center justify-center p-1'>
-                <button className='text-[#0a6276] text-lg'>
-                <MdOutlineKeyboardDoubleArrowLeft />
-                </button>
-            </div>
-            <div  onClick={handleNext} className='border-[3px] border-[#0a6276] flex rounded-full items-center justify-center p-1'>
-                <button className='text-[#0a6276] text-lg'>
-                <MdOutlineKeyboardDoubleArrowRight />
-                </button>
-            </div>
+    <div className="w-[350px] rounded-2xl bg-[#F3F4F6] p-8 mx-5 outline outline-gray-300 outline-[0.2px] my-2">
+      <img
+        src="https://www.svgrepo.com/show/96336/inverted-commas.svg"
+        className="w-7 rotate-180 mb-3"
+        alt=""
+      />
+      <h1 className="mb-5 font-semibold text-sm font-century-gothic">
+        Creative geniuses who listen, understand and craft captivating visuals -
+        an agency which understands people&apos;s needs
+      </h1>
+      <div className="flex items-center gap-4">
+        <img
+          src="https://images.unsplash.com/photo-1521566652839-697aa473761a?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          className="w-8 h-8 object-cover rounded-full"
+          alt=""
+        />
+        <div className="flex flex-col">
+          <h1 className="text-xs font-bold font-antipasto-pro">Samantha Johanson</h1>
+          <h1 className="text-[11px] text-gray-400 font-antipasto-pro">CEO of ABC Company</h1>
         </div>
       </div>
+    </div>
+  );
+};
+
+const Testimonial = () => {
+  return (
+    <div className="h-screen flex flex-col items-center justify-center container mx-auto space-y-7">
+
+      <div className="flex items-center gap-3 p-2 px-2 bg-black rounded-3xl">
+        <div className="star p-2 bg-primaryCyan rounded-full">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl25vi2BQ2AbyT-HATPqHIEBE0Yf3h5SD4uw&s" className="w-3" alt="" />
+        </div>
+        <h1 className="text-white px-4 font-century-gothic">Rated 4/5 by over 1lakh users</h1>
+      </div>
+
+      <h1 className="text-4xl text-center font-bold font-century-gothic">Words of praise from < br/> others about our presence.</h1>
+
+      {/* First Marquee */}
+      <Marquee gradient={true} gradientColor="white" loop={0} speed={60} pauseOnHover="true">
+        <EachTestimonial />
+        <EachTestimonial />
+        <EachTestimonial />
+        <EachTestimonial />
+        <EachTestimonial />
+        <EachTestimonial />
+      </Marquee>
+
+      {/* Second Marquee */}
+      <Marquee gradient={true} gradientColor="white" loop={0} speed={60} pauseOnHover="true" direction="right">
+        <EachTestimonial />
+        <EachTestimonial />
+        <EachTestimonial />
+        <EachTestimonial />
+        <EachTestimonial />
+        <EachTestimonial />
+      </Marquee>
     </div>
   );
 };
