@@ -94,9 +94,32 @@ import icon1 from "../../assets/Images/OtcDesk/section5_icon1.png";
 import icon2 from "../../assets/Images/OtcDesk/section5_icon2.png";
 import icon3 from "../../assets/Images/OtcDesk/section5_icon3.png";
 
-import React from 'react'
+import React, { useEffect } from 'react';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Works = () => {
+  useEffect(() => {
+    gsap.from('.animate-section', {
+      opacity: 0,
+       y: 50,
+       duration: 1.5,
+       stagger: 0.4,
+       ease: "power2.out",
+       scrollTrigger: {
+         trigger: "#main", // Target the main container of the section
+         start: "top 80%", // Animation starts when the top of the section hits 80% of the viewport
+         end: "bottom 20%", // Animation ends when the bottom hits 20%
+         toggleActions: "play none none reset", // Play animation on enter, reverse on exit
+      },
+    });
+
+
+   
+
+  }, []);
   return (
     <section className="bg-cyan-50 h-auto flex flex-col md:h-auto pb-24">
       <div id="container" className="container mx-auto text-center pt-10">
@@ -107,7 +130,7 @@ const Works = () => {
   {/* Mobile Layout */}
   <div className="md:hidden flex flex-col items-center w-full">
           {/* Left Section */}
-          <div id="left" className="relative flex md:justify-end justify-center items-center mb-10 mt-5 md:mb-0 w-full  md:w-1/3">
+          <div id="left" className="relative flex md:justify-end justify-center items-center mb-10 mt-5 md:mb-0 w-full  md:w-1/3 ">
             <div className=" w-[60%] flex justify-end items-center ">
               <img src={image} alt="Hexagon Shape" className="w-[180px] h-[190px] md:w-[220px] md:h-[270px]" />
               <div className=" flex justify-center items-center absolute top-[5%] left-[27%] md:top-[6%] md:left-[30%] w-[40vw]  md:w-[30vh] text-center ">
@@ -127,7 +150,7 @@ const Works = () => {
             </div>
 
             {/* Center Section */}
-            <div id="center" className="relative flex md:justify-end justify-center items-center mb-10 mt-5 md:mb-0 w-full  md:w-1/3">
+            <div id="center" className="relative flex md:justify-end justify-center items-center mb-10 mt-5 md:mb-0 w-full  md:w-1/3 ">
             <div className=" w-[60%] flex justify-end items-center ">
               <img src={image} alt="Hexagon Shape" className="w-[180px] h-[190px] md:w-[220px] md:h-[270px]" />
               <div className=" flex justify-center items-center absolute top-[5%] left-[27%] md:top-[6%] md:left-[30%] w-[40vw]  md:w-[30vh] text-center ">
@@ -147,7 +170,7 @@ const Works = () => {
             </div>
 
             {/* Right Section */}
-            <div id="right" className="relative flex md:justify-end justify-center items-center md:mb-0 w-full  md:w-1/3">
+            <div id="right" className="relative flex md:justify-end justify-center items-center md:mb-0 w-full  md:w-1/3 ">
             <div className=" w-[60%] flex justify-end items-center ">
               <img src={image} alt="Hexagon Shape" className="w-[180px] h-[190px] md:w-[220px] md:h-[270px]" />
               <div className=" flex justify-center items-center absolute top-[5%] left-[27%] md:top-[6%] md:left-[30%] w-[40vw]  md:w-[30vh] text-center ">
@@ -172,8 +195,8 @@ const Works = () => {
         <div className="hidden flex-col md:flex lg:hidden justify-around items-center w-full h- mt-10 ">
           {/* Step 1 */}
          {/* Left Section */}
-         <div id="left" className="relative flex md:justify-end justify-center items-center mb-10 mt-5 md:mb-0 w-full  md:w-1/3">
-            <div className=" w-[70%]  flex justify-end items-center ">
+         <div id="left" className="relative flex md:justify-end justify-center items-center mb-10 mt-5 md:mb-0 w-full  md:w-1/3 ">
+            <div className=" w-[70%]  flex justify-end items-center  ">
               <img src={image} alt="Hexagon Shape" className="w-[180px] h-[200px]" />
               <div className=" flex justify-center items-center absolute top-[5%] -right-[20%]  w-[40vw]  md:w-[30vh] text-center ">
               <img src={icon1} alt="Icon 1"  />
@@ -192,7 +215,7 @@ const Works = () => {
             </div>
 
             {/* Center Section */}
-            <div id="left" className="relative flex md:justify-end justify-center items-center mb-10 mt-5 md:mb-0 w-full  md:w-1/3">
+            <div id="left" className="relative flex md:justify-end justify-center items-center mb-10 mt-5 md:mb-0 w-full  md:w-1/3 ">
             <div className=" w-[70%]  flex justify-end items-center ">
               <img src={image} alt="Hexagon Shape" className="w-[180px] h-[200px]" />
               <div className=" flex justify-center items-center absolute top-[5%] -right-[20%]  w-[40vw]  md:w-[30vh] text-center ">
@@ -212,7 +235,7 @@ const Works = () => {
             </div>
 
             {/* Right Section */}
-            <div id="left" className="relative flex md:justify-end justify-center items-center mb-10 mt-5 md:mb-0 w-full  md:w-1/3">
+            <div id="left" className="relative flex md:justify-end justify-center items-center mb-10 mt-5 md:mb-0 w-full  md:w-1/3 ">
             <div className=" w-[70%]  flex justify-end items-center ">
               <img src={image} alt="Hexagon Shape" className="w-[180px] h-[200px]" />
               <div className=" flex justify-center items-center absolute top-[5%] -right-[20%]  w-[40vw]  md:w-[30vh] text-center ">
@@ -237,7 +260,7 @@ const Works = () => {
          ">
          
             {/* Left Section */}
-            <div id="left" className="relative flex md:justify-end justify-center items-center mb-10 mt-5 md:mb-0 w-full  md:w-1/3">
+            <div id="left" className="relative flex md:justify-end justify-center items-center mb-10 mt-5 md:mb-0 w-full  md:w-1/3 animate-section">
             <div className=" w-[60%] flex justify-end items-center ">
               <img src={image} alt="Hexagon Shape" className="w-[180px] h-[190px] md:w-[220px] md:h-[270px]" />
               <div className=" flex justify-center items-center absolute top-[5%] left-[27%] md:top-[6%] md:left-[30%] w-[40vw]  md:w-[30vh] text-center ">
@@ -257,7 +280,7 @@ const Works = () => {
             </div>
 
             {/* Center Section */}
-            <div id="center" className="relative flex md:justify-end justify-center items-center mb-10 mt-5 md:mb-0 w-full  md:w-1/3">
+            <div id="center" className="relative flex md:justify-end justify-center items-center mb-10 mt-5 md:mb-0 w-full  md:w-1/3 animate-section">
             <div className=" w-[60%] flex justify-end items-center ">
               <img src={image} alt="Hexagon Shape" className="w-[180px] h-[190px] md:w-[220px] md:h-[270px]" />
               <div className=" flex justify-center items-center absolute top-[5%] left-[27%] md:top-[6%] md:left-[30%] w-[40vw]  md:w-[30vh] text-center ">
@@ -277,7 +300,7 @@ const Works = () => {
             </div>
 
             {/* Right Section */}
-            <div id="right" className="relative flex md:justify-end justify-center items-center mb-10 mt-5 md:mb-0 w-full  md:w-1/3">
+            <div id="right" className="relative flex md:justify-end justify-center items-center mb-10 mt-5 md:mb-0 w-full  md:w-1/3 animate-section">
             <div className=" w-[60%] flex justify-end items-center ">
               <img src={image} alt="Hexagon Shape" className="w-[180px] h-[190px] md:w-[220px] md:h-[270px]" />
               <div className=" flex justify-center items-center absolute top-[5%] left-[27%] md:top-[6%] md:left-[30%] w-[40vw]  md:w-[30vh] text-center ">
@@ -303,15 +326,11 @@ const Works = () => {
   )
 }
 
-export default Works
+export default Works;
 
 
 
-
-
-
-
-// Register ScrollTrigger with GSAP
+// //Register ScrollTrigger with GSAP
 // gsap.registerPlugin(ScrollTrigger);
 
 // const Works = () => {

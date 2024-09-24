@@ -57,7 +57,7 @@ const WhyUs = () => {
         </div>
 
         {/* Text Section */}
-        <div className="w-full md:w-1/2 mt-8 md:mt-0 md:ml-[7%] px-3">
+        <div className="w-full md:w-1/2 mt-8 lg:mt-0 md:ml-[7%] px-3">
           <h2 className="flex justify-center lg:justify-start text-3xl font-semibold jost-uniquifier mb-12 font-montserrat">Why Us</h2>
           {/* Features */}
           <div className="space-y-6 mt-10">
