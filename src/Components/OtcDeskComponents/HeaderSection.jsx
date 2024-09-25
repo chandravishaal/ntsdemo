@@ -431,7 +431,7 @@ const HeaderSection = () => {
 
         {/* Right Section - Contact Form */}
         <div
-          className="w-full md:w-1/2 rounded-xl p-6 shadow-2xl mt-6 md:mt-0 relative right-section"
+          className="w-full md:w-1/2 rounded-xl p-2 lg:P-6 shadow-2xl mt-6 md:mt-0 relative right-section"
           style={{ backgroundImage: `url(${bg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
         >
           <div className="bg-opacity-50 p-6 rounded-xl">
