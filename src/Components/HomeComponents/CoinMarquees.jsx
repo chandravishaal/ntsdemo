@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Marquee from 'react-fast-marquee';  // Import the marquee package
 import { IoPlayOutline } from "react-icons/io5";
 import { PiPause } from "react-icons/pi";
 import { MdArrowDropDown, MdArrowDropUp } from "react-icons/md";
@@ -6,7 +7,6 @@ import { MdArrowDropDown, MdArrowDropUp } from "react-icons/md";
 const CoinMarquees = () => {
   const [isPaused, setIsPaused] = useState(false);
 
-  // Expand the coin data to 100 coins
   const prices = [
     { name: 'BTC', price: '$29,000', change: '+2.5%' },
     { name: 'ETH', price: '$1,800', change: '-1.2%' },
@@ -24,7 +24,6 @@ const CoinMarquees = () => {
     { name: 'LINK', price: '$7.25', change: '-1.1%' },
     { name: 'XLM', price: '$0.12', change: '+0.3%' },
     { name: 'ATOM', price: '$10.75', change: '-0.9%' },
-    // Add 85 more dummy coins (or real coin data)
     ...Array.from({ length: 85 }, (_, i) => ({
       name: `COIN${i + 1}`,
       price: `$${(Math.random() * 100).toFixed(2)}`,
@@ -34,7 +33,7 @@ const CoinMarquees = () => {
 
   return (
     <div className="relative overflow-hidden z-20">
-      <div className="marquee-text border-[2px] border-black relative">
+      <div className="border-[2px] border-black relative">
         {/* Pause/Play Button */}
         <button
           onClick={() => setIsPaused(!isPaused)}
@@ -42,13 +41,19 @@ const CoinMarquees = () => {
         >
           {isPaused ? <IoPlayOutline /> : <PiPause />}
         </button>
+
         {/* Marquee */}
-        <div className={`top-info-bar ml-10 whitespace-nowrap ${isPaused ? 'paused' : 'animate-scroll'}`}>
-          {/* Loop through prices twice for continuous scrolling */}
-          {[...prices, ...prices].map((coin, index) => (
-            <span key={index} className="inline-block info-text mr-4">
-              <span className="font-bold pr-1 text-sm lg:ml-2">{coin.name}</span>: 
-              <span className="pl-2 text-sm">{coin.price}</span> 
+        <Marquee
+          pauseOnHover
+          speed={50}
+          gradient={false}
+          play={!isPaused}
+          className="ml-10"
+        >
+          {prices.map((coin, index) => (
+            <span key={index} className="flex items-center info-text mr-4">
+              <span className="font-bold pr-1 text-xs lg:ml-2">{coin.name}</span>: 
+              <span className="pl-2 text-xs">{coin.price}</span> 
               <span
                 className={`ml-1 flex items-center text-md ${
                   coin.change.startsWith('+') ? 'text-green-500' : 'text-red-500'
@@ -59,7 +64,7 @@ const CoinMarquees = () => {
               </span>
             </span>
           ))}
-        </div>
+        </Marquee>
       </div>
     </div>
   );
