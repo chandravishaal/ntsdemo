@@ -331,7 +331,7 @@ const WhatMakesUsDifferent = () => {
                     <h3 className="text-xl sm:text-2xl font-bold mb-2 font-century-gothic">{item.title}</h3>
                     <p className="text-gray-600 font-century-gothic">{item.description}</p>
                   </div>
-                  <img src={item.icon} alt={item.title} className="w-16 h-16 mb-4 sm:mb-0 sm:ml-0 lg:ml-0 lg:mb-4 xl:ml-6 xl:mb-0 order-1 sm:order-1 lg:order-1 xl:order-2" />
+                  <img src={item.icon} alt={item.title} className="w-16 h-16 mb-4 sm:mb-0 sm:ml-6 lg:ml-0 lg:mb-4 xl:ml-6 xl:mb-0 order-1 sm:order-1 lg:order-1 xl:order-2" />
                 </div>
               ))}
             </div>
@@ -349,7 +349,7 @@ const WhatMakesUsDifferent = () => {
                 { title: "Beginner Friendly", description: "Intuitive interface and resources to help newcomers navigate easily.", icon: beginners }
               ].map((item, index) => (
                 <div key={index} className={`feature-item flex flex-col sm:flex-row lg:flex-col xl:flex-row items-center sm:items-start lg:items-center xl:items-start ${item.extraClass || ''}`}>
-                  <img src={item.icon} alt={item.title} className="w-16 h-16 mb-4 sm:mb-0 sm:mr-6 lg:mr-0 lg:mb-4 xl:mr-6 xl:mb-0 order-1 sm:order-1 lg:order-1 xl:order-1" />
+                  <img src={item.icon} alt={item.title} className="w-16 h-16 mb-4 sm:mb-0 sm:mr-6 sm:ml-6 lg:mr-0 lg:ml-0 lg:mb-4 xl:mr-6 xl:mb-0 order-1 sm:order-1 lg:order-1 xl:order-1" />
                   <div className="text-center sm:text-left lg:text-center xl:text-left order-2 sm:order-2 lg:order-2 xl:order-2">
                     <h3 className="text-xl sm:text-2xl font-bold mb-2 font-century-gothic">{item.title}</h3>
                     <p className="text-gray-600 font-century-gothic">{item.description}</p>

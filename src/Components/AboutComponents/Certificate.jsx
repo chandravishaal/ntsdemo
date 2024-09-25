@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import iso27001 from '../../assets/Images/iso27001.png';
 import iso22301 from '../../assets/Images/iso22301.png';
 import csaStar from '../../assets/Images/csa-star.png';
@@ -38,32 +38,42 @@ const Certificate = () => {
 
   const sectionRef = useRef(null);
   const certificateRefs = useRef([]);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
-    // GSAP staggered animation on scroll
-    gsap.fromTo(
-      certificateRefs.current,
-      { opacity: 0, y: 50 }, // Starting properties
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1.2,
-        ease: 'power3.out',
-        stagger: 0.2, // Staggering animation between each item
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top 80%', // Start when the section reaches 80% of the viewport height
-          end: 'bottom 20%',
-          toggleActions: 'play none none reset', // Re-animate when entering the viewport
-        },
-      }
-    );
+    const isMobile = window.innerWidth < 768;
+
+    if (isMobile) {
+      const interval = setInterval(() => {
+        setCurrentSlide((prevSlide) => (prevSlide + 1) % certificates.length);
+      }, 3000);
+
+      return () => clearInterval(interval);
+    } else {
+      gsap.fromTo(
+        certificateRefs.current,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1.2,
+          ease: 'power3.out',
+          stagger: 0.2,
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 80%',
+            end: 'bottom 20%',
+            toggleActions: 'play none none reset',
+          },
+        }
+      );
+    }
   }, []);
 
   const CertificateItem = ({ imageSrc, altText, title, description, isSmall, index }) => {
     return (
       <div
-        ref={(el) => (certificateRefs.current[index] = el)} // Assign each certificate item a ref
+        ref={(el) => (certificateRefs.current[index] = el)}
         className="text-center"
       >
         <img
@@ -72,14 +82,18 @@ const Certificate = () => {
           className={`mx-auto ${isSmall ? 'h-24 w-24 mt-5 mb-5' : 'h-32 w-32 mb-4'} object-contain`}
         />
         <h4 className="font-semibold font-century-gothic">{title}</h4>
-        <p className="text-sm max-w-xs text-gray-600 font-century-gothic">{description}</p>
+        <p className="text-sm max-w-xs mx-auto text-gray-600 font-century-gothic">{description}</p>
       </div>
     );
   };
 
+  const handleDotClick = (index) => {
+    setCurrentSlide(index);
+  };
+
   return (
-    <div ref={sectionRef} className="mt-12 flex justify-around py-24 gap-5 container mx-auto">
-      <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-8">
+    <div ref={sectionRef} className="mt-12 py-24 container mx-auto">
+      <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         {certificates.map((certificate, index) => (
           <CertificateItem
             key={index}
@@ -87,10 +101,32 @@ const Certificate = () => {
             altText={certificate.altText}
             title={certificate.title}
             description={certificate.description}
-            isSmall={index === 3} // Set `isSmall` to true for the 4th image
-            index={index} // Pass index to use for refs
+            isSmall={index === 3}
+            index={index}
           />
         ))}
+      </div>
+      <div className="md:hidden">
+        <CertificateItem
+          key={currentSlide}
+          imageSrc={certificates[currentSlide].imageSrc}
+          altText={certificates[currentSlide].altText}
+          title={certificates[currentSlide].title}
+          description={certificates[currentSlide].description}
+          isSmall={currentSlide === 3}
+          index={currentSlide}
+        />
+        <div className="flex justify-center mt-4">
+          {certificates.map((_, index) => (
+            <div
+              key={index}
+              className={`h-4 w-4 rounded-full mx-1 cursor-pointer ${
+                index === currentSlide ? 'bg-blue-500' : 'bg-gray-300'
+              }`}
+              onClick={() => handleDotClick(index)}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

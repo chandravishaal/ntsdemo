@@ -149,7 +149,7 @@ const CompanySection = () => {
                                 />
                             </div>
                             <div className="md:pl-10 flex flex-col justify-center w-full md:w-2/3">
-                                <div className="md:w-11/12">
+                                <div className="md:w-11/12 text-center md:text-left">
                                     <h1 className="text-3xl font-bold text-black font-montserrat ">Our Mission</h1>
                                     <h2 className="text-lg text-black mt-1 font-century-gothic">Join the Digital Revolution</h2>
                                     <p className="text-gray-800 mt-2 font-century-gothic text-sm">
@@ -172,7 +172,7 @@ const CompanySection = () => {
                                 />
                             </div>
                             <div className="md:pl-10 flex flex-col justify-center w-full md:w-2/3">
-                                <div className="md:w-11/12">
+                                <div className="md:w-11/12 text-center md:text-left">
                                     <h2 className="text-3xl font-bold text-black font-montserrat">Our Vision</h2>
                                     <h3 className="text-lg text-black mt-1 font-century-gothic">Join the Digital Revolution</h3>
                                     <p className="text-gray-800 mt-2 font-century-gothic text-sm">
@@ -194,7 +194,7 @@ const CompanySection = () => {
                                 />
                             </div>
                             <div className="md:pl-10 flex flex-col justify-center w-full md:w-2/3">
-                                <div className="md:w-11/12">
+                                <div className="md:w-11/12 text-center md:text-left">
                                     <h2 className="text-3xl font-bold text-black font-montserrat">Our Values</h2>
                                     <h3 className="text-lg text-black mt-1 font-century-gothic">Join the Digital Revolution</h3>
                                     <p className="text-gray-800 mt-2 font-century-gothic text-sm">
