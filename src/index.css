@@ -510,6 +510,10 @@ nav {
   }
 }
 
+.navcontent-shadow{
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
 
 /* Assets section shadow  */
 .asset-shadow {
