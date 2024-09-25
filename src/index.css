@@ -360,6 +360,13 @@ text-decoration:none;
   width: 100%;
   background-position: center 80%;
 }
+.OtcHeader-background {
+  background-image: url('../src/assets/Images/OtcDesk/hero_section_background.png');
+  background-size: 100%;
+  /* background-repeat: no-repeat; */
+  width: 100%;
+  background-position: center 80%;
+}
 
 
 .teamMembers-background {
