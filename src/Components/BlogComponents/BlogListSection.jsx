@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+/*import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import '../../index.css';
@@ -51,7 +51,7 @@ const BlogListSection = () => {
         </h1>
 
         <div className="flex flex-col lg:flex-row justify-between" ref={swiperRef}>
-          {/* Main Blog Left Section */}
+          {/* Main Blog Left Section 
           <div className="w-full lg:w-[600px] lg:pr-8 mb-10 lg:mb-0" ref={(el) => (slides.current[0] = el)}>
             <img 
               src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*L7tpgNK6Rg_09CBXJIp3sQ.jpeg"
@@ -97,11 +97,11 @@ const BlogListSection = () => {
             </Link>
           </div>
 
-          {/* Blog List Right Section */}
+          {/* Blog List Right Section 
           <div className="w-full lg:w-[50%] mr-[1%] text-justify">
             
 
-            {/* Blog Item 2 */}
+            {/* Blog Item 2 *
             <div className="flex items-start mb-8" ref={(el) => (slides.current[2] = el)}>
               <img 
                 src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*58VfCFFISe7eaCdtWTCi0g.jpeg"
@@ -122,7 +122,7 @@ const BlogListSection = () => {
             </div>
 
 
-            {/* Blog Item 3 */}
+            {/* Blog Item 3 *
             <div className="flex items-start mb-8" ref={(el) => (slides.current[3] = el)}>
               <img 
                 src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*L8T-mS-GqCJiX0RLT1QhIA.png"
@@ -142,7 +142,7 @@ const BlogListSection = () => {
               </div>
             </div>
 
-            {/* Blog Item 3 */}
+            {/* Blog Item 3 *
             <div className="flex items-start mb-8" ref={(el) => (slides.current[3] = el)}>
               <img 
                 src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*4EK7Nug1n3bCOVoniFXo9Q.jpeg"
@@ -162,7 +162,7 @@ const BlogListSection = () => {
               </div>
             </div>
 
-            {/* Blog Item 4 */}
+            {/* Blog Item 4 *
             <div className="flex items-start mb-8" ref={(el) => (slides.current[4] = el)}>
               <img 
                 src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*Na-_QCEsWqQbEAFdj9OoeA.jpeg" 
@@ -188,4 +188,234 @@ const BlogListSection = () => {
   );
 };
 
+export default BlogListSection;*/
+
+
+
+
+
+
+import React from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import '../../index.css';
+import blogMainImg from '../../assets/Images/Blog/blogMain.png';
+import profile from '../../assets/Images/Blog/userIcon.png';
+import comments from '../../assets/Images/Blog/commentsIcon.png';
+import { Link } from "react-router-dom";
+
+gsap.registerPlugin(ScrollTrigger);
+
+const BlogListSection = () => {
+
+  const blogPosts = [
+    {
+      title: "The Future of Technology",
+      banner: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*L8T-mS-GqCJiX0RLT1QhIA.png",
+      description: "Exploring the innovations that will shape our future.",
+      content: [
+        "Technology is evolving at an unprecedented pace.",
+        "From AI to quantum computing, the possibilities are endless.",
+        "It's crucial to stay informed about these advancements."
+      ],
+      readTime: 5,
+      author: {
+        name: "Jane Doe",
+        imageUrl: profile
+      },
+      activity: {
+        likes: 150,
+        dislikes: 5
+      },
+      categories: [
+        {
+          id: "60d1d5e4f1a2b9299f40f0a0",
+          name: "Technology"
+        },
+        {
+          id: "60d1d5e4f1a2b9299f40f0a1",
+          name: "Innovation"
+        }
+      ]
+    },
+    {
+      title: "Healthy Living: Tips and Tricks",
+      banner: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*L8T-mS-GqCJiX0RLT1QhIA.png",
+      description: "Simple tips for a healthier lifestyle.",
+      content: [
+        "Incorporating fruits and vegetables into your diet is essential.",
+        "Regular exercise can greatly improve your health.",
+        "Mental well-being is just as important as physical health."
+      ],
+      readTime: 4,
+      author: {
+        name: "John Smith",
+        imageUrl: profile
+      },
+      activity: {
+        likes: 85,
+        dislikes: 2
+      },
+      categories: [
+        {
+          id: "60d1d5e4f1a2b9299f40f0a2",
+          name: "Health"
+        },
+        {
+          id: "60d1d5e4f1a2b9299f40f0a3",
+          name: "Wellness"
+        }
+      ]
+    },
+    {
+      title: "Traveling on a Budget",
+      banner: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*L8T-mS-GqCJiX0RLT1QhIA.png",
+      description: "How to explore the world without breaking the bank.",
+      content: [
+        "Researching your destination can save you money.",
+        "Travel during off-peak seasons to find better deals.",
+        "Consider hostels or vacation rentals as accommodations."
+      ],
+      readTime: 6,
+      author: {
+        name: "Alice Johnson",
+        imageUrl: profile
+      },
+      activity: {
+        likes: 120,
+        dislikes: 1
+      },
+      categories: [
+        {
+          id: "60d1d5e4f1a2b9299f40f0a4",
+          name: "Travel"
+        },
+        {
+          id: "60d1d5e4f1a2b9299f40f0a5",
+          name: "Budgeting"
+        }
+      ]
+    },
+    {
+      title: "Mastering the Art of Cooking",
+      banner: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*L8T-mS-GqCJiX0RLT1QhIA.png",
+      description: "Tips for becoming a better cook at home.",
+      content: [
+        "Start with simple recipes to build your confidence.",
+        "Experiment with spices to enhance flavors.",
+        "Always taste your food as you cook."
+      ],
+      readTime: 3,
+      author: {
+        name: "Bob Brown",
+        imageUrl: profile
+      },
+      activity: {
+        likes: 95,
+        dislikes: 0
+      },
+      categories: [
+        {
+          id: "60d1d5e4f1a2b9299f40f0a6",
+          name: "Cooking"
+        },
+        {
+          id: "60d1d5e4f1a2b9299f40f0a7",
+          name: "Food"
+        }
+      ]
+    },
+    {
+      title: "The Importance of Mental Health",
+      banner: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*L8T-mS-GqCJiX0RLT1QhIA.png",
+      description: "Understanding mental health and its significance.",
+      content: [
+        "Mental health affects how we think, feel, and act.",
+        "It's important to seek help when needed.",
+        "Practicing mindfulness can improve your mental well-being."
+      ],
+      readTime: 5,
+      author: {
+        name: "Emma Wilson",
+        imageUrl: profile
+      },
+      activity: {
+        likes: 200,
+        dislikes: 3
+      },
+      categories: [
+        {
+          id: "60d1d5e4f1a2b9299f40f0a8",
+          name: "Mental Health"
+        },
+        {
+          id: "60d1d5e4f1a2b9299f40f0a9",
+          name: "Self-Care"
+        }
+      ]
+    }
+  ];
+
+  return (
+    <div className="w-full bg-cyan-50 jost-uniquifier py-16 px-4 sm:px-8">
+      <div className="container mx-auto">
+        <h1 className="text-3xl sm:text-5xl font-semibold text-centre mb-10 sm:mb-14 font-montserrat">
+          Our Latest Blogs
+        </h1>
+
+        <div className="flex flex-col lg:flex-row  justify-between">
+          {/* Main Blog Section */}
+          <div className="w-full lg:w-[500px] lg:h-[300px] lg:pr-4 mb-10 lg:mb-0"> {/* Adjusted width and added height */}
+            <img
+              src={blogPosts[0].banner}
+              alt="Main Blog"
+              className="w-full h-auto rounded-lg mb-4"
+            />
+            <div className="flex items-center text-cyan-600 mb-4">
+              <img src={profile} className="w-6 h-6 mr-2" />
+              <span>By - Admin</span>
+              <img src={comments} className="w-6 h-6 ml-4 mr-2" />
+              <span>{blogPosts[0].commentsCount} comments</span>
+              <span className="ml-auto">{blogPosts[0].readTime} minute read</span>
+            </div>
+
+            <h2 className="text-xl sm:text-2xl font-bold mb-4">{blogPosts[0].title}</h2>
+            <p className="text-gray-700 mb-6 text-justify">{blogPosts[0].description}</p>
+            <Link to={blogPosts[0].link} className="text-cyan-600 font-semibold">
+              Read More...
+            </Link>
+          </div>
+
+
+          {/* Blog List Section */}
+          <div className="w-full lg:w-[50%] text-justify">
+            {blogPosts.slice(1).map((post, index) => (
+              <div key={index} className="flex items-start mb-8">
+                <img
+                  src={post.banner}
+                  alt={post.title}
+                  className="w-[28%] h-[18%] object-cover rounded-lg mr-4"
+                />
+                <div className="flex-1">
+                  <Link to={post.link} className="font-bold text-sm sm:text-lg mb-2">
+                    {post.title}
+                  </Link>
+                  <p className="text-gray-600 mb-2 line-clamp-2">
+                    {post.description}
+                  </p>
+                  <p className="text-cyan-600 text-sm">
+                    Trading | <span className="text-black">{post.readTime} minute read</span>
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export default BlogListSection;
+
+
