@@ -141,7 +141,7 @@ const Platform = () => {
       </h3>
 
       {/* Desktop view */}
-      <div className="relative flex justify-center items-center hidden md:flex">
+      <div className="relative justify-center items-center hidden md:flex">
         {/* Phone Image */}
         <div ref={phoneRef} className="flex justify-center items-center p-4 relative">
           <img src={phoneImage} alt="Illustration of North Star Metrics platform features including buying, selling, trading, and earning rewards" className="w-[20rem] lg:w-[30rem] h-auto translate-y-4" />
