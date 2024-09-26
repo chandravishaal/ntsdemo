@@ -1,9 +1,202 @@
-import React from 'react'
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import { BiCandles } from "react-icons/bi";
+import { IoMdArrowUp } from "react-icons/io";
+import { IoWalletOutline } from "react-icons/io5";
+
+const AccordionItem = ({ title, children, isExpanded, toggleAccordion }) => {
+  return (
+    <div className="border-gray-200">
+      <button
+        className="w-full text-left p-4 text-base font-semibold flex justify-between items-center"
+        onClick={toggleAccordion}
+      >
+        {title}
+        <span className={`transition-transform ${isExpanded ? "rotate-180" : ""}`}>
+          <MdOutlineKeyboardArrowDown />
+        </span>
+      </button>
+      <AnimatePresence>
+        {isExpanded && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            className="overflow-hidden px-4 rounded-lg bg-secondaryGray"
+          >
+            <div className="py-3 text-lg">{children}</div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
 
 const MobileNavbar = () => {
-  return (
-    <div>MobileNavbar</div>
-  )
-}
+  const [isSticky, setIsSticky] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [expandedAccordion, setExpandedAccordion] = useState(null); // Keep track of the expanded accordion
 
-export default MobileNavbar
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsSticky(window.scrollY > 100);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const toggleAccordion = (index) => {
+    setExpandedAccordion(expandedAccordion === index ? null : index);
+  };
+
+  return (
+    <nav
+      className={`bg-secondaryGray w-full z-50 transition-all duration-300 ${
+        isSticky ? "fixed top-0 shadow-md" : "relative"
+      }`}
+      aria-label="Main Navigation"
+    >
+      <div className="mx-auto container md:px-10 lg:px-2 flex items-center justify-between p-3">
+        <Link to="/" aria-label="NSM Homepage">
+          <img
+            src="https://ntsmetrics.com/img/nsm-logo-blue.png"
+            className="w-32"
+            alt="NSM Logo"
+          />
+        </Link>
+
+        <div
+          onClick={() => setIsOpen(!isOpen)}
+          className="flex flex-col w-7 gap-1 items-center"
+        >
+          <div
+            className={`w-full bg-black rounded-md h-1 transition-transform duration-300 ${
+              isOpen ? "rotate-45 translate-y-2" : ""
+            }`}
+          ></div>
+          <div
+            className={`w-full bg-black rounded-md h-1 transition-opacity duration-300 ${
+              isOpen ? "opacity-0" : ""
+            }`}
+          ></div>
+          <div
+            className={`w-full bg-black rounded-md h-1 transition-transform duration-300 ${
+              isOpen ? "-rotate-45 -translate-y-2" : ""
+            }`}
+          ></div>
+        </div>
+      </div>
+
+      {/* Accordion and standalone links inside motion div */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -15 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -15 }}
+            className={`absolute bg-white z-50 w-full h-screen p-4 overflow-auto`}
+          > 
+            <div className="flex flex-col items-start gap-2">
+                <button className="bg-black  w-full text-white text-lg rounded-lg font-semibold text-center py-2 font-century-gothic">Login</button>
+                <button className="bg-white border border-gray-400 font-semibold w-full text-center text-primaryCyan text-lg rounded-lg py-2 font-century-gothic">Register</button>
+            </div>
+            {/* Accordion items */}
+            <AccordionItem
+              title="Products"
+              isExpanded={expandedAccordion === 0}
+              toggleAccordion={() => toggleAccordion(0)}
+            >
+              <Link onClick={() => setIsOpen(false)} to="/product1" className="py-2 text-sm flex items-center gap-1">
+                <span><BiCandles /></span>Buy and Sell
+              </Link>
+              <Link to="/product2" className="py-2 text-sm flex items-center gap-1">
+                <span><IoWalletOutline /></span>Wallets
+              </Link>
+            </AccordionItem>
+
+            <AccordionItem
+              title="Company"
+              isExpanded={expandedAccordion === 1}
+              toggleAccordion={() => toggleAccordion(1)}
+            >
+              <Link to="/about" className="py-2 text-sm flex items-center gap-1">
+                <span><BiCandles /></span>About
+              </Link>
+              <Link to="/team" className="py-2 text-sm flex items-center gap-1">
+                <span><IoWalletOutline /></span>Careers
+              </Link>
+              <Link to="/team" className="py-2 text-sm flex items-center gap-1">
+                <span><IoWalletOutline /></span>News
+              </Link>
+              <Link to="/team" className="py-2 text-sm flex items-center gap-1">
+                <span><IoWalletOutline /></span>Support
+              </Link>
+              <Link to="/team" className="py-2 text-sm flex items-center gap-1">
+                <span><IoWalletOutline /></span>Security
+              </Link>
+              <Link to="/team" className="py-2 text-sm flex items-center gap-1">
+                <span><IoWalletOutline /></span>Partners
+              </Link>
+            </AccordionItem>
+
+            <AccordionItem
+              title="Individual"
+              isExpanded={expandedAccordion === 2}
+              toggleAccordion={() => toggleAccordion(2)}
+            >
+              <Link to="/blog" className="py-2 text-sm flex items-center gap-1">
+                <span><BiCandles /></span>Buy and Sell
+              </Link>
+              <Link to="/faq" className="py-2 text-sm flex items-center gap-1">
+                <span><IoWalletOutline /></span>Wallets
+              </Link>
+              <Link to="/faq" className="py-2 text-sm flex items-center gap-1">
+                <span><IoWalletOutline /></span>Coming soon
+              </Link>
+              <Link to="/faq" className="py-2 text-sm flex items-center gap-1">
+                <span><IoWalletOutline /></span>Coming Soon
+              </Link>
+            </AccordionItem>
+
+            <AccordionItem
+              title="Learn"
+              isExpanded={expandedAccordion === 3}
+              toggleAccordion={() => toggleAccordion(2)}
+            >
+              <Link to="/blog" className="py-2 text-sm flex items-center gap-1">
+                <span><BiCandles /></span>Learn Crypto
+              </Link>
+              <Link to="/faq" className="py-2 text-sm flex items-center gap-1">
+                <span><IoWalletOutline /></span>Events
+              </Link>
+              <Link to="/faq" className="py-2 text-sm flex items-center gap-1">
+                <span><IoWalletOutline /></span>Blogs
+              </Link>
+              <Link to="/faq" className="py-2 text-sm flex items-center gap-1">
+                <span><IoWalletOutline /></span>Videos
+              </Link>
+              <Link to="/faq" className="py-2 text-sm flex items-center gap-1">
+                <span><IoWalletOutline /></span>Newsletter
+              </Link>
+              <Link to="/faq" className="py-2 text-sm flex items-center gap-1">
+                <span><IoWalletOutline /></span>Crypto Policy
+              </Link>
+            </AccordionItem>
+
+            {/* Standalone links */}
+            <div className="flex flex-col items-start">
+                <Link to="/prices" className="w-full text-left p-4 text-base font-semibold">Prices</Link>
+                <Link to="/exchange" className="w-full text-left p-4 text-base font-semibold">Exchange</Link>
+                <Link to="/contact" className="w-full text-left p-4 text-base font-semibold flex items-center gap-4">Contact Us <span className="rotate-45"><IoMdArrowUp /></span></Link>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </nav>
+  );
+};
+
+export default MobileNavbar;

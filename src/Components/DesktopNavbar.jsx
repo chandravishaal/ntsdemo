@@ -168,7 +168,7 @@ const LearnFlyoutContent = () => {
   );
 };
 
-// Learn Flyout Content
+// Company Flyout Content
 const CompanyFlyoutContent = () => {
     return (
       <div className="flex gap-2 rounded-2xl bg-white p-2 font-century-gothic">
@@ -225,8 +225,8 @@ const CompanyFlyoutContent = () => {
               <MdOutlineVideoSettings size={17} />
             </h1>
             <div className="flex flex-col gap-[2px]">
-              <div className="flex items-center"><h1 className="text-base">Videos </h1><span className="rotate-45"><IoMdArrowUp /></span></div>
-              <h1 className="text-xs text-gray-400">Get the latest videos</h1>
+              <div className="flex items-center"><h1 className="text-base">Support </h1><span className="rotate-45"><IoMdArrowUp /></span></div>
+              <h1 className="text-xs text-gray-400">Get for any query</h1>
             </div>
           </Link>
           <Link
@@ -237,7 +237,7 @@ const CompanyFlyoutContent = () => {
               <PiNewspaperClipping size={17} />
             </h1>
             <div className="flex flex-col gap-[2px]">
-              <div className="flex items-center"><h1 className="text-base">Newsletter </h1><span className="rotate-45"><IoMdArrowUp /></span></div>
+              <div className="flex items-center"><h1 className="text-base">Security </h1><span className="rotate-45"><IoMdArrowUp /></span></div>
               <h1 className="text-xs text-gray-400">Get the latest updates</h1>
             </div>
           </Link>
@@ -249,14 +249,146 @@ const CompanyFlyoutContent = () => {
               <MdOutlinePolicy size={17} />
             </h1>
             <div className="flex flex-col gap-[2px]">
-              <div className="flex items-center"><h1 className="text-base">Crypto Policy </h1></div>
-              <h1 className="text-xs text-gray-400">Read the rules</h1>
+              <div className="flex items-center"><h1 className="text-base">Partners </h1></div>
+              <h1 className="text-xs text-gray-400">Know our partners</h1>
             </div>
           </Link>
         </div>
       </div>
     );
-  };
+};
+
+// Individual Flyout Content
+const IndividualFlyoutContent = () => {
+    return (
+      <div className="flex gap-2 rounded-2xl bg-white p-2 font-century-gothic">
+        <div className="p-5 w-[230px] flex flex-col gap-1">
+          <h1 className="select-none text-xl font-medium">Solo</h1>
+          <p className="text-xs text-gray-400">Our Standalone Producys for individuals</p>
+          <div className="flex items-center gap-1 mt-5"><Link to="/learn" className="text-lg text-primaryCyan">Click to know</Link><span className="rotate-45 text-primaryCyan"><IoMdArrowUp /></span></div>
+        </div>
+        <div className="w-[2px] bg-gray-300"></div>
+        <div className="flex w-[230px] flex-col px-2">
+          <Link
+            to="/learn-crypto"
+            className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
+          >
+            <h1 className="mt-1 ml-2">
+              <HiOutlineAcademicCap size={20} />
+            </h1>
+            <div className="flex flex-col gap-[2px]">
+              <h1 className="text-base">Buy and Sell</h1>
+              <h1 className="text-xs text-gray-400">Trade your coins</h1>
+            </div>
+          </Link>
+          <Link
+            to="/learn-crypto"
+            className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
+          >
+            <h1 className="mt-1 ml-2">
+              <BsCalendar4Event size={17} />
+            </h1>
+            <div className="flex flex-col gap-[2px]">
+              <h1 className="text-base">Wallets</h1>
+              <h1 className="text-xs text-gray-400">Most secure wallets</h1>
+            </div>
+          </Link>
+        </div>
+        <div className="flex w-[230px] flex-col px-2">
+          <Link
+            to="/learn-crypto"
+            className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
+          >
+            <h1 className="mt-1 ml-2">
+              <MdOutlineVideoSettings size={17} />
+            </h1>
+            <div className="flex flex-col gap-[2px]">
+              <div className="flex items-center"><h1 className="text-base">Coming Soon </h1><span className="rotate-45"><IoMdArrowUp /></span></div>
+              <h1 className="text-xs text-gray-400">Under Development</h1>
+            </div>
+          </Link>
+          <Link
+            to="/learn-crypto"
+            className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
+          >
+            <h1 className="mt-1 ml-2">
+              <PiNewspaperClipping size={17} />
+            </h1>
+            <div className="flex flex-col gap-[2px]">
+              <div className="flex items-center"><h1 className="text-base">Coming Soon </h1><span className="rotate-45"><IoMdArrowUp /></span></div>
+              <h1 className="text-xs text-gray-400">Under Development</h1>
+            </div>
+          </Link>
+        </div>
+      </div>
+    );
+};
+
+// Product Flyout Content
+const ProducFlyoutContent = () => {
+    return (
+      <div className="flex gap-2 rounded-2xl bg-white p-2 font-century-gothic">
+        <div className="p-5 w-[230px] flex flex-col gap-1">
+          <h1 className="select-none text-xl font-medium">Crypto tools</h1>
+          <p className="text-xs text-gray-400">Our Standalone Producys for individuals</p>
+          <div className="flex items-center gap-1 mt-5"><Link to="/learn" className="text-lg text-primaryCyan">Click to know</Link><span className="rotate-45 text-primaryCyan"><IoMdArrowUp /></span></div>
+        </div>
+        <div className="w-[2px] bg-gray-300"></div>
+        <div className="flex w-[230px] flex-col px-2">
+          <Link
+            to="/learn-crypto"
+            className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
+          >
+            <h1 className="mt-1 ml-2">
+              <HiOutlineAcademicCap size={20} />
+            </h1>
+            <div className="flex flex-col gap-[2px]">
+              <h1 className="text-base">Buy and Sell</h1>
+              <h1 className="text-xs text-gray-400">Trade your coins</h1>
+            </div>
+          </Link>
+          <Link
+            to="/learn-crypto"
+            className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
+          >
+            <h1 className="mt-1 ml-2">
+              <BsCalendar4Event size={17} />
+            </h1>
+            <div className="flex flex-col gap-[2px]">
+              <h1 className="text-base">Wallets</h1>
+              <h1 className="text-xs text-gray-400">Most secure wallets</h1>
+            </div>
+          </Link>
+        </div>
+        <div className="flex w-[230px] flex-col px-2">
+          <Link
+            to="/learn-crypto"
+            className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
+          >
+            <h1 className="mt-1 ml-2">
+              <MdOutlineVideoSettings size={17} />
+            </h1>
+            <div className="flex flex-col gap-[2px]">
+              <div className="flex items-center"><h1 className="text-base">Coming Soon </h1><span className="rotate-45"><IoMdArrowUp /></span></div>
+              <h1 className="text-xs text-gray-400">Under Development</h1>
+            </div>
+          </Link>
+          <Link
+            to="/learn-crypto"
+            className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
+          >
+            <h1 className="mt-1 ml-2">
+              <PiNewspaperClipping size={17} />
+            </h1>
+            <div className="flex flex-col gap-[2px]">
+              <div className="flex items-center"><h1 className="text-base">Coming Soon </h1><span className="rotate-45"><IoMdArrowUp /></span></div>
+              <h1 className="text-xs text-gray-400">Under Development</h1>
+            </div>
+          </Link>
+        </div>
+      </div>
+    );
+};
 
 const DesktopNavbar = () => {
   const [isSticky, setIsSticky] = useState(false);
@@ -295,7 +427,7 @@ const DesktopNavbar = () => {
           {/* Fixed FlyOutLink usage */}
           <FlyOutLink
             to="#"
-            flyoutContent={LearnFlyoutContent}
+            flyoutContent={ProducFlyoutContent}
             placement="center"
           >
             Product
@@ -309,7 +441,7 @@ const DesktopNavbar = () => {
           </FlyOutLink>
           <FlyOutLink
             to="#"
-            flyoutContent={LearnFlyoutContent}
+            flyoutContent={IndividualFlyoutContent}
             placement="center"
           >
             Individual
