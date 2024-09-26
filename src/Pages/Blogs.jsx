@@ -10,8 +10,8 @@ const Blog = () => {
     <div className="font-sans bg-gray-100">
       <HeroSection />
       <Category />
-      <InstagramSection />
       <BlogListSection />
+      <InstagramSection />
       <BlogFeatureSection/>
       <LaunchSection />
     </div>

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+/*import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import '../../index.css';
@@ -51,7 +51,7 @@ const BlogListSection = () => {
         </h1>
 
         <div className="flex flex-col lg:flex-row justify-between" ref={swiperRef}>
-          {/* Main Blog Left Section */}
+          {/* Main Blog Left Section 
           <div className="w-full lg:w-[600px] lg:pr-8 mb-10 lg:mb-0" ref={(el) => (slides.current[0] = el)}>
             <img 
               src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*L7tpgNK6Rg_09CBXJIp3sQ.jpeg"
@@ -97,11 +97,11 @@ const BlogListSection = () => {
             </Link>
           </div>
 
-          {/* Blog List Right Section */}
+          {/* Blog List Right Section 
           <div className="w-full lg:w-[50%] mr-[1%] text-justify">
             
 
-            {/* Blog Item 2 */}
+            {/* Blog Item 2 *
             <div className="flex items-start mb-8" ref={(el) => (slides.current[2] = el)}>
               <img 
                 src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*58VfCFFISe7eaCdtWTCi0g.jpeg"
@@ -122,7 +122,7 @@ const BlogListSection = () => {
             </div>
 
 
-            {/* Blog Item 3 */}
+            {/* Blog Item 3 *
             <div className="flex items-start mb-8" ref={(el) => (slides.current[3] = el)}>
               <img 
                 src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*L8T-mS-GqCJiX0RLT1QhIA.png"
@@ -142,7 +142,7 @@ const BlogListSection = () => {
               </div>
             </div>
 
-            {/* Blog Item 3 */}
+            {/* Blog Item 3 *
             <div className="flex items-start mb-8" ref={(el) => (slides.current[3] = el)}>
               <img 
                 src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*4EK7Nug1n3bCOVoniFXo9Q.jpeg"
@@ -162,7 +162,7 @@ const BlogListSection = () => {
               </div>
             </div>
 
-            {/* Blog Item 4 */}
+            {/* Blog Item 4 *
             <div className="flex items-start mb-8" ref={(el) => (slides.current[4] = el)}>
               <img 
                 src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*Na-_QCEsWqQbEAFdj9OoeA.jpeg" 
@@ -188,4 +188,323 @@ const BlogListSection = () => {
   );
 };
 
-export default BlogListSection;
+export default BlogListSection;*/
+
+
+
+
+
+import { useEffect, useRef } from 'react';
+import { FaHeart, FaArrowRight } from 'react-icons/fa';
+import { CiCalendarDate } from 'react-icons/ci';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/autoplay'; 
+import { Pagination, Autoplay } from 'swiper/modules';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Link } from "react-router-dom";
+
+gsap.registerPlugin(ScrollTrigger);
+
+const EachBlog = ({ title, date, likes, description, imageUrl }) => {
+  return (
+    <div className="flex flex-col items-start gap-4 rounded-2xl bg-white p-2 outline outline-[0.2px] outline-gray-300 shadow-md">
+      <h1 className="text-lg font-semibold px-1">{title}</h1>
+      <div className="flex items-center px-1 gap-3">
+        <div className="rounded-xl flex items-center gap-2 bg-[#F3F4F6] p-1 px-2 text-sm outline whitespace-nowrap outline-[0.2px] outline-gray-300">
+          <span className="text-primaryCyan">
+            <CiCalendarDate size={15} />
+          </span>
+          <h1>{date}</h1>
+        </div>
+        <div className="rounded-xl flex items-center gap-2 bg-[#F3F4F6] p-1 px-2 text-sm outline outline-[0.2px] outline-gray-300">
+          <span className="text-primaryCyan">
+            <FaHeart />
+          </span>
+          <h1>{likes}</h1>
+        </div>
+      </div>
+      <h1 className="line-clamp-2 text-sm px-1">{description}</h1>
+
+      <div className="relative">
+        <img
+          src={imageUrl}
+          className="w-full object-cover h-[300px] rounded-xl z-40"
+          alt={title}
+        />
+        <div className="bg-white pr-2 pb-2 pt-1 absolute z-50 top-0 left-0 rounded-br-xl">
+          <div className="bg-white group hover:bg-[#F3F4F6] transition-all duration-300 p-3 outline outline-[2px] rounded-xl outline-gray-400">
+            <Link to="/" className="flex items-center">
+              Read Article
+              <span className="group-hover:translate-x-1 transition-transform duration-300 ml-2 text-primaryCyan">
+                <FaArrowRight />
+              </span>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const BlogList = () => {
+  const swiperRef = useRef(null);
+
+  useEffect(() => {
+    const slides = swiperRef.current?.querySelectorAll('.swiper-slide');
+
+    if (slides) {
+      gsap.fromTo(
+        slides,
+        {
+          opacity: 0,
+          y: 100,
+          x: (i) => (i % 3 === 0 ? -100 : i % 3 === 2 ? 100 : 0),
+        },
+        {
+          opacity: 1,
+          y: 0,
+          x: 0,
+          duration: 1,
+          stagger: 0.2,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: swiperRef.current,
+            start: 'top 80%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    }
+  }, []);
+
+  const blogPosts = [
+    {
+      title:"Data Analytics: Key to Decision and Business Growth",
+      banner: "https://images.unsplash.com/photo-1610194352335-82d06f0c94e7?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      description: "Data is the new currency of the digital age. Data insight holds the key to unlocking a new era of business growth and success.",
+      content: [
+        "Technology is evolving at an unprecedented pace.",
+        "From AI to quantum computing, the possibilities are endless.",
+        "It's crucial to stay informed about these advancements."
+      ],
+      readTime: 5,
+      author: {
+        name: "Jane Doe",
+        imageUrl: "admin"
+      },
+      activity: {
+        likes: 150,
+        dislikes: 5
+      },
+      categories: [
+        {
+          id: "60d1d5e4f1a2b9299f40f0a0",
+          name: "Technology"
+        },
+        {
+          id: "60d1d5e4f1a2b9299f40f0a1",
+          name: "Innovation"
+        }
+      ],
+      createdAt:"20.09.2024"
+    },
+    {
+      title:"Data Analytics: Key to Decision and Business Growth",
+      banner: "https://images.unsplash.com/photo-1610194352335-82d06f0c94e7?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      description: "Data is the new currency of the digital age. Data insight holds the key to unlocking a new era of business growth and success.",
+      content: [
+        "Technology is evolving at an unprecedented pace.",
+        "From AI to quantum computing, the possibilities are endless.",
+        "It's crucial to stay informed about these advancements."
+      ],
+      readTime: 5,
+      author: {
+        name: "Jane Doe",
+        imageUrl: "admin"
+      },
+      activity: {
+        likes: 150,
+        dislikes: 5
+      },
+      categories: [
+        {
+          id: "60d1d5e4f1a2b9299f40f0a0",
+          name: "Technology"
+        },
+        {
+          id: "60d1d5e4f1a2b9299f40f0a1",
+          name: "Innovation"
+        }
+      ],
+      createdAt:"20.09.2024"
+    }, {
+      title:"Data Analytics: Key to Decision and Business Growth",
+      banner: "https://images.unsplash.com/photo-1610194352335-82d06f0c94e7?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      description: "Data is the new currency of the digital age. Data insight holds the key to unlocking a new era of business growth and success.",
+      content: [
+        "Technology is evolving at an unprecedented pace.",
+        "From AI to quantum computing, the possibilities are endless.",
+        "It's crucial to stay informed about these advancements."
+      ],
+      readTime: 5,
+      author: {
+        name: "Jane Doe",
+        imageUrl: "admin"
+      },
+      activity: {
+        likes: 150,
+        dislikes: 5
+      },
+      categories: [
+        {
+          id: "60d1d5e4f1a2b9299f40f0a0",
+          name: "Technology"
+        },
+        {
+          id: "60d1d5e4f1a2b9299f40f0a1",
+          name: "Innovation"
+        }
+      ],
+      createdAt:"20.09.2024"
+    }, {
+      title:"Data Analytics: Key to Decision and Business Growth",
+      banner: "https://images.unsplash.com/photo-1610194352335-82d06f0c94e7?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      description: "Data is the new currency of the digital age. Data insight holds the key to unlocking a new era of business growth and success.",
+      content: [
+        "Technology is evolving at an unprecedented pace.",
+        "From AI to quantum computing, the possibilities are endless.",
+        "It's crucial to stay informed about these advancements."
+      ],
+      readTime: 5,
+      author: {
+        name: "Jane Doe",
+        imageUrl: "admin"
+      },
+      activity: {
+        likes: 150,
+        dislikes: 5
+      },
+      categories: [
+        {
+          id: "60d1d5e4f1a2b9299f40f0a0",
+          name: "Technology"
+        },
+        {
+          id: "60d1d5e4f1a2b9299f40f0a1",
+          name: "Innovation"
+        }
+      ],
+      createdAt:"20.09.2024"
+    },
+    {
+      title:"Data Analytics: Key to Decision and Business Growth",
+      banner: "https://images.unsplash.com/photo-1610194352335-82d06f0c94e7?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      description: "Data is the new currency of the digital age. Data insight holds the key to unlocking a new era of business growth and success.",
+      content: [
+        "Technology is evolving at an unprecedented pace.",
+        "From AI to quantum computing, the possibilities are endless.",
+        "It's crucial to stay informed about these advancements."
+      ],
+      readTime: 5,
+      author: {
+        name: "Jane Doe",
+        imageUrl: "admin"
+      },
+      activity: {
+        likes: 150,
+        dislikes: 5
+      },
+      categories: [
+        {
+          id: "60d1d5e4f1a2b9299f40f0a0",
+          name: "Technology"
+        },
+        {
+          id: "60d1d5e4f1a2b9299f40f0a1",
+          name: "Innovation"
+        }
+      ],
+      createdAt:"20.09.2024"
+    },
+    {
+      title:"Data Analytics: Key to Decision and Business Growth",
+      banner: "https://images.unsplash.com/photo-1610194352335-82d06f0c94e7?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      description: "Data is the new currency of the digital age. Data insight holds the key to unlocking a new era of business growth and success.",
+      content: [
+        "Technology is evolving at an unprecedented pace.",
+        "From AI to quantum computing, the possibilities are endless.",
+        "It's crucial to stay informed about these advancements."
+      ],
+      readTime: 5,
+      author: {
+        name: "Jane Doe",
+        imageUrl: "admin"
+      },
+      activity: {
+        likes: 150,
+        dislikes: 5
+      },
+      categories: [
+        {
+          id: "60d1d5e4f1a2b9299f40f0a0",
+          name: "Technology"
+        },
+        {
+          id: "60d1d5e4f1a2b9299f40f0a1",
+          name: "Innovation"
+        }
+      ],
+      createdAt:"20.09.2024"
+    },
+  ];
+
+  return (
+    <section className="pb-10 pt-10 bg-[#e0ffff]">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-20">
+          <h1 className="text-4xl font-bold ">Our Latest Blog</h1>
+        </div>
+
+        <Swiper
+          ref={swiperRef}
+          pagination={{ clickable: true }}
+          modules={[Pagination, Autoplay]}
+          className="mySwiper"
+          spaceBetween={30}
+          loop={true}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          breakpoints={{
+            320: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          pauseOnHover={true}
+        >
+          {blogPosts.map((post, index) => (
+            <SwiperSlide key={index}>
+              <EachBlog 
+                title={post.title} 
+                date={post.createdAt} 
+                likes={post.activity.likes} 
+                description={post.description} 
+                imageUrl={post.banner} 
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    </section>
+  );
+};
+
+export default BlogList;
+
+
+
+
