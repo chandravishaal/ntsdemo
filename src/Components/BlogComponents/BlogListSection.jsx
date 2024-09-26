@@ -200,11 +200,24 @@ import { CiCalendarDate } from 'react-icons/ci';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import 'swiper/css/autoplay'; 
+import 'swiper/css/autoplay';
 import { Pagination, Autoplay } from 'swiper/modules';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Link } from "react-router-dom";
+
+import news from '../../assets/Images/Blog/icon1.png';
+import Market from '../../assets/Images/Blog/icon2.png';
+import investment from '../../assets/Images/Blog/icon3.png';
+import Guides from '../../assets/Images/Blog/icon4.png';
+import Security from '../../assets/Images/Blog/icon5.png';
+import Features from '../../assets/Images/Blog/icon6.png';
+import Studies from '../../assets/Images/Blog/icon7.png';
+import Spotlight from '../../assets/Images/Blog/icon8.png';
+import Interviews from '../../assets/Images/Blog/icon9.png';
+import Issues from '../../assets/Images/Blog/icon10.png';
+import Education from '../../assets/Images/Blog/icon11.png';
+import Future from '../../assets/Images/Blog/icon12.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -249,6 +262,15 @@ const EachBlog = ({ title, date, likes, description, imageUrl }) => {
   );
 };
 
+
+const CategoryList = ({ description, icon }) => (
+  <button className="w-full category-list flex items-center justify-center p-2 rounded-full border-2 border-black bg-white hover:bg-primaryCyan transition">
+   {/*} <img src={icon} alt={description} className="h-4 w-4 mr-2" />*/}
+    <span className='font-century-gothic whitespace-nowrap font-bold'>{description}</span>
+  </button>
+);
+
+
 const BlogList = () => {
   const swiperRef = useRef(null);
 
@@ -282,7 +304,7 @@ const BlogList = () => {
 
   const blogPosts = [
     {
-      title:"Data Analytics: Key to Decision and Business Growth",
+      title: "Data Analytics: Key to Decision and Business Growth",
       banner: "https://images.unsplash.com/photo-1610194352335-82d06f0c94e7?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       description: "Data is the new currency of the digital age. Data insight holds the key to unlocking a new era of business growth and success.",
       content: [
@@ -309,10 +331,10 @@ const BlogList = () => {
           name: "Innovation"
         }
       ],
-      createdAt:"20.09.2024"
+      createdAt: "20.09.2024"
     },
     {
-      title:"Data Analytics: Key to Decision and Business Growth",
+      title: "Data Analytics: Key to Decision and Business Growth",
       banner: "https://images.unsplash.com/photo-1610194352335-82d06f0c94e7?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       description: "Data is the new currency of the digital age. Data insight holds the key to unlocking a new era of business growth and success.",
       content: [
@@ -339,9 +361,9 @@ const BlogList = () => {
           name: "Innovation"
         }
       ],
-      createdAt:"20.09.2024"
+      createdAt: "20.09.2024"
     }, {
-      title:"Data Analytics: Key to Decision and Business Growth",
+      title: "Data Analytics: Key to Decision and Business Growth",
       banner: "https://images.unsplash.com/photo-1610194352335-82d06f0c94e7?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       description: "Data is the new currency of the digital age. Data insight holds the key to unlocking a new era of business growth and success.",
       content: [
@@ -368,9 +390,9 @@ const BlogList = () => {
           name: "Innovation"
         }
       ],
-      createdAt:"20.09.2024"
+      createdAt: "20.09.2024"
     }, {
-      title:"Data Analytics: Key to Decision and Business Growth",
+      title: "Data Analytics: Key to Decision and Business Growth",
       banner: "https://images.unsplash.com/photo-1610194352335-82d06f0c94e7?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       description: "Data is the new currency of the digital age. Data insight holds the key to unlocking a new era of business growth and success.",
       content: [
@@ -397,10 +419,10 @@ const BlogList = () => {
           name: "Innovation"
         }
       ],
-      createdAt:"20.09.2024"
+      createdAt: "20.09.2024"
     },
     {
-      title:"Data Analytics: Key to Decision and Business Growth",
+      title: "Data Analytics: Key to Decision and Business Growth",
       banner: "https://images.unsplash.com/photo-1610194352335-82d06f0c94e7?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       description: "Data is the new currency of the digital age. Data insight holds the key to unlocking a new era of business growth and success.",
       content: [
@@ -427,10 +449,10 @@ const BlogList = () => {
           name: "Innovation"
         }
       ],
-      createdAt:"20.09.2024"
+      createdAt: "20.09.2024"
     },
     {
-      title:"Data Analytics: Key to Decision and Business Growth",
+      title: "Data Analytics: Key to Decision and Business Growth",
       banner: "https://images.unsplash.com/photo-1610194352335-82d06f0c94e7?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       description: "Data is the new currency of the digital age. Data insight holds the key to unlocking a new era of business growth and success.",
       content: [
@@ -457,9 +479,120 @@ const BlogList = () => {
           name: "Innovation"
         }
       ],
-      createdAt:"20.09.2024"
+      createdAt: "20.09.2024"
+    },
+
+    {
+      title: "Data Analytics: Key to Decision and Business Growth",
+      banner: "https://images.unsplash.com/photo-1610194352335-82d06f0c94e7?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      description: "Data is the new currency of the digital age. Data insight holds the key to unlocking a new era of business growth and success.",
+      content: [
+        "Technology is evolving at an unprecedented pace.",
+        "From AI to quantum computing, the possibilities are endless.",
+        "It's crucial to stay informed about these advancements."
+      ],
+      readTime: 5,
+      author: {
+        name: "Jane Doe",
+        imageUrl: "admin"
+      },
+      activity: {
+        likes: 150,
+        dislikes: 5
+      },
+      categories: [
+        {
+          id: "60d1d5e4f1a2b9299f40f0a0",
+          name: "Technology"
+        },
+        {
+          id: "60d1d5e4f1a2b9299f40f0a1",
+          name: "Innovation"
+        }
+      ],
+      createdAt: "20.09.2024"
+    },
+
+    {
+      title: "Data Analytics: Key to Decision and Business Growth",
+      banner: "https://images.unsplash.com/photo-1610194352335-82d06f0c94e7?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      description: "Data is the new currency of the digital age. Data insight holds the key to unlocking a new era of business growth and success.",
+      content: [
+        "Technology is evolving at an unprecedented pace.",
+        "From AI to quantum computing, the possibilities are endless.",
+        "It's crucial to stay informed about these advancements."
+      ],
+      readTime: 5,
+      author: {
+        name: "Jane Doe",
+        imageUrl: "admin"
+      },
+      activity: {
+        likes: 150,
+        dislikes: 5
+      },
+      categories: [
+        {
+          id: "60d1d5e4f1a2b9299f40f0a0",
+          name: "Technology"
+        },
+        {
+          id: "60d1d5e4f1a2b9299f40f0a1",
+          name: "Innovation"
+        }
+      ],
+      createdAt: "20.09.2024"
+    },
+
+    {
+      title: "Data Analytics: Key to Decision and Business Growth",
+      banner: "https://images.unsplash.com/photo-1610194352335-82d06f0c94e7?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      description: "Data is the new currency of the digital age. Data insight holds the key to unlocking a new era of business growth and success.",
+      content: [
+        "Technology is evolving at an unprecedented pace.",
+        "From AI to quantum computing, the possibilities are endless.",
+        "It's crucial to stay informed about these advancements."
+      ],
+      readTime: 5,
+      author: {
+        name: "Jane Doe",
+        imageUrl: "admin"
+      },
+      activity: {
+        likes: 150,
+        dislikes: 5
+      },
+      categories: [
+        {
+          id: "60d1d5e4f1a2b9299f40f0a0",
+          name: "Technology"
+        },
+        {
+          id: "60d1d5e4f1a2b9299f40f0a1",
+          name: "Innovation"
+        }
+      ],
+      createdAt: "20.09.2024"
     },
   ];
+
+
+  const categories = [
+
+    { icon: news, altText: "Crypto News", description: "Crypto News and Updates" },
+    { icon: Market, altText: "Market Analysis", description: "Market Analysis and Trends" },
+    { icon: investment, altText: "Investment Strategies", description: "Investment Strategies" },
+    { icon: Security, altText: "Security Tips", description: "Security Tips" },
+    { icon: Studies, altText: "Case Studies", description: "Case Studies" },
+    { icon: Interviews, altText: "Interviews", description: "Interviews and Expert Opinions" },
+    { icon: Issues, altText: "Legal Issues", description: "Legal and Regulatory Issues" },
+    { icon: Education, altText: "Cryptocurrency Education", description: "Cryptocurrency Education" },
+    { icon: Future, altText: "Future of Crypto", description: "Future of Cryptocurrency" },
+   
+
+
+  ];
+
 
   return (
     <section className="pb-10 pt-10 bg-[#e0ffff]">
@@ -467,7 +600,12 @@ const BlogList = () => {
         <div className="text-center mb-20">
           <h1 className="text-4xl font-bold ">Our Latest Blog</h1>
         </div>
-
+        <div className='flex flex-row gap-6 mb-10'>
+          {categories.slice(0, 5).map((category, index) => (
+            <CategoryList key={index} description={category.description} icon={category.icon} />
+          ))}
+        </div>
+        ,
         <Swiper
           ref={swiperRef}
           pagination={{ clickable: true }}
@@ -486,14 +624,14 @@ const BlogList = () => {
           }}
           pauseOnHover={true}
         >
-          {blogPosts.map((post, index) => (
+          {blogPosts.slice(0, 6).map((post, index) => (
             <SwiperSlide key={index}>
-              <EachBlog 
-                title={post.title} 
-                date={post.createdAt} 
-                likes={post.activity.likes} 
-                description={post.description} 
-                imageUrl={post.banner} 
+              <EachBlog
+                title={post.title}
+                date={post.createdAt}
+                likes={post.activity.likes}
+                description={post.description}
+                imageUrl={post.banner}
               />
             </SwiperSlide>
           ))}
