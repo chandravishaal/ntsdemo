@@ -115,11 +115,12 @@ import Marquee from "react-fast-marquee";
 const Footer = () => {
   return (
     <>
-      <Marquee gradient={true} gradientColor="black" loop={0} speed={60} pauseOnHover={true} style={{ color: 'white', backgroundColor: 'black' }}>
+    <div className="bg-secondaryGray">
+    <Marquee gradient={true} gradientColor="black" loop={0} speed={60} pauseOnHover={true} style={{ color: 'white', backgroundColor: 'black' }}>
         Subscribe to our newsletter ● FAQ's - Your Questions Answered! ● Check Our ICO Calendar for Upcoming Events ● Explore NSM Logo - Your Gateway to Crypto ● Trade with Us - Buy & Sell 70+ Cryptocurrencies! ● Discover Products and Services at NSM! ● Learn More About Cryptocurrency Today! ● Buy and Sell Cryptocurrency 24/7 ● Get Started with North Star Metrics Now! ● Your Trusted Crypto Platform - North Star Metrics ● Enjoy Safe & Secure Transactions! ● Instant Order Processing - Trade Efficiently ● Volatility Protection Tools Available ● Stay Ahead: Market Cap Insights and Trends ● Join Over 10 Million Transactions!
       </Marquee>
 
-      <div className="bg-[#F9FAFB] my-14  ">
+      <div className="bg-secondaryGray my-14  ">
         <div className="container mx-auto max-w-[1200px] grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 py-6 px-4 md:py-10 md:px-6">
 
 
@@ -247,9 +248,10 @@ const Footer = () => {
       </div>
 
       {/* footer bottom */}
-      <div className="text-center font-semibold text-gray-500 p-2 my-8 text-sm">
+      <div className="text-center   font-semibold text-gray-500 p-2 my-8 text-sm">
         &copy; 2024 NORTH STAR METRICS, All Rights Reserved.
       </div>
+    </div>
     </>
   );
 };
