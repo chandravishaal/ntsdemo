@@ -274,13 +274,13 @@ text-decoration:none;
 
 
 /* .footer-background */
-.footer-background {
+/* .footer-background {
   background-image: url('./assets/Images/ftr_background.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top; 
   width: 100%;
-}
+} */
 
 /* For mobile view (up to 768px width) */
 @media (max-width: 768px) {
