@@ -300,7 +300,7 @@ const LearnFlyoutContent = () => {
           </div>
         </Link>
         <Link
-          to="/learn-crypto"
+          to="/blogs"
           className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
         >
           <h1 className="mt-1 ml-2">
