@@ -195,7 +195,7 @@ export default BlogListSection;*/
 
 
 import { useEffect, useRef } from 'react';
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaHeart, FaArrowRight } from 'react-icons/fa';
+import { FaHeart, FaArrowRight } from 'react-icons/fa';
 import { CiCalendarDate } from 'react-icons/ci';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -249,7 +249,7 @@ const EachBlog = ({ title, date, likes, description, imageUrl }) => {
   );
 };
 
-const TeamMemberCard = () => {
+const BlogList = () => {
   const swiperRef = useRef(null);
 
   useEffect(() => {
@@ -503,7 +503,7 @@ const TeamMemberCard = () => {
   );
 };
 
-export default TeamMemberCard;
+export default BlogList;
 
 
 
