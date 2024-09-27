@@ -9,6 +9,7 @@ import {
 
 import MainScreenLoader from "../src/Common/mainLoader";
 
+
 const RootLayout = lazy(() => import("./Layouts/RootLayout"));
 const Dashboard = lazy(() => import("./Pages/Home"));
 const CryptoConverter = lazy(() => import("./Pages/CryptoConverter"));
@@ -21,6 +22,7 @@ const Cryptocurrency = lazy(() => import("./Pages/Cryptocurrency"));
 const Coin = lazy(() => import("./Pages/Coin"));
 const News = lazy(() => import("./Pages/News"));
 const Features = lazy(() => import("./Pages/Features"));
+const FAQ = lazy(() => import("./Pages/FAQ"));
 
 const App = () => {
   const router = createBrowserRouter(
@@ -37,6 +39,7 @@ const App = () => {
         <Route path="/coins/:coin" element={<Coin />} />
         <Route path="/features" element={<Features />} />
         <Route path="/news" element={<News />} />
+        <Route path="/faq" element={<FAQ />} />
         <Route path="*" element={<Page404 />} />
       </Route>
     )
