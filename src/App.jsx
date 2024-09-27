@@ -25,6 +25,8 @@ const Features = lazy(() => import("./Pages/Features"));
 const Careers = lazy(() => import("./Pages/Careers"))
 const FAQ = lazy(() => import("./Pages/FAQ"));
 const ContactUs = lazy(() => import("./Pages/ContactUs"));
+const Exchange = lazy(() => import("./Pages/Exchange"))
+const Prices = lazy(() => import("./Pages/Prices"))
 
 const App = () => {
   const router = createBrowserRouter(
@@ -41,9 +43,11 @@ const App = () => {
         <Route path="/coins/:coin" element={<Coin />} />
         <Route path="/features" element={<Features />} />
         <Route path="/news" element={<News />} />
+        <Route path="/prices" element={<Prices />} />
         <Route path="/careers" element={<Careers />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/exchange" element={<Exchange />} />
         <Route path="*" element={<Page404 />} />
       </Route>
     )

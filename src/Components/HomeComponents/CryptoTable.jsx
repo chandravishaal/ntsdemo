@@ -15,9 +15,6 @@ import rippleIcon from "../../assets/Images/HomeImages/XRP.png";
 import { IoMdInformationCircleOutline } from "react-icons/io";
 import { IoMdArrowDropdown } from "react-icons/io";
 
-
-
-
 // Example data
 const cryptocurrencies = [
   {
@@ -258,13 +255,12 @@ const CryptoTable = () => {
       crypto.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
-    if(filteredData.length === 0) {
+    if (filteredData.length === 0) {
       setNotFound(true);
-    }
-    else {
+    } else {
       setNotFound(false);
     }
-    
+
     setSortedData(filteredData);
   }, [searchTerm]);
 
@@ -378,102 +374,113 @@ const CryptoTable = () => {
       </div>
 
       <div className="responsiveTable">
-        <table className="min-w-full bg-white border rounded-lg shadow-lg">
-          <thead>
-            <tr>
-              <th className="px-8 py-2 border-b text-center">#</th>
-              {visibleColumns.name && (
-                <th className="px-8 py-2 border-b text-center font-montserrat ">Name</th>
-              )}
-              {visibleColumns.price && (
-                <th className="px-4 py-2 border-b text-center font-montserrat ">Price</th>
-              )}
-              {visibleColumns.change && (
-                <th className="px-8 py-2 border-b text-center whitespace-nowrap lg:whitespace-normal font-montserrat ">
-                  24h %
-                  <InfoTooltip text="The percentage of change in the value compared to 24 hours ago." />
-                </th>
-              )}
-              {visibleColumns.volume && (
-                <th className="px-4 py-2 border-b text-center font-montserrat whitespace-nowrap lg:whitespace-normal ">
-                  Volume (24h)
-                  <InfoTooltip text="The total value of the currency that has been traded in the last 24 hours." />
-                </th>
-              )}  
-              {visibleColumns.marketCap && (
-                <th
-                  className="px-4 py-2 cursor-pointer whitespace-nowrap lg:whitespace-normal  border-b text-center font-montserrat "
-                  onClick={sortByMarketCap}
-                >
-                  {sortDirection === "asc" ? "▲" : "▼"} Market Cap
-                  <InfoTooltip text="The total value of the number of coins in circulation multiplied by the current market price of a single coin." />
-                </th>
-              )}
-
-              {visibleColumns.last7days && (
-                <th className="px-2 border-b text-center font-montserrat whitespace-nowrap lg:whitespace-normal ">
-                  Last 7 Days
-                  <InfoTooltip text="This shows a sparkline graph of the last 7 days of the currency's value." />
-                </th>
-              )}
-            </tr>
-          </thead>
-          <tbody>
-            {sortedData.map((crypto, index) => (
-              <tr key={index}>
-                <td className=" px-8 py-4 border-b text-center">{index + 1}</td>
+        <div className="min-w-full bg-white border rounded-lg shadow-xl overflow-hidden">
+          <table className="min-w-full">
+            <thead className="bg-gray-50 rounded-xl">
+              <tr>
+                <th className="px-8 py-2 border-b text-center">#</th>
                 {visibleColumns.name && (
-                  <td className=" px-8 py-4 border-b text-start">
-                    <div className="flex items-center justify-stretch">
-                      <img
-                        src={crypto.icon}
-                        alt={crypto.symbol}
-                        className="w-8 h-8 mr-4"
-                      />
-                      <span>{crypto.name}</span>
-                    </div>
-                  </td>
+                  <th className="px-8 py-2 border-b text-center font-montserrat ">
+                    Name
+                  </th>
                 )}
                 {visibleColumns.price && (
-                  <td className="px-4 py-4 border-b text-center">
-                    ${crypto.price.toLocaleString("en-US")}
-                  </td>
+                  <th className="px-4 py-2 border-b text-center font-montserrat ">
+                    Price
+                  </th>
                 )}
                 {visibleColumns.change && (
-                  <td
-                    className={`border-b text-center px-8 py-4 ${
-                      crypto.change < 0 ? "text-red-500" : "text-green-500"
-                    }`}
-                  >
-                    {crypto.change}%
-                  </td>
+                  <th className="px-8 py-2 border-b text-center whitespace-nowrap lg:whitespace-normal font-montserrat ">
+                    24h %
+                    <InfoTooltip text="The percentage of change in the value compared to 24 hours ago." />
+                  </th>
                 )}
                 {visibleColumns.volume && (
-                  <td className="border-b text-center px-4 py-4">
-                    {crypto.volume}B
-                  </td>
+                  <th className="px-4 py-2 border-b text-center font-montserrat whitespace-nowrap lg:whitespace-normal ">
+                    Volume (24h)
+                    <InfoTooltip text="The total value of the currency that has been traded in the last 24 hours." />
+                  </th>
                 )}
                 {visibleColumns.marketCap && (
-                  <td className="border-b text-center px-4 py-4">
-                    {crypto.marketCap}B
-                  </td>
+                  <th
+                    className="px-4 py-2 cursor-pointer whitespace-nowrap lg:whitespace-normal  border-b text-center font-montserrat "
+                    onClick={sortByMarketCap}
+                  >
+                    {sortDirection === "asc" ? "▲" : "▼"} Market Cap
+                    <InfoTooltip text="The total value of the number of coins in circulation multiplied by the current market price of a single coin." />
+                  </th>
                 )}
+
                 {visibleColumns.last7days && (
-                  <td className="border-b center px-4 py-4">
-                    {renderSparkline(crypto.last7days)}
-                  </td>
+                  <th className="px-2 border-b text-center font-montserrat whitespace-nowrap lg:whitespace-normal ">
+                    Last 7 Days
+                    <InfoTooltip text="This shows a sparkline graph of the last 7 days of the currency's value." />
+                  </th>
                 )}
               </tr>
-            ))}
-            {notFound && (
-              <tr>
-                <td colSpan={6} className="text-center font-century-gothic font-semibold mt-10 py-4">
-                  No data found
-                </td>
-              </tr>
-            )}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {sortedData.map((crypto, index) => (
+                <tr key={index} className="bg-white hover:bg-gray-50">
+                  <td className=" px-8 py-4 border-b text-center">
+                    {index + 1}
+                  </td>
+                  {visibleColumns.name && (
+                    <td className=" px-8 py-4 border-b text-start">
+                      <div className="flex items-center justify-stretch">
+                        <img
+                          src={crypto.icon}
+                          alt={crypto.symbol}
+                          className="w-8 h-8 mr-4"
+                        />
+                        <span>{crypto.name}</span>
+                      </div>
+                    </td>
+                  )}
+                  {visibleColumns.price && (
+                    <td className="px-4 py-4 border-b text-center">
+                      ${crypto.price.toLocaleString("en-US")}
+                    </td>
+                  )}
+                  {visibleColumns.change && (
+                    <td
+                      className={`border-b text-center px-8 py-4 ${
+                        crypto.change < 0 ? "text-red-500" : "text-green-500"
+                      }`}
+                    >
+                      {crypto.change}%
+                    </td>
+                  )}
+                  {visibleColumns.volume && (
+                    <td className="border-b text-center px-4 py-4">
+                      {crypto.volume}B
+                    </td>
+                  )}
+                  {visibleColumns.marketCap && (
+                    <td className="border-b text-center px-4 py-4">
+                      {crypto.marketCap}B
+                    </td>
+                  )}
+                  {visibleColumns.last7days && (
+                    <td className="border-b center px-4 py-4">
+                      {renderSparkline(crypto.last7days)}
+                    </td>
+                  )}
+                </tr>
+              ))}
+              {notFound && (
+                <tr>
+                  <td
+                    colSpan={6}
+                    className="text-center font-century-gothic font-semibold mt-10 py-4"
+                  >
+                    No data found
+                  </td>
+                </tr>
+              )}
+            </tbody>
+          </table>
+        </div>
       </div>
 
       {isModalOpen && (

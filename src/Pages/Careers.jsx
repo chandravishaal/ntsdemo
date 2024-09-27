@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Blob from "../Common/Blobs";
 
 const jobs = [
   {
@@ -67,7 +68,8 @@ const JobListing = () => {
   const [selectedCategory, setSelectedCategory] = useState("View all");
 
   return (
-    <section className="md:pt-20 lg:py-10 md:ml-10">
+    <section className="md:pt-20 lg:py-10 md:ml-10 relative">
+      {/* <Blob /> */}
       <div className="container mx-auto mb-20 flex flex-col justify-between gap-5">
         <div className="mt-10 max-md:px-4">
           <span className="border-2 border-gray-800 text-gray-800 px-3 py-1.5 rounded-full font-bold hover:bg-gray-100 transition-colors">
@@ -75,11 +77,11 @@ const JobListing = () => {
           </span>
         </div>
 
-        <div className="font-century-gothic mt-2 font-bold max-md:px-4">
+        <div className="font-century-gothic mt-2 font-bold max-md:px-4 relative">
           <h1 className="text-4xl font-bold mb-2">Be part of our mission</h1>
           <p className="text-lg text-gray-600 mb-8">
-            We’re looking for passionate people to join us on our mission. We
-            value <br />
+            We&apos;re looking for passionate people to join us on our mission.
+            We value <br />
             flat hierarchies, clear communication, and full ownership and
             responsibility.
           </p>
@@ -118,7 +120,7 @@ const JobListing = () => {
         <div className="w-full">
           {jobs.map((job, index) => (
             <div key={index}>
-              <div className="bg-white p-6 rounded-lg relative">
+              <div className="bg-transparent pt-6 pb-6 pr-6 pl-4 rounded-lg relative">
                 {/* Job content */}
                 <div className="flex justify-between items-center">
                   <div>
