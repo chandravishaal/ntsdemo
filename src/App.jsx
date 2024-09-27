@@ -24,6 +24,7 @@ const News = lazy(() => import("./Pages/News"));
 const Features = lazy(() => import("./Pages/Features"));
 const Careers = lazy(() => import("./Pages/Careers"))
 const FAQ = lazy(() => import("./Pages/FAQ"));
+const ContactUs = lazy(() => import("./Pages/ContactUs"));
 
 const App = () => {
   const router = createBrowserRouter(
@@ -42,6 +43,7 @@ const App = () => {
         <Route path="/news" element={<News />} />
         <Route path="/careers" element={<Careers />} />
         <Route path="/faq" element={<FAQ />} />
+        <Route path="/contact-us" element={<ContactUs />} />
         <Route path="*" element={<Page404 />} />
       </Route>
     )
