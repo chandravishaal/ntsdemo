@@ -164,7 +164,7 @@ const MobileNavbar = () => {
             <AccordionItem
               title="Learn"
               isExpanded={expandedAccordion === 3}
-              toggleAccordion={() => toggleAccordion(2)}
+              toggleAccordion={() => toggleAccordion(3)}
             >
               <Link to="/blog" className="py-2 text-sm flex items-center gap-1">
                 <span><BiCandles /></span>Learn Crypto
