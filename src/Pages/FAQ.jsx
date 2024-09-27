@@ -174,15 +174,20 @@ const FAQ = () => {
             <div className="container mx-auto mb-20 flex flex-col justify-between gap-5 px-4">
                 <div className="flex flex-col md:flex-row justify-between items-center mb-6">
                     <h1 className="text-3xl font-bold mb-4 md:mb-0">Frequently Asked Questions</h1>
-                    <button className="border border-gray-300 rounded-full px-4 py-2 text-sm flex items-center ">
-                        Get in touch <i className="ri-external-link-line ml-2"></i>
-                    </button>
+                    <div className="ml-auto flex space-x-2 mt-4 md:mt-0 w-full md:w-auto">
+                        <div className="w-full">
+                            <button className="bg-black text-white rounded-full px-4 py-2 text-sm w-full flex items-center justify-center">
+                                Get in touch
+                            </button>
+                        </div>
+                    </div>
+
                 </div>
                 <p className="mb-6 text-gray-600 text-center md:text-left">
                     Quick answers to questions you may have. Can’t find what you’re looking for? Check out our{' '}
                     <a href="#" className="text-blue-600">FAQs</a>.
                 </p>
-                
+
                 {/* Render FAQ categories and questions */}
                 {faqData.map((category) => (
                     <div key={category.category} className="mb-8">
@@ -230,7 +235,7 @@ const FAQ = () => {
 const FAQItem = ({ icon, question, answer }) => {
     return (
         <div className="rounded-lg p-4 flex flex-col md:flex-row items-start">
-            <div className="flex items-center justify-center w-20 max-md:w-12 h-8 border-2 border-gray-400 rounded-lg mb-2 md:mb-0 md:mr-4">
+            <div className="text-2xl mr-4 border p-2 rounded-lg">
                 {icon}
             </div>
             <div className="flex-grow">
