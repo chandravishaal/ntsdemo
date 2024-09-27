@@ -1,9 +1,33 @@
 import React, { useState } from "react";
 
 const ContactUs = () => {
+  // State variables to store form data
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phoneNumber: "",
+  });
 
+  // Handle form input changes
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value, // Dynamically set the state based on the input's name
+    });
+  };
+
+  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log("Form Submitted:", formData);
+    setFormData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      phoneNumber: "",
+    })
   };
 
   return (
@@ -36,12 +60,18 @@ const ContactUs = () => {
                 <div className="flex space-x-4">
                   <input
                     type="text"
+                    name="firstName"
+                    value={formData.firstName}
+                    onChange={handleInputChange}
                     placeholder="First name"
                     className="w-1/2 border border-gray-300 rounded p-2"
                     required
                   />
                   <input
                     type="text"
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleInputChange}
                     placeholder="Last name"
                     className="w-1/2 border border-gray-300 rounded p-2"
                     required
@@ -49,19 +79,25 @@ const ContactUs = () => {
                 </div>
                 <input
                   type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
                   placeholder="Email"
                   className="w-full border border-gray-300 rounded p-2"
                   required
                 />
                 <input
                   type="tel"
+                  name="phoneNumber"
+                  value={formData.phoneNumber}
+                  onChange={handleInputChange}
                   placeholder="Phone number"
                   className="w-full border border-gray-300 rounded p-2"
                   required
                 />
                 <button
                   type="submit"
-                  className="w-full bg-primaryCyan  text-white p-2 rounded"
+                  className="w-full bg-primaryCyan text-white p-2 rounded"
                 >
                   Send message
                 </button>
@@ -78,9 +114,9 @@ const ContactUs = () => {
                 width="600"
                 height="450"
                 className="absolute inset-0 w-full h-full border-0"
-                allowfullscreen=""
+                allowFullScreen=""
                 loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
+                referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
           </div>
