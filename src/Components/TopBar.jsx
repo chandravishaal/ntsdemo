@@ -1,5 +1,5 @@
 import 'remixicon/fonts/remixicon.css';
-
+import { Link } from 'react-router-dom';
 const TopBar = () => {
   return (
     <div className="bg-[#252525] w-full hidden lg:block">
@@ -27,7 +27,7 @@ const TopBar = () => {
           {/* Right Side: Navigation Links and Sign In/Register */}
           <div className="flex items-center space-x-4 md:space-x-6">
             {/* Navigation Links */}
-            <a href="#" className="hover:text-primaryCyan text-gray-500 text-sm md:text-base">FAQ&apos;s</a>
+            <Link to="/FAQ" className="hover:text-primaryCyan text-gray-500 text-sm md:text-base">FAQ&apos;s</Link>
             <div className="border-l border-gray-600 h-6"></div>
 
             <a href="#" className="hover:text-primaryCyan text-gray-500 text-sm md:text-base">ICO Calendar</a>
