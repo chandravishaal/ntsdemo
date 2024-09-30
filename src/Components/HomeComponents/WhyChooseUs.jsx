@@ -246,7 +246,7 @@ const WhyChooseUs = () => {
 
             <div id="center" className='w-1/3  h-full flex  justify-center relative'>
 
-            <div id="The_text_div" className='w-[16vw] h-[15vh] p-4  bg-white rounded-xl absolute top-[24%] left-2 z-40 '>
+            <div id="The_text_div" className='w-[70%]  p-4  bg-white rounded-xl absolute top-[24%] left-2 z-40 '>
             <p className='text-center text-sm'>
             Get started with ease - simply give us a call, set an appointment, or visit our office, and in no time, you'll complete your first trade.
                 </p>
