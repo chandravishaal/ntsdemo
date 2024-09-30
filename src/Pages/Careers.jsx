@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Blob from "../Common/Blobs";
+// import Blob from "../Common/Blobs";
 
 const jobs = [
   {
