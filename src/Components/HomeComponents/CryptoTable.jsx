@@ -374,7 +374,7 @@ const CryptoTable = () => {
       </div>
 
       <div className="responsiveTable">
-        <div className="min-w-full bg-white border rounded-lg shadow-xl overflow-hidden">
+        <div className="min-w-full bg-white border rounded-lg shadow-xl overflow-y-auto">
           <table className="min-w-full">
             <thead className="bg-gray-50 rounded-xl">
               <tr>

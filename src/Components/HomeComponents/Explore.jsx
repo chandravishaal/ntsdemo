@@ -1,126 +1,86 @@
-import { useEffect } from "react";
-import { Sparklines, SparklinesLine } from "react-sparklines"; 
-import { FaArrowUpLong, FaArrowDownLong } from "react-icons/fa6";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import explorebanner from "../../assets/Images/2nd_section_mobile.png";
-import PrimaryButton from "../../Common/PrimaryButton";
-import SecondaryButton from "../../Common/SecondaryButton";
-
-const CoinCards = ({ image, name, amount, data, isPositive, percentage }) => {
-  return (
-    <div data-aos="flip-left" data-aos-duration="2000" className="rounded-[40px] bg-white lg:w-full shadow-xl z-40 border-[3px] border-gray-200 px-4 py-2">
-      <div className="flex flex-col justify-between lg:gap-2 w-full">
-        <div className="flex items-center justify-between gap-2 lg:gap-5">
-          <div className="flex flex-col items-start mt-2">
-            <h1 className="font-bold text-md lg:text-lg font-montserrat ">{name}</h1>
-            <h1 className="text-sm font-medium mb-3 whitespace-nowrap md:mb-5">₹ {amount}</h1>
-          </div>
-          <img src={image} className="w-8 lg:w-10 mb-2" alt="" />
-        </div>
-        <div className="flex items-center lg:w-full justify-between gap-1">
-          <Sparklines data={data} limit={data.length} width={100} height={30} margin={1}>
-            <SparklinesLine color={isPositive ? "green" : "red"} />
-          </Sparklines>
-          <h1
-            className={`text-2xl flex mb-3 items-center gap-1 ${
-              isPositive ? "text-green-600" : "text-red-600"
-            } mt-3 font-semibold`}
-          >
-            <span className="text-sm md:text-lg">
-              {isPositive ? <FaArrowUpLong /> : <FaArrowDownLong />}
-            </span>
-            <span className="text-lg select-none">{percentage}%</span>
-          </h1>
-        </div>
-      </div>
-    </div>
-  );
-};
+import { useState } from "react";
+import phone from "../../assets/Images/HomeImages/iPhone-16-Plus-Light.png";
+import { MdSwapCalls } from "react-icons/md";
 
 const Explore = () => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
+  const [activeTab, setActiveTab] = useState("send");
+
+  // Function to toggle between "send" and "receive"
+  const handleSwap = () => {
+    setActiveTab(activeTab === "send" ? "receive" : "send");
+  };
 
   return (
-    <section className="exploreSection-background">
-      <div className="flex flex-col lg:flex-row justify-between py-5 container w-full mx-auto items-center">
-        <div className="lg:flex-1 select-none w-full lg:flex justify-center md:justify-start hidden">
-          <img data-aos="fade-up" 
-          data-aos-duration="2000" 
-          src={explorebanner} className="w-[70%] mx-auto md:w-[40%] mb-10 lg:w-[70%] lg:-translate-x-5 lg:translate-y-7"
-          alt=" current cryptocurrency market prices" />
-        </div>
+    <section className="py-20">
+      <div className="flex flex-col lg:flex-row items-center justify-between container mx-auto">
+        {/* Left-side content */}
+        <div className="flex-1">{/* Your content here */}</div>
 
-        <div className="flex lg:flex-1 flex-col items-center lg:items-start gap-2 px-5">
-          <h1 data-aos="fade-left" data-aos-duration="1000" className="text-3xl font-bold mb-2 text-selection text-center font-montserrat  md:text-left">
-            Explore Crypto
-          </h1>
-          <p data-aos="fade-left" data-aos-duration="2000" className="md:text-xl  lg:text-xl text-center font-century-gothic lg:text-left mb-3">
-            Buy and sell 100+ cryptocurrencies on the best platform for buying and selling cryptocurrency, including Bitcoin, Ethereum, and more.
-          </p>
+        {/* Phone image and content inside the phone */}
+        <div className="flex-1">
+          <div className="bg-gray-500 h-[500px] overflow-y-hidden rounded-3xl p-10 w-full">
+            <div className="relative flex justify-center">
+              {/* Wrapper for the phone and its content */}
+              <div className="relative w-72">
+                {/* Content inside the phone */}
+                <div className="absolute inset-0 flex flex-col gap-3 top-14 items-center">
+                  {/* Swap Button */}
+                  <div className="absolute top-[5.2rem] rounded-full bg-white p-1 left-[8rem]">
+                    <div className="bg-blue-500 p-1 rounded-full">
+                      <button
+                        onClick={handleSwap}
+                        className="text-white cursor-pointer px-1 py-1 flex items-center justify-center"
+                      >
+                        <MdSwapCalls />
+                      </button>
+                    </div>
+                  </div>
 
-          <div className="flex items-center gap-5 w-full mb-5 justify-center font-century-gothic lg:justify-start">
-            <PrimaryButton title="Tradable" />  
-            <SecondaryButton title="Top Gainers" />
-          </div>
+                  {/* Conditional rendering to swap between Send and Receive */}
+                  <div className={`bg-blue-500 select-none ${activeTab === 'send' ? 'order-0' : 'order-1'} font-century-gothic text-white flex flex-col gap-4 p-5 w-5/6 border rounded-2xl`}>
+                    <h1 className="font-bold text-xs">Send</h1>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-2 text-sm">
+                        <div className="w-5 h-5 bg-gray-400 rounded-full"></div>
+                        <h1 className="text-sm">BTC</h1>
+                      </div>
+                      <input
+                        type="tel"
+                        className="bg-transparent w-[100px] outline-none text-right"
+                        value={0}
+                      />
+                    </div>
+                  </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 w-full mb-5 md:px-20 lg:px-0">
-            <CoinCards
-              name="Bitcoin"
-              image="https://cryptologos.cc/logos/bitcoin-btc-logo.png"
-              data={[40000, 40500, 41000, 40000, 39500, 41000, 41500]}
-              amount={534454}
-              isPositive={true}
-              percentage={2.5}
-              alt="Bitcoin logo"
-            />
-            <CoinCards
-              name="Ethereum"
-              image="https://cryptologos.cc/logos/ethereum-eth-logo.png"
-              data={[3000, 3050, 3100, 2950, 2900, 3000, 3100]}
-              amount={4366}
-              isPositive={true}
-              percentage={1.5}
-               alt="Ethereum logo"
-            />
-            <CoinCards
-              name="Litecoin"
-              image="https://cryptologos.cc/logos/litecoin-ltc-logo.png"
-              data={[200, 205, 210, 190, 185, 195, 200]}
-              amount={2435}
-              isPositive={false}
-              percentage={0.5}
-               alt="Litecoin logo"
-            />
-              <CoinCards
-                name="Ripple"
-                image="https://cryptologos.cc/logos/xrp-xrp-logo.png"
-                data={[0.9, 0.91, 0.92, 0.89, 0.88, 0.9, 0.92]}
-                amount={3245}
-                isPositive={true}
-                percentage={1.5}
-                 alt="Ripple logo"
-              />
-            <CoinCards
-              name="Cardano"
-              image="https://cryptologos.cc/logos/cardano-ada-logo.png"
-              data={[1.1, 1.15, 1.2, 1.05, 1, 1.1, 1.2]}
-              amount={76584}
-              isPositive={false}
-              percentage={0.5}
-               alt="Cardano logo"
-            />
-            <CoinCards
-              name="Solana"
-              image="https://cryptologos.cc/logos/solana-sol-logo.png"
-              data={[30, 32, 33, 31, 30, 32, 34]}
-              amount={34234}
-              isPositive={true}
-              percentage={4.5}
-               alt="Solana logo"
-            />
+                  {/* Receive Card */}
+                  <div className={`bg-blue-500 select-none ${activeTab === 'send' ? 'order-1' : 'order-0'} font-century-gothic text-white flex flex-col gap-4 p-5 w-5/6 border rounded-2xl`}>
+                    <h1 className="font-bold text-xs">Receive</h1>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-2 text-sm">
+                        <div className="w-5 h-5 bg-gray-400 rounded-full"></div>
+                        <h1 className="text-sm">INR</h1>
+                      </div>
+                      <input
+                        type="tel"
+                        className="bg-transparent w-[100px] outline-none text-right"
+                        value={0}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Rate and Exchange Button */}
+                  <div className="bg-blue-500 w-5/6 order-2 text-sm rounded-xl flex items-center justify-between px-5 py-2 text-white">
+                    <h1>Rate</h1>
+                    <h1>1ETH = 0.063 BTC</h1>
+                  </div>
+                  <button className="bg-primaryCyan order-3 py-2 px-5 text-sm font-bold rounded-xl">
+                    Exchange
+                  </button>
+                </div>
+                {/* Phone image */}
+                <img src={phone} className="w-full" alt="iPhone" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
