@@ -18,6 +18,7 @@ const About = lazy(() => import("./Pages/About"));
 const Services = lazy(() => import("./Pages/Services"));
 const OtcDesk = lazy(() => import("./Pages/OtcDesk"));
 const Blog = lazy(() => import("./Pages/Blogs"));
+const BlogInfo = lazy(() => import("./Pages/BlogInfo"));
 const Cryptocurrency = lazy(() => import("./Pages/Cryptocurrency"));
 const Coin = lazy(() => import("./Pages/Coin"));
 const News = lazy(() => import("./Pages/News"));
@@ -37,6 +38,7 @@ const App = () => {
         <Route path="/services" element={<Services />} />
         <Route path="/otcdesk" element={<OtcDesk />} /> 
         <Route path="/blogs" element={<Blog />} />
+        <Route path="/blogs/:id" element={<BlogInfo />} />
         <Route path="/crypto-converter" element={<CryptoConverter />} />
         <Route path="/cryptocurrency" element={<Cryptocurrency />} />
         <Route path="/crypto-converter" element={<CryptoConverter />} />
