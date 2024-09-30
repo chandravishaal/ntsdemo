@@ -8,8 +8,16 @@ import { HiOutlineAcademicCap } from "react-icons/hi2";
 import { BsCalendar4Event } from "react-icons/bs";
 import { LuBook } from "react-icons/lu";
 import { MdOutlineVideoSettings } from "react-icons/md";
-import { PiNewspaperClipping } from "react-icons/pi";
 import { MdOutlinePolicy } from "react-icons/md";
+import { IoCartOutline } from "react-icons/io5";
+import { IoMdTime } from "react-icons/io";
+import { IoIosInformationCircleOutline } from "react-icons/io";
+import { IoWalletOutline } from "react-icons/io5";
+import { RiCustomerService2Line } from "react-icons/ri";
+import { BsBriefcase } from "react-icons/bs";
+import { RiSecurePaymentLine } from "react-icons/ri";
+import { IoNewspaperOutline } from "react-icons/io5";
+import { FaRegHandshake } from "react-icons/fa6";
 
 
 
@@ -144,7 +152,7 @@ const LearnFlyoutContent = () => {
           className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
         >
           <h1 className="mt-1 ml-2">
-            <PiNewspaperClipping size={17} />
+            <IoNewspaperOutline size={17} />
           </h1>
           <div className="flex flex-col gap-[2px]">
             <div className="flex items-center"><h1 className="text-base">Newsletter </h1><span className="rotate-45"><IoMdArrowUp /></span></div>
@@ -183,8 +191,8 @@ const CompanyFlyoutContent = () => {
             to="/learn-crypto"
             className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
           >
-            <h1 className="mt-1 ml-2">
-              <HiOutlineAcademicCap size={20} />
+           <h1 className="mt-1 ml-2">
+              <IoIosInformationCircleOutline size={20} className="my-0.5" />
             </h1>
             <div className="flex flex-col gap-[2px]">
               <h1 className="text-base">About</h1>
@@ -195,8 +203,8 @@ const CompanyFlyoutContent = () => {
             to="/learn-crypto"
             className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
           >
-            <h1 className="mt-1 ml-2">
-              <BsCalendar4Event size={17} />
+            <h1 className="mt-1 ml-3">
+              <BsBriefcase size={17} />
             </h1>
             <div className="flex flex-col gap-[2px]">
               <h1 className="text-base">Careers</h1>
@@ -207,8 +215,8 @@ const CompanyFlyoutContent = () => {
             to="/learn-crypto"
             className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
           >
-            <h1 className="mt-1 ml-2">
-              <LuBook size={17} />
+            <h1 className="mt-1 ml-3">
+              <IoNewspaperOutline size={17} />
             </h1>
             <div className="flex flex-col gap-[2px]">
               <h1 className="text-base">News</h1>
@@ -222,7 +230,7 @@ const CompanyFlyoutContent = () => {
             className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
           >
             <h1 className="mt-1 ml-2">
-              <MdOutlineVideoSettings size={17} />
+              <RiCustomerService2Line size={17} />
             </h1>
             <div className="flex flex-col gap-[2px]">
               <div className="flex items-center"><h1 className="text-base">Support </h1><span className="rotate-45"><IoMdArrowUp /></span></div>
@@ -234,7 +242,7 @@ const CompanyFlyoutContent = () => {
             className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
           >
             <h1 className="mt-1 ml-2">
-              <PiNewspaperClipping size={17} />
+              <RiSecurePaymentLine size={17} />
             </h1>
             <div className="flex flex-col gap-[2px]">
               <div className="flex items-center"><h1 className="text-base">Security </h1><span className="rotate-45"><IoMdArrowUp /></span></div>
@@ -246,7 +254,7 @@ const CompanyFlyoutContent = () => {
             className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
           >
             <h1 className="mt-1 ml-2">
-              <MdOutlinePolicy size={17} />
+              <FaRegHandshake size={17} />
             </h1>
             <div className="flex flex-col gap-[2px]">
               <div className="flex items-center"><h1 className="text-base">Partners </h1></div>
@@ -264,7 +272,7 @@ const IndividualFlyoutContent = () => {
       <div className="flex gap-2 rounded-2xl bg-white p-2 font-century-gothic">
         <div className="p-5 w-[230px] flex flex-col gap-1">
           <h1 className="select-none text-xl font-medium">Solo</h1>
-          <p className="text-xs text-gray-400">Our Standalone Producys for individuals</p>
+          <p className="text-xs text-gray-400">Our Standalone Products for individuals</p>
           <div className="flex items-center gap-1 mt-5"><Link to="/learn" className="text-lg text-primaryCyan">Click to know</Link><span className="rotate-45 text-primaryCyan"><IoMdArrowUp /></span></div>
         </div>
         <div className="w-[2px] bg-gray-300"></div>
@@ -274,7 +282,7 @@ const IndividualFlyoutContent = () => {
             className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
           >
             <h1 className="mt-1 ml-2">
-              <HiOutlineAcademicCap size={20} />
+              <IoCartOutline size={20} />
             </h1>
             <div className="flex flex-col gap-[2px]">
               <h1 className="text-base">Buy and Sell</h1>
@@ -285,8 +293,8 @@ const IndividualFlyoutContent = () => {
             to="/learn-crypto"
             className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
           >
-            <h1 className="mt-1 ml-2">
-              <BsCalendar4Event size={17} />
+            <h1 className="mt-1 ml-3">
+              <IoWalletOutline size={17} />
             </h1>
             <div className="flex flex-col gap-[2px]">
               <h1 className="text-base">Wallets</h1>
@@ -300,7 +308,7 @@ const IndividualFlyoutContent = () => {
             className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
           >
             <h1 className="mt-1 ml-2">
-              <MdOutlineVideoSettings size={17} />
+              <IoMdTime size={17} />
             </h1>
             <div className="flex flex-col gap-[2px]">
               <div className="flex items-center"><h1 className="text-base">Coming Soon </h1><span className="rotate-45"><IoMdArrowUp /></span></div>
@@ -312,7 +320,7 @@ const IndividualFlyoutContent = () => {
             className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
           >
             <h1 className="mt-1 ml-2">
-              <PiNewspaperClipping size={17} />
+              <IoMdTime size={17} />
             </h1>
             <div className="flex flex-col gap-[2px]">
               <div className="flex items-center"><h1 className="text-base">Coming Soon </h1><span className="rotate-45"><IoMdArrowUp /></span></div>
@@ -340,7 +348,7 @@ const ProducFlyoutContent = () => {
             className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
           >
             <h1 className="mt-1 ml-2">
-              <HiOutlineAcademicCap size={20} />
+              <IoCartOutline  size={20} />
             </h1>
             <div className="flex flex-col gap-[2px]">
               <h1 className="text-base">Buy and Sell</h1>
@@ -352,7 +360,7 @@ const ProducFlyoutContent = () => {
             className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
           >
             <h1 className="mt-1 ml-2">
-              <BsCalendar4Event size={17} />
+              <IoWalletOutline size={17} className="mx-0.5" />
             </h1>
             <div className="flex flex-col gap-[2px]">
               <h1 className="text-base">Wallets</h1>
@@ -366,7 +374,7 @@ const ProducFlyoutContent = () => {
             className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
           >
             <h1 className="mt-1 ml-2">
-              <MdOutlineVideoSettings size={17} />
+              <IoMdTime size={17} />
             </h1>
             <div className="flex flex-col gap-[2px]">
               <div className="flex items-center"><h1 className="text-base">Coming Soon </h1><span className="rotate-45"><IoMdArrowUp /></span></div>
@@ -378,7 +386,7 @@ const ProducFlyoutContent = () => {
             className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
           >
             <h1 className="mt-1 ml-2">
-              <PiNewspaperClipping size={17} />
+              <IoMdTime size={17} />
             </h1>
             <div className="flex flex-col gap-[2px]">
               <div className="flex items-center"><h1 className="text-base">Coming Soon </h1><span className="rotate-45"><IoMdArrowUp /></span></div>
@@ -464,3 +472,4 @@ const DesktopNavbar = () => {
 };
 
 export default DesktopNavbar;
+

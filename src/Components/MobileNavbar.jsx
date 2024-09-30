@@ -2,9 +2,24 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
-import { BiCandles } from "react-icons/bi";
 import { IoMdArrowUp } from "react-icons/io";
 import { IoWalletOutline } from "react-icons/io5";
+import { IoCartOutline } from "react-icons/io5";
+import { IoIosInformationCircleOutline } from "react-icons/io";
+import { BsBriefcase } from "react-icons/bs";
+import { IoNewspaperOutline } from "react-icons/io5";
+import { RiCustomerService2Line } from "react-icons/ri";
+import { RiSecurePaymentLine } from "react-icons/ri";
+import { FaRegHandshake } from "react-icons/fa6";
+import { IoMdTime } from "react-icons/io";
+import { HiOutlineAcademicCap } from "react-icons/hi2";
+import { BsCalendar4Event } from "react-icons/bs";
+import { LuBook } from "react-icons/lu";
+import { MdOutlineVideoSettings } from "react-icons/md";
+import { MdOutlinePolicy } from "react-icons/md";
+
+
+
 
 const AccordionItem = ({ title, children, isExpanded, toggleAccordion }) => {
   return (
@@ -110,7 +125,7 @@ const MobileNavbar = () => {
               toggleAccordion={() => toggleAccordion(0)}
             >
               <Link onClick={() => setIsOpen(false)} to="/product1" className="py-2 text-sm flex items-center gap-1">
-                <span><BiCandles /></span>Buy and Sell
+                <span><IoCartOutline /></span>Buy and Sell
               </Link>
               <Link to="/product2" className="py-2 text-sm flex items-center gap-1">
                 <span><IoWalletOutline /></span>Wallets
@@ -123,22 +138,22 @@ const MobileNavbar = () => {
               toggleAccordion={() => toggleAccordion(1)}
             >
               <Link to="/about" className="py-2 text-sm flex items-center gap-1">
-                <span><BiCandles /></span>About
+                <span><IoIosInformationCircleOutline /></span>About
               </Link>
               <Link to="/team" className="py-2 text-sm flex items-center gap-1">
-                <span><IoWalletOutline /></span>Careers
+                <span><BsBriefcase /></span>Careers
               </Link>
               <Link to="/team" className="py-2 text-sm flex items-center gap-1">
-                <span><IoWalletOutline /></span>News
+                <span><IoNewspaperOutline /></span>News
               </Link>
               <Link to="/team" className="py-2 text-sm flex items-center gap-1">
-                <span><IoWalletOutline /></span>Support
+                <span><RiCustomerService2Line /></span>Support
               </Link>
               <Link to="/team" className="py-2 text-sm flex items-center gap-1">
-                <span><IoWalletOutline /></span>Security
+                <span><RiSecurePaymentLine /></span>Security
               </Link>
               <Link to="/team" className="py-2 text-sm flex items-center gap-1">
-                <span><IoWalletOutline /></span>Partners
+                <span><FaRegHandshake /></span>Partners
               </Link>
             </AccordionItem>
 
@@ -148,16 +163,16 @@ const MobileNavbar = () => {
               toggleAccordion={() => toggleAccordion(2)}
             >
               <Link to="/blog" className="py-2 text-sm flex items-center gap-1">
-                <span><BiCandles /></span>Buy and Sell
+                <span><IoCartOutline /></span>Buy and Sell
               </Link>
               <Link to="/faq" className="py-2 text-sm flex items-center gap-1">
                 <span><IoWalletOutline /></span>Wallets
               </Link>
               <Link to="/faq" className="py-2 text-sm flex items-center gap-1">
-                <span><IoWalletOutline /></span>Coming soon
+                <span><IoMdTime /></span>Coming soon
               </Link>
               <Link to="/faq" className="py-2 text-sm flex items-center gap-1">
-                <span><IoWalletOutline /></span>Coming Soon
+                <span><IoMdTime /></span>Coming Soon
               </Link>
             </AccordionItem>
 
@@ -167,22 +182,22 @@ const MobileNavbar = () => {
               toggleAccordion={() => toggleAccordion(3)}
             >
               <Link to="/blog" className="py-2 text-sm flex items-center gap-1">
-                <span><BiCandles /></span>Learn Crypto
+                <span><HiOutlineAcademicCap /></span>Learn Crypto
               </Link>
               <Link to="/faq" className="py-2 text-sm flex items-center gap-1">
-                <span><IoWalletOutline /></span>Events
+                <span><BsCalendar4Event /></span>Events
               </Link>
               <Link to="/faq" className="py-2 text-sm flex items-center gap-1">
-                <span><IoWalletOutline /></span>Blogs
+                <span><LuBook /></span>Blogs
               </Link>
               <Link to="/faq" className="py-2 text-sm flex items-center gap-1">
-                <span><IoWalletOutline /></span>Videos
+                <span><MdOutlineVideoSettings /></span>Videos
               </Link>
               <Link to="/faq" className="py-2 text-sm flex items-center gap-1">
-                <span><IoWalletOutline /></span>Newsletter
+                <span><IoNewspaperOutline /></span>Newsletter
               </Link>
               <Link to="/faq" className="py-2 text-sm flex items-center gap-1">
-                <span><IoWalletOutline /></span>Crypto Policy
+                <span><MdOutlinePolicy /></span>Crypto Policy
               </Link>
             </AccordionItem>
 
