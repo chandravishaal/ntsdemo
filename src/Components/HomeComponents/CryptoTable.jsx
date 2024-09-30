@@ -380,8 +380,8 @@ const CryptoTable = () => {
               <tr>
                 <th className="px-8 py-2 border-b text-center">#</th>
                 {visibleColumns.name && (
-                  <th className="px-8 py-2 border-b text-center font-montserrat ">
-                    Name
+                  <th className="px-8 py-2 border-b text-left font-montserrat ">
+                    Coin
                   </th>
                 )}
                 {visibleColumns.price && (
