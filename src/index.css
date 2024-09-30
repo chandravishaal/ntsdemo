@@ -227,7 +227,7 @@ text-decoration:none;
 /* why choose us section background */
 @media (min-width: 768px) {
   .whychooseSection-background {
-    background-image: url('./assets/Images/3rd_section_background.png');
+    background-image: url('./assets/Images/HomeImages/BACKGROUND.png');
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -235,6 +235,19 @@ text-decoration:none;
 
   }
 }
+
+@media (min-width: 768px) {
+  .whychooseSection-Glob {
+    background-image: url('./assets/Images/HomeImages/GLOB.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position: center;
+
+  }
+}
+
+
 
 /* video section background  */
 @media (min-width:768px){
