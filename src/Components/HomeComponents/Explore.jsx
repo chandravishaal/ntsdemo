@@ -78,7 +78,7 @@ const Explore = () => {
                   </button>
                 </div>
                 {/* Phone image */}
-                <img src={phone} className="w-full" alt="iPhone" />
+                <img src={phone} className="w-full select-none" alt="iPhone" />
               </div>
             </div>
           </div>
