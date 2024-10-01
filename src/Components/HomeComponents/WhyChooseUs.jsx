@@ -185,7 +185,7 @@
 
 import React from 'react';
 import GLOB from '../../assets/Images/HomeImages/GLOB.png';
-import phone from '../../assets/Images/HomeImages/phone.png';
+import phone from '../../assets/Images/HomeImages/Phone.png';
 import icon1 from '../../assets/Images/HomeImages/icon1.png';
 import icon2 from '../../assets/Images/HomeImages/icon2.png';
 import icon3 from '../../assets/Images/HomeImages/icon3.png';
