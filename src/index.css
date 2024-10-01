@@ -229,7 +229,7 @@ text-decoration:none;
   .whychooseSection-background {
     background-image: url('./assets/Images/HomeImages/BACKGROUND.png');
     background-size: cover;
-    background-repeat: no-repeat;
+    
     width: 100%;
     background-position: center;
 
