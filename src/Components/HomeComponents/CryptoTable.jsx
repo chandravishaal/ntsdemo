@@ -353,7 +353,7 @@ const CryptoTable = () => {
   return (
     <div className="container mx-auto mb-10">
       <div className="flex justify-between items-center mb-4">
-        <h1 className="text-3xl font-montserrat  font-bold px-5">
+        <h1 className="text-3xl font-montserrat font-bold px-5">
           Top Cryptocurrency Prices and Market Cap
         </h1>
       </div>
@@ -380,8 +380,8 @@ const CryptoTable = () => {
               <tr>
                 <th className="px-8 py-2 border-b text-center">#</th>
                 {visibleColumns.name && (
-                  <th className="px-8 py-2 border-b text-center font-montserrat ">
-                    Name
+                  <th className="px-8 py-2 border-b text-left font-montserrat ">
+                    Coin
                   </th>
                 )}
                 {visibleColumns.price && (
