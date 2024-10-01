@@ -1,6 +1,5 @@
 // Redesigned; responsive; working
-import {
-    FaTwitter,
+import {                        
     FaLinkedinIn,
     FaInstagram,
     FaDribbble,
@@ -12,6 +11,10 @@ import {
   import { Link } from "react-router-dom";
   import Marquee from "react-fast-marquee";
   import PrimaryButton from "../Common/PrimaryButton";
+  import { FaXTwitter } from "react-icons/fa6";
+  import { FaFacebookF } from "react-icons/fa";
+
+
   
   const DesktopFooter = () => {
     return (
@@ -43,9 +46,11 @@ import {
                   alt=""
                 />
                 <div className="flex space-x-3 md:space-x-4 my-3 lg:mb-7 mb-5">
-                  <FaTwitter className="text-lg transition-colors duration-300 hover:text-black md:text-xl" />
+                  <FaFacebookF className="text-lg transition-colors duration-300 hover:text-black md:text-xl" />
+                  <FaXTwitter className="text-lg transition-colors duration-300 hover:text-black md:text-xl" />
                   <FaLinkedinIn className="text-lg transition-colors duration-300 hover:text-black md:text-xl" />
                   <FaInstagram className="text-lg transition-colors duration-300 hover:text-black md:text-xl" />
+
                 </div>
                 <p className="text-sm transition-colors duration-300 mb-2 hover:text-black">
                   <FaLocationDot className="inline mr-2" />
