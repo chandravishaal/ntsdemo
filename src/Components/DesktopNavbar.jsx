@@ -188,7 +188,7 @@ const CompanyFlyoutContent = () => {
         <div className="w-[2px] bg-gray-300"></div>
         <div className="flex w-[230px] flex-col px-2">
           <Link
-            to="/learn-crypto"
+            to="/about"
             className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
           >
            <h1 className="mt-1 ml-2">

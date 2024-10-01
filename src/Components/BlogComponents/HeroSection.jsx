@@ -129,7 +129,7 @@ const blogPosts = [
     readTime: 5,
     author: {
       name: "Jane Doe",
-      imageUrl: profile
+      imageUrl: "https://media.istockphoto.com/id/1330206844/photo/shot-of-a-young-businessman-at-work.jpg?s=2048x2048&w=is&k=20&c=YbduWEz8AT5Sqs9w8NsDysE4dwDaWPs1d0qApq-xFhk="
     },
     activity: {
       likes: 150,
@@ -158,7 +158,7 @@ const blogPosts = [
     readTime: 4,
     author: {
       name: "John Smith",
-      imageUrl: profile
+      imageUrl: "https://media.istockphoto.com/id/1330206844/photo/shot-of-a-young-businessman-at-work.jpg?s=2048x2048&w=is&k=20&c=YbduWEz8AT5Sqs9w8NsDysE4dwDaWPs1d0qApq-xFhk="
     },
     activity: {
       likes: 85,
@@ -188,7 +188,7 @@ const blogPosts = [
     readTime: 6,
     author: {
       name: "Alice Johnson",
-      imageUrl: profile
+      imageUrl: "https://media.istockphoto.com/id/1330206844/photo/shot-of-a-young-businessman-at-work.jpg?s=2048x2048&w=is&k=20&c=YbduWEz8AT5Sqs9w8NsDysE4dwDaWPs1d0qApq-xFhk="
     },
     activity: {
       likes: 120,
@@ -218,7 +218,7 @@ const blogPosts = [
     readTime: 3,
     author: {
       name: "Bob Brown",
-      imageUrl: profile
+      imageUrl: "https://media.istockphoto.com/id/1330206844/photo/shot-of-a-young-businessman-at-work.jpg?s=2048x2048&w=is&k=20&c=YbduWEz8AT5Sqs9w8NsDysE4dwDaWPs1d0qApq-xFhk="
     },
     activity: {
       likes: 95,
