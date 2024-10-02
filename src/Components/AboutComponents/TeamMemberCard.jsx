@@ -95,7 +95,7 @@ const TeamMemberCard = () => {
 
         <Swiper
           ref={swiperRef} // Set ref to Swiper
-          pagination={{ clickable: true }}
+          // pagination={{ clickable: true }}
           modules={[Pagination, Autoplay]}
           className="mySwiper"
           spaceBetween={20} // Reduced space between slides
