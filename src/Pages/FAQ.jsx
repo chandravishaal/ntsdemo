@@ -1,7 +1,19 @@
-import React from 'react';
+
+import React, { useState } from 'react';
 import 'remixicon/fonts/remixicon.css'; // Import Remix Icons
 
 const FAQ = () => {
+    const [openCategory, setOpenCategory] = useState('General FAQs'); // To track which category is open
+    const [visibleCount, setVisibleCount] = useState(6);
+
+    const toggleCategory = (category) => {
+        setVisibleCount(6);
+        setOpenCategory(openCategory === category ? null : category);
+    };
+    const handleLoadMore = (itemsLength) => {
+        setVisibleCount(itemsLength); // Load 6 more items when clicked
+
+    };
     const faqData = [
         {
             category: 'General FAQs',
@@ -165,6 +177,61 @@ const FAQ = () => {
 
                 // Add more questions under Trading Platform FAQs...
             ]
+        },
+        {
+            category: 'Deposits and Withdrawals FAQs',
+            items: [
+                {
+                    id: 7,
+                    icon: <i className="ri-bar-chart-box-line"></i>,
+                    question: ' How do I deposit funds into my North Star Metrics account?',
+                    answer: 'To start trading, deposit funds into your account and choose the cryptocurrency pair you wish to trade.'
+                },
+                {
+                    id: 8,
+                    icon: <i className="ri-file-list-line"></i>,
+                    question: 'What types of orders can I place on the trading platform?',
+                    answer: 'You can place market, limit, and stop orders depending on your trading needs.'
+                },
+                {
+                    id: 9,
+                    icon: <i className="ri-bar-chart-box-line"></i>,
+                    question: 'How do I start trading on North Star Metrics?',
+                    answer: 'To start trading, deposit funds into your account and choose the cryptocurrency pair you wish to trade.'
+                },
+                {
+                    id: 10,
+                    icon: <i className="ri-file-list-line"></i>,
+                    question: 'What types of orders can I place on the trading platform?',
+                    answer: 'You can place market, limit, and stop orders depending on your trading needs.'
+                },
+                {
+                    id: 11,
+                    icon: <i className="ri-bar-chart-box-line"></i>,
+                    question: 'How do I start trading on North Star Metrics?',
+                    answer: 'To start trading, deposit funds into your account and choose the cryptocurrency pair you wish to trade.'
+                },
+                {
+                    id: 12,
+                    icon: <i className="ri-file-list-line"></i>,
+                    question: 'What types of orders can I place on the trading platform?',
+                    answer: 'You can place market, limit, and stop orders depending on your trading needs.'
+                },
+                {
+                    id: 13,
+                    icon: <i className="ri-bar-chart-box-line"></i>,
+                    question: 'How do I start trading on North Star Metrics?',
+                    answer: 'To start trading, deposit funds into your account and choose the cryptocurrency pair you wish to trade.'
+                },
+                {
+                    id: 14,
+                    icon: <i className="ri-file-list-line"></i>,
+                    question: 'What types of orders can I place on the trading platform?',
+                    answer: 'You can place market, limit, and stop orders depending on your trading needs.'
+                },
+
+                // Add more questions under Trading Platform FAQs...
+            ]
         }
         // Continue adding other categories (Deposits and Withdrawals FAQs, Security FAQs, etc.)
     ];
@@ -181,33 +248,77 @@ const FAQ = () => {
                             </button>
                         </div>
                     </div>
-
                 </div>
                 <p className="mb-6 text-gray-600 text-center md:text-left">
                     Quick answers to questions you may have. Can’t find what you’re looking for? Check out our{' '}
                     <a href="#" className="text-blue-600">FAQs</a>.
                 </p>
 
-                {/* Render FAQ categories and questions */}
+                {/* Render FAQ categories as an accordion */}
                 {faqData.map((category) => (
                     <div key={category.category} className="mb-8">
-                        <h2 className="text-2xl font-bold mb-4">{category.category}</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            {category.items.map((faq) => (
-                                <FAQItem
-                                    key={faq.id}
-                                    icon={faq.icon}
-                                    question={faq.question}
-                                    answer={faq.answer}
-                                />
-                            ))}
-                        </div>
+                        <button
+                            className="text-2xl font-bold mb-4 w-full text-left focus:outline-none flex justify-between items-center"
+                            onClick={() => toggleCategory(category.category)}
+                        >
+                            {/* Add suitable icons for each category */}
+                            <span className="flex items-center">
+                                {category.category === 'General FAQs' && <i className="ri-question-line mr-2"></i>}
+                                {category.category === 'OTC Platform FAQs' && <i className="ri-exchange-dollar-line mr-2"></i>}
+                                {category.category === 'Trading Platform FAQs' && <i className="ri-bar-chart-line mr-2"></i>}
+                                {category.category === 'Deposits and Withdrawals FAQs' && <i className="ri-money-dollar-circle-line mr-2"></i>}
+                                {category.category}
+                            </span>
+
+                            {/* Expand/collapse icon aligned to the right */}
+                            <span>
+                                {openCategory === category.category ? (
+                                    <i className="ri-arrow-up-s-line"></i>
+                                ) : (
+                                    <i className="ri-arrow-down-s-line"></i>
+                                )}
+                            </span>
+                        </button>
+
+                        {openCategory === category.category && (
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                {category.items.slice(0, visibleCount).map((faq, index) => {
+
+                                    const isLast = index === visibleCount - 1 && visibleCount !== category.items.length;
+                                    const isSecondLast = index === visibleCount - 2 && visibleCount !== category.items.length;
+                                    return (
+                                        <FAQItem
+                                            key={faq.id}
+                                            icon={faq.icon}
+                                            question={faq.question}
+                                            answer={faq.answer}
+                                            className={`${isLast
+                                                ? 'lg:bg-clip-text lg:text-transparent lg:bg-gradient-to-b lg:from-stone-900 lg:via-stone-100 lg:to-transparent lg:opacity-55'
+                                                : isSecondLast
+                                                    ? 'lg:bg-clip-text lg:text-transparent lg:bg-gradient-to-b lg:from-stone-900 lg:via-stone-100 lg:to-transparent lg:opacity-55'
+                                                    : 'text-black'}`}
+                                        />
+                                    )
+                                })}
+                            </div>
+                        )}
+                        {openCategory === category.category && (
+                            <div className="flex justify-center">
+                                {visibleCount < category.items.length && (
+                                    <button
+                                        className="border border-gray-300 rounded-full px-4 text-sm w-full md:w-auto -m-5 max-md:py-2 max-md:my-2"
+                                        onClick={() => handleLoadMore(category.items.length)}
+                                    >
+                                        Load more
+                                    </button>
+                                )}
+                            </div>
+                        )}
                     </div>
                 ))}
 
-                <div className="flex justify-center mt-6">
-                    <button className="border border-gray-300 rounded-full px-4 py-2 text-sm w-full md:w-auto">Load more</button>
-                </div>
+
+
                 <div className="border border-gray-300 rounded-lg p-4 mt-6 flex items-center flex-col md:flex-row">
                     <img
                         src="https://placehold.co/50x50"
@@ -232,9 +343,9 @@ const FAQ = () => {
     );
 };
 
-const FAQItem = ({ icon, question, answer }) => {
+const FAQItem = ({ icon, question, answer, className }) => {
     return (
-        <div className="rounded-lg p-4 flex flex-col md:flex-row items-start">
+        <div className={`rounded-lg p-4 flex flex-col md:flex-row items-start ${className}`}>
             <div className="text-2xl mr-4 border p-2 rounded-lg">
                 {icon}
             </div>
@@ -247,3 +358,5 @@ const FAQItem = ({ icon, question, answer }) => {
 };
 
 export default FAQ;
+
+
