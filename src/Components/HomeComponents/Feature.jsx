@@ -1,5 +1,5 @@
 import mobileImage1 from '/src/assets/Images/mobile2.png';
-import mobileImage2 from '/src/assets/Images/mobile3.png';
+import mobileImage2 from '/src/assets/Images/HomeImages/chart.png';
 import PrimaryButton from '../../Common/PrimaryButton';
 import SecondaryButton from '../../Common/SecondaryButton';
 

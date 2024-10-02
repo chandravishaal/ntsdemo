@@ -1,5 +1,7 @@
 import { useState } from "react";
 // import Blob from "../Common/Blobs";
+import { MdArrowOutward } from "react-icons/md";
+
 
 const jobs = [
   {
@@ -131,7 +133,7 @@ const JobListing = () => {
                     href="#"
                     className="absolute top-6 right-6 flex items-center gap-2 font-bold text-2xl text-primaryCyan max-md:hidden"
                   >
-                    Apply <i className="ri-arrow-right-up-line"></i>
+                    Apply <MdArrowOutward />
                   </a>
                 </div>
 
