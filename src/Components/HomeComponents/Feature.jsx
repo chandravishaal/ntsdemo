@@ -11,10 +11,10 @@ const FeatureComponent = () => {
 
           {/* First Mobile Image and Content */}
           <div className="flex flex-col  md:flex-row items-center justify-center md:items-start lg:items-start relative w-full pt-10 md:p-8">
-            <img data-aos="fade-left" data-aos-duration="2000" src={mobileImage1} alt="Feature showcasing North Star Metrics for buying and selling cryptocurrencies" className="w-auto h-[565px]  mx-auto md:mx-0 md:-translate-x-[2rem]" />
+            <img data-aos="fade-left" data-aos-duration="2000" src={mobileImage1} alt="Feature showcasing North Star Metrics for buying and selling cryptocurrencies" className="w-auto h-[565px]  mx-auto md:mx-0 md:-translate-x-[2rem] pb-7" />
             <div data-aos="fade-up" data-aos-duration="2000" className=' p-2 w-[70%] lg:-ml-5 relative z-10 md:mt-[15%] mx-auto md:text-left text-center -translate-x-[1rem]'>
               <div className='ml-8'>
-                <h2 className="text-2xl font-bold text-black mb-2 font-montserrat">North Star Metrics</h2>
+                <h2 className="text-2xl font-bold text-black mb-2 font-montserrat ">North Star Metrics</h2>
                 <p className="text-gray-600 mb-4 text-xl font-century-gothic">Buy or sell hundreds of cryptocurrencies</p>
               </div>
               <div className='flex items-center justify-center lg:justify-center gap-3'>
