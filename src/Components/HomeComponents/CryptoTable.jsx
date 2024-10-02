@@ -12,7 +12,7 @@ import ethereumIcon from "../../assets/Images/6th_section_icon3.png";
 import tether from "../../assets/Images/HomeImages/USTD.png";
 import bnb from "../../assets/Images/HomeImages/BNB.png";
 import rippleIcon from "../../assets/Images/HomeImages/XRP.png";
-import { IoMdInformationCircleOutline } from "react-icons/io";
+import { IoMdArrowDropup, IoMdInformationCircleOutline } from "react-icons/io";
 import { IoMdArrowDropdown } from "react-icons/io";
 
 // Example data
@@ -224,23 +224,49 @@ const cryptocurrencies = [
 ];
 
 // Tooltip component
-const InfoTooltip = ({ text }) => (
-  <div className="relative group inline-block ml-1">
-    <span className="text-black-500 text-bold hover:text-black-700 margin-left: 0.5rem cursor-pointer">
-      <IoMdInformationCircleOutline />
-    </span>
-    <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-48 p-2 bg-gray-700 text-white text-sm rounded hidden group-hover:block transition-opacity duration-200 z-10 group-focus:block sm:w-full">
-      <div className="whitespace-normal text-center">{text}</div>
+const InfoTooltip = ({ text }) => {
+  const [isTooltipVisible, setIsTooltipVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const handleToggleTooltip = () => {
+    setIsTooltipVisible((prev) => !prev);
+  };
+
+  return (
+    <div className="relative inline-block">
+      <span
+        className="text-black-500 font-bold cursor-pointer hover:text-black-700"
+        onMouseEnter={!isMobile ? () => setIsTooltipVisible(true) : null}
+        onMouseLeave={!isMobile ? () => setIsTooltipVisible(false) : null}
+        onClick={isMobile ? handleToggleTooltip : null}
+      >
+        <IoMdInformationCircleOutline />
+      </span>
+      {isTooltipVisible && (
+        <div className="absolute left-1/2 transform -translate-x-1/2 mt-2 w-44 p-2 bg-gray-700 text-white text-sm rounded shadow-lg transition-opacity duration-200 z-10 sm:w-48 md:left-auto md:right-0 md:-translate-x-0">
+          <div className="whitespace-normal text-center">{text}</div>
+        </div>
+      )}
     </div>
-  </div>
-);
+  );
+};
 
 const CryptoTable = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [sortedData, setSortedData] = useState([...cryptocurrencies]);
   const [sortDirection, setSortDirection] = useState(null);
   const [notFound, setNotFound] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [visibleColumns, setVisibleColumns] = useState({
     name: true,
     price: true,
@@ -302,8 +328,8 @@ const CryptoTable = () => {
                 x2="0"
                 y2="1"
               >
-                <stop offset="0%" stopColor={trendColor} stopOpacity={0.4} />
-                <stop offset="100%" stopColor={trendColor} stopOpacity={0.05} />
+                <stop offset="0%" stopColor={trendColor} stopOpacity={0.1} />
+                <stop offset="100%" stopColor={trendColor} stopOpacity={0.01} />
               </linearGradient>
             </defs>
             <Area
@@ -311,7 +337,7 @@ const CryptoTable = () => {
               dataKey="price"
               stroke={trendColor}
               fill={`url(#colorTrend-${trendColor})`}
-              strokeWidth={2}
+              strokeWidth={0.7}
               dot={false}
             />
             <XAxis hide />
@@ -321,33 +347,6 @@ const CryptoTable = () => {
         </ResponsiveContainer>
       </div>
     );
-  };
-
-  const handleOpenModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-  };
-
-  const handleColumnVisibilityChange = (column) => {
-    setVisibleColumns((prev) => ({ ...prev, [column]: !prev[column] }));
-  };
-
-  const handleApplyChanges = () => {
-    setIsModalOpen(false);
-  };
-
-  const handleResetChanges = () => {
-    setVisibleColumns({
-      name: true,
-      price: true,
-      change: true,
-      volume: true,
-      marketCap: true,
-      last7days: true,
-    });
   };
 
   return (
@@ -365,12 +364,6 @@ const CryptoTable = () => {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
-        <button
-          onClick={handleOpenModal}
-          className="bg-gray-100 border-gray-300 py-2 px-6 rounded-md hover:bg-gray-300 mr-4 font-montserrat "
-        >
-          Column
-        </button>
       </div>
 
       <div className="responsiveTable">
@@ -378,7 +371,7 @@ const CryptoTable = () => {
           <table className="min-w-full">
             <thead className="bg-gray-50 rounded-xl">
               <tr>
-                <th className="px-8 py-2 border-b text-center">#</th>
+                <th className="px-8 py-2 border-b text-right">#</th>
                 {visibleColumns.name && (
                   <th className="px-8 py-2 border-b text-left font-montserrat ">
                     Coin
@@ -403,10 +396,15 @@ const CryptoTable = () => {
                 )}
                 {visibleColumns.marketCap && (
                   <th
-                    className="px-4 py-2 cursor-pointer whitespace-nowrap lg:whitespace-normal  border-b text-center font-montserrat "
+                    className="px-4 py-2 cursor-pointer whitespace-nowrap lg:whitespace-normal  border-b text-center font-montserrat flex items-center"
                     onClick={sortByMarketCap}
                   >
-                    {sortDirection === "asc" ? "▲" : "▼"} Market Cap
+                    {sortDirection === "asc" ? (
+                      <IoMdArrowDropup />
+                    ) : (
+                      <IoMdArrowDropdown />
+                    )}
+                    Market Cap
                     <InfoTooltip text="The total value of the number of coins in circulation multiplied by the current market price of a single coin." />
                   </th>
                 )}
@@ -422,7 +420,7 @@ const CryptoTable = () => {
             <tbody>
               {sortedData.map((crypto, index) => (
                 <tr key={index} className="bg-white hover:bg-gray-50">
-                  <td className=" px-8 py-4 border-b text-center">
+                  <td className=" px-8 py-4 border-b text-right">
                     {index + 1}
                   </td>
                   {visibleColumns.name && (
@@ -448,7 +446,14 @@ const CryptoTable = () => {
                         crypto.change < 0 ? "text-red-500" : "text-green-500"
                       }`}
                     >
-                      {crypto.change}%
+                      <div className="flex items-center justify-center">
+                        {crypto.change > 0 ? (
+                          <IoMdArrowDropup />
+                        ) : (
+                          <IoMdArrowDropdown />
+                        )}
+                        {Math.abs(crypto.change)}%
+                      </div>
                     </td>
                   )}
                   {visibleColumns.volume && (
@@ -482,50 +487,6 @@ const CryptoTable = () => {
           </table>
         </div>
       </div>
-
-      {isModalOpen && (
-        <div className="fixed inset-0 flex items-center justify-center z-10">
-          <div className="absolute inset-0 bg-black opacity-50"></div>
-          <div className="bg-white rounded-lg p-8 relative">
-            <h2 className="text-xl font-semibold mb-4">
-              Select Columns to Display
-            </h2>
-            <div className="grid grid-cols-2 gap-4">
-              {Object.keys(visibleColumns).map((column) => (
-                <label key={column} className="flex items-center">
-                  <input
-                    type="checkbox"
-                    checked={visibleColumns[column]}
-                    onChange={() => handleColumnVisibilityChange(column)}
-                    className="form-checkbox"
-                  />
-                  <span className="ml-2">
-                    {column.charAt(0).toUpperCase() + column.slice(1)}
-                  </span>
-                </label>
-              ))}
-            </div>
-            <div className="flex justify-end mt-4">
-              <button
-                onClick={handleResetChanges}
-                className="bg-gray-100 py-2 px-4 rounded-md mr-2"
-              >
-                Reset
-              </button>
-              <button
-                onClick={handleApplyChanges}
-                className="bg-blue-500 text-white py-2 px-4 rounded-md"
-              >
-                Apply
-              </button>
-            </div>
-            <button
-              onClick={handleCloseModal}
-              className="absolute top-0 right-0 p-2 text-gray-500 hover:text-gray-700"
-            ></button>
-          </div>
-        </div>
-      )}
     </div>
   );
 };
