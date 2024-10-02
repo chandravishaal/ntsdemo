@@ -1,16 +1,13 @@
 import { useState, useEffect, useRef } from "react";
 import { CiStar } from "react-icons/ci";
 import { FaBitcoin } from "react-icons/fa";
-import { IoMdInformationCircleOutline } from "react-icons/io";
-import { IoMdArrowDropdown } from "react-icons/io";
 import {
-  AreaChart,
-  XAxis,
-  YAxis,
-  Tooltip,
-  ResponsiveContainer,
-  Area,
-} from "recharts";
+  IoMdArrowDropdown,
+  IoMdArrowDropup,
+  IoMdInformationCircleOutline,
+} from "react-icons/io";
+
+import { AreaChart, XAxis, YAxis, ResponsiveContainer, Area } from "recharts";
 
 const coinsData = [
   {
@@ -327,32 +324,28 @@ const PriceTable = () => {
     }
   };
 
-  let scrollPosition = 0; // to store the scroll position
+  const scrollPositionRef = useRef(0);
 
   useEffect(() => {
     if (isModalOpen) {
-      // Capture the current scroll position
-      scrollPosition = window.scrollY;
+      scrollPositionRef.current = window.scrollY;
 
-      // Set the body's position to fixed to prevent scrolling
       document.body.style.position = "fixed";
-      document.body.style.top = `-${scrollPosition}px`;
-      document.body.style.width = "100%"; // To prevent layout shifting
+      document.body.style.top = `-${scrollPositionRef.current}px`;
+      document.body.style.width = "100%";
     } else {
-      // Restore the scroll position and reset body styles
       document.body.style.position = "";
       document.body.style.top = "";
       document.body.style.width = "";
-      window.scrollTo(0, scrollPosition); // Restore the previous scroll position
+      window.scrollTo(0, scrollPositionRef.current);
     }
+
     return () => {
-      // Cleanup when modal closes to ensure body styles are reset
       document.body.style.position = "";
       document.body.style.top = "";
       document.body.style.width = "";
     };
   }, [isModalOpen]);
-
   useEffect(() => {
     if (isModalOpen) {
       document.addEventListener("mousedown", handleClickOutside);
@@ -518,9 +511,9 @@ const PriceTable = () => {
                         onClick={() => sortData("change1h")}
                       >
                         {sortDirection.change1h === "asc" ? (
-                          <i className="ri-arrow-up-s-fill"></i>
+                          <IoMdArrowDropup />
                         ) : (
-                          <i className="ri-arrow-down-s-fill"></i>
+                          <IoMdArrowDropdown />
                         )}
                       </span>
                       1h
@@ -536,9 +529,9 @@ const PriceTable = () => {
                         onClick={() => sortData("change24h")}
                       >
                         {sortDirection.change24h === "asc" ? (
-                          <i className="ri-arrow-up-s-fill"></i>
+                          <IoMdArrowDropup />
                         ) : (
-                          <i className="ri-arrow-down-s-fill"></i>
+                          <IoMdArrowDropdown />
                         )}
                       </span>
                       24h
@@ -554,9 +547,9 @@ const PriceTable = () => {
                         onClick={() => sortData("change7d")}
                       >
                         {sortDirection.change7d === "asc" ? (
-                          <i className="ri-arrow-up-s-fill"></i>
+                          <IoMdArrowDropup />
                         ) : (
-                          <i className="ri-arrow-down-s-fill"></i>
+                          <IoMdArrowDropdown />
                         )}
                       </span>
                       7d
@@ -572,9 +565,9 @@ const PriceTable = () => {
                         onClick={() => sortData("volume24h")}
                       >
                         {sortDirection.volume24h === "asc" ? (
-                          <i className="ri-arrow-up-s-fill"></i>
+                          <IoMdArrowDropup />
                         ) : (
-                          <i className="ri-arrow-down-s-fill"></i>
+                          <IoMdArrowDropdown />
                         )}
                       </span>
                       Volume (24h)
@@ -590,9 +583,9 @@ const PriceTable = () => {
                         onClick={() => sortData("marketCap")}
                       >
                         {sortDirection.marketCap === "asc" ? (
-                          <i className="ri-arrow-up-s-fill"></i>
+                          <IoMdArrowDropup />
                         ) : (
-                          <i className="ri-arrow-down-s-fill"></i>
+                          <IoMdArrowDropdown />
                         )}
                       </span>
                       Market Cap
@@ -650,16 +643,8 @@ const PriceTable = () => {
                       }`}
                     >
                       <div className="flex justify-center items-center">
-                        {crypto.change1h < 0 && (
-                          <span className="mr-1">
-                            <i className="ri-arrow-down-s-fill"></i>
-                          </span>
-                        )}
-                        {crypto.change1h > 0 && (
-                          <span className="mr-1">
-                            <i className="ri-arrow-up-s-fill"></i>
-                          </span>
-                        )}
+                        {crypto.change1h < 0 && <IoMdArrowDropdown />}
+                        {crypto.change1h > 0 && <IoMdArrowDropup />}
                         {Math.abs(crypto.change1h)}%
                       </div>
                     </td>
@@ -671,16 +656,8 @@ const PriceTable = () => {
                       }`}
                     >
                       <div className="flex justify-center items-center">
-                        {crypto.change24h < 0 && (
-                          <span className="inline-block mr-1">
-                            <i className="ri-arrow-down-s-fill"></i>
-                          </span>
-                        )}
-                        {crypto.change24h > 0 && (
-                          <span className="inline-block mr-1">
-                            <i className="ri-arrow-up-s-fill"></i>
-                          </span>
-                        )}
+                        {crypto.change24h < 0 && <IoMdArrowDropdown />}
+                        {crypto.change24h > 0 && <IoMdArrowDropup />}
                         {Math.abs(crypto.change24h)}%
                       </div>
                     </td>
@@ -692,16 +669,8 @@ const PriceTable = () => {
                       }`}
                     >
                       <div className="flex justify-center items-center">
-                        {crypto.change7d < 0 && (
-                          <span className="inline-block mr-1">
-                            <i className="ri-arrow-down-s-fill"></i>
-                          </span>
-                        )}
-                        {crypto.change7d > 0 && (
-                          <span className="inline-block mr-1">
-                            <i className="ri-arrow-up-s-fill"></i>
-                          </span>
-                        )}
+                        {crypto.change7d < 0 && <IoMdArrowDropdown />}
+                        {crypto.change7d > 0 && <IoMdArrowDropup />}
                         {Math.abs(crypto.change7d)}%
                       </div>
                     </td>
@@ -741,7 +710,7 @@ const PriceTable = () => {
         <div className="fixed inset-0 flex items-center justify-center z-10">
           <div className="absolute inset-0 bg-black opacity-50"></div>
           <div className="bg-white rounded-lg p-8 relative" ref={modalRef}>
-            <h2 className="text-xl font-semibold mb-4">
+            <h2 className="text-xl font-semibold mb-4 mt-4">
               Select Columns to Display
             </h2>
             <div className="flex flex-col items-center mt-2 space-y-4">
@@ -815,7 +784,7 @@ const PriceTable = () => {
               onClick={handleCloseModal}
               className="absolute top-2 right-2 p-2 text-gray-500 hover:text-gray-700 focus:outline-none"
             >
-              <span className="text-lg">&times;</span>
+              <span className="text-2xl">&times;</span>
             </button>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
 import { Link } from "react-router-dom";
 
 const largestGainers = [
@@ -14,7 +15,8 @@ const Trending = [
 ];
 
 const PriceHighlights = () => {
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
+  // const [visibleHighlights, setVisibleHighlights] = useState(false);
 
   const handleVisible = () => {
     setVisible((visible) => !visible);
@@ -67,85 +69,91 @@ const PriceHighlights = () => {
           </Link>
         </p>
       </div>
-      <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="flex flex-col bg-white rounded-lg justify-between h-full">
-          <div className="bg-white p-4 rounded-lg shadow-md mb-4 flex-1">
-            <h2 className="text-2xl font-bold">$2,355,691,950,187</h2>
-            <p className="text-gray-500">
-              Market Cap <span className="text-red-500">▼ 1.9%</span>
-            </p>
+      {visible && (
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="flex flex-col bg-white rounded-lg justify-between h-full">
+            <div className="bg-white p-4 rounded-lg shadow-sm mb-4 flex-1">
+              <h2 className="text-2xl font-bold">$2,355,691,950,187</h2>
+              <p className="text-gray-500">
+                Market Cap <span className="text-red-500">▼ 1.9%</span>
+              </p>
+            </div>
+            <div className="bg-white p-4 rounded-lg shadow-sm text-sm flex-1">
+              <h2 className="text-2xl font-bold">$102,645,474,117</h2>
+              <p className="text-gray-500">24h Trading Volume</p>
+            </div>
           </div>
-          <div className="bg-white p-4 rounded-lg shadow-md text-sm flex-1">
-            <h2 className="text-2xl font-bold">$102,645,474,117</h2>
-            <p className="text-gray-500">24h Trading Volume</p>
-          </div>
-        </div>
 
-        <div className="bg-white p-4 rounded-lg shadow-sm flex flex-col h-full">
-          <div className="flex justify-between">
-            <h2 className="text-lg font-bold">
-              <i className="ri-fire-fill text-orange-600"></i> Trending{" "}
-            </h2>
-            <Link className="hover:text-primaryCyan">
-              View more <i className="ri-arrow-right-s-line"></i>
-            </Link>
+          <div className="bg-white p-4 rounded-lg shadow-sm flex flex-col h-full">
+            <div className="flex justify-between">
+              <h2 className="text-lg font-bold">
+                <i className="ri-fire-fill text-orange-600"></i> Trending{" "}
+              </h2>
+              <Link className="hover:text-primaryCyan">
+                View more <i className="ri-arrow-right-s-line"></i>
+              </Link>
+            </div>
+            <div className="mt-4 space-y-2 flex-1 overflow-y-auto">
+              {Trending.map((coin) => (
+                <div className="flex justify-between" key={coin.name}>
+                  <p>{coin.name}</p>
+                  <p className={`flex mr-1`}>
+                    <span>${coin.price.toFixed(2)}</span>
+                    {coin.change >= 0 ? (
+                      <div
+                        className={`text-green-500 flex items-center justify-center`}
+                      >
+                        <IoMdArrowDropup />
+                        {coin.change}%
+                      </div>
+                    ) : (
+                      <div
+                        className={`text-red-500 flex items-center justify-center`}
+                      >
+                        <IoMdArrowDropdown />
+                        {Math.abs(coin.change)}%
+                      </div>
+                    )}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
-          <div className="mt-4 space-y-2 flex-1 overflow-y-auto">
-            {Trending.map((coin) => (
-              <div className="flex justify-between" key={coin.name}>
-                <p>{coin.name}</p>
-                <p className={`flex mr-1`}>
-                  <span>${coin.price.toFixed(2)}</span>
-                  {coin.change >= 0 ? (
-                    <div className={`text-green-500`}>
-                      <i className="ri-arrow-up-s-fill"></i>
-                      {coin.change}%
-                    </div>
-                  ) : (
-                    <div className={`text-red-500`}>
-                      <i className="ri-arrow-down-s-fill"></i>
-                      {Math.abs(coin.change)}%
-                    </div>
-                  )}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
 
-        <div className="bg-white p-4 rounded-lg shadow-sm flex flex-col h-full">
-          <div className="flex justify-between">
-            <h2 className="text-lg font-bold">
-              <i className="ri-rocket-fill text-primaryCyan"></i> Largest
-              Gainers{" "}
-            </h2>
-            <Link className="hover:text-primaryCyan">
-              View more <i className="ri-arrow-right-s-line"></i>
-            </Link>
-          </div>
-          <div className="mt-4 space-y-2 flex-1 overflow-y-auto">
-            {largestGainers.map((coin) => (
-              <div className="flex justify-between" key={coin.name}>
-                <p>{coin.name}</p>
-                <p className={`flex mr-1`}>
-                  <span>${coin.price.toFixed(2)}</span>
-                  {coin.change >= 0 ? (
-                    <div className={`text-green-500`}>
-                      <i className="ri-arrow-up-s-fill"></i>
-                      {coin.change}%
-                    </div>
-                  ) : (
-                    <div className={`text-red-500`}>
-                      <i className="ri-arrow-down-s-fill"></i>
-                      {Math.abs(coin.change)}%
-                    </div>
-                  )}
-                </p>
-              </div>
-            ))}
+          <div className="bg-white p-4 rounded-lg shadow-sm flex flex-col h-full">
+            <div className="flex justify-between">
+              <h2 className="text-lg font-bold">
+                <i className="ri-rocket-fill text-primaryCyan"></i> Largest
+                Gainers{" "}
+              </h2>
+              <Link className="hover:text-primaryCyan">
+                View more <i className="ri-arrow-right-s-line"></i>
+              </Link>
+            </div>
+            <div className="mt-4 space-y-2 flex-1 overflow-y-auto">
+              {largestGainers.map((coin) => (
+                <div className="flex justify-between" key={coin.name}>
+                  <p>{coin.name}</p>
+                  <p className={`flex mr-1`}>
+                    <span>${coin.price.toFixed(2)}</span>
+                    {coin.change >= 0 ? (
+                      <div className={`text-green-500 flex items-center`}>
+                        <IoMdArrowDropup />
+                        {coin.change}%
+                      </div>
+                    ) : (
+                      <div className={`text-red-500 flex items-center`}>
+                        <IoMdArrowDropdown />
+                        {Math.abs(coin.change)}%
+                      </div>
+                    )}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };
