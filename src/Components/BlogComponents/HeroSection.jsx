@@ -95,7 +95,7 @@ const EachBlog = ({ title, date, description, imageUrl, author, profile, readTim
   return (
     <div className="flex flex-col items-start gap-3 rounded-2xl bg-white p-2">
       <div>
-        <img src={imageUrl} alt="Blog Visual" className="w-full h-[200px] rounded" />
+        <img src={imageUrl} alt="Blog Visual" className="w-full h-[200px] rounded object-center object-cover" />
         <h2 className="text-2xl font-bold mt-2">{title}</h2>
         <p className="text-gray-500 line-clamp-2">{description}</p>
       </div>
@@ -1208,7 +1208,7 @@ const HeroSection = () => {
                 <img
                   src={blogPosts[0].author.imageUrl}
                   alt={`${blogPosts[0].author.name} Profile`}
-                  className="w-6 h-6 mr-2 rounded-full" // Circular profile image
+                  className="w-6 h-6 mr-2 rounded-full object-cover object-centre" // Circular profile image
                 />
                 <span>By - {blogPosts[0].author.name || 'Admin'}</span>
                 <span className='text-sm mx-2 font-bold'>.</span> {/* Separator */}
@@ -1246,7 +1246,7 @@ const HeroSection = () => {
 
                     <div className="flex items-center justify-between w-full text-cyan-600 mb-4">
                       <div className="flex items-center">
-                        <img src={post.author.imageUrl} alt="Profile" className="w-4 h-4 rounded-full mr-2" />
+                        <img src={post.author.imageUrl} alt="Profile" className="w-4 h-4 rounded-full mr-2 object-cover" />
                         <span className='text-sm'>{post.author.name}</span>
                         <span className='text-sm mx-2 font-bold'>.</span> {/* Separator */}
                         <span className='text-sm'>25 Sept 2024</span>

@@ -79,62 +79,6 @@ const BlogInfo = () => {
         ]
     };
 
-    const data = {
-        title: "Ready to Transform Your Reading Habit? 📚 | From Zero to Consistent Reader",
-        intro: "If you've struggled to pick up a book or stick to reading, this course is designed just for you.",
-        readingJourney: "Reading 0 ➡️ Reading 1: From not reading at all to reading consistently and loving it.",
-        courseTitle: "📖 Inside the Course, You'll Learn How to:",
-        coursePoints: [
-            "Find books you'll actually enjoy 📚",
-            "Master the art of skimming for quick insights 🧠",
-            "Start small and build momentum 🚀",
-            "Develop the mindset and identity of a true reader 💡"
-        ],
-        accessLink: "> Click Here to Access the Full Guide and Start Your Reading Journey Now!",
-        limitedOffer: "⚠️ Limited Time Offer: Unlock \"The Habit of Reading\" course today and take your first step toward becoming the reader you've always wanted to be!",
-        substackTitle: "New Substack! ✨",
-        substackIntro: "I've been working on making my articles more structured and exclusive, and I found the perfect platform in Substack.",
-        substackNewsletters: [
-            {
-                name: "Kevin Nokia Writing",
-                description: "My personal journey from struggling through depression to becoming a successful individual.",
-                link: "#"
-            },
-            {
-                name: "I Am Literate",
-                description: "Discover how to replace scrolling addiction with effective reading habits to improve focus and attention span.",
-                link: "#"
-            }
-        ],
-        resourcesTitle: "Essential Resources for Your Journey 📚",
-        resources: [
-            {
-                name: "The Mastery of Reading (Paid)",
-                description: "A step by step guide to Mastering Your Reading Habit from 0 to 100",
-                downloadLink: "#"
-            },
-            {
-                name: "30 day Simple Habit Tracker (Free)",
-                description: "Track Your Daily Habits with Customizable Months",
-                downloadLink: "#"
-            },
-            {
-                name: "Life-changing Blueprint (Free)",
-                description: "How to Change Your Life with Implementation Guide",
-                downloadLink: "#"
-            },
-            {
-                name: "My Booknotes (Free)",
-                description: "Understand What You Read with Implementation Guide",
-                downloadLink: "#"
-            }
-        ],
-        tags: ["Focus", "Success", "Self-improvement", "Life", "Psychology"],
-        stats: {
-            likes: "17.5K",
-            comments: "283"
-        }
-    };
 
 
     return (
@@ -161,7 +105,7 @@ const BlogInfo = () => {
                     <hr className="my-2" />
 
                     <img src={blogData.mainImage} alt="A person sitting alone in a dark room with a spotlight on them" className="w-full mb-4 mt-12" />
-                    <p className="flex text-gray-500 text-sm mb-4 justify-center">Photo by <span className="underline">{blogData.photoCredit.name}</span> on <span className="underline ">{blogData.photoCredit.source}</span></p>
+                    <p className="flex text-gray-500 text-sm mb-4 justify-center">Photo by<span className="underline">{blogData.photoCredit.name}</span> on <span className="underline ">{blogData.photoCredit.source}</span></p>
                     <div className='mt-12'>
                         {blogData.content.map((item, index) => {
                             if (item.type === "paragraph") {
@@ -202,56 +146,9 @@ const BlogInfo = () => {
                     </div>
 
 
-                    <section className="mb-20">
-                        <h1 className="text-2xl font-bold mb-2">{data.title}</h1>
-                        <p className="mb-4">{data.intro}</p>
-                        <p className="mb-4">{data.readingJourney}</p>
-                        <h2 className="text-xl font-bold mb-4">{data.courseTitle}</h2>
-                        <ul className="list-disc list-inside mb-4">
-                            {data.coursePoints.map((point, index) => (
-                                <li key={index} className='mb-2'>{point}</li>
-                            ))}
-                        </ul>
-                        <a href="#" className="font-semibold underline mb-8 block">{data.accessLink}</a>
-                        <p className="text-red-600 mb-8">{data.limitedOffer}</p>
-                    </section>
-                    <section className="mb-8">
-                        <h2 className="text-xl font-bold mb-2">{data.substackTitle}</h2>
-                        <p className="mb-4">{data.substackIntro}</p>
-                        <p className="mb-4 font-semibold">I'm excited to share two new newsletters with you:</p>
-                        <ul className="list-disc list-inside mb-4">
-                            {data.substackNewsletters.map((newsletter, index) => (
-                                <li key={index} className='mb-1 ml-2'>
-                                    <a href={newsletter.link} className="font-semibold underline">{newsletter.name}</a>: {newsletter.description}
-                                </li>
-                            ))}
-                        </ul>
-                        <p className="mb-4">Join now for exclusive articles and a growing community!</p>
-                    </section>
-                    <section className="mb-8">
-                        <h2 className="text-xl font-bold mb-2">{data.resourcesTitle}</h2>
-                        <ul className="list-disc list-inside mb-4">
-                            {data.resources.map((resource, index) => (
-                                <li key={index} className='ml-4 mb-4'>
-                                    <a href="#" className="font-semibold ">{resource.name}</a> | <a href={resource.downloadLink} className="font-semibold underline">Download here</a><br />{resource.description}
-                                </li>
-                            ))}
-                        </ul>
-                    </section>
-                    <div className="flex flex-wrap space-x-2">
-                        {data.tags.map((tag, index) => (
-                            <span key={index} className="bg-gray-200 text-gray-800 px-2 py-1 rounded-full text-sm md:text-base m-2">
-                                {tag}
-                            </span>
-
-                        ))}
-                    </div>
-
-                    <div className="flex space-x-4 text-gray-600 mt-2">
-                        <span className="flex items-center"><i className="ri-heart-line"></i> {data.stats.likes}</span>
-                        <span className="flex items-center"><i className="ri-chat-3-line"></i> {data.stats.comments}</span>
-                        <span className="flex items-center"><i className="ri-share-line"></i></span>
-                    </div>
+                   
+                   
+                
                 </div>
             </div>
 
@@ -261,3 +158,4 @@ const BlogInfo = () => {
 }
 
 export default BlogInfo;
+

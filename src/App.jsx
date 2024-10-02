@@ -28,6 +28,7 @@ const FAQ = lazy(() => import("./Pages/FAQ"));
 const ContactUs = lazy(() => import("./Pages/ContactUs"));
 const Exchange = lazy(() => import("./Pages/Exchange"))
 const Prices = lazy(() => import("./Pages/Prices"))
+const Disclaimer =lazy(() => import("./Pages/Disclaimer"));
 
 const App = () => {
   const router = createBrowserRouter(
@@ -51,6 +52,8 @@ const App = () => {
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/exchange" element={<Exchange />} />
         <Route path="*" element={<Page404 />} />
+        <Route path="/disclaimer" element={<Disclaimer />} />
+
       </Route>
     )
   );

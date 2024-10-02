@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import { CiStar } from "react-icons/ci";
 import { FaBitcoin } from "react-icons/fa";
 import { IoMdInformationCircleOutline } from "react-icons/io";
 import { IoMdArrowDropdown } from "react-icons/io";
@@ -254,25 +255,42 @@ const coinsData = [
 
 // Tooltip component
 const InfoTooltip = ({ text }) => {
-    const [isTooltipVisible, setIsTooltipVisible] = useState(false);
-  
-    return (
-      <div className="relative inline-block">
-        <span
-          className="text-black-500 font-bold cursor-pointer hover:text-black-700"
-          onMouseEnter={() => setIsTooltipVisible(true)}
-          onMouseLeave={() => setIsTooltipVisible(false)}
-        >
-          <IoMdInformationCircleOutline />
-        </span>
-        {isTooltipVisible && (
-          <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-44 p-2 bg-gray-700 text-white text-sm rounded transition-opacity duration-200 z-10">
-            {text}
-          </div>
-        )}
-      </div>
-    );
+  const [isTooltipVisible, setIsTooltipVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const handleToggleTooltip = () => {
+    setIsTooltipVisible((prev) => !prev);
   };
+
+  return (
+    <div className="relative inline-block">
+      <span
+        className="text-black-500 font-bold cursor-pointer hover:text-black-700"
+        onMouseEnter={!isMobile ? () => setIsTooltipVisible(true) : null}
+        onMouseLeave={!isMobile ? () => setIsTooltipVisible(false) : null}
+        onClick={isMobile ? handleToggleTooltip : null}
+      >
+        <IoMdInformationCircleOutline />
+      </span>
+      {isTooltipVisible && (
+        <div className="absolute left-1/2 transform -translate-x-1/2 mt-2 w-44 p-2 bg-gray-700 text-white text-sm rounded shadow-lg transition-opacity duration-200 z-10 sm:w-48 md:left-auto md:right-0 md:-translate-x-0">
+          <div className="whitespace-normal text-center">{text}</div>
+        </div>
+      )}
+    </div>
+  );
+};
 
 const PriceTable = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -284,6 +302,7 @@ const PriceTable = () => {
     change7d: null,
     volume24h: null,
   });
+  const [selectedRows, setSelectedRows] = useState(50);
   const [notFound, setNotFound] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [visibleColumns, setVisibleColumns] = useState({
@@ -300,6 +319,52 @@ const PriceTable = () => {
     tradable: true,
     imageUrl: true,
   });
+  const modalRef = useRef(null);
+
+  const handleClickOutside = (event) => {
+    if (modalRef.current && !modalRef.current.contains(event.target)) {
+      handleCloseModal();
+    }
+  };
+
+  let scrollPosition = 0; // to store the scroll position
+
+  useEffect(() => {
+    if (isModalOpen) {
+      // Capture the current scroll position
+      scrollPosition = window.scrollY;
+
+      // Set the body's position to fixed to prevent scrolling
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollPosition}px`;
+      document.body.style.width = "100%"; // To prevent layout shifting
+    } else {
+      // Restore the scroll position and reset body styles
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+      window.scrollTo(0, scrollPosition); // Restore the previous scroll position
+    }
+    return () => {
+      // Cleanup when modal closes to ensure body styles are reset
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+    };
+  }, [isModalOpen]);
+
+  useEffect(() => {
+    if (isModalOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isModalOpen]);
+
+  const relevantColumns = Object.keys(visibleColumns).filter((column) =>
+    ["last7Days", "change1h"].includes(column)
+  );
 
   useEffect(() => {
     const filteredData = coinsData.filter((crypto) =>
@@ -340,7 +405,7 @@ const PriceTable = () => {
 
     return (
       <div className="flex justify-center items-center h-full">
-        <ResponsiveContainer width={180} height={60}>
+        <ResponsiveContainer width={120} height={60}>
           <AreaChart data={sparklineData}>
             <defs>
               <linearGradient
@@ -350,8 +415,8 @@ const PriceTable = () => {
                 x2="0"
                 y2="1"
               >
-                <stop offset="0%" stopColor={trendColor} stopOpacity={0.4} />
-                <stop offset="100%" stopColor={trendColor} stopOpacity={0.05} />
+                <stop offset="0%" stopColor={trendColor} stopOpacity={0.1} />
+                <stop offset="100%" stopColor={trendColor} stopOpacity={0.01} />
               </linearGradient>
             </defs>
             <Area
@@ -359,7 +424,7 @@ const PriceTable = () => {
               dataKey="price"
               stroke={trendColor}
               fill={`url(#colorTrend-${trendColor})`}
-              strokeWidth={2}
+              strokeWidth={0.7}
               dot={false}
             />
             <XAxis hide />
@@ -387,14 +452,32 @@ const PriceTable = () => {
     setIsModalOpen(false);
   };
 
+  const handleResetChanges = () => {
+    setVisibleColumns({
+      id: true,
+      name: true,
+      symbol: true,
+      price: true,
+      change1h: true,
+      change24h: true,
+      change7d: true,
+      volume24h: true,
+      marketCap: true,
+      last7Days: true,
+      tradable: true,
+      imageUrl: true,
+    });
+    setIsModalOpen(false);
+  };
+
   return (
     <div className="container mx-auto mt-20 mb-10">
       <div className="flex justify-between items-center mb-4">
-        <h1 className="text-3xl font-montserrat  font-bold px-5">
+        <h1 className="text-3xl font-montserrat  font-bold">
           Top Cryptocurrency Prices and Market Cap
         </h1>
       </div>
-      <div className="flex items-center justify-between mb-4 px-3">
+      <div className="flex items-center justify-between mb-4">
         <input
           type="text"
           className="w-1/2 bg-gray-100 border-gray-300 py-2 px-6 rounded-md hover:bg-gray-300 mr-4 font-montserrat"
@@ -415,8 +498,8 @@ const PriceTable = () => {
         <div className="min-w-full bg-white border rounded-lg shadow-xl overflow-y-auto">
           <table className="min-w-full">
             <thead className="bg-gray-50 rounded-xl text-sm">
-              <tr>
-                <th className="px-8 py-2 border-b text-center">#</th>
+              <tr className="items-center">
+                <th className="px-2 py-2 border-b text-right">#</th>
                 {visibleColumns.name && (
                   <th className="px-8 py-2 border-b text-left font-montserrat ">
                     Coin
@@ -428,13 +511,11 @@ const PriceTable = () => {
                   </th>
                 )}
                 {visibleColumns.change1h && (
-                  <th
-                    className="group px-4 py-2 border-b text-center whitespace-nowrap lg:whitespace-normal font-montserrat"
-                    onClick={() => sortData("change1h")}
-                  >
+                  <th className="group px-4 py-2 border-b text-center whitespace-nowrap lg:whitespace-normal font-montserrat">
                     <span className="flex items-center justify-center flex-row">
                       <span
                         className={`mr-1 transition-opacity opacity-0 group-hover:opacity-100`}
+                        onClick={() => sortData("change1h")}
                       >
                         {sortDirection.change1h === "asc" ? (
                           <i className="ri-arrow-up-s-fill"></i>
@@ -443,17 +524,17 @@ const PriceTable = () => {
                         )}
                       </span>
                       1h
-                      <InfoTooltip text="The percentage of change in the value compared to 1 hour ago."/>
+                      <InfoTooltip text="The percentage of change in the value compared to 1 hour ago." />
                     </span>
                   </th>
                 )}
                 {visibleColumns.change24h && (
                   <th className="group px-4 py-2 border-b text-center whitespace-nowrap lg:whitespace-normal font-montserrat">
-                    <span
-                      className="flex items-center justify-center flex-row"
-                      onClick={() => sortData("change24h")}
-                    >
-                      <span className="mr-1 transition-opacity opacity-0 group-hover:opacity-100">
+                    <span className="flex items-center justify-center flex-row">
+                      <span
+                        className="mr-1 transition-opacity opacity-0 group-hover:opacity-100"
+                        onClick={() => sortData("change24h")}
+                      >
                         {sortDirection.change24h === "asc" ? (
                           <i className="ri-arrow-up-s-fill"></i>
                         ) : (
@@ -466,12 +547,12 @@ const PriceTable = () => {
                   </th>
                 )}
                 {visibleColumns.change7d && (
-                  <th
-                    className="group px-4 py-2 border-b text-center whitespace-nowrap lg:whitespace-normal font-montserrat"
-                    onClick={() => sortData("change7d")}
-                  >
+                  <th className="group px-4 py-2 border-b text-center whitespace-nowrap lg:whitespace-normal font-montserrat">
                     <span className="flex items-center justify-center flex-row">
-                      <span className="mr-1 transition-opacity opacity-0 group-hover:opacity-100">
+                      <span
+                        className="mr-1 transition-opacity opacity-0 group-hover:opacity-100"
+                        onClick={() => sortData("change7d")}
+                      >
                         {sortDirection.change7d === "asc" ? (
                           <i className="ri-arrow-up-s-fill"></i>
                         ) : (
@@ -484,12 +565,12 @@ const PriceTable = () => {
                   </th>
                 )}
                 {visibleColumns.volume24h && (
-                  <th
-                    className="group px-2 py-2 border-b text-center f whitespace-nowrap lg:whitespace-normal cursor-pointer"
-                    onClick={() => sortData("volume24h")}
-                  >
+                  <th className="group px-2 py-2 border-b text-center f whitespace-nowrap lg:whitespace-normal cursor-pointer">
                     <span className="flex items-center justify-center flex-row">
-                      <span className="mr-1 transition-opacity opacity-0 group-hover:opacity-100">
+                      <span
+                        className="mr-1 transition-opacity opacity-0 group-hover:opacity-100"
+                        onClick={() => sortData("volume24h")}
+                      >
                         {sortDirection.volume24h === "asc" ? (
                           <i className="ri-arrow-up-s-fill"></i>
                         ) : (
@@ -502,12 +583,12 @@ const PriceTable = () => {
                   </th>
                 )}
                 {visibleColumns.marketCap && (
-                  <th
-                    className="group py-2 cursor-pointer whitespace-nowrap lg:whitespace-normal border-b justify-center"
-                    onClick={() => sortData("marketCap")}
-                  >
+                  <th className="group py-2 cursor-pointer whitespace-nowrap lg:whitespace-normal border-b justify-center">
                     <span className="flex items-center justify-center flex-row">
-                      <span className="mr-1 transition-opacity opacity-0 group-hover:opacity-100">
+                      <span
+                        className="mr-1 transition-opacity opacity-0 group-hover:opacity-100"
+                        onClick={() => sortData("marketCap")}
+                      >
                         {sortDirection.marketCap === "asc" ? (
                           <i className="ri-arrow-up-s-fill"></i>
                         ) : (
@@ -521,7 +602,7 @@ const PriceTable = () => {
                 )}
 
                 {visibleColumns.last7Days && (
-                  <th className="px-4 border-b text-center font-montserrat whitespace-nowrap lg:whitespace-normal ">
+                  <th className="px-4 py-2 border-b text-center font-montserrat whitespace-nowrap lg:whitespace-normal">
                     Last 7 Days
                     <InfoTooltip text="This shows a sparkline graph of the last 7 days of the currency's value." />
                   </th>
@@ -531,12 +612,15 @@ const PriceTable = () => {
             <tbody>
               {sortedData.map((crypto, index) => (
                 <tr key={index} className="bg-white hover:bg-gray-50">
-                  <td className=" px-8 py-4 border-b text-center">
-                    {index + 1}
+                  <td className="px-2 py-4 border-b text-right">
+                    <div className="flex justify-between items-center pl-2">
+                      <CiStar />
+                      {index + 1}
+                    </div>
                   </td>
                   {visibleColumns.name && (
                     <td className=" px-8 py-4 border-b text-start">
-                      <div className="flex items-center justify-stretch">
+                      <div className="flex items-center justify-between">
                         {/* <img
                           src={crypto.imageUrl}
                           alt={crypto.symbol}
@@ -546,6 +630,11 @@ const PriceTable = () => {
                         <span>
                           {crypto.name} ({crypto.symbol})
                         </span>
+                        {crypto.tradable && (
+                          <span className="cursor-pointer px-1.5 text-xxs font-medium text-inline border border-green-500 text-primary-500 rounded-md text-center text-green-500 mr-1">
+                            Buy
+                          </span>
+                        )}
                       </div>
                     </td>
                   )}
@@ -648,6 +737,89 @@ const PriceTable = () => {
           </table>
         </div>
       </div>
+      {isModalOpen && (
+        <div className="fixed inset-0 flex items-center justify-center z-10">
+          <div className="absolute inset-0 bg-black opacity-50"></div>
+          <div className="bg-white rounded-lg p-8 relative" ref={modalRef}>
+            <h2 className="text-xl font-semibold mb-4">
+              Select Columns to Display
+            </h2>
+            <div className="flex flex-col items-center mt-2 space-y-4">
+              {relevantColumns.map((column) => (
+                <label
+                  className="flex items-center justify-between w-full"
+                  key={column}
+                >
+                  <span className="text-sm text-gray-700 mr-6">{column}</span>{" "}
+                  {/* Adjusted margin */}
+                  <div className="relative">
+                    <input
+                      type="checkbox"
+                      checked={visibleColumns[column]}
+                      onChange={() => handleColumnVisibilityChange(column)}
+                      className="sr-only" // Hide the checkbox
+                    />
+                    {/* Toggle background */}
+                    <div
+                      className={`w-12 h-6 rounded-full shadow-inner transition-colors duration-300 ${
+                        visibleColumns[column]
+                          ? "bg-primaryCyan"
+                          : "bg-gray-300"
+                      }`}
+                    ></div>
+                    {/* Toggle switch circle */}
+                    <div
+                      className={`absolute top-0.5 left-1 w-5 h-5 rounded-full bg-white shadow-md transform transition-transform duration-300 ${
+                        visibleColumns[column] ? "translate-x-6" : ""
+                      }`}
+                    ></div>
+                  </div>
+                </label>
+              ))}
+            </div>
+
+            <div className="mb-4 mt-6">
+              <h3 className="text-sm font-semibold text-gray-700">Rows</h3>
+              <div className="mt-2 flex space-x-2">
+                {[50, 100, 300].map((row) => (
+                  <button
+                    key={row}
+                    className={`px-4 py-2 flex-1 text-sm text-center ${
+                      selectedRows === row
+                        ? "bg-cyan-50 text-primaryCyan"
+                        : "text-gray-700 hover:bg-gray-100"
+                    } rounded-md`}
+                    onClick={() => setSelectedRows(row)}
+                  >
+                    {row}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="flex justify-end mt-4">
+              <button
+                onClick={handleResetChanges}
+                className="bg-gray-100 py-2 px-4 rounded-md mr-2"
+              >
+                Reset
+              </button>
+              <button
+                onClick={handleApplyChanges}
+                className="bg-primaryCyan text-white py-2 px-4 rounded-md"
+              >
+                Apply
+              </button>
+            </div>
+            <button
+              onClick={handleCloseModal}
+              className="absolute top-2 right-2 p-2 text-gray-500 hover:text-gray-700 focus:outline-none"
+            >
+              <span className="text-lg">&times;</span>
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
