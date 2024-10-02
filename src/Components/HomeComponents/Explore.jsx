@@ -227,36 +227,58 @@ const Explore = () => {
   }, []);
 
   // GSAP animations
+
   useEffect(() => {
-    // Animate phone from bottom
+    // Animate phone from bottom with ScrollTrigger
     gsap.fromTo(
       phoneRef.current,
       { y: 200, opacity: 0 },
-      { y: 0, opacity: 1, duration: 3, ease: "power3.out" }
+      {
+        y: 0,
+        opacity: 1,
+        duration: 3,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: phoneRef.current,
+          start: 'top 80%', // Trigger the animation when the top of the phone reaches 80% of the viewport
+          toggleActions: 'play none none reverse', // Play on scroll, reverse when scrolled up
+        },
+      }
     );
 
-    // Animate content inside the phone
+    // Animate content inside the phone with ScrollTrigger
     gsap.fromTo(
       phoneContentRef.current,
       { y: 100, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1.2, delay: 0.2, ease: "power3.out" }
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1.5,
+        delay: 0.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: phoneContentRef.current,
+          start: 'top 90%', // Trigger the animation when the top of the phone reaches 80% of the viewport
+          toggleActions: 'play none none reverse', // Play on scroll, reverse when scrolled up
+        },
+      }
     );
   }, []);
 
   return (
-    <section className="py-20 container mx-auto">
+    <section className="py-20 container mx-auto px-5 lg:px-0">
       <div className="flex flex-col items-center gap-2 mb-16 px-5 lg:px-0">
         <h1 className="text-4xl font-century-gothic text-center font-semibold">
           Explore Crypto
         </h1>
-        <p className="text-xl font-century-gothic">
+        <p className="text-xl font-century-gothic text-center">
           Simply and securely buy, sell and manage hundreds of cryptocurrencies
         </p>
       </div>
 
-        <div className="flex flex-col lg:flex-row items-center gap-10 justify-between container w-full mx-auto">
+        <div className="flex flex-col lg:flex-row items-center gap-5 lg:gap-10 justify-between container w-full mx-auto">
           {/* Left-side content */}
-          <div className="flex-1 flex flex-col gap-5 items-center mb-10">
+          <div className="flex-1 flex flex-col gap-5 w-full items-center mb-10">
             <div className="flex items-center gap-5 mb-5 mt-7">
               <PrimaryButton title="Tradable" />
               <SecondaryButton title="Top Gainers" />

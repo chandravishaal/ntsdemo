@@ -166,11 +166,11 @@ const MobileFooter = () => {
           </div>
           <div className="w-full h-[0.5px] bg-gray-200 mt-5"></div>
 
-          <div className="text-center font-semibold text-gray-500 my-8 text-sm">
+          <div className="text-center font-semibold text-gray-500 my-3 text-sm">
             &copy; 2024 NORTH STAR METRICS, All Rights Reserved.
           </div>
-          <div className="text-left font-semibold text-gray-500 p-2 my-8 text-sm">
-          <a href="/disclaimer" className="text-primaryCyan hover:underline">Disclaimer:</a> Trading in cryptocurrencies is subject to market & legal risks. Prices in one country may differ from prices in other countries. North Star Metrics does not guarantee any returns. Use North Star Metrics's services at your own risk.
+          <div className="text-left font-semibold text-gray-500 p-2 my-2 text-sm">
+          <a href="/disclaimer" className="text-primaryCyan hover:underline">Disclaimer:</a> Trading in cryptocurrencies is subject to market & legal risks. Prices in one country may differ from prices in other countries. North Star Metrics does not guarantee any returns. Use North Star Metrics&apos;s services at your own risk.
           </div>
 
         </div>
