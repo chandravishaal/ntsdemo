@@ -229,8 +229,8 @@ const InfoTooltip = ({ text }) => (
     <span className="text-black-500 text-bold hover:text-black-700 margin-left: 0.5rem cursor-pointer">
       <IoMdInformationCircleOutline />
     </span>
-    <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-44 p-2 bg-gray-700 text-white text-sm rounded hidden group-hover:block transition-opacity duration-200 z-10">
-      {text}
+    <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-48 p-2 bg-gray-700 text-white text-sm rounded hidden group-hover:block transition-opacity duration-200 z-10 group-focus:block sm:w-full">
+      <div className="whitespace-normal text-center">{text}</div>
     </div>
   </div>
 );
