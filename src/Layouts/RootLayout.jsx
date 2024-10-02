@@ -38,7 +38,7 @@ const RootLayout = () => {
   }, [showButton]);
 
   // Define the routes where you don't want to show the footer
-  const noFooterRoutes = ["/news", "/crypto-converter", "/features", "/exchange", "/prices"];
+  const noFooterRoutes = ["/news", "/crypto-converter", "/features", "/exchange"];
 
   return (
     <>
