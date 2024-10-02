@@ -317,7 +317,7 @@ const Blog = () => {
 
   const EachBlog = () => {
     return (
-      <div className="flex flex-col items-start gap-4 rounded-2xl bg-white p-2 outline outline-[0.2px] outline-gray-300 shadow-md">
+      <div className="flex flex-col items-start gap-5 rounded-2xl bg-white p-2 outline outline-[0.2px] outline-gray-300 shadow-md">
         <h1 className="text-lg font-semibold px-1 font-century-gothic">
           Data Analytics: Key to Decision and Business Growth
         </h1>
@@ -365,9 +365,9 @@ const Blog = () => {
     <div ref={blogRef} className="container mx-auto py-20 px-5 lg:px-0">
       <div
         id="heading"
-        className="flex flex-col items-center gap-4 mb-20 px-5 text-center"
+        className="flex flex-col items-center gap-4 mb-10 px-5 text-center"
       >
-        <h1 className="text-black font-semibold text-4xl font-century-gothic mb-2">
+        <h1 className="text-black font-semibold text-4xl font-century-gothic mb-1">
           Our Latest Blog
         </h1>
         <h2 className="text-black text-2xl font-century-gothic font-normal">

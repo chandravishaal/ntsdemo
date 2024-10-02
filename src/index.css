@@ -554,3 +554,20 @@ nav {
   font-family: "Jost", sans-serif;
   
 }
+
+
+/* Explore Section Scroll bar  */
+/* Hides scrollbar in WebKit browsers (like Chrome, Safari) */
+.dropdown-menu::-webkit-scrollbar {
+  display: none; /* Hides the scrollbar */
+}
+
+/* Hides scrollbar in Firefox */
+.dropdown-menu {
+  scrollbar-width: none; /* Hides scrollbar in Firefox */
+}
+
+/* Styles for the dropdown menu */
+.dropdown-menu {
+  overflow-y: auto; /* Allows scrolling */
+}

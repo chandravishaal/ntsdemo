@@ -2,8 +2,8 @@
 import {                        
     FaLinkedinIn,
     FaInstagram,
-    FaDribbble,
-    FaWeight,
+    // FaDribbble,
+    // FaWeight,
   } from "react-icons/fa";
   import { FaLocationDot } from "react-icons/fa6";
   import { MdEmail } from "react-icons/md";
@@ -46,22 +46,22 @@ import {
                   alt=""
                 />
                 <div className="flex space-x-3 md:space-x-4 my-3 lg:mb-7 mb-5">
-                  <FaFacebookF className="text-lg transition-colors duration-300 hover:text-black md:text-xl" />
-                  <FaXTwitter className="text-lg transition-colors duration-300 hover:text-black md:text-xl" />
-                  <FaLinkedinIn className="text-lg transition-colors duration-300 hover:text-black md:text-xl" />
-                  <FaInstagram className="text-lg transition-colors duration-300 hover:text-black md:text-xl" />
+                  <FaFacebookF className="text-lg transition-colors duration-300 lg:hover:text-primaryCyan md:text-xl" />
+                  <FaXTwitter className="text-lg transition-colors duration-300 lg:hover:text-primaryCyan md:text-xl" />
+                  <FaLinkedinIn className="text-lg transition-colors duration-300 lg:hover:text-primaryCyan md:text-xl" />
+                  <FaInstagram className="text-lg transition-colors duration-300 lg:hover:text-primaryCyan md:text-xl" />
 
                 </div>
-                <p className="text-sm transition-colors duration-300 mb-2 hover:text-black">
+                <p className="text-sm transition-colors duration-300 mb-2 lg:hover:text-primaryCyan">
                   <FaLocationDot className="inline mr-2" />
                   7th Floor, Yamuna Building, 86, Golaghata Rd, Dakshindari,
                   Kolkata - 700048
                 </p>
-                <p className="text-sm transition-colors mb-2 duration-500 hover:text-black">
+                <p className="text-sm transition-colors mb-2 duration-500 lg:hover:text-primaryCyan">
                   <IoCall className="inline mr-2" />
                   +91 8981037010
                 </p>
-                <p className="text-sm transition-colors duration-500 hover:text-black">
+                <p className="text-sm transition-colors duration-500 lg:hover:text-primaryCyan">
                   <MdEmail className="inline mr-2" />
                   contact@ntsmetrics.com
                 </p>
@@ -78,40 +78,35 @@ import {
                     <li>
                       <Link
                         to="/"
-                        className="transition-colors duration-300 hover:text-black text-sm"
-                      >
+                        className="transition-colors duration-300 lg:hover:text-primaryCyan text-sm">
                         Exchange Services
                       </Link>
                     </li>
                     <li>
                       <Link
                         to="/"
-                        className="transition-colors duration-300 hover:text-black text-sm"
-                      >
+                        className="transition-colors duration-300 lg:hover:text-primaryCyan text-sm">
                         Ticker
                       </Link>
                     </li>
                     <li>
                       <Link
                         to="/blogs"
-                        className="transition-colors duration-300 hover:text-black text-sm"
-                      >
+                        className="transition-colors duration-300 lg:hover:text-primaryCyan text-sm">
                         Blog
                       </Link>
                     </li>
                     <li>
                       <Link
                         to="/features"
-                        className="transition-colors duration-300 hover:text-black text-sm"
-                      >
+                        className="transition-colors duration-300 lg:hover:text-primaryCyan text-sm">
                         Features
                       </Link>
                     </li>
                     <li>
                       <Link
                         to="/roadmap"
-                        className="transition-colors duration-300 hover:text-black text-sm"
-                      >
+                        className="transition-colors duration-300 lg:hover:text-primaryCyan text-sm">
                         Roadmap
                       </Link>
                     </li>
@@ -127,40 +122,35 @@ import {
                     <li>
                       <Link
                         to="/about"
-                        className="transition-colors duration-300 hover:text-black text-sm"
-                      >
+                        className="transition-colors duration-300 lg:hover:text-primaryCyan text-sm">
                         About Us
                       </Link>
                     </li>
                     <li>
                       <Link
                         to="/contact"
-                        className="transition-colors duration-300 hover:text-black text-sm"
-                      >
+                        className="transition-colors duration-300 lg:hover:text-primaryCyan text-sm">
                         Contact Us
                       </Link>
                     </li>
                     <li>
                       <Link
                         to="/"
-                        className="transition-colors duration-300 hover:text-black text-sm"
-                      >
+                        className="transition-colors duration-300 lg:hover:text-primaryCyan text-sm">
                         AML & KYC
                       </Link>
                     </li>
                     <li>
                       <Link
                         to="/terms"
-                        className="transition-colors duration-300 hover:text-black text-sm"
-                      >
+                        className="transition-colors duration-300 lg:hover:text-primaryCyan text-sm">
                         Terms
                       </Link>
                     </li>
                     <li>
                       <Link
                         to="/privacy-policy"
-                        className="transition-colors duration-300 hover:text-black text-sm"
-                      >
+                        className="transition-colors duration-300 lg:hover:text-primaryCyan text-sm">
                         Privacy Policy
                       </Link>
                     </li>
@@ -176,40 +166,35 @@ import {
                     <li>
                       <Link
                         to="/about"
-                        className="transition-colors duration-300 hover:text-black text-sm"
-                      >
+                        className="transition-colors duration-300 lg:hover:text-primaryCyan text-sm">
                         About Us
                       </Link>
                     </li>
                     <li>
                       <Link
                         to="/contact"
-                        className="transition-colors duration-300 hover:text-black text-sm"
-                      >
+                        className="transition-colors duration-300 lg:hover:text-primaryCyan text-sm">
                         Contact Us
                       </Link>
                     </li>
                     <li>
                       <Link
                         to="/"
-                        className="transition-colors duration-300 hover:text-black text-sm"
-                      >
+                        className="transition-colors duration-300 lg:hover:text-primaryCyan text-sm">
                         AML & KYC
                       </Link>
                     </li>
                     <li>
                       <Link
                         to="/terms"
-                        className="transition-colors duration-300 hover:text-black text-sm"
-                      >
+                        className="transition-colors duration-300 lg:hover:text-primaryCyan text-sm">
                         Terms & Condition
                       </Link>
                     </li>
                     <li>
                       <Link
                         to="/privacy-policy"
-                        className="transition-colors duration-300 hover:text-black text-sm"
-                      >
+                        className="transition-colors duration-300 lg:hover:text-primaryCyan text-sm">
                         Privacy Policy
                       </Link>
                     </li>
@@ -245,12 +230,12 @@ import {
           <div className="w-full h-[0.5px] bg-gray-200"></div>
   
           {/* Footer bottom */}
-          <div className="text-center font-semibold text-gray-500 p-2 my-8 text-sm">
+          <div className="text-center font-semibold text-gray-500 p-2 mt-8 text-sm">
             &copy; 2024 NORTH STAR METRICS, All Rights Reserved.
           </div>
-          <div className=" font-century-gothic font-semi
-          bold text-gray-500 p-2 my-8 text-sm">
-          <a href="/disclaimer" className="text-gray-700 hover:text-primaryCyan">DISCLAIMER:</a> Trading in cryptocurrencies is subject to market & legal risks. Prices in one country may differ from prices in other countries. North Star Metrics does not guarantee any returns. Use North Star Metrics's services at your own risk.
+          <div className=" font-century-gothic container mx-auto text-center font-semi
+          bold text-gray-500 p-2 my-2 text-sm">
+          <Link to="/disclaimer" className="text-gray-500 font-semibold"><span className="lg:hover:text-primaryCyan">DISCLAIMER </span>: <span>Trading in cryptocurrencies is subject to market & legal risks. Prices in one country may differ from prices in other countries. North Star Metrics does not guarantee any returns. Use North Star Metrics&apso;s services at your own risk</span></Link>
           </div>
       </div>
       </>
