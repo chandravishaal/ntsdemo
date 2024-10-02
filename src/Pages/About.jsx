@@ -9,6 +9,7 @@ import Platform from "../Components/AboutComponents/Platform";
 import CompanySection from "../Components/AboutComponents/CompanySection";
 import Certificate from "../Components/AboutComponents/Certificate";
 import Beneficial from "../Components/AboutComponents/Beneficial";
+import Partners from "../Components/AboutComponents/Partners";
 
 const About = () => {
   // Scroll to top when component mounts
@@ -24,6 +25,7 @@ const About = () => {
       <Certificate />
       <Platform />
       <Started />
+      <Partners/>
       <PressRoom />
       <TeamMemberCard />
       <Culture />
