@@ -4,7 +4,7 @@ import { FaArrowUp } from "react-icons/fa";
 import { gsap } from "gsap";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
-import TopBar from "../Components/TopBar";
+// import TopBar from "../Components/TopBar";
 
 const RootLayout = () => {
   const [showButton, setShowButton] = useState(false);
@@ -42,7 +42,7 @@ const RootLayout = () => {
 
   return (
     <>
-      <TopBar />
+      {/* <TopBar /> */}
       <Navbar />
       <Outlet />
 
