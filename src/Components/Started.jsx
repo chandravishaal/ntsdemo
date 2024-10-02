@@ -77,21 +77,21 @@ const Started = () => {
           <div className='bg-white w-[250px] h-[250px] lg:w-[350px] lg:h-[350px] rounded-full flex items-center justify-center mb-24 lg:mb-0 shadow-2xl relative'>
             <img src="https://ntsmetrics.com/img/nsm-logo-blue.png" className='lg:w-3/6 w-[100px]' alt="user options to buy or sell digital currencies" />
             <div className='absolute bg-white p-2 lg:w-[180px] lg:h-[180px] w-[130px] h-[130px] lg:-left-24 -left-14  rounded-full shadow-2xl flex flex-col items-center justify-center gap-3 animate-countup'>
-              <img src={icon11} className='w-12 lg:w-16' alt="" />
+              {/* <img src={icon11} className='w-12 lg:w-16' alt="" /> */}
               <p className="text-lg font-century-gothic font-bold text-black">
-                {isVisible && <CountUp end={10523684} duration={5} />}
+                {isVisible && <CountUp end={100000000} duration={5} formattingFn={(value) => `${Math.floor(value / 1000000)}M+`}/>}
               </p>
             </div>
             <div className='absolute bg-white p-5 lg:w-[180px] lg:h-[180px] w-[130px] h-[130px] -top-16 lg:-top-20  rounded-full shadow-2xl flex flex-col items-center justify-center gap-3 animate-countup'>
-              <img src={icon9} className='w-12 lg:w-16' alt="" />
+              {/* <img src={icon9} className='w-12 lg:w-16' alt="" /> */}
               <p className="text-lg font-century-gothic font-bold text-black">
-                {isVisible && <CountUp end={73554} duration={5} />}
+                {isVisible && <CountUp end={70000} duration={5} formattingFn={(value) => `${Math.floor(value / 1000)}K+`}/>}
               </p>
             </div>
             <div className='absolute bg-white p-5 lg:w-[180px] lg:h-[180px] w-[130px] h-[130px] lg:-right-24 -right-14  rounded-full shadow-2xl flex flex-col items-center justify-center gap-3 animate-countup'>
-              <img src={icon10} className='w-12 lg:w-16' alt="" />
+              {/* <img src={icon10} className='w-12 lg:w-16' alt="" /> */}
               <p className="text-lg font-century-gothic font-bold text-black">
-                {isVisible && <CountUp end={73554} duration={5} />}
+                {isVisible && <CountUp end={2000000} duration={5} formattingFn={(value) => `${Math.floor(value / 1000000)}M+`}/>}
               </p>
             </div>
           </div>
