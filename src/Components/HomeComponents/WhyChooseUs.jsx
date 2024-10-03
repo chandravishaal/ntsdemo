@@ -605,7 +605,7 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className='w-full h-auto lg:h-[45rem] relative whychooseSection-background flex flex-col mb-20 overflow-hidden'>
+    <section className='w-full h-auto lg:h-[45rem] relative whychooseSection-background flex flex-col pt-10 mb-20 overflow-hidden'>
       <div className='container mx-auto py-6'>
         <h1 className='text-3xl lg:text-4xl font-bold mb-4 text-center'>Why Choose Us?</h1>
         <h2 className='text-xl lg:text-2xl mb-8 text-center'>A Crypto platform has never been better than this</h2>
