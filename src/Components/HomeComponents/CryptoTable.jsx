@@ -14,6 +14,7 @@ import bnb from "../../assets/Images/HomeImages/BNB.png";
 import rippleIcon from "../../assets/Images/HomeImages/XRP.png";
 import { IoMdArrowDropup, IoMdInformationCircleOutline } from "react-icons/io";
 import { IoMdArrowDropdown } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 
 // Example data
 const cryptocurrencies = [
@@ -275,6 +276,7 @@ const CryptoTable = () => {
     marketCap: true,
     last7days: true,
   });
+  const navigate = useNavigate();
 
   useEffect(() => {
     const filteredData = cryptocurrencies.filter((crypto) =>
@@ -364,6 +366,12 @@ const CryptoTable = () => {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
+        <button
+          onClick={() => navigate("/prices")}
+          className="bg-gray-100 border-gray-300 py-2 px-6 rounded-md hover:bg-gray-300 mr-4 font-montserrat"
+        >
+          <span> All Prices</span>
+        </button>
       </div>
 
       <div className="responsiveTable">
