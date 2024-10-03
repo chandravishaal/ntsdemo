@@ -40,19 +40,24 @@ import {
             <div className="container mx-auto max-w-[1200px] flex flex-col md:flex-row gap-6 py-6 px-4 md:py-10 lg:px-0">
               {/* First flex container for the social section */}
               <div className="flex-[3] text-gray-500 font-semibold mb-6 md:mb-0">
+               
+                <div className="flex space-x-3 md:space-x-4 my-1 lg:mb-7 mb-5">
                 <img
                   src="https://ntsmetrics.com/img/nsm-logo-blue.png"
-                  className="w-32 mb-5"
+                  className="w-32 mb-3"
                   alt=""
                 />
-                <div className="flex space-x-3 md:space-x-4 my-3 lg:mb-7 mb-5">
-                  <FaFacebookF className="text-lg transition-colors duration-300 lg:hover:text-primaryCyan md:text-xl" />
+                
+                <div className="flex flex-auto items-center space-x-3">
+                <FaFacebookF className="text-lg transition-colors duration-300 lg:hover:text-primaryCyan md:text-xl" />
                   <FaXTwitter className="text-lg transition-colors duration-300 lg:hover:text-primaryCyan md:text-xl" />
                   <FaLinkedinIn className="text-lg transition-colors duration-300 lg:hover:text-primaryCyan md:text-xl" />
                   <FaInstagram className="text-lg transition-colors duration-300 lg:hover:text-primaryCyan md:text-xl" />
+                </div>
+                
 
                 </div>
-                <p className="text-sm transition-colors duration-300 mb-2 lg:hover:text-primaryCyan">
+                <p className="text-sm transition-colors duration-300 -my-3 mb-2 lg:hover:text-primaryCyan">
                   <FaLocationDot className="inline mr-2" />
                   7th Floor, Yamuna Building, 86, Golaghata Rd, Dakshindari,
                   Kolkata - 700048
