@@ -358,9 +358,9 @@ const CompanySection = () => {
         <div className="relative py-16 px-5">
             {/* Circular Background with Blur */}
             <div className="absolute inset-0 flex justify-center items-center">
-            <div className="circlePosition w-[590px] h-[400px] bg-primaryCyan/40 rounded-lg absolute z-1 top-[60%] left-[40%] translate-x-[-50%] translate-y-[-50%] blur-[150px]"></div>
+            <div className="circlePosition w-[590px] h-[400px] bg-primaryCyan/40 rounded-lg absolute z-1 top-[60%] left-[20%] translate-x-[-50%] translate-y-[-50%] blur-[150px]"></div>
             </div>
-            {/* Content */}
+            
             <div className="relative z-10">
                 <div className="flex md:flex-row space-x-1 md:space-x-4 justify-center">
                     {['Mission', 'Vision', 'Values'].map(section => renderButton(section))}
