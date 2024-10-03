@@ -5,7 +5,7 @@ const Partners = () => {
     <div className="relative  px-5">
       {/* Circular Background with Blur */}
       <div className="absolute inset-0 flex justify-center items-center">
-        <div className="circlePosition w-[590px] h-[400px] bg-primaryCyan/40 rounded-lg absolute z-1 top-[50%] left-[50%] translate-x-[-40%] translate-y-[-40%] blur-[160px]"></div>
+        <div className="circlePosition w-[590px] bg-primaryCyan/40 rounded-lg absolute z-1 top-[50%] left-[50%] translate-x-[-40%] translate-y-[-40%] blur-[160px]"></div>
       </div>
 
      
