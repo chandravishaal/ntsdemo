@@ -8,16 +8,88 @@ import SecondaryButton from "../../Common/SecondaryButton";
 import gsap from "gsap"; // Import GSAP
 import usd from "../../assets/Images/HomeImages/dollar.png";
 import inr from "../../assets/Images/HomeImages/inr.png";
+import { AreaChart, XAxis, YAxis, ResponsiveContainer, Area } from "recharts";
+import {
+  IoMdArrowDropdown,
+  IoMdArrowDropup,
+  IoMdInformationCircleOutline,
+} from "react-icons/io";
 
-const CoinCards = ({ image, name, amount, data, isPositive, percentage }) => {
+const CoinCards = ({ image, name, amount, last7days, isPositive, percentage }) => {
   return (
-    <div className="bg-white border border-gray-400 py-5 px-4 w-full rounded-3xl flex items-center justify-between">
+    <div className="bg-white border border-gray-400 py-5 px-4 w-full rounded-3xl flex items-center justify-between gap-7">
       <div className="border border-gray-500 p-1.5 rounded-full">
-        <img src={image} className="w-10 h-10" alt="" />
+        <img src={image} className="w-10 h-10" alt="Crypto coin" />
+      </div>
+
+      <div className="flex flex-col items-start justify-between">
+          <h1 className="text-base font-semibold">{name}</h1>
+          <h1 className="text-gray-500 whitespace-nowrap text-sm font-semibold">&#x20b9; {amount}</h1>
+      </div>
+
+      <div>
+        {renderSparkline(last7days)}
+      </div>
+
+      <div>
+        { percentage > 0 ? (
+          <h1 className="text-[#00C49F] font-semibold">{percentage}%</h1>
+        ) : ( <h1 className="text-[#FF0000] font-semibold">{percentage}%</h1> )}
+      </div>
+
+      <div>
+        <PrimaryButton title="Trade" />
       </div>
     </div>
   )
 }
+
+const getTrendColor = (data) => {
+  const firstPrice = data[0];
+  const lastPrice = data[data.length - 1];
+  return lastPrice > firstPrice ? "#00C49F" : "#FF0000"; // Green for upward, Red for downward
+};
+
+const renderSparkline = (data) => {
+  if (!data || data.length === 0) {
+    return <div>No data available</div>;
+  }
+
+  const sparklineData = data.map((price, index) => ({ price, index }));
+  const trendColor = getTrendColor(data);
+
+  return (
+    <div className="flex justify-start items-center h-full w-full">
+      <ResponsiveContainer width={120} height={60}>
+        <AreaChart data={sparklineData}>
+          <defs>
+            <linearGradient
+              id={`colorTrend-${trendColor}`}
+              x1="0"
+              y1="0"
+              x2="0"
+              y2="1"
+            >
+              <stop offset="0%" stopColor={trendColor} stopOpacity={0.2} />
+              <stop offset="100%" stopColor={trendColor} stopOpacity={0.01} />
+            </linearGradient>
+          </defs>
+          <Area
+            type="monotone"
+            dataKey="price"
+            stroke={trendColor}
+            fill={`url(#colorTrend-${trendColor})`}
+            strokeWidth={1.5}
+            dot={false}
+          />
+          <XAxis hide />
+          <YAxis hide />
+          {/* <Tooltip /> */}
+        </AreaChart>
+      </ResponsiveContainer>
+    </div>
+  );
+};
 
 const Explore = () => {
   const [activeTab, setActiveTab] = useState("send");
@@ -105,6 +177,7 @@ const Explore = () => {
       amount: 534454,
       isPositive: true,
       percentage: 2.5,
+
     },
     {
       name: "Ethereum",
@@ -278,9 +351,9 @@ const Explore = () => {
 
         <div className="flex flex-col lg:flex-row items-center gap-5 lg:gap-10 justify-between container w-full mx-auto">
           {/* Left-side content */}
-          <div className="flex-1 flex flex-col gap-5 w-full items-center mb-10">
+          <div className="flex-1 flex flex-col gap-5 w-full items-center mb-20">
             <div className="flex items-center gap-5 mb-5 mt-7">
-              <PrimaryButton title="Tradable" />
+              <PrimaryButton title="Exchange" />
               <SecondaryButton title="Top Gainers" />
             </div>
 
@@ -458,7 +531,7 @@ const Explore = () => {
                       <h1>1ETH = 0.063 BTC</h1>
                     </div>
                     <Link to="/exchange" className="order-3">
-                      <PrimaryButton title="Exchange" />
+                      <PrimaryButton title="Swap" />
                     </Link>
                   </div>
                   {/* Phone image */}
