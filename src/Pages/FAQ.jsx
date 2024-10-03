@@ -254,68 +254,75 @@ const FAQ = () => {
                     <a href="#" className="text-blue-600">FAQs</a>.
                 </p>
 
-                {/* Render FAQ categories as an accordion */}
-                {faqData.map((category) => (
-                    <div key={category.category} className="mb-8">
-                        <button
-                            className="text-2xl font-bold mb-4 w-full text-left focus:outline-none flex justify-between items-center"
-                            onClick={() => toggleCategory(category.category)}
-                        >
-                            {/* Add suitable icons for each category */}
-                            <span className="flex items-center">
-                                {category.category === 'General FAQs' && <i className="ri-question-line mr-2"></i>}
-                                {category.category === 'OTC Platform FAQs' && <i className="ri-exchange-dollar-line mr-2"></i>}
-                                {category.category === 'Trading Platform FAQs' && <i className="ri-bar-chart-line mr-2"></i>}
-                                {category.category === 'Deposits and Withdrawals FAQs' && <i className="ri-money-dollar-circle-line mr-2"></i>}
-                                {category.category}
-                            </span>
+             {/* Render FAQ categories as an accordion */}
+{faqData.map((category) => (
+    <div key={category.category} className="mb-8">
+        <button
+            className="text-2xl font-bold mb-4 w-full text-left focus:outline-none flex justify-between items-center"
+            onClick={() => toggleCategory(category.category)}
+        >
+            {/* Add suitable icons for each category */}
+            <span className="flex items-center">
+                {category.category === 'General FAQs' && <i className="ri-question-line mr-2"></i>}
+                {category.category === 'OTC Platform FAQs' && <i className="ri-exchange-dollar-line mr-2"></i>}
+                {category.category === 'Trading Platform FAQs' && <i className="ri-bar-chart-line mr-2"></i>}
+                {category.category === 'Deposits and Withdrawals FAQs' && <i className="ri-money-dollar-circle-line mr-2"></i>}
+                {category.category}
+            </span>
 
-                            {/* Expand/collapse icon aligned to the right */}
-                            <span>
-                                {openCategory === category.category ? (
-                                    <i className="ri-arrow-up-s-line"></i>
-                                ) : (
-                                    <i className="ri-arrow-down-s-line"></i>
-                                )}
-                            </span>
-                        </button>
+            {/* Expand/collapse icon aligned to the right */}
+            <span>
+                {openCategory === category.category ? (
+                    <i className="ri-arrow-up-s-line"></i>
+                ) : (
+                    <i className="ri-arrow-down-s-line"></i>
+                )}
+            </span>
+        </button>
 
-                        {openCategory === category.category && (
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                {category.items.slice(0, visibleCount).map((faq, index) => {
+        {/* Accordion content with smooth transitions */}
+        <div
+            className={`overflow-hidden transition-all duration-500 ease-in-out transform ${openCategory === category.category ? 'lg:max-h-[1000px] scale-y-100 opacity-100' : 'max-h-0 scale-y-0 opacity-0'}`}
+        >
+            {openCategory === category.category && (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {category.items.slice(0, visibleCount).map((faq, index) => {
+                        const isLast = index === visibleCount - 1 && visibleCount !== category.items.length;
+                        const isSecondLast = index === visibleCount - 2 && visibleCount !== category.items.length;
 
-                                    const isLast = index === visibleCount - 1 && visibleCount !== category.items.length;
-                                    const isSecondLast = index === visibleCount - 2 && visibleCount !== category.items.length;
-                                    return (
-                                        <FAQItem
-                                            key={faq.id}
-                                            icon={faq.icon}
-                                            question={faq.question}
-                                            answer={faq.answer}
-                                            className={`${isLast
-                                                ? 'lg:bg-clip-text lg:text-transparent lg:bg-gradient-to-b lg:from-stone-900 lg:via-stone-100 lg:to-transparent lg:opacity-55'
-                                                : isSecondLast
-                                                    ? 'lg:bg-clip-text lg:text-transparent lg:bg-gradient-to-b lg:from-stone-900 lg:via-stone-100 lg:to-transparent lg:opacity-55'
-                                                    : 'text-black'}`}
-                                        />
-                                    )
-                                })}
-                            </div>
-                        )}
-                        {openCategory === category.category && (
-                            <div className="flex justify-center">
-                                {visibleCount < category.items.length && (
-                                    <button
-                                        className="border border-gray-300 rounded-full px-4 text-sm w-full md:w-auto -m-5 max-md:py-2 max-md:my-2"
-                                        onClick={() => handleLoadMore(category.items.length)}
-                                    >
-                                        Load more
-                                    </button>
-                                )}
-                            </div>
-                        )}
-                    </div>
-                ))}
+                        return (
+                            <FAQItem
+                                key={faq.id}
+                                icon={faq.icon}
+                                question={faq.question}
+                                answer={faq.answer}
+                                className={`${isLast
+                                    ? 'lg:bg-clip-text lg:text-transparent lg:bg-gradient-to-b lg:from-stone-900 lg:via-stone-100 lg:to-transparent lg:opacity-55'
+                                    : isSecondLast
+                                        ? 'lg:bg-clip-text lg:text-transparent lg:bg-gradient-to-b lg:from-stone-900 lg:via-stone-100 lg:to-transparent lg:opacity-55'
+                                        : 'text-black'}`}
+                            />
+                        );
+                    })}
+                </div>
+            )}
+        </div>
+
+        {/* "Load More" button */}
+        {openCategory === category.category && (
+            <div className="flex justify-center">
+                {visibleCount < category.items.length && (
+                    <button
+                        className="border border-gray-300 rounded-full px-4 text-sm w-full md:w-auto -m-5 max-md:py-2 max-md:my-2 transition-opacity duration-500 ease-in-out hover:opacity-80"
+                        onClick={() => handleLoadMore(category.items.length)}
+                    >
+                        Load more
+                    </button>
+                )}
+            </div>
+        )}
+    </div>
+))}
 
 
 
@@ -346,7 +353,7 @@ const FAQ = () => {
 const FAQItem = ({ icon, question, answer, className }) => {
     return (
         <div className={`rounded-lg p-4 flex flex-col md:flex-row items-start ${className}`}>
-            <div className="text-2xl mr-4 border p-2 rounded-lg">
+            <div className="text-primaryCyan text-2xl mr-4 border p-2 rounded-lg bg-cyan-50">
                 {icon}
             </div>
             <div className="flex-grow">
