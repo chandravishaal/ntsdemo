@@ -630,10 +630,10 @@ const WhyChooseUs = () => {
                   gsap.to('.icon3-text', { x: -200, opacity: 0, duration: 0.5, ease: 'power2.in' });
                 }}
               >
-                <div className=' bg-white rounded-xl flex justify-center items-center w-16 lg:w-20 h-12 lg:h-16'>
-                  <img src={icon3} alt='Safe & Secure' />
+                <div className='shadow-lg shadow-cyan-500/50 bg-white rounded-xl flex justify-center items-center w-16 lg:w-20 h-12 lg:h-16'>
+                  <img src={icon3} alt='Safe & Secure' className='drop-shadow-2xl'/>
                 </div>
-                <p className='text-center text-base lg:text-xl'>Safe & Secure</p>
+                <p className='text-center text-base lg:text-xl '>Safe & Secure</p>
                 
               </div>
 
@@ -648,8 +648,8 @@ const WhyChooseUs = () => {
                   gsap.to('.icon1-text', { x: -200, opacity: 0, duration: 0.5, ease: 'power2.in' });
                 }}
               >
-                <div className=' bg-white rounded-xl flex justify-center items-center w-16 lg:w-20 h-12 lg:h-16'>
-                  <img src={icon2} alt='Easy To Start' />
+                <div className=' shadow-lg shadow-cyan-500/50 bg-white rounded-xl flex justify-center items-center w-16 lg:w-20 h-12 lg:h-16'>
+                  <img src={icon2} alt='Easy To Start' className='drop-shadow-2xl'/>
                 </div>
                 <p className='text-center text-base lg:text-xl'>Easy To Start</p>
               
@@ -666,7 +666,7 @@ const WhyChooseUs = () => {
                   gsap.to('.icon2-text', { x: -200, opacity: 0, duration: 0.5, ease: 'power2.in' });
                 }}
               >
-                <div className=' bg-white rounded-xl flex justify-center items-center w-16 lg:w-20 h-12 lg:h-16'>
+                <div className=' shadow-lg shadow-cyan-500/50 bg-white rounded-xl flex justify-center items-center w-16 lg:w-20 h-12 lg:h-16'>
                   <img src={icon1} alt='24/7 Support' />
                 </div>
                 <p className='text-center text-base lg:text-xl'>Convenient Payment Option</p>
@@ -693,8 +693,8 @@ const WhyChooseUs = () => {
                   gsap.to('.icon4-text', { x: 200, opacity: 0, duration: 0.5, ease: 'power2.in' });
                 }}
               >
-                <div className=' bg-white rounded-xl flex justify-center items-center w-16 lg:w-20 h-12 lg:h-16'>
-                  <img src={icon4} alt='Easy To Start' />
+                <div className=' shadow-lg shadow-cyan-500/50 bg-white rounded-xl flex justify-center items-center w-16 lg:w-20 h-12 lg:h-16'>
+                  <img src={icon4} alt='Easy To Start'className='drop-shadow-2xl' />
                 </div>
                 <p className='text-center text-base lg:text-xl'>Instant Order <br /> Processing </p>
                 
@@ -711,8 +711,8 @@ const WhyChooseUs = () => {
                   gsap.to('.icon5-text', { x: 200, opacity: 0, duration: 0.5, ease: 'power2.in' });
                 }}
               >
-                <div className=' bg-white rounded-xl flex justify-center items-center w-16 lg:w-20 h-12 lg:h-16'>
-                  <img src={icon5} alt='Safe & Secure' />
+                <div className=' shadow-lg shadow-cyan-500/50 bg-white rounded-xl flex justify-center items-center w-16 lg:w-20 h-12 lg:h-16'>
+                  <img src={icon5} alt='Safe & Secure'className='drop-shadow-2xl' />
                 </div>
                 <p className='text-center text-base lg:text-xl'>Volatility Protection</p>
                
@@ -729,8 +729,8 @@ const WhyChooseUs = () => {
                   gsap.to('.icon6-text', { x: 200, opacity: 0, duration: 0.5, ease: 'power2.in' });
                 }}
               >
-                <div className=' bg-white rounded-xl flex justify-center items-center w-16 lg:w-20 h-12 lg:h-16'>
-                  <img src={icon6} alt='24/7 Support' />
+                <div className=' shadow-lg shadow-cyan-500/50 bg-white rounded-xl flex justify-center items-center w-16 lg:w-20 h-12 lg:h-16'>
+                  <img src={icon6} alt='24/7 Support'className='drop-shadow-2xl' />
                 </div>
                 <p className='text-center text-base lg:text-xl'>24/7 Support</p>
                
