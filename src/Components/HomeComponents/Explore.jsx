@@ -17,28 +17,30 @@ import {
 
 const CoinCards = ({ image, name, amount, last7days, isPositive, percentage }) => {
   return (
-    <div className="bg-white border border-gray-400 py-5 px-4 w-full rounded-3xl flex items-center justify-between gap-7">
+    <div className="bg-white border border-gray-400 py-5 px-4 w-full rounded-3xl flex items-center justify-between lg:gap-7">
       <div className="border border-gray-500 p-1.5 rounded-full">
-        <img src={image} className="w-10 h-10" alt="Crypto coin" />
+        <img src={image} className="w-8 h-8" alt="Crypto coin" />
       </div>
 
       <div className="flex flex-col items-start justify-between">
-          <h1 className="text-base font-semibold">{name}</h1>
-          <h1 className="text-gray-500 whitespace-nowrap text-sm font-semibold">&#x20b9; {amount}</h1>
+          <h1 className="text-sm lg:text-base font-semibold">{name}</h1>
+          <h1 className="text-gray-500 text-sm lg:text-base  whitespace-nowrap font-semibold">&#x20b9; {amount}</h1>
       </div>
 
-      <div>
+      <div className="lg:block hidden">
         {renderSparkline(last7days)}
       </div>
 
       <div>
         { percentage > 0 ? (
-          <h1 className="text-[#00C49F] font-semibold">{percentage}%</h1>
-        ) : ( <h1 className="text-[#FF0000] font-semibold">{percentage}%</h1> )}
+          <h1 className="text-[#00C49F] text-sm lg:text-base  font-semibold">{percentage}%</h1>
+        ) : ( <h1 className="text-[#FF0000] text-sm lg:text-base  font-semibold">{percentage}%</h1> )}
       </div>
 
-      <div>
-        <PrimaryButton title="Trade" />
+      <div className="">
+      <button className="lg:px-6 lg:py-2.5 px-3 py-2 select-none button whitespace-nowrap text-center cursor-pointer lg:text-base text-sm font-semibold transition-all hover:bg-cyan-500 duration-200 outline-none text-black bg-primaryCyan rounded-[100px] shadow-[0_4px_#118baa] font-century-gothic">
+        Trade
+      </button>
       </div>
     </div>
   )
@@ -351,7 +353,7 @@ const Explore = () => {
 
         <div className="flex flex-col lg:flex-row items-center gap-5 lg:gap-10 justify-between container w-full mx-auto">
           {/* Left-side content */}
-          <div className="flex-1 flex flex-col gap-5 w-full items-center mb-20">
+          <div className="flex-1 flex flex-col gap-5 w-full items-center lg:mb-20 mb-8">
             <div className="flex items-center gap-5 mb-5 mt-7">
               <PrimaryButton title="Exchange" />
               <SecondaryButton title="Top Gainers" />

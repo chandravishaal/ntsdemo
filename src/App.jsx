@@ -40,7 +40,7 @@ const App = () => {
         <Route path="/otcdesk" element={<OtcDesk />} /> 
         <Route path="/blogs" element={<Blog />} />
         <Route path="/blogs/:id" element={<BlogInfo />} />
-        <Route path="/crypto-converter" element={<CryptoConverter />} />
+        {/* <Route path="/crypto-converter" element={<CryptoConverter />} /> */}
         <Route path="/cryptocurrency" element={<Cryptocurrency />} />
         <Route path="/crypto-converter" element={<CryptoConverter />} />
         <Route path="/coins/:coin" element={<Coin />} />
