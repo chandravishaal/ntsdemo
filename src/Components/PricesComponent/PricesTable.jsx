@@ -18,12 +18,9 @@ const coinsData = [
     change1h: "+0.2",
     change24h: "+1.5",
     change7d: "+3.2",
-    volume24h: "$25B",
-    marketCap: "$502B",
-    last7Days: [
-      59687.2287362136, 60156.1158868683, 68378.4871619503, 60581.3181829642,
-      61009.0632411036, 60584.8239788565, 56298.9850093879,
-    ],
+    volume24h: "$56,152,770,174",
+    marketCap: "$1,200,820,521,596",
+    last7Days: [2624.4769228944, 2615.1250638228, 2622.59502825109, 2625.87384268626, 2603.25510165437, 2596.20571829867, 2576.48934428339, 2583.96511822561, 2572.66800703552, 2579.69294727623, 2579.90179147906, 2569.55771212529, 2585.2074714844, 2570.31438469695, 2593.96982872012, 2597.80092588904, 2599.6743964398, 2597.44043733009, 2618.96194447727, 2615.23026298138, 2628.87468236878, 2614.4618600002, 2618.56677951101, 2623.84103685176, 2628.54544188816, 2630.76086611734, 2619.04685970718, 2618.92740811001, 2646.66860580813, 2654.64138470568, 2628.9766747654, 2654.26126373809, 2649.86901151999, 2630.99541273207, 2639.12304412838, 2631.71000738224, 2635.80868665369, 2637.99926465777, 2626.86465432924, 2616.58063400255, 2636.99040569772, 2645.0983831706, 2647.64305356399, 2658.46047253738, 2662.50984904726, 2666.52382751495, 2659.97779705988, 2645.48319248759, 2651.33728870788, 2657.50823557438, 2658.85021809214, 2687.48655747261, 2691.39301395085, 2710.19708133042, 2700.85511405467, 2699.28856578805, 2697.50600114219, 2693.82483043187, 2692.8866084099, 2705.41787203707, 2695.15463541862, 2694.80292062529, 2691.80526901343, 2700.66165361899, 2688.06507989299, 2693.42684001614, 2681.92621055184, 2679.42135561977, 2672.14329885496, 2666.90617603285, 2668.20591460107, 2674.00335546731, 2670.85998971346, 2656.52102626519, 2666.02982470906, 2672.65345204062, 2669.77423658506, 2663.39353336219, 2676.39592602689, 2674.33432628924, 2677.0888019087, 2674.89935279151, 2668.00223788947, 2675.6386088837, 2674.68061018262, 2670.7673577659, 2672.63414879314, 2672.72121669982, 2673.18263315827, 2669.2403733656, 2665.64319977318, 2650.05520850592, 2638.61277347975, 2644.19754361634, 2645.66459504246, 2645.08457787012, 2652.28422608583, 2647.09100353997, 2654.87303017382, 2650.94364998014, 2663.8623754499, 2666.82391975463, 2660.20691333015, 2662.6999138232, 2665.62993780251, 2660.03509218766, 2663.8571925549, 2652.19496644098, 2656.35893083989, 2646.15741357159, 2614.09024407404, 2607.77149771774, 2625.56949174129, 2626.83458184472, 2636.02523138157, 2628.25363942689, 2633.57020106747, 2640.3995046369, 2609.30607784967, 2603.80114485234, 2629.0090889735, 2631.50615046237, 2619.5560417913, 2615.46518003759, 2603.30863349649, 2602.44962322192, 2605.69175899828, 2587.05150146809, 2595.60832818438, 2611.12988506979, 2609.54555639434, 2591.97309433587, 2600.74506973769, 2619.5759504729, 2613.45004760193, 2616.49749351418, 2627.77849449487, 2637.77087288658, 2639.22459479319, 2645.46199403179, 2646.78550094226, 2643.26753616428, 2634.10837351656, 2636.54723071012, 2626.91362985175, 2621.71710041719, 2583.57301036874, 2547.41728159765, 2525.28584313717, 2495.56346497052, 2504.45723159435, 2498.38946820164, 2486.68600373441, 2449.38614378846, 2458.59393693969, 2451.64891608201, 2446.09348389, 2460.42940188988, 2480.38856120828, 2496.35635877285, 2490.24362428143, 2487.4142319574, 2478.09120553976, 2485.46699480984, 2477.36919795926, 2475.60652458882, 2453.46781509184, 2449.54088463145],
     tradable: true,
     imageUrl: <FaBitcoin />,
   },
@@ -397,7 +394,7 @@ const PriceTable = () => {
     const trendColor = getTrendColor(data);
 
     return (
-      <div className="flex justify-center items-center h-full">
+      <div className="flex justify-end items-center h-full w-full">
         <ResponsiveContainer width={120} height={60}>
           <AreaChart data={sparklineData}>
             <defs>
@@ -417,7 +414,7 @@ const PriceTable = () => {
               dataKey="price"
               stroke={trendColor}
               fill={`url(#colorTrend-${trendColor})`}
-              strokeWidth={0.7}
+              strokeWidth={0.6}
               dot={false}
             />
             <XAxis hide />
@@ -467,7 +464,7 @@ const PriceTable = () => {
     <div className="container mx-auto mt-20 mb-10">
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-3xl font-montserrat  font-bold">
-          Top Cryptocurrency Prices and Market Cap
+          Explore Crypto Prices
         </h1>
       </div>
       <div className="flex items-center justify-between mb-4">
@@ -488,26 +485,26 @@ const PriceTable = () => {
       </div>
 
       <div className="responsiveTable">
-        <div className="min-w-full bg-white border rounded-lg shadow-xl overflow-y-auto">
+        <div className="min-w-full bg-white rounded-lg overflow-y-auto">
           <table className="min-w-full">
             <thead className="bg-gray-50 rounded-xl text-sm">
               <tr className="items-center">
-                <th className="px-2 py-2 border-b text-right">#</th>
+                <th className="px-2 py-2 border-b text-xs text-right">#</th>
                 {visibleColumns.name && (
-                  <th className="px-8 py-2 border-b text-left font-montserrat ">
+                  <th className="px-8 text-xs py-2 border-b text-left font-montserrat ">
                     Coin
                   </th>
                 )}
                 {visibleColumns.price && (
-                  <th className="px-4 py-2 border-b text-center font-montserrat ">
+                  <th className="px-4 text-xs py-2 border-b text-right font-montserrat pr-0">
                     Price
                   </th>
                 )}
                 {visibleColumns.change1h && (
-                  <th className="group px-4 py-2 border-b text-center whitespace-nowrap lg:whitespace-normal font-montserrat">
-                    <span className="flex items-center justify-center flex-row">
+                  <th className="group px-4 py-2 pr-0 border-b text-center whitespace-nowrap lg:whitespace-normal font-montserrat">
+                    <span className="flex text-xs items-center gap-1 justify-end flex-row">
                       <span
-                        className={`mr-1 transition-opacity opacity-0 group-hover:opacity-100`}
+                        className={`transition-opacity opacity-0 group-hover:opacity-100`}
                         onClick={() => sortData("change1h")}
                       >
                         {sortDirection.change1h === "asc" ? (
@@ -522,10 +519,10 @@ const PriceTable = () => {
                   </th>
                 )}
                 {visibleColumns.change24h && (
-                  <th className="group px-4 py-2 border-b text-center whitespace-nowrap lg:whitespace-normal font-montserrat">
-                    <span className="flex items-center justify-center flex-row">
+                  <th className="group px-4 py-2 pr-0 border-b text-center whitespace-nowrap lg:whitespace-normal font-montserrat">
+                    <span className="flex text-xs items-center gap-1 justify-end flex-row">
                       <span
-                        className="mr-1 transition-opacity opacity-0 group-hover:opacity-100"
+                        className="transition-opacity opacity-0 group-hover:opacity-100"
                         onClick={() => sortData("change24h")}
                       >
                         {sortDirection.change24h === "asc" ? (
@@ -540,10 +537,10 @@ const PriceTable = () => {
                   </th>
                 )}
                 {visibleColumns.change7d && (
-                  <th className="group px-4 py-2 border-b text-center whitespace-nowrap lg:whitespace-normal font-montserrat">
-                    <span className="flex items-center justify-center flex-row">
+                  <th className="group px-4 py-2 pr-0 border-b text-center whitespace-nowrap lg:whitespace-normal font-montserrat">
+                    <span className="flex text-xs gap-1 items-center justify-end flex-row">
                       <span
-                        className="mr-1 transition-opacity opacity-0 group-hover:opacity-100"
+                        className="transition-opacity opacity-0 group-hover:opacity-100"
                         onClick={() => sortData("change7d")}
                       >
                         {sortDirection.change7d === "asc" ? (
@@ -558,10 +555,10 @@ const PriceTable = () => {
                   </th>
                 )}
                 {visibleColumns.volume24h && (
-                  <th className="group px-2 py-2 border-b text-center f whitespace-nowrap lg:whitespace-normal cursor-pointer">
-                    <span className="flex items-center justify-center flex-row">
+                  <th className="group px-2 py-2 pr-0 border-b text-center whitespace-nowrap lg:whitespace-normal cursor-pointer">
+                    <span className="flex text-xs gap-1 items-center justify-end flex-row">
                       <span
-                        className="mr-1 transition-opacity opacity-0 group-hover:opacity-100"
+                        className="transition-opacity opacity-0 group-hover:opacity-100"
                         onClick={() => sortData("volume24h")}
                       >
                         {sortDirection.volume24h === "asc" ? (
@@ -570,16 +567,16 @@ const PriceTable = () => {
                           <IoMdArrowDropdown />
                         )}
                       </span>
-                      Volume (24h)
+                      24 Volume
                       <InfoTooltip text="The total value of the currency that has been traded in the last 24 hours." />
                     </span>
                   </th>
                 )}
                 {visibleColumns.marketCap && (
-                  <th className="group py-2 cursor-pointer whitespace-nowrap lg:whitespace-normal border-b justify-center">
-                    <span className="flex items-center justify-center flex-row">
+                  <th className="group py-2 cursor-pointer whitespace-nowrap lg:whitespace-normal border-b justify-end">
+                    <span className="flex text-xs items-center gap-1 justify-end flex-row">
                       <span
-                        className="mr-1 transition-opacity opacity-0 group-hover:opacity-100"
+                        className="transition-opacity opacity-0 group-hover:opacity-100"
                         onClick={() => sortData("marketCap")}
                       >
                         {sortDirection.marketCap === "asc" ? (
@@ -595,9 +592,13 @@ const PriceTable = () => {
                 )}
 
                 {visibleColumns.last7Days && (
-                  <th className="px-4 py-2 border-b text-center font-montserrat whitespace-nowrap lg:whitespace-normal">
-                    Last 7 Days
-                    <InfoTooltip text="This shows a sparkline graph of the last 7 days of the currency's value." />
+                  <th className="px-4 py-2 pr-0 w-full flex items-center gap-1 text-xs border-b justify-end whitespace-nowrap lg:whitespace-normal">
+                    <div className="flex items-center gap-2">
+                      {" "}
+                      {/* Added gap here */}
+                      <span className="text-xs">Last 7 Days</span>
+                      <InfoTooltip text="This shows a sparkline graph of the last 7 days of the currency's value." />
+                    </div>
                   </th>
                 )}
               </tr>
@@ -606,13 +607,15 @@ const PriceTable = () => {
               {sortedData.map((crypto, index) => (
                 <tr key={index} className="bg-white hover:bg-gray-50">
                   <td className="px-2 py-4 border-b text-right">
-                    <div className="flex justify-between items-center pl-2">
+                    <div className="flex justify-end items-center pl-2">
                       <CiStar />
-                      {index + 1}
+                      <span className="text-xs">
+                        &nbsp;{index + 1}
+                      </span>
                     </div>
                   </td>
                   {visibleColumns.name && (
-                    <td className=" px-8 py-4 border-b text-start">
+                    <td className=" px-8 py-4 border-b text-start w-[200px]">
                       <div className="flex items-center justify-between">
                         {/* <img
                           src={crypto.imageUrl}
@@ -621,10 +624,11 @@ const PriceTable = () => {
                         /> */}
                         {/* {crypto.imageUrl} */}
                         <span>
-                          {crypto.name} ({crypto.symbol})
+                          <span className="font-semibold text-sm">{crypto.name}</span>{" "}
+                          <span className="text-xs text-gray-600">{crypto.symbol}</span>
                         </span>
                         {crypto.tradable && (
-                          <span className="cursor-pointer px-1.5 text-xxs font-medium text-inline border border-green-500 text-primary-500 rounded-md text-center text-green-500 mr-1">
+                          <span className="cursor-pointer px-1.5 text-xs font-medium text-inline border border-green-500 text-primary-500 rounded-md text-center text-green-500 mr-1">
                             Buy
                           </span>
                         )}
@@ -632,17 +636,17 @@ const PriceTable = () => {
                     </td>
                   )}
                   {visibleColumns.price && (
-                    <td className="px-4 py-4 border-b text-center">
+                    <td className="px-4 pr-0 py-4 border-b text-sm text-right">
                       {crypto.price.toLocaleString("en-US")}
                     </td>
                   )}
                   {visibleColumns.change1h && (
                     <td
-                      className={`border-b text-center px-8 py-4 ${
+                      className={`border-b text-sm text-right px-8 py-4 pr-0 ${
                         crypto.change1h < 0 ? "text-red-500" : "text-green-500"
                       }`}
                     >
-                      <div className="flex justify-center items-center">
+                      <div className="flex font-semibold justify-end items-center">
                         {crypto.change1h < 0 && <IoMdArrowDropdown />}
                         {crypto.change1h > 0 && <IoMdArrowDropup />}
                         {Math.abs(crypto.change1h)}%
@@ -651,11 +655,11 @@ const PriceTable = () => {
                   )}
                   {visibleColumns.change24h && (
                     <td
-                      className={`border-b text-center px-8 py-4 ${
+                      className={`border-b text-sm text-right px-8 py-4 pr-0 ${
                         crypto.change24h < 0 ? "text-red-500" : "text-green-500"
                       }`}
                     >
-                      <div className="flex justify-center items-center">
+                      <div className="flex justify-end font-semibold items-center">
                         {crypto.change24h < 0 && <IoMdArrowDropdown />}
                         {crypto.change24h > 0 && <IoMdArrowDropup />}
                         {Math.abs(crypto.change24h)}%
@@ -664,11 +668,11 @@ const PriceTable = () => {
                   )}
                   {visibleColumns.change7d && (
                     <td
-                      className={`border-b text-center px-8 py-4 ${
+                      className={`border-b text-sm text-right px-8 py-4 pr-0 ${
                         crypto.change7d < 0 ? "text-red-500" : "text-green-500"
                       }`}
                     >
-                      <div className="flex justify-center items-center">
+                      <div className="flex justify-end font-semibold items-center">
                         {crypto.change7d < 0 && <IoMdArrowDropdown />}
                         {crypto.change7d > 0 && <IoMdArrowDropup />}
                         {Math.abs(crypto.change7d)}%
@@ -676,17 +680,17 @@ const PriceTable = () => {
                     </td>
                   )}
                   {visibleColumns.volume24h && (
-                    <td className="border-b text-center px-4 py-4">
+                    <td className="border-b text-sm text-right px-4 py-4 pr-0">
                       {crypto.volume24h}
                     </td>
                   )}
                   {visibleColumns.marketCap && (
-                    <td className="border-b text-center px-4 py-4">
+                    <td className="border-b text-sm text-right px-4 py-4 pr-0">
                       {crypto.marketCap}
                     </td>
                   )}
                   {visibleColumns.last7Days && (
-                    <td className="border-b center px-4 py-4">
+                    <td className="border-b text-right px-4 py-4 pr-0">
                       {renderSparkline(crypto.last7Days)}
                     </td>
                   )}
