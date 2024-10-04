@@ -2,13 +2,12 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { useEffect, useMemo, useState } from "react";
 import { loadSlim } from "@tsparticles/slim"; 
 
-
 const ParticlesComponent = (props) => {
   const [init, setInit] = useState(false);
+
   useEffect(() => {
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
-      
     }).then(() => {
       setInit(true);
     });
@@ -28,7 +27,7 @@ const ParticlesComponent = (props) => {
           value: "#16d5ff",
         },
       },
-      fpsLimit: 120,
+      fpsLimit: 60, // Reduced to 60 for better performance
       interactivity: {
         events: {
           onClick: {
@@ -37,7 +36,7 @@ const ParticlesComponent = (props) => {
           },
           onHover: {
             enable: true,
-            mode: "grab",
+            mode: "repulse",
           },
         },
         modes: {
@@ -45,8 +44,8 @@ const ParticlesComponent = (props) => {
             distance: 200,
             duration: 15,
           },
-          grab: {
-            distance: 150,
+          repulse: {
+            distance: 100,
           },
         },
       },
@@ -56,7 +55,7 @@ const ParticlesComponent = (props) => {
         },
         links: {
           color: "#FFFFFF",
-          distance: 150,
+          distance: 100, // Reduced distance for links
           enable: true,
           opacity: 0.3,
           width: 1,
@@ -67,18 +66,18 @@ const ParticlesComponent = (props) => {
           outModes: {
             default: "bounce",
           },
-          random: true,
-          speed: 4,
+          random: false, // Set to false for smoother movement
+          speed: 2, // Reduced speed to 2
           straight: false,
         },
         number: {
           density: {
             enable: true,
           },
-          value: 150,
+          value: 80, // Reduced to 80 particles for less load
         },
         opacity: {
-          value: 1.0,
+          value: 0.5, // Reduced opacity to reduce rendering load
         },
         shape: {
           type: "circle",
@@ -87,12 +86,16 @@ const ParticlesComponent = (props) => {
           value: { min: 1, max: 3 },
         },
       },
-      detectRetina: true,
+      detectRetina: false, // Disable retina mode to reduce the load
     }),
     []
   );
 
-  return <Particles id={props?.id} init={particlesLoaded} options={options} />;
+  return (
+    <div className="">
+      <Particles id={props?.id} init={particlesLoaded} options={options} />
+    </div>
+  );
 };
 
 export default ParticlesComponent;

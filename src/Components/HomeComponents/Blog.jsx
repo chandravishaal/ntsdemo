@@ -362,7 +362,7 @@ const Blog = () => {
   };
 
   return (
-    <div ref={blogRef} className="container mx-auto py-20 px-5 lg:px-0">
+    <div ref={blogRef} className="container mx-auto py-20 px-5 lg:px-0 bg-white">
       <div
         id="heading"
         className="flex flex-col items-center gap-4 mb-10 px-5 text-center"
