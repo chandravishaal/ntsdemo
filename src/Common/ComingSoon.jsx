@@ -17,9 +17,6 @@ export default ComingSoon
 
 // import React, { useRef } from 'react';
 
-// import React, { useRef } from 'react';
-// import React, { useRef } from 'react';
-
 // const CircularBoxes = () => {
 //   const containerRef = useRef();
 //   const circlesRef = useRef([]);
