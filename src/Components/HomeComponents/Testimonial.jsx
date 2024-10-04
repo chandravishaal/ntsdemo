@@ -31,7 +31,9 @@ const EachTestimonial = () => {
 
 const Testimonial = () => {
   return (
-    <div className="h-screen flex flex-col items-center justify-center container mx-auto space-y-7">
+    <div className="bg-white">
+
+    <div className="flex bh-white flex-col py-20 items-center justify-center container mx-auto space-y-7">
 
       <div className="flex items-center gap-3 p-2 px-2 bg-black rounded-3xl">
         <div className="star p-2 bg-primaryCyan rounded-full">
@@ -61,6 +63,7 @@ const Testimonial = () => {
         <EachTestimonial />
         <EachTestimonial />
       </Marquee>
+    </div>
     </div>
   );
 };
