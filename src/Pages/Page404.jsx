@@ -10,10 +10,47 @@ import xrp from '../assets/Images/Page404/xrp.png'
 import ufo from '../assets/Images/Page404/ufo.png'
 import { Link } from "react-router-dom";
 import PrimaryButton from "../Common/PrimaryButton";
+import { useScramble } from "use-scramble";
+
 
 const Page404 = () => {
   const imageRef = useRef(null);
   const ufoRef = useRef(null); // Added reference for UFO
+
+  // // hook returns a ref
+
+  // const { ref: titleRef, replay: titleReplay } = useScramble({
+  //   text: "Oops! You've lost in space.",
+  //   range: [65, 125],
+  //   speed: 1, // Adjust this to slow down the effect
+  //   tick: 6,
+  //   step: 6,
+  //   scramble: 5,
+  //   seed: 2,
+  //   chance: 1,
+  //   overdrive: false,
+  //   overflow: false,
+  // });
+
+
+  // const { ref: textRef, replay: textReplay } = useScramble({
+  //   text: "We can't seem to find the page you are looking for.",
+  //   range: [65, 125],
+  //   speed: 0.5, // Adjust this to slow down the effect
+  //   tick: 6,
+  //   step: 6,
+  //   scramble: 5,
+  //   seed: 2,
+  //   chance: 1,
+  //   overdrive: false,
+  //   overflow: false,
+  // });
+
+  // // Combine replay functions to trigger both on hover
+  // const handleMouseOver = () => {
+  //   titleReplay();
+  //   textReplay();
+  // };
 
   useEffect(() => {
     const image = imageRef.current;
@@ -66,24 +103,24 @@ const Page404 = () => {
   return (
     <div className="flex justify-center items-center min-h-screen bg-white">
       <div className="container relative max-w-screen-xl mx-auto p-4">
-        
+
         {/* 404 Content */}
         <div className="text-start pl-0 pb-32">
           <h1 className="text-5xl font-semibold text-gray-800">Oops! <br />You&apos;ve lost in space.</h1>
-          <p className="text-black font-semibold text-xl mt-2">We can&apos;t seem to find the page you are looking for.</p>
+          <p  className="text-black font-semibold text-xl mt-2">We can&apos;t seem to find the page you are looking for.</p>
           <div className="mt-2">
-            <p className="text-gray-600 text-xl">Here are some useful links instead:</p>
+            <p className="text-gray-600 text-sm">Here are some useful links instead:</p>
             <div className="space-x-1 pr-24 ">
-              <Link to="/about" className="text-gray-600 hover:underline text-xl">About |</Link>
-              <Link to="/services" className="text-gray-600 hover:underline text-xl">Service |</Link>
-              <Link to="/feature" className="text-gray-600 hover:underline text-xl">Feature |</Link>
-              <Link to="/careers" className="text-gray-600 hover:underline text-xl">Careers |</Link>
+              <Link to="/about" className="text-gray-600 hover:underline hover:text-primaryCyan text-sm">About |</Link>
+              <Link to="/services" className="text-gray-600 hover:underline hover:text-primaryCyan text-sm">Service |</Link>
+              <Link to="/feature" className="text-gray-600 hover:underline hover:text-primaryCyan text-sm">Feature |</Link>
+              <Link to="/careers" className="text-gray-600 hover:underline hover:text-primaryCyan text-sm">Careers</Link>
             </div>
           </div>
-          <p className="text-gray-600 mt-2 text-xl">Not finding what you were looking for?<br /> Contact us at <a href="#" className="text-black font-semibold hover:underline">support@ntsmetrics</a></p>
+          <p className="text-gray-600 mt-2  text-sm">Not finding what you were looking for?<br /> Contact us at <a href="#" className="text-black font-semibold hover:text-primaryCyan hover:underline">support@ntsmetrics</a></p>
           <div className="mt-4 mb-8">
             <Link to="/">
-            <PrimaryButton title="Back to Home" />
+              <PrimaryButton title="Back to Home" />
             </Link>
           </div>
         </div>
@@ -114,7 +151,7 @@ const Page404 = () => {
             alt="UFO"
           />
         </div>
-        
+
         {/* ERROR 404 */}
         <div className="absolute bottom-16 mb-28 right-48">
           <img
@@ -136,3 +173,7 @@ const Page404 = () => {
 };
 
 export default Page404;
+
+
+
+
