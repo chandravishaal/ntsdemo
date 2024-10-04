@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { IoMdArrowUp } from "react-icons/io";
@@ -53,7 +53,7 @@ const MobileNavbar = () => {
   const [isSticky, setIsSticky] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [expandedAccordion, setExpandedAccordion] = useState(null); // Keep track of the expanded accordion
-
+  const navigate = useNavigate();
   useEffect(() => {
     const handleScroll = () => {
       setIsSticky(window.scrollY > 100);
@@ -66,12 +66,29 @@ const MobileNavbar = () => {
   const toggleAccordion = (index) => {
     setExpandedAccordion(expandedAccordion === index ? null : index);
   };
+  const handleStandaloneClick = (path) => {
+
+    setIsOpen(false);
+    setTimeout(() => {
+      navigate(path);
+    }, 0)
+
+  };
+  const handleAccordionNavigation = (path) => {
+    setIsOpen(false); 
+    setTimeout(() => {
+      setExpandedAccordion(null);  
+    }, 50);
+
+    setTimeout(() => {
+      navigate(path);
+    }, 0)  
+  };
 
   return (
     <nav
-      className={`bg-secondaryGray w-full z-50 transition-all duration-300 ${
-        isSticky ? "fixed top-0 shadow-md" : "relative"
-      }`}
+      className={`bg-secondaryGray w-full z-50 transition-all duration-300 ${isSticky ? "fixed top-0 shadow-md" : "relative"
+        }`}
       aria-label="Main Navigation"
     >
       <div className="mx-auto container md:px-10 lg:px-2 flex items-center justify-between p-3">
@@ -88,19 +105,16 @@ const MobileNavbar = () => {
           className="flex flex-col w-7 gap-1 items-center"
         >
           <div
-            className={`w-full bg-black rounded-md h-1 transition-transform duration-300 ${
-              isOpen ? "rotate-45 translate-y-2" : ""
-            }`}
+            className={`w-full bg-black rounded-md h-1 transition-transform duration-300 ${isOpen ? "rotate-45 translate-y-2" : ""
+              }`}
           ></div>
           <div
-            className={`w-full bg-black rounded-md h-1 transition-opacity duration-300 ${
-              isOpen ? "opacity-0" : ""
-            }`}
+            className={`w-full bg-black rounded-md h-1 transition-opacity duration-300 ${isOpen ? "opacity-0" : ""
+              }`}
           ></div>
           <div
-            className={`w-full bg-black rounded-md h-1 transition-transform duration-300 ${
-              isOpen ? "-rotate-45 -translate-y-2" : ""
-            }`}
+            className={`w-full bg-black rounded-md h-1 transition-transform duration-300 ${isOpen ? "-rotate-45 -translate-y-2" : ""
+              }`}
           ></div>
         </div>
       </div>
@@ -113,10 +127,10 @@ const MobileNavbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -15 }}
             className={`absolute bg-white z-50 w-full h-screen p-4 overflow-auto`}
-          > 
+          >
             <div className="flex flex-col items-start gap-2">
-                <button className="bg-black  w-full text-white text-lg rounded-lg font-semibold text-center py-2 font-century-gothic">Login</button>
-                <button className="bg-white border border-gray-400 font-semibold w-full text-center text-primaryCyan text-lg rounded-lg py-2 font-century-gothic">Register</button>
+              <button className="bg-black  w-full text-white text-lg rounded-lg font-semibold text-center py-2 font-century-gothic">Login</button>
+              <button className="bg-white border border-gray-400 font-semibold w-full text-center text-primaryCyan text-lg rounded-lg py-2 font-century-gothic">Register</button>
             </div>
             {/* Accordion items */}
             <AccordionItem
@@ -124,12 +138,12 @@ const MobileNavbar = () => {
               isExpanded={expandedAccordion === 0}
               toggleAccordion={() => toggleAccordion(0)}
             >
-              <Link onClick={() => setIsOpen(false)} to="/product1" className="py-2 text-sm flex items-center gap-1">
+              <div onClick={() => handleAccordionNavigation('/product1')} className="py-2 text-sm flex items-center gap-1">
                 <span><IoCartOutline /></span>Buy and Sell
-              </Link>
-              <Link to="/product2" className="py-2 text-sm flex items-center gap-1">
+              </div>
+              <div onClick={() => handleAccordionNavigation('/product1')} className="py-2 text-sm flex items-center gap-1">
                 <span><IoWalletOutline /></span>Wallets
-              </Link>
+              </div>
             </AccordionItem>
 
             <AccordionItem
@@ -137,24 +151,24 @@ const MobileNavbar = () => {
               isExpanded={expandedAccordion === 1}
               toggleAccordion={() => toggleAccordion(1)}
             >
-              <Link to="/about" className="py-2 text-sm flex items-center gap-1">
+              <div onClick={() => handleAccordionNavigation('/about')} className="py-2 text-sm flex items-center gap-1">
                 <span><IoIosInformationCircleOutline /></span>About
-              </Link>
-              <Link to="/team" className="py-2 text-sm flex items-center gap-1">
+              </div>
+              <div onClick={() => handleAccordionNavigation('/careers')} className="py-2 text-sm flex items-center gap-1">
                 <span><BsBriefcase /></span>Careers
-              </Link>
-              <Link to="/team" className="py-2 text-sm flex items-center gap-1">
+              </div>
+              <div onClick={() => handleAccordionNavigation('/news')} className="py-2 text-sm flex items-center gap-1">
                 <span><IoNewspaperOutline /></span>News
-              </Link>
-              <Link to="/team" className="py-2 text-sm flex items-center gap-1">
+              </div>
+              <div onClick={() => handleAccordionNavigation('/contact-us')} className="py-2 text-sm flex items-center gap-1">
                 <span><RiCustomerService2Line /></span>Support
-              </Link>
-              <Link to="/team" className="py-2 text-sm flex items-center gap-1">
+              </div>
+              <div onClick={() => handleAccordionNavigation('/team')} className="py-2 text-sm flex items-center gap-1">
                 <span><RiSecurePaymentLine /></span>Security
-              </Link>
-              <Link to="/team" className="py-2 text-sm flex items-center gap-1">
+              </div>
+              <div onClick={() => handleAccordionNavigation('/team')} className="py-2 text-sm flex items-center gap-1">
                 <span><FaRegHandshake /></span>Partners
-              </Link>
+              </div>
             </AccordionItem>
 
             <AccordionItem
@@ -162,18 +176,18 @@ const MobileNavbar = () => {
               isExpanded={expandedAccordion === 2}
               toggleAccordion={() => toggleAccordion(2)}
             >
-              <Link to="/blog" className="py-2 text-sm flex items-center gap-1">
+              <div onClick={() => handleAccordionNavigation('/blog')} className="py-2 text-sm flex items-center gap-1">
                 <span><IoCartOutline /></span>Buy and Sell
-              </Link>
-              <Link to="/faq" className="py-2 text-sm flex items-center gap-1">
+              </div>
+              <div onClick={() => handleAccordionNavigation('/faq')} className="py-2 text-sm flex items-center gap-1">
                 <span><IoWalletOutline /></span>Wallets
-              </Link>
-              <Link to="/faq" className="py-2 text-sm flex items-center gap-1">
+              </div>
+              <div onClick={() => handleAccordionNavigation('/faq')} className="py-2 text-sm flex items-center gap-1">
                 <span><IoMdTime /></span>Coming soon
-              </Link>
-              <Link to="/faq" className="py-2 text-sm flex items-center gap-1">
+              </div>
+              <div onClick={() => handleAccordionNavigation('/faq')} className="py-2 text-sm flex items-center gap-1">
                 <span><IoMdTime /></span>Coming Soon
-              </Link>
+              </div>
             </AccordionItem>
 
             <AccordionItem
@@ -181,31 +195,46 @@ const MobileNavbar = () => {
               isExpanded={expandedAccordion === 3}
               toggleAccordion={() => toggleAccordion(3)}
             >
-              <Link to="/blog" className="py-2 text-sm flex items-center gap-1">
+              <div onClick={() => handleAccordionNavigation('/blog')} className="py-2 text-sm flex items-center gap-1">
                 <span><HiOutlineAcademicCap /></span>Learn Crypto
-              </Link>
-              <Link to="/faq" className="py-2 text-sm flex items-center gap-1">
+              </div>
+              <div onClick={() => handleAccordionNavigation('/faq')} className="py-2 text-sm flex items-center gap-1">
                 <span><BsCalendar4Event /></span>Events
-              </Link>
-              <Link to="/faq" className="py-2 text-sm flex items-center gap-1">
+              </div>
+              <div onClick={() => handleAccordionNavigation('/blogs')} className="py-2 text-sm flex items-center gap-1">
                 <span><LuBook /></span>Blogs
-              </Link>
-              <Link to="/faq" className="py-2 text-sm flex items-center gap-1">
+              </div>
+              <div onClick={() => handleAccordionNavigation('/video')} className="py-2 text-sm flex items-center gap-1">
                 <span><MdOutlineVideoSettings /></span>Videos
-              </Link>
-              <Link to="/faq" className="py-2 text-sm flex items-center gap-1">
+              </div>
+              <div onClick={() => handleAccordionNavigation('/news')} className="py-2 text-sm flex items-center gap-1">
                 <span><IoNewspaperOutline /></span>Newsletter
-              </Link>
-              <Link to="/faq" className="py-2 text-sm flex items-center gap-1">
+              </div>
+              <div onClick={() => handleAccordionNavigation('/policy')} className="py-2 text-sm flex items-center gap-1">
                 <span><MdOutlinePolicy /></span>Crypto Policy
-              </Link>
+              </div>
             </AccordionItem>
 
-            {/* Standalone links */}
+            {/* Standalone div's */}
             <div className="flex flex-col items-start">
-                <Link to="/prices" className="w-full text-left p-4 text-base font-semibold">Prices</Link>
-                <Link to="/exchange" className="w-full text-left p-4 text-base font-semibold">Exchange</Link>
-                <Link to="/contact" className="w-full text-left p-4 text-base font-semibold flex items-center gap-4">Contact Us <span className="rotate-45"><IoMdArrowUp /></span></Link>
+              <div
+                onClick={() => handleStandaloneClick('/prices')}
+                className="w-full text-left p-4 text-base font-semibold"
+              >
+                Prices
+              </div>
+              <div
+                onClick={() => handleStandaloneClick('/exchange')}
+                className="w-full text-left p-4 text-base font-semibold"
+              >
+                Exchange
+              </div>
+              <div
+                onClick={() => handleStandaloneClick('/contact-us')}
+                className="w-full text-left p-4 text-base font-semibold flex items-center gap-4"
+              >
+                Contact Us <span className="rotate-45"><IoMdArrowUp /></span>
+              </div>
             </div>
           </motion.div>
         )}
