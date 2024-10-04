@@ -211,7 +211,7 @@ import {
   
           <div className="w-full h-[0.5px] bg-gray-200"></div>
   
-          <div className="flex flex-col lg:flex-row items-center justify-between container font-century-gothic mx-auto my-10 px-5">
+          <div className="flex flex-col lg:flex-row items-center justify-between container font-century-gothic mx-auto my-10">
             <div className="flex flex-col items-start gap-2">
               <h1 className="text-lg text-gray-600 font-semibold">
                 Interested to stay up-to-date with cryptocurrencies?

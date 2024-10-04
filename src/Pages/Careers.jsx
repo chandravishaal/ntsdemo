@@ -147,6 +147,10 @@ const JobListing = () => {
                     <i className="ri-time-line"></i>
                     <span> {job.work.type}</span>
                   </span>
+                  <button className="border-2 border-gray-800 text-gray-800 px-3 py-1.5 rounded-full font-bold hover:bg-gray-100 transition-colors">
+                    <i className="ri-time-line"></i>
+                    <span> Description</span>
+                  </button>
                 </div>
               </div>
               <hr className="border-gray-300 my-6" />

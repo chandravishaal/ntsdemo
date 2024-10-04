@@ -24,11 +24,11 @@ const CoinMarquees = () => {
     { name: 'LINK', price: '$7.25', change: '-1.1%' },
     { name: 'XLM', price: '$0.12', change: '+0.3%' },
     { name: 'ATOM', price: '$10.75', change: '-0.9%' },
-    ...Array.from({ length: 85 }, (_, i) => ({
-      name: `COIN${i + 1}`,
-      price: `$${(Math.random() * 100).toFixed(2)}`,
-      change: `${Math.random() < 0.5 ? '-' : '+'}${(Math.random() * 5).toFixed(1)}%`,
-    })),
+    // ...Array.from({ length: 85 }, (_, i) => ({
+    //   name: `COIN${i + 1}`,
+    //   price: `$${(Math.random() * 100).toFixed(2)}`,
+    //   change: `${Math.random() < 0.5 ? '-' : '+'}${(Math.random() * 5).toFixed(1)}%`,
+    // })),
   ];
 
   return (
