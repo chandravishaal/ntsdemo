@@ -352,13 +352,13 @@ const CryptoTable = () => {
   };
 
   return (
-    <div className="container mx-auto mb-10">
+    <div className="container mx-auto mb-10 px-5">
       <div className="flex justify-between items-center mb-4">
-        <h1 className="text-3xl font-montserrat font-bold px-5">
+        <h1 className="text-3xl font-bold">
           Top Cryptocurrency Prices and Market Cap
         </h1>
       </div>
-      <div className="flex items-center justify-between mb-4 px-3">
+      <div className="flex items-center justify-between mb-4">
         <input
           type="text"
           placeholder="Search Cryptocurrency"
@@ -375,7 +375,7 @@ const CryptoTable = () => {
       </div>
 
       <div className="responsiveTable">
-        <div className="min-w-full bg-white border rounded-lg shadow-xl overflow-y-auto">
+        <div className="min-w-full bg-white border rounded-lg shadow-xl overflow-y-auto dropdown-menu">
           <table className="min-w-full">
             <thead className="bg-gray-50 rounded-xl">
               <tr>

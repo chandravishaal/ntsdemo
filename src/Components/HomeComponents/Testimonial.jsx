@@ -33,16 +33,16 @@ const Testimonial = () => {
   return (
     <div className="bg-white">
 
-    <div className="flex bh-white flex-col py-20 items-center justify-center container mx-auto space-y-7">
+    <div className="flex bh-white flex-col py-20 items-center justify-center container mx-auto space-y-7 px-5">
 
       <div className="flex items-center gap-3 p-2 px-2 bg-black rounded-3xl">
         <div className="star p-2 bg-primaryCyan rounded-full">
             <img src={star} className="w-3" alt="" />
         </div>
-        <h1 className="text-white px-4 font-century-gothic">Rated 4/5 by over 1lakh users</h1>
+        <h1 className="text-white text-xs lg:text-sm px-4 font-century-gothic">Rated 4/5 by over 1lakh users</h1>
       </div>
 
-      <h1 className="text-4xl text-center font-bold font-century-gothic">Words of praise from < br/> others about our presence.</h1>
+      <h1 className="lg:text-4xl text-3xl text-center font-bold font-century-gothic">Words of praise from < br/> others about our presence.</h1>
 
       {/* First Marquee */}
       <Marquee gradient={true} gradientColor="white" loop={0} speed={60} pauseOnHover="true">

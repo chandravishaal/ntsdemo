@@ -91,11 +91,11 @@
 
 
 
-import React from 'react';
+// import React from 'react';
 
 const MobilePartners = () => {
   return (
-    <div className="relative px-3">
+    <div className="relative px-3 py-10">
       {/* Circular Background with Blur */}
       <div className="absolute inset-0 flex justify-center items-center">
         {/* Adjusted size for mobile */}
@@ -108,9 +108,9 @@ const MobilePartners = () => {
           className="h-5/6 mx-auto container bg-gradient-to-b from-white to-cyan-50 rounded-lg flex flex-col items-center justify-center overflow-hidden"
         >
           <div className="w-full text-center px-4 mt-5 pb-10 flex flex-col justify-center items-center">
-            <h2 className="text-xl sm:text-2xl font-antipasto-pro font-bold text-gray-800">
-              We Work With The
-              <span className="text-cyan-400 border-b-2 border-primaryCyan/15 inline-block text-2xl sm:text-3xl">
+            <h2 className="text-3xl font-antipasto-pro font-bold text-gray-800">
+              We Work With The&nbsp; <br />
+              <span className="text-cyan-400 border-b-2 border-primaryCyan/15 inline-block text-3xl sm:text-3xl">
                 Best Partners
               </span>
             </h2>
@@ -127,40 +127,40 @@ const MobilePartners = () => {
           <div className="w-full h-full px-3 flex justify-center items-center">
             <div className="relative px-3">
               <section className="flex flex-col items-center justify-center relative z-10 min-h-[15rem] sm:min-h-[25rem]">
-                <div className="bg-white/70 w-[200px] sm:w-[270px] h-[200px] sm:h-[270px] flex items-center -my-10 justify-center rounded-2xl">
+                <div className="bg-white/70 w-[240px] sm:w-[270px] h-[250px] sm:h-[270px] flex items-center -my-10 justify-center rounded-2xl">
                   {/* Square container */}
-                  <div className="grid grid-cols-2 gap-y-7  gap-x-8">
-                    <a className="flex flex-col items-center">
+                  <div className="grid grid-cols-2 gap-y-8 sm:gap-y-14 gap-x-10 sm:gap-x-20"> 
+                    <a href='https://www.scorechain.com/' target='_blank' className="flex flex-col items-center">
                       <img
                         src="https://cdn.prod.website-files.com/654506076ba62ddb88e1876a/6548f574e000e21e5fa0ceef_Scorechain%20-%20Webclip.png"
                         alt="Partner 1"
-                        className="w-12 h-12 sm:w-16 sm:h-16 object-contain"
+                        className="w-16 h-16 sm:w-24 sm:h-24 object-contain transition-transform duration-500 ease-in-out hover:scale-110" 
                       />
-                      <span className="text-center font-montserrat mt-2 text-xs sm:text-sm">Scorechain</span>
+                      <span className="text-center font-montserrat mt-2 text-sm sm:text-base">Scorechain</span>
                     </a>
-                    <a className="flex flex-col items-center">
+                    <a href="https://www.bitgo.com/" target='_blank' className="flex flex-col items-center">
                       <img
                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/BitGo_Color_Large.png/330px-BitGo_Color_Large.png"
                         alt="Partner 2"
-                        className="w-12 h-12 sm:w-16 sm:h-16 object-contain backdrop-blur-sm"
+                        className="w-16 h-16 sm:w-24 sm:h-24 object-contain transition-transform duration-500 ease-in-out hover:scale-110"
                       />
-                      <span className="text-center font-montserrat mt-2 text-xs sm:text-sm">BitGo</span>
+                      <span className="text-center font-montserrat mt-2 text-sm sm:text-base">BitGo</span>
                     </a>
-                    <a className="flex flex-col items-center">
+                    <a href="https://crypto.com/" target='_blank' className="flex flex-col items-center">
                       <img
-                        src="https://crypto.com/__assets/mkt-nav-footer/images/cdc_logo.svg"
+                        src="https://static.intercomassets.com/avatars/5144030/square_128/Logo-1629191123.jpg"
                         alt="Partner 3"
-                        className="w-12 h-12 sm:w-16 bg-gray-700 sm:h-16 object-contain"
+                        className="w-16 h-16 sm:w-24 sm:h-24 bg-gray-700 rounded-md object-contain transition-transform duration-500 ease-in-out hover:scale-110"
                       />
-                      <span className="text-center font-montserrat mt-2 text-xs sm:text-sm">Crypto</span>
+                      <span className="text-center font-montserrat mt-2 text-sm sm:text-base">Crypto.com</span>
                     </a>
-                    <a className="flex flex-col items-center">
+                    <a href='https://sumsub.com/' className="flex flex-col items-center">
                       <img
-                        src="https://lh3.googleusercontent.com/p/AF1QipM8ntrY0HCyWcWmO0lzbKYSWhk70X3iNH6THhOi=s1360-w1360-h1020"
+                        src="https://play-lh.googleusercontent.com/1Os7bEHgceQn6OZROH312Mqj1kp_PHgTZa9XZ1PvnJKvfTvdQAIKzp0jWRP-__1FxA=s188-rw"
                         alt="Partner 4"
-                        className="w-12 h-12 sm:w-16 sm:h-16 object-contain"
+                        className="w-16 h-16 sm:w-24 sm:h-24 object-contain rounded-md transition-transform duration-500 ease-in-out hover:scale-110"
                       />
-                      <span className="text-center font-montserrat mt-2 text-xs sm:text-sm">Sumsub</span>
+                      <span className="text-center font-montserrat mt-2 text-sm sm:text-base">Sumsub</span>
                     </a>
                   </div>
                 </div>

@@ -36,7 +36,7 @@ import {
             <h1>Hello</h1>
           </Marquee>
   
-          <div className="mb-14 mt-10 font-century-gothic">
+          <div className="mb-14 mt-10 font-century-gothic px-5">
             <div className="container mx-auto max-w-[1200px] flex flex-col md:flex-row gap-6 py-6 px-4 md:py-10 lg:px-0">
               {/* First flex container for the social section */}
               <div className="flex-[3] text-gray-500 font-semibold mb-6 md:mb-0">
@@ -211,7 +211,7 @@ import {
   
           <div className="w-full h-[0.5px] bg-gray-200"></div>
   
-          <div className="flex flex-col lg:flex-row items-center justify-between container font-century-gothic mx-auto my-10 px-5 lg:px-0">
+          <div className="flex flex-col lg:flex-row items-center justify-between container font-century-gothic mx-auto my-10 px-5">
             <div className="flex flex-col items-start gap-2">
               <h1 className="text-lg text-gray-600 font-semibold">
                 Interested to stay up-to-date with cryptocurrencies?
@@ -239,7 +239,7 @@ import {
             &copy; 2024 NORTH STAR METRICS, All Rights Reserved.
           </div>
           <div className=" font-century-gothic container mx-auto text-center font-semi
-          bold text-gray-500 p-2 my-2 text-sm">
+          bold text-gray-500 p-2 px-5 my-2 text-sm">
           <Link to="/disclaimer" className="text-gray-500 font-semibold"><span className="lg:hover:text-primaryCyan">DISCLAIMER </span>: <span>Trading in cryptocurrencies is subject to market & legal risks. Prices in one country may differ from prices in other countries. North Star Metrics does not guarantee any returns. Use North Star Metrics&apso;s services at your own risk</span></Link>
           </div>
       </div>

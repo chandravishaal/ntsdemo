@@ -27,7 +27,7 @@ const CoinCards = ({ image, name, amount, last7days, isPositive, percentage }) =
           <h1 className="text-gray-500 text-sm lg:text-base  whitespace-nowrap font-semibold">&#x20b9; {amount}</h1>
       </div>
 
-      <div className="lg:block hidden">
+      <div className="md:block hidden">
         {renderSparkline(last7days)}
       </div>
 
@@ -341,12 +341,12 @@ const Explore = () => {
   }, []);
 
   return (
-    <section className="py-20 container mx-auto px-5 lg:px-0">
-      <div className="flex flex-col items-center gap-2 mb-16 px-5 lg:px-0">
-        <h1 className="text-4xl font-century-gothic text-center font-semibold">
+    <section className="py-20 container mx-auto px-5">
+      <div className="flex flex-col items-center gap-2 mb-5 lg:mb-16 px-5 lg:px-0">
+        <h1 className="text-3xl lg:4xl font-century-gothic text-center font-semibold">
           Explore Crypto
         </h1>
-        <p className="text-xl font-century-gothic text-center">
+        <p className="text-lg text-gray-500 font-century-gothic text-center">
           Simply and securely buy, sell and manage hundreds of cryptocurrencies
         </p>
       </div>

@@ -61,31 +61,30 @@ const Started = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="w-full py-10">
+    <section ref={sectionRef} className="w-full relative">
       <ParticlesComponent id="particles" />
-      <div className="w-full container mx-auto flex lg:flex-row flex-col-reverse justify-between items-center lg:my-40 my-20">
+      <div className="w-full container mx-auto py-40 px-5 flex lg:flex-row flex-col-reverse justify-between items-center ">
         <div className="text-white text-center lg:text-left w-full mt-20">
           <h1 className="text-4xl md:text-4xl font-bold mb-4 font-montserrat">
             Get started in a few <br /> minutes
           </h1>
           <h2 className="text-lg md:text-xl mb-6 font-semibold text-black font-century-gothic px-5 md:px-0">
-            Create an account, link your bank account,
-            <br />
+            Create an account, link your bank <br /> account,
             and start buying & selling.
           </h2>
           <SecondaryButton title="Create Account" />
         </div>
 
         <div className="relative lg:pr-32 md:pr-0 pr-0 mt-10">
-          <div className="bg-white w-[250px] h-[250px] lg:w-[350px] lg:h-[350px] rounded-full flex items-center justify-center mb-24 lg:mb-0 shadow-2xl relative">
+          <div className="bg-white w-[200px] h-[200px] lg:w-[350px] lg:h-[350px] rounded-full flex items-center justify-center mb-24 lg:mb-0 shadow-2xl relative">
             <img
               src="https://ntsmetrics.com/img/nsm-logo-blue.png"
               className="lg:w-3/6 w-[100px]"
               alt="user options to buy or sell digital currencies"
             />
-            <div className="absolute bg-white p-2 lg:w-[180px] lg:h-[180px] w-[130px] h-[130px] lg:-left-24 -left-14  rounded-full shadow-2xl flex flex-col items-center justify-center gap-3 animate-countup">
+            <div className="absolute bg-white p-2 lg:w-[180px] lg:h-[180px] w-[100px] h-[100px] lg:-left-24 -left-14  rounded-full shadow-2xl flex flex-col items-center justify-center gap-3 animate-countup">
               {/* <img src={icon11} className='w-12 lg:w-16' alt="" /> */}
-              <p className="text-3xl lg:text-4xl font-century-gothic font-bold text-black">
+              <p className="text-2xl lg:text-4xl font-century-gothic font-bold text-black">
                 {isVisible && (
                   <CountUp
                     end={100000000}
@@ -95,9 +94,9 @@ const Started = () => {
                 )}
               </p>
             </div>
-            <div className="absolute bg-white p-5 lg:w-[180px] lg:h-[180px] w-[130px] h-[130px] -top-16 lg:-top-20  rounded-full shadow-2xl flex flex-col items-center justify-center gap-3 animate-countup">
+            <div className="absolute bg-white p-5 lg:w-[180px] lg:h-[180px] w-[100px] h-[100px] -top-16 lg:-top-20  rounded-full shadow-2xl flex flex-col items-center justify-center gap-3 animate-countup">
               {/* <img src={icon9} className='w-12 lg:w-16' alt="" /> */}
-              <p className="text-3xl lg:text-4xl font-century-gothic font-bold text-black">
+              <p className="text-2xl lg:text-4xl font-century-gothic font-bold text-black">
                 {isVisible && (
                   <CountUp
                     end={70000}
@@ -107,9 +106,9 @@ const Started = () => {
                 )}
               </p>
             </div>
-            <div className="absolute bg-white p-5 lg:w-[180px] lg:h-[180px] w-[130px] h-[130px] lg:-right-24 -right-14  rounded-full shadow-2xl flex flex-col items-center justify-center gap-3 animate-countup">
+            <div className="absolute bg-white p-5 lg:w-[180px] lg:h-[180px] w-[100px] h-[100px] lg:-right-24 -right-14  rounded-full shadow-2xl flex flex-col items-center justify-center gap-3 animate-countup">
               {/* <img src={icon10} className='w-12 lg:w-16' alt="" /> */}
-              <p className="text-3xl lg:text-4xl font-century-gothic font-bold text-black">
+              <p className="text-2xl lg:text-4xl font-century-gothic font-bold text-black">
                 {isVisible && (
                   <CountUp
                     end={2000000}
@@ -121,14 +120,14 @@ const Started = () => {
             </div>
           </div>
 
-          <h1 className="absolute text-black text-xl font-bold lg:-left-32 lg:top-72 md:top-56 md:-left-36 -left-16 top-52 md:whitespace-nowrap text-center font-century-gothic">
-            Total <br className="md:hidden block" /> Transactions
+          <h1 className="absolute text-black text-xl font-bold lg:-left-20 lg:top-72 md:top-48 md:-left-24 -left-12 top-48 md:whitespace-nowrap text-center font-century-gothic">
+            Total <br className="" /> Transactions
           </h1>
-          <h1 className="absolute text-black text-xl font-bold lg:left-72 md:top-0 md:left-56 -top-24 left-7 md:whitespace-nowrap text-center font-century-gothic">
-            Today&apos;s Transactions
+          <h1 className="absolute text-black text-xl font-bold lg:left-72 md:-top-10 md:left-40 -top-32 left-2 md:whitespace-nowrap text-center font-century-gothic">
+            Today&apos;s <br /> Transactions
           </h1>
-          <h1 className="absolute text-black text-xl font-bold lg:left-80 lg:top-72 md:top-56 md:left-56 -right-20 top-52 md:whitespace-nowrap text-center font-century-gothic">
-            Monthly <br className="md:hidden block" /> Transactions
+          <h1 className="absolute text-black text-xl font-bold lg:left-60 lg:top-72 md:top-48 md:left-48 -right-12 top-48 md:whitespace-nowrap text-center font-century-gothic">
+            Monthly <br className="" /> Transactions
           </h1>
 
           <img

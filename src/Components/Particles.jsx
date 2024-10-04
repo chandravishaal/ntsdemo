@@ -32,11 +32,11 @@ const ParticlesComponent = (props) => {
         events: {
           onClick: {
             enable: true,
-            mode: "push",
+            mode: "remove",
           },
           onHover: {
             enable: true,
-            mode: "repulse",
+            mode: "grab",
           },
         },
         modes: {
@@ -57,7 +57,7 @@ const ParticlesComponent = (props) => {
           color: "#FFFFFF",
           distance: 100, // Reduced distance for links
           enable: true,
-          opacity: 0.3,
+          opacity: 1,
           width: 1,
         },
         move: {
@@ -77,7 +77,7 @@ const ParticlesComponent = (props) => {
           value: 80, // Reduced to 80 particles for less load
         },
         opacity: {
-          value: 0.5, // Reduced opacity to reduce rendering load
+          value: 0.6, // Reduced opacity to reduce rendering load
         },
         shape: {
           type: "circle",

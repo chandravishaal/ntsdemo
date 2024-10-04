@@ -6,6 +6,7 @@ import {
   IoMdArrowDropup,
   IoMdInformationCircleOutline,
 } from "react-icons/io";
+import { AnimatePresence, motion } from "framer-motion";
 
 import { AreaChart, XAxis, YAxis, ResponsiveContainer, Area } from "recharts";
 
@@ -708,10 +709,15 @@ const PriceTable = () => {
           </table>
         </div>
       </div>
+      <AnimatePresence>
       {isModalOpen && (
-        <div className="fixed inset-0 flex items-center justify-center z-10">
-          <div className="absolute inset-0 bg-black opacity-50"></div>
-          <div className="bg-white rounded-lg p-8 relative" ref={modalRef}>
+        <motion.div
+        initial={{ opacity: 0, scale: 0.4 }}
+        animate={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0, scale: 0.4 }}
+        className="fixed inset-0 flex items-center justify-center z-10">
+        <div className="absolute inset-0 bg-gray-300 opacity-50"></div>
+          <div className="bg-white shadow-3xl ounded-lg p-8 relative" ref={modalRef}>
             <h2 className="text-xl font-semibold mb-4 mt-4">
               Select Columns to Display
             </h2>
@@ -789,8 +795,9 @@ const PriceTable = () => {
               <span className="text-2xl">&times;</span>
             </button>
           </div>
-        </div>
+        </motion.div>
       )}
+      </AnimatePresence>
     </div>
   );
 };

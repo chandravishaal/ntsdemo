@@ -355,7 +355,7 @@ const CompanySection = () => {
         //     {renderActiveSection()}
         // </div>
 
-        <div className="relative py-16 px-5">
+        <div className="relative pt-32 lg:py-16 px-5">
             {/* Circular Background with Blur */}
             <div className="absolute inset-0 flex justify-center items-center">
             <div className="circlePosition w-[590px] h-[400px] bg-primaryCyan/40 rounded-lg absolute z-1 top-[60%] left-[20%] translate-x-[-50%] translate-y-[-50%] blur-[150px]"></div>

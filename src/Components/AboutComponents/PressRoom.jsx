@@ -41,6 +41,14 @@ function PressRoom() {
       logoSrc: Image4,
       redirectLink: "https://medium.com/@ntsmetrics/crypto-trading-platform-key-cases-on-september-16-17-2024-31a084d6d1f1"
     },
+    {
+      imageSrc: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*WV88BTbBU1p_eD_Znt413Q.jpeg",
+      title: 'Crypto Trading Platform: Key Cases on September 16-17, 2024',
+      description:
+        'Crypto trading platform developments, including Bitcoin surge, WazirX hack fallout, and regulatory impacts on the NFT market on September 16–17, 2024.',
+      logoSrc: Image4,
+      redirectLink: "https://medium.com/@ntsmetrics/crypto-trading-platform-key-cases-on-september-16-17-2024-31a084d6d1f1"
+    },
   ];
 
   const cardRefs = useRef([]);
@@ -122,13 +130,13 @@ function PressRoom() {
   //   );
   // };
 
-  const PressCard = ({ imageSrc, title, description, logoSrc, index, redirectLink }) => {
+  const PressCard = ({ imageSrc, title, description, logoSrc, index, redirectLink, key }) => {
     return (
       <div
         ref={(el) => (cardRefs.current[index] = el)} // Assigning the ref to each card
-        className="bg-white flex flex-col items-start gap-4 rounded-2xl shadow-md outline outline-[0.2px] outline-gray-300 p-4"
+        className={`bg-white flex flex-col items-start gap-5 rounded-2xl shadow-md outline outline-[0.2px] outline-gray-300 p-4 ${index === 3 ? 'lg:hidden md:flex hidden'  : 'block'}`}
       >
-        <h1 className="text-lg font-semibold px-1 font-century-gothic">
+        <h1 className="text-lg font-semibold px-1 line-clamp-2 font-century-gothic">
           {title}
         </h1>
   
@@ -177,13 +185,13 @@ function PressRoom() {
   return (
     <section className="bg-white container mx-auto mb-24 mt-10">
       <div className="text-center font-Antipasto pro">
-        <h2 className="text-4xl font-bold mt-8 font-montserrat">Press Release</h2>
-        <p className="text-black mt-4 font-semibold text-center font-century-gothic">
+        <h2 className="lg:text-4xl text-3xl font-bold mt-8 font-montserrat">Press Release</h2>
+        <p className="text-gray-500 mt-4 font-semibold text-center font-century-gothic">
         Leading the Future of Cryptocurrency Trading
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 px-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 px-5">
         {cardsData.map((card, index) => (
           <PressCard
             key={index}

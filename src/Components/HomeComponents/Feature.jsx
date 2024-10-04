@@ -15,9 +15,9 @@ const FeatureComponent = () => {
             <div data-aos="fade-up" data-aos-duration="2000" className='lg:pl-12 p-2 w-[70%] lg:-ml-5 relative z-10 md:mt-[15%] mx-auto md:text-left text-center -translate-x-[1rem]'>
               <div className=''>
                 <h2 className="text-2xl font-bold text-black mb-2 font-montserrat ">North Star Metrics</h2>
-                <p className="text-gray-600 mb-4 text-xl font-century-gothic">Buy or sell hundreds of cryptocurrencies</p>
+                <p className="text-gray-600 mb-4 text-xl md:w-[250px] lg:w-auto font-century-gothic">Buy or sell hundreds of cryptocurrencies</p>
               </div>
-              <div className='flex items-center justify-center lg:justify-start gap-3'>
+              <div className='flex items-center justify-center md:justify-start gap-3'>
               <PrimaryButton title="Buy"/>
               <SecondaryButton title="Sell" />
               </div>
@@ -25,11 +25,11 @@ const FeatureComponent = () => {
           </div>
 
           {/* Second Mobile Image and Content */}
-          <div className="flex flex-col-reverse md:flex-row items-center justify-end text-center lg:text-right lg:items-end  relative w-full">
-            <div data-aos="fade-down" data-aos-duration="2000" className='w-[70%] lg:pr-16  lg:-mr-10 relative z-10 mb-[25%] translate-x-[1rem] md:text-right text-center'>
+          <div className="flex flex-col-reverse md:flex-row items-center justify-end text-center md:text-right lg:items-end md:p-8 relative w-full">
+            <div data-aos="fade-down" data-aos-duration="2000" className='w-[70%] lg:pr-16 p-2 lg:-mr-10 relative z-10 mb-[25%] translate-x-[1rem] md:text-right text-center'>
               <h2 className="text-2xl font-bold text-black mb-2 font-montserrat">Advance</h2>
-              <p className="text-gray-600 mb-4 text-xl font-century-gothic">Powerful tools, designed for the advanced trader</p>
-              <div className='flex items-center lg:justify-end justify-center gap-3'>
+              <p className="text-gray-600 mb-4 text-xl md:w-[250px] lg:w-auto font-century-gothic ml-auto">Powerful tools, designed for the advanced trader</p>
+              <div className='flex items-center md:justify-end justify-center gap-3'>
               <SecondaryButton title="Sell"/>
               <PrimaryButton title="Buy"/>
               </div>

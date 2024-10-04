@@ -19,22 +19,22 @@ const Partners = () => {
   };
 
   return (
-    <div className="relative px-5">
+    <div className="relative px-5 py-20">
       {/* Circular Background with Blur */}
       <div className="absolute inset-0 flex justify-center items-center">
-        <div className="circlePosition w-[600px] h-[500px] bg-primaryCyan/40 rounded-lg absolute z-1 top-[50%] left-[53%] translate-x-[-5%] translate-y-[-50%] blur-[400px]"></div>
+        <div className="circlePosition w-[600px] h-[500px] bg-primaryCyan/40 rounded-2xl absolute z-1 top-[50%] left-[53%] translate-x-[-5%] translate-y-[-50%] blur-[400px]"></div>
       </div>
 
       <div className="min-h-[30rem] h-auto w-full flex items-center justify-center"> 
         <div
           id="main"
-          className="md:h-4/6 mx-auto container bg-gradient-to-b from-white to-cyan-50 md:bg-gradient-to-b md:from-white md:to-cyan-50 rounded-lg flex flex-col md:flex-row items-center justify-center overflow-hidden"
+          className="md:h-4/6 mx-auto container bg-gradient-to-b from-white to-cyan-50 md:bg-gradient-to-b md:from-white md:to-cyan-50 rounded-2xl flex flex-col md:flex-row items-center justify-center overflow-hidden"
         >
-          <div className="w-full md:w-1/2 text-center md:text-left px-6 md:px-4 md:h-[100%] mt-5 pb-10 md:pb-0 flex flex-col justify-center items-center md:items-start">
+          <div className="w-full z-40 md:w-1/2 text-center md:text-left px-6 md:px-4 md:h-[100%] mt-5 pb-10 md:pb-0 flex flex-col justify-center items-center md:items-start">
             {/* Centered and responsive */}
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-antipasto-pro font-bold text-gray-800">
-              We Work With The 
-              <span className="text-cyan-400 border-b-2 border-primaryCyan/15 inline-block text-3xl sm:text-4xl md:text-5xl">
+            <h2 className="text-3xl lg:text-4xl font-antipasto-pro font-bold text-gray-800">
+              We Work With The <br />
+              <span className="text-cyan-400 border-b-2 border-primaryCyan/15 inline-block text-3xl lg:text-4xl">
                 Best Partners
               </span>
             </h2>
@@ -66,7 +66,7 @@ const Partners = () => {
                 >
                   {/* Square container */}
                   <div className="grid grid-cols-2 gap-y-8 sm:gap-y-14 gap-x-10 sm:gap-x-20"> 
-                    <a className="flex flex-col items-center">
+                    <a href='https://www.scorechain.com/' target='_blank' className="flex flex-col items-center">
                       <img
                         src="https://cdn.prod.website-files.com/654506076ba62ddb88e1876a/6548f574e000e21e5fa0ceef_Scorechain%20-%20Webclip.png"
                         alt="Partner 1"
@@ -74,7 +74,7 @@ const Partners = () => {
                       />
                       <span className="text-center font-montserrat mt-2 text-sm sm:text-base">Scorechain</span>
                     </a>
-                    <a className="flex flex-col items-center">
+                    <a href="https://www.bitgo.com/" target='_blank' className="flex flex-col items-center">
                       <img
                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/BitGo_Color_Large.png/330px-BitGo_Color_Large.png"
                         alt="Partner 2"
@@ -82,15 +82,15 @@ const Partners = () => {
                       />
                       <span className="text-center font-montserrat mt-2 text-sm sm:text-base">BitGo</span>
                     </a>
-                    <a className="flex flex-col items-center">
+                    <a href="https://crypto.com/" target='_blank' className="flex flex-col items-center">
                       <img
-                        src="https://crypto.com/__assets/mkt-nav-footer/images/cdc_logo.svg"
+                        src="https://static.intercomassets.com/avatars/5144030/square_128/Logo-1629191123.jpg"
                         alt="Partner 3"
                         className="w-16 h-16 sm:w-24 sm:h-24 bg-gray-700 rounded-md object-contain transition-transform duration-500 ease-in-out hover:scale-110"
                       />
-                      <span className="text-center font-montserrat mt-2 text-sm sm:text-base">Crypto</span>
+                      <span className="text-center font-montserrat mt-2 text-sm sm:text-base">Crypto.com</span>
                     </a>
-                    <a className="flex flex-col items-center">
+                    <a href='https://sumsub.com/' className="flex flex-col items-center">
                       <img
                         src="https://play-lh.googleusercontent.com/1Os7bEHgceQn6OZROH312Mqj1kp_PHgTZa9XZ1PvnJKvfTvdQAIKzp0jWRP-__1FxA=s188-rw"
                         alt="Partner 4"

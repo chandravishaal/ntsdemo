@@ -92,7 +92,7 @@ const Certificate = () => {
   };
 
   return (
-    <div ref={sectionRef} className="mt-12 py-24 container mx-auto">
+    <div ref={sectionRef} className="mt-12 py-24 container mx-auto px-5">
       <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         {certificates.map((certificate, index) => (
           <CertificateItem

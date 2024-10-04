@@ -3,12 +3,12 @@ import Button3 from "../../Common/Button3";
 
 const CryptoFreedomSection = () => {
   return (
-    <section className="freedomSection-background pt-10 mb-32">
+    <section className="freedomSection-background pt-10 mb-32 px-5">
     <div className="container mx-auto pt-10  text-center">
-      <h2 className="text-3xl font-bold font-montserrat  mb-4">
+      <h2 className="text-3xl font-bold mb-4">
         The freedom of crypto for everyone, everywhere
       </h2>
-      <p className="text-lg text-gray-600 font-century-gothic mb-8  mx-[20%]">
+      <p className="text-lg text-gray-600 font-century-gothic mb-8">
         We&apos;re committed to creating more economic freedom through accessible,
         safe, and secure financial tools for everyone.
       </p>

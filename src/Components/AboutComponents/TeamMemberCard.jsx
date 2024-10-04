@@ -87,8 +87,8 @@ const TeamMemberCard = () => {
     <section className="pb-32 pt-20 bg-gray-100"> {/* Reduced top padding */}
       <div className="container mx-auto px-4">
         <div className="text-center mb-24"> {/* Reduced bottom margin */}
-          <h2 className="text-4xl font-bold mt-4 font-montserrat">Our executive team</h2> {/* Reduced top margin */}
-          <p className="text-black text-lg mt-2 font-semibold font-century-gothic">
+          <h2 className="lg:text-4xl text-3xl font-bold mt-4 font-montserrat">Our executive team</h2> {/* Reduced top margin */}
+          <p className="text-gray-500 text-lg mt-2 font-semibold font-century-gothic">
             Innovative Leaders Driving Crypto Excellence.
           </p>
         </div>

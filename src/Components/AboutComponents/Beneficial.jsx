@@ -33,7 +33,7 @@ const Beneficial = () => {
 
     return (
         <div
-            className="relative bg-cover bg-center bg-no-repeat flex flex-col md:flex-row items-center justify-center p-6 py-32 rounded-lg"
+            className="relative bg-cover bg-center bg-no-repeat flex flex-col md:flex-row items-center justify-center p-6 py-32 pt-40 md:py-20 rounded-lg"
             style={{
                 backgroundImage: `url(${icon2})`,
                 backgroundSize: 'cover', // Cover the whole area

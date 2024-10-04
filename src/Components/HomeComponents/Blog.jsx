@@ -318,7 +318,7 @@ const Blog = () => {
   const EachBlog = () => {
     return (
       <div className="flex flex-col items-start gap-5 rounded-2xl bg-white p-2 outline outline-[0.2px] outline-gray-300 shadow-md">
-        <h1 className="text-lg font-semibold px-1 font-century-gothic">
+        <h1 className="text-lg font-semibold line-clamp-2 px-1 font-century-gothic">
           Data Analytics: Key to Decision and Business Growth
         </h1>
         <div className="flex items-center px-1 gap-3">
@@ -362,15 +362,15 @@ const Blog = () => {
   };
 
   return (
-    <div ref={blogRef} className="container mx-auto py-20 px-5 lg:px-0 bg-white">
+    <div ref={blogRef} className="container mx-auto py-20 px-5 bg-white">
       <div
         id="heading"
         className="flex flex-col items-center gap-4 mb-10 px-5 text-center"
       >
-        <h1 className="text-black font-semibold text-4xl font-century-gothic mb-1">
+        <h1 className="text-black font-semibold text-3xl lg:text-4xl font-century-gothic mb-1">
           Our Latest Blog
         </h1>
-        <h2 className="text-black text-2xl font-century-gothic font-normal">
+        <h2 className="text-gray-500 text-xl lg:text-2xl font-century-gothic font-normal">
         Our blog provides the latest crypto news, tips, and strategies, ranging from beginner tips to advanced strategies.
         </h2>
       </div>
@@ -382,6 +382,9 @@ const Blog = () => {
           <EachBlog />
         </div>
         <div className='blog-post'>
+          <EachBlog />
+        </div>
+        <div className='blog-post hidden md:block lg:hidden'>
           <EachBlog />
         </div>
       </div>
