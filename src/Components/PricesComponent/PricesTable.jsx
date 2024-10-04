@@ -252,10 +252,10 @@ const coinsData = [
 ];
 
 // Tooltip component
-// Tooltip component
 const InfoTooltip = ({ text }) => {
   const [isTooltipVisible, setIsTooltipVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const tooltipRef = useRef(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -282,8 +282,26 @@ const InfoTooltip = ({ text }) => {
     setIsTooltipVisible((prev) => !prev);
   };
 
+  const handleClickOutside = (e) => {
+    if (tooltipRef.current && !tooltipRef.current.contains(e.target)) {
+      setIsTooltipVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    if (isTooltipVisible) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isTooltipVisible]);
+
   return (
-    <div className="relative inline-block">
+    <div className="relative inline-block" ref={tooltipRef}>
       <span
         className="text-black-500 font-bold cursor-pointer hover:text-black-700"
         onMouseEnter={!isMobile ? () => setIsTooltipVisible(true) : null}
