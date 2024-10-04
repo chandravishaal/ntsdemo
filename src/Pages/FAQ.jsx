@@ -1,10 +1,12 @@
 
 import React, { useState } from 'react';
 import 'remixicon/fonts/remixicon.css'; // Import Remix Icons
+import { motion } from 'framer-motion';
 
 const FAQ = () => {
     const [openCategory, setOpenCategory] = useState('General FAQs'); // To track which category is open
     const [visibleCount, setVisibleCount] = useState(6);
+    const [openModal, setOpenModal] = useState(false); // To track modal open state
 
     const toggleCategory = (category) => {
         setVisibleCount(6);
@@ -14,6 +16,13 @@ const FAQ = () => {
         setVisibleCount(itemsLength); // Load 6 more items when clicked
 
     };
+
+    const modalVariants = {
+        hidden: {opacity: 0, scale: 0.8},
+        visible: {opacity: 1, scale: 1},
+        exit: {opacity: 0, scale: 0.8}
+    };
+
     const faqData = [
         {
             category: 'General FAQs',
@@ -243,7 +252,7 @@ const FAQ = () => {
                     <h1 className="text-3xl font-bold mb-4 md:mb-0">Frequently Asked Questions</h1>
                     <div className="ml-auto flex space-x-2 mt-4 md:mt-0 w-full md:w-auto">
                         <div className="w-full">
-                            <button className="bg-black text-white rounded-full px-4 py-2 text-sm w-full flex items-center justify-center">
+                            <button className="bg-black text-white rounded-full px-4 py-2 text-sm w-full flex items-center justify-center" onClick={() => setOpenModal(true)}>
                                 Get in touch
                             </button>
                         </div>
@@ -345,6 +354,57 @@ const FAQ = () => {
                         </button>
                     </div>
                 </div>
+                {/*Modal */}
+                {openModal && (
+                    <motion.div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50" initial='hidden' animate='visible' exit='exit' variants={modalVariants} transition={{duration: 0.3, ease: "easeInOut"}}>
+                        <div className="bg-white p-6 rounded-lg shadow-lg w-[90%] max-w-[500px] h-auto">
+                            <button className="absolute top-4 right-4 text-gray-500" onClick={() => setOpenModal(false)}></button>
+
+                            {/* Modal Heading */}
+                            <h2 className="text-4xl font-antipasto-pro font-bold tracking-tight">We'd love to help</h2>
+                            <p className="text-gray-600 mb-5 font-NorthStarsans">Reach out and we'll get in touch within 24 hours</p>
+
+                            {/* Modal Form */}
+                            <div className="">
+                                <form className="space-y-4">
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                        <div>
+                                            <label htmlFor="firstName" className="block text-sm font-NorthStarsans font-extrabold text-gray-700">
+                                                First Name
+                                            </label>
+                                            <input type="text" id="firstName" placeholder="First name" className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-black focus:border-black"/>
+                                        </div>
+
+                                        <div>
+                                            <label htmlFor="lastName" className="block text-sm font-NorthStarsans font-extrabold text-gray-700">
+                                                Last Name
+                                            </label>
+                                            <input type="text" id="lastName" placeholder="Last name" className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-black focus:border-black"/>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <label htmlFor="email" className="block text-sm font-NorthStarsans font-extrabold text-gray-700">
+                                            Email
+                                        </label>
+                                        <input type="email" id="email" placeholder="Email address" className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-black focus:border-black"/>
+                                    </div>
+
+                                    <div>
+                                        <label htmlFor="message" className="block text-sm font-NorthStarsans font-extrabold text-gray-700">
+                                            Message
+                                        </label>
+                                        <textarea id="message" rows={4} placeholder="Leave us a message..." className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-black focus:border-black"/>
+                                    </div>
+
+                                    <div className="flex justify-end">
+                                        <button type="submit" className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-white focus:border-white bg-primaryCyan text-white">Send message</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </motion.div>
+                )}
             </div>
         </section>
     );
