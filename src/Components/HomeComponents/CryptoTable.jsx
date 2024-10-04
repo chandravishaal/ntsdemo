@@ -397,7 +397,7 @@ const CryptoTable = () => {
         />
         <button
           onClick={() => navigate("/prices")}
-          className="bg-gray-100 border-gray-300 py-2 px-6 rounded-md hover:bg-gray-300 mr-4 font-montserrat"
+          className="bg-gray-100 border-gray-300 py-2 px-6 rounded-md hover:bg-gray-300 font-montserrat"
         >
           <span> All Prices</span>
         </button>
@@ -408,38 +408,42 @@ const CryptoTable = () => {
           <table className="min-w-full">
             <thead className="bg-gray-50 rounded-xl">
               <tr>
-                <th className="px-8 py-2 border-b text-right">#</th>
+                <th className="px-8 py-2 border-b text-right select-none">#</th>
                 {visibleColumns.name && (
-                  <th className="px-8 py-2 border-b text-left font-montserrat ">
+                  <th className="px-8 py-2 border-b text-left font-montserrat select-none">
                     Coin
                   </th>
                 )}
                 {visibleColumns.price && (
-                  <th className="px-4 py-2 border-b text-center font-montserrat ">
+                  <th className="px-4 py-2 border-b text-center font-montserrat select-none">
                     Price
                   </th>
                 )}
                 {visibleColumns.change && (
-                  <th className="px-8 py-2 border-b text-center whitespace-nowrap lg:whitespace-normal font-montserrat ">
-                    24h %
-                    <InfoTooltip text="The percentage of change in the value compared to 24 hours ago." />
+                  <th className="px-8 py-2 border-b text-center whitespace-nowrap lg:whitespace-normal font-montserrat select-none">
+                    <div className="flex items-center justify-center gap-1">
+                      <span>24h %</span>
+                      <InfoTooltip text="The percentage of change in the value compared to 24 hours ago." />
+                    </div>
                   </th>
                 )}
+
                 {visibleColumns.volume && (
-                  <th className="px-4 py-2 border-b text-center font-montserrat whitespace-nowrap lg:whitespace-normal ">
-                    Volume (24h)
-                    <InfoTooltip text="The total value of the currency that has been traded in the last 24 hours." />
+                  <th className="px-4 py-2 border-b text-center font-montserrat whitespace-nowrap lg:whitespace-normal select-none">
+                    <div className="flex items-center justify-center gap-1">
+                      <span>Volume (24h)</span>
+                      <InfoTooltip text="The total value of the currency that has been traded in the last 24 hours." />
+                    </div>
                   </th>
                 )}
+
                 {visibleColumns.marketCap && (
-                  <th className="px-4 py-2 cursor-pointer whitespace-nowrap lg:whitespace-normal border-b text-center font-montserrat flex items-center">
+                  <th className="px-4 py-2 cursor-pointer whitespace-nowrap lg:whitespace-normal border-b text-center font-montserrat flex items-center select-none">
                     <span className="flex items-center gap-1 justify-start flex-row group">
-                      {/* Bring the arrow to the left */}
                       <span
                         className="flex items-center gap-1"
                         onClick={sortByMarketCap}
                       >
-                        {/* The icon takes the lead now */}
                         <span className="transition-opacity opacity-0 group-hover:opacity-100 text-black">
                           {sortDirection === "asc" ? (
                             <IoMdArrowDropup />
@@ -455,9 +459,12 @@ const CryptoTable = () => {
                 )}
 
                 {visibleColumns.last7days && (
-                  <th className="px-2 border-b text-center font-montserrat whitespace-nowrap lg:whitespace-normal ">
-                    Last 7 Days
-                    <InfoTooltip text="This shows a sparkline graph of the last 7 days of the currency's value." />
+                  <th className="px-2 border-b text-center font-montserrat whitespace-nowrap lg:whitespace-normal select-none">
+                    {/* Wrapper div to center both text and tooltip */}
+                    <div className="flex items-center justify-center gap-1">
+                      <span>Last 7 Days</span>
+                      <InfoTooltip text="This shows a sparkline graph of the last 7 days of the currency's value." />
+                    </div>
                   </th>
                 )}
               </tr>
@@ -512,7 +519,7 @@ const CryptoTable = () => {
                     </td>
                   )}
                   {visibleColumns.last7days && (
-                    <td className="border-b center px-4 py-4">
+                    <td className="border-b text-center px-4 py-4">
                       {renderSparkline(crypto.last7days)}
                     </td>
                   )}

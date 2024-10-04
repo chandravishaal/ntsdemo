@@ -496,21 +496,21 @@ const PriceTable = () => {
   return (
     <div className="container mx-auto my-10">
       <div className="flex justify-between items-center mb-4 ">
-        <h1 className="text-3xl font-montserrat font-bold px-5">
+        <h1 className="text-3xl font-montserrat font-bold max-md:px-5">
           Explore Crypto Prices
         </h1>
       </div>
-      <div className="flex items-center justify-between mb-4 px-3">
+      <div className="flex items-center justify-between mb-4 max-md:px-3">
         <input
           type="text"
-          className="w-1/2 bg-gray-100 border-gray-300 py-2 px-6 rounded-md hover:bg-gray-300 mr-4 font-montserrat"
+          className="w-1/2 bg-gray-100 border-gray-300 py-2 rounded-md hover:bg-gray-300 mr-4 font-montserrat"
           placeholder="Search Cryptocurrency"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
         <button
           onClick={handleOpenModal}
-          className="bg-gray-100 border-gray-300 py-2 px-6 rounded-md hover:bg-gray-300 mr-4 font-montserrat"
+          className="bg-gray-100 border-gray-300 py-2 px-6 rounded-md hover:bg-gray-300 font-montserrat"
         >
           <span> Customize</span>
         </button>
@@ -521,105 +521,121 @@ const PriceTable = () => {
           <table className="min-w-full">
             <thead className="bg-gray-50 rounded-xl text-sm">
               <tr className="items-center">
-                <th className="px-2 py-2 border-b text-xs text-right">#</th>
+                <th className="px-2 py-2 border-b text-xs text-right select-none">#</th>
                 {visibleColumns.name && (
-                  <th className="px-8 text-xs py-2 border-b text-left font-montserrat ">
+                  <th className="px-8 text-xs py-2 border-b text-left font-montserrat select-none">
                     Coin
                   </th>
                 )}
                 {visibleColumns.price && (
-                  <th className="px-4 text-xs py-2 border-b text-right font-montserrat pr-0">
+                  <th className="px-4 text-xs py-2 border-b text-right font-montserrat pr-0 select-none">
                     Price
                   </th>
                 )}
                 {visibleColumns.change1h && (
                   <th className="group px-4 py-2 pr-0 border-b text-center whitespace-nowrap lg:whitespace-normal font-montserrat">
-                    <span className="flex text-xs items-center gap-1 justify-end flex-row">
+                    <div className="flex text-xs items-right gap-1 justify-end flex-row">
+                      {/* Clickable area for sorting */}
                       <span
-                        className={`transition-opacity opacity-0 group-hover:opacity-100`}
+                        className="flex items-center gap-1 cursor-pointer select-none"
                         onClick={() => sortData("change1h")}
                       >
-                        {sortDirection.change1h === "asc" ? (
-                          <IoMdArrowDropup />
-                        ) : (
-                          <IoMdArrowDropdown />
-                        )}
+                        <span className="transition-opacity opacity-0 group-hover:opacity-100">
+                          {sortDirection.change1h === "asc" ? (
+                            <IoMdArrowDropup />
+                          ) : (
+                            <IoMdArrowDropdown />
+                          )}
+                        </span>
+                        1h
                       </span>
-                      1h
                       <InfoTooltip text="The percentage of change in the value compared to 1 hour ago." />
-                    </span>
+                    </div>
                   </th>
                 )}
+
                 {visibleColumns.change24h && (
                   <th className="group px-4 py-2 pr-0 border-b text-center whitespace-nowrap lg:whitespace-normal font-montserrat">
-                    <span className="flex text-xs items-center gap-1 justify-end flex-row">
+                    <div className="flex text-xs items-right gap-1 justify-end flex-row">
                       <span
-                        className="transition-opacity opacity-0 group-hover:opacity-100"
+                        className="flex items-center gap-1 cursor-pointer select-none"
                         onClick={() => sortData("change24h")}
                       >
-                        {sortDirection.change24h === "asc" ? (
-                          <IoMdArrowDropup />
-                        ) : (
-                          <IoMdArrowDropdown />
-                        )}
+                        <span className="transition-opacity opacity-0 group-hover:opacity-100">
+                          {sortDirection.change24h === "asc" ? (
+                            <IoMdArrowDropup />
+                          ) : (
+                            <IoMdArrowDropdown />
+                          )}
+                        </span>
+                        24h
                       </span>
-                      24h
                       <InfoTooltip text="The percentage of change in the value compared to 24 hours ago." />
-                    </span>
+                    </div>
                   </th>
                 )}
+
                 {visibleColumns.change7d && (
                   <th className="group px-4 py-2 pr-0 border-b text-center whitespace-nowrap lg:whitespace-normal font-montserrat">
-                    <span className="flex text-xs gap-1 items-center justify-end flex-row">
+                    <div className="flex text-xs items-center gap-1 justify-end flex-row select-none">
                       <span
-                        className="transition-opacity opacity-0 group-hover:opacity-100"
+                        className="flex items-center gap-1 cursor-pointer"
                         onClick={() => sortData("change7d")}
                       >
-                        {sortDirection.change7d === "asc" ? (
-                          <IoMdArrowDropup />
-                        ) : (
-                          <IoMdArrowDropdown />
-                        )}
+                        <span className="transition-opacity opacity-0 group-hover:opacity-100">
+                          {sortDirection.change7d === "asc" ? (
+                            <IoMdArrowDropup />
+                          ) : (
+                            <IoMdArrowDropdown />
+                          )}
+                        </span>
+                        7d
                       </span>
-                      7d
                       <InfoTooltip text="The percentage of change in the value compared to 7 days ago." />
-                    </span>
+                    </div>
                   </th>
                 )}
+
                 {visibleColumns.volume24h && (
                   <th className="group px-2 py-2 pr-0 border-b text-center whitespace-nowrap lg:whitespace-normal cursor-pointer">
-                    <span className="flex text-xs gap-1 items-center justify-end flex-row">
+                    <div className="flex text-xs items-center gap-1 justify-end flex-row">
                       <span
-                        className="transition-opacity opacity-0 group-hover:opacity-100"
+                        className="flex items-center gap-1 cursor-pointer select-none"
                         onClick={() => sortData("volume24h")}
                       >
-                        {sortDirection.volume24h === "asc" ? (
-                          <IoMdArrowDropup />
-                        ) : (
-                          <IoMdArrowDropdown />
-                        )}
+                        <span className="transition-opacity opacity-0 group-hover:opacity-100">
+                          {sortDirection.volume24h === "asc" ? (
+                            <IoMdArrowDropup />
+                          ) : (
+                            <IoMdArrowDropdown />
+                          )}
+                        </span>
+                        24 Volume
                       </span>
-                      24 Volume
                       <InfoTooltip text="The total value of the currency that has been traded in the last 24 hours." />
-                    </span>
+                    </div>
                   </th>
                 )}
+
                 {visibleColumns.marketCap && (
                   <th className="group py-2 cursor-pointer whitespace-nowrap lg:whitespace-normal border-b justify-end">
-                    <span className="flex text-xs items-center gap-1 justify-end flex-row">
+                    <div className="flex items-center justify-end">
                       <span
-                        className="transition-opacity opacity-0 group-hover:opacity-100"
+                        className="flex text-xs items-center gap-1 justify-end flex-row cursor-pointer select-none"
                         onClick={() => sortData("marketCap")}
                       >
-                        {sortDirection.marketCap === "asc" ? (
-                          <IoMdArrowDropup />
-                        ) : (
-                          <IoMdArrowDropdown />
-                        )}
+                        <span className="transition-opacity opacity-0 group-hover:opacity-100">
+                          {sortDirection.marketCap === "asc" ? (
+                            <IoMdArrowDropup />
+                          ) : (
+                            <IoMdArrowDropdown />
+                          )}
+                        </span>
+                        Market Cap
                       </span>
-                      Market Cap
+
                       <InfoTooltip text="The total value of the number of coins in circulation multiplied by the current market price of a single coin." />
-                    </span>
+                    </div>
                   </th>
                 )}
 
@@ -627,8 +643,7 @@ const PriceTable = () => {
                   <th className="px-4 py-2 pr-0 w-full flex items-center gap-1 text-xs border-b justify-end whitespace-nowrap lg:whitespace-normal">
                     <div className="flex items-center gap-2">
                       {" "}
-                      {/* Added gap here */}
-                      <span className="text-xs">Last 7 Days</span>
+                      <span className="text-xs select-none">Last 7 Days</span>
                       <InfoTooltip text="This shows a sparkline graph of the last 7 days of the currency's value." />
                     </div>
                   </th>
@@ -744,93 +759,97 @@ const PriceTable = () => {
         </div>
       </div>
       <AnimatePresence>
-      {isModalOpen && (
-        <motion.div
-        initial={{ opacity: 0, scale: 0.4 }}
-        animate={{ opacity: 1, scale: 1 }}
-        exit={{ opacity: 0, scale: 0.4 }}
-        className="fixed inset-0 flex items-center justify-center z-10">
-        <div className="absolute inset-0 bg-gray-300 opacity-50"></div>
-          <div className="bg-white shadow-3xl ounded-lg p-8 relative" ref={modalRef}>
-            <h2 className="text-xl font-semibold mb-4 mt-4">
-              Select Columns to Display
-            </h2>
-            <div className="flex flex-col items-center mt-2 space-y-4">
-              {relevantColumns.map((column) => (
-                <label
-                  className="flex items-center justify-between w-full"
-                  key={column}
-                >
-                  <span className="text-sm text-gray-700 mr-6">{column}</span>{" "}
-                  {/* Adjusted margin */}
-                  <div className="relative">
-                    <input
-                      type="checkbox"
-                      checked={visibleColumns[column]}
-                      onChange={() => handleColumnVisibilityChange(column)}
-                      className="sr-only" // Hide the checkbox
-                    />
-                    {/* Toggle background */}
-                    <div
-                      className={`w-12 h-6 rounded-full shadow-inner transition-colors duration-300 ${
-                        visibleColumns[column]
-                          ? "bg-primaryCyan"
-                          : "bg-gray-300"
-                      }`}
-                    ></div>
-                    {/* Toggle switch circle */}
-                    <div
-                      className={`absolute top-0.5 left-1 w-5 h-5 rounded-full bg-white shadow-md transform transition-transform duration-300 ${
-                        visibleColumns[column] ? "translate-x-6" : ""
-                      }`}
-                    ></div>
-                  </div>
-                </label>
-              ))}
-            </div>
-
-            <div className="mb-4 mt-6">
-              <h3 className="text-sm font-semibold text-gray-700">Rows</h3>
-              <div className="mt-2 flex space-x-2">
-                {[50, 100, 300].map((row) => (
-                  <button
-                    key={row}
-                    className={`px-4 py-2 flex-1 text-sm text-center ${
-                      selectedRows === row
-                        ? "bg-cyan-50 text-primaryCyan"
-                        : "text-gray-700 hover:bg-gray-100"
-                    } rounded-md`}
-                    onClick={() => setSelectedRows(row)}
+        {isModalOpen && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.4 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.4 }}
+            className="fixed inset-0 flex items-center justify-center z-10"
+          >
+            <div className="absolute inset-0 bg-gray-300 opacity-50"></div>
+            <div
+              className="bg-white shadow-3xl ounded-lg p-8 relative"
+              ref={modalRef}
+            >
+              <h2 className="text-xl font-semibold mb-4 mt-4">
+                Select Columns to Display
+              </h2>
+              <div className="flex flex-col items-center mt-2 space-y-4">
+                {relevantColumns.map((column) => (
+                  <label
+                    className="flex items-center justify-between w-full"
+                    key={column}
                   >
-                    {row}
-                  </button>
+                    <span className="text-sm text-gray-700 mr-6">{column}</span>{" "}
+                    {/* Adjusted margin */}
+                    <div className="relative">
+                      <input
+                        type="checkbox"
+                        checked={visibleColumns[column]}
+                        onChange={() => handleColumnVisibilityChange(column)}
+                        className="sr-only" // Hide the checkbox
+                      />
+                      {/* Toggle background */}
+                      <div
+                        className={`w-12 h-6 rounded-full shadow-inner transition-colors duration-300 ${
+                          visibleColumns[column]
+                            ? "bg-primaryCyan"
+                            : "bg-gray-300"
+                        }`}
+                      ></div>
+                      {/* Toggle switch circle */}
+                      <div
+                        className={`absolute top-0.5 left-1 w-5 h-5 rounded-full bg-white shadow-md transform transition-transform duration-300 ${
+                          visibleColumns[column] ? "translate-x-6" : ""
+                        }`}
+                      ></div>
+                    </div>
+                  </label>
                 ))}
               </div>
-            </div>
 
-            <div className="flex justify-end mt-4">
+              <div className="mb-4 mt-6">
+                <h3 className="text-sm font-semibold text-gray-700">Rows</h3>
+                <div className="mt-2 flex space-x-2">
+                  {[50, 100, 300].map((row) => (
+                    <button
+                      key={row}
+                      className={`px-4 py-2 flex-1 text-sm text-center ${
+                        selectedRows === row
+                          ? "bg-cyan-50 text-primaryCyan"
+                          : "text-gray-700 hover:bg-gray-100"
+                      } rounded-md`}
+                      onClick={() => setSelectedRows(row)}
+                    >
+                      {row}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div className="flex justify-end mt-4">
+                <button
+                  onClick={handleResetChanges}
+                  className="bg-gray-100 py-2 px-4 rounded-md mr-2"
+                >
+                  Reset
+                </button>
+                <button
+                  onClick={handleApplyChanges}
+                  className="bg-primaryCyan text-white py-2 px-4 rounded-md"
+                >
+                  Apply
+                </button>
+              </div>
               <button
-                onClick={handleResetChanges}
-                className="bg-gray-100 py-2 px-4 rounded-md mr-2"
+                onClick={handleCloseModal}
+                className="absolute top-2 right-2 p-2 text-gray-500 hover:text-gray-700 focus:outline-none"
               >
-                Reset
-              </button>
-              <button
-                onClick={handleApplyChanges}
-                className="bg-primaryCyan text-white py-2 px-4 rounded-md"
-              >
-                Apply
+                <span className="text-2xl">&times;</span>
               </button>
             </div>
-            <button
-              onClick={handleCloseModal}
-              className="absolute top-2 right-2 p-2 text-gray-500 hover:text-gray-700 focus:outline-none"
-            >
-              <span className="text-2xl">&times;</span>
-            </button>
-          </div>
-        </motion.div>
-      )}
+          </motion.div>
+        )}
       </AnimatePresence>
     </div>
   );
