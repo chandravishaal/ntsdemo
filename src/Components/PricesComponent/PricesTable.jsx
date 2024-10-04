@@ -21,7 +21,10 @@ const coinsData = [
     change7d: "+3.2",
     volume24h: "$56,152,770,174",
     marketCap: "$1,200,820,521,596",
-    last7Days: [2624.4769228944, 2615.1250638228, 2622.59502825109, 2625.87384268626, 2603.25510165437, 2596.20571829867, 2576.48934428339],
+    last7Days: [
+      2624.4769228944, 2615.1250638228, 2622.59502825109, 2625.87384268626,
+      2603.25510165437, 2596.20571829867, 2576.48934428339,
+    ],
     tradable: true,
     imageUrl: "https://cryptologos.cc/logos/bitcoin-btc-logo.svg?v=035",
   },
@@ -252,6 +255,7 @@ const coinsData = [
 const InfoTooltip = ({ text }) => {
   const [isTooltipVisible, setIsTooltipVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const tooltipRef = useRef(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -264,12 +268,40 @@ const InfoTooltip = ({ text }) => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  useEffect(() => {
+    if (isMobile && isTooltipVisible) {
+      const timer = setTimeout(() => {
+        setIsTooltipVisible(false);
+      }, 10000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [isMobile, isTooltipVisible]);
+
   const handleToggleTooltip = () => {
     setIsTooltipVisible((prev) => !prev);
   };
 
+  const handleClickOutside = (e) => {
+    if (tooltipRef.current && !tooltipRef.current.contains(e.target)) {
+      setIsTooltipVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    if (isTooltipVisible) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isTooltipVisible]);
+
   return (
-    <div className="relative inline-block">
+    <div className="relative inline-block" ref={tooltipRef}>
       <span
         className="text-black-500 font-bold cursor-pointer hover:text-black-700"
         onMouseEnter={!isMobile ? () => setIsTooltipVisible(true) : null}
@@ -386,7 +418,7 @@ const PriceTable = () => {
   };
 
   // Function to render the sparkline graph with a shaded area and color-specific shadow
- const renderSparkline = (data) => {
+  const renderSparkline = (data) => {
     if (!data || data.length === 0) {
       return <div>No data available</div>;
     }
@@ -462,13 +494,13 @@ const PriceTable = () => {
   };
 
   return (
-    <div className="container mx-auto mt-20 mb-10">
-      <div className="flex justify-between items-center mb-4">
-        <h1 className="text-3xl font-montserrat  font-bold">
+    <div className="container mx-auto my-10">
+      <div className="flex justify-between items-center mb-4 ">
+        <h1 className="text-3xl font-montserrat font-bold px-5">
           Explore Crypto Prices
         </h1>
       </div>
-      <div className="flex items-center justify-between mb-4">
+      <div className="flex items-center justify-between mb-4 px-3">
         <input
           type="text"
           className="w-1/2 bg-gray-100 border-gray-300 py-2 px-6 rounded-md hover:bg-gray-300 mr-4 font-montserrat"
@@ -609,22 +641,24 @@ const PriceTable = () => {
                   <td className="px-2 py-4 border-b text-right">
                     <div className="flex justify-end items-center pl-2">
                       <CiStar />
-                      <span className="text-xs">
-                        &nbsp;{index + 1}
-                      </span>
+                      <span className="text-xs">&nbsp;{index + 1}</span>
                     </div>
                   </td>
                   {visibleColumns.name && (
                     <td className=" px-8 py-4 border-b text-start w-[200px]">
                       <div className="flex items-center w-[200px] justify-between">
                         <span className="flex items-center gap-2">
-                        <img
-                          src={crypto.imageUrl}
-                          alt={crypto.symbol}
-                          className="w-5 h-5"
-                        />
-                          <span className="font-semibold text-sm">{crypto.name}</span>{" "}
-                          <span className="text-xs text-gray-600">{crypto.symbol}</span>
+                          <img
+                            src={crypto.imageUrl}
+                            alt={crypto.symbol}
+                            className="w-5 h-5"
+                          />
+                          <span className="font-semibold text-sm">
+                            {crypto.name}
+                          </span>{" "}
+                          <span className="text-xs text-gray-600">
+                            {crypto.symbol}
+                          </span>
                         </span>
                         {crypto.tradable && (
                           <span className="cursor-pointer px-1.5 text-xs font-medium text-inline border border-green-500 text-primary-500 rounded-md text-center text-green-500 mr-1">

@@ -7,7 +7,7 @@ const Prices = () => {
   return (
     <>
       {/* <ComingSoon /> */}
-      <PriceHighlights />
+      {/* <PriceHighlights /> */}
       <PriceTable />
     </>
   )

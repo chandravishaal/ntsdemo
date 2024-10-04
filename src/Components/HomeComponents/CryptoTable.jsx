@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import {
   AreaChart,
   XAxis,
@@ -228,6 +228,7 @@ const cryptocurrencies = [
 const InfoTooltip = ({ text }) => {
   const [isTooltipVisible, setIsTooltipVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const tooltipRef = useRef(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -240,12 +241,40 @@ const InfoTooltip = ({ text }) => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  useEffect(() => {
+    if (isMobile && isTooltipVisible) {
+      const timer = setTimeout(() => {
+        setIsTooltipVisible(false);
+      }, 10000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [isMobile, isTooltipVisible]);
+
   const handleToggleTooltip = () => {
     setIsTooltipVisible((prev) => !prev);
   };
 
+  const handleClickOutside = (e) => {
+    if (tooltipRef.current && !tooltipRef.current.contains(e.target)) {
+      setIsTooltipVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    if (isTooltipVisible) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isTooltipVisible]);
+
   return (
-    <div className="relative inline-block">
+    <div className="relative inline-block" ref={tooltipRef}>
       <span
         className="text-black-500 font-bold cursor-pointer hover:text-black-700"
         onMouseEnter={!isMobile ? () => setIsTooltipVisible(true) : null}
@@ -403,17 +432,25 @@ const CryptoTable = () => {
                   </th>
                 )}
                 {visibleColumns.marketCap && (
-                  <th
-                    className="px-4 py-2 cursor-pointer whitespace-nowrap lg:whitespace-normal  border-b text-center font-montserrat flex items-center"
-                    onClick={sortByMarketCap}
-                  >
-                    {sortDirection === "asc" ? (
-                      <IoMdArrowDropup />
-                    ) : (
-                      <IoMdArrowDropdown />
-                    )}
-                    Market Cap
-                    <InfoTooltip text="The total value of the number of coins in circulation multiplied by the current market price of a single coin." />
+                  <th className="px-4 py-2 cursor-pointer whitespace-nowrap lg:whitespace-normal border-b text-center font-montserrat flex items-center">
+                    <span className="flex items-center gap-1 justify-start flex-row group">
+                      {/* Bring the arrow to the left */}
+                      <span
+                        className="flex items-center gap-1"
+                        onClick={sortByMarketCap}
+                      >
+                        {/* The icon takes the lead now */}
+                        <span className="transition-opacity opacity-0 group-hover:opacity-100 text-black">
+                          {sortDirection === "asc" ? (
+                            <IoMdArrowDropup />
+                          ) : (
+                            <IoMdArrowDropdown />
+                          )}
+                        </span>
+                        Market Cap
+                      </span>
+                      <InfoTooltip text="The total value of the number of coins in circulation multiplied by the current market price of a single coin." />
+                    </span>
                   </th>
                 )}
 
