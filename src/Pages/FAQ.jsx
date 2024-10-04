@@ -23,6 +23,10 @@ const FAQ = () => {
         exit: {opacity: 0, scale: 0.8}
     };
 
+    const handleCloseModal = () =>{
+        setOpenModal(false)
+    }
+
     const faqData = [
         {
             category: 'General FAQs',
@@ -335,7 +339,7 @@ const FAQ = () => {
 
 
 
-                <div className="border border-gray-300 rounded-lg p-4 mt-6 flex items-center flex-col md:flex-row">
+                {/* <div className="border border-gray-300 rounded-lg p-4 mt-6 flex items-center flex-col md:flex-row">
                     <img
                         src="https://placehold.co/50x50"
                         alt="Profile picture of a friendly team member"
@@ -353,16 +357,22 @@ const FAQ = () => {
                             Get in touch
                         </button>
                     </div>
-                </div>
+                </div> */}
+
                 {/*Modal */}
                 {openModal && (
-                    <motion.div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50" initial='hidden' animate='visible' exit='exit' variants={modalVariants} transition={{duration: 0.3, ease: "easeInOut"}}>
-                        <div className="bg-white p-6 rounded-lg shadow-lg w-[90%] max-w-[500px] h-auto">
-                            <button className="absolute top-4 right-4 text-gray-500" onClick={() => setOpenModal(false)}></button>
-
+                    <motion.div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-20" initial='hidden' animate='visible' exit='exit' variants={modalVariants} transition={{duration: 0.3, ease: "easeInOut"}}>
+                        <div className="bg-white p-8 rounded-lg shadow-lg w-[90%] max-w-[500px] h-auto mt-10">
+                            <button className="absolute top-4 right-4 text-gray-500 text-4xl" onClick={() => setOpenModal(true)}></button>
+                            <div className="flex justify-end">
+                                <button className="text-3xl" onClick={handleCloseModal}>
+                                    <i className="ri-close-line"></i>
+                                </button>
+                            </div>
                             {/* Modal Heading */}
-                            <h2 className="text-4xl font-antipasto-pro font-bold tracking-tight">We'd love to help</h2>
+                            <h2 className="text-3xl font-antipasto-pro font-bold tracking-tight pt-5">We'd love to help</h2>
                             <p className="text-gray-600 mb-5 font-NorthStarsans">Reach out and we'll get in touch within 24 hours</p>
+                            
 
                             {/* Modal Form */}
                             <div className="">
@@ -394,7 +404,7 @@ const FAQ = () => {
                                         <label htmlFor="message" className="block text-sm font-NorthStarsans font-extrabold text-gray-700">
                                             Message
                                         </label>
-                                        <textarea id="message" rows={4} placeholder="Leave us a message..." className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-black focus:border-black"/>
+                                        <textarea id="message" rows={4} placeholder="Leave us a message..." className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-black focus:border-black resize-none"/>
                                     </div>
 
                                     <div className="flex justify-end">
