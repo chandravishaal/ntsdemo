@@ -92,6 +92,7 @@
 
 
 // import React from 'react';
+import sumsub from '../../assets/Images/About/sumsub.svg';
 
 const MobilePartners = () => {
   return (
@@ -156,7 +157,7 @@ const MobilePartners = () => {
                     </a>
                     <a href='https://sumsub.com/' className="flex flex-col items-center">
                       <img
-                        src="https://play-lh.googleusercontent.com/1Os7bEHgceQn6OZROH312Mqj1kp_PHgTZa9XZ1PvnJKvfTvdQAIKzp0jWRP-__1FxA=s188-rw"
+                        src={sumsub}
                         alt="Partner 4"
                         className="w-16 h-16 sm:w-24 sm:h-24 object-contain rounded-md transition-transform duration-500 ease-in-out hover:scale-110"
                       />
