@@ -78,7 +78,7 @@ const Culture = () => {
   }, []);
 
   return (
-    <div className="h-[40rem] w-full flex items-center justify-between">
+    <div className="h-[52rem] md:h-[40rem] w-full flex items-center justify-between">
       <div
         id="main"
         className="md:h-4/6 mx-auto container bg-gradient-to-b from-white to-cyan-50 md:bg-gradient-to-b md:from-white md:to-cyan-50 rounded-lg flex flex-col-reverse md:flex-row items-center justify-between overflow-hidden"
