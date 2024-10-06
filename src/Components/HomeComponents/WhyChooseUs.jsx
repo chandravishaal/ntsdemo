@@ -658,7 +658,7 @@ const WhyChooseUs = () => {
               </div>
 
               <div
-                className='flex flex-col items-center space-y-2 absolute bottom-[10%] right-[45%]'
+                className='flex flex-col items-center space-y-2 absolute bottom-[16%] right-[45%]'
                 onMouseEnter={() => {
                   handleMouseEnter('icon2');
                   gsap.to('.icon2-text', { x: -80, opacity: 1, duration: 0.5, scale:1.1, ease: 'power2.out', });
@@ -679,7 +679,7 @@ const WhyChooseUs = () => {
 
             {/* Center phone image */}
             <div id='center' className=' w-full lg:w-1/3 h-full flex justify-center relative'>
-              <img src={phone} alt='Phone' className='relative z-20 -bottom-[30%] lg:-bottom-[15%] w-[20rem] lg:w-[36rem]' />
+              <img src={phone} alt='Phone' className='relative z-20 -bottom-[30%] lg:-bottom-[9%] w-[20rem] lg:w-[36rem]' />
             </div>
 
             {/* Right section for icons */}
@@ -721,7 +721,7 @@ const WhyChooseUs = () => {
               </div>
 
               <div
-                className='flex flex-col items-center space-y-2 absolute bottom-[16%] left-[56%]'
+                className='flex flex-col items-center space-y-2 absolute bottom-[20%] left-[56%]'
                 onMouseEnter={() => {
                   handleMouseEnter('icon6');
                   gsap.to('.icon6-text', { x: -10, opacity: 1, duration: 0.5, ease: 'power2.out' });
@@ -748,8 +748,8 @@ const WhyChooseUs = () => {
             <div className='icon1-text absolute top-[36%] left-[33%] w-52 p-2 bg-white rounded-xl shadow-xl opacity-0'>
               <p className='text-xs lg:text-sm text-center'>Easy to start, simply give us a call, set an appointment, or visit our office, and you'll complete your first trade.</p>
             </div>
-            <div className='icon2-text absolute bottom-[10%] left-[33%] w-52 p-2 bg-white rounded-xl shadow-xl opacity-0'>
-              <p className='text-xs lg:text-sm text-center'>Convenient payment options in trading, like credit cards and e-wallets, streamline transactions, making it easier and efficiently.</p>
+            <div className='icon2-text absolute bottom-[20%] left-[33%] w-52 p-2 bg-white rounded-xl shadow-xl opacity-0'>
+              <p className='text-xs lg:text-sm text-center'>Convenient payment options in trading, like credit cards and e-wallets,  making it easier and efficiently.</p>
             </div>
             <div className='icon4-text absolute top-[10%] right-[33%] w-52 p-2 bg-white rounded-xl shadow-xl opacity-0'>
               <p className='text-xs lg:text-sm text-center'>Trading is easy to start with online platforms, educational resources, and small investments, allowing anyone to learn and grow financially.</p>
@@ -757,7 +757,7 @@ const WhyChooseUs = () => {
             <div className='icon5-text absolute top-[36%] right-[25%] w-52 p-2 bg-white rounded-xl shadow-xl opacity-0'>
               <p className='text-xs lg:text-sm text-center'>Safe and secure trading involves using reputable platforms, implementing strong passwords, and practicing risk management to protect you.</p>
             </div>
-            <div className='icon6-text absolute bottom-[16%] right-[25%] w-52 p-2 bg-white rounded-xl shadow-xl opacity-0'>
+            <div className='icon6-text absolute bottom-[25%] right-[25%] w-52 p-2 bg-white rounded-xl shadow-xl opacity-0'>
               <p className='text-xs lg:text-sm text-center'>We offer 24/7 support to assist you at any time.</p>
             </div>
           </div>

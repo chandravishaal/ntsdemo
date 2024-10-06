@@ -74,7 +74,7 @@ const HeaderSection = () => {
                 <input
                   type="text"
                   placeholder="Full name"
-                  className="w-full p-4 pl-[22%] md:pl-[17%] lg:pl-[12%] rounded-xl bg-[#79D7EB] placeholder-gray-700 focus:outline-none font-century-gothic"
+                  className="w-full p-4 pl-[25%] md:pl-[17%] lg:pl-[12%] rounded-xl bg-[#79D7EB] placeholder-gray-700 focus:outline-none font-century-gothic"
                 />
               </div>
 
@@ -88,7 +88,7 @@ const HeaderSection = () => {
                 <input
                   type="email"
                   placeholder="Email address"
-                  className="w-full p-4 pl-[22%] md:pl-[17%] lg:pl-[12%] rounded-xl bg-[#79D7EB] placeholder-gray-700 focus:outline-none font-century-gothic"
+                  className="w-full p-4 pl-[25%] md:pl-[17%] lg:pl-[12%] rounded-xl bg-[#79D7EB] placeholder-gray-700 focus:outline-none font-century-gothic"
                 />
               </div>
 
@@ -102,7 +102,7 @@ const HeaderSection = () => {
                 <input
                   type="tel"
                   placeholder="Phone number"
-                  className="w-full p-4 pl-[21%] md:pl-[17%] lg:pl-[12%] rounded-xl bg-[#79D7EB] placeholder-gray-700 focus:outline-none font-century-gothic"
+                  className="w-full p-4 pl-[25%] md:pl-[17%] lg:pl-[12%] rounded-xl bg-[#79D7EB] placeholder-gray-700 focus:outline-none font-century-gothic"
                 />
               </div>
 
@@ -116,7 +116,7 @@ const HeaderSection = () => {
                 <input
                   type="text"
                   placeholder="Deal size"
-                  className="w-full p-4 pl-[21%] md:pl-[17%] lg:pl-[12%] rounded-xl bg-[#79D7EB] placeholder-gray-700 focus:outline-none font-century-gothic"
+                  className="w-full p-4 pl-[25%] md:pl-[17%] lg:pl-[12%] rounded-xl bg-[#79D7EB] placeholder-gray-700 focus:outline-none font-century-gothic"
                 />
               </div>
 
@@ -130,7 +130,7 @@ const HeaderSection = () => {
                 <input
                   type="text"
                   placeholder="Company name"
-                  className="w-full p-4 pl-[21%] md:pl-[17%] lg:pl-[12%] rounded-xl bg-[#79D7EB] placeholder-gray-700 focus:outline-none font-century-gothic"
+                  className="w-full p-4 pl-[25%] md:pl-[17%] lg:pl-[12%] rounded-xl bg-[#79D7EB] placeholder-gray-700 focus:outline-none font-century-gothic"
                 />
               </div>
 
@@ -143,7 +143,7 @@ const HeaderSection = () => {
                 />
                 <textarea
                   placeholder="Comments"
-                  className="w-full p-4 pl-[21%] md:pl-[17%] lg:pl-[12%] rounded-xl bg-[#79D7EB] placeholder-gray-700 focus:outline-none font-century-gothic"
+                  className="w-full p-4 pl-[25%] md:pl-[17%] lg:pl-[12%] rounded-xl bg-[#79D7EB] placeholder-gray-700 focus:outline-none font-century-gothic"
                   rows="3"
                 ></textarea>
               </div>

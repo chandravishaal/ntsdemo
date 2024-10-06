@@ -101,17 +101,17 @@ const Faq = () => {
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="rounded-lg overflow-hidden"
+                className="rounded-xl overflow-hidden"
                 id={`faq-item-${index}`}
               >
                 <div
-                  className="bg-white text-black font-century-gothic pr-6  cursor-pointer flex items-center justify-between"
+                  className="bg-white text-black font-century-gothic pr-6  cursor-pointer flex items-center justify-between overflow-hidden"
                   onClick={() => toggleFAQ(index)}
                 >
                   <div className="flex items-center">
                     <div>
                       <span className="bg-primaryCyan text-black 
-                        h-[4rem] w-[4rem] flex items-center justify-center mr-5">
+                        h-[6rem] w-[5rem] flex items-center justify-center mr-5 text-5xl md:text-3xl font-century-gothic">
                         {index + 1}
                       </span>
                     </div>
