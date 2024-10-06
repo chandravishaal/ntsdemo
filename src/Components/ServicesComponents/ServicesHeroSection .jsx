@@ -153,7 +153,7 @@ const ServicesHeroSection = () => {
           />
           <img
             src={mobile2}
-            className="lg:w-[50rem] md:w-[30rem] w-[25rem] mx-auto"
+            className="lg:w-[50rem] md:w-[30rem] xs:w-[23rem] w-[20rem] xs:mt-0.5 mt-1.5  mx-auto"
             alt="Mobile 2"
           />
         </div>
