@@ -480,7 +480,7 @@
 //           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy <br /> text of the printing and typesetting industry.
 //         </p>
 //         <div className="flex flex-col md:flex-row justify-between gap-6 relative items-center">
-//           <div className="w-full md:w-1/3 h-full flex justify-end border relative">
+//           <div className="w-full md:w-1/3 h-full flex justify relative">
 //             <img src={image} alt="Hexagon Shape" className="w-[75%] h-auto  relative" />
 //             {/* Left content */}
 //             <div id="content" className="flex flex-col justify-center items-center absolute right-[15%] top-[15%]">
@@ -569,7 +569,7 @@
    }, []);
 
    const slides = [
-     { number: 1, icon: icon1, title: "Onboarding", description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, nihil?" },
+     { number: 1, icon: icon1, title: "Onboarding", description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.  Blanditiis, nihil?" },
      { number: 2, icon: icon2, title: "Fund Deposit", description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, nihil?" },
      { number: 3, icon: icon3, title: "Settlement", description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, nihil?" },
    ];
@@ -580,12 +580,47 @@
 
    return (
     <section ref={sectionRef} className="bg-cyan-50 py-8 sm:py-12 md:py-12 lg:h-[40rem] h-auto">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-10">
         <h2 className="text-4xl font-bold text-gray-700 pb-5 font-montserrat text-center">How it works</h2>
         <p className="text-gray-500 font-extrabold font-century-gothic px-5 text-center mb-12">
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy <br /> text of the printing and typesetting industry.
         </p>
-        {isMobile ? (
+        {window.innerWidth < 345 ? (
+          <div className="relative">
+            <div className="overflow-hidden">
+              <div className="flex   transition-transform duration-300 ease-in-out" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+                {slides.map((slide, index) => (
+                  <div key={index} className="w-full flex-shrink-0">
+                    <div className="relative flex flex-col border ">
+                      <img src={image} alt="Hexagon Shape" className="w-[99%] h-[40%] relative" />
+                      <div id="content" className="  flex flex-col  absolute inset-0 top-[18%] -left-[5%]">
+                      <div className=" text-center absolute left-5">
+                        <div className="absolute top-[50%] -left-[5%]  ">
+                          <h1 className="text-5xl font-black text-gray-800">{slide.number}</h1>
+                        </div>
+                        <img src={slide.icon} alt={`Icon ${slide.number}`} className="w-12 h-12 mx-auto mb-2" />
+                        <h1 className="text-xl font-semibold font-montserrat mb-1">{slide.title}</h1>
+                        <p className="px-5 text-xs font-century-gothic w-[12rem] text-center">{slide.description}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="flex justify-center mt-2">
+              {slides.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToSlide(index)}
+                  className={`h-2 w-2 mx-1 rounded-full ${
+                    currentSlide === index ? 'bg-gray-800' : 'bg-gray-300'
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+        ) : isMobile ? (
           <div className="relative">
             <div className="overflow-hidden">
               <div className="flex transition-transform duration-300 ease-in-out" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
@@ -593,13 +628,14 @@
                   <div key={index} className="w-full flex-shrink-0">
                     <div className="relative flex flex-col items-end">
                       <img src={image} alt="Hexagon Shape" className=" h-auto relative" />
-                      <div id="content" className="flex flex-col justify-center items-center absolute inset-0 ">
-                        <div className="absolute top-[50%] left-[10%]">
+                      <div id="content" className="flex flex-col justify-center items-center border absolute inset-0 ">
+                        
+                        <div className="absolute top-[50%] border left-[8%]">
                           <h1 className="text-7xl font-black text-gray-800">{slide.number}</h1>
                         </div>
                         <img src={slide.icon} alt={`Icon ${slide.number}`} className="w-16 h-16 mx-auto mb-4" />
                         <h1 className="text-2xl font-semibold font-montserrat mb-2">{slide.title}</h1>
-                        <p className="px-2 text-sm font-century-gothic w-[15rem] text-center">{slide.description}</p>
+                        <p className="px-11 text-sm font-century-gothic w-[15rem] text-center">{slide.description}</p>
                       </div>
                     </div>
                   </div>
@@ -627,12 +663,12 @@
                     <div className="relative flex flex-col items-center ml-20">
                       <img src={image} alt="Hexagon Shape" className="w-[40%] h-auto relative" />
                       <div id="content" className="flex flex-col justify-center items-center absolute inset-0 right-[20%]">
-                        <div className="absolute top-[40%] left-[15%]">
-                          <h1 className="text-8xl font-black text-gray-800">{slide.number}</h1>
+                        <div className="absolute top-[40%] left-[14%]">
+                          <h1 className="text-7xl font-black text-gray-800">{slide.number}</h1>
                         </div>
                         <img src={slide.icon} alt={`Icon ${slide.number}`} className="w-20 h-20 mx-auto mb-6" />
                         <h1 className="text-3xl font-semibold font-montserrat mb-3">{slide.title}</h1>
-                        <p className="px-4 text-base font-century-gothic w-[20rem] text-center">{slide.description}</p>
+                        <p className="px-4 text-base font-century-gothic w-[18rem] text-center">{slide.description}</p>
                       </div>
                     </div>
                   </div>
@@ -657,8 +693,8 @@
               <div key={index} className="w-full md:w-1/3 h-full flex justify-end  relative">
                 <img src={image} alt="Hexagon Shape" className="w-[75%] h-auto relative" />
                 <div id="content" className="flex flex-col justify-center items-center absolute right-[15%] top-[15%]">
-                  <div className="absolute top-[25%] -left-[25%]">
-                    <h1 className="text-9xl font-black text-gray-800">{slide.number}</h1>
+                  <div className="absolute top-[25%] -left-[10%]">
+                    <h1 className="text-7xl font-black text-gray-800">{slide.number}</h1>
                   </div>
                   <img src={slide.icon} alt={`Icon ${slide.number}`} className="w-16 h-16 mx-auto mb-4" />
                   <h1 className="text-3xl font-semibold font-montserrat mb-2">{slide.title}</h1>
