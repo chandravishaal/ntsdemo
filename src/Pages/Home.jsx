@@ -10,6 +10,7 @@ import Blog from "../Components/HomeComponents/Blog";
 import CryptoFreedomSection from "../Components/HomeComponents/CryptoFreedomSection";
 import VideoSection from "../Components/HomeComponents/VideoSection";
 import CryptoTable from "../Components/HomeComponents/CryptoTable";
+import Hero2 from "../Components/HomeComponents/Hero2";
 
 const Home = () => {
   
@@ -40,7 +41,8 @@ const Home = () => {
   return (
     <>
       <CoinMarquees />
-      <HeroSection />
+      {/* <HeroSection /> */}
+      {/* <Hero2 /> */}
       <Explore />
       <WhyChooseUs />
       <CryptoTable />

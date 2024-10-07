@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import 'remixicon/fonts/remixicon.css'; // Import Remix Icons
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const FAQ = () => {
     const [openCategory, setOpenCategory] = useState('General FAQs'); // To track which category is open
@@ -256,15 +257,15 @@ const FAQ = () => {
                     <h1 className="text-3xl font-bold mb-4 md:mb-0">Frequently Asked Questions</h1>
                     <div className="ml-auto flex space-x-2 mt-4 md:mt-0 w-full md:w-auto">
                         <div className="w-full">
-                            <button className="bg-black text-white rounded-full px-4 py-2 text-sm w-full flex items-center justify-center" onClick={() => setOpenModal(true)}>
+                            <button className="bg-primaryCyan shadow-xl text-white rounded-full px-4 py-2 text-sm w-full flex items-center justify-center" onClick={() => setOpenModal(true)}>
                                 Get in touch
                             </button>
                         </div>
                     </div>
                 </div>
                 <p className="mb-6 text-gray-600 text-center md:text-left">
-                    Quick answers to questions you may have. Can’t find what you’re looking for? Check out our{' '}
-                    <a href="#" className="text-blue-600">FAQs</a>.
+                    Quick answers to questions you may have. Can&apos;t find what you&apos;re looking for? Check out our{' '}
+                    <Link to="/" className="text-primaryCyan">FAQs</Link>.
                 </p>
 
              {/* Render FAQ categories as an accordion */}

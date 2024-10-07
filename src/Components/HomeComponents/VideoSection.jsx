@@ -1,38 +1,8 @@
-{/*import mobileBanner from "../../assets/Images/4th_section_mobile.png";
-import videoThumbnail from "../../assets/Video/sampleVideo2.mp4";
-import PrimaryButton from "../../Common/PrimaryButton";
-import SecondaryButton from "../../Common/SecondaryButton";
 
-const VideoSection = () => {
-  return (
-    <>
-      {/* Video Section *
-      <div className="relative">
-        <video
-          src={videoThumbnail}
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          className="w-full h-[600px] object-cover opacity-95"
-          aria-label="Background video"
-          onError={(e) => console.error("Video failed to load", e)}
-        >
-          Your browser does not support the video tag.
-        </video>
-        {/* Overlay *
-        <div className="absolute inset-0 bg-black opacity-60"></div>
-      </div>
-
-      
-    </>
-  );
-};
-
-export default VideoSection;*/}
 import React, { useState, useRef } from "react";
 import videoThumbnail from "../../assets/Video/sampleVideo2.mp4";
+import { MdOutlineArrowOutward } from "react-icons/md";
+
 
 const videos = [
   {
@@ -124,9 +94,9 @@ const VideoSection = () => {
           <button
             onMouseEnter={handleMouseEnterNext}
             onMouseLeave={handleMouseLeaveNext}
-            className="absolute top-5 left-5 z-10 bg-white text-black p-3 rounded-lg shadow-lg transition-opacity duration-300 opacity-100"
+            className="absolute top-5 left-5 z-10 bg-white flex items-center gap-2 transition-all duration-300 hover:bg-transparent border border-white hover:text-white text-black p-3 rounded-lg shadow-lg opacity-100"
           >
-            Next
+            Next <span><MdOutlineArrowOutward /></span>
           </button>
         )}
 

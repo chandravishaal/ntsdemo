@@ -16,10 +16,7 @@ const CryptoFreedomSection = () => {
         <img
           src={overallImage}
           alt="Conceptual graphic illustrating global financial freedom with diverse individuals engaged in cryptocurrency transactions"
-          //alt="Crypto Freedom Image"
           className="w-full h-auto mb-10 select-none"
-          data-aos="fade-up"
-          data-aos-duration="3000"
         />
       </div>
       <Button3 title="Learn More" />
