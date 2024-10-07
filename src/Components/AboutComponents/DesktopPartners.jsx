@@ -20,7 +20,7 @@ const Partners = () => {
   };
 
   return (
-    <div className="relative px-5">
+    <div className="relative px-5 py-20 z-50  ">
       {/* Circular Background with Blur */}
       <div className="absolute inset-0 flex justify-center items-center">
         <div className="circlePosition w-[600px] h-[500px] bg-primaryCyan/40 rounded-lg absolute z-1 top-[50%] left-[53%] translate-x-[-5%] translate-y-[-50%] blur-[400px]"></div>
@@ -85,11 +85,11 @@ const Partners = () => {
                     </a>
                     <a className="flex flex-col items-center">
                       <img
-                        src="https://crypto.com/__assets/mkt-nav-footer/images/cdc_logo.svg"
+                        src="https://static.intercomassets.com/avatars/5144030/square_128/Logo-1629191123.jpg"
                         alt="Partner 3"
                         className="w-16 h-16 sm:w-24 sm:h-24 bg-gray-700 rounded-md object-contain transition-transform duration-500 ease-in-out hover:scale-110"
                       />
-                      <span className="text-center font-montserrat mt-2 text-sm sm:text-base">Crypto</span>
+                      <span className="text-center font-montserrat mt-2 text-sm sm:text-base">crypto.com</span>
                     </a>
                     <a className="flex flex-col items-center">
                       <img

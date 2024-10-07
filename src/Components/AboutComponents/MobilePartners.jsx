@@ -163,7 +163,7 @@ const MobilePartners = () => {
                       />
                       <span className="text-center font-montserrat mt-2 text-sm sm:text-base">Sumsub</span>
                     </a>
-                  </div>
+                  </div>  
                 </div>
                 <div className="my-20">
                   <button
