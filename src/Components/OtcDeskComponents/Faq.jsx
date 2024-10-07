@@ -86,7 +86,7 @@ const Faq = () => {
 
   return (
     <section className="bg-cyan-50 py-10" id="faq-main" ref={faqRef}>
-      <div className="container mx-auto px-4" id="faq-container">
+      <div className="container mx-auto px-4 md:px-10" id="faq-container">
         <h2 className="text-4xl font-bold font-century-gothic mb-8 text-center">FAQ</h2>
 
         {/* Wrapper for image and FAQ section */}
@@ -101,7 +101,7 @@ const Faq = () => {
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="rounded-xl overflow-hidden"
+                className="rounded-xl overflow-hidden "
                 id={`faq-item-${index}`}
               >
                 <div
@@ -111,11 +111,11 @@ const Faq = () => {
                   <div className="flex items-center">
                     <div>
                       <span className="bg-primaryCyan text-black 
-                        h-[6rem] w-[5rem] flex items-center justify-center mr-5 text-5xl md:text-3xl font-century-gothic">
+                        h-[6rem] md:h-[5rem] w-[5rem] flex items-center justify-center mr-5 text-4xl md:text-xl font-century-gothic">
                         {index + 1}
                       </span>
                     </div>
-                    <h4 className="font-light font-century-gothic">{faq.question}</h4>
+                    <h4 className="font-light text-sm font-century-gothic">{faq.question}</h4>
                   </div>
                   <span className="text-xl flex items-center justify-center bg-white border-2 border-sky-900 rounded-full w-6 h-6 p-1">
                     {activeIndex === index ? <FiMinus /> : <FaPlus />}
@@ -138,7 +138,7 @@ const Faq = () => {
 
           {/* Image Section (Right) */}
           <div
-            className="w-full md:w-1/2 mb-10 md:mb-0"
+            className="w-full md:w-1/2 mb-10 md:mb-0 my-auto "
             id="faq-right"
             ref={rightSectionRef}
           >
