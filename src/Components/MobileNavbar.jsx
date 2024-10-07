@@ -160,7 +160,7 @@ const MobileNavbar = () => {
               <div onClick={() => handleAccordionNavigation('/news')} className="py-2 text-sm flex items-center gap-1">
                 <span><IoNewspaperOutline /></span>News
               </div>
-              <div onClick={() => handleAccordionNavigation('/contact-us')} className="py-2 text-sm flex items-center gap-1">
+              <div onClick={() => handleAccordionNavigation('/contact')} className="py-2 text-sm flex items-center gap-1">
                 <span><RiCustomerService2Line /></span>Support
               </div>
               <div onClick={() => handleAccordionNavigation('/team')} className="py-2 text-sm flex items-center gap-1">
@@ -230,7 +230,7 @@ const MobileNavbar = () => {
                 Exchange
               </div>
               <div
-                onClick={() => handleStandaloneClick('/contact-us')}
+                onClick={() => handleStandaloneClick('/contact')}
                 className="w-full text-left p-4 text-base font-semibold flex items-center gap-4"
               >
                 Contact Us <span className="rotate-45"><IoMdArrowUp /></span>
