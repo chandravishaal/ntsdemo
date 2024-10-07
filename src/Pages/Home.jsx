@@ -42,7 +42,7 @@ const Home = () => {
     <>
       <CoinMarquees />
       {/* <HeroSection /> */}
-      {/* <Hero2 /> */}
+      <Hero2 />
       <Explore />
       <WhyChooseUs />
       <CryptoTable />

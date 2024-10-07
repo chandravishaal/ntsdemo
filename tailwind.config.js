@@ -9,7 +9,7 @@ export default {
       'xs': '360px',//add custom screen size
       'sm': '640px',
       'md': '768px',
-      'lg': '1024px',
+      'lg': '1025px',
       'xl': '1280px',
       '2xl': '1536px',
     },
@@ -21,6 +21,9 @@ export default {
       'century-gothic': ['CustomFont', 'sans-serif'], // Added Century Gothic
     },
     extend: {
+      perspective: {
+        '1000': '1000px',
+      },
       colors: {
         primaryCyan: '#16D5FF', // Add your custom color here
         secondaryGray: '#F3F4F6',  // Another example of a custom color
