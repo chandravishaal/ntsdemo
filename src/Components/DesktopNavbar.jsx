@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { AnimatePresence, motion } from "framer-motion";
 import PrimaryButton from "../Common/PrimaryButton";
@@ -22,6 +22,7 @@ import { FaRegHandshake } from "react-icons/fa6";
 
 
 
+
 const FlyOutLink = ({
   children,
   to,
@@ -29,8 +30,16 @@ const FlyOutLink = ({
   placement,
 }) => {
   const [open, setOpen] = useState(false);
+  const navigate= useNavigate();
 
   const showFlyout = open && FlyoutContent;
+  const handleClick = (path) => {
+    setOpen(false);
+    setTimeout(()=>{
+      navigate(path);
+    },10)
+    
+  };
 
   return (
     <div
@@ -78,7 +87,7 @@ const FlyOutLink = ({
                   : "left-1/2 -translate-x-1/2" // Arrow centered
               }`}
             ></div>
-            <FlyoutContent />
+            <FlyoutContent handleClose={handleClick} />
           </motion.div>
         )}
       </AnimatePresence>
@@ -87,19 +96,19 @@ const FlyOutLink = ({
 };
 
 // Learn Flyout Content
-const LearnFlyoutContent = () => {
+const LearnFlyoutContent = ({handleClose}) => {
   return (
     <div className="flex gap-2 rounded-2xl bg-white p-2 font-century-gothic">
       <div className="p-5 w-[230px] flex flex-col gap-1">
         <h1 className="select-none text-xl font-medium">Resources</h1>
         <p className="text-xs text-gray-400">Learn about crypto in the most easiest way and never forget again.</p>
-        <div className="flex items-center gap-1 mt-5"><Link to="/learn" className="text-lg text-primaryCyan">Click to Learn</Link><span className="rotate-45 text-primaryCyan"><IoMdArrowUp /></span></div>
+        <div className="flex items-center gap-1 mt-5"><Link to="/learn" onClick={handleClose} className="text-lg text-primaryCyan cursor-pointer">Click to Learn</Link><span className="rotate-45 text-primaryCyan"><IoMdArrowUp /></span></div>
       </div>
       <div className="w-[2px] bg-gray-300"></div>
       <div className="flex w-[230px] flex-col px-2">
-        <Link
-          to="/learn-crypto"
-          className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
+        <div
+          onClick={()=>handleClose('/learn-crypto')}
+          className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl cursor-pointer"
         >
           <h1 className="mt-1 ml-2">
             <HiOutlineAcademicCap size={20} />
@@ -108,10 +117,10 @@ const LearnFlyoutContent = () => {
             <h1 className="text-base">Learn Crypto</h1>
             <h1 className="text-xs text-gray-400">Basics of Crypto</h1>
           </div>
-        </Link>
-        <Link
-          to="/learn-crypto"
-          className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
+        </div>
+        <div
+           onClick={()=>handleClose('/learn-crypto')}
+          className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl cursor-pointer"
         >
           <h1 className="mt-1 ml-2">
             <BsCalendar4Event size={17} />
@@ -120,10 +129,10 @@ const LearnFlyoutContent = () => {
             <h1 className="text-base">Events</h1>
             <h1 className="text-xs text-gray-400">Upcoming Events & Plans</h1>
           </div>
-        </Link>
-        <Link
-          to="/blogs"
-          className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
+        </div>
+        <div
+          onClick={()=>handleClose('/blogs')}
+          className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl cursor-pointer"
         >
           <h1 className="mt-1 ml-2">
             <LuBook size={17} />
@@ -132,12 +141,12 @@ const LearnFlyoutContent = () => {
             <h1 className="text-base">Blogs</h1>
             <h1 className="text-xs text-gray-400">checkout our latest blogs</h1>
           </div>
-        </Link>
+        </div>
       </div>
       <div className="flex w-[230px] flex-col px-2">
-        <Link
-          to="/learn-crypto"
-          className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
+        <div
+           onClick={()=>handleClose('/learn-crypto')}
+          className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl cursor-pointer"
         >
           <h1 className="mt-1 ml-2">
             <MdOutlineVideoSettings size={17} />
@@ -146,10 +155,10 @@ const LearnFlyoutContent = () => {
             <div className="flex items-center"><h1 className="text-base">Videos </h1><span className="rotate-45"><IoMdArrowUp /></span></div>
             <h1 className="text-xs text-gray-400">Get the latest videos</h1>
           </div>
-        </Link>
-        <Link
-          to="/learn-crypto"
-          className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
+        </div>
+        <div
+           onClick={()=>handleClose('/learn-crypto')}
+          className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl cursor-pointer"
         >
           <h1 className="mt-1 ml-2">
             <IoNewspaperOutline size={17} />
@@ -158,10 +167,10 @@ const LearnFlyoutContent = () => {
             <div className="flex items-center"><h1 className="text-base">Newsletter </h1><span className="rotate-45"><IoMdArrowUp /></span></div>
             <h1 className="text-xs text-gray-400">Get the latest updates</h1>
           </div>
-        </Link>
-        <Link
-          to="/learn-crypto"
-          className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
+        </div>
+        <div
+           onClick={()=>handleClose('/learn-crypto')}
+          className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl cursor-pointer"
         >
           <h1 className="mt-1 ml-2">
             <MdOutlinePolicy size={17} />
@@ -170,26 +179,26 @@ const LearnFlyoutContent = () => {
             <div className="flex items-center"><h1 className="text-base">Crypto Policy </h1></div>
             <h1 className="text-xs text-gray-400">Read the rules</h1>
           </div>
-        </Link>
+        </div>
       </div>
     </div>
   );
 };
 
 // Company Flyout Content
-const CompanyFlyoutContent = () => {
+const CompanyFlyoutContent = ({handleClose}) => {
     return (
       <div className="flex gap-2 rounded-2xl bg-white p-2 font-century-gothic">
         <div className="p-5 w-[230px] flex flex-col gap-1">
           <h1 className="select-none text-xl font-medium">About Us</h1>
           <p className="text-xs text-gray-400">Know about our goals and achievements.</p>
-          <div className="flex items-center gap-1 mt-5"><Link to="/learn" className="text-lg text-primaryCyan">Click to know</Link><span className="rotate-45 text-primaryCyan"><IoMdArrowUp /></span></div>
+          <div className="flex items-center gap-1 mt-5"><div to="/learn"  onClick={()=>handleClose('/learn')} className="text-lg text-primaryCyan">Click to know</div><span className="rotate-45 text-primaryCyan"><IoMdArrowUp /></span></div>
         </div>
         <div className="w-[2px] bg-gray-300"></div>
         <div className="flex w-[230px] flex-col px-2">
-          <Link
-            to="/about"
-            className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
+          <div
+            onClick={()=>handleClose('/about')}
+            className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl cursor-pointer"
           >
            <h1 className="mt-1 ml-2">
               <IoIosInformationCircleOutline size={20} className="my-0.5" />
@@ -198,10 +207,10 @@ const CompanyFlyoutContent = () => {
               <h1 className="text-base">About</h1>
               <h1 className="text-xs text-gray-400">Our Achievements</h1>
             </div>
-          </Link>
-          <Link
-            to="/careers"
-            className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
+          </div>
+          <div
+             onClick={()=>handleClose('/careers')}
+            className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl cursor-pointer"
           >
             <h1 className="mt-1 ml-3">
               <BsBriefcase size={17} />
@@ -210,10 +219,10 @@ const CompanyFlyoutContent = () => {
               <h1 className="text-base">Careers</h1>
               <h1 className="text-xs text-gray-400">We are hiring</h1>
             </div>
-          </Link>
-          <Link
-            to="/learn-crypto"
-            className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
+          </div>
+          <div
+             onClick={()=>handleClose('/learn-crypto')}
+            className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl cursor-pointer"
           >
             <h1 className="mt-1 ml-3">
               <IoNewspaperOutline size={17} />
@@ -222,12 +231,12 @@ const CompanyFlyoutContent = () => {
               <h1 className="text-base">News</h1>
               <h1 className="text-xs text-gray-400">checkout latest crypto News</h1>
             </div>
-          </Link>
+          </div>
         </div>
         <div className="flex w-[230px] flex-col px-2">
-          <Link
-            to="/learn-crypto"
-            className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
+          <div
+             onClick={()=>handleClose('/learn-crypto')}
+            className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl cursor-pointer"
           >
             <h1 className="mt-1 ml-2">
               <RiCustomerService2Line size={17} />
@@ -236,10 +245,10 @@ const CompanyFlyoutContent = () => {
               <div className="flex items-center"><h1 className="text-base">Support </h1><span className="rotate-45"><IoMdArrowUp /></span></div>
               <h1 className="text-xs text-gray-400">Get for any query</h1>
             </div>
-          </Link>
-          <Link
-            to="/learn-crypto"
-            className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
+          </div>
+          <div
+             onClick={()=>handleClose('/learn-crypto')}
+            className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl cursor-pointer"
           >
             <h1 className="mt-1 ml-2">
               <RiSecurePaymentLine size={17} />
@@ -248,10 +257,10 @@ const CompanyFlyoutContent = () => {
               <div className="flex items-center"><h1 className="text-base">Security </h1><span className="rotate-45"><IoMdArrowUp /></span></div>
               <h1 className="text-xs text-gray-400">Get the latest updates</h1>
             </div>
-          </Link>
-          <Link
-            to="/learn-crypto"
-            className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
+          </div>
+          <div
+             onClick={()=>handleClose('/learn-crypto')}
+            className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl cursor-pointer"
           >
             <h1 className="mt-1 ml-2">
               <FaRegHandshake size={17} />
@@ -260,26 +269,26 @@ const CompanyFlyoutContent = () => {
               <div className="flex items-center"><h1 className="text-base">Partners </h1></div>
               <h1 className="text-xs text-gray-400">Know our partners</h1>
             </div>
-          </Link>
+          </div>
         </div>
       </div>
     );
 };
 
 // Individual Flyout Content
-const IndividualFlyoutContent = () => {
+const IndividualFlyoutContent = ({handleClose}) => {
     return (
       <div className="flex gap-2 rounded-2xl bg-white p-2 font-century-gothic">
         <div className="p-5 w-[230px] flex flex-col gap-1">
           <h1 className="select-none text-xl font-medium">Solo</h1>
           <p className="text-xs text-gray-400">Our Standalone Products for individuals</p>
-          <div className="flex items-center gap-1 mt-5"><Link to="/learn" className="text-lg text-primaryCyan">Click to know</Link><span className="rotate-45 text-primaryCyan"><IoMdArrowUp /></span></div>
+          <div className="flex items-center gap-1 mt-5"><div  onClick={()=>handleClose('/learn')} className="text-lg text-primaryCyan cursor-pointer">Click to know</div><span className="rotate-45 text-primaryCyan"><IoMdArrowUp /></span></div>
         </div>
         <div className="w-[2px] bg-gray-300"></div>
         <div className="flex w-[230px] flex-col px-2">
-          <Link
-            to="/learn-crypto"
-            className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
+          <div
+             onClick={()=>handleClose('/learn-crypto')}
+            className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl cursor-pointer"
           >
             <h1 className="mt-1 ml-2">
               <IoCartOutline size={20} />
@@ -288,10 +297,10 @@ const IndividualFlyoutContent = () => {
               <h1 className="text-base">Buy and Sell</h1>
               <h1 className="text-xs text-gray-400">Trade your coins</h1>
             </div>
-          </Link>
-          <Link
-            to="/learn-crypto"
-            className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
+          </div>
+          <div
+             onClick={()=>handleClose('/learn-crypto')}
+            className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl cursor-pointer"
           >
             <h1 className="mt-1 ml-3">
               <IoWalletOutline size={17} />
@@ -300,12 +309,12 @@ const IndividualFlyoutContent = () => {
               <h1 className="text-base">Wallets</h1>
               <h1 className="text-xs text-gray-400">Most secure wallets</h1>
             </div>
-          </Link>
+          </div>
         </div>
         <div className="flex w-[230px] flex-col px-2">
-          <Link
-            to="/learn-crypto"
-            className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
+          <div
+             onClick={()=>handleClose('/learn-crypto')}
+            className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl cursor-pointer"
           >
             <h1 className="mt-1 ml-2">
               <IoMdTime size={17} />
@@ -314,10 +323,10 @@ const IndividualFlyoutContent = () => {
               <div className="flex items-center"><h1 className="text-base">Coming Soon </h1><span className="rotate-45"><IoMdArrowUp /></span></div>
               <h1 className="text-xs text-gray-400">Under Development</h1>
             </div>
-          </Link>
-          <Link
-            to="/learn-crypto"
-            className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
+          </div>
+          <div
+            onClick={()=>handleClose('/learn-crypto')}
+            className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl cursor-pointer"
           >
             <h1 className="mt-1 ml-2">
               <IoMdTime size={17} />
@@ -326,26 +335,26 @@ const IndividualFlyoutContent = () => {
               <div className="flex items-center"><h1 className="text-base">Coming Soon </h1><span className="rotate-45"><IoMdArrowUp /></span></div>
               <h1 className="text-xs text-gray-400">Under Development</h1>
             </div>
-          </Link>
+          </div>
         </div>
       </div>
     );
 };
 
 // Product Flyout Content
-const ProducFlyoutContent = () => {
+const ProducFlyoutContent = ({handleClose}) => {
     return (
       <div className="flex gap-2 rounded-2xl bg-white p-2 font-century-gothic">
         <div className="p-5 w-[230px] flex flex-col gap-1">
           <h1 className="select-none text-xl font-medium">Crypto tools</h1>
           <p className="text-xs text-gray-400">Our Standalone Producys for individuals</p>
-          <div className="flex items-center gap-1 mt-5"><Link to="/learn" className="text-lg text-primaryCyan">Click to know</Link><span className="rotate-45 text-primaryCyan"><IoMdArrowUp /></span></div>
+          <div className="flex items-center gap-1 mt-5"><div  onClick={()=>handleClose('/learn')} className="text-lg text-primaryCyan cursor-pointer">Click to know</div><span className="rotate-45 text-primaryCyan"><IoMdArrowUp /></span></div>
         </div>
         <div className="w-[2px] bg-gray-300"></div>
         <div className="flex w-[230px] flex-col px-2">
-          <Link
-            to="/learn-crypto"
-            className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
+          <div
+             onClick={()=>handleClose('/learn-crypto')}
+            className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl cursor-pointer"
           >
             <h1 className="mt-1 ml-2">
               <IoCartOutline  size={20} />
@@ -354,10 +363,10 @@ const ProducFlyoutContent = () => {
               <h1 className="text-base">Buy and Sell</h1>
               <h1 className="text-xs text-gray-400">Trade your coins</h1>
             </div>
-          </Link>
-          <Link
-            to="/learn-crypto"
-            className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
+          </div>
+          <div
+            onClick={()=>handleClose('/learn-crypto')}
+            className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl cursor-pointer"
           >
             <h1 className="mt-1 ml-2">
               <IoWalletOutline size={17} className="mx-0.5" />
@@ -366,12 +375,12 @@ const ProducFlyoutContent = () => {
               <h1 className="text-base">Wallets</h1>
               <h1 className="text-xs text-gray-400">Most secure wallets</h1>
             </div>
-          </Link>
+          </div>
         </div>
         <div className="flex w-[230px] flex-col px-2">
-          <Link
-            to="/learn-crypto"
-            className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
+          <div
+             onClick={()=>handleClose('/learn-crypto')}
+            className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl cursor-pointer"
           >
             <h1 className="mt-1 ml-2">
               <IoMdTime size={17} />
@@ -380,10 +389,10 @@ const ProducFlyoutContent = () => {
               <div className="flex items-center"><h1 className="text-base">Coming Soon </h1><span className="rotate-45"><IoMdArrowUp /></span></div>
               <h1 className="text-xs text-gray-400">Under Development</h1>
             </div>
-          </Link>
-          <Link
-            to="/learn-crypto"
-            className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl"
+          </div>
+          <div
+             onClick={()=>handleClose('/learn-crypto')}
+            className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl cursor-pointer"
           >
             <h1 className="mt-1 ml-2">
               <IoMdTime size={17} />
@@ -392,7 +401,7 @@ const ProducFlyoutContent = () => {
               <div className="flex items-center"><h1 className="text-base">Coming Soon </h1><span className="rotate-45"><IoMdArrowUp /></span></div>
               <h1 className="text-xs text-gray-400">Under Development</h1>
             </div>
-          </Link>
+          </div>
         </div>
       </div>
     );
