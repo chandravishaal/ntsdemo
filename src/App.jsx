@@ -49,10 +49,10 @@ const App = () => {
         <Route path="/prices" element={<Prices />} />
         <Route path="/careers" element={<Careers />} />
         <Route path="/faq" element={<FAQ />} />
-        <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/contact" element={<ContactUs />} />
         <Route path="/exchange" element={<Exchange />} />
-        <Route path="*" element={<Page404 />} />
         <Route path="/disclaimer" element={<Disclaimer />} />
+        <Route path="*" element={<Page404 />} />
 
       </Route>
     )
