@@ -5,7 +5,7 @@ import MobilePartners from './MobilePartners'
 const Footer = () => {
   return (
     <div>
-      <div className='hidden lg:block'>
+      <div className='hidden lg:block z-40'>
         <DesktopPartners />
       </div>
       <div className='block lg:hidden'>
