@@ -57,7 +57,7 @@ const FAQ = () => {
   };
 
   const marginStyle = {
-    margin: window.innerWidth >= 310 && window.innerWidth <= 440 ? '1rem' : '0',
+    margin: window.innerWidth >= 310 && window.innerWidth <= 440 ? '2rem' : '0',
   };
 
 
@@ -455,21 +455,21 @@ const FAQ = () => {
         <AnimatePresence>
           {openModal && (
             <motion.div
-              className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-20"
+              className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-40"
               initial="hidden"
               animate="visible"
               exit="exit"
               variants={modalVariants}
               transition={{ duration: 0.3, ease: "easeInOut" }}
             >
-              <div style={marginStyle} className="bg-white p-8 rounded-lg shadow-lg w-[90%] max-w-[500px] h-auto mt-20 ">
+              <div style={marginStyle} className="bg-white p-8 rounded-lg shadow-lg w-[90%] max-w-[500px] h-auto relative top-10">
                 <button
                   className="absolute top-4 right-4 text-gray-500 text-4xl"
                   onClick={() => setOpenModal(true)}
                 ></button>
                 <div className="flex justify-end">
                   <button className="text-3xl" onClick={handleCloseModal}>
-                    <i className="ri-close-line"></i>
+                    <i className="ri-close-line mt-10"></i>
                   </button>
                 </div>
                 {/* Modal Heading */}
