@@ -193,7 +193,7 @@ export default BlogListSection;*/
 
 
 
-
+/*
 import { useEffect, useRef } from 'react';
 import { FaHeart, FaArrowRight } from 'react-icons/fa';
 import { CiCalendarDate } from 'react-icons/ci';
@@ -265,7 +265,7 @@ const EachBlog = ({ title, date, likes, description, imageUrl }) => {
 
 const CategoryList = ({ description, icon }) => (
   <button className="w-full category-list flex items-center justify-center p-2 rounded-full border-2 border-black bg-white hover:bg-primaryCyan transition">
-   {/*} <img src={icon} alt={description} className="h-4 w-4 mr-2" />*/}
+   {/*} <img src={icon} alt={description} className="h-4 w-4 mr-2" />*
     <span className='font-century-gothic whitespace-nowrap font-bold'>{description}</span>
   </button>
 );
@@ -641,7 +641,420 @@ const BlogList = () => {
   );
 };
 
-export default BlogList;
+export default BlogList;*/
+
+
+import React from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import '../../index.css';
+import blogMainImg from '../../assets/Images/Blog/blogMain.png';
+import profile from '../../assets/Images/Blog/userIcon.png';
+import comments from '../../assets/Images/Blog/commentsIcon.png';
+import { Link } from "react-router-dom";
+import { FaHeart, FaArrowRight } from 'react-icons/fa';
+import { IoMdArrowDropleftCircle, IoMdArrowDroprightCircle } from "react-icons/io";
+import { MdOutlineTimer } from "react-icons/md";
+
+gsap.registerPlugin(ScrollTrigger);
+
+const BlogListSection = () => {
+
+  const blogPosts = [
+    {
+      title: "The Future of Technology",
+      banner: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*58VfCFFISe7eaCdtWTCi0g.jpeg",
+      description: "Exploring the innovations that will shape our future.,Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sunt id itaque tempore iste ratione quod placeat officia. Iusto libero voluptatibus quis. ",
+      content: [
+        "Technology is evolving at an unprecedented pace.",
+        "From AI to quantum computing, the possibilities are endless.",
+        "It's crucial to stay informed about these advancements."
+      ],
+      readTime: 5,
+      author: {
+        name: "Jane Doe",
+        imageUrl: "https://media.istockphoto.com/id/1330206844/photo/shot-of-a-young-businessman-at-work.jpg?s=2048x2048&w=is&k=20&c=YbduWEz8AT5Sqs9w8NsDysE4dwDaWPs1d0qApq-xFhk="
+      },
+      activity: {
+        likes: 150,
+        dislikes: 5
+      },
+      createdAt:
+       "3hrs ago"
+      ,
+      categories: [
+        {
+          id: "60d1d5e4f1a2b9299f40f0a0",
+          name: "Technology"
+        },
+        {
+          id: "60d1d5e4f1a2b9299f40f0a1",
+          name: "Innovation"
+        }
+      ]
+    },
+    {
+      title: "Healthy Living: Tips and Tricks",
+      banner: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*L8T-mS-GqCJiX0RLT1QhIA.png",
+      description: "Simple tips for a healthier lifestyle.Exploring the innovations that will shape our future.,Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      content: [
+        "Incorporating fruits and vegetables into your diet is essential.",
+        "Regular exercise can greatly improve your health.",
+        "Mental well-being is just as important as physical health."
+      ],
+      readTime: 4,
+      author: {
+        name: "John Smith",
+        imageUrl: "https://media.istockphoto.com/id/1330206844/photo/shot-of-a-young-businessman-at-work.jpg?s=2048x2048&w=is&k=20&c=YbduWEz8AT5Sqs9w8NsDysE4dwDaWPs1d0qApq-xFhk="
+      },
+      activity: {
+        likes: 85,
+        dislikes: 2
+      },
+     
+      categories: [
+        {
+          id: "60d1d5e4f1a2b9299f40f0a2",
+          name: "Health"
+        },
+        {
+          id: "60d1d5e4f1a2b9299f40f0a3",
+          name: "Wellness"
+        }
+      ],
+      createdAt:  "6hrs ago"
+    },
+    {
+      title: "Traveling on a Budget",
+      banner: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*4EK7Nug1n3bCOVoniFXo9Q.jpeg",
+      description: "How to explore the world without breaking the bank.Exploring the innovations that will shape our future.,Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      content: [
+        "Researching your destination can save you money.",
+        "Travel during off-peak seasons to find better deals.",
+        "Consider hostels or vacation rentals as accommodations."
+      ],
+      readTime: 6,
+      author: {
+        name: "Alice Johnson",
+        imageUrl: "https://media.istockphoto.com/id/1330206844/photo/shot-of-a-young-businessman-at-work.jpg?s=2048x2048&w=is&k=20&c=YbduWEz8AT5Sqs9w8NsDysE4dwDaWPs1d0qApq-xFhk="
+      },
+      activity: {
+        likes: 120,
+        dislikes: 1
+      },
+      categories: [
+        {
+          id: "60d1d5e4f1a2b9299f40f0a4",
+          name: "Travel"
+        },
+        {
+          id: "60d1d5e4f1a2b9299f40f0a5",
+          name: "Budgeting"
+        }
+      ],
+      createdAt: "8hrs ago"
+    },
+    {
+      title: "Mastering the Art of Cooking",
+      banner: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*Na-_QCEsWqQbEAFdj9OoeA.jpeg",
+      description: "Tips for becoming a better cook at home.Exploring the innovations that will shape our future.,Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      content: [
+        "Start with simple recipes to build your confidence.",
+        "Experiment with spices to enhance flavors.",
+        "Always taste your food as you cook."
+      ],
+      readTime: 3,
+      author: {
+        name: "Bob Brown",
+        imageUrl: "https://media.istockphoto.com/id/1330206844/photo/shot-of-a-young-businessman-at-work.jpg?s=2048x2048&w=is&k=20&c=YbduWEz8AT5Sqs9w8NsDysE4dwDaWPs1d0qApq-xFhk="
+      },
+      activity: {
+        likes: 95,
+        dislikes: 0
+      },
+      categories: [
+        {
+          id: "60d1d5e4f1a2b9299f40f0a6",
+          name: "Cooking"
+        },
+        {
+          id: "60d1d5e4f1a2b9299f40f0a7",
+          name: "Food"
+        }
+      ],
+      createdAt: "1day ago"
+    },
+    {
+      title: "The Importance of Mental Health",
+      banner: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*L7tpgNK6Rg_09CBXJIp3sQ.jpeg",
+      description: "Understanding mental health and its significance.",
+      content: [
+        "Mental health affects how we think, feel, and act.",
+        "It's important to seek help when needed.",
+        "Practicing mindfulness can improve your mental well-being."
+      ],
+      readTime: 5,
+      author: {
+        name: "Emma Wilson",
+        imageUrl: profile
+      },
+      activity: {
+        likes: 200,
+        dislikes: 3
+      },
+      categories: [
+        {
+          id: "60d1d5e4f1a2b9299f40f0a8",
+          name: "Mental Health"
+        },
+        {
+          id: "60d1d5e4f1a2b9299f40f0a9",
+          name: "Self-Care"
+        }
+      ],
+      createdAt: "20.09.2024"
+    },
+    {
+      title: "The Importance of Mental Health",
+      banner: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*4EK7Nug1n3bCOVoniFXo9Q.jpeg",
+      description: "Understanding mental health and its significance.",
+      content: [
+        "Mental health affects how we think, feel, and act.",
+        "It's important to seek help when needed.",
+        "Practicing mindfulness can improve your mental well-being."
+      ],
+      readTime: 5,
+      author: {
+        name: "Emma Wilson",
+        imageUrl: profile
+      },
+      activity: {
+        likes: 200,
+        dislikes: 3
+      },
+      categories: [
+        {
+          id: "60d1d5e4f1a2b9299f40f0a8",
+          name: "Mental Health"
+        },
+        {
+          id: "60d1d5e4f1a2b9299f40f0a9",
+          name: "Self-Care"
+        }
+      ],
+      createdAt: "20.09.2024"
+    },
+    {
+      title: "The Importance of Mental Health",
+      banner: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*L8T-mS-GqCJiX0RLT1QhIA.png",
+      description: "Understanding mental health and its significance.",
+      content: [
+        "Mental health affects how we think, feel, and act.",
+        "It's important to seek help when needed.",
+        "Practicing mindfulness can improve your mental well-being."
+      ],
+      readTime: 5,
+      author: {
+        name: "Emma Wilson",
+        imageUrl: profile
+      },
+      activity: {
+        likes: 200,
+        dislikes: 3
+      },
+      categories: [
+        {
+          id: "60d1d5e4f1a2b9299f40f0a8",
+          name: "Mental Health"
+        },
+        {
+          id: "60d1d5e4f1a2b9299f40f0a9",
+          name: "Self-Care"
+        }
+      ]
+    }, {
+      title: "The Importance of Mental Health",
+      banner: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*L8T-mS-GqCJiX0RLT1QhIA.png",
+      description: "Understanding mental health and its significance.,Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat enim omnis iusto ab voluptatem necessitatibus consequatur non aperiam.",
+      content: [
+        "Mental health affects how we think, feel, and act.",
+        "It's important to seek help when needed.",
+        "Practicing mindfulness can improve your mental well-being."
+      ],
+      readTime: 5,
+      author: {
+        name: "Emma Wilson",
+        imageUrl: profile
+      },
+      activity: {
+        likes: 200,
+        dislikes: 3
+      },
+      categories: [
+        {
+          id: "60d1d5e4f1a2b9299f40f0a8",
+          name: "Mental Health"
+        },
+        {
+          id: "60d1d5e4f1a2b9299f40f0a9",
+          name: "Self-Care"
+        }
+      ],
+      createdAt: "20.09.2024"
+    }, {
+      title: "The Importance of Mental Health",
+      banner: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*L8T-mS-GqCJiX0RLT1QhIA.png",
+      description: "Understanding mental health and its significance.,Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat enim omnis iusto ab voluptatem necessitatibus consequatur non aperiam.",
+      content: [
+        "Mental health affects how we think, feel, and act.",
+        "It's important to seek help when needed.",
+        "Practicing mindfulness can improve your mental well-being."
+      ],
+      readTime: 5,
+      author: {
+        name: "Emma Wilson",
+        imageUrl: profile
+      },
+      activity: {
+        likes: 200,
+        dislikes: 3
+      },
+      categories: [
+        {
+          id: "60d1d5e4f1a2b9299f40f0a8",
+          name: "Mental Health"
+        },
+        {
+          id: "60d1d5e4f1a2b9299f40f0a9",
+          name: "Self-Care"
+        }
+      ],
+      createdAt: "20.09.2024"
+    }, {
+      title: "The Importance of Mental Health",
+      banner: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*L8T-mS-GqCJiX0RLT1QhIA.png",
+      description: "Understanding mental health and its significance.,Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat enim omnis iusto ab voluptatem necessitatibus consequatur non aperiam.",
+      content: [
+        "Mental health affects how we think, feel, and act.",
+        "It's important to seek help when needed.",
+        "Practicing mindfulness can improve your mental well-being."
+      ],
+      readTime: 5,
+      author: {
+        name: "Emma Wilson",
+        imageUrl: profile
+      },
+      activity: {
+        likes: 200,
+        dislikes: 3
+      },
+      categories: [
+        {
+          id: "60d1d5e4f1a2b9299f40f0a8",
+          name: "Mental Health"
+        },
+        {
+          id: "60d1d5e4f1a2b9299f40f0a9",
+          name: "Self-Care"
+        }
+      ],
+      createdAt: "20.09.2024"
+    }
+  ];
+
+  return (
+    <div className="w-full bg-gray-50 py-16 px-4 sm:px-8">
+      <div className="container mx-auto">
+        <h1 className="text-3xl sm:text-5xl font-semibold text-center mb-10 sm:mb-14 font-montserrat">
+          Our Latest Blogs
+        </h1>
+
+        <div className="flex flex-col lg:flex-row gap-10">
+          {/* Main Blog Section */}
+          <div className="w-full lg:w-[500px] mb-10 lg:mb-0 flex flex-col">
+            <img
+              src={blogPosts[0].banner}
+              alt={`Main Blog - ${blogPosts[0].title}`}
+              className="w-full h-80 rounded mb-3"
+            />
+            <div className="flex items-center text-cyan-600 mb-4">
+              <img
+                src={blogPosts[0].author.imageUrl}
+                alt={`${blogPosts[0].author.name} Profile`}
+                className="w-8 h-8 mr-2 rounded-full object-cover object-centre" // Circular profile image
+              />
+              
+                <span className="text-sm">By - {blogPosts[0].author.name || 'Admin'}</span>
+                <span className='text-sm mx-2 font-bold'>.</span>
+                <span className='text-sm'>{blogPosts[0].createdAt}</span>
+
+              <div className="rounded-xl flex items-center gap-2 bg-[#F3F4F6] p-1 px-2 text-sm ml-2">
+                <span className="text-primaryCyan">
+                  <FaHeart />
+                </span>
+                <h1>{blogPosts[0].activity.likes}</h1>
+              </div>
+              <div className="text-sm text-cyan-600 flex items-center ml-auto">
+                <span className="mr-1"><MdOutlineTimer /></span>
+                <span className="ml-auto">{blogPosts[0].readTime} m</span>
+              </div>
+
+            </div>
+
+            <h2 className="text-2xl font-bold">{blogPosts[0].title}</h2>
+            <p className="text-gray-700 mb-4 text-justify font-century-gothic line-clamp-2">{blogPosts[0].description}</p>
+            <Link to={blogPosts[0].link} className="text-cyan-600 font-semibold">
+              Read More...
+            </Link>
+          </div>
+
+          {/* Blog List Section */}
+          <div className="w-full lg:w-[60%] flex flex-col justify-between">
+            {blogPosts.slice(1, 4).map((post, index) => (
+              <div key={index}>
+                <Link to={post.link} className="flex items-start mb-4" style={{ height: '140px', width: '100%' }}>
+                  <img
+                    src={post.banner}
+                    alt={post.title}
+                    className="w-[180px] h-[100%] rounded mr-4"
+                  />
+                  <div className="flex flex-col items-start gap-7">
+                    <div>
+                      <h1 className="font-bold text-lg sm:text-2xl">{post.title}</h1>
+                      <p className="text-gray-500 mb-2 line-clamp-2 font-century-gothic">{post.description}</p>
+                    </div>
+
+                    <div className="flex items-center justify-between w-full text-cyan-600 mb-4">
+                      <div className="flex items-center">
+                        <img src={post.author.imageUrl} alt="Profile" className="w-4 h-4 rounded-full mr-2 object-cover" />
+                        <span className='text-sm'>{post.author.name}</span>
+                        <span className='text-sm mx-2 font-bold'>.</span>
+                        <span className='text-sm'>{post.createdAt}</span>
+                      </div>
+                      <div className="text-sm text-cyan-600 flex items-center">
+                        <span className="mr-1"><MdOutlineTimer /></span>
+                        <span>{post.readTime}m</span>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+                {/* Light-colored line separator */}
+                {index < blogPosts.slice(1, 4).length - 1 && (
+                  <hr className="border-t border-light-gray-300 my-2" />
+                )}
+              </div>
+            ))}
+
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default BlogListSection;
 
 
 
