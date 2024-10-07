@@ -111,7 +111,7 @@ const Faq = () => {
                   <div className="flex items-center">
                     <div>
                       <span className="bg-primaryCyan text-black 
-                        h-[6rem] md:h-[5rem] w-[5rem] flex items-center justify-center mr-5 text-4xl md:text-xl font-century-gothic">
+                        h-[6rem] md:h-[5rem] w-[5rem] flex items-center justify-center mr-5 text-2xl md:text-xl font-century-gothic">
                         {index + 1}
                       </span>
                     </div>

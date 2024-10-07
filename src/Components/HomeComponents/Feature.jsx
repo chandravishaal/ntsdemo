@@ -48,18 +48,16 @@ const FeatureComponent = () => {
         <div className="flex flex-col lg:flex-row items-center justify-between space-y-8 lg:space-y-0">
 
           {/* First Mobile Image and Content */}
-          <div className="feature-item flex flex-col md:flex-row items-center justify-center md:items-start lg:items-start relative w-full pt-10 md:p-8">
+          <div className="feature-item flex flex-col md:flex-row items-center md:items-start justify-center relative w-full pt-10 md:p-8">
             <img 
               src={mobileImage1} 
               alt="Feature showcasing North Star Metrics for buying and selling cryptocurrencies" 
-              className="w-auto h-[550px] mx-auto md:mx-0 md:-translate-x-[2rem] pb-7" 
+              className="w-auto h-[550px] mx-auto md:mx-0 pb-7" 
             />
-            <div className='lg:pl-12 p-2 w-[70%] lg:-ml-5 relative z-10 md:mt-[15%] mx-auto md:text-left text-center -translate-x-[1rem]'>
-              <div className=''>
-                <h2 className="text-2xl font-bold text-black mb-2 font-montserrat">North Star Metrics</h2>
-                <p className="text-gray-600 mb-4 text-xl md:w-[250px] lg:w-auto font-century-gothic">Buy or sell hundreds of cryptocurrencies</p>
-              </div>
-              <div className='flex items-center justify-center md:justify-start gap-3'>
+            <div id="feature-item-1" className=' lg:px-12 p-2 w-[70%] relative z-10 md:mt-[15%] mx-auto text-center'>
+              <h2 className="text-2xl font-bold text-black mb-2 font-montserrat">North Star Metrics</h2>
+              <p className="text-gray-600 mb-4 text-xl md:w-[250px] lg:w-auto font-century-gothic mx-auto">Buy or sell hundreds of cryptocurrencies</p>
+              <div className='flex items-center justify-center gap-3'>
                 <PrimaryButton title="Buy" />
                 <SecondaryButton title="Sell" />
               </div>
@@ -67,11 +65,11 @@ const FeatureComponent = () => {
           </div>
 
           {/* Second Mobile Image and Content */}
-          <div className="feature-item flex flex-col-reverse md:flex-row items-center justify-end text-center md:text-right lg:items-end md:p-8 relative w-full">
-            <div className='w-[70%] lg:pr-16 p-2 lg:-mr-10 relative z-10 mb-[25%] translate-x-[1rem] md:text-right text-center'>
+          <div className="feature-item flex flex-col-reverse md:flex-row items-center md:items-end justify-center relative w-full md:p-8">
+            <div id='feature-item-2' className=' w-[70%] lg:px-12 p-2 relative z-10 mb-[25%] mx-auto text-center'>
               <h2 className="text-2xl font-bold text-black mb-2 font-montserrat">Advance</h2>
-              <p className="text-gray-600 mb-4 text-xl md:w-[250px] lg:w-auto font-century-gothic ml-auto">Powerful tools, designed for the advanced trader</p>
-              <div className='flex items-center md:justify-end justify-center gap-3'>
+              <p className="text-gray-600 mb-4 text-xl md:w-[250px] lg:w-auto font-century-gothic mx-auto">Powerful tools, designed for the advanced trader</p>
+              <div className='flex items-center justify-center gap-3'>
                 <SecondaryButton title="Sell" />
                 <PrimaryButton title="Buy" />
               </div>
@@ -79,7 +77,7 @@ const FeatureComponent = () => {
             <img 
               src={mobileImage2} 
               alt="Feature showcasing advanced trading tools" 
-              className="w-auto h-[550px] pb-7 mx-auto md:ml-auto md:translate-x-[2rem]" 
+              className="w-auto h-[550px] pb-7 mx-auto" 
             />
           </div>
 

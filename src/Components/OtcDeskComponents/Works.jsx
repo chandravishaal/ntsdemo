@@ -628,9 +628,9 @@
                   <div key={index} className="w-full flex-shrink-0">
                     <div className="relative flex flex-col items-end">
                       <img src={image} alt="Hexagon Shape" className=" h-auto relative" />
-                      <div id="content" className="flex flex-col justify-center items-center border absolute inset-0 ">
+                      <div id="content" className="flex flex-col justify-center items-center  absolute inset-0 ">
                         
-                        <div className="absolute top-[50%] border left-[8%]">
+                        <div className="absolute top-[50%]  left-[8%]">
                           <h1 className="text-7xl font-black text-gray-800">{slide.number}</h1>
                         </div>
                         <img src={slide.icon} alt={`Icon ${slide.number}`} className="w-16 h-16 mx-auto mb-4" />
