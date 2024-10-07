@@ -173,21 +173,21 @@ const Footprint = () => {
       <div className="lg:hidden container mx-auto grid grid-cols-2 gap-10 sm:grid-cols-3 px-6">
         {/* Mobile Location Cards */}
         <div className="location-group flex flex-col items-center">
-          <div className="bg-white rounded-3xl p-4 shadow-lg border border-gray-300 flex flex-col items-center w-[47vw] h-[150px]">
+          <div className="bg-white rounded-3xl p-4 shadow-lg border border-gray-300 flex flex-col items-center w-[150px] h-[150px]">
             <img src={Canada} alt="Canada" className="w-12 h-12 mb-3" />
             <h4 className="font-bold font-century-gothic text-xl text-center whitespace-nowrap">Canada</h4>
             <p className="text-gray-600 font-antipasto-pro text-lg whitespace-nowrap">CAD Market Rate</p>
           </div>
         </div>
         <div className="location-group flex flex-col items-center">
-          <div className="bg-white rounded-3xl p-4 shadow-lg border border-gray-300 flex flex-col items-center w-[47vw] h-[150px]">
+          <div className="bg-white rounded-3xl p-4 shadow-lg border border-gray-300 flex flex-col items-center w-[150px] h-[150px]">
             <img src={United} alt="United" className="w-12 h-12 mb-3" />
             <h4 className="font-bold font-century-gothic text-xl text-center whitespace-nowrap">United</h4>
             <p className="text-gray-600 font-antipasto-pro text-lg whitespace-nowrap">USD Market Rate</p>
           </div>
         </div>
         <div className="location-group flex flex-col items-center">
-          <div className="bg-white rounded-3xl p-4 shadow-lg border border-gray-300 flex flex-col items-center w-[47vw] h-[150px]">
+          <div className="bg-white rounded-3xl p-4 shadow-lg border border-gray-300 flex flex-col items-center w-[150px] h-[150px]">
             <img src={UK} alt="UK" className="w-12 h-12 mb-3" />
             <h4 className="font-bold font-century-gothic text-xl text-center whitespace-nowrap">UK</h4>
             <p className="text-gray-600 font-antipasto-pro text-lg whitespace-nowrap">GBP Market Rate</p>
@@ -197,7 +197,7 @@ const Footprint = () => {
 
          {/* Europe */}
          <div className="location-group flex flex-col items-center">
-           <div className="bg-white rounded-3xl p-4 shadow-lg border border-gray-300 flex flex-col items-center w-[47vw] h-[150px]">
+           <div className="bg-white rounded-3xl p-4 shadow-lg border border-gray-300 flex flex-col items-center w-[150px] h-[150px]">
              <img src={Europe} alt="Europe" className="w-12 h-12 mb-3" />
              <h4 className="font-bold font-century-gothic text-xl text-center whitespace-nowrap">Europe</h4>
              <p className="text-gray-600  font-antipasto-pro text-lg whitespace-nowrap">EUR Market Rate</p>
@@ -206,7 +206,7 @@ const Footprint = () => {
 
          {/* India */}
            <div className="location-group flex flex-col items-center">
-             <div className="bg-white rounded-3xl p-4 shadow-lg border border-gray-300 flex flex-col items-center w-[47vw] h-[150px]">
+             <div className="bg-white rounded-3xl p-4 shadow-lg border border-gray-300 flex flex-col items-center w-[150px] h-[150px]">
                <img src={India} alt="India" className="w-12 h-12 mb-3" />
                <h4 className="font-bold font-century-gothic text-xl text-center whitespace-nowrap">India</h4>
                <p className="text-gray-600  font-antipasto-pro text-lg whitespace-nowrap">INR Market Rate</p>
@@ -215,7 +215,7 @@ const Footprint = () => {
 
            {/* Australia */}
            <div className="location-group flex flex-col items-center">
-             <div className="bg-white rounded-3xl p-4 shadow-lg border border-gray-300 flex flex-col items-center w-[47vw] h-[150px]">
+             <div className="bg-white rounded-3xl p-4 shadow-lg border border-gray-300 flex flex-col items-center w-[150px] h-[150px]">
                <img src={Australia} alt="Australia" className="w-12 h-12 mb-3" />
                <h4 className="font-bold font-century-gothic text-xl text-center whitespace-nowrap">Australia</h4>
                <p className="text-gray-600  font-antipasto-pro text-lg whitespace-nowrap">AUD Market Rate</p>

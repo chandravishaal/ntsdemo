@@ -1,79 +1,5 @@
-/*import React, { useEffect, useState } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import '../../index.css';
-import bannerImage from '../../assets/Images/background.png';
-import { IoIosSearch } from "react-icons/io";
 
-const HeroSection = () => {
-  const [activeFilter, setActiveFilter] = useState('Tags'); // Default filter
-
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.from('.hero-banner', {
-      scrollTrigger: {
-        trigger: '.hero-banner',
-        start: 'top center',
-        toggleActions: 'play none none none',
-      },
-      opacity: 0,
-      scale: 0.4,
-      duration: 1,
-      ease: 'power3.out',
-    });
-  }, []);
-
-  const handleFilterChange = (event) => {
-    setActiveFilter(event.target.value);
-    // Additional filtering logic can be implemented here
-  };
-
-  return (
-    <div className="relative w-full h-auto hero-banner">
-      {/* For larger screens *
-      <div
-        className="hidden lg:block w-full h-[40vh] bg-cover bg-center"
-        style={{
-          backgroundImage: `url(${bannerImage})`,
-          backgroundSize: 'cover',
-        }}
-      >
-        <div className="p-8">
-          <h1 className="font-bold text-5xl text-center mb-4">Our Articles</h1>
-          <div className="text-center mb-6 w-full max-w-lg h-20 mx-auto">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam numquam esse soluta accusamus est a consequatur, iusto fugit iure quae minus, harum at facilis ullam hic sunt itaque dolor voluptate?
-          </div>
-          <div className="flex justify-center items-center">
-            <div className="relative w-4/12 mr-4">
-              <IoIosSearch className="absolute left-3 top-2 text-gray-500 text-2xl" />
-              <input
-                type="text"
-                placeholder="Search..."
-                className="p-2 pl-10 w-full rounded-full border border-gray-300 shadow-md focus:outline-none focus:ring-2 focus:ring-black transition duration-200"
-              />
-            </div>
-            <select
-              id="filter"
-              value={activeFilter}
-              onChange={handleFilterChange}
-              className="p-2 rounded-full border border-gray-300 shadow-md focus:outline-none focus:ring-2 focus:ring-black transition duration-200"
-            >
-              <option value="Tags">Tags</option>
-              <option value="News">News</option>
-              <option value="Blog">Blog</option>
-              <option value="Events">Events</option>
-              <option value="Updates">Updates</option>
-            </select>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default HeroSection;*/
-
+/*
 import React, { useEffect, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -89,6 +15,7 @@ import comments from '../../assets/Images/Blog/commentsIcon.png';
 import { Link } from "react-router-dom";
 import { FaHeart, FaArrowRight } from 'react-icons/fa';
 import { IoMdArrowDropleftCircle, IoMdArrowDroprightCircle } from "react-icons/io";
+import { MdOutlineTimer } from "react-icons/md";
 
 
 const EachBlog = ({ title, date, description, imageUrl, author, profile, readTime }) => {
@@ -104,7 +31,7 @@ const EachBlog = ({ title, date, description, imageUrl, author, profile, readTim
         <div className="flex items-center">
           <img src={profile} alt="Profile" className="w-4 h-4 rounded-full mr-2" />
           <span className='text-sm'>{author}</span>
-          <span className='text-sm mx-2'></span> {/* Separator */}
+          <span className='text-sm mx-2'></span> {/* Separator *
           <span className='text-sm'>25 Sept 2024</span>
         </div>
         <div className="text-sm  text-cyan-600">{readTime} minute read</div>
@@ -1108,7 +1035,7 @@ const HeroSection = () => {
   };
 
 
-  
+
   const postsPerPage = 12;
 
   // Calculate the total number of pages after the first 4 posts
@@ -1140,11 +1067,11 @@ const HeroSection = () => {
 
   return (
     <>
-      {/*first section */}
+      {/*first section *
 
 
       <div className="relative w-full h-auto hero-banner">
-        {/* Background Image */}
+        {/* Background Image *
         <div
           className="w-full h-[60vh] md:h-[30vh] lg:h-[60vh] bg-cover bg-center"
           style={{
@@ -1185,19 +1112,19 @@ const HeroSection = () => {
 
 
 
-      {/*<Category />*/}
-      {/* Second section */}
+      <Category />
+      {/* Second section *
 
 
 
-      <div className="w-full bg-gray-100 py-16 px-4 sm:px-8">
+      <div className="w-full bg-gray-50 py-16 px-4 sm:px-8">
         <div className="container mx-auto">
-          <h1 className="text-3xl sm:text-5xl font-semibold text-center mb-10 sm:mb-14 font-montserrat">
+          {/*<h1 className="text-3xl sm:text-5xl font-semibold text-center mb-10 sm:mb-14 font-montserrat">
             Our Latest Blogs
-          </h1>
+          </h1>*
 
           <div className="flex flex-col lg:flex-row gap-10">
-            {/* Main Blog Section */}
+            {/* Main Blog Section *
             <div className="w-full lg:w-[500px] mb-10 lg:mb-0 flex flex-col">
               <img
                 src={blogPosts[0].banner}
@@ -1211,7 +1138,7 @@ const HeroSection = () => {
                   className="w-6 h-6 mr-2 rounded-full object-cover object-centre" // Circular profile image
                 />
                 <span>By - {blogPosts[0].author.name || 'Admin'}</span>
-                <span className='text-sm mx-2 font-bold'>.</span> {/* Separator */}
+                <span className='text-sm mx-2 font-bold'>.</span> {/* Separator *
                 <span className='text-sm'>25 Sept 2024</span>
                 <div className="rounded-xl flex items-center gap-2 bg-[#F3F4F6] p-1 px-2 text-sm ml-2">
                   <span className="text-primaryCyan">
@@ -1219,7 +1146,11 @@ const HeroSection = () => {
                   </span>
                   <h1>{blogPosts[0].activity.likes}</h1>
                 </div>
-                <span className="ml-auto">{blogPosts[0].readTime} minute read</span>
+                <div className="text-sm text-cyan-600 flex items-center ml-auto">
+                          <span className="mr-1"><MdOutlineTimer /></span>
+                          <span className="ml-auto">{blogPosts[0].readTime} m</span>
+                        </div>
+                
               </div>
 
               <h2 className="text-2xl font-bold">{blogPosts[0].title}</h2>
@@ -1229,33 +1160,43 @@ const HeroSection = () => {
               </Link>
             </div>
 
-            {/* Blog List Section */}
+            {/* Blog List Section *
             <div className="w-full lg:w-[60%] flex flex-col justify-between">
               {blogPosts.slice(1, 4).map((post, index) => (
-                <Link to={post.link} key={index} className="flex items-start mb-4" style={{ height: '140px', width: '100%' }}>
-                  <img
-                    src={post.banner}
-                    alt={post.title}
-                    className="w-[180px] h-[100%] rounded mr-4"
-                  />
-                  <div className="flex flex-col items-start gap-3">
-                    <div>
-                      <h1 className="font-bold text-lg sm:text-2xl">{post.title}</h1> {/* Increased font size */}
-                      <p className="text-gray-500 mb-2 line-clamp-2 font-century-gothic">{post.description}</p>
-                    </div>
-
-                    <div className="flex items-center justify-between w-full text-cyan-600 mb-4">
-                      <div className="flex items-center">
-                        <img src={post.author.imageUrl} alt="Profile" className="w-4 h-4 rounded-full mr-2 object-cover" />
-                        <span className='text-sm'>{post.author.name}</span>
-                        <span className='text-sm mx-2 font-bold'>.</span> {/* Separator */}
-                        <span className='text-sm'>25 Sept 2024</span>
+                <div key={index}>
+                  <Link to={post.link} className="flex items-start mb-4" style={{ height: '140px', width: '100%' }}>
+                    <img
+                      src={post.banner}
+                      alt={post.title}
+                      className="w-[180px] h-[100%] rounded mr-4"
+                    />
+                    <div className="flex flex-col items-start gap-3">
+                      <div>
+                        <h1 className="font-bold text-lg sm:text-2xl">{post.title}</h1>
+                        <p className="text-gray-500 mb-2 line-clamp-2 font-century-gothic">{post.description}</p>
                       </div>
-                      <div className="text-sm text-cyan-600">{post.readTime} minute read</div>
+
+                      <div className="flex items-center justify-between w-full text-cyan-600 mb-4">
+                        <div className="flex items-center">
+                          <img src={post.author.imageUrl} alt="Profile" className="w-4 h-4 rounded-full mr-2 object-cover" />
+                          <span className='text-sm'>{post.author.name}</span>
+                          <span className='text-sm mx-2 font-bold'>.</span>
+                          <span className='text-sm'>25 Sept 2024</span>
+                        </div>
+                        <div className="text-sm text-cyan-600 flex items-center">
+                          <span className="mr-1"><MdOutlineTimer /></span>
+                          <span>{post.readTime}m</span>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </Link>
+                  </Link>
+                  {/* Light-colored line separator *
+                  {index < blogPosts.slice(1, 4).length-1 && (
+                    <hr className="border-t border-light-gray-300 my-2" />
+                  )}
+                </div>
               ))}
+
             </div>
 
 
@@ -1263,7 +1204,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/*third section */}
+      {/*third section *
 
 
       <div className="w-full bg-white py-20 px-5 lg:px-5">
@@ -1271,7 +1212,7 @@ const HeroSection = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
 
-            {/* Display paginated posts */}
+            {/* Display paginated posts *
             {currentPosts.map((post, index) => (
               <div key={index + 4} className="w-full">
                 <EachBlog
@@ -1287,7 +1228,7 @@ const HeroSection = () => {
             ))}
           </div>
 
-          {/* Pagination Controls */}
+          {/* Pagination Controls *
           {totalPages > 0 && (
             <div className="relative flex items-center justify-center mt-7">
               <button
@@ -1298,7 +1239,7 @@ const HeroSection = () => {
                 <IoMdArrowDropleftCircle />
               </button>
 
-              {/* Page Number Buttons */}
+              {/* Page Number Buttons *
               {Array.from({ length: totalPages }, (_, index) => (
                 <button
                   key={index + 1}
@@ -1323,6 +1264,57 @@ const HeroSection = () => {
     </>
 
 
+  );
+};
+
+export default HeroSection;*/
+
+
+import React, { useEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import '../../index.css';
+import bannerImage from '../../assets/Images/Blog/banner.png';
+
+const HeroSection = () => {
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from('.hero-banner', {
+      scrollTrigger: {
+        trigger: '.hero-banner', 
+        start: 'top center',     
+        toggleActions: 'play none none none',
+      },
+      opacity: 0,
+      scale: 0.4,
+      duration: 1,
+      ease: 'power3.out',
+    });
+  }, []);
+
+  return (
+    <div className="relative w-full h-auto hero-banner">
+      {/* For larger screens */}
+      <div 
+        className="hidden lg:block w-full h-[100vh] bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${bannerImage})`,
+          backgroundSize: 'cover',
+        }}
+      >
+    
+      </div>
+
+    
+      <div className="lg:hidden">
+        <img 
+          src={bannerImage} 
+          className="w-full h-auto"
+        />
+      </div>
+    </div>
   );
 };
 
