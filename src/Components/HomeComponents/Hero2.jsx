@@ -1,12 +1,41 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Typewriter from "typewriter-effect";
 import hero_group from '../../assets/Images/HomeImages/hero_group.svg';
 import PrimaryButton from "../../Common/PrimaryButton";
 import SecondaryButton from "../../Common/SecondaryButton";
 
 const Hero2 = () => {
+  const [flipStates, setFlipStates] = useState({
+    bitcoin: false,
+    bnb: false,
+    ethereum: false,
+    tether: false,
+    usdc: false,
+  });
+
+  useEffect(() => {
+    const coins = ['bitcoin', 'bnb', 'ethereum', 'tether', 'usdc'];
+
+    const randomFlip = () => {
+      // Randomly pick a coin
+      const randomCoin = coins[Math.floor(Math.random() * coins.length)];
+
+      // Flip the selected coin
+      setFlipStates((prevState) => ({
+        ...prevState,
+        [randomCoin]: !prevState[randomCoin],
+      }));
+    };
+
+    // Every 2-5 seconds, flip a random coin
+    const interval = setInterval(randomFlip, Math.random() * (5000 - 2000) + 2000);
+
+    // Clean up the interval on component unmount
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section className="py-10 lg:h-[700px] md:[500px] heroSection-background">
+    <section className="py-10 lg:h-[700px] md:h-[500px] heroSection-background">
       <div className="container mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-5">
         {/* content */}
         <div className="flex flex-col flex-1 gap-5 items-start justify-center px-5">
@@ -42,7 +71,9 @@ const Hero2 = () => {
             <br />& 100+ Cryptocurrencies
           </h1>
 
-          <h1 className="bg-primaryCyan text-white lg:text-3xl px-2 rounded-md">On North Star Metrics in India 24/7</h1>
+          <h1 className="bg-primaryCyan text-white lg:text-3xl px-2 rounded-md">
+            On North Star Metrics in India 24/7
+          </h1>
 
           <p className="lg:w-[500px] text-xs">
             If you&apos;re in India and looking forward to buying or selling Bitcoin, Litecoin, Ethereum, or 100+ other cryptocurrencies, simply click on &apos;Buy/Sell Cryptocurrencies&apos; to make your first trade instantly. We accept credit/debit cards, net banking, UPI, and various other payment methods.
@@ -56,57 +87,52 @@ const Hero2 = () => {
 
         {/* image */}
         <div className="flex-1 hidden lg:block relative lg:w-full w-[99%] mt-16 mb-10">
-            <img src={hero_group} className="relative" alt="heroMobileImage" />
+          <img src={hero_group} className="relative" alt="heroMobileImage" />
 
-            {/* Bitcoin logo with hover flip effect */}
-            <div className="w-20 h-20 absolute top-[18rem] right-[14rem] group [perspective:1000px]">
-              <img
-                src="https://cryptologos.cc/logos/bitcoin-btc-logo.svg?v=035"
-                className="w-full h-full icon-shadow transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(360deg)]"
-                alt="bitcoin"
-              />
-            </div>
+          {/* Bitcoin logo with hover flip effect */}
+          <div className="w-20 h-20 absolute top-[18rem] right-[14rem] group [perspective:1000px]">
+            <img
+              src="https://cryptologos.cc/logos/bitcoin-btc-logo.svg?v=035"
+              className={`w-full h-full icon-shadow transition-all duration-500 [transform-style:preserve-3d] ${flipStates.bitcoin ? 'rotateY-360' : ''}`}
+              alt="bitcoin"
+            />
+          </div>
 
-            {/* BNB logo with hover flip effect */}
-            <div className=" w-20 h-20 absolute top-[16rem] right-[25.7rem] group [perspective:1000px]">
-              <img
-                src="https://cryptologos.cc/logos/bnb-bnb-logo.svg?v=035"
-                className="w-10 h-10 icon-shadow transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(360deg)]"
-                alt="bitcoin"
-              />
-            </div>
+          {/* BNB logo with hover flip effect */}
+          <div className="w-10 h-10 absolute top-[16rem] right-[27.7rem] group [perspective:1000px]">
+            <img
+              src="https://cryptologos.cc/logos/bnb-bnb-logo.svg?v=035"
+              className={`w-full h-full icon-shadow transition-all duration-500 [transform-style:preserve-3d] ${flipStates.bnb ? 'rotateY-360' : ''}`}
+              alt="bnb"
+            />
+          </div>
 
-             {/* Ethereum logo with hover flip effect */}
-             <div className=" w-20 h-20 absolute top-[23rem] right-[26rem] group [perspective:1000px]">
-              <img
-                src="https://cryptologos.cc/logos/ethereum-eth-logo.svg?v=035"
-                className="w-full h-full icon-shadow transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(360deg)]"
-                alt="bitcoin"
-              />
-            </div>
+          {/* Ethereum logo with hover flip effect */}
+          <div className="w-20 h-20 absolute top-[23rem] right-[26rem] group [perspective:1000px]">
+            <img
+              src="https://cryptologos.cc/logos/ethereum-eth-logo.svg?v=035"
+              className={`w-full h-full icon-shadow transition-all duration-500 [transform-style:preserve-3d] ${flipStates.ethereum ? 'rotateY-360' : ''}`}
+              alt="ethereum"
+            />
+          </div>
 
-            {/* Tether logo with hover flip effect */}
-            <div className=" w-20 h-20 absolute top-[11rem] right-[5rem] group [perspective:1000px]">
-              <img
-                src="https://cryptologos.cc/logos/tether-usdt-logo.svg?v=035"
-                className="w-full h-full icon-shadow transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(360deg)]"
-                alt="bitcoin"
-              />
-            </div>
-            
-            {/* Usdt logo with hover flip effect */}
-            <div className=" w-20 h-20 absolute top-[2.5rem] right-[3rem] group [perspective:1000px]">
-              <img
-                src="https://cryptologos.cc/logos/usd-coin-usdc-logo.svg?v=035"
-                className="w-10 h-10 icon-shadow transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(360deg)]"
-                alt="bitcoin"
-              />
-            </div>
+          {/* Tether logo with hover flip effect */}
+          <div className="w-20 h-20 absolute top-[11rem] right-[5rem] group [perspective:1000px]">
+            <img
+              src="https://cryptologos.cc/logos/tether-usdt-logo.svg?v=035"
+              className={`w-full h-full icon-shadow transition-all duration-500 [transform-style:preserve-3d] ${flipStates.tether ? 'rotateY-360' : ''}`}
+              alt="tether"
+            />
+          </div>
 
-        </div>
-
-        <div>
-
+          {/* USDC logo with hover flip effect */}
+          <div className="w-10 h-10 absolute top-[2.5rem] right-[5rem] group [perspective:1000px]">
+            <img
+              src="https://cryptologos.cc/logos/usd-coin-usdc-logo.svg?v=035"
+              className={`w-full h-full icon-shadow transition-all duration-500 [transform-style:preserve-3d] ${flipStates.usdc ? 'rotateY-360' : ''}`}
+              alt="usdc"
+            />
+          </div>
         </div>
       </div>
     </section>

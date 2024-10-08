@@ -30,7 +30,7 @@ const Benefits = () => {
   }, []);
 
   return (
-    <section className="bg-cyan-50">
+    <section className="bg-gradient-to-b from-cyan-50 to-white">
       <div className="container mx-auto px-4 py-8 sm:py-12 md:py-16">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-3 md:mb-4 text-center font-montserrat">Benefits With North Star Metrics OTC</h2>
         <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 md:mb-12 text-center font-century-gothic">Discover the advantages of choosing our OTC desk</p>
@@ -74,7 +74,7 @@ const Benefits = () => {
               alt: "Personalized"
             }
           ].map((benefit, index) => (
-            <div key={index} className="benefit-card bg-white p-4 sm:p-5 md:p-6 rounded-xl shadow-md relative">
+            <div key={index} className="benefit-card OtcBenefit-background p-4 sm:p-5 md:p-6 rounded-xl shadow-md relative">
               <div className='p-2 bg-cyan-100 mb-3 inline-block rounded-full'>
                 <img src={benefit.icon} className='w-10 h-10' alt="" />
               </div>

@@ -14,6 +14,7 @@ import {
   IoMdArrowDropup,
   IoMdInformationCircleOutline,
 } from "react-icons/io";
+import explorebg from '../../assets/Images/HomeImages/bg_2nd_section.png'
 
 const CoinCards = ({ image, name, amount, last7days, isPositive, percentage }) => {
   return (
@@ -366,7 +367,7 @@ const Explore = () => {
 
           {/* Phone image and content inside the phone */}
           <div className="flex-1">
-            <div className="bg-gray-500 h-[500px] overflow-y-hidden rounded-3xl p-10 w-full">
+            <div className="exploreSection-background h-[500px] overflow-y-hidden rounded-3xl p-10 w-full">
               <div className="relative flex justify-center" ref={phoneRef}>
                 {/* Wrapper for the phone and its content */}
                 <div className="relative w-72">
