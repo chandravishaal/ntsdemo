@@ -55,9 +55,9 @@ const FeatureComponent = () => {
         }
       );
 
-      //Animate the second feature item (if needed)
+      //Animate the second feature item
       gsap.fromTo(
-        featureElements[1].querySelector('img'), // Animate the second image
+        featureElements[1].querySelector('img'), 
         {
           opacity: 0,
           x: 100, // Start from the right
