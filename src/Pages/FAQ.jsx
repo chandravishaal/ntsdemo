@@ -461,6 +461,7 @@ const FAQ = () => {
               exit="exit"
               variants={modalVariants}
               transition={{ duration: 0.3, ease: "easeInOut" }}
+              onClick={handleCloseModal}
             >
               <div style={marginStyle} className="bg-white p-8 rounded-lg shadow-lg w-[90%] max-w-[500px] h-auto relative top-10">
                 <button
