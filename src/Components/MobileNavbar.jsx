@@ -9,7 +9,7 @@ import { IoIosInformationCircleOutline } from "react-icons/io";
 import { BsBriefcase } from "react-icons/bs";
 import { IoNewspaperOutline } from "react-icons/io5";
 import { RiCustomerService2Line } from "react-icons/ri";
-import { RiSecurePaymentLine } from "react-icons/ri";
+import { MdMiscellaneousServices } from "react-icons/md";
 import { FaRegHandshake } from "react-icons/fa6";
 import { IoMdTime } from "react-icons/io";
 import { HiOutlineAcademicCap } from "react-icons/hi2";
@@ -161,10 +161,10 @@ const MobileNavbar = () => {
                 <span><IoNewspaperOutline /></span>News
               </div>
               <div onClick={() => handleAccordionNavigation('/contact')} className="py-2 text-sm flex items-center gap-1">
-                <span><RiCustomerService2Line /></span>Support
+                <span><RiCustomerService2Line /></span>Contact
               </div>
-              <div onClick={() => handleAccordionNavigation('/team')} className="py-2 text-sm flex items-center gap-1">
-                <span><RiSecurePaymentLine /></span>Security
+              <div onClick={() => handleAccordionNavigation('/services')} className="py-2 text-sm flex items-center gap-1">
+                <span><MdMiscellaneousServices /></span>Services
               </div>
               <div onClick={() => handleAccordionNavigation('/team')} className="py-2 text-sm flex items-center gap-1">
                 <span><FaRegHandshake /></span>Partners

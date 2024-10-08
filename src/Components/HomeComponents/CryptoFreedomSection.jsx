@@ -8,22 +8,50 @@ gsap.registerPlugin(ScrollTrigger);
 
 const CryptoFreedomSection = () => {
   const sectionRef = useRef(null); // Ref for the section
+  const triggers = useRef([]); // Store the scroll triggers
 
   useEffect(() => {
     const elements = sectionRef.current?.querySelectorAll('.fade-in');
 
+    // Fade-in animation for text elements
     if (elements) {
-      gsap.fromTo(
-        elements,
+      elements.forEach((element) => {
+        const trigger = gsap.fromTo(
+          element,
+          {
+            opacity: 0,
+            y: 50, // Start from below
+          },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1.5,
+            stagger: 0.2,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: sectionRef.current, // Trigger when the section is in view
+              start: 'top 60%',
+              toggleActions: 'play none none reset',
+            },
+          }
+        );
+        triggers.current.push(trigger.scrollTrigger); // Push the scrollTrigger instance
+      });
+    }
+
+    // Image animation: From bottom to top
+    const imageElement = sectionRef.current?.querySelector('.image-slide-up');
+    if (imageElement) {
+      const imageTrigger = gsap.fromTo(
+        imageElement,
         {
           opacity: 0,
-          y: 50, // Start from below
+          y: 200, // Start from below
         },
         {
           opacity: 1,
-          y: 0,
+          y: 0, // Slide up to its original position
           duration: 1.5,
-          stagger: 0.2,
           ease: 'power3.out',
           scrollTrigger: {
             trigger: sectionRef.current, // Trigger when the section is in view
@@ -32,11 +60,14 @@ const CryptoFreedomSection = () => {
           },
         }
       );
+      triggers.current.push(imageTrigger.scrollTrigger);
     }
 
-    // Cleanup function to kill ScrollTrigger on unmount
+    // Cleanup function to kill specific ScrollTrigger instances on unmount
     return () => {
-      ScrollTrigger.kill();
+      triggers.current.forEach((trigger) => {
+        if (trigger) trigger.kill(); // Kill individual scroll triggers
+      });
     };
   }, []);
 
@@ -50,7 +81,7 @@ const CryptoFreedomSection = () => {
           We&apos;re committed to creating more economic freedom through accessible,
           safe, and secure financial tools for everyone.
         </p>
-        <div className="relative mx-auto max-w-[600px] fade-in">
+        <div className="relative mx-auto max-w-[600px] image-slide-up">
           <img
             src={overallImage}
             alt="Conceptual graphic illustrating global financial freedom with diverse individuals engaged in cryptocurrency transactions"
@@ -64,4 +95,3 @@ const CryptoFreedomSection = () => {
 };
 
 export default CryptoFreedomSection;
-
