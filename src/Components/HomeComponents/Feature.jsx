@@ -10,32 +10,34 @@ gsap.registerPlugin(ScrollTrigger);
 
 const FeatureComponent = () => {
   const featureRef = useRef(null); // Ref for the feature section
+  const triggers = useRef([]); // Array to store individual ScrollTrigger instances
 
   useEffect(() => {
     const featureElements = featureRef.current?.querySelectorAll('.feature-item');
   
     if (featureElements) {
-      gsap.fromTo(
+      // Animate first feature item
+      const trigger1 = gsap.fromTo(
         featureElements[0].querySelector('img'),
         {
           opacity: 0,
-          x: -100, // Start from left 
+          x: -100, // Start from the left
         },
         {
           opacity: 1,
           x: 0,
           duration: 1.5,
-          // stagger: 0.2,
           ease: 'power3.out',
           scrollTrigger: {
-            trigger: featureRef.current, // Trigger when the feature section is in view
+            trigger: featureRef.current,
             start: 'top 60%',
             toggleActions: 'play none none reset',
           },
         }
       );
+      triggers.current.push(trigger1.scrollTrigger); // Store scroll trigger
 
-      gsap.fromTo(
+      const trigger2 = gsap.fromTo(
         featureElements[0].querySelector('.text'),
         {
           opacity: 0,
@@ -45,18 +47,18 @@ const FeatureComponent = () => {
           opacity: 1,
           y: 0,
           duration: 1.5,
-          stagger: 0.2,
           ease: 'power3.out',
           scrollTrigger: {
-            trigger: featureRef.current, // Trigger when the feature section is in view
+            trigger: featureRef.current,
             start: 'top 60%',
             toggleActions: 'play none none reset',
           },
         }
       );
+      triggers.current.push(trigger2.scrollTrigger);
 
-      //Animate the second feature item
-      gsap.fromTo(
+      // Animate second feature item
+      const trigger3 = gsap.fromTo(
         featureElements[1].querySelector('img'), 
         {
           opacity: 0,
@@ -66,7 +68,6 @@ const FeatureComponent = () => {
           opacity: 1,
           x: 0,
           duration: 1.5,
-          stagger: 0.2,
           ease: 'power3.out',
           scrollTrigger: {
             trigger: featureRef.current,
@@ -75,18 +76,18 @@ const FeatureComponent = () => {
           },
         }
       );
+      triggers.current.push(trigger3.scrollTrigger);
 
-      gsap.fromTo(
-        featureElements[1].querySelector('.text'), // Select the content of the second item
+      const trigger4 = gsap.fromTo(
+        featureElements[1].querySelector('.text'),
         {
           opacity: 0,
-          y: -100, // Start from top
+          y: -100, // Start from the top
         },
         {
           opacity: 1,
           y: 0,
           duration: 1.5,
-          stagger: 0.2,
           ease: 'power3.out',
           scrollTrigger: {
             trigger: featureRef.current,
@@ -95,12 +96,15 @@ const FeatureComponent = () => {
           },
         }
       );
-
+      triggers.current.push(trigger4.scrollTrigger);
     }
 
-    // Cleanup function to kill ScrollTrigger on unmount
+    // Cleanup: kill individual ScrollTrigger instances
     return () => {
-      ScrollTrigger.kill();
+      triggers.current.forEach((trigger) => {
+        if (trigger) trigger.kill(); // Kill each scroll trigger
+      });
+      triggers.current = []; // Clear triggers
     };
   }, []);
 
