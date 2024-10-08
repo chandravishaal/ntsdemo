@@ -15,7 +15,7 @@ import { IoIosInformationCircleOutline } from "react-icons/io";
 import { IoWalletOutline } from "react-icons/io5";
 import { RiCustomerService2Line } from "react-icons/ri";
 import { BsBriefcase } from "react-icons/bs";
-import { RiSecurePaymentLine } from "react-icons/ri";
+import { MdMiscellaneousServices } from "react-icons/md";
 import { IoNewspaperOutline } from "react-icons/io5";
 import { FaRegHandshake } from "react-icons/fa6";
 
@@ -242,20 +242,20 @@ const CompanyFlyoutContent = ({handleClose}) => {
               <RiCustomerService2Line size={17} />
             </h1>
             <div className="flex flex-col gap-[2px]">
-              <div className="flex items-center"><h1 className="text-base">Support </h1><span className="rotate-45"><IoMdArrowUp /></span></div>
+              <div className="flex items-center"><h1 className="text-base">Contact </h1><span className="rotate-45"><IoMdArrowUp /></span></div>
               <h1 className="text-xs text-gray-400">Get for any query</h1>
             </div>
           </div>
           <div
-             onClick={()=>handleClose('/learn-crypto')}
+             onClick={()=>handleClose('/services')}
             className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl cursor-pointer"
           >
             <h1 className="mt-1 ml-2">
-              <RiSecurePaymentLine size={17} />
+              <MdMiscellaneousServices size={17} />
             </h1>
             <div className="flex flex-col gap-[2px]">
-              <div className="flex items-center"><h1 className="text-base">Security </h1><span className="rotate-45"><IoMdArrowUp /></span></div>
-              <h1 className="text-xs text-gray-400">Get the latest updates</h1>
+              <div className="flex items-center"><h1 className="text-base">Services </h1><span className="rotate-45"><IoMdArrowUp /></span></div>
+              <h1 className="text-xs text-gray-400">Check our services</h1>
             </div>
           </div>
           <div

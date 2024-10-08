@@ -1,16 +1,14 @@
-
-
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import plate from "../../assets/Images/ServicesImages/hero_bg2.png";
-import icon1 from "../../assets/Images/ServicesImages/boy-1.png";
-import icon2 from "../../assets/Images/ServicesImages/icon-9.png";
-import icon3 from "../../assets/Images/ServicesImages/icon-2.png";
-import icon4 from "../../assets/Images/ServicesImages/icon-3.png";
-import icon5 from "../../assets/Images/ServicesImages/icon-5.png";
-import icon6 from "../../assets/Images/ServicesImages/icon-7.png";
+import icon1 from "../../assets/Images/ServicesImages/icon1.png";
+import icon2 from "../../assets/Images/ServicesImages/icon2.png";
+import icon3 from "../../assets/Images/ServicesImages/icon3.png";
+import icon4 from "../../assets/Images/ServicesImages/icon4.png";
+import icon5 from "../../assets/Images/ServicesImages/icon5.png";
+import icon6 from "../../assets/Images/ServicesImages/icon6.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -18,40 +16,41 @@ const cardData = [
   {
     title: "Exchange Services",
     description:
-      "We are an optimal trading platform ensuring user-friendly, fast, and secure cryptocurrency transactions, resulting in an efficient and seamless trading experience.We are an optimal trading platform ensuring user-friendly, fast,It provides a smooth  and efficient trading experience for both buyers and sellers.",
+      "Our platform offers user-friendly, fast, and secure cryptocurrency transactions, providing an efficient trading experience for both buyers and sellers.",
     icon: icon1,
   },
   {
     title: "Volatility Protection",
     description:
-      " Crypto volatility protection tools, such as stablecoins hedging, automated trading, and algorithms, mitigate risks associated with digital currency purchases and trading, ensuring money security and minimizing sudden price fluctuations.",
+      "Mitigate risks with our crypto volatility protection tools, including stablecoins, automated trading, and algorithms to safeguard against sudden price fluctuations.",
     icon: icon2,
   },
   {
     title: "Investment Services",
     description:
-      "Our expert guidance on buying and selling digital assets offers access to the Bitcoin, Ethereum, Ripple, and 70+ cryptocurrency market prospects, allowing traders to make informed decisions about investment in the cryptocurrency market.",
+      "Our expert guidance helps you invest in Bitcoin, Ethereum, Ripple, and 70+ cryptocurrencies, enabling informed decisions in the evolving crypto market.",
     icon: icon3,
   },
   {
     title: "Fiat Conversion",
     description:
-      "We are the most reliable cryptocurrency exchange now offering Crypto-Fiat conversion options, simplifying transactions and making them more convenient for traders. These options are designed to enhance the user experience on the exchange.",
+      "We offer easy crypto-to-fiat conversion options to simplify transactions, making it convenient for traders to operate seamlessly on our platform.",
     icon: icon4,
   },
   {
     title: "OTC Desk",
     description:
-      "Looking for an OTC (Over-the-counter) Cryptocurrency Exchange Desk that offers over 70+ cryptocurrencies with competite  market rates? Look no further than this global platform, accepting credit/debit cards, net banking, UPI, and other payment methods.",
+      "Our OTC desk supports over 70+ cryptocurrencies with competitive rates, accepting credit cards, net banking, UPI, and other payment methods globally.",
     icon: icon5,
   },
   {
     title: "Brokerage Services",
     description:
-      "Our personalized online brokerage services allow you to effectively manage and grow your cryptocurrency holdings.Our personalized online brokerage services allow you to ensuring a smooth and efficient investment process.services are designed to help you manage and grow your cryptocurrency holdings effectively.",
+      "Our personalized brokerage services ensure smooth management of your cryptocurrency holdings, helping you grow and optimize your investments.",
     icon: icon6,
   },
 ];
+
 
 const ExchangeCrypto = () => {
   const cardsRef = useRef([]);
@@ -79,7 +78,7 @@ const ExchangeCrypto = () => {
   }, []);
 
   return (
-    <section className="bg-cyan-50 py-8 md:py-16">
+    <section className="bg-gradient-to-b from-cyan-50 to-white py-8 md:py-16">
       <div className="container mx-auto text-center px-4">
         <h2 className="text-2xl md:text-4xl font-montserrat font-bold mb-4">
           Buy, Sell And Exchange Cryptocurrency
@@ -87,32 +86,14 @@ const ExchangeCrypto = () => {
         <p className="text-gray-800 text-sm md:text-lg font-century-gothic mb-8 md:mb-12">
           Top crypto platform for trading, investing, OTC desk, and crypto-finance conversion
         </p>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 px-5">
-          {cardData.map((card) => (
-            <div
-              key={card.id} // Use a unique identifier
-              ref={(el) => (cardsRef.current[card.id] = el)} // Adjust if needed
-              className="relative bg-white p-4 md:p-6 rounded-lg shadow-md flex flex-col h-[22rem] xs:h-[18.5rem] md:h-[14rem] w-full mx-auto"
-            >
-              <div className="flex-0 h-9 flex items-center">
-                <h3 className="text-lg md:text-xl font-montserrat font-semibold">
-                  {card.title}
-                </h3>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-8 px-5">
+          {cardData.map((card, index) => (
+            <div key={index} ref={(el) => (cardsRef.current[index] = el)}  className="benefit-card flex flex-col items-start OtcBenefit-background p-4 sm:p-5 md:p-6 rounded-xl shadow-md relative">
+              <div className='p-3 bg-gray-100 mb-3 inline-block rounded-full'>
+                <img src={card.icon} className='w-10 h-10' alt="" />
               </div>
-              <div className="flex-1 flex items-start h-[10rem] md:h-[8rem]">
-                <p className="text-gray-600 mt-2 text-sm text-start md:text-start font-century-gothic pb-4 md:pb-8">
-                  {card.description}
-                </p>
-              </div>
-              <div className="absolute bottom-5 right-5 w-8 h-8 md:w-[3rem] md:h-10 lg:w-15 lg:h-10 text-right">
-                <img
-                  src={card.icon}
-                  alt="Online brokerage services icon"
-                  className="w-full h-full"
-                />
-                <img src={plate} alt="Background design element" className="" />
-              </div>
-
+              <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 font-century-gothic">{card.title}</h3>
+              <p className="text-gray-600 mb-8 sm:mb-4 font-century-gothic text-left text-sm sm:text-base">{card.description}</p>
             </div>
           ))}
 
@@ -123,4 +104,3 @@ const ExchangeCrypto = () => {
 };
 
 export default ExchangeCrypto;
-
