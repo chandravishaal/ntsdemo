@@ -2,6 +2,7 @@
 import React, { useState, useRef } from "react";
 import videoThumbnail from "../../assets/Video/sampleVideo2.mp4";
 import { MdOutlineArrowOutward } from "react-icons/md";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 
 const videos = [
@@ -89,58 +90,19 @@ const VideoSection = () => {
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black opacity-60"></div>
 
-        {/* 'Next' Button */}
-        {hovered && (
-          <button
-            onMouseEnter={handleMouseEnterNext}
-            onMouseLeave={handleMouseLeaveNext}
-            className="absolute top-5 left-5 z-10 bg-white flex items-center gap-2 transition-all duration-300 hover:bg-transparent border border-white hover:text-white text-black p-3 rounded-lg shadow-lg opacity-100"
-          >
-            Next <span><MdOutlineArrowOutward /></span>
-          </button>
-        )}
+        {/* Button in the middle of the video */}
+        <div className="absolute inset-0 flex justify-center items-center">
+          <a href="https://www.youtube.com/@ntsmetrics" target="_blank" rel="noopener noreferrer">
+            <button className="bg-white text-black px-8 py-3 rounded-full flex items-center font-semibold text-xl">
+              Watch more <FaArrowRightLong className="ml-2 text-xl" />
+            </button>
+          </a>
+        </div>
 
-        {/* Video List */}
-        {showList && (
-          <div
-            className="absolute top-16 left-[4rem] w-[50rem] p-4 rounded-lg shadow-lg"
-            onMouseEnter={handleMouseEnterNext}
-            onMouseLeave={handleMouseLeaveNext}
-          >
-            {videos.map((video) => (
-              <div
-                key={video.id}
-                className="flex items-center h-[4rem] bg-white text-black p-4 rounded-lg mb-2 shadow-md border-2 border-white"
-              >
-                <img
-                  src={video.thumbnail}
-                  alt={video.title}
-                  className="w-16 h-13 rounded-md mr-4"
-                />
-                <div className="flex-grow">
-                  <a
-                    href={video.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-semibold text-lg hover:text-blue-400"
-                  >
-                    {video.title}
-                  </a>
-                </div>
-                <a
-                  href={video.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-white text-black px-3 py-1 rounded-lg transition-colors duration-300 hover:bg-gray-200"
-                >
-                  Watch Now
-                </a>
-              </div>
-            ))}
-          </div>
-        )}
+
       </div>
     </div>
+
   );
 };
 
