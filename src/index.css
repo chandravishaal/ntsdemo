@@ -217,14 +217,22 @@ text-decoration:none;
 
 
 /* explore section background  */
-@media (min-width: 768px) {
+/* @media (min-width: 768px) { */
   .exploreSection-background {
-    background-image: url('./assets/Images/2nd_section_background.png');
+    background-image: url('./assets/Images/HomeImages/bg_2nd_section.png');
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
     background-position: top;
   }
+/* } */
+
+.OtcBenefit-background {
+  background-image: url('./assets/Images/OtcDesk/wy_us_bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-position: top;
 }
 
 /* why choose us section background */
@@ -578,4 +586,8 @@ nav {
 
 .icon-shadow {
   filter: drop-shadow(7px 7px 2px rgb(0 0 0 / 0.4));
+}
+
+.rotateY-360 {
+  transform: rotateY(360deg);
 }
