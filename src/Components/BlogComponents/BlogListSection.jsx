@@ -663,7 +663,7 @@ const BlogListSection = () => {
   const blogPosts = [
     {
       title: "The Future of Technology",
-      banner: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*58VfCFFISe7eaCdtWTCi0g.jpeg",
+      banner: "https://media.istockphoto.com/id/1465618017/photo/businessmen-investor-think-before-buying-stock-market-investment-using-smartphone-to-analyze.jpg?s=2048x2048&w=is&k=20&c=ocYlO-ILbQNIpV70O32Ja3P4kMLi9_Yj-78Xrf-Y6L8=",
       description: "Exploring the innovations that will shape our future.,Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sunt id itaque tempore iste ratione quod placeat officia. Iusto libero voluptatibus quis. ",
       content: [
         "Technology is evolving at an unprecedented pace.",
@@ -680,7 +680,7 @@ const BlogListSection = () => {
         dislikes: 5
       },
       createdAt:
-       "3hrs ago"
+        "3hrs ago"
       ,
       categories: [
         {
@@ -711,7 +711,7 @@ const BlogListSection = () => {
         likes: 85,
         dislikes: 2
       },
-     
+
       categories: [
         {
           id: "60d1d5e4f1a2b9299f40f0a2",
@@ -722,7 +722,7 @@ const BlogListSection = () => {
           name: "Wellness"
         }
       ],
-      createdAt:  "6hrs ago"
+      createdAt: "6hrs ago"
     },
     {
       title: "Traveling on a Budget",
@@ -963,93 +963,99 @@ const BlogListSection = () => {
   ];
 
   return (
-    <div className="w-full bg-gray-50 py-16 px-4 sm:px-8">
+    <div className="w-full bg-gray-50 py-8 px-4 sm:px-8">
       <div className="container mx-auto">
         <h1 className="text-3xl sm:text-5xl font-semibold text-center mb-10 sm:mb-14 font-montserrat">
-          Our Latest Blogs
+          Blogs
         </h1>
 
-        <div className="flex flex-col lg:flex-row gap-10">
+        <div className="flex flex-col lg:flex-row gap-8">
           {/* Main Blog Section */}
-          <div className="w-full lg:w-[500px] mb-10 lg:mb-0 flex flex-col">
+          <div className="relative w-full lg:w-[50%]  lg:h-[39.6rem] mb-10 lg:mb-0 flex flex-col rounded-3xl ">
             <img
               src={blogPosts[0].banner}
               alt={`Main Blog - ${blogPosts[0].title}`}
-              className="w-full h-80 rounded mb-3"
+              className="w-full h-[420px] md:h-full object-center rounded-3xl"
             />
-            <div className="flex items-center text-cyan-600 mb-4">
-              <img
-                src={blogPosts[0].author.imageUrl}
-                alt={`${blogPosts[0].author.name} Profile`}
-                className="w-8 h-8 mr-2 rounded-full object-cover object-centre" // Circular profile image
-              />
-              
-                <span className="text-sm">By - {blogPosts[0].author.name || 'Admin'}</span>
-                <span className='text-sm mx-2 font-bold'>.</span>
-                <span className='text-sm'>{blogPosts[0].createdAt}</span>
 
-              <div className="rounded-xl flex items-center gap-2 bg-[#F3F4F6] p-1 px-2 text-sm ml-2">
-                <span className="text-primaryCyan">
-                  <FaHeart />
-                </span>
-                <h1>{blogPosts[0].activity.likes}</h1>
-              </div>
-              <div className="text-sm text-cyan-600 flex items-center ml-auto">
-                <span className="mr-1"><MdOutlineTimer /></span>
-                <span className="ml-auto">{blogPosts[0].readTime} m</span>
+            <div className="absolute bottom-8 left-0 w-full p-4  ">
+              <div className="flex items-center text-white mb-4">
+                <img
+                  src={blogPosts[0].author.imageUrl}
+                  alt={`${blogPosts[0].author.name} Profile`}
+                  className="w-8 h-8 mr-2 rounded-full object-cover object-center"
+                />
+                <span className="text-sm md:text-lg font-bold whitespace-nowrap">By - {blogPosts[0].author.name || 'Admin'}</span>
+                <span className='text-sm md:text-lg mx-2 font-bold whitespace-nowrap'>.</span>
+                <span className='text-sm md:text-lg whitespace-nowrap'>{blogPosts[0].createdAt}</span>
+                <div className="rounded-xl flex items-center gap-2 p-1 px-2 text-sm ml-2">
+                  <span className="text-primaryCyan">
+                    <FaHeart />
+                  </span>
+                  <h1>{blogPosts[0].activity.likes}</h1>
+                </div>
+                <div className="text-lg text-gray-200 flex items-center ml-auto hidden sm:flex">
+                  <span className="mr-1"><MdOutlineTimer /></span>
+                  <span className="ml-auto">{blogPosts[0].readTime} m</span>
+                </div>
               </div>
 
+              <h2 className="text-2xl font-bold text-white">{blogPosts[0].title}</h2>
+              <p className="text-gray-200 mb-4 text-lg font-century-gothic line-clamp-3">{blogPosts[0].description}</p>
+              <Link to={blogPosts[0].link} className="text-primaryCyan font-semibold twxt-lg">
+                Read More...
+              </Link>
             </div>
-
-            <h2 className="text-2xl font-bold">{blogPosts[0].title}</h2>
-            <p className="text-gray-700 mb-4 text-justify font-century-gothic line-clamp-2">{blogPosts[0].description}</p>
-            <Link to={blogPosts[0].link} className="text-cyan-600 font-semibold">
-              Read More...
-            </Link>
           </div>
 
           {/* Blog List Section */}
-          <div className="w-full lg:w-[60%] flex flex-col justify-between">
+          <div className="w-full lg:w-[50%] flex flex-col  items-center gap-4">
             {blogPosts.slice(1, 4).map((post, index) => (
-              <div key={index}>
-                <Link to={post.link} className="flex items-start mb-4" style={{ height: '140px', width: '100%' }}>
+              <div key={index} className="border border-gray-300 rounded-3xl mb-4 transition-transform duration-200 overflow-hidden h-[400px] md:h-[190px]">
+                <Link to={post.link} className="flex flex-col md:flex-row h-full">
+                  {/* Image on top for mobile, left for desktop */}
                   <img
                     src={post.banner}
                     alt={post.title}
-                    className="w-[180px] h-[100%] rounded mr-4"
+                    className="w-full md:w-[210px] h-[220px] md:h-full "
                   />
-                  <div className="flex flex-col items-start gap-7">
+                  <div className="flex flex-col justify-between p-4 gap-3">
                     <div>
-                      <h1 className="font-bold text-lg sm:text-2xl">{post.title}</h1>
-                      <p className="text-gray-500 mb-2 line-clamp-2 font-century-gothic">{post.description}</p>
+                      <div className="flex items-center justify-between mb-1">
+                        <span className='text-lg font-century-gothic text-primaryCyan font-bold'>Cryptocurrency</span>
+                        <span className="text-sm text-gray-600">{post.createdAt}</span>
+                      </div>
+                      <h1 className="font-bold text-xl sm:text-2xl line-clamp-1">{post.title}</h1>
+                      <p className="text-gray-600 mb-2 line-clamp-2 font-century-gothic ">{post.description}</p>
                     </div>
 
-                    <div className="flex items-center justify-between w-full text-cyan-600 mb-4">
+                    <div className="flex items-center justify-between w-full">
                       <div className="flex items-center">
                         <img src={post.author.imageUrl} alt="Profile" className="w-4 h-4 rounded-full mr-2 object-cover" />
-                        <span className='text-sm'>{post.author.name}</span>
-                        <span className='text-sm mx-2 font-bold'>.</span>
-                        <span className='text-sm'>{post.createdAt}</span>
+                        <span className='text-sm font-century-gothic text-gray-600 font-bold'>{post.author.name}</span>
                       </div>
-                      <div className="text-sm text-cyan-600 flex items-center">
+                      <div className="text-sm text-gray-600 flex items-center">
                         <span className="mr-1"><MdOutlineTimer /></span>
-                        <span>{post.readTime}m</span>
+                        <span className="text-gray-600">{post.readTime} m</span>
                       </div>
                     </div>
                   </div>
                 </Link>
-                {/* Light-colored line separator */}
-                {index < blogPosts.slice(1, 4).length - 1 && (
-                  <hr className="border-t border-light-gray-300 my-2" />
-                )}
               </div>
             ))}
-
           </div>
-
 
         </div>
       </div>
+
+      {/* CSS for hover effect */}
+      <style jsx>{`
+        .blog-card:hover {
+          transform: scale(1.1);
+          box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+          transition: transform 0.2s;
+        }
+      `}</style>
     </div>
   );
 };

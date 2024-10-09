@@ -9,6 +9,7 @@ import BlogList from '../Components/BlogComponents/blogList';
 const Blog = () => {
   return (
     <div className="font-sans bg-gray-100">
+       <BlogListSection />
     {/*} <HeroSection />
      <Category />
      <InstagramSection />
