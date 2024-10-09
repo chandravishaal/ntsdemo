@@ -11,21 +11,23 @@ import { items } from '../Components/BlogComponents/ExploreCategories';
 const Blog = () => {
   return (
     <div className="font-sans bg-gray-100">
-     {/* <HeroSection />
+      {/* <HeroSection />
+       <BlogListSection />
+    {/*} <HeroSection />
      <Category />
      <InstagramSection />
      <BlogListSection />
      <BlogFeatureSection/>
       <LaunchSection /> */}
-      
+
       {/* <BlogList/><Category />
       <InstagramSection />
       <BlogListSection />
       <BlogListSection />
       <BlogFeatureSection/>
       <LaunchSection />*/}
-
-      <ExploreCategoryList items={items}/>
+      <BlogListSection />
+      <ExploreCategoryList items={items} />
 
 
     </div>
