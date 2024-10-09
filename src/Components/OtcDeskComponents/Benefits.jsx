@@ -8,7 +8,6 @@ import partnerships from "../../assets/Images/OtcDesk/section3_icon3.png";
 import transactions from "../../assets/Images/OtcDesk/section3_icon4.png";
 import mobile from "../../assets/Images/OtcDesk/section3_icon5.png";
 import investment from "../../assets/Images/OtcDesk/section3_icon6.png";
-import shadow from "../../assets/Images/OtcDesk/hero_bg2.png";
 
 gsap.registerPlugin(ScrollTrigger);
 

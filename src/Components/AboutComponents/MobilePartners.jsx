@@ -125,7 +125,8 @@ const MobilePartners = () => {
 
           </div>
 
-          <div className="w-full h-full px-3 flex justify-center items-center">
+          <div className
+="w-full h-full px-3 flex justify-center items-center">
             <div className="relative px-3">
               <section className="flex flex-col items-center justify-center relative z-10 min-h-[15rem] sm:min-h-[25rem]">
                 <div className="bg-white/70 w-[240px] sm:w-[270px] h-[250px] sm:h-[270px] flex items-center -my-10 justify-center rounded-2xl">
