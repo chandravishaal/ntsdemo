@@ -1,10 +1,10 @@
 import overallImage from "/src/assets/Images/9th_section_img.png";
 import Button3 from "../../Common/Button3";
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 const CryptoFreedomSection = () => {
   const sectionRef = useRef(null); // Ref for the section
