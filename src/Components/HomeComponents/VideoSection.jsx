@@ -91,9 +91,10 @@ const VideoSection = () => {
         <div className="absolute inset-0 bg-black opacity-60"></div>
 
         {/* Button in the middle of the video */}
-        <div className="absolute inset-0 flex justify-center items-center">
+        <div className="absolute inset-0 flex flex-col justify-center items-center">
+          <h1 className="text-4xl text-white font-century-gothic mb-5">Check out our latest contents</h1>
           <a href="https://www.youtube.com/@ntsmetrics" target="_blank" rel="noopener noreferrer">
-            <button className="bg-white text-black px-8 py-3 rounded-full flex items-center font-semibold text-xl">
+            <button className="bg-white text-black px-8 py-3 border border-white hover:bg-transparent hover:text-white transition-all duration-300 rounded-full flex items-center font-semibold text-xl">
               Watch more <FaArrowRightLong className="ml-2 text-xl" />
             </button>
           </a>
