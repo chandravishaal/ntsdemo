@@ -20,7 +20,7 @@ const CryptoFreedomSection = () => {
           element,
           {
             opacity: 0,
-            y: 50, // Start from below
+            y: 90, // Start from below
           },
           {
             opacity: 1,
