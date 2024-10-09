@@ -1,13 +1,12 @@
-import { useEffect, useState } from "react";
-// import Blob from "../Common/Blobs";
+import { useState } from "react";
 import { MdArrowOutward } from "react-icons/md";
 import careerBackground from "../assets/Images/carrerBackground.jpg";
 import weListen from "../assets/Images/weListen.jpg";
 import curve2 from "../assets/Images/curve2.png";
 import curve3 from "../assets/Images/curve3.png";
-
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { FaLine } from "react-icons/fa";
 
 const jobs = [
   {
@@ -92,17 +91,17 @@ const curveVariants = {
   visible: { opacity: 1, x: 0, transition: { duration: 1 } },
 };
 
-const MissionCard = ({ icon, title, description }) => {
-  return (
-    <div className="bg-white shadow-md rounded-lg p-6 flex flex-col items-center text-center">
-      <img src={icon} alt={`${title} Icon`} className="w-16 h-16 mb-4" />
-      <h3 className="text-2xl font-bold text-gray-800">
-        We <span className="text-primaryCyan">{title}</span>
-      </h3>
-      <p className="text-gray-500 mt-4">{description}</p>
-    </div>
-  );
-};
+// const MissionCard = ({ icon, title, description }) => {
+//   return (
+//     <div className="bg-white shadow-md rounded-lg p-6 flex flex-col items-center text-center">
+//       <img src={icon} alt={`${title} Icon`} className="w-16 h-16 mb-4" />
+//       <h3 className="text-2xl font-bold text-gray-800">
+//         We <span className="text-primaryCyan">{title}</span>
+//       </h3>
+//       <p className="text-gray-500 mt-4">{description}</p>
+//     </div>
+//   );
+// };
 
 const JobListing = () => {
   const [selectedCategory, setSelectedCategory] = useState("View all");
@@ -138,7 +137,7 @@ const JobListing = () => {
         </div>
 
         {/* Image Section */}
-        <div className="w-full md:w-1/2">
+        <div className="w-full md:w-1/2 max-md:my-2">
           <img
             src={careerBackground}
             alt="Career Background"
@@ -167,10 +166,10 @@ const JobListing = () => {
             variants={sectionVariants}
           >
             <div className="md:w-1/2">
-              <motion.h1 className="text-4xl font-bold text-black text-right">
+              <motion.h1 className="text-4xl font-bold text-black text-right max-md:text-left">
                 We <span className="text-primaryCyan">Listen</span>
               </motion.h1>
-              <motion.p className="text-gray-700 mt-4 text-right">
+              <motion.p className="text-gray-700 mt-4 text-right max-md:text-left">
                 At our crypto suite, we take pride in listening to our
                 customers' voices. We believe that every review, feedback, and
                 suggestion is an opportunity for us to learn and grow. Our
@@ -195,7 +194,7 @@ const JobListing = () => {
           <motion.img
             src={curve2}
             alt="Curve Graphic"
-            className="h-64 w-64 ml-96 py-8"
+            className="h-64 w-64 ml-96 py-8 max-md:hidden"
             initial="hidden"
             animate={listenInView ? "visible" : "hidden"}
             variants={curveVariants}
@@ -203,7 +202,7 @@ const JobListing = () => {
 
           {/* We Care Section */}
           <motion.section
-            className="flex flex-col md:flex-row items-center"
+            className="flex flex-col md:flex-row items-center max-md:flex-col-reverse"
             ref={careRef}
             initial="hidden"
             animate={careInView ? "visible" : "hidden"}
@@ -236,7 +235,7 @@ const JobListing = () => {
           <motion.img
             src={curve3}
             alt="Curve Graphic"
-            className="h-32 w-64 ml-96 mt-6"
+            className="h-32 w-64 ml-96 mt-6 max-md:hidden"
             initial="hidden"
             animate={careInView ? "visible" : "hidden"}
             variants={curveVariants}
@@ -251,10 +250,10 @@ const JobListing = () => {
             variants={sectionVariants}
           >
             <div className="md:w-1/2">
-              <motion.h1 className="text-4xl font-bold text-black text-right">
+              <motion.h1 className="text-4xl font-bold text-black text-right max-md:text-left">
                 We <span className="text-primaryCyan">Improve</span>
               </motion.h1>
-              <motion.p className="text-gray-700 my-4 py-3 text-right">
+              <motion.p className="text-gray-700 my-4 py-3 text-right max-md:text-left">
                 We're committed to continuous improvement and innovation. Our
                 team of experts stays at the forefront of industry trends,
                 embracing cutting-edge technologies...
@@ -276,7 +275,7 @@ const JobListing = () => {
           <motion.img
             src={curve2}
             alt="Curve Graphic"
-            className="h-90 w-52 ml-80"
+            className="h-90 w-52 ml-80 max-md:hidden"
             initial="hidden"
             animate={improveInView ? "visible" : "hidden"}
             variants={curveVariants}
@@ -291,10 +290,10 @@ const JobListing = () => {
             variants={sectionVariants}
           >
             <div className="mx-auto">
-              <motion.h1 className="text-4xl font-bold text-black text-center">
+              <motion.h1 className="text-4xl font-bold text-black text-center my-4 max-md:text-left">
                 We <span className="text-primaryCyan">Achieve</span>
               </motion.h1>
-              <motion.p className="mt-4 mb-8 text-gray-600 max-w-md text-center">
+              <motion.p className="mt-4 mb-8 text-gray-600 max-w-md text-center max-md:text-left">
                 We are dedicated to empowering individuals and businesses to
                 unlock the full potential of cryptocurrency...
               </motion.p>
@@ -302,8 +301,61 @@ const JobListing = () => {
           </motion.section>
         </div>
       </div>
-      /{/* Hiring Banner */}
-      <div className="container mx-auto mb-20 flex flex-col justify-between gap-5 px-4 md:px-0">
+      {/* interview process */}
+      <div className="container mt-20 mx-auto px-5">
+        <div className="bg-white text-center py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-12">
+            Our Hiring Process
+          </h1>
+          <div className="relative flex justify-center items-start space-x-16">
+            {[
+              {
+                step: "1",
+                title: "Online Application",
+                description: "Submit your application via our job portal.",
+              },
+              {
+                step: "2",
+                title: "Review and Screening",
+                description:
+                  "We will review your application and may reach out to get to know you better.",
+              },
+              {
+                step: "3",
+                title: "Interviews",
+                description:
+                  "We will conduct a series of interviews with your department of interest.",
+              },
+              {
+                step: "4",
+                title: "Offers",
+                description:
+                  "Successful applicants will be offered the position.",
+              },
+            ].map(({ step, title, description }, index) => (
+              <div className="flex flex-col items-center" key={index}>
+                {/* Step Number */}
+                <div className="text-6xl text-primaryCyan font-bold mb-4">
+                  {step}
+                </div>
+                {/* Title and Description */}
+                <h2 className="text-xl font-semibold text-gray-900 mb-2">
+                  {title}
+                </h2>
+                <p className="text-gray-600">{description}</p>
+                {/* Cyan Dot */}
+                <div className="flex flex-col items-center mt-4 relative">
+                  <div className="w-4 h-4 bg-primaryCyan rounded-full"></div>
+                  
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Hiring Banner */}
+      <div className="container mx-auto mb-20 flex flex-col justify-between gap-5 px-8 md:px-0">
         <div className="mt-10">
           <span className="border-2 border-gray-800 text-gray-800 px-3 py-1.5 rounded-full font-bold hover:bg-gray-100 transition-colors text-sm md:text-base">
             We’re hiring!
@@ -323,7 +375,7 @@ const JobListing = () => {
         </div>
 
         {/* Category Filters */}
-        <div className="flex justify-start gap-2 mb-2 font-bold overflow-x-auto hide-scrollbar px-4 md:px-0">
+        <div className="flex justify-start gap-2 mb-2 font-bold overflow-x-auto hide-scrollbar px-2 md:px-0">
           <button
             onClick={() => setSelectedCategory("View all")}
             className={`px-3 py-1.5 rounded-full border-2 text-sm md:text-base whitespace-nowrap ${
