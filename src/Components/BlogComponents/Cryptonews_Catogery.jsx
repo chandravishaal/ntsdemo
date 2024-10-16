@@ -29,9 +29,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 const EachBlog = ({ title, date, description, imageUrl, author, profile, readTime }) => {
     return (
-        <div className="flex flex-col items-start gap-8 rounded-2xl bg-gray-50 relative"> {/* Set position relative to this container */}
+        <div className="flex flex-col items-start gap-8 rounded-2xl bg-gray-50 relative overflow-hidden"> {/* Set position relative to this container */}
             <div className="relative"> {/* Set position relative for child elements */}
-                <img src={imageUrl} alt="Blog Visual" className="w-full h-[15rem] rounded-t-2xl" />
+                <img src={imageUrl} alt="Blog Visual" className="w-full h-[15rem] rounded-t-2xl transition ease-out duration-300 transform hover:scale-105 cursor-pointer" />
 
                 {/* Category label */}
                 <span className="absolute top-2 right-2 text-primaryCyan text-md font-bold px-2 py-1 rounded">

@@ -971,11 +971,11 @@ const BlogListSection = () => {
 
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Main Blog Section */}
-          <div className="relative w-full lg:w-[50%]  lg:h-[39.6rem] mb-10 lg:mb-0 flex flex-col rounded-xl ">
+          <div className="relative w-full lg:w-[50%]  lg:h-[39.6rem] mb-10 lg:mb-0 flex flex-col rounded-xl overflow-hidden ">
             <img
               src={blogPosts[0].banner}
               alt={`Main Blog - ${blogPosts[0].title}`}
-              className="w-full h-[420px] md:h-full object-cover rounded-xl"
+              className="w-full h-[420px] md:h-full object-cover rounded-xl transition ease-out duration-300 transform hover:scale-105 cursor-pointer"
             />
 
             <div className="absolute bottom-8 left-0 w-full p-4  ">
@@ -983,7 +983,7 @@ const BlogListSection = () => {
                 <img
                   src={blogPosts[0].author.imageUrl}
                   alt={`${blogPosts[0].author.name} Profile`}
-                  className="w-8 h-8 mr-2 rounded-full object-cover object-center"
+                  className="w-8 h-8 mr-2 rounded-full object-cover "
                 />
                 <span className="text-sm md:text-lg font-bold whitespace-nowrap">By - {blogPosts[0].author.name || 'Admin'}</span>
                 <span className='text-sm md:text-lg mx-2 font-bold whitespace-nowrap'>.</span>
@@ -1011,13 +1011,13 @@ const BlogListSection = () => {
           {/* Blog List Section */}
           <div className="w-full lg:w-[50%] flex flex-col  items-center gap-4">
             {blogPosts.slice(1, 4).map((post, index) => (
-              <div key={index} className="border border-gray-300 rounded-xl mb-4 transition-transform duration-200 overflow-hidden h-[400px] md:h-[190px]">
-                <Link to={post.link} className="flex flex-col md:flex-row h-full">
+              <div key={index} className="border border-gray-300 rounded-xl mb-4 transition-transform duration-200 overflow-hidden h-[400px] md:h-[190px] ">
+                <Link to={post.link} className="flex flex-col md:flex-row h-full ">
                   {/* Image on top for mobile, left for desktop */}
                   <img
                     src={post.banner}
                     alt={post.title}
-                    className="w-full md:w-[210px] h-[220px] md:h-full object-cover"
+                    className="w-full md:w-[210px] h-[220px] md:h-full object-cover transition ease-out duration-300 transform hover:scale-105 cursor-pointer"
                   />
                   <div className="flex flex-col justify-between p-4 gap-3">
                     <div>

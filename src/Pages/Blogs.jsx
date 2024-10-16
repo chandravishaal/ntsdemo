@@ -26,8 +26,8 @@ const Blog = () => {
       <BlogListSection />
       <BlogListSection />
       <BlogFeatureSection/>
-      <LaunchSection /> */}
-      <InnovationSection blogPosts={blogPosts}/>
+      <LaunchSection /> 
+      <InnovationSection blogPosts={blogPosts}/>*/}
       <BlogListSection />
       <CryptonewCatogery/>
       <MarketAnalysis_and_Trends/>
