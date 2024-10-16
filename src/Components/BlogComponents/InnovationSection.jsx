@@ -92,7 +92,7 @@ export const blogPosts = [
       content: [
         "Incorporating fruits and vegetables into your diet is essential.",
         "Regular exercise can greatly improve your health.",
-        "Mental well-being is just as important as physical health."
+        "Mental well-being is just as important as physical health...."
       ],
       readTime: 4,
       author: {
