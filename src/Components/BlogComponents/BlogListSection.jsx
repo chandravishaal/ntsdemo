@@ -964,18 +964,18 @@ const BlogListSection = () => {
 
   return (
     <div className="w-full bg-gray-50 py-8 px-4 sm:px-8">
-      <div className="container mx-auto">
+      <div className="container mx-auto ">
         <h1 className="text-3xl sm:text-5xl font-semibold text-center mb-10 sm:mb-14 font-montserrat">
           Blogs
         </h1>
 
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Main Blog Section */}
-          <div className="relative w-full lg:w-[50%]  lg:h-[39.6rem] mb-10 lg:mb-0 flex flex-col rounded-3xl ">
+          <div className="relative w-full lg:w-[50%]  lg:h-[39.6rem] mb-10 lg:mb-0 flex flex-col rounded-xl ">
             <img
               src={blogPosts[0].banner}
               alt={`Main Blog - ${blogPosts[0].title}`}
-              className="w-full h-[420px] md:h-full object-center rounded-3xl"
+              className="w-full h-[420px] md:h-full object-cover rounded-xl"
             />
 
             <div className="absolute bottom-8 left-0 w-full p-4  ">
@@ -1011,18 +1011,18 @@ const BlogListSection = () => {
           {/* Blog List Section */}
           <div className="w-full lg:w-[50%] flex flex-col  items-center gap-4">
             {blogPosts.slice(1, 4).map((post, index) => (
-              <div key={index} className="border border-gray-300 rounded-3xl mb-4 transition-transform duration-200 overflow-hidden h-[400px] md:h-[190px]">
+              <div key={index} className="border border-gray-300 rounded-xl mb-4 transition-transform duration-200 overflow-hidden h-[400px] md:h-[190px]">
                 <Link to={post.link} className="flex flex-col md:flex-row h-full">
                   {/* Image on top for mobile, left for desktop */}
                   <img
                     src={post.banner}
                     alt={post.title}
-                    className="w-full md:w-[210px] h-[220px] md:h-full "
+                    className="w-full md:w-[210px] h-[220px] md:h-full object-cover"
                   />
                   <div className="flex flex-col justify-between p-4 gap-3">
                     <div>
                       <div className="flex items-center justify-between mb-1">
-                        <span className='text-lg font-century-gothic text-primaryCyan font-bold'>Cryptocurrency</span>
+                        <span className='text-md font-century-gothic text-primaryCyan font-bold'>Cryptocurrency</span>
                         <span className="text-sm text-gray-600">{post.createdAt}</span>
                       </div>
                       <h1 className="font-bold text-xl sm:text-2xl line-clamp-1">{post.title}</h1>
@@ -1048,14 +1048,12 @@ const BlogListSection = () => {
         </div>
       </div>
 
-      {/* CSS for hover effect */}
-      <style jsx>{`
-        .blog-card:hover {
-          transform: scale(1.1);
-          box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
-          transition: transform 0.2s;
-        }
-      `}</style>
+      {/* Button to browse all posts */}
+      <div className="text-center mt-9 mb-9">
+        <button className="bg-primaryCyan text-white px-4 py-2 text-2xl rounded-md">
+          Browse all Blogs
+        </button>
+      </div>
     </div>
   );
 };

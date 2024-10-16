@@ -6,6 +6,8 @@ import BlogFeatureSection from '../Components/BlogComponents/BlogFeatureSection'
 import LaunchSection from '../Components/BlogComponents/LaunchSection';
 import BlogList from '../Components/BlogComponents/blogList';
 import ExploreCategoryList from '../Components/BlogComponents/ExploreCategories';
+import CryptonewCatogery from '../Components/BlogComponents/Cryptonews_Catogery';
+import MarketAnalysis_and_Trends from '../Components/BlogComponents/Market Analysis_and_Trends';
 import { items } from '../Components/BlogComponents/ExploreCategories';
 
 const Blog = () => {
@@ -27,6 +29,8 @@ const Blog = () => {
       <BlogFeatureSection/>
       <LaunchSection />*/}
       <BlogListSection />
+      <CryptonewCatogery/>
+      <MarketAnalysis_and_Trends/>
       <ExploreCategoryList items={items} />
 
 
