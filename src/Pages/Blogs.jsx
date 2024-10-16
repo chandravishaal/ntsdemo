@@ -7,13 +7,12 @@ import LaunchSection from '../Components/BlogComponents/LaunchSection';
 import BlogList from '../Components/BlogComponents/blogList';
 import ExploreCategoryList from '../Components/BlogComponents/ExploreCategories';
 import { items } from '../Components/BlogComponents/ExploreCategories';
+import InnovationSection, { blogPosts } from '../Components/BlogComponents/InnovationSection';
 
 const Blog = () => {
   return (
     <div className="font-sans bg-gray-100">
-      {/* <HeroSection />
-       <BlogListSection />
-    {/*} <HeroSection />
+     {/* <HeroSection />
      <Category />
      <InstagramSection />
      <BlogListSection />
@@ -25,9 +24,9 @@ const Blog = () => {
       <BlogListSection />
       <BlogListSection />
       <BlogFeatureSection/>
-      <LaunchSection />*/}
-      <BlogListSection />
-      <ExploreCategoryList items={items} />
+      <LaunchSection /> */}
+
+      <ExploreCategoryList items={items}/>
 
 
     </div>
