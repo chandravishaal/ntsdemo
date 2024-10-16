@@ -99,13 +99,16 @@ const MobileFooter = () => {
           toggleAccordion={() => toggleAccordion(0)}
         >
           <Link to="/service1" className="py-2 text-sm">
-            Service 1
+          Exchange Services
           </Link>
           <Link to="/service2" className="py-2 text-sm">
-            Service 2
+          Ticker
           </Link>
           <Link to="/service3" className="py-2 text-sm">
-            Service 3
+          Features
+          </Link>
+          <Link to="/service3" className="py-2 text-sm">
+          Roadmap
           </Link>
         </AccordionItem>
 
@@ -114,14 +117,14 @@ const MobileFooter = () => {
           isExpanded={expandedAccordion === 1}
           toggleAccordion={() => toggleAccordion(1)}
         >
-          <Link to="/product1" className="py-2 text-sm">
-            Product 1
+          <Link to="/crypto-converter" className="py-2 text-sm">
+          Buy and Sell
           </Link>
-          <Link to="/product2" className="py-2 text-sm">
-            Product 2
+          <Link to="/OtcDesk" className="py-2 text-sm">
+          OTC Desk
           </Link>
-          <Link to="/product3" className="py-2 text-sm">
-            Product 3
+          <Link to="/" className="py-2 text-sm">
+          Wallets
           </Link>
         </AccordionItem>
 
@@ -130,14 +133,21 @@ const MobileFooter = () => {
           isExpanded={expandedAccordion === 2}
           toggleAccordion={() => toggleAccordion(2)}
         >
-          <Link to="/resource1" className="py-2 text-sm">
-            Resource 1
+          <Link to="/learn-crypto" className="py-2 text-sm">
+          Learn Crypto
           </Link>
-          <Link to="/resource2" className="py-2 text-sm">
-            Resource 2
+          <Link to="/learn-crypto" className="py-2 text-sm">
+          Crypto Policy
           </Link>
-          <Link to="/resource3" className="py-2 text-sm">
-            Resource 3
+          <Link to="/blogs" className="py-2 text-sm">
+          Blogs
+          </Link>
+          <Link to="/learn-crypto" className="py-2 text-sm">
+          Newsletter
+          </Link><Link to="/learn-crypto" className="py-2 text-sm">
+          Events
+          </Link><Link to="/learn-crypto" className="py-2 text-sm">
+          Videos
           </Link>
         </AccordionItem>
 
