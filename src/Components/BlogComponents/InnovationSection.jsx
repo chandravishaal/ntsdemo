@@ -85,37 +85,37 @@ export const blogPosts = [
         }
       ]
     },
-    {
-      title: "Healthy Living: Tips and Tricks",
-      banner: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*L8T-mS-GqCJiX0RLT1QhIA.png",
-      description: "Simple tips for a healthier lifestyle.Exploring the innovations that will shape our future.,Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      content: [
-        "Incorporating fruits and vegetables into your diet is essential.",
-        "Regular exercise can greatly improve your health.",
-        "Mental well-being is just as important as physical health...."
-      ],
-      readTime: 4,
-      author: {
-        name: "John Smith",
-        imageUrl: "https://media.istockphoto.com/id/1330206844/photo/shot-of-a-young-businessman-at-work.jpg?s=2048x2048&w=is&k=20&c=YbduWEz8AT5Sqs9w8NsDysE4dwDaWPs1d0qApq-xFhk="
-      },
-      activity: {
-        likes: 85,
-        dislikes: 2
-      },
+    // {
+    //   title: "Healthy Living: Tips and Tricks",
+    //   banner: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*L8T-mS-GqCJiX0RLT1QhIA.png",
+    //   description: "Simple tips for a healthier lifestyle.Exploring the innovations that will shape our future.,Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    //   content: [
+    //     "Incorporating fruits and vegetables into your diet is essential.",
+    //     "Regular exercise can greatly improve your health.",
+    //     "Mental well-being is just as important as physical health...."
+    //   ],
+    //   readTime: 4,
+    //   author: {
+    //     name: "John Smith",
+    //     imageUrl: "https://media.istockphoto.com/id/1330206844/photo/shot-of-a-young-businessman-at-work.jpg?s=2048x2048&w=is&k=20&c=YbduWEz8AT5Sqs9w8NsDysE4dwDaWPs1d0qApq-xFhk="
+    //   },
+    //   activity: {
+    //     likes: 85,
+    //     dislikes: 2
+    //   },
      
-      categories: [
-        {
-          id: "60d1d5e4f1a2b9299f40f0a2",
-          name: "Health"
-        },
-        {
-          id: "60d1d5e4f1a2b9299f40f0a3",
-          name: "Wellness"
-        }
-      ],
-      createdAt:  "6hrs ago"
-    },
+    //   categories: [
+    //     {
+    //       id: "60d1d5e4f1a2b9299f40f0a2",
+    //       name: "Health"
+    //     },
+    //     {
+    //       id: "60d1d5e4f1a2b9299f40f0a3",
+    //       name: "Wellness"
+    //     }
+    //   ],
+    //   createdAt:  "6hrs ago"
+    // },
     {
       title: "Traveling on a Budget",
       banner: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*4EK7Nug1n3bCOVoniFXo9Q.jpeg",
@@ -146,96 +146,96 @@ export const blogPosts = [
       ],
       createdAt: "8hrs ago"
     },
-    {
-      title: "Mastering the Art of Cooking",
-      banner: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*Na-_QCEsWqQbEAFdj9OoeA.jpeg",
-      description: "Tips for becoming a better cook at home.Exploring the innovations that will shape our future.,Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      content: [
-        "Start with simple recipes to build your confidence.",
-        "Experiment with spices to enhance flavors.",
-        "Always taste your food as you cook."
-      ],
-      readTime: 3,
-      author: {
-        name: "Bob Brown",
-        imageUrl: "https://media.istockphoto.com/id/1330206844/photo/shot-of-a-young-businessman-at-work.jpg?s=2048x2048&w=is&k=20&c=YbduWEz8AT5Sqs9w8NsDysE4dwDaWPs1d0qApq-xFhk="
-      },
-      activity: {
-        likes: 95,
-        dislikes: 0
-      },
-      categories: [
-        {
-          id: "60d1d5e4f1a2b9299f40f0a6",
-          name: "Cooking"
-        },
-        {
-          id: "60d1d5e4f1a2b9299f40f0a7",
-          name: "Food"
-        }
-      ],
-      createdAt: "1day ago"
-    },
-    {
-      title: "The Importance of Mental Health",
-      banner: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*L7tpgNK6Rg_09CBXJIp3sQ.jpeg",
-      description: "Understanding mental health and its significance.",
-      content: [
-        "Mental health affects how we think, feel, and act.",
-        "It's important to seek help when needed.",
-        "Practicing mindfulness can improve your mental well-being."
-      ],
-      readTime: 5,
-      author: {
-        name: "Emma Wilson",
-        imageUrl: profile
-      },
-      activity: {
-        likes: 200,
-        dislikes: 3
-      },
-      categories: [
-        {
-          id: "60d1d5e4f1a2b9299f40f0a8",
-          name: "Mental Health"
-        },
-        {
-          id: "60d1d5e4f1a2b9299f40f0a9",
-          name: "Self-Care"
-        }
-      ],
-      createdAt: "20.09.2024"
-    },
-    {
-      title: "The Importance of Mental Health",
-      banner: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*4EK7Nug1n3bCOVoniFXo9Q.jpeg",
-      description: "Understanding mental health and its significance.",
-      content: [
-        "Mental health affects how we think, feel, and act.",
-        "It's important to seek help when needed.",
-        "Practicing mindfulness can improve your mental well-being."
-      ],
-      readTime: 5,
-      author: {
-        name: "Emma Wilson",
-        imageUrl: profile
-      },
-      activity: {
-        likes: 200,
-        dislikes: 3
-      },
-      categories: [
-        {
-          id: "60d1d5e4f1a2b9299f40f0a8",
-          name: "Mental Health"
-        },
-        {
-          id: "60d1d5e4f1a2b9299f40f0a9",
-          name: "Self-Care"
-        }
-      ],
-      createdAt: "20.09.2024"
-    },
+    // {
+    //   title: "Mastering the Art of Cooking",
+    //   banner: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*Na-_QCEsWqQbEAFdj9OoeA.jpeg",
+    //   description: "Tips for becoming a better cook at home.Exploring the innovations that will shape our future.,Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    //   content: [
+    //     "Start with simple recipes to build your confidence.",
+    //     "Experiment with spices to enhance flavors.",
+    //     "Always taste your food as you cook."
+    //   ],
+    //   readTime: 3,
+    //   author: {
+    //     name: "Bob Brown",
+    //     imageUrl: "https://media.istockphoto.com/id/1330206844/photo/shot-of-a-young-businessman-at-work.jpg?s=2048x2048&w=is&k=20&c=YbduWEz8AT5Sqs9w8NsDysE4dwDaWPs1d0qApq-xFhk="
+    //   },
+    //   activity: {
+    //     likes: 95,
+    //     dislikes: 0
+    //   },
+    //   categories: [
+    //     {
+    //       id: "60d1d5e4f1a2b9299f40f0a6",
+    //       name: "Cooking"
+    //     },
+    //     {
+    //       id: "60d1d5e4f1a2b9299f40f0a7",
+    //       name: "Food"
+    //     }
+    //   ],
+    //   createdAt: "1day ago"
+    // },
+    // {
+    //   title: "The Importance of Mental Health",
+    //   banner: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*L7tpgNK6Rg_09CBXJIp3sQ.jpeg",
+    //   description: "Understanding mental health and its significance.",
+    //   content: [
+    //     "Mental health affects how we think, feel, and act.",
+    //     "It's important to seek help when needed.",
+    //     "Practicing mindfulness can improve your mental well-being."
+    //   ],
+    //   readTime: 5,
+    //   author: {
+    //     name: "Emma Wilson",
+    //     imageUrl: profile
+    //   },
+    //   activity: {
+    //     likes: 200,
+    //     dislikes: 3
+    //   },
+    //   categories: [
+    //     {
+    //       id: "60d1d5e4f1a2b9299f40f0a8",
+    //       name: "Mental Health"
+    //     },
+    //     {
+    //       id: "60d1d5e4f1a2b9299f40f0a9",
+    //       name: "Self-Care"
+    //     }
+    //   ],
+    //   createdAt: "20.09.2024"
+    // },
+    // {
+    //   title: "The Importance of Mental Health",
+    //   banner: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*4EK7Nug1n3bCOVoniFXo9Q.jpeg",
+    //   description: "Understanding mental health and its significance.",
+    //   content: [
+    //     "Mental health affects how we think, feel, and act.",
+    //     "It's important to seek help when needed.",
+    //     "Practicing mindfulness can improve your mental well-being."
+    //   ],
+    //   readTime: 5,
+    //   author: {
+    //     name: "Emma Wilson",
+    //     imageUrl: profile
+    //   },
+    //   activity: {
+    //     likes: 200,
+    //     dislikes: 3
+    //   },
+    //   categories: [
+    //     {
+    //       id: "60d1d5e4f1a2b9299f40f0a8",
+    //       name: "Mental Health"
+    //     },
+    //     {
+    //       id: "60d1d5e4f1a2b9299f40f0a9",
+    //       name: "Self-Care"
+    //     }
+    //   ],
+    //   createdAt: "20.09.2024"
+    // },
     {
       title: "The Importance of Mental Health",
       banner: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*L8T-mS-GqCJiX0RLT1QhIA.png",

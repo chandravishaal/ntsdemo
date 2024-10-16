@@ -25,7 +25,7 @@ const Blog = () => {
       <BlogListSection />
       <BlogFeatureSection/>
       <LaunchSection /> */}
-
+      <InnovationSection blogPosts={blogPosts}/>
       <ExploreCategoryList items={items}/>
 
 
