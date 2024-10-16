@@ -14,54 +14,37 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import {
-  Navigation,
-  Pagination,
-  Mousewheel,
-  Keyboard
-} from "swiper/modules";
+import { Pagination } from 'swiper/modules';
 
 const ExploreCategoryList = ({ items }) => {
   return (
-    <section>
-      <h2 className="text-2xl md:text-3xl font-bold text-center mb-6">Explore Our Categories</h2>
+    <section className="container mx-auto my-12 px-4">
+      <h2 className="text-center text-4xl md:text-6xl font-bold mb-6">Explore Our Categories</h2>
 
       <Swiper
-        spaceBetween={50}
-        slidesPerView={4}
-        navigation={true}
-        pagination={{ clickable: true }}
-        modules={[
-          Navigation,
-          Pagination,
-          Mousewheel,
-          Keyboard
-        ]}
-        mousewheel={true}
-        keyboard={true}
-        // scrollbar={{ draggable: true }}
-        cssMode={true}
-        className="mySwiper"
-        breakpoints={{
-          340: { slidesPerView: 1 },
-          768: { slidesPerView: 2 },
-          1024: { slidesPerView: 4 },
+        modules={[Pagination]}
+           spaceBetween={20}
+           slidesPerView={1}
+           pagination={{ clickable: true }}
+           breakpoints={{
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 4 },
         }}
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
       >
         {items.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className="category-item flex flex-col items-start bg-white rounded-lg shadow-lg p-6 border border-gray-300 hover:shadow-xl transition-shadow duration-300">
+            <div className="flex flex-col items-start bg-white rounded-lg shadow-lg p-10 border border-gray-300 hover:shadow-xl transition-shadow duration-300 w-full h-[250px]">
               <img
                 src={item.icon}
                 alt={item.altText}
-                className="w-10 h-11 object-contain"
+                className="w-10 h-11"
               />
-              <h3 className="text-center mt-2 my-2 font-bold">
+              <h2 className="text-left text-2xl mt-2 my-2 font-bold font-montserrat cursor-pointer">
                 {item.altText}
-              </h3>
-              <p className="text-center my-2 text-gray-600 break-words hyphens-auto">
+              </h2>
+              <p className="text-left my-2 text-gray-600 font-century-gothic break-words hyphens-auto">
                 {item.description}
               </p>
             </div>
