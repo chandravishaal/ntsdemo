@@ -172,35 +172,35 @@ import {
                       <Link
                         to="/about"
                         className="transition-colors duration-300 lg:hover:text-primaryCyan text-sm">
-                        About Us
+                       Learn Crypto
                       </Link>
                     </li>
                     <li>
                       <Link
                         to="/contact"
                         className="transition-colors duration-300 lg:hover:text-primaryCyan text-sm">
-                        Contact Us
+                        Events
                       </Link>
                     </li>
                     <li>
                       <Link
                         to="/"
                         className="transition-colors duration-300 lg:hover:text-primaryCyan text-sm">
-                        AML & KYC
+                        Videos
                       </Link>
                     </li>
                     <li>
                       <Link
                         to="/terms"
                         className="transition-colors duration-300 lg:hover:text-primaryCyan text-sm">
-                        Terms & Condition
+                        Newsletter
                       </Link>
                     </li>
                     <li>
                       <Link
                         to="/privacy-policy"
                         className="transition-colors duration-300 lg:hover:text-primaryCyan text-sm">
-                        Privacy Policy
+                        Crypto Policy
                       </Link>
                     </li>
                   </ul>
