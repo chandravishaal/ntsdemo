@@ -96,13 +96,6 @@ import {
                     </li>
                     <li>
                       <Link
-                        to="/blogs"
-                        className="transition-colors duration-300 lg:hover:text-primaryCyan text-sm">
-                        Blog
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
                         to="/features"
                         className="transition-colors duration-300 lg:hover:text-primaryCyan text-sm">
                         Features
@@ -126,37 +119,23 @@ import {
                   <ul className="space-y-2">
                     <li>
                       <Link
-                        to="/about"
+                        to="/crypto-converter"
                         className="transition-colors duration-300 lg:hover:text-primaryCyan text-sm">
-                        About Us
+                        Buy and Sell
                       </Link>
                     </li>
                     <li>
                       <Link
-                        to="/contact"
+                        to="/OtcDesk"
                         className="transition-colors duration-300 lg:hover:text-primaryCyan text-sm">
-                        Contact Us
+                        OTC Desk
                       </Link>
                     </li>
                     <li>
                       <Link
                         to="/"
                         className="transition-colors duration-300 lg:hover:text-primaryCyan text-sm">
-                        AML & KYC
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="/terms"
-                        className="transition-colors duration-300 lg:hover:text-primaryCyan text-sm">
-                        Terms
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="/privacy-policy"
-                        className="transition-colors duration-300 lg:hover:text-primaryCyan text-sm">
-                        Privacy Policy
+                        Wallets
                       </Link>
                     </li>
                   </ul>
@@ -170,39 +149,47 @@ import {
                   <ul className="space-y-2">
                     <li>
                       <Link
-                        to="/about"
+                        to="/learn-crypto"
                         className="transition-colors duration-300 lg:hover:text-primaryCyan text-sm">
                        Learn Crypto
                       </Link>
                     </li>
                     <li>
                       <Link
-                        to="/contact"
+                        to="/learn-crypto"
                         className="transition-colors duration-300 lg:hover:text-primaryCyan text-sm">
-                        Events
+                        Crypto Policy
                       </Link>
                     </li>
                     <li>
                       <Link
-                        to="/"
+                        to="/blogs"
                         className="transition-colors duration-300 lg:hover:text-primaryCyan text-sm">
-                        Videos
+                        Blogs
                       </Link>
                     </li>
                     <li>
                       <Link
-                        to="/terms"
+                        to="/learn-crypto"
                         className="transition-colors duration-300 lg:hover:text-primaryCyan text-sm">
                         Newsletter
                       </Link>
                     </li>
                     <li>
                       <Link
-                        to="/privacy-policy"
+                        to="/learn-crypto"
                         className="transition-colors duration-300 lg:hover:text-primaryCyan text-sm">
-                        Crypto Policy
+                        Events
                       </Link>
                     </li>
+                    <li>
+                      <Link
+                        to="/learn-crypto"
+                        className="transition-colors duration-300 lg:hover:text-primaryCyan text-sm">
+                        Videos
+                      </Link>
+                    </li>
+                    
                   </ul>
                 </div>
               </div>
