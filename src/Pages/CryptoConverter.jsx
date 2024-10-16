@@ -149,11 +149,11 @@ const CryptoConverter = () => {
   };
 
   return (
-    // <div className="form-bg min-h-screen py-12 border-b-[25px] border-cyan-400">
-    //   <div className="container max-w-5xl mx-auto p-6 ">{renderStep()}</div>
-    // </div>
+    <div className="form-bg min-h-screen py-12 border-b-[25px] border-cyan-400">
+      <div className="container max-w-5xl mx-auto p-6 ">{renderStep()}</div>
+    </div>
 
-    <ComingSoon />
+    // <ComingSoon />
   );
 };
 
