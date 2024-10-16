@@ -17,7 +17,7 @@
     "@tsparticles/slim": "^3.5.0",
     "aos": "^2.3.4",
     "crypto-icons": "^1.0.65",
-    "framer-motion": "^11.3.28",
+    "framer-motion": "^11.11.4",
     "gsap": "^3.12.5",
     "i": "^0.3.7",
     "npm": "^10.8.2",

@@ -18,6 +18,7 @@ import { BsBriefcase } from "react-icons/bs";
 import { MdMiscellaneousServices } from "react-icons/md";
 import { IoNewspaperOutline } from "react-icons/io5";
 import { FaRegHandshake } from "react-icons/fa6";
+import CryptoConverter from "../Pages/CryptoConverter";
 
 
 
@@ -208,6 +209,7 @@ const CompanyFlyoutContent = ({handleClose}) => {
               <h1 className="text-xs text-gray-400">Our Achievements</h1>
             </div>
           </div>
+
           <div
              onClick={()=>handleClose('/careers')}
             className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl cursor-pointer"
@@ -287,7 +289,7 @@ const IndividualFlyoutContent = ({handleClose}) => {
         <div className="w-[2px] bg-gray-300"></div>
         <div className="flex w-[230px] flex-col px-2">
           <div
-             onClick={()=>handleClose('/learn-crypto')}
+             onClick={()=>handleClose('/CryptoConverter')}
             className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl cursor-pointer"
           >
             <h1 className="mt-1 ml-2">
@@ -351,9 +353,10 @@ const ProducFlyoutContent = ({handleClose}) => {
           <div className="flex items-center gap-1 mt-5"><div  onClick={()=>handleClose('/learn')} className="text-lg text-primaryCyan cursor-pointer">Click to know</div><span className="rotate-45 text-primaryCyan"><IoMdArrowUp /></span></div>
         </div>
         <div className="w-[2px] bg-gray-300"></div>
+
         <div className="flex w-[230px] flex-col px-2">
           <div
-             onClick={()=>handleClose('/learn-crypto')}
+             onClick={()=>handleClose('/crypto-converter')}
             className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl cursor-pointer"
           >
             <h1 className="mt-1 ml-2">

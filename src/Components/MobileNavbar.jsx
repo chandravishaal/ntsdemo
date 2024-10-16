@@ -138,7 +138,7 @@ const MobileNavbar = () => {
               isExpanded={expandedAccordion === 0}
               toggleAccordion={() => toggleAccordion(0)}
             >
-              <div onClick={() => handleAccordionNavigation('/product1')} className="py-2 text-sm flex items-center gap-1">
+              <div onClick={() => handleAccordionNavigation('/crypto-converter')} className="py-2 text-sm flex items-center gap-1">
                 <span><IoCartOutline /></span>Buy and Sell
               </div>
               <div onClick={() => handleAccordionNavigation('/product1')} className="py-2 text-sm flex items-center gap-1">
