@@ -166,7 +166,7 @@ const MobileNavbar = () => {
               <div onClick={() => handleAccordionNavigation('/services')} className="py-2 text-sm flex items-center gap-1">
                 <span><MdMiscellaneousServices /></span>Services
               </div>
-              <div onClick={() => handleAccordionNavigation('/team')} className="py-2 text-sm flex items-center gap-1">
+              <div onClick={() => handleAccordionNavigation('/about#partners')} className="py-2 text-sm flex items-center gap-1">
                 <span><FaRegHandshake /></span>Partners
               </div>
             </AccordionItem>
@@ -176,7 +176,7 @@ const MobileNavbar = () => {
               isExpanded={expandedAccordion === 2}
               toggleAccordion={() => toggleAccordion(2)}
             >
-              <div onClick={() => handleAccordionNavigation('/blog')} className="py-2 text-sm flex items-center gap-1">
+              <div onClick={() => handleAccordionNavigation('/converter')} className="py-2 text-sm flex items-center gap-1">
                 <span><IoCartOutline /></span>Buy and Sell
               </div>
               <div onClick={() => handleAccordionNavigation('/faq')} className="py-2 text-sm flex items-center gap-1">
@@ -207,7 +207,7 @@ const MobileNavbar = () => {
               <div onClick={() => handleAccordionNavigation('/video')} className="py-2 text-sm flex items-center gap-1">
                 <span><MdOutlineVideoSettings /></span>Videos
               </div>
-              <div onClick={() => handleAccordionNavigation('/news')} className="py-2 text-sm flex items-center gap-1">
+              <div onClick={() => handleAccordionNavigation('#newsletter')} className="py-2 text-sm flex items-center gap-1">
                 <span><IoNewspaperOutline /></span>Newsletter
               </div>
               <div onClick={() => handleAccordionNavigation('/policy')} className="py-2 text-sm flex items-center gap-1">

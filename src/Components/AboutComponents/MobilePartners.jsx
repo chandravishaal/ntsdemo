@@ -96,7 +96,7 @@ import sumsub from '../../assets/Images/About/sumsub.svg';
 
 const MobilePartners = () => {
   return (
-    <div className="relative px-3 py-10">
+    <div id="partners" className="relative px-3 py-10">
       {/* Circular Background with Blur */}
       <div className="absolute inset-0 flex justify-center items-center">
         {/* Adjusted size for mobile */}

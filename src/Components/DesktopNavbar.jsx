@@ -18,10 +18,6 @@ import { BsBriefcase } from "react-icons/bs";
 import { MdMiscellaneousServices } from "react-icons/md";
 import { IoNewspaperOutline } from "react-icons/io5";
 import { FaRegHandshake } from "react-icons/fa6";
-import CryptoConverter from "../Pages/CryptoConverter";
-
-
-
 
 
 const FlyOutLink = ({
@@ -158,7 +154,7 @@ const LearnFlyoutContent = ({handleClose}) => {
           </div>
         </div>
         <div
-           onClick={()=>handleClose('/learn-crypto')}
+           onClick={()=>handleClose('#newsletter')}
           className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl cursor-pointer"
         >
           <h1 className="mt-1 ml-2">
@@ -223,7 +219,7 @@ const CompanyFlyoutContent = ({handleClose}) => {
             </div>
           </div>
           <div
-             onClick={()=>handleClose('/learn-crypto')}
+             onClick={()=>handleClose('/news')}
             className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl cursor-pointer"
           >
             <h1 className="mt-1 ml-3">
@@ -237,7 +233,7 @@ const CompanyFlyoutContent = ({handleClose}) => {
         </div>
         <div className="flex w-[230px] flex-col px-2">
           <div
-             onClick={()=>handleClose('/learn-crypto')}
+             onClick={()=>handleClose('/contact')}
             className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl cursor-pointer"
           >
             <h1 className="mt-1 ml-2">
@@ -261,7 +257,7 @@ const CompanyFlyoutContent = ({handleClose}) => {
             </div>
           </div>
           <div
-             onClick={()=>handleClose('/learn-crypto')}
+             onClick={() => handleClose('/about#partners')}
             className="text-lg flex item-start gap-3 p-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-100 rounded-xl cursor-pointer"
           >
             <h1 className="mt-1 ml-2">

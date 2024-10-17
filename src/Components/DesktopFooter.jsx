@@ -13,35 +13,48 @@ import Marquee from "react-fast-marquee";
 import PrimaryButton from "../Common/PrimaryButton";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaFacebookF } from "react-icons/fa";
+import { useEffect } from "react";
 
 
 
 const DesktopFooter = () => {
+
+
+  useEffect(() => {
+    if (window.location.hash === '#newsletter') {
+      const partnersSection = document.getElementById('newsletter');
+      if (partnersSection) {
+        partnersSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, []);
+
+
   return (
     <>
 
-<div className="flex flex-col lg:flex-row items-center justify-between container font-century-gothic mx-auto my-20">
-          <div className="flex flex-col items-start gap-2">
-            <h1 className="text-lg text-gray-600 font-semibold">
-              Interested to stay up-to-date with cryptocurrencies?
-            </h1>
-            <p className="text-sm">
-              Get the latest crypto news, updates, and reports by subscribing to
-              our free newsletter.
-            </p>
-          </div>
-
-          <div className="flex items-center gap-5">
-            <input
-              type="email"
-              placeholder="Enter your email address"
-              className="p-2 rounded-xl border-2 placeholder:text-sm text-sm w-[15rem]"
-            />
-            <PrimaryButton title="Subscribe" />
-          </div>
+      <div id='newsletter' className="flex flex-col lg:flex-row items-center justify-between container font-century-gothic mx-auto my-20">
+        <div className="flex flex-col items-start gap-2">
+          <h1 className="text-lg text-gray-600 font-semibold">
+            Interested to stay up-to-date with cryptocurrencies?
+          </h1>
+          <p className="text-sm">
+            Get the latest crypto news, updates, and reports by subscribing to
+            our free newsletter.
+          </p>
         </div>
 
-        <div className="w-full h-[0.5px] bg-gray-200"></div>
+        <div className="flex items-center gap-5">
+          <input
+            type="email"
+            placeholder="Enter your email address"
+            className="p-2 rounded-xl border-2 placeholder:text-sm text-sm w-[15rem]"
+          />
+          <PrimaryButton title="Subscribe" />
+        </div>
+      </div>
+
+      <div className="w-full h-[0.5px] bg-gray-200"></div>
 
       <div className="">
         <Marquee
@@ -60,7 +73,7 @@ const DesktopFooter = () => {
           <h1>Hello</h1>
         </Marquee>
 
-        
+
         <div className="mb-8 mt-8 font-century-gothic px-5">
           <div className="container mx-auto max-w-[1200px] flex flex-col md:flex-row gap-6 py-6 px-4 md:py-10 lg:px-0">
             {/* First flex container for the social section */}

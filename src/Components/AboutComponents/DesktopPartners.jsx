@@ -20,7 +20,7 @@ const Partners = () => {
   };
 
   return (
-    <div className="relative px-5 py-20 z-20  ">
+    <div id="partners" className="relative px-5 py-20 z-20  ">
       {/* Circular Background with Blur */}
       <div className="absolute inset-0 flex justify-center items-center">
         <div className="circlePosition w-[600px] h-[500px] bg-primaryCyan/40 rounded-lg absolute z-1 top-[50%] left-[53%] translate-x-[-5%] translate-y-[-50%] blur-[400px]"></div>

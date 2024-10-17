@@ -13,20 +13,35 @@ import CompanySection from '../Components/AboutComponents/CompanySection';
 
 
 const About = () => {
+
   // Scroll to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+
+  useEffect(() => {
+    if (window.location.hash === '#partners') {
+      const partnersSection = document.getElementById('partners');
+      if (partnersSection) {
+        partnersSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, []);
+  
+
   return (
     <>
+    
       {/* <AboutHeader /> */}
       <Beneficial />
       <CompanySection />
       <Certificate />
       <Platform />
       <Started />
-      <Partners/>
+      <div id="partners">
+        <Partners />
+      </div>     
       <PressRoom />
       <TeamMemberCard />
       <Culture />
