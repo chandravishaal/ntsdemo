@@ -67,7 +67,7 @@ const DesktopFooter = () => {
             color: "white",
             padding: "4px",
             backgroundColor: "black",
-            overflow: "hidden", // Add this
+            overflow: "hidden",
           }}
         >
           <h1>Hello</h1>
@@ -174,6 +174,13 @@ const DesktopFooter = () => {
                       to="/"
                       className="transition-colors duration-300 lg:hover:text-primaryCyan text-sm">
                       Wallets
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/about#partners"
+                      className="transition-colors duration-300 lg:hover:text-primaryCyan text-sm">
+                     Partnership
                     </Link>
                   </li>
                 </ul>
