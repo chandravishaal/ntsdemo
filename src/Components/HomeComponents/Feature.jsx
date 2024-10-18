@@ -45,7 +45,7 @@ const FeatureComponent = () => {
         },
         {
           opacity: 1,
-          y: -100,
+          y: 0,
           duration: 1.5,
           ease: 'power3.out',
           scrollTrigger: {
@@ -86,7 +86,7 @@ const FeatureComponent = () => {
         },
         {
           opacity: 1,
-          y: 100,
+          y: 0,
           duration: 1.5,
           ease: 'power3.out',
           scrollTrigger: {
@@ -120,7 +120,7 @@ const FeatureComponent = () => {
               alt="Feature showcasing North Star Metrics for buying and selling cryptocurrencies" 
               className="w-auto h-[550px] mx-auto md:mx-0 pb-7" 
             />
-            <div className='text lg:px-12 p-2 w-[70%] relative z-10 md:mt-[15%] mx-auto text-center'>
+            <div className='text  lg:px-12 p-2 w-[70%] relative z-10 md:mt-[5%] mx-auto text-center'>
               <h2 className="text-2xl font-bold text-black mb-2 font-montserrat">North Star Metrics</h2>
               <p className="text-gray-600 mb-4 text-xl md:w-[250px] lg:w-auto font-century-gothic mx-auto">Buy or sell hundreds of cryptocurrencies</p>
               <div className='flex items-center justify-center gap-3'>
@@ -132,7 +132,7 @@ const FeatureComponent = () => {
 
           {/* Second Mobile Image and Content */}
           <div className=" feature-item flex flex-col-reverse md:flex-row items-center md:items-end justify-center relative w-full md:p-8">
-            <div className='text w-[70%] lg:px-12 p-2 relative z-10 mb-[25%] mx-auto text-center'>
+            <div className='text w-[70%] lg:px-12 p-2 relative z-10 mb-[5%] mx-auto text-center '>
               <h2 className="text-2xl font-bold text-black mb-2 font-montserrat">Advance</h2>
               <p className="text-gray-600 mb-4 text-xl md:w-[250px] lg:w-auto font-century-gothic mx-auto">Powerful tools, designed for the advanced trader</p>
               <div className='flex items-center justify-center gap-3'>
