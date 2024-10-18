@@ -354,7 +354,7 @@ const Explore = () => {
 
         <div className="flex flex-col lg:flex-row items-center gap-5 lg:gap-10 justify-between container w-full mx-auto">
           {/* Left-side content */}
-          <div className="flex-1 flex flex-col gap-5 w-full items-center lg:mb-20 mb-8">
+          <div className="flex-1 flex flex-col gap-7 w-full items-center lg:mb-20 mb-8">
             <div className="flex items-center gap-5 mb-5 mt-7">
               <PrimaryButton title="Exchange" />
               <SecondaryButton title="Top Gainers" />

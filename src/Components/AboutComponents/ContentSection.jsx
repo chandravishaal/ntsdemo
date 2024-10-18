@@ -122,7 +122,7 @@ const ContentSection = () => {
   }, []);
 
   return (
-    <div className="container mx-auto px-4 py-20">
+    <div className="container mx-auto px-4 py-2">
       {/* Top Heading */}
       <div className="text-center mb-6">
         <h1 className="text-3xl lg:text-4xl font-bold text-gray-800 font-montserrat">The time is now</h1>
