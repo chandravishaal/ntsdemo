@@ -41,11 +41,11 @@ const FeatureComponent = () => {
         featureElements[0].querySelector('.text'),
         {
           opacity: 0,
-          y: 100, // Start from below
+          y: 200, // Start from below
         },
         {
           opacity: 1,
-          y: 0,
+          y: -100,
           duration: 1.5,
           ease: 'power3.out',
           scrollTrigger: {
@@ -82,11 +82,11 @@ const FeatureComponent = () => {
         featureElements[1].querySelector('.text'),
         {
           opacity: 0,
-          y: -100, // Start from the top
+          y: -200, // Start from the top
         },
         {
           opacity: 1,
-          y: 0,
+          y: 100,
           duration: 1.5,
           ease: 'power3.out',
           scrollTrigger: {
@@ -131,7 +131,7 @@ const FeatureComponent = () => {
           </div>
 
           {/* Second Mobile Image and Content */}
-          <div className="feature-item flex flex-col-reverse md:flex-row items-center md:items-end justify-center relative w-full md:p-8">
+          <div className=" feature-item flex flex-col-reverse md:flex-row items-center md:items-end justify-center relative w-full md:p-8">
             <div className='text w-[70%] lg:px-12 p-2 relative z-10 mb-[25%] mx-auto text-center'>
               <h2 className="text-2xl font-bold text-black mb-2 font-montserrat">Advance</h2>
               <p className="text-gray-600 mb-4 text-xl md:w-[250px] lg:w-auto font-century-gothic mx-auto">Powerful tools, designed for the advanced trader</p>
