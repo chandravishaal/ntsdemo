@@ -6,7 +6,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import { Pagination, Autoplay } from 'swiper/modules';
-import { gsap } from 'gsap';
+import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Link } from "react-router-dom";
 
@@ -29,7 +29,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const EachBlog = ({ title, date, description, imageUrl, author, profile, readTime }) => {
     return (
-        <div className="flex flex-col items-start gap-8 rounded-2xl bg-white relative overflow-hidden"> {/* Set position relative to this container */}
+        <div className="each-blogs flex flex-col items-start gap-8 rounded-2xl relative overflow-hidden"> {/* Set position relative to this container */}
             <div className="relative"> {/* Set position relative for child elements */}
                 <img src={imageUrl} alt="Blog Visual" className="w-full h-[15rem] rounded-t-2xl transition ease-out duration-300 transform hover:scale-105 cursor-pointer" />
 
@@ -148,13 +148,27 @@ const MarketAnalysis_and_Trends = () => {
     ];
 
 
-
+    useEffect(() => {
+        // GSAP for each blog post
+        gsap.from(".each-blogs", {
+            scrollTrigger: {
+                trigger: ".each-blogs",
+                start: "top 80%", // Trigger animation when the blog card is 80% in the viewport
+                toggleActions: "play none none reverse"
+            },
+            y: 100,
+            opacity: 0,
+            stagger: 0.2, // Delay between animations of each card
+            duration: 1.2,
+            ease: "power2.out",
+        });
+    }, []);
 
 
     return (
         <section className="pb-10 pt-20 bg-gray-50 relative">
             <div className="container mx-auto px-4">
-                <div className="text-left mb-20">
+                <div className="each-blogs text-left mb-20">
                     <h1 className="text-4xl font-bold">Market Analysis and Trends</h1>
                     <h3 className="text-md font-medium text-gray-500 mt-4">
                         Stay informed with the latest trends, insights, and developments in the rapidly evolving world of cryptocurrencies and blockchain technology.
@@ -176,6 +190,7 @@ const MarketAnalysis_and_Trends = () => {
                                 imageUrl={post.banner}
                                 profile={post.author.imageUrl}
                                 author={post.author.name}
+                                readTime={post.readTime}
                             />
                         ))}
                     </div>
@@ -183,7 +198,7 @@ const MarketAnalysis_and_Trends = () => {
 
                 {/* Button to browse all posts */}
                 <div className="text-center mt-12 mb-9">
-                    <button className="bg-primaryCyan text-white px-4 py-2 text-2xl rounded-md">
+                    <button className="bg-primaryCyan text-white px-4 py-2 text-2xl rounded-md transition-transform transform hover:-translate-y-1 ease-linear duration-200">
                         View more
                     </button>
                 </div>

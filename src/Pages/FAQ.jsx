@@ -465,10 +465,10 @@ const FAQ = () => {
             >
               <div style={marginStyle} className="bg-white p-8 rounded-lg shadow-lg w-[90%] max-w-[500px] h-auto relative top-10">
                 <button
-                  className="absolute top-4 right-4 text-gray-500 text-4xl"
+                  className="absolute top-4 right-4 text-gray-500 text-4xl z-10"
                   onClick={() => setOpenModal(true)}
                 ></button>
-                <div className="flex justify-end">
+                <div className="flex justify-end sm:mb-[-40px]">
                   <button className="text-3xl" onClick={handleCloseModal}>
                     <i className="ri-close-line mt-10"></i>
                   </button>
@@ -546,10 +546,10 @@ const FAQ = () => {
                       />
                     </div>
 
-                    <div className="flex justify-end">
+                    <div className="flex justify-center">
                       <button
                         type="submit"
-                        className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-white focus:border-white bg-primaryCyan text-white"
+                        className="mt-1 block w-full px-3 py-2 border sm:pt-5 border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-white focus:border-white bg-primaryCyan text-white"
                       >
                         Send message
                       </button>
