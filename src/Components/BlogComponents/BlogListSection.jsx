@@ -644,7 +644,7 @@ const BlogList = () => {
 export default BlogList;*/
 
 
-import React from "react";
+import React, { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import '../../index.css';
@@ -962,14 +962,37 @@ const BlogListSection = () => {
     }
   ];
 
+  useEffect(() =>{
+    //gsap animation for main blog
+    gsap.from(".blog", {
+      y: 100,
+      opacity: 0,
+      duration: 1.5,
+      ease: "power2.out",
+      scrollTrigger:{
+        trigger:".blog",
+        start: "top 80%",
+        toggleActions:"play none none reverse",
+      }
+    });
+
+    //gsap animation for browse all blog button
+    gsap.from(".browse-btn", {
+      y:200,
+      opacity:0,
+      duration: 1.5,
+      ease: "power2.out"
+    })
+  },[])
+
   return (
     <div className="w-full bg-gray-50 py-8 px-4 sm:px-8">
       <div className="container mx-auto ">
-        <h1 className="text-3xl sm:text-5xl font-semibold text-center mb-10 sm:mb-14 font-montserrat">
+        <h1 className="blog text-3xl sm:text-5xl font-semibold text-center mb-10 sm:mb-14 font-montserrat">
           Blogs
         </h1>
 
-        <div className="flex flex-col lg:flex-row gap-8">
+        <div className="blog flex flex-col lg:flex-row gap-8 overflow-hidden shadow-lg relative bg-gradient-to-t from-gray/70 to-transparent rounded-xl ">
           {/* Main Blog Section */}
           <div className="relative w-full lg:w-[50%]  lg:h-[39.6rem] mb-10 lg:mb-0 flex flex-col rounded-xl overflow-hidden ">
             <img
@@ -978,8 +1001,8 @@ const BlogListSection = () => {
               className="w-full h-[420px] md:h-full object-cover rounded-xl transition ease-out duration-300 transform hover:scale-105 cursor-pointer"
             />
 
-            <div className="absolute bottom-8 left-0 w-full p-4  ">
-              <div className="flex items-center text-white mb-4">
+            <div className="absolute bottom-8 left-0 w-full p-4 overflow-hidden shadow-lg">
+              <div className="flex items-center text-white mb-[-5]">
                 <img
                   src={blogPosts[0].author.imageUrl}
                   alt={`${blogPosts[0].author.name} Profile`}
@@ -987,7 +1010,7 @@ const BlogListSection = () => {
                 />
                 <span className="text-sm md:text-lg font-bold whitespace-nowrap">By - {blogPosts[0].author.name || 'Admin'}</span>
                 <span className='text-sm md:text-lg mx-2 font-bold whitespace-nowrap'>.</span>
-                <span className='text-sm md:text-lg whitespace-nowrap'>{blogPosts[0].createdAt}</span>
+                <span className='text-sm md:text-lg whitespace-nowrap mb-[-5]'>{blogPosts[0].createdAt}</span>
                 <div className="rounded-xl flex items-center gap-2 p-1 px-2 text-sm ml-2">
                   <span className="text-primaryCyan">
                     <FaHeart />
@@ -1050,7 +1073,7 @@ const BlogListSection = () => {
 
       {/* Button to browse all posts */}
       <div className="text-center mt-9 mb-9">
-        <button className="bg-primaryCyan text-white px-4 py-2 text-2xl rounded-md">
+        <button className="bg-primaryCyan text-white px-4 py-2 text-2xl rounded-md transition-transform transform hover:-translate-y-1 duration-200 ease-linear">
           Browse all Blogs
         </button>
       </div>
