@@ -15,51 +15,76 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Pagination, Mousewheel } from "swiper/modules";
+import gsap from "gsap";
+import { useEffect } from "react";
 
 const ExploreCategoryList = ({ items }) => {
+  useEffect(() => {
+    // GSAP for heading
+    gsap.from(".heading", {
+      scrollTrigger: {
+        trigger: ".heading",
+        start: "top 80%", // Trigger animation when the heading is 80% in the viewport
+        toggleActions: "play none none reverse",
+      },
+      y: 100,
+      opacity: 0,
+      duration: 1.2,
+      ease: "power2.out",
+    });
+  }, []);
   return (
-    <section className="container mx-auto my-12 px-4">
-      <h2 className="text-center text-4xl md:text-5xl font-semibold mb-12 whitespace-pre-line">
-        Explore Our Featured <span className="block">Categories</span>
-      </h2>
+    <div className="bg-white">
+      <section className="container mx-auto mb-12 px-4 pt-10">
+        {/* Explore Category heading */}
+        <h2 className="heading text-center text-4xl md:text-5xl font-bold mb-12 whitespace-pre-line">
+          Explore Our Featured{" "}
+          <span className="block font-bold">Categories</span>
+        </h2>
 
-      <Swiper
-        modules={[Pagination, Mousewheel]}
-        spaceBetween={20}
-        slidesPerView={1}
-        pagination={{ clickable: true }}
-        breakpoints={{
-          640: { slidesPerView: 2 },
-          1024: { slidesPerView: 4 },
-        }}
-        mousewheel={true}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
-      >
-        {items.map((item, index) => (
-          <SwiperSlide key={index}>
-            <div className="flex flex-col items-start bg-gray-50 rounded-3xl shadow-3xl p-8 border border-gray-300 hover:shadow-xl transition-shadow duration-300 w-full h-[300px]">
-              <img src={item.icon} alt={item.altText} className="w-10 h-11" />
-              <h2 className=" text-gray-700 text-left text-2xl mt-2 my-2 font-bold font-montserrat cursor-pointer transition-colors duration-300 hover:text-blue-500 md:hover:text-blue-500">
-                {item.altText}
-              </h2>
-              <p className="text-left my-2 text-gray-600 font-century-gothic break-words hyphens-auto">
-                {item.description}
-              </p>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+        {/* The swiper */}
+        <Swiper
+          modules={[Pagination, Mousewheel]}
+          spaceBetween={20}
+          slidesPerView={1}
+          pagination={{ clickable: true }}
+          breakpoints={{
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 4 },
+          }}
+          mousewheel={true}
+          onSlideChange={() => console.log("slide change")}
+          onSwiper={(swiper) => console.log(swiper)}
+        >
+          {items.map((item, index) => (
+            <SwiperSlide key={index}>
+              {/* The card */}
+              <div className="flex flex-col items-start bg-gray-50 rounded-3xl shadow-3xl p-8 border border-gray-300 hover:shadow-xl transition-shadow duration-300 w-full h-[300px] mb-8">
+                {/* The image inside the card */}
+                <img src={item.icon} alt={item.altText} className="w-10 h-11" />
+                {/* The content inside the card */}
+                <h2 className=" text-gray-700 text-left text-2xl mt-2 my-2 font-bold font-montserrat cursor-pointer transition-colors duration-300 hover:text-blue-500 md:hover:text-blue-500">
+                  {item.altText}
+                </h2>
+                <p className="text-left my-2 text-gray-600 font-century-gothic break-words hyphens-auto">
+                  {item.description}
+                </p>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
 
-      <style jsx>{`
-        .swiper-pagination {
-          margin-bottom: -10px !important;
-        }
-          .swiper-pagination-bullet{
-            width: 10px !important
+        <style jsx>{`
+          .swiper-pagination {
+            margin-bottom: -12px !important;
           }
-      `}</style>
-    </section>
+          .swiper-pagination-bullet {
+            width: 10px !important;
+            height: 10px !important;
+          }
+        `}</style>
+      </section>
+    </div>
   );
 };
 
